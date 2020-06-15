@@ -6,5 +6,9 @@ const HeroContainer = styled("div")`
 `
 
 export default function Hero(props) {
-  return <HeroContainer>Hero</HeroContainer>
+  return (
+    <HeroContainer>
+      <h2>Decentralized naming for wallets, websites, &amp; more.</h2>
+    </HeroContainer>
+  )
 }
