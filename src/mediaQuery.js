@@ -1,4 +1,4 @@
-import { css } from "emotion"
+import { css } from "@emotion/core"
 
 const breakpoints = {
   // Numerical values will result in a min-width query
