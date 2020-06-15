@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 
-import logo from "../assets/ensLogo.svg"
-import logoText from "../assets/ensLogoText.svg"
+import Logo from "./Logo"
 import twitter from "../assets/twitter.svg"
 import github from "../assets/github.svg"
 import medium from "../assets/medium.svg"
@@ -32,24 +31,6 @@ const social = [
     link: "https://github.com",
   },
 ]
-
-const Logo = styled("div")`
-  height: 48px;
-  display: flex;
-
-  img {
-    display: block;
-  }
-
-  .ens-logo {
-    width: 35px;
-    margin-right: 10px;
-  }
-
-  .ens-logo-text {
-    width: 57px;
-  }
-`
 
 const ExternalLink = styled("a")`
   font-family: Karma;
@@ -81,10 +62,7 @@ const MailTo = styled("a")`
 export default function Footer(props) {
   return (
     <FooterContainer>
-      <Logo>
-        <img src={logo} alt="ENS Logo" className="ens-logo" />
-        <img src={logoText} alt="ENS Logo text" className="ens-logo-text" />
-      </Logo>
+      <Logo />
       <SocialContainer>
         {social.map(s => (
           <ExternalLink href={s.link}>
