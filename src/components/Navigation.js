@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Logo from "./Logo"
 
 const Nav = styled("nav")`
-  background-image: linear-gradient(44deg, #513eff 0%, #52e5ff 100%);
+  background-image: linear-gradient(90deg, #513eff 0%, #52e5ff 100%);
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
@@ -46,7 +46,9 @@ const Separator = styled("div")`
 export default function Navigation() {
   return (
     <Nav>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
       <Links>
         <Link to="/about">About</Link>
         <a href="https://medium.com/the-ethereum-name-service">Blog</a>

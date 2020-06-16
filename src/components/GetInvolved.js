@@ -46,6 +46,7 @@ const Container = styled("div")`
 
 const H2 = styled(H2Default)`
   color: white;
+  margin-bottom: 100px;
 `
 
 const Links = styled("div")`
@@ -74,6 +75,7 @@ const LinkItem = styled("div")`
   h3 {
     font-size: 44px;
     font-family: Karma;
+    font-weight: 300;
     color: white;
     grid-area: title;
     margin: 0;

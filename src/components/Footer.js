@@ -57,6 +57,7 @@ const SocialContainer = styled("div")`
 
 const MailTo = styled("a")`
   color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
 `
 
 export default function Footer(props) {

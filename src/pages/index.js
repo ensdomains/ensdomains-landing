@@ -3,7 +3,7 @@ import "normalize.css"
 
 import Navigation from "../components/Navigation"
 import AdditionalFeatures from "../components/Home/AdditionalFeatures"
-import Cryptocurrencies from "../components/Home/Cryptocurrencies"
+import Cryptocurrencies from "../components/Home/Cryptocurrencies/"
 import DecentralisedWebsites from "../components/Home/DecentralisedWebsites"
 import Ecosystem from "../components/Home/Ecosystem"
 import Hero from "../components/Home/Hero"
