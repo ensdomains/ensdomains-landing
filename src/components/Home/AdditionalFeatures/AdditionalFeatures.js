@@ -1,8 +1,10 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { H2 } from "../../Typography"
 
 const HeroContainer = styled("div")`
-  background: green;
+  background: white;
+  padding: 120px 0;
 `
 
 const features = [
@@ -40,7 +42,7 @@ function Feature({ desc }) {
 export default function AdditionalFeatures(props) {
   return (
     <HeroContainer>
-      <h2>Additional Features</h2>
+      <H2>Additional Features</H2>
       {features.map(f => (
         <Feature desc={f.desc} />
       ))}

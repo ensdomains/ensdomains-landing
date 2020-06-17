@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "@emotion/styled"
 
-import { importAll } from "../../utils"
-import links from "./links.json"
+import { importAll } from "../../../utils"
+import links from "../links.json"
 
-import GridView, { Row } from "./gridView/GridView"
+import GridView, { Row } from "../gridView/GridView"
 
 const mobile = importAll(
   require.context("./mobile", false, /\.(png|jpe?g|svg)$/)

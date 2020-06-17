@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { H2 } from "../../Typography"
 import { importAll } from "../../../utils"
+import wallet from "./wallet.svg"
 
 const HeroContainer = styled("div")`
   padding: 120px 0;
@@ -20,6 +21,9 @@ const Wrapper = styled("div")`
   }
 `
 
+const WalletAnimation = styled("div")``
+const Coins = styled("div")``
+
 const coins = importAll(require.context("./coins", false, /\.(png|jpe?g|svg)$/))
 
 export default function Cryptocurrencies(props) {
@@ -32,10 +36,14 @@ export default function Cryptocurrencies(props) {
           others, use your ENS name to receive payments and store all of your
           addresses.
         </p>
-        {coins.map(coin => {
-          console.log(coin)
-          return <img src={coin.src} />
-        })}
+        <WalletAnimation>
+          <img src={wallet} />
+          <Coins>
+            {coins.map(coin => {
+              return <img src={coin.src} />
+            })}
+          </Coins>
+        </WalletAnimation>
       </Wrapper>
     </HeroContainer>
   )
