@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import Logo from "./Logo"
+import { Button } from "./Typography"
 
 const Nav = styled("nav")`
   background-image: linear-gradient(90deg, #513eff 0%, #52e5ff 100%);
@@ -9,6 +10,7 @@ const Nav = styled("nav")`
   justify-content: space-between;
   padding: 20px 40px;
   position: sticky;
+  z-index: 100000;
   top: 0;
 `
 
@@ -22,19 +24,7 @@ const Links = styled("div")`
   }
 `
 
-const Launch = styled("a")`
-  background: #5284ff;
-  box-shadow: 0 10px 21px 0 rgba(38, 61, 145, 0.26);
-  border-radius: 23px;
-  font-family: Overpass;
-  font-weight: 500;
-  font-size: 14px;
-  color: #ffffff;
-  letter-spacing: 0.5px;
-  text-align: center;
-  padding: 13px 30px;
-  text-decoration: none;
-`
+const Launch = styled(Button)``
 
 const Separator = styled("div")`
   width: 1px;
