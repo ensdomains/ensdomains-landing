@@ -7,7 +7,7 @@ import Cryptocurrencies from "../components/Home/Cryptocurrencies/"
 import DecentralisedWebsites from "../components/Home/DecentralisedWebsites/"
 import Ecosystem from "../components/Home/Ecosystem/"
 import Hero from "../components/Home/Hero"
-import HeroCarousel from "../components/Home/HeroCarousel"
+import Carousel from "../components/Home/Carousel/"
 import Statistics from "../components/Home/Statistics/"
 import TraditionalDomains from "../components/Home/TraditionalDomains/"
 import GetInvolved from "../components/GetInvolved"
@@ -19,7 +19,7 @@ export default function Home() {
     <Layout>
       <Navigation />
       <Hero />
-      <HeroCarousel />
+      <Carousel />
       <Cryptocurrencies />
       <Statistics />
       <DecentralisedWebsites />
