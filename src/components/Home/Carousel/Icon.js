@@ -20,6 +20,10 @@ const IconBase = styled("svg")`
   `}
 `
 
-export default function Icon({ active, children }) {
-  return <IconBase active={active}>{children}</IconBase>
+export default function Icon({ active, children, className }) {
+  return (
+    <IconBase active={active} className={className}>
+      {children}
+    </IconBase>
+  )
 }

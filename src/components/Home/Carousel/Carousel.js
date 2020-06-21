@@ -37,7 +37,23 @@ const CarouselContainer = styled("div")`
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 85px !important;
+      width: 100px !important;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:hover h3 {
+        opacity: 1;
+      }
+
+      .register-svg {
+        margin-right: -35px;
+      }
+
+      .manage-svg {
+        margin-right: -10px;
+      }
     }
 
     .thumb.selected. {
@@ -48,12 +64,16 @@ const CarouselContainer = styled("div")`
       opacity: 1;
     }
 
-    .dot {
-      display: none;
+    .thumb.selected h3 {
+      opacity: 1;
     }
 
-    .thumb:hover {
-      transform: translateY(-20px);
+    svg {
+      height: 90px;
+    }
+
+    .dot {
+      display: none;
     }
 
     .thumb.selected .dot {
@@ -86,12 +106,25 @@ const Dot = styled("div")`
   border-radius: 50%;
 `
 
+const Title = styled("h3")`
+  font-family: Overpass;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: 0.2s;
+  opacity: 0.7;
+`
+
 const customRenderThumb = children =>
   children.map((item, i) => {
     if (i === 0) {
       return (
         <>
           <SearchIcon />
+          <Title>Search</Title>
           <Dot className="dot" />
         </>
       )
@@ -100,6 +133,7 @@ const customRenderThumb = children =>
       return (
         <>
           <RegisterIcon />
+          <Title>Register</Title>
           <Dot className="dot" />
         </>
       )
@@ -108,6 +142,7 @@ const customRenderThumb = children =>
       return (
         <>
           <ManageIcon />
+          <Title>Manage</Title>
           <Dot className="dot" />
         </>
       )
