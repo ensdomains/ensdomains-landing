@@ -6,10 +6,10 @@ import Navigation from "../components/Navigation"
 import GetInvolved from "../components/GetInvolved"
 import Footer from "../components/Footer"
 
-import AboutDescription from "../components/About/AboutDescription"
-import AboutENS from "../components/About/AboutENS"
+import Description from "../components/About/Description/"
+import AboutENS from "../components/About/AboutENS/"
 import AboutHero from "../components/About/AboutHero"
-import Team from "../components/About/Team"
+import Team from "../components/About/Team/"
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <Navigation />
       <AboutENS />
       <Team />
-      <AboutDescription />
+      <Description />
       <GetInvolved />
       <Footer />
     </Layout>
