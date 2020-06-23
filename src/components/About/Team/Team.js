@@ -17,36 +17,43 @@ const team = [
     name: "Nick Johnson",
     title: "Founder of ENS",
     img: nick,
+    link: "https://twitter.com/nicksdjohnson",
   },
   {
     name: "Jeff Lau",
     title: "Frontend Developer",
     img: jeff,
+    link: "https://twitter.com/_jefflau",
   },
   {
     name: "Makoto Inoue",
     title: "JS & Solidity Developer",
     img: makoto,
+    link: "https://twitter.com/makoto_inoue",
   },
   {
     name: "Rebecca Liebert",
     title: "Graphic Designer",
     img: becca,
+    link: "http://beccaliebert.com/",
   },
   {
     name: "Dean Eigenmann",
     title: "Solidity Developer",
     img: dean,
+    link: "https://twitter.com/DeanEigenmann",
   },
   {
     name: "Brantly Millegan",
     title: "Director of Operations",
     img: brantly,
+    link: "https://twitter.com/BrantlyMillegan",
   },
   {
     name: "Jim Mcdonald",
     title: "EthDNS Developer",
     img: jim,
+    link: "http://linkedin.com/in/jimgmcdonald",
   },
 ]
 
@@ -71,12 +78,13 @@ const TeamMembers = styled("section")`
   justify-content: center;
 `
 
-const TeamMemberContainer = styled("div")`
+const TeamMemberContainer = styled("a")`
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
+  text-decoration: none;
 
   ${mq.medium`
     width: 25%;
@@ -129,12 +137,16 @@ const TeamMemberContainer = styled("div")`
 
   p {
     margin: 0;
+    font-family: Karma;
+    font-size: 16px;
+    color: #2b2b2b;
+    text-align: center;
   }
 `
 
 function TeamMember({ member }) {
   return (
-    <TeamMemberContainer>
+    <TeamMemberContainer href={member.link}>
       <div className="img-wrapper">
         <img src={member.img} className="photo" />
         <div className="hover" />
