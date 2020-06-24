@@ -1,17 +1,33 @@
 import React from "react"
 import styled from "@emotion/styled"
 
-import Logo from "./Logo"
+import DefaultLogo from "./Logo"
 import twitter from "../assets/twitter.svg"
 import github from "../assets/github.svg"
 import medium from "../assets/medium.svg"
+
+import mq from "../mediaQuery"
+
+const Logo = styled(DefaultLogo)`
+  margin-bottom: 20px;
+  ${mq.medium`
+    margin-bottom: 0;
+  `};
+`
 
 const FooterContainer = styled("footer")`
   background: #1e3277;
   padding: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  ${mq.medium`
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  `};
 `
 
 const social = [
@@ -38,21 +54,30 @@ const ExternalLink = styled("a")`
   color: white;
   text-decoration: none;
   font-weight: 300;
-
+  margin-bottom: 20px;
   img {
     margin-right: 8px;
   }
-  padding: 0 25px 0;
-  border-right: solid 1px rgba(255, 255, 255, 0.5);
-  &:last-child {
-    padding: 0 0 0 25px;
-    border-right: none;
-  }
+
+  ${mq.medium`
+    margin-bottom: 0px;
+    padding: 0 25px 0;
+    border-right: solid 1px rgba(255, 255, 255, 0.5);
+    &:last-child {
+      padding: 0 0 0 25px;
+      border-right: none;
+    }
+  `};
 `
 
 const SocialContainer = styled("div")`
   display: flex;
   align-items: center;
+  flex-direction: column;
+
+  ${mq.medium`
+    flex-direction: row;
+  `};
 `
 
 const MailTo = styled("a")`

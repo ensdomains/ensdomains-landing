@@ -62,23 +62,40 @@ const Links = styled("div")`
 
 const LinkItem = styled("div")`
   display: grid;
-  grid-template-columns: 80px 1fr;
-  grid-template-rows: auto 100px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   gap: 20px 20px;
   grid-template-areas:
+    "img"
+    "title"
+    "link";
+
+  ${mq.medium`
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: auto 100px;
+    grid-template-areas:
     "img title"
     ". link";
+  `};
+
   img {
     grid-area: img;
-    justify-self: end;
+    justify-self: start;
+    ${mq.medium`
+      justify-self: end;
+    `};
   }
   h3 {
-    font-size: 44px;
+    font-size: 34px;
     font-family: Karma;
     font-weight: 300;
     color: white;
     grid-area: title;
     margin: 0;
+
+    ${mq.medium`
+      font-size: 44px;
+    `};
   }
   a {
     grid-area: link;

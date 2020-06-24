@@ -15,6 +15,7 @@ export default function Home() {
   return (
     <Layout>
       <Navigation />
+      <AboutHero />
       <AboutENS />
       <Team />
       <Description />
