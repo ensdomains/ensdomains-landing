@@ -2,6 +2,15 @@ import React from "react"
 import styled from "@emotion/styled"
 
 import mq from "../../../mediaQuery"
+import { importAll } from "../../../utils"
+
+const partners = importAll(
+  require.context("./partners", false, /\.(png|jpe?g|svg)$/)
+)
+
+const associated = importAll(
+  require.context("./associated", false, /\.(png|jpe?g|svg)$/)
+)
 
 const AboutENSContainer = styled("div")`
   background: white;
@@ -22,7 +31,7 @@ const AboutENSContainer = styled("div")`
     text-align: center;
   }
 
-  p {
+  p.prelede {
     font-family: Karma;
     font-size: 24px;
     color: #2b2b2b;
@@ -41,11 +50,24 @@ export default function AboutENS(props) {
   return (
     <AboutENSContainer>
       <h3>About ENS</h3>
-      <p>
+      <p className="prelede">
         Initially started at the Ethereum Foundation in early 2017, ENS spun off
         as a separate organization in 2018. ENS is managed by the Singaporean
         non-profit True Names LTD.
       </p>
+      <p>We have received generous support from:</p>
+
+      {partners.map(logo => (
+        <img src={logo.src} alt={logo.name} />
+      ))}
+
+      <p>
+        Representatives of ENS participate in the greater Internet community:
+      </p>
+
+      {associated.map(logo => (
+        <img src={logo.src} alt={logo.name} />
+      ))}
     </AboutENSContainer>
   )
 }
