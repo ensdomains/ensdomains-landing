@@ -1,14 +1,21 @@
 import React from "react"
 import styled from "@emotion/styled"
 
+import mq from "../../mediaQuery"
+
 const Title = styled("h2")`
-  font-size: 68px;
+  font-size: 24px;
   font-weight: 300;
   margin-top: 0;
   color: white;
   text-align: center;
   max-width: 800px;
-  padding-top: 120px;
+  padding: 40px 20px 0;
+
+  ${mq.medium`
+    padding: 120px 20px 0;
+    font-size: 68px;
+  `}
 `
 
 const HeroContainer = styled("div")`

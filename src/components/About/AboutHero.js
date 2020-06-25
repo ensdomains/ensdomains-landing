@@ -5,9 +5,13 @@ import mq from "../../mediaQuery"
 
 const Hero = styled("section")`
   background-image: linear-gradient(90deg, #513eff 0%, #52e5ff 100%);
-  padding: 120px 20px;
+  padding: 40px 20px;
   display: flex;
   justify-content: center;
+
+  ${mq.medium`
+    padding: 120px 20px;
+  `};
 
   p {
     font-family: Overpass;

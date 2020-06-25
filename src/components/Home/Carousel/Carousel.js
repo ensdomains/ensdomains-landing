@@ -9,6 +9,8 @@ import ManageIcon from "./ManageIcon"
 import SearchIcon from "./SearchIcon"
 import RegisterIcon from "./RegisterIcon"
 
+import mq from "../../../mediaQuery"
+
 const CarouselContainer = styled("div")`
   position: relative;
   .slide {
@@ -27,8 +29,12 @@ const CarouselContainer = styled("div")`
 
     .thumbs {
       margin: 0;
-      display: flex;
+      display: none;
       justify-content: center;
+
+      ${mq.medium`
+        display: flex;
+      `}
     }
 
     .thumb {
@@ -84,11 +90,15 @@ const CarouselContainer = styled("div")`
 
 const BG = styled("div")`
   position: absolute;
-  height: 400px;
+  height: 150px;
   width: 100%;
   left: 0;
   top: 0;
   background-image: linear-gradient(90deg, #513eff 0%, #52e5ff 100%);
+
+  ${mq.medium`
+    height: 400px
+  `}
 `
 
 const Slide = styled("div")`
