@@ -46,6 +46,44 @@ const AboutENSContainer = styled("div")`
   }
 `
 
+const Support = styled("div")`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px 20px;
+  padding: 0 20px;
+  max-width: 830px;
+
+  ${mq.medium`
+    grid-template-columns: 1fr 1fr;
+  `};
+
+  p {
+    font-family: Overpass;
+    font-weight: 200;
+    font-size: 22px;
+    color: #2b2b2b;
+    line-height: 1.3em;
+
+    ${mq.medium`
+      height: 100px;
+    `};
+  }
+`
+
+const Logos = styled("div")`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  img {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+`
+
+const List1 = styled("div")``
+
+const List2 = styled("div")``
 export default function AboutENS(props) {
   return (
     <AboutENSContainer>
@@ -55,19 +93,28 @@ export default function AboutENS(props) {
         as a separate organization in 2018. ENS is managed by the Singaporean
         non-profit True Names LTD.
       </p>
-      <p>We have received generous support from:</p>
+      <Support>
+        <List1>
+          <p>We have received generous support from:</p>
+          <Logos>
+            {partners.map(logo => (
+              <img src={logo.src} alt={logo.name} />
+            ))}
+          </Logos>
+        </List1>
+        <List2>
+          <p>
+            Representatives of ENS participate in the greater Internet
+            community:
+          </p>
 
-      {partners.map(logo => (
-        <img src={logo.src} alt={logo.name} />
-      ))}
-
-      <p>
-        Representatives of ENS participate in the greater Internet community:
-      </p>
-
-      {associated.map(logo => (
-        <img src={logo.src} alt={logo.name} />
-      ))}
+          <Logos>
+            {associated.map(logo => (
+              <img src={logo.src} alt={logo.name} />
+            ))}
+          </Logos>
+        </List2>
+      </Support>
     </AboutENSContainer>
   )
 }
