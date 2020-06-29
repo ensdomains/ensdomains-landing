@@ -9,6 +9,8 @@ import file from "./assets/file.svg"
 import onion from "./assets/onion.svg"
 import usernames from "./assets/usernames.svg"
 
+import mq from "../../../mediaQuery"
+
 const features = [
   {
     desc: "Create your project’s own record type.",
@@ -42,9 +44,9 @@ const features = [
   },
 ]
 
-const HeroContainer = styled("div")`
+const AdditionalFeaturesContainer = styled("div")`
   background: white;
-  padding: 120px 0;
+  padding: 120px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,6 +54,7 @@ const HeroContainer = styled("div")`
 
 const FeaturesContainer = styled("div")`
   max-width: 960px;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 50px 50px;
@@ -89,13 +92,13 @@ const Title = styled(H2)`
 
 export default function AdditionalFeatures(props) {
   return (
-    <HeroContainer>
+    <AdditionalFeaturesContainer>
       <Title>Additional Features</Title>
       <FeaturesContainer>
         {features.map(f => (
           <Feature feature={f} />
         ))}
       </FeaturesContainer>
-    </HeroContainer>
+    </AdditionalFeaturesContainer>
   )
 }

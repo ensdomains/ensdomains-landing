@@ -9,6 +9,8 @@ import ManageIcon from "./ManageIcon"
 import SearchIcon from "./SearchIcon"
 import RegisterIcon from "./RegisterIcon"
 
+import { Button } from "../../Typography"
+
 import mq from "../../../mediaQuery"
 
 const CarouselContainer = styled("div")`
@@ -180,6 +182,7 @@ export default function HeroCarousel(props) {
           <img src={manageImg} />
         </Slide>
       </Carousel>
+      <Button href="https://app.ens.domains">Launch App</Button>
     </CarouselContainer>
   )
 }
