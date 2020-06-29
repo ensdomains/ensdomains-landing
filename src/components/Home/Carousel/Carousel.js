@@ -15,6 +15,10 @@ import mq from "../../../mediaQuery"
 
 const CarouselContainer = styled("div")`
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .slide {
     background: transparent;
   }
@@ -130,6 +134,10 @@ const Title = styled("h3")`
   opacity: 0.7;
 `
 
+const Launch = styled(Button)`
+  margin: 0 auto 0;
+`
+
 const customRenderThumb = children =>
   children.map((item, i) => {
     if (i === 0) {
@@ -182,7 +190,7 @@ export default function HeroCarousel(props) {
           <img src={manageImg} />
         </Slide>
       </Carousel>
-      <Button href="https://app.ens.domains">Launch App</Button>
+      <Launch href="https://app.ens.domains">Launch App</Launch>
     </CarouselContainer>
   )
 }

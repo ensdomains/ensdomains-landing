@@ -3,26 +3,45 @@ import styled from "@emotion/styled"
 import statsBG from "./statsBG.jpg"
 
 import { H2 } from "../../Typography"
+import mq from "../../../mediaQuery"
 
 const HeroContainer = styled("div")`
   padding: 120px; 0;
-  background: url(${statsBG});
+  background: url(${statsBG}) no-repeat;
 `
 
 const Stats = styled("div")`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   font-family: Karma;
   font-weight: 300;
 
+  ${mq.small`
+    flex-direction: row;
+    justify-content: space-between;
+  `}
+
   strong {
-    font-size: 120px;
+    font-size: 60px;
     color: #2c46a6;
+    ${mq.small`
+      font-size: 90px;
+    `};
+
+    ${mq.large`
+      font-size: 120px;
+    `};
   }
   span {
-    font-size: 28px;
+    font-size: 20px;
     color: black;
     text-transform: capitalize;
+    ${mq.small`
+      font-size: 24px;
+    `};
+    ${mq.large`
+      font-size: 28px;
+    `};
   }
 
   p {

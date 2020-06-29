@@ -162,9 +162,11 @@ const MobileLinks = styled("ul")`
   left: 0;
   width: 100%;
   top: 100%;
+  opacity: 0;
   ${p =>
     p.menuOpen &&
     `
+    opacity: 1;
     transform: translateX(0);
   `}
 

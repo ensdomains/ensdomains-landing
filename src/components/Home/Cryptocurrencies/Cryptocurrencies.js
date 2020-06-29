@@ -1,4 +1,10 @@
-import React from "react"
+import React, { useRef, useLayoutEffect } from "react"
+import {
+  motion,
+  useViewportScroll,
+  transform,
+  useTransform,
+} from "framer-motion"
 import styled from "@emotion/styled"
 import { H2 } from "../../Typography"
 import { importAll } from "../../../utils"
@@ -22,11 +28,22 @@ const Wrapper = styled("div")`
 `
 
 const WalletAnimation = styled("div")``
-const Coins = styled("div")``
+const Coins = styled(motion.div)`
+  img {
+    height: 100px;
+    margin-right: 10px;
+  }
+  width: 500%;
+`
 
-const coins = importAll(require.context("./coins", false, /\.(png|jpe?g|svg)$/))
+const rawCoins = importAll(
+  require.context("./coins", false, /\.(png|jpe?g|svg)$/)
+)
+const coins = [...rawCoins, ...rawCoins]
 
 export default function Cryptocurrencies(props) {
+  const { scrollYProgress } = useViewportScroll()
+  const x = useTransform(scrollYProgress, [0, 1], [-300, 1000])
   return (
     <HeroContainer>
       <Wrapper>
@@ -38,7 +55,7 @@ export default function Cryptocurrencies(props) {
         </p>
         <WalletAnimation>
           <img src={wallet} />
-          <Coins>
+          <Coins style={{ x: x }}>
             {coins.map(coin => {
               return <img src={coin.src} />
             })}
