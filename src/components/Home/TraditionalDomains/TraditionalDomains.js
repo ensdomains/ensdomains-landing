@@ -2,11 +2,14 @@ import React from "react"
 import styled from "@emotion/styled"
 import { H2, P } from "../../Typography"
 
+import mq from "../../../mediaQuery"
+
 const Container = styled("div")`
   background: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
 `
 
 const Desc = styled(P)`
@@ -14,18 +17,34 @@ const Desc = styled(P)`
 `
 
 const DomainDesc = styled(P)`
+  max-width: 100%;
   padding-right: 30px;
+
+  ${mq.medium`
+    max-width: 33%;
+    flex-direction: row;
+  `}
 `
 
 const DomainWrapper = styled("div")`
   display: flex;
   max-width: 900px;
+  flex-direction: column;
+  ${mq.medium`
+    flex-direction: row;
+  `}
 `
 
 const Domains = styled("div")`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  width: 100%;
   grid-gap: 0px 70px;
+
+  ${mq.medium`
+    width: 66%;
+    flex-direction: row;
+  `}
   li {
     padding-bottom: 0;
     font-size: 62px;
