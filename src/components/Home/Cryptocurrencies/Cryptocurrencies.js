@@ -1,20 +1,16 @@
-import React, { useRef, useLayoutEffect } from "react"
-import {
-  motion,
-  useViewportScroll,
-  transform,
-  useTransform,
-} from "framer-motion"
+import React, { useRef } from "react"
+import { motion, useViewportScroll, useTransform } from "framer-motion"
 import styled from "@emotion/styled"
 import { H2 } from "../../Typography"
 import { importAll } from "../../../utils"
 import wallet from "./wallet.svg"
 
 const HeroContainer = styled("div")`
-  padding: 120px 0;
+  padding: 120px 20px;
   background: white;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 `
 
 const Wrapper = styled("div")`
@@ -27,11 +23,21 @@ const Wrapper = styled("div")`
   }
 `
 
-const WalletAnimation = styled("div")``
+const WalletAnimation = styled("div")`
+  display: flex;
+  width: 500%;
+  overflow: hidden;
+
+  .wallet {
+    position: relative;
+    z-index: 10;
+  }
+`
 const Coins = styled(motion.div)`
+  position: relative;
   img {
     height: 100px;
-    margin-right: 10px;
+    margin-right: 20px;
   }
   width: 500%;
 `
@@ -39,11 +45,11 @@ const Coins = styled(motion.div)`
 const rawCoins = importAll(
   require.context("./coins", false, /\.(png|jpe?g|svg)$/)
 )
-const coins = [...rawCoins, ...rawCoins]
+const coins = [...rawCoins, ...rawCoins, ...rawCoins, ...rawCoins, ...rawCoins]
 
 export default function Cryptocurrencies(props) {
   const { scrollYProgress } = useViewportScroll()
-  const x = useTransform(scrollYProgress, [0, 1], [-300, 1000])
+  const x = useTransform(scrollYProgress, [0, 1], [-700, 1000])
   return (
     <HeroContainer>
       <Wrapper>
@@ -54,7 +60,7 @@ export default function Cryptocurrencies(props) {
           addresses.
         </p>
         <WalletAnimation>
-          <img src={wallet} />
+          <img className="wallet" src={wallet} />
           <Coins style={{ x: x }}>
             {coins.map(coin => {
               return <img src={coin.src} />

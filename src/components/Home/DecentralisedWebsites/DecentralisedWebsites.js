@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { useInView } from "react-intersection-observer"
+import { motion } from "framer-motion"
 import { H2, P, Button } from "../../Typography"
 
 import website1 from "./website1.png"
@@ -25,10 +27,18 @@ const HeroContainer = styled("div")`
 const ImageAnimation = styled("div")`
   display: flex;
   align-items: flex-start;
+  margin-bottom: 20px;
 `
 
 const ImageTransition = styled("div")`
   position: relative;
+  margin: 0 20px;
+  img:nth-child(1) {
+    left: 10px;
+    top: 10px;
+    position: relative;
+  }
+
   img:nth-child(2) {
     left: 0;
     top: 0;
@@ -37,23 +47,46 @@ const ImageTransition = styled("div")`
 `
 
 export default function DecentralisedWebsites(props) {
+  const [ref, inView] = useInView({
+    rootMargin: "200px 0px",
+  })
   return (
     <HeroContainer>
       <H2>Decentralised Websites</H2>
+      <motion.div ref={ref} style={{ opacity: inView ? 1 : 0 }}>
+        <span aria-label="Wave">👋</span>
+      </motion.div>
       <P>
         Launch censorship-resistant decentralized websites with ENS. Upload your
         website to IPFS in our Manager and access it with your ENS name.{" "}
       </P>
       <ImageAnimation>
         <ImageTransition>
-          <img src={website2} />
-          <img src={blur1} />
+          <motion.img
+            src={website2}
+            ref={ref}
+            style={{ opacity: inView ? 0 : 1 }}
+          />
+          <motion.img
+            src={blur1}
+            ref={ref}
+            style={{ opacity: inView ? 1 : 0 }}
+          />
         </ImageTransition>
-
-        <img src={website1} />
         <ImageTransition>
-          <img src={website3} />
-          <img src={blur2} />
+          <img src={website1} />
+        </ImageTransition>
+        <ImageTransition>
+          <motion.img
+            src={website3}
+            ref={ref}
+            animate={{ opacity: inView ? 0 : 1 }}
+          />
+          <motion.img
+            src={blur2}
+            ref={ref}
+            animate={{ opacity: inView ? 1 : 0 }}
+          />
         </ImageTransition>
       </ImageAnimation>
       <Button>Learn more</Button>

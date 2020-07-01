@@ -8,6 +8,7 @@ import mq from "../../../mediaQuery"
 const HeroContainer = styled("div")`
   padding: 120px; 0;
   background: url(${statsBG}) no-repeat;
+  background-size: cover;
 `
 
 const Stats = styled("div")`
