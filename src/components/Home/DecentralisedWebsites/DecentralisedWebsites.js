@@ -48,14 +48,11 @@ const ImageTransition = styled("div")`
 
 export default function DecentralisedWebsites(props) {
   const [ref, inView] = useInView({
-    rootMargin: "200px 0px",
+    rootMargin: "-1000px 0px",
   })
   return (
     <HeroContainer>
       <H2>Decentralised Websites</H2>
-      <motion.div ref={ref} style={{ opacity: inView ? 1 : 0 }}>
-        <span aria-label="Wave">👋</span>
-      </motion.div>
       <P>
         Launch censorship-resistant decentralized websites with ENS. Upload your
         website to IPFS in our Manager and access it with your ENS name.{" "}

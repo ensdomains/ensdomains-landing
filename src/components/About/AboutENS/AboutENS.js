@@ -39,6 +39,7 @@ const AboutENSContainer = styled("div")`
     text-align: center;
     line-height: 1.3em;
     max-width: 850px;
+    padding: 0 20px;
 
     ${mq.medium`
       font-size: 42px;
