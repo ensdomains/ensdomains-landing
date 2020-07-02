@@ -53,7 +53,8 @@
   },
   "coinbase": {
     "link": "https://wallet.coinbase.com/",
-    "name": "Coinbase Wallet"
+    "name": "Coinbase Wallet",
+    "featuredWallet": 1
   },
   "colony": {
     "link": "https://colony.io/",
