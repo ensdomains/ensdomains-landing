@@ -9,8 +9,6 @@ import appSvg from "./app.svg"
 import browserSvg from "./browser.svg"
 import walletSvg from "./wallet.svg"
 
-import mq from "../../../mediaQuery"
-
 function sortApps(array, property) {
   return array.sort((a, b) => {
     if (a[property]) {
@@ -96,6 +94,7 @@ const Grid = styled(motion.div)`
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   grid-gap: 50px;
   width: 100%;
+  height: 200px;
 `
 
 const GridItemContainer = styled("a")`
@@ -147,12 +146,9 @@ export default function Ecosystem(props) {
   return (
     <HeroContainer>
       <H2>ENS Ecosystem</H2>
-      <p className="instructions">
-        <a href="">Instructions</a> to add your logo
-      </p>
       <Section>
         <h3>
-          <img src={walletSvg} />
+          <img src={walletSvg} alt="wallet svg" />
           Wallets
         </h3>
         <Grid animate={{ height: moreWallets ? "auto" : "200px" }}>
@@ -166,7 +162,7 @@ export default function Ecosystem(props) {
       </Section>
       <Section>
         <h3>
-          <img src={appSvg} />
+          <img src={appSvg} alt="app svg" />
           Apps
         </h3>
         <Grid animate={{ height: moreApps ? "auto" : "200px" }}>
@@ -180,7 +176,7 @@ export default function Ecosystem(props) {
       </Section>
       <Section>
         <h3>
-          <img src={browserSvg} />
+          <img src={browserSvg} alt="browser svg" />
           Browsers
         </h3>
         <Grid animate={{ height: moreBrowsers ? "auto" : "200px" }}>

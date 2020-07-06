@@ -92,7 +92,12 @@ export default function AboutENS(props) {
       <p className="prelede">
         Initially started at the Ethereum Foundation in early 2017, ENS spun off
         as a separate organization in 2018. ENS is managed by the Singaporean
-        non-profit True Names LTD.
+        non-profit True Names LTD. ENS is a{" "}
+        <a href="https://medium.com/the-ethereum-name-service/who-should-own-the-naming-system-of-the-future-ens-as-a-public-good-10e4a0ab71d8">
+          public good
+        </a>
+        , a basic piece of Internet infrastructure that belongs to the
+        community. We welcome all feedback and contributions!
       </p>
       <Support>
         <List1>

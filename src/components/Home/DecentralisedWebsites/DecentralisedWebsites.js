@@ -48,8 +48,11 @@ const ImageTransition = styled("div")`
 
 export default function DecentralisedWebsites(props) {
   const [ref, inView] = useInView({
-    rootMargin: "-1000px 0px",
+    /* Optional options */
+    threshold: 0,
+    rootMargin: "-200px",
   })
+
   return (
     <HeroContainer>
       <H2>Decentralised Websites</H2>
@@ -57,33 +60,17 @@ export default function DecentralisedWebsites(props) {
         Launch censorship-resistant decentralized websites with ENS. Upload your
         website to IPFS in our Manager and access it with your ENS name.{" "}
       </P>
-      <ImageAnimation>
+      <ImageAnimation ref={ref}>
         <ImageTransition>
-          <motion.img
-            src={website2}
-            ref={ref}
-            style={{ opacity: inView ? 0 : 1 }}
-          />
-          <motion.img
-            src={blur1}
-            ref={ref}
-            style={{ opacity: inView ? 1 : 0 }}
-          />
+          <motion.img src={website2} style={{ opacity: inView ? 0 : 1 }} />
+          <motion.img src={blur1} style={{ opacity: inView ? 1 : 0 }} />
         </ImageTransition>
         <ImageTransition>
           <img src={website1} />
         </ImageTransition>
         <ImageTransition>
-          <motion.img
-            src={website3}
-            ref={ref}
-            animate={{ opacity: inView ? 0 : 1 }}
-          />
-          <motion.img
-            src={blur2}
-            ref={ref}
-            animate={{ opacity: inView ? 1 : 0 }}
-          />
+          <motion.img src={website3} animate={{ opacity: inView ? 0 : 1 }} />
+          <motion.img src={blur2} animate={{ opacity: inView ? 1 : 0 }} />
         </ImageTransition>
       </ImageAnimation>
       <Button>Learn more</Button>

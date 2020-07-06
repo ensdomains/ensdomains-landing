@@ -53,20 +53,20 @@ const Domains = styled("div")`
   }
 `
 
-const domains = [".com", ".org", ".io", ".cred", ".luxe", ".art"]
+const domains = [".com", ".org", ".io", ".kred", ".luxe", ".art"]
 
 export default function TraditionalDomains(props) {
   return (
     <Container>
-      <H2> Integrate Traditional Domains</H2>
+      <H2> Use Traditional Domains</H2>
       <Desc>
         The native name suffix for ENS is .ETH, which has the full security
         benefits of being blockchain-native.
       </Desc>
       <DomainWrapper>
         <DomainDesc>
-          Use ENS with DNS names you already own. ENS supports most DNS names,
-          some examples include:
+          You can also use ENS with DNS names you already own. ENS supports most
+          DNS names, some examples include:
         </DomainDesc>
         <Domains>
           {domains.map(d => (

@@ -74,6 +74,22 @@ const FeatureContainer = styled("div")`
     max-width: 100%;
     margin-bottom: 20px;
   }
+
+  p {
+    font-family: Karma;
+    font-size: 20px;
+    color: #2b2b2b;
+    line-height: 30px;
+  }
+
+  a {
+    font-family: Overpass;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 20px;
+    color: #5284ff;
+    letter-spacing: 0;
+  }
 `
 
 function Feature({ feature: f }) {

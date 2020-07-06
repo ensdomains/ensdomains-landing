@@ -49,16 +49,17 @@ const coins = [...rawCoins, ...rawCoins, ...rawCoins, ...rawCoins, ...rawCoins]
 
 export default function Cryptocurrencies(props) {
   const { scrollYProgress } = useViewportScroll()
-  const x = useTransform(scrollYProgress, [0, 1], [-700, 1000])
+  const x = useTransform(scrollYProgress, [0, 1], [0, -1000])
   return (
     <HeroContainer>
       <Wrapper>
         <H2>One Name For All of Your Cryptocurrencies</H2>
         <p>
           No more copying and pasting long addresses. Whether it’s ETH, BTC, or
-          others, use your ENS name to receive payments and store all of your
-          addresses.
+          other cryptocurrencies, use your ENS name to receive payments and
+          store all of your addresses.
         </p>
+
         <WalletAnimation>
           <img className="wallet" src={wallet} />
           <Coins style={{ x: x }}>

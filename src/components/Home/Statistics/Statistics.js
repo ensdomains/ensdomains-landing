@@ -55,9 +55,7 @@ const Stats = styled("div")`
 export default function Statistics(props) {
   return (
     <HeroContainer>
-      <H2>
-        ENS is the most widely integrated cryptocurrency wallet naming standard.
-      </H2>
+      <H2>ENS is the most widely integrated blockchain naming standard.</H2>
       <Stats>
         <p>
           <strong>463k</strong> <span>registered names</span>

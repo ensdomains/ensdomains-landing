@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import mq from "../../../mediaQuery"
+import { Button } from "../../Typography"
 
 const Description = styled("div")`
   display: flex;
@@ -100,6 +101,11 @@ const Member = styled("div")`
   }
 `
 
+const LearnMore = styled(Button)`
+  display: inline-flex;
+  margin: 20px 0 40px;
+`
+
 export default function AboutDescription(props) {
   return (
     <Description>
@@ -110,8 +116,12 @@ export default function AboutDescription(props) {
             Though it supports a wide range of non-Ethereum assets, ENS runs
             exclusively on the Ethereum blockchain. ENS brings the benefits of
             decentralization, security, censorship-resistance, and
-            programmability of the Ethereum blockchain to Internet naming.
+            programmability of the Ethereum blockchain to Internet naming and
+            more.
           </p>
+          <LearnMore href="https://medium.com/the-ethereum-name-service/why-ens-uses-ethereum-and-eth-not-a-bespoke-blockchain-and-token-36f86727e71f">
+            Learn more
+          </LearnMore>
           <p>
             This enables revolutionary new features: blockchain-native names
             can’t be seized, they become legos in the greater Ethereum

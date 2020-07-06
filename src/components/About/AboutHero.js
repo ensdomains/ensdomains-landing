@@ -34,7 +34,7 @@ export default function AboutHero(props) {
   return (
     <Hero>
       <p>
-        The Ethereum Name Service is an open-source blockchain based naming
+        The Ethereum Name Service is an open source blockchain-based naming
         infrastructure project.
       </p>
     </Hero>
