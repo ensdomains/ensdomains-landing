@@ -9,7 +9,8 @@
   },
   "almonitextension": {
     "link": "http://almonit.eth.link/",
-    "name": "Almonit Extension"
+    "name": "Almonit Extension",
+    "featuredBrowser": 5
   },
   "alphawallet": {
     "link": "https://alphawallet.com",
@@ -25,7 +26,8 @@
   },
   "argent": {
     "link": "https://www.argent.xyz/",
-    "name": "Argent"
+    "name": "Argent",
+    "featuredWallet": 2
   },
   "art": {
     "link": "https://art.art/digital-twin/",
@@ -53,7 +55,8 @@
   },
   "brave": {
     "link": "https://brave.com/",
-    "name": "Brave"
+    "name": "Brave",
+    "featuredBrowser": 1
   },
   "buidlhub": {
     "link": "https://buidlhub.com/",
@@ -118,7 +121,8 @@
   },
   "decentraland": {
     "link": "https://decentraland.org/",
-    "name": "Decentraland"
+    "name": "Decentraland",
+    "featuredApp": 2
   },
   "defiportfoliotracker": {
     "link": "https://portfolio.defiprime.com/",
@@ -278,7 +282,8 @@
   },
   "huobi": {
     "link": "https://www.huobiwallet.com/",
-    "name": "Huobi"
+    "name": "Huobi",
+    "featuredWallet": 5
   },
   "imToken": {
     "link": "https://token.im/",
@@ -327,6 +332,7 @@
   "loopring": {
     "link": "https://loopring.org/",
     "name": "Loopring"
+    "featuredApp": 4
   },
   "luxe": {
     "link": "http://nic.luxe/",
@@ -342,7 +348,8 @@
   },
   "metamask": {
     "link": "https://metamask.io/",
-    "name": "MetaMask Extension"
+    "name": "MetaMask Extension",
+    "featuredBrowser": 3
   },
   "metamaskmobile": {
     "link": "https://metamask.io/",
@@ -374,7 +381,8 @@
   },
   "myCrypto": {
     "link": "https://mycrypto.com/",
-    "name": "MyCrypto"
+    "name": "MyCrypto",
+    "featuredWallet": 4
   },
   "mycryptocheckout": {
     "link": "https://wordpress.org/plugins/mycryptocheckout/",
@@ -410,11 +418,8 @@
   },
   "opera": {
     "link": "https://www.opera.com",
-    "name": "Opera"
-  },
-  "operaTouch": {
-    "link": "https://www.opera.com/mobile/touch",
-    "name": "Opera Touch"
+    "name": "Opera",
+    "featuredBrowser": 2
   },
   "originprotocol": {
     "link": "https://www.originprotocol.com/en",
@@ -510,7 +515,8 @@
   },
   "status": {
     "link": "https://status.im/",
-    "name": "Status"
+    "name": "Status",
+    "featuredBrowser": 4
   },
   "stib": {
     "link": "https://stib.co/",
@@ -534,7 +540,8 @@
   },
   "tornado": {
     "link": "https://tornado.cash/",
-    "name": "Tornado Cash"
+    "name": "Tornado Cash",
+    "featuredApp": 3
   },
   "torque": {
     "link": "https://torque.loans",
@@ -550,7 +557,8 @@
   },
   "truffle": {
     "link": "https://www.trufflesuite.com/",
-    "name": "Truffle Suite"
+    "name": "Truffle Suite",
+    "featuredApp": 5
   },
   "trustlessfund": {
     "link": "https://trustless.fund/",
@@ -558,11 +566,13 @@
   },
   "trustwallet": {
     "link": "https://trustwallet.com/",
-    "name": "Trust Wallet"
+    "name": "Trust Wallet",
+    "featuredWallet": 3
   },
   "uniswap": {
     "link": "https://uniswap.io/",
-    "name": "UniSwap"
+    "name": "UniSwap",
+    "featuredApp": 1
   },
   "universallogin": {
     "link": "https://universallogin.io",
