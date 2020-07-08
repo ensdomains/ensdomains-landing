@@ -61,7 +61,7 @@ export default function Statistics(props) {
           <strong>463k</strong> <span>registered names</span>
         </p>
         <p>
-          <strong>148</strong> <span>integrated services</span>
+          <strong>151</strong> <span>integrated services</span>
         </p>
         <p>
           <strong>24.5k</strong> <span>owners</span>

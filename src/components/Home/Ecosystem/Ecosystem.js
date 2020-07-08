@@ -11,12 +11,15 @@ import walletSvg from "./wallet.svg"
 
 function sortApps(array, property) {
   return array.sort((a, b) => {
+    if (a[property] && b[property]) {
+      return a[property] < b[property] ? -1 : 1
+    }
     if (a[property]) {
       return -1
     }
 
-    if (a[property] && b[property]) {
-      return a[property] < b[property] ? -1 : 1
+    if (b[property]) {
+      return 1
     }
 
     return a.name < b.name
