@@ -34,17 +34,17 @@ const social = [
   {
     img: twitter,
     text: "Twitter",
-    link: "https://twitter.com",
+    link: "https://twitter.com/ensdomains",
   },
   {
     img: medium,
     text: "Medium",
-    link: "https://medium.com",
+    link: "https://medium.com/the-ethereum-name-service",
   },
   {
     img: github,
     text: "Github",
-    link: "https://github.com",
+    link: "https://github.com/ensdomains",
   },
 ]
 
