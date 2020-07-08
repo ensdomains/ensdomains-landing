@@ -2,13 +2,13 @@ dist: trusty
 language: node_js
 username: makoto
 node_js:
-  - "8.11.4"
+  - "13.0.0"
 cache: yarn
-github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+github_token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
 jobs:
   include:
     - stage: Deploy
-      name: 'Deploy'
+      name: "Deploy"
       install:
         - yarn
       script: yarn deploy
