@@ -25,6 +25,7 @@
     "normalize.css": "^8.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.26.2",
     "react-responsive-carousel": "^3.2.8"
   },
