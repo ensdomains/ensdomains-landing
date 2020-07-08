@@ -116,17 +116,17 @@ export default function AboutDescription(props) {
             Though it supports a wide range of non-Ethereum assets, ENS runs
             exclusively on the Ethereum blockchain. ENS brings the benefits of
             decentralization, security, censorship-resistance, and
-            programmability of the Ethereum blockchain to Internet naming and
-            more.
+            programmability of the Ethereum blockchain to Internet naming.
+          </p>
+
+          <p>
+            This enables revolutionary new features like blockchain-native names
+            can’t be seized, they become legos in the greater Ethereum
+            smart-contract ecosystem, and more.
           </p>
           <LearnMore href="https://medium.com/the-ethereum-name-service/why-ens-uses-ethereum-and-eth-not-a-bespoke-blockchain-and-token-36f86727e71f">
             Learn more
           </LearnMore>
-          <p>
-            This enables revolutionary new features: blockchain-native names
-            can’t be seized, they become legos in the greater Ethereum
-            smart-contract ecosystem.
-          </p>
         </div>
         <h2>Managing the ENS root</h2>
         <p>

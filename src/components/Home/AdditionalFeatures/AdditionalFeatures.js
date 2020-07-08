@@ -15,27 +15,32 @@ const features = [
   {
     desc: "Create your project’s own record type.",
     img: file,
-    link: "",
+    link:
+      "https://medium.com/the-ethereum-name-service/new-custom-text-records-means-every-project-can-have-its-own-ens-record-a68022bb8f86",
   },
   {
     desc: "Attach profile information to your ENS name with our text records.",
     img: attach,
-    link: "",
+    link:
+      "https://medium.com/the-ethereum-name-service/new-text-records-now-available-for-ens-names-in-manager-a0ebb9cda73a",
   },
   {
     desc: "Create ENS subdomains as usernames for your project.",
     img: usernames,
-    link: "",
+    link:
+      "https://docs.ens.domains/dapp-developer-guide/managing-names#creating-subdomains",
   },
   {
     desc: "Store and serve traditional DNS records with certain names.",
     img: dns,
-    link: "",
+    link:
+      "https://medium.com/the-ethereum-name-service/ens-kred-major-integration-of-dns-and-ens-launches-e7efb4dd872a",
   },
   {
     desc: "Use ENS to more easily access Tor .onion hidden services.",
     img: onion,
-    link: "",
+    link:
+      "https://medium.com/the-ethereum-name-service/list-of-ens-names-that-resolve-to-tor-onion-websites-99140a4c674f",
   },
   {
     desc: ".ETH names are ERC721-compliant NFTs",

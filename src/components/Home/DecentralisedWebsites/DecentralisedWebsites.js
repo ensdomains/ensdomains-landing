@@ -73,7 +73,9 @@ export default function DecentralisedWebsites(props) {
           <motion.img src={blur2} animate={{ opacity: inView ? 1 : 0 }} />
         </ImageTransition>
       </ImageAnimation>
-      <Button>Learn more</Button>
+      <Button href="https://medium.com/the-ethereum-name-service/upload-to-ipfs-directly-from-the-ens-manager-with-new-tool-ac055db5d2fe">
+        Learn more
+      </Button>
     </HeroContainer>
   )
 }
