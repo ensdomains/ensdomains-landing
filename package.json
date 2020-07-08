@@ -7,8 +7,12 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy:dev": "gatsby build && cd public && surge . --domain ensdomains-v2.surge.sh",
+    "deploy:dev": "gatsby build && cd public && surge . --domain ensdomains.surge.sh",
     "deploy:live": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy:ci": "yarn clean && gatsby build --prefix-paths && ./deploy-gh.sh",
+    "deploy:branch": "/bin/sh -c 'if [ \"$TRAVIS_BRANCH\" = \"master\" ]; then yarn deploy:ci; elif [ \"$TRAVIS_BRANCH\" = \"dev\" ]; then yarn deploy:dev; fi'",
+    "deploy:pr": "gatsby build && ./deploy.sh",
+    "deploy": "echo $TRAVIS_PULL_REQUEST && /bin/sh -c 'if [ \"$TRAVIS_PULL_REQUEST\" = \"false\" ]; then yarn deploy:branch; else yarn deploy:pr; fi'",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
