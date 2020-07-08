@@ -50,7 +50,7 @@ const DescriptionInner = styled("div")`
 
 const members = [
   { name: "Nick Johnson", company: "ENS" },
-  { name: "Vlad Zamfir", company: "Ethereum Foundation" },
+  { name: "Sergey Nazarov", company: "Chainlink" },
   { name: "Dan Finlay", company: "Metamask" },
   { name: "Taylor Monahan", company: "MyCrypto" },
   { name: "Aron Fischer", company: "Colony" },
