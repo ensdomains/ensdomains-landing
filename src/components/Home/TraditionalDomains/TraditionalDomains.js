@@ -46,10 +46,15 @@ const Domains = styled("div")`
     flex-direction: row;
   `}
   li {
+    font-family: Karma-Light;
+    font-size: 58px;
     padding-bottom: 0;
     font-size: 62px;
     color: #2c46a6;
     list-style: none;
+    ${mq.medium`
+    font-size: 62px;
+    `}
   }
 `
 

@@ -6,7 +6,7 @@ import { H2 } from "../../Typography"
 import mq from "../../../mediaQuery"
 
 const HeroContainer = styled("div")`
-  padding: 120px; 0;
+  padding: 120px 20px;
   background: url(${statsBG}) no-repeat;
   background-size: cover;
 `

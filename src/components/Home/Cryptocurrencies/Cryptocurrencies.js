@@ -25,6 +25,7 @@ const P = styled(DefaultP)`
 
 const WalletAnimation = styled("div")`
   display: flex;
+  margin-top: 20px;
   align-items: center;
   width: 500%;
   overflow: hidden;

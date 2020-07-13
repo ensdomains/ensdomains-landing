@@ -79,7 +79,8 @@ const TeamMembers = styled("section")`
 `
 
 const TeamMemberContainer = styled("a")`
-  width: 50%;
+  width: calc(50% - 40px);
+  margin: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,7 +88,7 @@ const TeamMemberContainer = styled("a")`
   text-decoration: none;
 
   ${mq.medium`
-    width: 25%;
+    width: calc(25% - 40px);
   `}
 
   .img-wrapper {
