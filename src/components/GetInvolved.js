@@ -13,7 +13,7 @@ const links = [
     img: mailingList,
     text: "Subscribe to our mailing list",
     cta: "Subscribe",
-    link: "",
+    link: "https://ensdomains.substack.com/p/coming-soon",
   },
   {
     img: community,

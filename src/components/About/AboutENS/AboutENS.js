@@ -54,10 +54,6 @@ const Support = styled("div")`
   padding: 0 20px;
   max-width: 830px;
 
-  ${mq.medium`
-    grid-template-columns: 1fr 1fr;
-  `};
-
   p {
     font-family: Overpass;
     font-weight: 200;
@@ -72,13 +68,18 @@ const Support = styled("div")`
 `
 
 const Logos = styled("div")`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px 20px;
+
   flex-direction: column;
   align-items: flex-start;
 
   img {
     max-width: 100%;
     margin-bottom: 30px;
+    justify-self: center;
+    align-self: center;
   }
 `
 

@@ -12,7 +12,7 @@ import blur2 from "./blur2.jpg"
 
 const HeroContainer = styled("div")`
   background: white;
-  padding: 120px 0;
+  padding: 120px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -45,7 +45,7 @@ const features = [
   {
     desc: ".ETH names are ERC721-compliant NFTs",
     img: cards,
-    link: "",
+    link: "https://eips.ethereum.org/EIPS/eip-721",
   },
 ]
 

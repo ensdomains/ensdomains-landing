@@ -1,7 +1,7 @@
 import React, { useRef } from "react"
 import { motion, useViewportScroll, useTransform } from "framer-motion"
 import styled from "@emotion/styled"
-import { H2, P } from "../../Typography"
+import { H2, P as DefaultP } from "../../Typography"
 import { importAll } from "../../../utils"
 import wallet from "./wallet.svg"
 
@@ -19,8 +19,13 @@ const Wrapper = styled("div")`
   max-width: 800px;
 `
 
+const P = styled(DefaultP)`
+  text-align: center;
+`
+
 const WalletAnimation = styled("div")`
   display: flex;
+  align-items: center;
   width: 500%;
   overflow: hidden;
   position: relative;
@@ -56,16 +61,17 @@ const WalletAnimation = styled("div")`
 const Coins = styled(motion.div)`
   position: relative;
   img {
+    display: inline-block;
     height: 100px;
     margin-right: 20px;
   }
-  width: 500%;
+  width: 700%;
 `
 
 const rawCoins = importAll(
   require.context("./coins", false, /\.(png|jpe?g|svg)$/)
 )
-const coins = [...rawCoins, ...rawCoins, ...rawCoins, ...rawCoins, ...rawCoins]
+const coins = [...rawCoins, ...rawCoins]
 
 export default function Cryptocurrencies(props) {
   const { scrollYProgress } = useViewportScroll()

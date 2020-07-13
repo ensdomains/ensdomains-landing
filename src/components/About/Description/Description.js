@@ -113,16 +113,12 @@ export default function AboutDescription(props) {
         <h2>Benefits of Ethereum</h2>
         <div>
           <p>
-            Though it supports a wide range of non-Ethereum assets, ENS runs
-            exclusively on the Ethereum blockchain. ENS brings the benefits of
+            Though it supports a wide range of non-Ethereum assets, ENS runs on
+            the Ethereum blockchain. This brings the benefits of
             decentralization, security, censorship-resistance, and
-            programmability of the Ethereum blockchain to Internet naming.
-          </p>
-
-          <p>
-            This enables revolutionary new features like blockchain-native names
-            can’t be seized, they become legos in the greater Ethereum
-            smart-contract ecosystem, and more.
+            programmability of the Ethereum blockchain to Internet naming,
+            enabling new features like self-custody, composability in the
+            greater Ethereum smart-contract ecosystem, and more.
           </p>
           <LearnMore href="https://medium.com/the-ethereum-name-service/why-ens-uses-ethereum-and-eth-not-a-bespoke-blockchain-and-token-36f86727e71f">
             Learn more
@@ -132,10 +128,10 @@ export default function AboutDescription(props) {
         <p>
           To facilitate the possibility of upgrades and maintenance, and in
           exceptional circumstances to handle problems with ENS, the ENS root is
-          initially owned by a four of seven multisig, with members of the
-          Ethereum community as keyholders. In the long term, we would like the
-          root multisig to be replaced by some form of distributed decision
-          making process, as such systems become available.
+          initially owned by a four of seven multisig, with members of related
+          projects as keyholders. In the long term, we would like the root
+          multisig to be replaced by some form of distributed decision making
+          process, as such systems become available.
         </p>
         <div />
         <Members>
