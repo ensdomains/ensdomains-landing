@@ -16,11 +16,15 @@ export const H2 = styled("h2")`
 `
 
 export const P = styled("p")`
-  font-size: 28px;
+  font-size: 18px;
   font-family: Overpass;
   font-weight: 200;
   line-height: 1.5em;
   max-width: 750px;
+
+  ${mq.medium`
+    font-size: 28px;
+  `}
 `
 
 export const Button = styled("a")`

@@ -1,9 +1,11 @@
 import React, { useRef } from "react"
 import { motion, useViewportScroll, useTransform } from "framer-motion"
 import styled from "@emotion/styled"
-import { H2 } from "../../Typography"
+import { H2, P } from "../../Typography"
 import { importAll } from "../../../utils"
 import wallet from "./wallet.svg"
+
+import mq from "../../../mediaQuery"
 
 const HeroContainer = styled("div")`
   padding: 120px 20px;
@@ -15,18 +17,36 @@ const HeroContainer = styled("div")`
 
 const Wrapper = styled("div")`
   max-width: 800px;
-
-  p {
-    font-size: 28px;
-    font-weight: 100;
-    text-align: center;
-  }
 `
 
 const WalletAnimation = styled("div")`
   display: flex;
   width: 500%;
   overflow: hidden;
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    height: 100%;
+    width: 4px;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+  }
+
+  &:after {
+    display: block;
+    content: "";
+    height: 3px;
+    width: 10px;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+  }
 
   .wallet {
     position: relative;
@@ -54,11 +74,10 @@ export default function Cryptocurrencies(props) {
     <HeroContainer>
       <Wrapper>
         <H2>One Name For All of Your Cryptocurrencies</H2>
-        <p>
-          No more copying and pasting long addresses. Whether it’s ETH, BTC, or
-          other cryptocurrencies, use your ENS name to receive payments and
-          store all of your addresses.
-        </p>
+        <P>
+          No more copying and pasting long addresses. Use your ENS name to store
+          all of your addresses and receive payments in any cryptocurrency
+        </P>
 
         <WalletAnimation>
           <img className="wallet" src={wallet} />
