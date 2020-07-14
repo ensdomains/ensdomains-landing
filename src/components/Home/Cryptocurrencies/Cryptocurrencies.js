@@ -76,7 +76,7 @@ export default function Cryptocurrencies(props) {
         <H2>One Name For All of Your Cryptocurrencies</H2>
         <P>
           No more copying and pasting long addresses. Use your ENS name to store
-          all of your addresses and receive payments in any cryptocurrency
+          all of your addresses and receive payments in any cryptocurrency.
         </P>
 
         <WalletAnimation>
