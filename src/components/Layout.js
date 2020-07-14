@@ -35,6 +35,7 @@ export default function Layout({ children, data }) {
             content: `https://ens.domains${twitter}`,
           },
         ]}
+        title="ENS"
         link={[
           { rel: "shortcut icon", type: "image/x-icon", href: `${favicon}` },
         ]}
