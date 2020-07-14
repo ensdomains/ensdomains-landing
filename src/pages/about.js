@@ -11,9 +11,9 @@ import AboutENS from "../components/About/AboutENS/"
 import AboutHero from "../components/About/AboutHero"
 import Team from "../components/About/Team/"
 
-export default function Home() {
+export default function About(props) {
   return (
-    <Layout>
+    <Layout {...props}>
       <Navigation />
       <AboutHero />
       <AboutENS />

@@ -14,9 +14,9 @@ import GetInvolved from "../components/GetInvolved"
 import Footer from "../components/Footer"
 import Layout from "../components/Layout"
 
-export default function Home() {
+export default function Home(props) {
   return (
-    <Layout>
+    <Layout {...props}>
       <Navigation />
       <Hero />
       <Carousel />

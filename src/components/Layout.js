@@ -9,7 +9,18 @@ const Wrapper = styled("div")`
   overflow: hidden;
 `
 
-export default function Layout({ children, data }) {
+function getTitle(pathname) {
+  switch (pathname) {
+    case "/":
+      return "ENS"
+    case "/about":
+      return "ENS | About"
+    default:
+      return "ENS"
+  }
+}
+
+export default function Layout({ children, data, location }) {
   return (
     <Wrapper>
       <Helmet
@@ -35,7 +46,7 @@ export default function Layout({ children, data }) {
             content: `https://ens.domains${twitter}`,
           },
         ]}
-        title="ENS"
+        title={getTitle(location.pathname)}
         link={[
           { rel: "shortcut icon", type: "image/x-icon", href: `${favicon}` },
         ]}
