@@ -72,7 +72,7 @@ const Coins = styled(motion.div)`
 const rawCoins = importAll(
   require.context("./coins", false, /\.(png|jpe?g|svg)$/)
 )
-const coins = [...rawCoins, ...rawCoins]
+const coins = [...rawCoins, ...rawCoins, ...rawCoins]
 
 export default function Cryptocurrencies(props) {
   const { scrollYProgress } = useViewportScroll()
