@@ -19,7 +19,6 @@ const H2 = styled(DefaultH2)`
   font-family: Karma;
   color: #2b2b2b;
   text-align: center;
-  line-height: 62px;
   max-width: 900px;
   margin: 0 auto 20px;
   font-size: 28px;
@@ -28,7 +27,8 @@ const H2 = styled(DefaultH2)`
   ${mq.medium`
     font-weight: 300;
     font-size: 52px;
-     margin: 0 auto 50px;
+    line-height: 62px;
+    margin: 0 auto 50px;
   `}
 `
 
