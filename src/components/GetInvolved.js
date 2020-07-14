@@ -20,7 +20,6 @@ const links = [
     text: "Join our Gitter community",
     cta: "Join Gitter",
     link: "https://gitter.im/ethereum/go-ethereum/name-registry",
-    link: "",
   },
   {
     img: forum,
