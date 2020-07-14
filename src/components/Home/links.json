@@ -586,6 +586,10 @@
     "link": "https://unstoppabledomains.com/browser",
     "name": "Unstoppable Browser"
   },
+  "unstoppablechat": {
+    "link": "https://unstoppabledomains.com/chat",
+    "name": "Unstoppable Chat"
+  },
   "unstoppableextension": {
     "link": "https://unstoppabledomains.com/extension",
     "name": "Unstoppable Extension"
@@ -605,6 +609,10 @@
   "wyre": {
     "link": "https://www.sendwyre.com/",
     "name": "Wyre"
+  },
+  "yellowsubdomain": {
+    "link": "https://yellowsubdomain.io/",
+    "name": "Yellow Subdomain"
   },
   "zerion": {
     "link": "https://zerion.io/",
