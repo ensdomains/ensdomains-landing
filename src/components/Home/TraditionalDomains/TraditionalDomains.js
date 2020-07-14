@@ -74,7 +74,7 @@ export default function TraditionalDomains(props) {
       <DomainWrapper>
         <DomainDesc>
           You can also use ENS with DNS names you already own. ENS supports most
-          DNS names, some examples include:
+          DNS names, some examples including:
         </DomainDesc>
         <Domains>
           {domains.map(d => (
