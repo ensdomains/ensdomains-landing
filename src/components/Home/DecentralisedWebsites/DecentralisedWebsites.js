@@ -10,12 +10,13 @@ import website3 from "./website3.png"
 import blur1 from "./blur1.jpg"
 import blur2 from "./blur2.jpg"
 
-const HeroContainer = styled("div")`
+const Container = styled("div")`
   background: white;
   padding: 120px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 
   h2,
   p {
@@ -54,7 +55,7 @@ export default function DecentralisedWebsites(props) {
   })
 
   return (
-    <HeroContainer>
+    <Container>
       <H2>Decentralised Websites</H2>
       <P>
         Launch censorship-resistant decentralized websites with ENS. Upload your
@@ -76,6 +77,6 @@ export default function DecentralisedWebsites(props) {
       <Button href="https://medium.com/the-ethereum-name-service/upload-to-ipfs-directly-from-the-ens-manager-with-new-tool-ac055db5d2fe">
         Learn more
       </Button>
-    </HeroContainer>
+    </Container>
   )
 }

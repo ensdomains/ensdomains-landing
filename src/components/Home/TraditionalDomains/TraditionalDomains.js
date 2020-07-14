@@ -19,6 +19,8 @@ const Desc = styled(P)`
 const DomainDesc = styled(P)`
   max-width: 100%;
   padding-right: 30px;
+  margin: 0;
+  margin-bottom: 20px;
 
   ${mq.medium`
     max-width: 33%;
@@ -46,7 +48,8 @@ const Domains = styled("div")`
     flex-direction: row;
   `}
   li {
-    font-family: Karma-Light;
+    font-family: Karma;
+    font-weight: 300;
     font-size: 58px;
     padding-bottom: 0;
     font-size: 62px;

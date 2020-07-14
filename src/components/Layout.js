@@ -5,7 +5,9 @@ import styled from "@emotion/styled"
 import favicon from "../assets/favicon.ico"
 import twitter from "../assets/twitter.png"
 
-const Wrapper = styled("div")``
+const Wrapper = styled("div")`
+  overflow: hidden;
+`
 
 export default function Layout({ children, data }) {
   return (

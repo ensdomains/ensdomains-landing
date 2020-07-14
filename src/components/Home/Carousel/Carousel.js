@@ -175,6 +175,7 @@ export default function HeroCarousel(props) {
       <BG />
       <Carousel
         centerMode
+        swipeable={true}
         centerSlidePercentage={65}
         selectedItem={1}
         showIndicators={false}

@@ -2,13 +2,34 @@ import React from "react"
 import styled from "@emotion/styled"
 import statsBG from "./statsBG.jpg"
 
-import { H2 } from "../../Typography"
+import { H2 as DefaultH2 } from "../../Typography"
 import mq from "../../../mediaQuery"
 
 const HeroContainer = styled("div")`
-  padding: 120px 20px;
+  padding: 60px 20px;
   background: url(${statsBG}) no-repeat;
   background-size: cover;
+
+  ${mq.medium`
+    padding: 120px 20px;
+  `}
+`
+
+const H2 = styled(DefaultH2)`
+  font-family: Karma;
+  color: #2b2b2b;
+  text-align: center;
+  line-height: 62px;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  font-size: 28px;
+  line-height: 36px;
+
+  ${mq.medium`
+    font-weight: 300;
+    font-size: 52px;
+     margin: 0 auto 50px;
+  `}
 `
 
 const Stats = styled("div")`
@@ -16,6 +37,8 @@ const Stats = styled("div")`
   flex-direction: column;
   font-family: Karma;
   font-weight: 300;
+  margin: 0 auto 0;
+  max-width: 800px;
 
   ${mq.small`
     flex-direction: row;
