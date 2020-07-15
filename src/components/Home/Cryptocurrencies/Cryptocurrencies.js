@@ -60,7 +60,11 @@ const WalletAnimation = styled("div")`
   }
 `
 const Coins = styled(motion.div)`
-  position: relative;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 10px;
+
   img {
     display: inline-block;
     height: 100px;
