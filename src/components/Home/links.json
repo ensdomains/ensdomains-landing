@@ -70,6 +70,10 @@
     "link": "https://chain.link/",
     "name": "Chainlink"
   },
+  "chainshot": {
+    "link": "https://www.chainshot.com/",
+    "name": "ChainShot"
+  },
   "cipher": {
     "link": "https://www.cipherbrowser.com/",
     "name": "Cipher"
