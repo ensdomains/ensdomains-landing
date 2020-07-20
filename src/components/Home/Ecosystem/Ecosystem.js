@@ -62,11 +62,12 @@ const browsers = sortApps(
   "featuredBrowser"
 )
 
-const HeroContainer = styled("div")`
+const Container = styled("div")`
   background: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 `
 
 const Section = styled("section")`
@@ -147,7 +148,7 @@ export default function Ecosystem(props) {
   const [moreApps, setMoreApps] = useState(false)
   const [moreBrowsers, setMoreBrowsers] = useState(false)
   return (
-    <HeroContainer>
+    <Container>
       <H2>ENS Ecosystem</H2>
       <Section>
         <h3>
@@ -191,6 +192,6 @@ export default function Ecosystem(props) {
           {moreBrowsers ? "See less - " : "See more +"}
         </More>
       </Section>
-    </HeroContainer>
+    </Container>
   )
 }

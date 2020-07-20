@@ -5,10 +5,6 @@ import styled from "@emotion/styled"
 import favicon from "../assets/favicon.ico"
 import twitter from "../assets/twitter.png"
 
-const Wrapper = styled("div")`
-  overflow: hidden;
-`
-
 function getTitle(pathname) {
   switch (pathname) {
     case "/":
@@ -22,7 +18,7 @@ function getTitle(pathname) {
 
 export default function Layout({ children, data, location }) {
   return (
-    <Wrapper>
+    <>
       <Helmet
         meta={[
           {
@@ -59,6 +55,6 @@ export default function Layout({ children, data, location }) {
         `}
       />
       {children}
-    </Wrapper>
+    </>
   )
 }
