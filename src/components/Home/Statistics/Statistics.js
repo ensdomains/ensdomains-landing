@@ -4,6 +4,7 @@ import statsBG from "./statsBG.jpg"
 
 import { H2 as DefaultH2 } from "../../Typography"
 import mq from "../../../mediaQuery"
+import integrations from "../links.json"
 
 const HeroContainer = styled("div")`
   padding: 60px 20px;
@@ -76,6 +77,7 @@ const Stats = styled("div")`
 `
 
 export default function Statistics(props) {
+  const integrationsCount = Object.keys(integrations).length
   return (
     <HeroContainer>
       <H2>ENS is the most widely integrated blockchain naming standard.</H2>
@@ -84,7 +86,7 @@ export default function Statistics(props) {
           <strong>441k</strong> <span>registered names</span>
         </p>
         <p>
-          <strong>153</strong> <span>integrated services</span>
+          <strong>{integrationsCount}</strong> <span>integrated services</span>
         </p>
         <p>
           <strong>24.5k</strong> <span>owners</span>
