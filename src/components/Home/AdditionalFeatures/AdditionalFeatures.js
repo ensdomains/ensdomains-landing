@@ -19,7 +19,7 @@ const features = [
       "https://medium.com/the-ethereum-name-service/new-custom-text-records-means-every-project-can-have-its-own-ens-record-a68022bb8f86",
   },
   {
-    desc: "Attach profile information to your ENS name with our text records.",
+    desc: "Attach profile information to your ENS name with text records.",
     img: attach,
     link:
       "https://medium.com/the-ethereum-name-service/new-text-records-now-available-for-ens-names-in-manager-a0ebb9cda73a",
