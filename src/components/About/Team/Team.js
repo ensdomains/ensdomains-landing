@@ -15,7 +15,7 @@ import hoverCircle from "./hoverCircle.png"
 const team = [
   {
     name: "Nick Johnson",
-    title: "Founder of ENS",
+    title: "Creator & Lead Developer of ENS",
     img: nick,
     link: "https://twitter.com/wekabot",
   },
