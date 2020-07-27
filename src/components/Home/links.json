@@ -136,17 +136,9 @@
     "link": "https://defisaver.com/",
     "name": "Defi Saver"
   },
-  "defisnap": {
-    "link": "https://www.defisnap.io/",
-    "name": "DefiSnap"
-  },
   "defiwatch": {
     "link": "https://defiwatch.io/",
     "name": "Defi Watch"
-  },
-  "defizap": {
-    "link": "https://defizap.com/",
-    "name": "DeFiZap"
   },
   "defi777": {
     "link": "https://defi777.com/",
@@ -629,6 +621,10 @@
   "yellowsubdomain": {
     "link": "https://yellowsubdomain.io/",
     "name": "Yellow Subdomain"
+  },
+  "zapperfi": {
+    "link": "https://www.zapper.fi/",
+    "name": "Zapper.fi"
   },
   "zerion": {
     "link": "https://zerion.io/",
