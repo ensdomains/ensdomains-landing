@@ -45,6 +45,10 @@
     "link": "https://www.bitfinex.com/",
     "name": "Bitfinex"
   },
+  "bitsearch": {
+    "link": "https://bitsear.ch/",
+    "name": "Bitsear.ch"
+  },
   "blockscan": {
     "link": "https://blockscan.com/",
     "name": "Blockscan"
