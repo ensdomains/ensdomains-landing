@@ -83,7 +83,7 @@ export default function Statistics(props) {
       <H2>ENS is the most widely integrated blockchain naming standard.</H2>
       <Stats>
         <p>
-          <strong>447k</strong> <span>registered names</span>
+          <strong>177k</strong> <span>registered names</span>
         </p>
         <p>
           <strong>{integrationsCount}</strong> <span>integrated services</span>
