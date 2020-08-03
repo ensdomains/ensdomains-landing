@@ -89,7 +89,7 @@ export default function Statistics(props) {
           <strong>{integrationsCount}</strong> <span>integrated services</span>
         </p>
         <p>
-          <strong>65.8k</strong> <span>owners</span>
+          <strong>45k</strong> <span>owners</span>
         </p>
       </Stats>
     </HeroContainer>
