@@ -1,13 +1,27 @@
 module.exports = {
   plugins: [
-    `gatsby-plugin-emotion`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      // including a plugin from outside the plugins folder needs the path to it
+      resolve: `gatsby-plugin-react-i18next`,
       options: {
-        fonts: [
-          `Overpass+Mono\:300,400"`,
-          `Overpass\:100,200,300,400,500,700,800,900`,
-          `Karma: 400,300,200,100`,
+        languages: ["en"],
+        defaultLanguage: "en",
+        path: `${__dirname}/locales`,
+        siteUrl: "app.ens.domains",
+        i18nextOptions: {
+          debug: true,
+          lng: "en",
+          fallbackLng: "en",
+          whitelist: ["en", "cn", "ja", "de"],
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          },
+        },
+        pages: [
+          {
+            matchPath: "/ignored-page",
+            languages: ["en"],
+          },
         ],
       },
     },

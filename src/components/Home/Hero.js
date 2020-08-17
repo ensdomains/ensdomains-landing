@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import mq from "../../mediaQuery"
 
 const Title = styled("h2")`
@@ -25,9 +25,10 @@ const HeroContainer = styled("div")`
 `
 
 export default function Hero(props) {
+  const { t } = useTranslation()
   return (
     <HeroContainer>
-      <Title>Decentralized naming for wallets, websites, &amp; more.</Title>
+      <Title>{t("Home.Hero.Title")}</Title>
     </HeroContainer>
   )
 }
