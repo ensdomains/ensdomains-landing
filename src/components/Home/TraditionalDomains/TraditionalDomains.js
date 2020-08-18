@@ -71,14 +71,7 @@ export default function TraditionalDomains(props) {
       <H2>{t("home.dns.title")}</H2>
       <Desc>{t("home.dns.text1")}</Desc>
       <DomainWrapper>
-<<<<<<< HEAD
         <DomainDesc>{t("home.dns.text2")}:</DomainDesc>
-=======
-        <DomainDesc>
-          You can also use ENS with DNS names you already own. ENS supports many
-          DNS names, including:
-        </DomainDesc>
->>>>>>> master
         <Domains>
           {domains.map(d => (
             <li>{d}</li>

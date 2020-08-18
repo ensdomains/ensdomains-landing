@@ -34,7 +34,7 @@
     "dns": {
       "title": "Use Traditional Domains",
       "text1": "The native name suffix for ENS is .ETH, which has the full security benefits of being blockchain-native.",
-      "text2": "You can also use ENS with DNS names you already own. ENS supports most DNS names, including:"
+      "text2": "You can also use ENS with DNS names you already own. ENS supports many DNS names, including:"
     },
     "ecosystem": {
       "title": "ENS Ecosystem",
