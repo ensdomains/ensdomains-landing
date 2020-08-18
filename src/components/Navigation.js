@@ -222,10 +222,10 @@ export default function Navigation() {
       </div>
 
       <Links menuOpen={menuOpen}>
-        <Link to="/about">About</Link>
-        <a href="https://medium.com/the-ethereum-name-service">Blog</a>
+        <Link to="/about">{t("nav.about")}</Link>
+        <a href="https://medium.com/the-ethereum-name-service">{t("nav.blog")}</a>
         <Separator />
-        <Launch href="https://app.ens.domains">Launch App</Launch>
+        <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>
       </Links>
 
       <MobileLinks menuOpen={menuOpen}>
