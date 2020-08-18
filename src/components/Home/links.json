@@ -45,6 +45,10 @@
     "link": "https://www.bitfinex.com/",
     "name": "Bitfinex"
   },
+  "bitsearch": {
+    "link": "https://bitsear.ch/",
+    "name": "Bitsear.ch"
+  },
   "blockscan": {
     "link": "https://blockscan.com/",
     "name": "Blockscan"
@@ -136,17 +140,9 @@
     "link": "https://defisaver.com/",
     "name": "Defi Saver"
   },
-  "defisnap": {
-    "link": "https://www.defisnap.io/",
-    "name": "DefiSnap"
-  },
   "defiwatch": {
     "link": "https://defiwatch.io/",
     "name": "Defi Watch"
-  },
-  "defizap": {
-    "link": "https://defizap.com/",
-    "name": "DeFiZap"
   },
   "defi777": {
     "link": "https://defi777.com/",
@@ -155,6 +151,10 @@
   "defswap": {
     "link": "https://defswap.eth.link/",
     "name": "Defswap"
+  },
+  "democracyearth": {
+    "link": "https://democracy.earth/",
+    "name": "Democracy Earth"
   },
   "dether": {
     "link": "https://dether.io/",
@@ -433,10 +433,6 @@
     "link": "https://ownbit.io/en/",
     "name": "OwnBit"
   },
-  "pandax": {
-    "link": "https://www.pandax.tech",
-    "name": "PandaX"
-  },
   "paraswap": {
     "link": "https://paraswap.io/",
     "name": "ParaSwap"
@@ -460,6 +456,10 @@
   "pooltogether": {
     "link": "https://www.pooltogether.com/",
     "name": "Pool Together"
+  },
+  "poolsvision": {
+    "link": "http://pools.vision/",
+    "name": "Pools.Vision"
   },
   "portal": {
     "link": "https://www.portal.network",
@@ -488,6 +488,10 @@
   "rigoblock": {
     "link": "http://rigoblock.eth.link/",
     "name": "RigoBlock"
+  },
+  "rotki": {
+    "link": "https://rotki.com/",
+    "name": "Rotki"
   },
   "sablier": {
     "link": "https://sablier.finance/",
@@ -617,6 +621,10 @@
   "yellowsubdomain": {
     "link": "https://yellowsubdomain.io/",
     "name": "Yellow Subdomain"
+  },
+  "zapperfi": {
+    "link": "https://www.zapper.fi/",
+    "name": "Zapper.fi"
   },
   "zerion": {
     "link": "https://zerion.io/",

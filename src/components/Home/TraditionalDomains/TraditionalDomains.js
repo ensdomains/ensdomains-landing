@@ -61,7 +61,7 @@ const Domains = styled("div")`
   }
 `
 
-const domains = [".com", ".org", ".io", ".kred", ".luxe", ".art"]
+const domains = [".xyz", ".kred", ".luxe", ".club", ".art", ""]
 
 export default function TraditionalDomains(props) {
   return (
@@ -73,7 +73,7 @@ export default function TraditionalDomains(props) {
       </Desc>
       <DomainWrapper>
         <DomainDesc>
-          You can also use ENS with DNS names you already own. ENS supports most
+          You can also use ENS with DNS names you already own. ENS supports many
           DNS names, including:
         </DomainDesc>
         <Domains>
