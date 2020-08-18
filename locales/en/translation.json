@@ -19,12 +19,12 @@
     },
     "cryptocurrencies": {
       "title": "One Name For All of Your Cryptocurrencies",
-      "text": "No more copying and pasting long addresses. Use your ENS name to store all of your addresses and receive payments in any cryptocurrency"
+      "text": "No more copying and pasting long addresses. Use your ENS name to store all of your addresses and receive payments in any cryptocurrency."
     },
     "statistics": {
       "title": "ENS is the most widely integrated blockchain naming standard.",
-      "names": "Registered Names",
-      "services": "Integrated Services",
+      "names": "Names",
+      "services": "Integrations",
       "owners": "Owners"
     },
     "decentralisedWebsites": {
@@ -53,7 +53,7 @@
       "subDomains": "Create ENS subdomains as usernames for your project.",
       "dns": "Store and serve traditional DNS records with certain names.",
       "tor": "Use ENS to more easily access Tor .onion hidden services.",
-      "erc721": ".ETH names are ERC721-compliant NFTs"
+      "erc721": ".ETH names are ERC721-compliant NFTs."
     },
     "getInvolved": {
       "title": "Get Involved",
@@ -79,7 +79,7 @@
     "hero": "The Ethereum Name Service is an open source blockchain-based naming protocol.",
     "aboutENS": {
       "title": "About ENS",
-      "text": "Started at the Ethereum Foundation in early 2017, ENS spun off asa separate organization in 2018. ENS is managed by the Singaporean non-profit True Names LTD and is a <1>public good</1>, a basic piece of Internet infrastructure that belongs to the community. We welcome all feedback and contributions!",
+      "text": "Started at the Ethereum Foundation in early 2017, ENS spun off as a separate organization in 2018. ENS is managed by the Singaporean non-profit True Names LTD and is a public good, a basic piece of Internet infrastructure that belongs to the community. We welcome all feedback and contributions!",
       "support": "We have received generous support from:",
       "support2": "Representatives of ENS participate in the greater Internet community:"
     },
@@ -92,7 +92,7 @@
     },
     "root": {
       "title": "Managing the ENS root",
-      "text": "To facilitate the possibility of upgrades and maintenance, and in exceptional circumstances to handle problems with ENS, the ENS root is initially owned by a four of seven multisig, with members of related projects as keyholders. In the long term, we would like the root multisig to be replaced by some form of distributed decision making process, as such systems become available"
+      "text": "To facilitate the possibility of upgrades and maintenance, and in exceptional circumstances to handle problems with ENS, the ENS root is initially owned by a four of seven multisig, with members of related projects as keyholders. In the long term, we would like the root multisig to be replaced by some form of distributed decision making process, as such systems become available."
     }
   }
 }
