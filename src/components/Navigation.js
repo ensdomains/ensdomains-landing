@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styled from "@emotion/styled"
+import { useTranslation } from "react-i18next"
 import { Link } from "gatsby"
 import Logo from "./Logo"
 import { Button } from "./Typography"
@@ -198,6 +199,7 @@ const Separator = styled("div")`
 `
 
 export default function Navigation() {
+  const { t } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
   return (
     <Nav menuOpen={menuOpen}>
@@ -228,13 +230,15 @@ export default function Navigation() {
 
       <MobileLinks menuOpen={menuOpen}>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">{t("nav.about")}</Link>
         </li>
         <li>
-          <a href="https://medium.com/the-ethereum-name-service">Blog</a>
+          <a href="https://medium.com/the-ethereum-name-service">
+            {t("nav.blog")}
+          </a>
         </li>
         <li>
-          <Launch href="https://app.ens.domains">Launch App</Launch>
+          <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>
         </li>
       </MobileLinks>
     </Nav>

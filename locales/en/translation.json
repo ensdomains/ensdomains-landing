@@ -3,8 +3,9 @@
     "learnMore": "Learn more"
   },
   "nav": {
-    "about": "about",
-    "blog": "blog"
+    "about": "About",
+    "blog": "Blog",
+    "launch": "Launch App"
   },
   "home": {
     "hero": {
