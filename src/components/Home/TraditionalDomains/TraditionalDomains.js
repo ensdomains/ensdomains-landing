@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { useTranslation } from "react-i18next"
 import { H2, P } from "../../Typography"
 
 import mq from "../../../mediaQuery"
@@ -64,18 +65,13 @@ const Domains = styled("div")`
 const domains = [".com", ".org", ".io", ".kred", ".luxe", ".art"]
 
 export default function TraditionalDomains(props) {
+  const { t } = useTranslation()
   return (
     <Container>
-      <H2> Use Traditional Domains</H2>
-      <Desc>
-        The native name suffix for ENS is .ETH, which has the full security
-        benefits of being blockchain-native.
-      </Desc>
+      <H2>{t("home.dns.title")}</H2>
+      <Desc>{t("home.dns.text1")}</Desc>
       <DomainWrapper>
-        <DomainDesc>
-          You can also use ENS with DNS names you already own. ENS supports most
-          DNS names, including:
-        </DomainDesc>
+        <DomainDesc>{t("home.dns.text2")}:</DomainDesc>
         <Domains>
           {domains.map(d => (
             <li>{d}</li>

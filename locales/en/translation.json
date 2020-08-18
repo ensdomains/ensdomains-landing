@@ -1,6 +1,6 @@
 {
   "c": {
-    "learnMore": "Learn More"
+    "learnMore": "Learn more"
   },
   "nav": {
     "about": "about",
@@ -8,7 +8,7 @@
   },
   "home": {
     "hero": {
-      "title": "Decentralized naming for wallets, websites, &amp; more."
+      "title": "Decentralized naming for wallets, websites, & more."
     },
     "carousel": {
       "search": "search",
@@ -35,6 +35,14 @@
       "text1": "The native name suffix for ENS is .ETH, which has the full security benefits of being blockchain-native.",
       "text2": "You can also use ENS with DNS names you already own. ENS supports most DNS names, including:"
     },
+    "ecosystem": {
+      "title": "ENS Ecosystem",
+      "wallets": "Wallets",
+      "apps": "Apps",
+      "browsers": "Browsers",
+      "seeMore": "See More",
+      "seeLess": "See Less"
+    },
     "additionalFeatures": {
       "title": "Additional Features",
       "recordType": "Create your project’s own record type.",
@@ -58,7 +66,7 @@
       },
       "forums": {
         "title": "Discuss on our forum",
-        "cta": "discuss"
+        "cta": "Discuss"
       },
       "documentation": {
         "title": "Read our documentation",
@@ -70,11 +78,11 @@
     "hero": "The Ethereum Name Service is an open source blockchain-based naming infrastructure project.",
     "aboutENS": {
       "title": "About ENS",
-      "text": "Initially started at the Ethereum Foundation in early 2017, ENS spun off as a separate organization in 2018. ENS is managed by the Singaporean non-profit True Names LTD and is a public good, a basic piece of Internet infrastructure that belongs to the community. We welcome all feedback and contributions!",
+      "text": "Initially started at the Ethereum Foundation in early 2017, ENS spun off as a separate organization in 2018. ENS is managed by the Singaporean non-profit True Names LTD and is a <1>public good</1>, a basic piece of Internet infrastructure that belongs to the community. We welcome all feedback and contributions!",
       "support": "We have received generous support from:",
       "support2": "Representatives of ENS participate in the greater Internet community:"
     },
-    "meet": {
+    "team": {
       "title": "Meet the team"
     },
     "benefits": {

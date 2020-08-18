@@ -1,6 +1,7 @@
 import React, { useRef } from "react"
 import { motion, useViewportScroll, useTransform } from "framer-motion"
 import styled from "@emotion/styled"
+import { useTranslation } from "react-i18next"
 import { H2, P as DefaultP } from "../../Typography"
 import { importAll } from "../../../utils"
 import wallet from "./wallet.svg"
@@ -80,15 +81,13 @@ const coins = [...rawCoins, ...rawCoins, ...rawCoins]
 
 export default function Cryptocurrencies(props) {
   const { scrollYProgress } = useViewportScroll()
+  const { t } = useTranslation()
   const x = useTransform(scrollYProgress, [0, 1], [0, -1000])
   return (
     <HeroContainer>
       <Wrapper>
-        <H2>One Name For All of Your Cryptocurrencies</H2>
-        <P>
-          No more copying and pasting long addresses. Use your ENS name to store
-          all of your addresses and receive payments in any cryptocurrency.
-        </P>
+        <H2>{t("home.cryptocurrencies.title")}</H2>
+        <P>{t("home.cryptocurrencies.text")}</P>
 
         <WalletAnimation>
           <img className="wallet" src={wallet} />

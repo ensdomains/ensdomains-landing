@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import statsBG from "./statsBG.jpg"
+import { useTranslation } from "react-i18next"
 
 import { H2 as DefaultH2 } from "../../Typography"
 import mq from "../../../mediaQuery"
@@ -77,19 +78,21 @@ const Stats = styled("div")`
 `
 
 export default function Statistics(props) {
+  const { t } = useTranslation()
   const integrationsCount = Object.keys(integrations).length
   return (
     <HeroContainer>
-      <H2>ENS is the most widely integrated blockchain naming standard.</H2>
+      <H2>{t("home.statistics.title")}</H2>
       <Stats>
         <p>
-          <strong>441k</strong> <span>registered names</span>
+          <strong>441k</strong> <span>{t("home.statistics.names")}</span>
         </p>
         <p>
-          <strong>{integrationsCount}</strong> <span>integrated services</span>
+          <strong>{integrationsCount}</strong>{" "}
+          <span>{t("home.statistics.services")}</span>
         </p>
         <p>
-          <strong>24.5k</strong> <span>owners</span>
+          <strong>24.5k</strong> <span>{t("home.statistics.owners")}</span>
         </p>
       </Stats>
     </HeroContainer>

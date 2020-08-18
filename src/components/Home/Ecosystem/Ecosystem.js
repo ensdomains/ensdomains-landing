@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { useTranslation } from "react-i18next"
 import styled from "@emotion/styled"
 import { motion } from "framer-motion"
 
@@ -144,16 +145,17 @@ const More = styled("p")`
 `
 
 export default function Ecosystem(props) {
+  const { t } = useTranslation()
   const [moreWallets, setMoreWallets] = useState(false)
   const [moreApps, setMoreApps] = useState(false)
   const [moreBrowsers, setMoreBrowsers] = useState(false)
   return (
     <Container>
-      <H2>ENS Ecosystem</H2>
+      <H2>{t("home.ecosystem.title")}</H2>
       <Section>
         <h3>
           <img src={walletSvg} alt="wallet svg" />
-          Wallets
+          {t("home.ecosystem.wallets")}
         </h3>
         <Grid animate={{ height: moreWallets ? "auto" : "200px" }}>
           {wallets.map(app => (
@@ -161,13 +163,15 @@ export default function Ecosystem(props) {
           ))}
         </Grid>
         <More href="#" onClick={() => setMoreWallets(!moreWallets)}>
-          {moreWallets ? "See less - " : "See more +"}
+          {moreWallets
+            ? `${t("home.ecosystem.seeMore")}} - `
+            : `${t("home.ecosystem.seeLess")} +`}
         </More>
       </Section>
       <Section>
         <h3>
           <img src={appSvg} alt="app svg" />
-          Apps
+          {t("home.ecosystem.apps")}
         </h3>
         <Grid animate={{ height: moreApps ? "auto" : "200px" }}>
           {apps.map(app => (
@@ -175,13 +179,15 @@ export default function Ecosystem(props) {
           ))}
         </Grid>
         <More href="#" onClick={() => setMoreApps(!moreApps)}>
-          {moreApps ? "See less - " : "See more +"}
+          {moreApps
+            ? `${t("home.ecosystem.seeMore")}} - `
+            : `${t("home.ecosystem.seeLess")} +`}
         </More>
       </Section>
       <Section>
         <h3>
           <img src={browserSvg} alt="browser svg" />
-          Browsers
+          {t("home.ecosystem.browsers")}
         </h3>
         <Grid animate={{ height: moreBrowsers ? "auto" : "200px" }}>
           {browsers.map(app => (
@@ -189,7 +195,9 @@ export default function Ecosystem(props) {
           ))}
         </Grid>
         <More href="#" onClick={() => setMoreBrowsers(!moreBrowsers)}>
-          {moreBrowsers ? "See less - " : "See more +"}
+          {moreBrowsers
+            ? `${t("home.ecosystem.seeMore")}} - `
+            : `${t("home.ecosystem.seeLess")} +`}
         </More>
       </Section>
     </Container>

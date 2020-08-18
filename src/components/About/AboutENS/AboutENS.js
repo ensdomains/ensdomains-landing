@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { useTranslation, Trans } from "react-i18next"
 
 import mq from "../../../mediaQuery"
 import { importAll } from "../../../utils"
@@ -87,23 +88,26 @@ const List1 = styled("div")``
 
 const List2 = styled("div")``
 export default function AboutENS(props) {
+  const { t } = useTranslation()
   return (
     <AboutENSContainer>
-      <h3>About ENS</h3>
+      <h3>{t("about.aboutENS.title")}</h3>
 
       <p className="prelede">
-        Initially started at the Ethereum Foundation in early 2017, ENS spun off
-        as a separate organization in 2018. ENS is managed by the Singaporean
-        non-profit True Names LTD and is a{" "}
-        <a href="https://medium.com/the-ethereum-name-service/who-should-own-the-naming-system-of-the-future-ens-as-a-public-good-10e4a0ab71d8">
-          public good
-        </a>
-        , a basic piece of Internet infrastructure that belongs to the
-        community. We welcome all feedback and contributions!
+        <Trans i18nKey="about.aboutENS.text">
+          Initially started at the Ethereum Foundation in early 2017, ENS spun
+          off as a separate organization in 2018. ENS is managed by the
+          Singaporean non-profit True Names LTD and is a
+          <a href="https://medium.com/the-ethereum-name-service/who-should-own-the-naming-system-of-the-future-ens-as-a-public-good-10e4a0ab71d8">
+            public good
+          </a>
+          , a basic piece of Internet infrastructure that belongs to the
+          community. We welcome all feedback and contributions!
+        </Trans>
       </p>
       <Support>
         <List1>
-          <p>We have received generous support from:</p>
+          <p>{t("about.aboutENS.support")}</p>
           <Logos>
             {partners.map(logo => (
               <img src={logo.src} alt={logo.name} />
@@ -111,10 +115,7 @@ export default function AboutENS(props) {
           </Logos>
         </List1>
         <List2>
-          <p>
-            Representatives of ENS participate in the greater Internet
-            community:
-          </p>
+          <p>{t("about.aboutENS.support2")}</p>
 
           <Logos>
             {associated.map(logo => (

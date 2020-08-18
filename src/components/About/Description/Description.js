@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { useTranslation } from "react-i18next"
 import mq from "../../../mediaQuery"
 import { Button } from "../../Typography"
 
@@ -107,32 +108,19 @@ const LearnMore = styled(Button)`
 `
 
 export default function AboutDescription(props) {
+  const { t } = useTranslation()
   return (
     <Description>
       <DescriptionInner>
-        <h2>Benefits of Ethereum</h2>
+        <h2>{t("about.benefits.title")}</h2>
         <div>
-          <p>
-            Though it supports a wide range of non-Ethereum assets, ENS runs on
-            the Ethereum blockchain. This brings the benefits of
-            decentralization, security, censorship-resistance, and
-            programmability of the Ethereum blockchain to Internet naming,
-            enabling new features like self-custody, composability in the
-            greater Ethereum smart-contract ecosystem, and more.
-          </p>
+          <p>{t("about.benefits.text")}</p>
           <LearnMore href="https://medium.com/the-ethereum-name-service/why-ens-uses-ethereum-and-eth-not-a-bespoke-blockchain-and-token-36f86727e71f">
-            Learn more
+            {t("c.learnMore")}
           </LearnMore>
         </div>
-        <h2>Managing the ENS root</h2>
-        <p>
-          To facilitate the possibility of upgrades and maintenance, and in
-          exceptional circumstances to handle problems with ENS, the ENS root is
-          initially owned by a four of seven multisig, with members of related
-          projects as keyholders. In the long term, we would like the root
-          multisig to be replaced by some form of distributed decision making
-          process, as such systems become available.
-        </p>
+        <h2>{t("about.root.title")}</h2>
+        <p>{t("about.root.text")}</p>
         <div />
         <Members>
           {members.map(member => (

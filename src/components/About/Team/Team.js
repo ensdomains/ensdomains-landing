@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { useTranslation } from "react-i18next"
 
 import mq from "../../../mediaQuery"
 
@@ -159,9 +160,10 @@ function TeamMember({ member }) {
 }
 
 export default function Team(props) {
+  const { t } = useTranslation()
   return (
     <TeamContainer>
-      <h3>Meet the team</h3>
+      <h3>{t("about.team.title")}</h3>
       <TeamMembers>
         {team.map(member => (
           <TeamMember member={member} />
