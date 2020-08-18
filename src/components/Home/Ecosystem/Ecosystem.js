@@ -164,8 +164,8 @@ export default function Ecosystem(props) {
         </Grid>
         <More href="#" onClick={() => setMoreWallets(!moreWallets)}>
           {moreWallets
-            ? `${t("home.ecosystem.seeMore")}} - `
-            : `${t("home.ecosystem.seeLess")} +`}
+            ? `${t("home.ecosystem.seeLess")} -`
+            : `${t("home.ecosystem.seeMore")} +`}
         </More>
       </Section>
       <Section>
