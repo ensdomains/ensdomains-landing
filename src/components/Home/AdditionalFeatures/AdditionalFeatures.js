@@ -16,42 +16,36 @@ import mq from "../../../mediaQuery"
 const features = [
   {
     name: "recordType",
-    desc: "Create your project’s own record type.",
     img: file,
     link:
       "https://medium.com/the-ethereum-name-service/new-custom-text-records-means-every-project-can-have-its-own-ens-record-a68022bb8f86",
   },
   {
     name: "textRecord",
-    desc: "Attach profile information to your ENS name with our text records.",
     img: attach,
     link:
       "https://medium.com/the-ethereum-name-service/new-text-records-now-available-for-ens-names-in-manager-a0ebb9cda73a",
   },
   {
     name: "subDomains",
-    desc: "Create ENS subdomains as usernames for your project.",
     img: usernames,
     link:
       "https://docs.ens.domains/dapp-developer-guide/managing-names#creating-subdomains",
   },
   {
     name: "dns",
-    desc: "Store and serve traditional DNS records with certain names.",
     img: dns,
     link:
       "https://medium.com/the-ethereum-name-service/ens-kred-major-integration-of-dns-and-ens-launches-e7efb4dd872a",
   },
   {
     name: "tor",
-    desc: "Use ENS to more easily access Tor .onion hidden services.",
     img: onion,
     link:
       "https://medium.com/the-ethereum-name-service/list-of-ens-names-that-resolve-to-tor-onion-websites-99140a4c674f",
   },
   {
     name: "erc721",
-    desc: ".ETH names are ERC721-compliant NFTs",
     img: cards,
     link: "https://eips.ethereum.org/EIPS/eip-721",
   },
