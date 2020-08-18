@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { useTranslation } from "react-i18next"
 import { H2 as H2Default } from "./Typography"
 
 import mq from "../mediaQuery"
@@ -10,24 +11,28 @@ import forum from "../assets/forum.svg"
 
 const links = [
   {
+    name: "subscribe",
     img: mailingList,
     text: "Subscribe to our mailing list",
     cta: "Subscribe",
     link: "https://ensdomains.substack.com/p/coming-soon",
   },
   {
+    name: "community",
     img: community,
     text: "Join our Gitter community",
     cta: "Join Gitter",
     link: "https://gitter.im/ethereum/go-ethereum/name-registry",
   },
   {
+    name: "forums",
     img: forum,
     text: "Discuss on our forum",
     cta: "Discuss",
     link: "https://discuss.ens.domains/",
   },
   {
+    name: "documentation",
     img: documentation,
     text: "Read our documentation",
     cta: "Read Docs",
@@ -110,15 +115,18 @@ const ExternalLink = styled("a")`
 `
 
 export default function GetInvolved(props) {
+  const { t } = useTranslation()
   return (
     <Container>
-      <H2>Get Involved</H2>
+      <H2>{t("home.getInvolved.title")}</H2>
       <Links>
         {links.map(l => (
           <LinkItem>
             <img src={l.img} />
-            <h3>{l.text}</h3>
-            <ExternalLink href={l.link}>{l.cta}</ExternalLink>
+            <h3>{t(`home.getInvolved.${l.name}.title`)}</h3>
+            <ExternalLink href={l.link}>
+              {t(`home.getInvolved.${l.name}.cta`)}
+            </ExternalLink>
           </LinkItem>
         ))}
       </Links>

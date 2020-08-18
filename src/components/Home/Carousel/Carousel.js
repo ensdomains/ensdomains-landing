@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { useTranslation } from "react-i18next"
 import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
 import { Carousel } from "react-responsive-carousel"
 import manageImg from "./manage.png"
@@ -138,13 +139,13 @@ const Launch = styled(Button)`
   margin: 0 auto 0;
 `
 
-const customRenderThumb = children =>
-  children.map((item, i) => {
+const customRenderThumb = ({ children, t }) => {
+  return children.map((item, i) => {
     if (i === 0) {
       return (
         <>
           <SearchIcon />
-          <Title>Search</Title>
+          <Title>{t("home.carousel.search")}</Title>
           <Dot className="dot" />
         </>
       )
@@ -153,7 +154,7 @@ const customRenderThumb = children =>
       return (
         <>
           <RegisterIcon />
-          <Title>Register</Title>
+          <Title>{t("home.carousel.register")}</Title>
           <Dot className="dot" />
         </>
       )
@@ -162,14 +163,16 @@ const customRenderThumb = children =>
       return (
         <>
           <ManageIcon />
-          <Title>Manage</Title>
+          <Title>{t("home.carousel.manage")}</Title>
           <Dot className="dot" />
         </>
       )
     }
   })
+}
 
 export default function HeroCarousel(props) {
+  const { t } = useTranslation()
   return (
     <CarouselContainer>
       <BG />
@@ -179,7 +182,7 @@ export default function HeroCarousel(props) {
         centerSlidePercentage={65}
         selectedItem={1}
         showIndicators={false}
-        renderThumbs={customRenderThumb}
+        renderThumbs={children => customRenderThumb({ children, t })}
       >
         <Slide>
           <img src={searchImg} />
@@ -191,7 +194,9 @@ export default function HeroCarousel(props) {
           <img src={manageImg} />
         </Slide>
       </Carousel>
-      <Launch href="https://app.ens.domains">Launch App</Launch>
+      <Launch href="https://app.ens.domains">
+        {t("Home.Carousel.Launch")}
+      </Launch>
     </CarouselContainer>
   )
 }

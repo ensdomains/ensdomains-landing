@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { useTranslation } from "react-i18next"
 
 import mq from "../../mediaQuery"
 
@@ -31,12 +32,10 @@ const Hero = styled("section")`
 `
 
 export default function AboutHero(props) {
+  const { t } = useTranslation()
   return (
     <Hero>
-      <p>
-        The Ethereum Name Service is an open source blockchain-based naming
-        protocol.
-      </p>
+      <p>{t("about.hero")}</p>
     </Hero>
   )
 }
