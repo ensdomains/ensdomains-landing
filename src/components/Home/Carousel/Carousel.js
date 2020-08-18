@@ -195,7 +195,7 @@ export default function HeroCarousel(props) {
         </Slide>
       </Carousel>
       <Launch href="https://app.ens.domains">
-        {t("Home.Carousel.Launch")}
+        {t("home.carousel.launch")}
       </Launch>
     </CarouselContainer>
   )
