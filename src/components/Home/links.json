@@ -95,6 +95,10 @@
     "name": "Coinbase Wallet",
     "featuredWallet": 1
   },
+  "coinhako": {
+    "link": "https://www.coinhako.com/",
+    "name": "Coinhako"
+  },
   "coinrequest": {
     "link": "https://coinrequest.io/",
     "name": "CoinRequest"
