@@ -3,7 +3,7 @@
     "learnMore": "詳細"
   },
   "nav": {
-    "about": "組織",
+    "about": "About",
     "blog": "ブログ",
     "launch": "アプリを起動"
   },
@@ -52,7 +52,7 @@
 
       "subDomains": "プロジェクトのユーザ名としてENSサブドメインを作成できます。",
       "dns": "特定の名前で従来のDNSレコードを保存し、提供します。",
-      "tor": "ENS を使用して、Tor.onionの隠れたサービスにもっと簡単にアクセスできます。",
+      "tor": "ENSを使用して、Tor.onionの隠れたサービスにもっと簡単にアクセスできます。",
       "erc721": ".ETH名はERC721準拠のNFTです。"
     },
     "getInvolved": {
