@@ -25,6 +25,17 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Overpass+Mono\:300,400"`,
+          `Overpass\:100,200,300,400,500,700,800,900`,
+          `Karma: 400,300,200,100`,
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
