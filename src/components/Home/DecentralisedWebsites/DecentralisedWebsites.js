@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { useTranslation } from "react-i18next"
 import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
 import { H2, P, Button } from "../../Typography"
@@ -48,6 +49,7 @@ const ImageTransition = styled("div")`
 `
 
 export default function DecentralisedWebsites(props) {
+  const { t } = useTranslation()
   const [ref, inView] = useInView({
     /* Optional options */
     threshold: 0,
@@ -56,11 +58,8 @@ export default function DecentralisedWebsites(props) {
 
   return (
     <Container>
-      <H2>Decentralised Websites</H2>
-      <P>
-        Launch censorship-resistant decentralized websites with ENS. Upload your
-        website to IPFS in our Manager and access it with your ENS name.{" "}
-      </P>
+      <H2>{t("home.decentralisedWebsites.title")}</H2>
+      <P>{t("home.decentralisedWebsites.text")}</P>
       <ImageAnimation ref={ref}>
         <ImageTransition>
           <motion.img src={website2} style={{ opacity: inView ? 0 : 1 }} />
@@ -75,7 +74,7 @@ export default function DecentralisedWebsites(props) {
         </ImageTransition>
       </ImageAnimation>
       <Button href="https://medium.com/the-ethereum-name-service/upload-to-ipfs-directly-from-the-ens-manager-with-new-tool-ac055db5d2fe">
-        Learn more
+        {t("c.learnMore")}
       </Button>
     </Container>
   )

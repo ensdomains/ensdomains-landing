@@ -28,7 +28,7 @@ export default function Hero(props) {
   const { t } = useTranslation()
   return (
     <HeroContainer>
-      <Title>{t("Home.Hero.Title")}</Title>
+      <Title>{t("home.hero.title")}</Title>
     </HeroContainer>
   )
 }
