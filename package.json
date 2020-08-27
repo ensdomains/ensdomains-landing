@@ -22,7 +22,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
-    "framer-motion": "^1.11.1",
+    "framer-motion": "^2.6.2",
     "gatsby": "^2.22.15",
     "gatsby-plugin-emotion": "^4.3.4",
     "gatsby-plugin-google-analytics": "^2.3.4",

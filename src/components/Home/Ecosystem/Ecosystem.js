@@ -180,8 +180,13 @@ export default function Ecosystem(props) {
         </Grid>
         <More href="#" onClick={() => setMoreApps(!moreApps)}>
           {moreApps
+<<<<<<< HEAD
             ? `${t("home.ecosystem.seeLess")} -`
             : `${t("home.ecosystem.seeMore")} +`}
+=======
+            ? `${t("home.ecosystem.seeMore")}} - `
+            : `${t("home.ecosystem.seeLess")} +`}
+>>>>>>> trans-support
         </More>
       </Section>
       <Section>
@@ -196,8 +201,13 @@ export default function Ecosystem(props) {
         </Grid>
         <More href="#" onClick={() => setMoreBrowsers(!moreBrowsers)}>
           {moreBrowsers
+<<<<<<< HEAD
             ? `${t("home.ecosystem.seeLess")} -`
             : `${t("home.ecosystem.seeMore")} +`}
+=======
+            ? `${t("home.ecosystem.seeMore")}} - `
+            : `${t("home.ecosystem.seeLess")} +`}
+>>>>>>> trans-support
         </More>
       </Section>
     </Container>
