@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { motion, AnimatePresence } from "framer-motion"
 import styled from "@emotion/styled"
+import { Link, useI18next } from "gatsby-plugin-react-i18next"
 
 import RotatingSmallCaret from "./Icons/RotatingSmallCaret"
 
@@ -107,14 +108,14 @@ export default function LanguageSwitcher() {
     getLang(getLanguageFromLocalStorage()) ?? getLang("en")
   )
   const [showDropdown, setShowDropdown] = useState(false)
-  const { i18n } = useTranslation()
+  const { originalPath } = useI18next()
 
-  function changeLanguage(language) {
-    setLanguageSelected(language)
-    saveLanguageToLocalStorage(language.value)
-    i18n.changeLanguage(language.value)
-    setShowDropdown(false)
-  }
+  // function changeLanguage(language) {
+  //   setLanguageSelected(language)
+  //   saveLanguageToLocalStorage(language.value)
+  //   i18n.changeLanguage(language.value)
+  //   setShowDropdown(false)
+  // }
 
   return (
     <LanguageSwitcherContainer>
@@ -135,10 +136,10 @@ export default function LanguageSwitcher() {
           >
             {LANGUAGES.map(language => {
               return (
-                <li onClick={() => changeLanguage(language)}>
+                <Link to={originalPath} language={language.value}>
                   {language.label}
                   <Ball selected={languageSelected.value === language.value} />
-                </li>
+                </Link>
               )
             })}
           </Dropdown>
