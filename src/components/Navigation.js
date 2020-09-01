@@ -6,6 +6,7 @@ import Logo from "./Logo"
 import { Button } from "./Typography"
 
 import mq from "../mediaQuery"
+import LanguageSwitcher from "./LanguageSwitcher"
 
 const Nav = styled("nav")`
   background-image: linear-gradient(90deg, #513eff 0%, #52e5ff 100%);
@@ -223,12 +224,17 @@ export default function Navigation() {
 
       <Links menuOpen={menuOpen}>
         <Link to="/about">{t("nav.about")}</Link>
-        <a href="https://medium.com/the-ethereum-name-service">{t("nav.blog")}</a>
+        <a href="https://medium.com/the-ethereum-name-service">
+          {t("nav.blog")}
+        </a>
+
         <Separator />
-        <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>
+        <LanguageSwitcher />
+        <Launch href="https://app.ens.domains">Launch App</Launch>
       </Links>
 
       <MobileLinks menuOpen={menuOpen}>
+        <LanguageSwitcher mobile={true} />
         <li>
           <Link to="/about">{t("nav.about")}</Link>
         </li>
