@@ -5,7 +5,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         languages: ["en", "cn", "ja", "de"],
-        defaultLanguage: "cn",
+        defaultLanguage: "en",
         path: `${__dirname}/locales`,
         siteUrl: "app.ens.domains",
         i18nextOptions: {

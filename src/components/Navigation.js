@@ -227,12 +227,14 @@ export default function Navigation() {
         <a href="https://medium.com/the-ethereum-name-service">
           {t("nav.blog")}
         </a>
-        <LanguageSwitcher />
+
         <Separator />
+        <LanguageSwitcher />
         <Launch href="https://app.ens.domains">Launch App</Launch>
       </Links>
 
       <MobileLinks menuOpen={menuOpen}>
+        <LanguageSwitcher mobile={true} />
         <li>
           <Link to="/about">{t("nav.about")}</Link>
         </li>
