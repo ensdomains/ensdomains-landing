@@ -13,7 +13,7 @@ export default function SmallCaret({ className }) {
     >
       <path
         d="M1.3431 0L6 4.6569 10.6569 0l1 1L6 6.6569.3431 1l1-1z"
-        fill="#ADBBCD"
+        fill="white"
         fill-rule="evenodd"
       />
     </SVG>

@@ -4,7 +4,7 @@ module.exports = {
       // including a plugin from outside the plugins folder needs the path to it
       resolve: `gatsby-plugin-react-i18next`,
       options: {
-        languages: ["en"],
+        languages: ["en", "cn", "ja", "de"],
         defaultLanguage: "en",
         path: `${__dirname}/locales`,
         siteUrl: "app.ens.domains",
@@ -20,7 +20,7 @@ module.exports = {
         pages: [
           {
             matchPath: "/ignored-page",
-            languages: ["en"],
+            languages: ["en", "cn", "ja", "de"],
           },
         ],
       },

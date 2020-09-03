@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { motion, AnimatePresence } from "framer-motion"
 import styled from "@emotion/styled"
+=======
+import React, { useState, useContext } from "react"
+import { useTranslation } from "react-i18next"
+import { motion, AnimatePresence } from "framer-motion"
+import styled from "@emotion/styled"
+import { Link, useI18next, I18nextContext } from "gatsby-plugin-react-i18next"
+>>>>>>> d04509ed6478d73b122fc2a672b6b0c7efbfa0b0
 
 import RotatingSmallCaret from "./Icons/RotatingSmallCaret"
 
@@ -29,13 +37,30 @@ function getLang(lang) {
 }
 
 const ActiveLanguage = styled("div")`
+<<<<<<< HEAD
   color: #adbbcd;
+=======
+  color: white;
+>>>>>>> d04509ed6478d73b122fc2a672b6b0c7efbfa0b0
   text-transform: uppercase;
   display: flex;
   justify-content: center;
   height: 100%;
   padding: 0 20px;
   align-items: center;
+<<<<<<< HEAD
+=======
+
+  ${props =>
+    props.mobile
+      ? `
+      font-size: 14px;
+      border-bottom: 1px solid #5F698F;
+      padding: 20px 0;
+      background: #384473;
+  `
+      : ``}
+>>>>>>> d04509ed6478d73b122fc2a672b6b0c7efbfa0b0
   span {
     margin-right: 10px;
   }
@@ -46,39 +71,74 @@ const ActiveLanguage = styled("div")`
 `
 
 const LanguageSwitcherContainer = styled("div")`
-  background: white;
   position: relative;
+  ${props =>
+    props.mobile
+      ? `
+    width: 100%;
+  `
+      : ``}
 `
 
 const Dropdown = styled(motion.div)`
-  position: absolute;
-  background: white;
-  top: 100%;
-  right: 0;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: -4px 18px 70px 0 rgba(108, 143, 167, 0.32);
-  width: 230px;
-  li {
-    color: #adbbcd;
-    padding: 20px 30px;
-    border-bottom: 1px solid #dfdfdf;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &:hover {
-      color: #2b2b2b;
-      cursor: pointer;
-      div {
-        /* ball */
-        background: #5284ff;
+  ${props =>
+    props.mobile
+      ? `
+        position: relative; 
+      `
+      : `
+        position: absolute;
+        background: white;
+        top: 100%;
+        right: 0;
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: -4px 18px 70px 0 rgba(108, 143, 167, 0.32);
+        width: 230px;
+      `}
+
+  ${props =>
+    props.mobile
+      ? `
+
+      a {
+        box-sizing: border-box;
+        background: #384473;
+        border-bottom: 1px solid #5F698F;
+        padding: 15px 20px;
+        font-size: 14px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        span {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+  `
+      : `
+    a {
+      color: #adbbcd;
+      padding: 20px 30px;
+      border-bottom: 1px solid #dfdfdf;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      &:hover {
+        color: #2b2b2b;
+        cursor: pointer;
+        div {
+          /* ball */
+          background: #5284ff;
+        }
+      }
+      &:last-child {
+        border-bottom: none;
       }
     }
-    &:last-child {
-      border-bottom: none;
-    }
-  }
+  `}
 `
 
 const Ball = styled("div")`
@@ -94,32 +154,20 @@ const Ball = styled("div")`
   `}
 `
 
-function saveLanguageToLocalStorage(value) {
-  window.localStorage.setItem("language", value)
-}
-
-function getLanguageFromLocalStorage() {
-  return window.localStorage.getItem("language")
-}
-
-export default function LanguageSwitcher() {
-  const [languageSelected, setLanguageSelected] = useState(
-    getLang(getLanguageFromLocalStorage()) ?? getLang("en")
-  )
+export default function LanguageSwitcher({ mobile }) {
+  const context = React.useContext(I18nextContext)
+  const lang = context.language ? context.language : context.defaultLanguage
   const [showDropdown, setShowDropdown] = useState(false)
-  const { i18n } = useTranslation()
-
-  function changeLanguage(language) {
-    setLanguageSelected(language)
-    saveLanguageToLocalStorage(language.value)
-    i18n.changeLanguage(language.value)
-    setShowDropdown(false)
-  }
+  const { originalPath } = useI18next()
+  const selectedLanguage = LANGUAGES.find(l => l.value === lang)
 
   return (
-    <LanguageSwitcherContainer>
-      <ActiveLanguage onClick={() => setShowDropdown(show => !show)}>
-        <span>{languageSelected.value}</span>
+    <LanguageSwitcherContainer mobile={mobile}>
+      <ActiveLanguage
+        mobile={mobile}
+        onClick={() => setShowDropdown(show => !show)}
+      >
+        <span>{mobile ? selectedLanguage.label : selectedLanguage.value}</span>
         <RotatingSmallCaret
           start="top"
           rotated={showDropdown}
@@ -129,16 +177,17 @@ export default function LanguageSwitcher() {
       {showDropdown && (
         <AnimatePresence>
           <Dropdown
+            mobile={mobile}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
           >
             {LANGUAGES.map(language => {
               return (
-                <li onClick={() => changeLanguage(language)}>
-                  {language.label}
-                  <Ball selected={languageSelected.value === language.value} />
-                </li>
+                <Link to={originalPath} language={language.value}>
+                  <span>{language.label}</span>
+                  <Ball selected={selectedLanguage.value === language.value} />
+                </Link>
               )
             })}
           </Dropdown>

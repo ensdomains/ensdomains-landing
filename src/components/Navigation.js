@@ -223,26 +223,18 @@ export default function Navigation() {
       </div>
 
       <Links menuOpen={menuOpen}>
-<<<<<<< HEAD
-        <Link to="/about">{t("nav.about")}</Link>
-        <a href="https://medium.com/the-ethereum-name-service">{t("nav.blog")}</a>
-=======
-<<<<<<< Updated upstream
         <Link to="/about">About</Link>
-        <a href="https://medium.com/the-ethereum-name-service">Blog</a>
-=======
-        <Link to="/about">{t("nav.about")}</Link>
         <a href="https://medium.com/the-ethereum-name-service">
           {t("nav.blog")}
         </a>
-        <LanguageSwitcher />
->>>>>>> Stashed changes
->>>>>>> trans-support
+
         <Separator />
-        <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>
+        <LanguageSwitcher />
+        <Launch href="https://app.ens.domains">Launch App</Launch>
       </Links>
 
       <MobileLinks menuOpen={menuOpen}>
+        <LanguageSwitcher mobile={true} />
         <li>
           <Link to="/about">{t("nav.about")}</Link>
         </li>
