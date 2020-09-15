@@ -61,8 +61,8 @@
     },
     "getInvolved": {
       "community": {
-        "cta": "Вступить в Gitter",
-        "title": "Вступайте в наше сообщество Gitter"
+        "cta": "Вступить в Discord",
+        "title": "Вступайте в наше сообщество Discord"
       },
       "documentation": {
         "cta": "Прочесть документацию",

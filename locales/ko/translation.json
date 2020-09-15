@@ -61,8 +61,8 @@
     },
     "getInvolved": {
       "community": {
-        "cta": "Gitter 가입하기",
-        "title": "Gitter 커뮤니티에 가입하세요."
+        "cta": "Discord 가입하기",
+        "title": "Discord 커뮤니티에 가입하세요."
       },
       "documentation": {
         "cta": "문서 읽기",

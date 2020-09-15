@@ -1,5 +1,4 @@
-import React, { useState, useContext } from "react"
-import { useTranslation } from "react-i18next"
+import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import styled from "@emotion/styled"
 import { Link, useI18next, I18nextContext } from "gatsby-plugin-react-i18next"
@@ -23,6 +22,30 @@ const LANGUAGES = [
     value: "de",
     label: "Deutsch (DE)",
   },
+  {
+    value: "es",
+    label: "Español (ES)",
+  },
+  {
+    value: "fr",
+    label: "Fançais (FR)",
+  },
+  {
+    value: "ko",
+    label: "한국어 (KO)",
+  },
+  {
+    value: "pl",
+    label: "Polskie (PL)",
+  },
+  {
+    value: "ru",
+    label: "Pусский (RU)",
+  },
+  {
+    value: "vi",
+    label: "Tiếng Việt (VI)",
+  }
 ]
 
 function getLang(lang) {
