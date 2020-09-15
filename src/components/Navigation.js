@@ -230,7 +230,7 @@ export default function Navigation() {
 
         <Separator />
         <LanguageSwitcher />
-        <Launch href="https://app.ens.domains">Launch App</Launch>
+        <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>
       </Links>
 
       <MobileLinks menuOpen={menuOpen}>
