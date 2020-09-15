@@ -20,9 +20,9 @@ const links = [
   {
     name: "community",
     img: community,
-    text: "Join our Gitter community",
-    cta: "Join Gitter",
-    link: "https://gitter.im/ethereum/go-ethereum/name-registry",
+    text: "Join our Discord community",
+    cta: "Join Discord",
+    link: "https://discord.gg/AskZbFx",
   },
   {
     name: "forums",
