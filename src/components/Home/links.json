@@ -412,6 +412,10 @@
     "link": "https://nexusmutual.io/",
     "name": "Nexus Mutual"
   },
+  "niftyink": {
+    "link": "https://nifty.ink/",
+    "name": "Nifty Ink"
+  },
   "nonfungible": {
     "link": "https://nonfungible.com/",
     "name": "NonFungible.com"
@@ -553,6 +557,10 @@
   "tokenallowancechecker": {
     "link": "https://tac.dappstar.io/",
     "name": "Token Allowance Checker"
+  },
+  "tokenlists": {
+    "link": "https://tokenlists.org/",
+    "name": "Token Lists"
   },
   "tornado": {
     "link": "https://tornado.cash/",
