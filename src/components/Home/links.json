@@ -546,6 +546,10 @@
     "link": "https://stib.co/",
     "name": "StiB"
   },
+  "stuckwithu": {
+    "link": "http://stuckwithu.eth.link/",
+    "name": "Stuck with U"
+  },
   "swarm": {
     "link": "https://github.com/ethersphere/swarm",
     "name": "Swarm"
