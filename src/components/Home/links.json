@@ -220,6 +220,10 @@
     "link": "https://ensuser.com/",
     "name": "ENSUser"
   },
+  "epns": {
+    "link": "https://epns.io/",
+    "name": "EPNS"
+  },
   "ercgraph": {
     "link": "https://ercgraph.live/",
     "name": "ERCGraph"
