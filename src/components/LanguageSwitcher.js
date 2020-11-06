@@ -1,15 +1,12 @@
-<<<<<<< HEAD
-import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { motion, AnimatePresence } from "framer-motion"
 import styled from "@emotion/styled"
-=======
 import React, { useState, useContext } from "react"
 import { useTranslation } from "react-i18next"
+
 import { motion, AnimatePresence } from "framer-motion"
 import styled from "@emotion/styled"
 import { Link, useI18next, I18nextContext } from "gatsby-plugin-react-i18next"
->>>>>>> d04509ed6478d73b122fc2a672b6b0c7efbfa0b0
 
 import RotatingSmallCaret from "./Icons/RotatingSmallCaret"
 
@@ -29,6 +26,30 @@ const LANGUAGES = [
   {
     value: "de",
     label: "Deutsch (DE)",
+  },
+  {
+    value: "es",
+    label: "Español (ES)",
+  },
+  {
+    value: "fr",
+    label: "Français (FR)",
+  },
+  {
+    value: "ko",
+    label: "한국어 (KO)",
+  },
+  {
+    value: "pl",
+    label: "Polski (PL)",
+  },
+  {
+    value: "ru",
+    label: "Pусский (RU)",
+  },
+  {
+    value: "vi",
+    label: "Tiếng Việt (VI)",
   },
 ]
 

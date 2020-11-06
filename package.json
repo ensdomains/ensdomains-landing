@@ -8,7 +8,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "deploy:dev": "gatsby build && cd public && surge . --domain ensdomains.surge.sh",
-    "deploy:live": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy:live": "gatsby build --prefix-paths && ./node_modules/gh-pages/bin/gh-pages-clean && gh-pages -d public",
     "deploy:ci": "yarn clean && gatsby build --prefix-paths && ./deploy-gh.sh",
     "deploy:branch": "/bin/sh -c 'if [ \"$TRAVIS_BRANCH\" = \"master\" ]; then yarn deploy:ci; elif [ \"$TRAVIS_BRANCH\" = \"dev\" ]; then yarn deploy:dev; fi'",
     "deploy:pr": "gatsby build && ./deploy.sh",

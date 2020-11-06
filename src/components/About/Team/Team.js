@@ -51,7 +51,7 @@ const team = [
     link: "https://twitter.com/BrantlyMillegan",
   },
   {
-    name: "Jim Mcdonald",
+    name: "Jim McDonald",
     title: "EthDNS Developer",
     img: jim,
     link: "http://linkedin.com/in/jimgmcdonald",

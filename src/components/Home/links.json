@@ -220,6 +220,10 @@
     "link": "https://ensuser.com/",
     "name": "ENSUser"
   },
+  "ercgraph": {
+    "link": "https://ercgraph.live/",
+    "name": "ERCGraph"
+  },
   "ethdns": {
     "link": "https://www.wealdtech.com/articles/using-ethdns-to-host-your-dns-domain/",
     "name": "EthDNS"
@@ -346,6 +350,10 @@
     "link": "http://nic.luxe/",
     "name": ".LUXE"
   },
+  "makersplace": {
+    "link": "https://makersplace.com/",
+    "name": "MakersPlace"
+  },
   "mailchain": {
     "link": "https://mailchain.xyz/",
     "name": "Mailchain"
@@ -412,6 +420,10 @@
     "link": "https://nexusmutual.io/",
     "name": "Nexus Mutual"
   },
+  "niftyink": {
+    "link": "https://nifty.ink/",
+    "name": "Nifty Ink"
+  },
   "nonfungible": {
     "link": "https://nonfungible.com/",
     "name": "NonFungible.com"
@@ -436,6 +448,10 @@
   "ownbit": {
     "link": "https://ownbit.io/en/",
     "name": "OwnBit"
+  },
+  "parcel": {
+    "link": "https://parcel.money/",
+    "name": "Parcel"
   },
   "paraswap": {
     "link": "https://paraswap.io/",
@@ -534,6 +550,10 @@
     "link": "https://stib.co/",
     "name": "StiB"
   },
+  "stuckwithu": {
+    "link": "http://stuckwithu.eth.link/",
+    "name": "Stuck with U"
+  },
   "swarm": {
     "link": "https://github.com/ethersphere/swarm",
     "name": "Swarm"
@@ -549,6 +569,10 @@
   "tokenallowancechecker": {
     "link": "https://tac.dappstar.io/",
     "name": "Token Allowance Checker"
+  },
+  "tokenlists": {
+    "link": "https://tokenlists.org/",
+    "name": "Token Lists"
   },
   "tornado": {
     "link": "https://tornado.cash/",
@@ -585,10 +609,6 @@
     "link": "https://uniswap.io/",
     "name": "UniSwap",
     "featuredApp": 1
-  },
-  "universallogin": {
-    "link": "https://universallogin.io",
-    "name": "Universal Login"
   },
   "unlock": {
     "link": "https://unlock-protocol.com/",

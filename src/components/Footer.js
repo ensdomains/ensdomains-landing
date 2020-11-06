@@ -97,7 +97,7 @@ export default function Footer(props) {
           </ExternalLink>
         ))}
       </SocialContainer>
-      <MailTo href="mailto:press.ens.domains">press@ens.domains</MailTo>
+      <MailTo href="mailto:press@ens.domains">press@ens.domains</MailTo>
     </FooterContainer>
   )
 }
