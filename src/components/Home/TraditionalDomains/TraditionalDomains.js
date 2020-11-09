@@ -71,7 +71,7 @@ export default function TraditionalDomains(props) {
       <H2>{t("home.dns.title")}</H2>
       <Desc>{t("home.dns.text1")}</Desc>
       <DomainWrapper>
-        <DomainDesc>{t("home.dns.text2")}:</DomainDesc>
+        <DomainDesc>{t("home.dns.text2")}</DomainDesc>
         <Domains>
           {domains.map(d => (
             <li>{d}</li>
