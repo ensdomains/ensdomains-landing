@@ -55,19 +55,13 @@ function getLang(lang) {
 }
 
 const ActiveLanguage = styled("div")`
-<<<<<<< HEAD
-  color: #adbbcd;
-=======
   color: white;
->>>>>>> d04509ed6478d73b122fc2a672b6b0c7efbfa0b0
   text-transform: uppercase;
   display: flex;
   justify-content: center;
   height: 100%;
   padding: 0 20px;
   align-items: center;
-<<<<<<< HEAD
-=======
 
   ${props =>
     props.mobile
@@ -78,7 +72,6 @@ const ActiveLanguage = styled("div")`
       background: #384473;
   `
       : ``}
->>>>>>> d04509ed6478d73b122fc2a672b6b0c7efbfa0b0
   span {
     margin-right: 10px;
   }
