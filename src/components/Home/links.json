@@ -220,6 +220,10 @@
     "link": "https://ensuser.com/",
     "name": "ENSUser"
   },
+  "epns": {
+    "link": "https://epns.io/",
+    "name": "EPNS"
+  },
   "ercgraph": {
     "link": "https://ercgraph.live/",
     "name": "ERCGraph"
@@ -308,6 +312,10 @@
   "ipfs": {
     "link": "https://ipfs.io/",
     "name": "IPFS"
+  },
+  "invoicebuild": {
+    "link": "https://invoice.build/",
+    "name": "Invoice.build"
   },
   "jarvis": {
     "link": "https://beta.jarvis.network/welcome",
