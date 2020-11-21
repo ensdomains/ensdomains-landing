@@ -387,6 +387,10 @@
     "link": "https://mevu.bet/",
     "name": "meVu"
   },
+  "mintable": {
+    "link": "https://mintable.app/",
+    "name": "Mintable"
+  },
   "mintbase": {
     "link": "https://mintbase.io/",
     "name": "Mintbase"
