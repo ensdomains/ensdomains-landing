@@ -90,11 +90,11 @@
     "link": "https://clovers.network/",
     "name": "Clovers Network"
   },
-  "coinomi": {
-    "link": "https://www.coinomi.com/en/",
-    "name": "Coinomi"
-  },
   "coinbase": {
+    "link": "https://coinbase.com/",
+    "name": "Coinbase",
+  },
+  "coinbasewallet": {
     "link": "https://wallet.coinbase.com/",
     "name": "Coinbase Wallet",
     "featuredWallet": 1
@@ -102,6 +102,10 @@
   "coinhako": {
     "link": "https://www.coinhako.com/",
     "name": "Coinhako"
+  },
+  "coinomi": {
+    "link": "https://www.coinomi.com/en/",
+    "name": "Coinomi"
   },
   "coinrequest": {
     "link": "https://coinrequest.io/",
