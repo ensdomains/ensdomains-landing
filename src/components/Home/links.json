@@ -92,12 +92,12 @@
   },
   "coinbase": {
     "link": "https://coinbase.com/",
-    "name": "Coinbase"
+    "name": "Coinbase",
+    "featuredWallet": 1
   },
   "coinbasewallet": {
     "link": "https://wallet.coinbase.com/",
-    "name": "Coinbase Wallet",
-    "featuredWallet": 1
+    "name": "Coinbase Wallet"
   },
   "coinhako": {
     "link": "https://www.coinhako.com/",
