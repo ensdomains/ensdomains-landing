@@ -164,7 +164,7 @@ export default function Ecosystem(props) {
         </Grid>
         <More href="#" onClick={() => setMoreWallets(!moreWallets)}>
           {moreWallets
-            ? `${t("home.ecosystem.seeLess")} -`
+            ? `${t("home.ecosystem.seeLess")} -`}
             : `${t("home.ecosystem.seeMore")} +`}
         </More>
       </Section>
@@ -180,7 +180,7 @@ export default function Ecosystem(props) {
         </Grid>
         <More href="#" onClick={() => setMoreApps(!moreApps)}>
           {moreApps
-            ? `${t("home.ecosystem.seeLess")} -`
+            ? `${t("home.ecosystem.seeLess")} -`}
             : `${t("home.ecosystem.seeMore")} +`}
         </More>
       </Section>
@@ -196,7 +196,7 @@ export default function Ecosystem(props) {
         </Grid>
         <More href="#" onClick={() => setMoreBrowsers(!moreBrowsers)}>
           {moreBrowsers
-            ? `${t("home.ecosystem.seeLess")} -`
+            ? `${t("home.ecosystem.seeLess")} -`}
             : `${t("home.ecosystem.seeMore")} +`}
         </More>
       </Section>
