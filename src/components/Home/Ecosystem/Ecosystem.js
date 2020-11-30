@@ -166,7 +166,6 @@ export default function Ecosystem(props) {
           {moreWallets
             ? `${t("home.ecosystem.seeLess")} -`}
             : `${t("home.ecosystem.seeMore")} +`}
-          }
         </More>
       </Section>
       <Section>
@@ -183,7 +182,6 @@ export default function Ecosystem(props) {
           {moreApps
             ? `${t("home.ecosystem.seeLess")} -`}
             : `${t("home.ecosystem.seeMore")} +`}
-          }
         </More>
       </Section>
       <Section>
@@ -200,7 +198,6 @@ export default function Ecosystem(props) {
           {moreBrowsers
             ? `${t("home.ecosystem.seeLess")} -`}
             : `${t("home.ecosystem.seeMore")} +`}
-          }
         </More>
       </Section>
     </Container>
