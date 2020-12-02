@@ -578,6 +578,10 @@
     "link": "http://stuckwithu.eth.link/",
     "name": "Stuck with U"
   },
+  "superfluid": {
+    "link": "https://www.superfluid.finance/",
+    "name": "Superfluid"
+  },
   "swarm": {
     "link": "https://github.com/ethersphere/swarm",
     "name": "Swarm"
