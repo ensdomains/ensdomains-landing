@@ -92,7 +92,7 @@ export default function Statistics(props) {
           <span>{t("home.statistics.services")}</span>
         </p>
         <p>
-          <strong>58.8k</strong> <span>{t("home.statistics.owners")}</span>
+          <strong>58.9k</strong> <span>{t("home.statistics.owners")}</span>
         </p>
       </Stats>
     </HeroContainer>
