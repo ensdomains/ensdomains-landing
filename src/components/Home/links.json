@@ -602,6 +602,10 @@
     "link": "https://tokenlists.org/",
     "name": "Token Lists"
   },
+  "tokenpocket": {
+    "link": "https://www.tokenpocket.pro/",
+    "name": "TokenPocket"
+  },
   "tornado": {
     "link": "https://tornado.cash/",
     "name": "Tornado Cash",
