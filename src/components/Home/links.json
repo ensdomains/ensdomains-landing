@@ -355,8 +355,7 @@
   },
   "loopring": {
     "link": "https://loopring.org/",
-    "name": "Loopring",
-    "featuredApp": 4
+    "name": "Loopring"
   },
   "luxe": {
     "link": "http://nic.luxe/",
@@ -593,6 +592,11 @@
   "temporal": {
     "link": "https://temporal.cloud/",
     "name": "Temporal"
+  },
+  "thegraph": {
+    "link": "https://thegraph.com/",
+    "name": "The Graph",
+    "featuredApp": 4
   },
   "tokenallowancechecker": {
     "link": "https://tac.dappstar.io/",
