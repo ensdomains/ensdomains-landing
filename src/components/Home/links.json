@@ -72,7 +72,8 @@
   },
   "chainlink": {
     "link": "https://chain.link/",
-    "name": "Chainlink"
+    "name": "Chainlink",
+    "featuredApp": 5
   },
   "chainshot": {
     "link": "https://www.chainshot.com/",
@@ -629,8 +630,7 @@
   },
   "truffle": {
     "link": "https://www.trufflesuite.com/",
-    "name": "Truffle Suite",
-    "featuredApp": 5
+    "name": "Truffle Suite"
   },
   "trustlessfund": {
     "link": "https://trustless.fund/",
