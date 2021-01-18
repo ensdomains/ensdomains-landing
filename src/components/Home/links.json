@@ -79,9 +79,10 @@
     "link": "https://www.chainshot.com/",
     "name": "ChainShot"
   },
-  "cipher": {
-    "link": "https://www.cipherbrowser.com/",
-    "name": "Cipher"
+  "cloudflare": {
+    "link": "https://www.cloudflare.com/",
+    "name": "Cloudflare",
+    "featuredApp": 2
   },
   "cloversnetwork": {
     "link": "https://clovers.network/",
@@ -138,8 +139,7 @@
   },
   "decentraland": {
     "link": "https://decentraland.org/",
-    "name": "Decentraland",
-    "featuredApp": 2
+    "name": "Decentraland"
   },
   "defiportfoliotracker": {
     "link": "https://portfolio.defiprime.com/",
