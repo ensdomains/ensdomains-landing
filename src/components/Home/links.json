@@ -662,6 +662,10 @@
     "link": "https://unstoppabledomains.com/extension",
     "name": "Unstoppable Extension"
   },
+  "unstoppablewallet": {
+    "link": "https://unstoppable.money/",
+    "name": "Unstoppable Wallet"
+  },
   "waffle": {
     "link": "https://getwaffle.io/",
     "name": "Waffle"
