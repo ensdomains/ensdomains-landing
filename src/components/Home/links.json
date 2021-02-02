@@ -603,6 +603,10 @@
     "link": "https://tac.dappstar.io/",
     "name": "Token Allowance Checker"
   },
+  "tokenizedtweets": {
+    "link": "https://tokenizedtweets.com/",
+    "name": "Tokenized Tweets"
+  },
   "tokenlists": {
     "link": "https://tokenlists.org/",
     "name": "Token Lists"
