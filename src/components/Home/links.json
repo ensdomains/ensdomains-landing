@@ -70,6 +70,10 @@
     "link": "https://wallet.burnerfactory.com/",
     "name": "Burner Wallet"
   },
+  "claimable": {
+    "link": "https://claimable.vercel.app/",
+    "name": "Claimable"
+  },
   "chainlink": {
     "link": "https://chain.link/",
     "name": "Chainlink",
