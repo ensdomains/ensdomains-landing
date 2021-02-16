@@ -133,6 +133,10 @@
     "link": "https://dappnode.io/",
     "name": "DAppNode"
   },
+  "dappquery": {
+    "link": "https://dappquery.com/integration/ens",
+    "name": "Dappquery"
+  },
   "dcent": {
     "link": "https://dcentwallet.com/",
     "name": "D'CENT Wallet"
