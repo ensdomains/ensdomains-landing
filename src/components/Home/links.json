@@ -241,6 +241,10 @@
     "link": "https://ercgraph.live/",
     "name": "ERCGraph"
   },
+  "ethaf": {
+    "link": "https://eth.af/",
+    "name": "Eth.af"
+  },
   "ethdns": {
     "link": "https://www.wealdtech.com/articles/using-ethdns-to-host-your-dns-domain/",
     "name": "EthDNS"
