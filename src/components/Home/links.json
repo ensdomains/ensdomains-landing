@@ -253,6 +253,10 @@
     "link": "https://marketplace.visualstudio.com/items?itemName=ericglau.defi-ls",
     "name": "Ethereum DeFi Language Support"
   },
+  "ethlink": {
+    "link": "https://eth.link/",
+    "name": "eth.link"
+  },
   "ethmail": {
     "link": "http://ethmail.cc/",
     "name": "ETHMail"
