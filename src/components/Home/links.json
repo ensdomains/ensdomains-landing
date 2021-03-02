@@ -678,6 +678,10 @@
     "link": "https://unstoppabledomains.com/chat",
     "name": "Unstoppable Chat"
   },
+  "unstoppabledns": {
+    "link": "https://community.unstoppabledomains.com/t/configure-your-browser-for-unstoppable-domains/1469",
+    "name": "Unstoppable DNS Resolver"
+  },
   "unstoppableextension": {
     "link": "https://unstoppabledomains.com/extension",
     "name": "Unstoppable Extension"
