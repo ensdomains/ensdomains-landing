@@ -253,6 +253,10 @@
     "link": "https://marketplace.visualstudio.com/items?itemName=ericglau.defi-ls",
     "name": "Ethereum DeFi Language Support"
   },
+  "ethlink": {
+    "link": "https://eth.link/",
+    "name": "eth.link"
+  },
   "ethmail": {
     "link": "http://ethmail.cc/",
     "name": "ETHMail"
@@ -677,6 +681,10 @@
   "unstoppablechat": {
     "link": "https://unstoppabledomains.com/chat",
     "name": "Unstoppable Chat"
+  },
+  "unstoppabledns": {
+    "link": "https://community.unstoppabledomains.com/t/configure-your-browser-for-unstoppable-domains/1469",
+    "name": "Unstoppable DNS Resolver"
   },
   "unstoppableextension": {
     "link": "https://unstoppabledomains.com/extension",
