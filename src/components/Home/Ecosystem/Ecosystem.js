@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import styled from "@emotion/styled"
 import { motion } from "framer-motion"
@@ -26,42 +26,6 @@ function sortApps(array, property) {
     return a.name < b.name
   })
 }
-
-const wallets = sortApps(
-  importAll(require.context("./wallets", false, /\.(png|jpe?g|svg)$/)).map(
-    item => {
-      return {
-        ...item,
-        ...links[item.fileName],
-      }
-    }
-  ),
-  "featuredWallet"
-)
-
-const apps = sortApps(
-  importAll(require.context("./apps", false, /\.(png|jpe?g|svg)$/)).map(
-    item => {
-      return {
-        ...item,
-        ...links[item.fileName],
-      }
-    }
-  ),
-  "featuredApp"
-)
-
-const browsers = sortApps(
-  importAll(require.context("./browsers", false, /\.(png|jpe?g|svg)$/)).map(
-    item => {
-      return {
-        ...item,
-        ...links[item.fileName],
-      }
-    }
-  ),
-  "featuredBrowser"
-)
 
 const Container = styled("div")`
   background: white;
@@ -146,9 +110,64 @@ const More = styled("p")`
 
 export default function Ecosystem(props) {
   const { t } = useTranslation()
+  const [wallets, setWallets] = useState([])
+  const [apps, setApps] = useState([])
+  const [browsers, setBrowsers] = useState([])
   const [moreWallets, setMoreWallets] = useState(false)
   const [moreApps, setMoreApps] = useState(false)
   const [moreBrowsers, setMoreBrowsers] = useState(false)
+
+  useEffect(() => {
+    async function getImages() {
+      const walletsPromise = require.context(
+        "./wallets",
+        false,
+        /\.(png|jpe?g|svg)$/
+      )
+      const appsPromise = require.context("./apps", false, /\.(png|jpe?g|svg)$/)
+      const browsersPromise = require.context(
+        "./browsers",
+        false,
+        /\.(png|jpe?g|svg)$/
+      )
+      const [wallets, apps, browsers] = await Promise.all([
+        walletsPromise,
+        appsPromise,
+        browsersPromise,
+      ])
+      setApps(
+        importAll(apps).map(item => {
+          return {
+            ...item,
+            ...links[item.fileName],
+          }
+        })
+      )
+      setWallets(
+        importAll(wallets).map(item => {
+          return {
+            ...item,
+            ...links[item.fileName],
+          }
+        })
+      )
+      setBrowsers(
+        importAll(browsers).map(item => {
+          return {
+            ...item,
+            ...links[item.fileName],
+          }
+        })
+      )
+    }
+
+    getImages()
+  }, [])
+
+  const sortedWallets = sortApps(wallets, "featuredWallet")
+  const sortedApps = sortApps(apps, "featuredApp")
+  const sortedBrowsers = sortApps(browsers, "featuredBrowser")
+
   return (
     <Container>
       <H2>{t("home.ecosystem.title")}</H2>
@@ -158,7 +177,7 @@ export default function Ecosystem(props) {
           {t("home.ecosystem.wallets")}
         </h3>
         <Grid animate={{ height: moreWallets ? "auto" : "200px" }}>
-          {wallets.map(app => (
+          {sortedWallets.map(app => (
             <GridItem app={app} />
           ))}
         </Grid>
@@ -174,7 +193,7 @@ export default function Ecosystem(props) {
           {t("home.ecosystem.apps")}
         </h3>
         <Grid animate={{ height: moreApps ? "auto" : "200px" }}>
-          {apps.map(app => (
+          {sortedApps.map(app => (
             <GridItem app={app} />
           ))}
         </Grid>
@@ -190,7 +209,7 @@ export default function Ecosystem(props) {
           {t("home.ecosystem.browsers")}
         </h3>
         <Grid animate={{ height: moreBrowsers ? "auto" : "200px" }}>
-          {browsers.map(app => (
+          {sortedBrowsers.map(app => (
             <GridItem app={app} />
           ))}
         </Grid>

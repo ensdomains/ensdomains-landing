@@ -45,11 +45,11 @@ export function isElementInViewport(el) {
 
 export const importAll = (r, extraData = {}) =>
   r.keys().map(item => {
-    let fileName = item.replace(/\.(png|jpe?g|svg)$/, '').replace('./', '')
+    let fileName = item.replace(/\.(png|jpe?g|svg)$/, "").replace("./", "")
     let parsed = item
-      .replace(/\.(png|jpe?g|svg)$/, '')
-      .replace(/([A-Z])/g, ' $1')
-      .replace('./', '')
+      .replace(/\.(png|jpe?g|svg)$/, "")
+      .replace(/([A-Z])/g, " $1")
+      .replace("./", "")
     let obj = {
       fileName: fileName,
       name: parsed,
