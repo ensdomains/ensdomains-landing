@@ -22,6 +22,9 @@ const CarouselContainer = styled("div")`
 
   .slide {
     background: transparent;
+    div {
+      flex-direction: column;
+    }
   }
 
   .carousel-root {
