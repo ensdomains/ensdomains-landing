@@ -411,6 +411,10 @@
     "link": "https://mintbase.io/",
     "name": "Mintbase"
   },
+  "mirror": {
+    "link": "https://mirror.xyz/",
+    "name": "Mirror"
+  },
   "mosendo": {
     "link": "https://mosendo.com/",
     "name": "Mosendo"
