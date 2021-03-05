@@ -73,7 +73,7 @@ export default function DecentralisedWebsites(props) {
           <motion.img src={blur2} animate={{ opacity: inView ? 1 : 0 }} />
         </ImageTransition>
       </ImageAnimation>
-      <Button href="https://medium.com/the-ethereum-name-service/upload-to-ipfs-directly-from-the-ens-manager-with-new-tool-ac055db5d2fe">
+      <Button href="https://medium.com/the-ethereum-name-service/cloudflare-and-fleek-make-ens-ipfs-site-deployment-as-easy-as-ever-262c990a7514">
         {t("c.learnMore")}
       </Button>
     </Container>
