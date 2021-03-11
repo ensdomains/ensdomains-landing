@@ -245,6 +245,10 @@
     "link": "https://eth.af/",
     "name": "Eth.af"
   },
+  "ethblockart": {
+    "link": "https://ethblock.art/",
+    "name": "EthBlockArt"
+  },
   "ethdns": {
     "link": "https://www.wealdtech.com/articles/using-ethdns-to-host-your-dns-domain/",
     "name": "EthDNS"
