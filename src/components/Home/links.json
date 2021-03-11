@@ -9,8 +9,7 @@
   },
   "almonitextension": {
     "link": "http://almonit.eth.link/",
-    "name": "Almonit Extension",
-    "featuredBrowser": 5
+    "name": "Almonit Extension"
   },
   "alphawallet": {
     "link": "https://alphawallet.com",
@@ -85,7 +84,8 @@
   },
   "cloudflare": {
     "link": "https://www.cloudflare.com/",
-    "name": "Cloudflare"
+    "name": "Cloudflare",
+    "featuredBrowser": 5
   },
   "cloversnetwork": {
     "link": "https://clovers.network/",
