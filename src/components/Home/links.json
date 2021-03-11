@@ -9,8 +9,7 @@
   },
   "almonitextension": {
     "link": "http://almonit.eth.link/",
-    "name": "Almonit Extension",
-    "featuredBrowser": 5
+    "name": "Almonit Extension"
   },
   "alphawallet": {
     "link": "https://alphawallet.com",
@@ -86,7 +85,7 @@
   "cloudflare": {
     "link": "https://www.cloudflare.com/",
     "name": "Cloudflare",
-    "featuredApp": 2
+    "featuredBrowser": 5
   },
   "cloversnetwork": {
     "link": "https://clovers.network/",
@@ -245,6 +244,10 @@
     "link": "https://eth.af/",
     "name": "Eth.af"
   },
+  "ethblockart": {
+    "link": "https://ethblock.art/",
+    "name": "EthBlockArt"
+  },
   "ethdns": {
     "link": "https://www.wealdtech.com/articles/using-ethdns-to-host-your-dns-domain/",
     "name": "EthDNS"
@@ -267,7 +270,8 @@
   },
   "etherscan": {
     "link": "https://etherscan.io",
-    "name": "Etherscan"
+    "name": "Etherscan",
+    "featuredApp": 2
   },
   "etherscanquick": {
     "link": "https://chrome.google.com/webstore/detail/etherscan-quick/nplfockicpoicmabmpjjkdiepdajflbn",
