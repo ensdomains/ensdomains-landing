@@ -326,6 +326,10 @@
     "name": "Huobi",
     "featuredWallet": 5
   },
+  "inscribe": {
+    "link": "https://inscribe.so/",
+    "name": "Inscribe"
+  },
   "imToken": {
     "link": "https://token.im/",
     "name": "imToken"
