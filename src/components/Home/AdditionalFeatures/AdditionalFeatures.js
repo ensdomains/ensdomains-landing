@@ -47,7 +47,7 @@ const features = [
   {
     name: "erc721",
     img: cards,
-    link: "https://eips.ethereum.org/EIPS/eip-721",
+    link: "https://medium.com/the-ethereum-name-service/reminder-that-ens-names-are-nfts-what-this-means-for-your-names-b7bcbea8715e",
   },
 ]
 
