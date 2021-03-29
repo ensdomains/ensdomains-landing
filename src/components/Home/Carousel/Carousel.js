@@ -53,7 +53,7 @@ const CarouselContainer = styled("div")`
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 100px !important;
+      width: auto !important;
 
       &:hover {
         cursor: pointer;
@@ -63,12 +63,8 @@ const CarouselContainer = styled("div")`
         opacity: 1;
       }
 
-      .register-svg {
-        margin-right: -35px;
-      }
-
-      .manage-svg {
-        margin-right: -10px;
+      img {
+        align-self: center;
       }
     }
 

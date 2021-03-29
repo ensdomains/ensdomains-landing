@@ -2,7 +2,6 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const IconBase = styled("svg")`
-  width: 100%;
   g {
     opacity: 0.7;
     transition: 0.2s;
@@ -20,9 +19,14 @@ const IconBase = styled("svg")`
   `}
 `
 
-export default function Icon({ active, children, className }) {
+export default function Icon({ active, children, className, width, height }) {
   return (
-    <IconBase active={active} className={className}>
+    <IconBase
+      active={active}
+      className={className}
+      width={width}
+      height={height}
+    >
       {children}
     </IconBase>
   )
