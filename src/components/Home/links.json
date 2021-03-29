@@ -9,8 +9,7 @@
   },
   "almonitextension": {
     "link": "http://almonit.eth.link/",
-    "name": "Almonit Extension",
-    "featuredBrowser": 5
+    "name": "Almonit Extension"
   },
   "alphawallet": {
     "link": "https://alphawallet.com",
@@ -86,7 +85,7 @@
   "cloudflare": {
     "link": "https://www.cloudflare.com/",
     "name": "Cloudflare",
-    "featuredApp": 2
+    "featuredBrowser": 5
   },
   "cloversnetwork": {
     "link": "https://clovers.network/",
@@ -116,6 +115,10 @@
   "colony": {
     "link": "https://colony.io/",
     "name": "Colony"
+  },
+  "cometh": {
+    "link": "https://www.cometh.io/",
+    "name": "Cometh"
   },
   "covalent": {
     "link": "https://www.covalenthq.com/",
@@ -201,6 +204,10 @@
     "link": "https://easycryptoname.com/",
     "name": "Easy Crypto Name"
   },
+  "easydns": {
+    "link": "https://easydns.com/",
+    "name": "easyDNS"
+  },
   "edge": {
     "link": "https://edge.app/",
     "name": "Edge"
@@ -245,6 +252,10 @@
     "link": "https://eth.af/",
     "name": "Eth.af"
   },
+  "ethblockart": {
+    "link": "https://ethblock.art/",
+    "name": "EthBlockArt"
+  },
   "ethdns": {
     "link": "https://www.wealdtech.com/articles/using-ethdns-to-host-your-dns-domain/",
     "name": "EthDNS"
@@ -267,7 +278,8 @@
   },
   "etherscan": {
     "link": "https://etherscan.io",
-    "name": "Etherscan"
+    "name": "Etherscan",
+    "featuredApp": 2
   },
   "etherscanquick": {
     "link": "https://chrome.google.com/webstore/detail/etherscan-quick/nplfockicpoicmabmpjjkdiepdajflbn",
@@ -322,6 +334,10 @@
     "name": "Huobi",
     "featuredWallet": 5
   },
+  "inscribe": {
+    "link": "https://inscribe.so/",
+    "name": "Inscribe"
+  },
   "imToken": {
     "link": "https://token.im/",
     "name": "imToken"
@@ -357,6 +373,10 @@
   "kyberswap": {
     "link": "https://kyberswap.com/swap",
     "name": "KyberSwap"
+  },
+  "larvalabs": {
+    "link": "https://larvalabs.com/",
+    "name": "LarvaLabs"
   },
   "leth": {
     "link": "https://www.inzhoop.com/",
@@ -410,6 +430,10 @@
   "mintbase": {
     "link": "https://mintbase.io/",
     "name": "Mintbase"
+  },
+  "mirror": {
+    "link": "https://mirror.xyz/",
+    "name": "Mirror"
   },
   "mosendo": {
     "link": "https://mosendo.com/",
@@ -524,6 +548,10 @@
   "portle": {
     "link": "https://portle.io/",
     "name": "Portle"
+  },
+  "rabbithole": {
+    "link": "https://rabbithole.gg/",
+    "name": "RabbitHole"
   },
   "rainbow": {
     "link": "https://rainbow.me/",
