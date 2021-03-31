@@ -56,7 +56,7 @@ const members = [
   { name: "Taylor Monahan", company: "MyCrypto" },
   { name: "Aron Fischer", company: "Colony" },
   { name: "Piper Merriam", company: "Ethereum Foundation" },
-  { name: "Jarrad Hope", company: "Status" },
+  { name: "Martin Swende", company: "Ethereum Foundation" },
 ]
 
 const Members = styled("dl")`
