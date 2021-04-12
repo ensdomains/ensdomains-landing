@@ -55,7 +55,7 @@ const members = [
   { name: "Dan Finlay", company: "Metamask" },
   { name: "Taylor Monahan", company: "MyCrypto" },
   { name: "Aron Fischer", company: "Colony" },
-  { name: "Piper Merriam", company: "Ethereum Foundation" },
+  { name: "Jason Carver", company: "Ethereum Foundation" },
   { name: "Martin Swende", company: "Ethereum Foundation" },
 ]
 
