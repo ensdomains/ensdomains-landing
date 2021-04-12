@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import { useTranslation } from "react-i18next"
 import mq from "../../../mediaQuery"
 import { Button } from "../../Typography"
+import { Anchor, AnchorContainer } from '../../Anchor'
 
 const Description = styled("div")`
   display: flex;
@@ -110,16 +111,25 @@ const LearnMore = styled(Button)`
 export default function AboutDescription(props) {
   const { t } = useTranslation()
   return (
+    <>
     <Description>
-      <DescriptionInner>
-        <h2>{t("about.benefits.title")}</h2>
+      <DescriptionInner id='about-benefits'>
+        <AnchorContainer href={'#about-benefits'}>
+          <h2>{t("about.benefits.title")}<Anchor /></h2>
+        </AnchorContainer>
         <div>
           <p>{t("about.benefits.text")}</p>
           <LearnMore href="https://medium.com/the-ethereum-name-service/why-ens-uses-ethereum-and-eth-not-a-bespoke-blockchain-and-token-36f86727e71f">
             {t("c.learnMore")}
           </LearnMore>
         </div>
-        <h2>{t("about.root.title")}</h2>
+      </DescriptionInner>
+    </Description>
+    <Description>
+      <DescriptionInner id='about-root'>
+        <AnchorContainer href={'#about-root'}>
+          <h2>{t("about.root.title")}<Anchor /></h2>
+        </AnchorContainer>
         <p>{t("about.root.text")}</p>
         <div />
         <Members>
@@ -131,5 +141,6 @@ export default function AboutDescription(props) {
         </Members>
       </DescriptionInner>
     </Description>
+    </>
   )
 }
