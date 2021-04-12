@@ -1,4 +1,8 @@
 {
+  "aavegotchi": {
+    "link": "https://aavegotchi.com/",
+    "name": "Aavegotchi"
+  },
   "accointing": {
     "link": "https://www.accointing.com/",
     "name": "Accointing"
@@ -128,6 +132,10 @@
     "link": "https://www.covalenthq.com/",
     "name": "Covalent"
   },
+  "crocofinance": {
+    "link": "https://croco.finance/",
+    "name": "Croco Finance"
+  },
   "cryptovoxels": {
     "link": "https://www.cryptovoxels.com/",
     "name": "Cryptovoxels"
@@ -143,6 +151,10 @@
   "dappquery": {
     "link": "https://dappquery.com/integration/ens",
     "name": "Dappquery"
+  },
+  "dappradar": {
+    "link": "https://dappradar.com/",
+    "name": "Dapp Radar"
   },
   "dcent": {
     "link": "https://dcentwallet.com/",
@@ -390,6 +402,10 @@
     "link": "https://www.inzhoop.com/",
     "name": "LETH"
   },
+  "linkswap": {
+    "link": "https://linkswap.app/",
+    "name": "Linkswap"
+  },
   "localcoinswap": {
     "link": "https://localcoinswap.com/",
     "name": "LocalCoinSwap"
@@ -537,6 +553,10 @@
     "link": "https://pillarproject.io/",
     "name": "Pillar"
   },
+  "piedao": {
+    "link": "https://www.piedao.org/",
+    "name": "PieDAO"
+  },
   "poap": {
     "link": "https://www.poap.xyz//",
     "name": "POAP"
@@ -560,6 +580,10 @@
   "portle": {
     "link": "https://portle.io/",
     "name": "Portle"
+  },
+  "primitivefinance": {
+    "link": "https://primitive.finance/",
+    "name": "Primitive"
   },
   "rabbithole": {
     "link": "https://rabbithole.gg/",
@@ -605,6 +629,10 @@
     "link": "https://github.com/Texnomic/SecureDNS",
     "name": "SecureDNS"
   },
+  "sendusdc": {
+    "link": "https://www.sendusdc.net/",
+    "name": "SendUSDC"
+  },
   "snapshotlabs": {
     "link": "https://snapshot.page/",
     "name": "Snapshot"
@@ -641,6 +669,10 @@
   "superfluid": {
     "link": "https://www.superfluid.finance/",
     "name": "Superfluid"
+  },
+  "sushiswap": {
+    "link": "https://sushi.com/",
+    "name": "SushiSwap"
   },
   "swarm": {
     "link": "https://github.com/ethersphere/swarm",
@@ -705,6 +737,10 @@
     "name": "Trust Wallet",
     "featuredWallet": 3
   },
+  "umbra": {
+    "link": "http://umbra.cash/",
+    "name": "Umbra"
+  },
   "uniswap": {
     "link": "https://uniswap.io/",
     "name": "Uniswap",
@@ -749,6 +785,10 @@
   "wyre": {
     "link": "https://www.sendwyre.com/",
     "name": "Wyre"
+  },
+  "yearnfinance": {
+    "link": "https://yearn.finance/",
+    "name": "yearn.finance"
   },
   "yellowsubdomain": {
     "link": "https://yellowsubdomain.io/",
