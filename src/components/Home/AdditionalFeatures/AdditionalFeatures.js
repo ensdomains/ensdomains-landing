@@ -11,6 +11,7 @@ import file from "./assets/file.svg"
 import onion from "./assets/onion.svg"
 import usernames from "./assets/usernames.svg"
 
+import { Anchor, AnchorContainer } from '../../Anchor'
 import mq from "../../../mediaQuery"
 
 const features = [
@@ -117,8 +118,11 @@ const Title = styled(H2)`
 export default function AdditionalFeatures(props) {
   const { t } = useTranslation()
   return (
-    <AdditionalFeaturesContainer>
-      <Title>{t("home.additionalFeatures.title")}</Title>
+    <AdditionalFeaturesContainer id='home-additional-features'>
+      <AnchorContainer href={'#home-additional-features'}>
+        <Title>{t("home.additionalFeatures.title")}<Anchor /></Title>
+      </AnchorContainer>
+      
       <FeaturesContainer>
         {features.map(f => (
           <Feature feature={f} />

@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next"
 import { H2 as DefaultH2 } from "../../Typography"
 import mq from "../../../mediaQuery"
 import integrations from "../links.json"
+import { Anchor, AnchorContainer } from '../../Anchor'
 
 const HeroContainer = styled("div")`
   padding: 60px 20px;
@@ -81,8 +82,10 @@ export default function Statistics(props) {
   const { t } = useTranslation()
   const integrationsCount = Object.keys(integrations).length
   return (
-    <HeroContainer>
-      <H2>{t("home.statistics.title")}</H2>
+    <HeroContainer id='home-statistics'>
+      <AnchorContainer href={'#home-statistics'}>
+        <H2>{t("home.statistics.title")}<Anchor /></H2>
+      </AnchorContainer>
       <Stats>
         <p>
           <strong>237k</strong> <span>{t("home.statistics.names")}</span>

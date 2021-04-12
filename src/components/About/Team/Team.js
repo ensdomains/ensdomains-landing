@@ -12,6 +12,7 @@ import makoto from "./photos/makoto.png"
 import brantly from "./photos/brantly.png"
 import jim from "./photos/jim.png"
 import hoverCircle from "./hoverCircle.png"
+import { Anchor, AnchorContainer } from '../../Anchor'
 
 const team = [
   {
@@ -162,8 +163,10 @@ function TeamMember({ member }) {
 export default function Team(props) {
   const { t } = useTranslation()
   return (
-    <TeamContainer>
-      <h3>{t("about.team.title")}</h3>
+    <TeamContainer id='about-team' >
+      <AnchorContainer href={'#about-team'}>
+        <h3>{t("about.team.title")}<Anchor /></h3>
+      </AnchorContainer>
       <TeamMembers>
         {team.map(member => (
           <TeamMember member={member} />

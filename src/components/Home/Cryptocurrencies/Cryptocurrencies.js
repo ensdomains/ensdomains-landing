@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next"
 import { H2, P as DefaultP } from "../../Typography"
 import { importAll } from "../../../utils"
 import wallet from "./wallet.svg"
+import { Anchor, AnchorContainer } from '../../Anchor'
 
 import mq from "../../../mediaQuery"
 
@@ -85,8 +86,10 @@ export default function Cryptocurrencies(props) {
   const x = useTransform(scrollYProgress, [0, 1], [0, -1000])
   return (
     <HeroContainer>
-      <Wrapper>
-        <H2>{t("home.cryptocurrencies.title")}</H2>
+      <Wrapper id='home-title'>
+        <AnchorContainer href={'#home-title'}>
+          <H2>{t("home.cryptocurrencies.title")}<Anchor /></H2>
+        </AnchorContainer>        
         <P>{t("home.cryptocurrencies.text")}</P>
 
         <WalletAnimation>

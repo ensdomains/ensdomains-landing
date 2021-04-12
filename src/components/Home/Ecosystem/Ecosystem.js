@@ -9,6 +9,7 @@ import links from "../links.json"
 import appSvg from "./app.svg"
 import browserSvg from "./browser.svg"
 import walletSvg from "./wallet.svg"
+import { Anchor, AnchorContainer } from '../../Anchor'
 
 function sortApps(array, property) {
   return array.sort((a, b) => {
@@ -169,8 +170,10 @@ export default function Ecosystem(props) {
   const sortedBrowsers = sortApps(browsers, "featuredBrowser")
 
   return (
-    <Container>
-      <H2>{t("home.ecosystem.title")}</H2>
+    <Container id='home-ecosystem'>
+      <AnchorContainer href={'#home-ecosystem'}>
+        <H2>{t("home.ecosystem.title")}<Anchor /></H2>
+      </AnchorContainer>
       <Section>
         <h3>
           <img src={walletSvg} alt="wallet svg" />
