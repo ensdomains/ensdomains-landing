@@ -1,7 +1,8 @@
 {
   "aavegotchi": {
     "link": "https://aavegotchi.com/",
-    "name": "Aavegotchi"
+    "name": "Aavegotchi",
+    "featuredApp": 5
   },
   "accointing": {
     "link": "https://www.accointing.com/",
@@ -75,8 +76,7 @@
   },
   "chainlink": {
     "link": "https://chain.link/",
-    "name": "Chainlink",
-    "featuredApp": 5
+    "name": "Chainlink"
   },
   "chainshot": {
     "link": "https://www.chainshot.com/",
@@ -390,6 +390,10 @@
     "link": "https://nft.kred/",
     "name": "Kred"
   },
+  "kwikswap": {
+    "link": "https://app.kwikswap.org/",
+    "name": "Kwikswap"
+  },
   "kyberswap": {
     "link": "https://kyberswap.com/swap",
     "name": "KyberSwap"
@@ -458,6 +462,10 @@
   "mirror": {
     "link": "https://mirror.xyz/",
     "name": "Mirror"
+  },
+  "mooniswap": {
+    "link": "https://mooniswap.exchange/",
+    "name": "Mooniswap"
   },
   "mosendo": {
     "link": "https://mosendo.com/",
