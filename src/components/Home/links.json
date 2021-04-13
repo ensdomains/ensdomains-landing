@@ -390,6 +390,10 @@
     "link": "https://nft.kred/",
     "name": "Kred"
   },
+  "kwikswap": {
+    "link": "https://app.kwikswap.org/",
+    "name": "Kwikswap"
+  },
   "kyberswap": {
     "link": "https://kyberswap.com/swap",
     "name": "KyberSwap"
@@ -458,6 +462,10 @@
   "mirror": {
     "link": "https://mirror.xyz/",
     "name": "Mirror"
+  },
+  "mooniswap": {
+    "link": "https://mooniswap.exchange/",
+    "name": "Mooniswap"
   },
   "mosendo": {
     "link": "https://mosendo.com/",
