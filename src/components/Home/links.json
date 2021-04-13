@@ -1,7 +1,8 @@
 {
   "aavegotchi": {
     "link": "https://aavegotchi.com/",
-    "name": "Aavegotchi"
+    "name": "Aavegotchi",
+    "featuredApp": 5
   },
   "accointing": {
     "link": "https://www.accointing.com/",
@@ -75,8 +76,7 @@
   },
   "chainlink": {
     "link": "https://chain.link/",
-    "name": "Chainlink",
-    "featuredApp": 5
+    "name": "Chainlink"
   },
   "chainshot": {
     "link": "https://www.chainshot.com/",
