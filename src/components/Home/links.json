@@ -272,6 +272,10 @@
     "link": "https://ercgraph.live/",
     "name": "ERCGraph"
   },
+  "esteroids": {
+    "link": "https://esteroids.eth.link/",
+    "name": "Esteroids"
+  },
   "ethaf": {
     "link": "https://eth.af/",
     "name": "Eth.af"
