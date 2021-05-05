@@ -34,8 +34,7 @@
   },
   "argent": {
     "link": "https://www.argent.xyz/",
-    "name": "Argent",
-    "featuredWallet": 2
+    "name": "Argent"
   },
   "art": {
     "link": "https://art.art/digital-twin/",
@@ -619,7 +618,8 @@
   },
   "rainbow": {
     "link": "https://rainbow.me/",
-    "name": "Rainbow"
+    "name": "Rainbow",
+    "featuredWallet": 2
   },
   "rarible": {
     "link": "https://rarible.com/",
