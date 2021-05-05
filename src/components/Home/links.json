@@ -609,6 +609,10 @@
     "link": "https://primitive.finance/",
     "name": "Primitive"
   },
+  "puma": {
+    "link": "https://www.pumabrowser.com/",
+    "name": "Puma"
+  },
   "rabbithole": {
     "link": "https://rabbithole.gg/",
     "name": "RabbitHole"
