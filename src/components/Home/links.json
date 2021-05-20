@@ -44,6 +44,10 @@
     "link": "https://authereum.org/",
     "name": "Authereum"
   },
+  "balancer": {
+    "link": "https://balancer.fi/",
+    "name": "Balancer"
+  },
   "bankless": {
     "link": "https://www.microsoft.com/en-us/p/bankless/9p50f616xcdj",
     "name": "Bankless"
