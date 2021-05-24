@@ -673,6 +673,11 @@
     "link": "https://www.sendusdc.net/",
     "name": "SendUSDC"
   },
+  "showtime": {
+    "link": "https://tryshowtime.com/",
+    "name": "Showtime",
+    "featuredApp": 3
+  },
   "snapshotlabs": {
     "link": "https://snapshot.page/",
     "name": "Snapshot"
@@ -684,10 +689,6 @@
   "stablepay": {
     "link": "https://stablepay.io/",
     "name": "StablePay"
-  },
-  "sureswap": {
-    "link": "https://beta.sureswap.app/",
-    "name": "SureSwap"
   },
   "stakeonme": {
     "link": "https://stakeonme.com/",
@@ -709,6 +710,10 @@
   "superfluid": {
     "link": "https://www.superfluid.finance/",
     "name": "Superfluid"
+  },
+  "sureswap": {
+    "link": "https://beta.sureswap.app/",
+    "name": "SureSwap"
   },
   "sushiswap": {
     "link": "https://sushi.com/",
@@ -749,8 +754,7 @@
   },
   "tornado": {
     "link": "https://tornado.cash/",
-    "name": "Tornado Cash",
-    "featuredApp": 3
+    "name": "Tornado Cash"
   },
   "torque": {
     "link": "https://torque.loans",
