@@ -76,6 +76,10 @@
     "link": "https://blocto.portto.io/en/",
     "name": "Blocto"
   },
+  "boxswap": {
+    "link": "https://app.boxswap.io/#/swap",
+    "name": "Boxswap"
+  },
   "brave": {
     "link": "https://brave.com/",
     "name": "Brave",
@@ -150,6 +154,10 @@
   "covalent": {
     "link": "https://www.covalenthq.com/",
     "name": "Covalent"
+  },
+  "cowswap": {
+    "link": "https://cowswap.exchange/#/swap",
+    "name": "CowSwap"
   },
   "crocofinance": {
     "link": "https://croco.finance/",
@@ -254,6 +262,10 @@
   "eidoo": {
     "link": "https://eidoo.io/",
     "name": "Eidoo"
+  },
+  "eliteswap": {
+    "link": "https://eliteswap.io/#/swap",
+    "name": "Elite Swap"
   },
   "emoon": {
     "link": "https://www.emoon.io/",
@@ -409,6 +421,10 @@
     "link": "https://wallet.keplr.app/",
     "name": "Keplr"
   },
+  "kingswap": {
+    "link": "https://www.kingswap.io/",
+    "name": "Kingswap Exchange"
+  },
   "knownorigin": {
     "link": "https://knownorigin.io/",
     "name": "KnownOrigin"
@@ -452,6 +468,10 @@
   "loopring": {
     "link": "https://loopring.org/",
     "name": "Loopring"
+  },
+  "luaswap": {
+    "link": "https://app.luaswap.org/#/swap",
+    "name": "LuaSwap"
   },
   "luxe": {
     "link": "http://nic.luxe/",
@@ -673,6 +693,10 @@
     "link": "https://safekeep.app/",
     "name": "SafeKeep"
   },
+  "seaswap": {
+    "link": "https://seaswap.exchange/swap",
+    "name": "SeaSwap"
+  },
   "securedns": {
     "link": "https://github.com/Texnomic/SecureDNS",
     "name": "SecureDNS"
@@ -726,6 +750,10 @@
   "sushiswap": {
     "link": "https://sushi.com/",
     "name": "SushiSwap"
+  },
+  "swapx": {
+    "link": "https://www.swapx.org/",
+    "name": "SwapX"
   },
   "swarm": {
     "link": "https://github.com/ethersphere/swarm",
@@ -829,6 +857,10 @@
   "walleth": {
     "link": "https://walleth.org/",
     "name": "WallETH"
+  },
+  "whiteswap": {
+    "link": "https://ws.exchange/",
+    "name": "WhiteSwap"
   },
   "wip2p": {
     "link": "http://ens.wip2p.com/",
