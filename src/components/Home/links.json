@@ -32,6 +32,10 @@
     "link": "https://aragon.org/",
     "name": "Aragon"
   },
+  "archerswap": {
+    "link": "https://swap.archerdao.io/#/swap",
+    "name": "Archerswap"
+  },
   "argent": {
     "link": "https://www.argent.xyz/",
     "name": "Argent"
