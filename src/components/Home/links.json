@@ -388,6 +388,10 @@
     "link": "http://guarda.co/",
     "name": "Guarda"
   },
+  "hoardexchange": {
+    "link": "https://hoard.market/",
+    "name": "Hoard Exchange"
+  },
   "huobi": {
     "link": "https://www.huobiwallet.com/",
     "name": "Huobi",
@@ -758,6 +762,10 @@
   "swarm": {
     "link": "https://github.com/ethersphere/swarm",
     "name": "Swarm"
+  },
+  "sybil": {
+    "link": "https://sybil.org/",
+    "name": "Sybil"
   },
   "synthetix": {
     "link": "https://docs.synthetix.io/integrations/ens/",
