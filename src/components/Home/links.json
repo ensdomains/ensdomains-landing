@@ -56,6 +56,11 @@
     "link": "https://www.microsoft.com/en-us/p/bankless/9p50f616xcdj",
     "name": "Bankless"
   },
+  "bitcoindotcomwallet": {
+    "link": "https://www.bitcoin.com/",
+    "name": "Bitcoin.com Wallet",
+    "featuredWallet": 5
+  },
   "bitsearch": {
     "link": "https://bitsear.ch/",
     "name": "Bitsear.ch"
@@ -394,8 +399,7 @@
   },
   "huobi": {
     "link": "https://www.huobiwallet.com/",
-    "name": "Huobi",
-    "featuredWallet": 5
+    "name": "Huobi"
   },
   "inscribe": {
     "link": "https://inscribe.so/",
@@ -424,6 +428,10 @@
   "keplr": {
     "link": "https://wallet.keplr.app/",
     "name": "Keplr"
+  },
+  "kickback": {
+    "link": "https://kickback.events/",
+    "name": "Kickback"
   },
   "kingswap": {
     "link": "https://www.kingswap.io/",
@@ -717,6 +725,10 @@
   "snapshotlabs": {
     "link": "https://snapshot.page/",
     "name": "Snapshot"
+  },
+  "sockexplorer": {
+    "link": "https://sockexplorer.eth.link/",
+    "name": "Sock Explorer"
   },
   "spiderdex": {
     "link": "https://www.spiderdex.com/",
