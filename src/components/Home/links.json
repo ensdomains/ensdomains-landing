@@ -421,6 +421,10 @@
     "link": "https://invoice.build/",
     "name": "Invoice.build"
   },
+  "isotile": {
+    "link": "https://isotile.com/",
+    "name": "Isotile"
+  },
   "jarvis": {
     "link": "https://beta.jarvis.network/welcome",
     "name": "Jarvis"
@@ -782,6 +786,10 @@
   "synthetix": {
     "link": "https://docs.synthetix.io/integrations/ens/",
     "name": "Synthetix"
+  },
+  "tally": {
+    "link": "https://www.withtally.com/",
+    "name": "Tally"
   },
   "temporal": {
     "link": "https://temporal.cloud/",
