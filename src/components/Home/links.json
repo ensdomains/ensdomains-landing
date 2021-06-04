@@ -361,6 +361,10 @@
     "link": "https://f12.network/",
     "name": "Fantastic12"
   },
+  "fishvote": {
+    "link": "https://www.fish.vote/",
+    "name": "Fish.vote"
+  },
   "flashbotstools": {
     "link": "https://flashbots.tools/",
     "name": "Flashbots.tools"
