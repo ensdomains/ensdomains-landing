@@ -11,6 +11,8 @@ import nick from "./photos/nick.png"
 import makoto from "./photos/makoto.png"
 import brantly from "./photos/brantly.png"
 import jim from "./photos/jim.png"
+import kevin from "./photos/kevin.png"
+import leon from "./photos/leon.png"
 import hoverCircle from "./hoverCircle.png"
 import { Anchor, AnchorContainer } from '../../Anchor'
 
@@ -23,7 +25,7 @@ const team = [
   },
   {
     name: "Jeff Lau",
-    title: "Frontend Developer",
+    title: "Frontend & Solidity Developer",
     img: jeff,
     link: "https://twitter.com/_jefflau",
   },
@@ -57,6 +59,18 @@ const team = [
     img: jim,
     link: "http://linkedin.com/in/jimgmcdonald",
   },
+  {
+    name: "Kevin Gaspar",
+    title: "Support Lead",
+    img: kevin,
+    link: "https://twitter.com/ValidatorEth",
+  },
+  {
+    name: "Leon Talbert",
+    title: "Frontend Developer",
+    img: leon,
+    link: "https://twitter.com/talbert_leon",
+  }
 ]
 
 const TeamContainer = styled("div")`
