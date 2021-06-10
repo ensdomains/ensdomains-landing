@@ -256,6 +256,10 @@
     "link": "https://easydns.com/",
     "name": "easyDNS"
   },
+  "eauth": {
+    "link": "https://eauth.pelith.com/",
+    "name": "Eauth"
+  },
   "edge": {
     "link": "https://edge.app/",
     "name": "Edge"
