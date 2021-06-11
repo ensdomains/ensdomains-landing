@@ -538,6 +538,10 @@
     "link": "https://mirror.xyz/",
     "name": "Mirror"
   },
+  "moments": {
+    "link": "https://www.moments.ms/",
+    "name": "Moments"
+  },
   "mooniswap": {
     "link": "https://mooniswap.exchange/",
     "name": "Mooniswap"
@@ -803,6 +807,10 @@
     "link": "https://temporal.cloud/",
     "name": "Temporal"
   },
+  "theconvospace": {
+    "link": "https://theconvo.space/",
+    "name": "The Convo Space"
+  },
   "thegraph": {
     "link": "https://thegraph.com/",
     "name": "The Graph",
@@ -852,6 +860,10 @@
     "link": "https://trustwallet.com/",
     "name": "Trust Wallet",
     "featuredWallet": 3
+  },
+  "twitterenstipper": {
+    "link": "https://chrome.google.com/webstore/detail/twitter-ens-tipper/gnkipbkkefgbkghkinhggmhggbmjoknp/",
+    "name": "Twitter ENS Tipper"
   },
   "umbra": {
     "link": "http://umbra.cash/",
