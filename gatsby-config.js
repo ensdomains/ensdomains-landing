@@ -54,6 +54,7 @@ module.exports = {
               "fr",
               "ko",
               "it",
+              "nl",
               "ja",
               "nl",
               "pl",
