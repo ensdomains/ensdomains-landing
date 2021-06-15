@@ -41,6 +41,10 @@ const LANGUAGES = [
     label: "Italiano (IT)",
   },
   {
+    value: "nl",
+    label: "Nederlands (NL)",
+  },
+  {
     value: "pl",
     label: "Polski (PL)",
   },
