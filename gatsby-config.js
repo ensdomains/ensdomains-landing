@@ -4,7 +4,7 @@ module.exports = {
       // including a plugin from outside the plugins folder needs the path to it
       resolve: `gatsby-plugin-react-i18next`,
       options: {
-        languages: ["en", "cn", "ja", "de", "es", "fr", "ko", "pl", "ru", "vi"],
+        languages: ["en", "cn", "ja", "de", "es", "fr", "ko", "it", "pl", "ru", "vi"],
         defaultLanguage: "en",
         path: `${__dirname}/locales`,
         siteUrl: "app.ens.domains",
@@ -12,7 +12,7 @@ module.exports = {
           debug: true,
           lng: "en",
           fallbackLng: "en",
-          whitelist: ["en", "cn", "ja", "de", "es", "fr", "ko", "pl", "ru", "vi"],
+          whitelist: ["en", "cn", "ja", "de", "es", "fr", "ko", "it", "pl", "ru", "vi"],
           interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
           },
@@ -20,7 +20,7 @@ module.exports = {
         pages: [
           {
             matchPath: "/ignored-page",
-            languages: ["en", "cn", "ja", "de", "es", "fr", "ko", "pl", "ru", "vi"],
+            languages: ["en", "cn", "ja", "de", "es", "fr", "ko", "it", "pl", "ru", "vi"],
           },
         ],
       },
@@ -48,7 +48,7 @@ module.exports = {
           debug: true,
           lng: "en",
           fallbackLng: "en",
-          whitelist: ["en", "cn", "ja", "de", "es", "fr", "ko", "pl", "ru", "vi"],
+          whitelist: ["en", "cn", "ja", "de", "es", "fr", "ko", "it", "pl", "ru", "vi"],
           interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
           },
