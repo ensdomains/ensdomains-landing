@@ -7,12 +7,10 @@ import twitter from "../assets/twitter.png"
 
 function getTitle(pathname) {
   switch (pathname) {
-    case "/":
-      return "ENS"
     case "/about":
-      return "ENS | About"
+      return "About | The Ethereum Name Service"
     default:
-      return "ENS"
+      return "ENS | The Ethereum Name Service"
   }
 }
 
