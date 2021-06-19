@@ -240,6 +240,10 @@
     "link": "https://www.dexwallet.io/",
     "name": "DexWallet"
   },
+  "dnsxyz": {
+    "link": "https://dns.xyz/",
+    "name": "DNS.XYZ"
+  },
   "drip": {
     "link": "https://www.dripscore.com/",
     "name": "Drip"
@@ -590,6 +594,10 @@
   "nftfi": {
     "link": "https://nftfi.com/",
     "name": "NFTfi"
+  },
+  "nftscollectors": {
+    "link": "https://nftscollectors.app/",
+    "name": "NFTs Collectors"
   },
   "niftex": {
     "link": "https://www.niftex.org/",
