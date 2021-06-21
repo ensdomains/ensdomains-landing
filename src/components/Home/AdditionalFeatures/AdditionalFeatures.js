@@ -54,7 +54,7 @@ const features = [
 
 const AdditionalFeaturesContainer = styled("div")`
   background: white;
-  padding: 120px 20px;
+  padding: 120px 20px 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

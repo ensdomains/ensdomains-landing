@@ -34,6 +34,7 @@ const Container = styled("div")`
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  padding-top: 120px;
 `
 
 const Section = styled("section")`

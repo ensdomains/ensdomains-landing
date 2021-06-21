@@ -16,13 +16,13 @@ const associated = importAll(
 
 const AboutENSContainer = styled("div")`
   background: white;
-  padding: 20px 0;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   ${mq.medium`
-    padding: 80px 0;
+    padding-top: 80px;
   `};
 
   h3 {
