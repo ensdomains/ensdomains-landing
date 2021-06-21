@@ -78,6 +78,7 @@ const TeamContainer = styled("div")`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 20px;
 
   h3 {
     font-family: Overpass;
@@ -86,6 +87,10 @@ const TeamContainer = styled("div")`
     color: #2b2b2b;
     text-align: center;
   }
+  
+  ${mq.medium`
+    padding-top: 80px;
+  `};
 `
 
 const TeamMembers = styled("section")`
@@ -177,15 +182,19 @@ function TeamMember({ member }) {
 export default function Team(props) {
   const { t } = useTranslation()
   return (
-    <TeamContainer id='about-team' >
-      <AnchorContainer href={'#about-team'}>
-        <h3>{t("about.team.title")}<Anchor /></h3>
-      </AnchorContainer>
-      <TeamMembers>
-        {team.map(member => (
-          <TeamMember member={member} />
-        ))}
-      </TeamMembers>
-    </TeamContainer>
+    <>
+      <div id='about-team' />
+      <TeamContainer>
+        <AnchorContainer href={'#about-team'}>
+          <h3>{t("about.team.title")}<Anchor /></h3>
+        </AnchorContainer>
+        <TeamMembers>
+          {team.map(member => (
+            <TeamMember member={member} />
+          ))}
+        </TeamMembers>
+      </TeamContainer>
+    </>
+
   )
 }

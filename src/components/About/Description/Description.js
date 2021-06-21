@@ -112,8 +112,8 @@ export default function AboutDescription(props) {
   const { t } = useTranslation()
   return (
     <>
-    <Description>
-      <DescriptionInner id='about-benefits'>
+    <Description id='about-benefits'>
+      <DescriptionInner>
         <AnchorContainer href={'#about-benefits'}>
           <h2>{t("about.benefits.title")}<Anchor /></h2>
         </AnchorContainer>
@@ -125,8 +125,8 @@ export default function AboutDescription(props) {
         </div>
       </DescriptionInner>
     </Description>
-    <Description>
-      <DescriptionInner id='about-root'>
+    <Description id='about-root'>
+      <DescriptionInner>
         <AnchorContainer href={'#about-root'}>
           <h2>{t("about.root.title")}<Anchor /></h2>
         </AnchorContainer>

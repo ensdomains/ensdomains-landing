@@ -12,6 +12,7 @@ const Container = styled("div")`
   flex-direction: column;
   align-items: center;
   padding: 0 20px;
+  padding-top: 120px;
 `
 
 const Desc = styled(P)`
