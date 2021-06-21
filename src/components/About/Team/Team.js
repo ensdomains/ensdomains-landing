@@ -182,9 +182,7 @@ function TeamMember({ member }) {
 export default function Team(props) {
   const { t } = useTranslation()
   return (
-    <>
-      <div id='about-team' />
-      <TeamContainer>
+      <TeamContainer id='about-team'>
         <AnchorContainer href={'#about-team'}>
           <h3>{t("about.team.title")}<Anchor /></h3>
         </AnchorContainer>
@@ -194,7 +192,5 @@ export default function Team(props) {
           ))}
         </TeamMembers>
       </TeamContainer>
-    </>
-
   )
 }

@@ -83,9 +83,7 @@ export default function Cryptocurrencies(props) {
   const { t } = useTranslation()
   const x = useTransform(scrollYProgress, [0, 1], [0, -1000])
   return (
-    <>
-      <div id='home-title'/>
-      <HeroContainer>
+      <HeroContainer id='home-title'>
         <Wrapper>
           <AnchorContainer href={'#home-title'}>
             <H2>{t("home.cryptocurrencies.title")}<Anchor /></H2>
@@ -102,6 +100,5 @@ export default function Cryptocurrencies(props) {
           </WalletAnimation>
         </Wrapper>
       </HeroContainer>
-    </>
   )
 }
