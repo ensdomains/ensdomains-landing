@@ -71,12 +71,6 @@ const team = [
     img: leon,
     link: "https://twitter.com/talbert_leon",
   }
-  {
-    name: "Richard Moore",
-    title: "Solidity Developer",
-    img: leon,
-    link: "https://twitter.com/ricmoo",
-  }
 ]
 
 const TeamContainer = styled("div")`
