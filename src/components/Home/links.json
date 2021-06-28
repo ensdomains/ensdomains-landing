@@ -114,6 +114,10 @@
     "link": "https://carbonraindrops.com/",
     "name": "Carbon Raindrops"
   },
+  "ccswap": {
+    "link": "https://app.ccswap.org/",
+    "name": "CCSwap"
+  },
   "chainlink": {
     "link": "https://chain.link/",
     "name": "Chainlink"
@@ -121,6 +125,10 @@
   "chainshot": {
     "link": "https://www.chainshot.com/",
     "name": "ChainShot"
+  },
+  "chilliswap": {
+    "link": "https://exchange.chilliswap.org/",
+    "name": "Chilliswap"
   },
   "cloudflare": {
     "link": "https://www.cloudflare.com/",
@@ -179,6 +187,10 @@
   "cowswap": {
     "link": "https://cowswap.exchange/#/swap",
     "name": "CowSwap"
+  },
+  "creamfinance": {
+    "link": "https://app.cream.finance/",
+    "name": "C.R.E.A.M."
   },
   "crocofinance": {
     "link": "https://croco.finance/",
@@ -296,6 +308,10 @@
     "link": "https://eliteswap.io/#/swap",
     "name": "Elite Swap"
   },
+  "emiswap": {
+    "link": "https://emiswap.com/",
+    "name": "EmiSwap"
+  },
   "emoon": {
     "link": "https://www.emoon.io/",
     "name": "Emoon"
@@ -331,6 +347,10 @@
   "esteroids": {
     "link": "https://esteroids.eth.link/",
     "name": "Esteroids"
+  },
+  "eswap": {
+    "link": "https://app.eswap.tube/",
+    "name": "Eswap"
   },
   "ethaf": {
     "link": "https://eth.af/",
@@ -461,6 +481,10 @@
     "link": "https://beta.jarvis.network/welcome",
     "name": "Jarvis"
   },
+  "juggernaut": {
+    "link": "https://nft.jgndefi.com/",
+    "name": "JGN-NFT"
+  },
   "keplr": {
     "link": "https://wallet.keplr.app/",
     "name": "Keplr"
@@ -549,6 +573,10 @@
   "mevu": {
     "link": "https://mevu.bet/",
     "name": "meVu"
+  },
+  "miniswap": {
+    "link": "https://www.minidex.com/",
+    "name": "MiniSwap"
   },
   "mintable": {
     "link": "https://mintable.app/",
@@ -680,6 +708,10 @@
     "link": "https://podcrypt.app/",
     "name": "Podcrypt"
   },
+  "polyient": {
+    "link": "https://dex.polyient.games/",
+    "name": "Polyient DEX"
+  },
   "pooltogether": {
     "link": "https://www.pooltogether.com/",
     "name": "Pool Together"
@@ -749,6 +781,10 @@
     "link": "https://safekeep.app/",
     "name": "SafeKeep"
   },
+  "sakeswap": {
+    "link": "https://sakeswap.finance/",
+    "name": "SakeSwap"
+  },
   "seaswap": {
     "link": "https://seaswap.exchange/swap",
     "name": "SeaSwap"
@@ -798,6 +834,10 @@
   "stuckwithu": {
     "link": "http://stuckwithu.eth.link/",
     "name": "Stuck with U"
+  },
+  "sumswap": {
+    "link": "https://swap.sumswap.org/",
+    "name": "Sumswap"
   },
   "superfluid": {
     "link": "https://www.superfluid.finance/",
@@ -896,6 +936,10 @@
   "umbra": {
     "link": "http://umbra.cash/",
     "name": "Umbra"
+  },
+  "unicly": {
+    "link": "https://www.app.unic.ly/",
+    "name": "Unicly"
   },
   "uniswap": {
     "link": "https://uniswap.io/",
