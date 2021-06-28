@@ -56,6 +56,10 @@
     "link": "https://www.microsoft.com/en-us/p/bankless/9p50f616xcdj",
     "name": "Bankless"
   },
+  "banklessdao": {
+    "link": "https://www.bankless.community/",
+    "name": "BanklessDAO"
+  },
   "bitcoindotcomwallet": {
     "link": "https://www.bitcoin.com/",
     "name": "Bitcoin.com Wallet",
@@ -64,6 +68,10 @@
   "bitsearch": {
     "link": "https://bitsear.ch/",
     "name": "Bitsear.ch"
+  },
+  "blockchaincom": {
+    "link": "https://www.blockchain.com/",
+    "name": "Blockchain.com"
   },
   "blockhead": {
     "link": "https://blockhead.info/",
@@ -131,6 +139,10 @@
   "coinbasewallet": {
     "link": "https://wallet.coinbase.com/",
     "name": "Coinbase Wallet"
+  },
+  "coindreams": {
+    "link": "https://coindreams.io/",
+    "name": "CoinDreams"
   },
   "coinhako": {
     "link": "https://www.coinhako.com/",
@@ -356,6 +368,10 @@
   "etherscanquick": {
     "link": "https://chrome.google.com/webstore/detail/etherscan-quick/nplfockicpoicmabmpjjkdiepdajflbn",
     "name": "Etherscan Quick"
+  },
+  "ethsign": {
+    "link": "https://ethsign.xyz/#/",
+    "name": "EthSign"
   },
   "ethsimple": {
     "link": "https://ethsimple.com/",
