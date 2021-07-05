@@ -688,6 +688,10 @@
     "link": "https://www.originprotocol.com/en",
     "name": "Origin Protocol"
   },
+  "otterscan": {
+    "link": "https://github.com/wmitsuda/otterscan",
+    "name": "Otterscan"
+  },
   "ownbit": {
     "link": "https://ownbit.io/en/",
     "name": "OwnBit"
