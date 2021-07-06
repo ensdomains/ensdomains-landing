@@ -817,6 +817,10 @@
     "link": "https://www.sendusdc.net/",
     "name": "SendUSDC"
   },
+  "shibaswap": {
+    "link": "https://shibaswap.com/",
+    "name": "ShibaSwap"
+  },
   "showtime": {
     "link": "https://tryshowtime.com/",
     "name": "Showtime",
