@@ -40,10 +40,6 @@
     "link": "https://www.argent.xyz/",
     "name": "Argent"
   },
-  "art": {
-    "link": "https://art.art/digital-twin/",
-    "name": ".ART"
-  },
   "authereum": {
     "link": "https://authereum.org/",
     "name": "Authereum"
@@ -513,9 +509,9 @@
     "link": "https://knownorigin.io/",
     "name": "KnownOrigin"
   },
-  "kred": {
-    "link": "https://nft.kred/",
-    "name": "Kred"
+  "knowyourdefi": {
+    "link": "https://www.knowyourdefi.com/",
+    "name": "KnowYourDefi"
   },
   "kwikswap": {
     "link": "https://app.kwikswap.org/",
@@ -556,10 +552,6 @@
   "luaswap": {
     "link": "https://app.luaswap.org/#/swap",
     "name": "LuaSwap"
-  },
-  "luxe": {
-    "link": "http://nic.luxe/",
-    "name": ".LUXE"
   },
   "makersplace": {
     "link": "https://makersplace.com/",
@@ -609,14 +601,6 @@
   "mooniswap": {
     "link": "https://mooniswap.exchange/",
     "name": "Mooniswap"
-  },
-  "mosendo": {
-    "link": "https://mosendo.com/",
-    "name": "Mosendo"
-  },
-  "mulewtf": {
-    "link": "https://mule.wtf/",
-    "name": "Mule.WTF"
   },
   "multis": {
     "link": "https://multis.co/",
@@ -1037,10 +1021,6 @@
   "zora": {
     "link": "https://zora.co/",
     "name": "Zora"
-  },
-  "1inch": {
-    "link": "https://1inch.exchange/",
-    "name": "1inch Exchange"
   },
   "3box": {
     "link": "https://3box.io/hub",
