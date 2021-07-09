@@ -594,6 +594,10 @@
     "link": "https://mirror.xyz/",
     "name": "Mirror"
   },
+  "mistx": {
+    "link": "https://app.mistx.io/#/exchange",
+    "name": "mistX"
+  },
   "moments": {
     "link": "https://www.moments.ms/",
     "name": "Moments"
@@ -788,6 +792,10 @@
   "sakeswap": {
     "link": "https://sakeswap.finance/",
     "name": "SakeSwap"
+  },
+  "sandwichedwtf": {
+    "link": "https://sandwiched.wtf/",
+    "name": "Sandwiched.wtf"
   },
   "seaswap": {
     "link": "https://seaswap.exchange/swap",
