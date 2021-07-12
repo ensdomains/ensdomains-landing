@@ -14,6 +14,7 @@ import jim from "./photos/jim.png"
 import kevin from "./photos/kevin.png"
 import leon from "./photos/leon.png"
 import richard from "./photos/richard.png"
+import muhammed from ".photos/muhammed.png"
 import hoverCircle from "./hoverCircle.png"
 import { Anchor, AnchorContainer } from '../../Anchor'
 
@@ -76,7 +77,13 @@ const team = [
     name: "Richard Moore",
     title: "Solidity Developer",
     img: richard,
-    link: "https://twitter.com/ricmoo"
+    link: "https://twitter.com/ricmoo",
+  },
+  {
+    name: "Muhammed Tanrıkulu",
+    title: "Full Stack Developer",
+    img: muhammed,
+    link: "https://twitter.com/tanrikuIu"
   }
 ]
 
