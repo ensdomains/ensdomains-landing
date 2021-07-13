@@ -65,6 +65,10 @@
     "link": "https://bitsear.ch/",
     "name": "Bitsear.ch"
   },
+  "blackholdswap": {
+    "link": "https://blackholeswap.com/swap",
+    "name": "BlackHoleSwap"
+  },
   "blankwallet": {
     "link": "https://www.goblank.io/",
     "name": "Blank Wallet"
@@ -272,6 +276,10 @@
     "link": "https://www.dexwallet.io/",
     "name": "DexWallet"
   },
+  "dia": {
+    "link": "https://www.diadata.org/",
+    "name": "DIA"
+  },
   "dnsxyz": {
     "link": "https://dns.xyz/",
     "name": "DNS.XYZ"
@@ -452,6 +460,10 @@
   "guarda": {
     "link": "http://guarda.co/",
     "name": "Guarda"
+  },
+  "hakkafinance": {
+    "link": "https://hakka.finance/",
+    "name": "Hakka Finance"
   },
   "hoardexchange": {
     "link": "https://hoard.market/",
@@ -1041,5 +1053,9 @@
   "3box": {
     "link": "https://3box.io/hub",
     "name": "3Box Hub"
+  },
+  "3fmutual": {
+    "link": "https://3fmutual.com/",
+    "name": "3F Mutual"
   }
 }
