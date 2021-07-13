@@ -114,6 +114,10 @@
     "link": "https://carbonraindrops.com/",
     "name": "Carbon Raindrops"
   },
+  "cardpunks": {
+    "link": "https://cardpunks.eth.link/",
+    "name": "Cardpunks"
+  },
   "ccswap": {
     "link": "https://app.ccswap.org/",
     "name": "CCSwap"
@@ -711,6 +715,10 @@
   "podcrypt": {
     "link": "https://podcrypt.app/",
     "name": "Podcrypt"
+  },
+  "pods": {
+    "link": "https://www.pods.finance/",
+    "name": "Pods Finance"
   },
   "polyient": {
     "link": "https://dex.polyient.games/",
