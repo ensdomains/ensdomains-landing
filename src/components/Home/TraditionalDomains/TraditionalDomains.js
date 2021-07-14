@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { useTranslation } from "react-i18next"
-import { H2, P } from "../../Typography"
+import { Button, H2, P } from "../../Typography"
 
 import mq from "../../../mediaQuery"
 import { Anchor, AnchorContainer } from '../../Anchor'
@@ -83,6 +83,9 @@ export default function TraditionalDomains(props) {
           ))}
         </Domains>
       </DomainWrapper>
+      <Button href="https://docs.ens.domains/dns-registrar-guide">
+        {t("c.learnMore")}
+      </Button>
     </Container>
   )
 }

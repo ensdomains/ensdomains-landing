@@ -17,6 +17,10 @@
       "register": "register",
       "launch": "Launch App"
     },
+    "portableUsername": {
+      "title": "Your Portable Web3 Username",
+      "text": "No more sandboxed usernames. Own your username and use it across services."
+    },
     "cryptocurrencies": {
       "title": "One Name For All of Your Addresses",
       "text": "No more copying and pasting long addresses. Use your ENS name to store all of your addresses and receive any cryptocurrency, token, or NFT."

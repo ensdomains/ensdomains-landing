@@ -1,3 +1,6 @@
+import React from "react"
+import styled from "@emotion/styled"
+
 export function modulate(value, rangeA, rangeB, limit) {
   let fromHigh, fromLow, result, toHigh, toLow
   if (limit == null) {
@@ -61,3 +64,8 @@ export const importAll = (r, extraData = {}) =>
       ...extraData[parsed],
     }
   })
+
+export const Gap = styled('div')`
+  width: 100%;
+  height: ${p => p.size * 4}px;
+`
