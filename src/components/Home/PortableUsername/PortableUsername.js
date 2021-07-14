@@ -2,11 +2,13 @@ import React, { useRef, useEffect, useState } from "react"
 import { motion, useViewportScroll, useTransform } from "framer-motion"
 import styled from "@emotion/styled"
 import { useTranslation } from "react-i18next"
-import { throttle } from "lodash"
 
 import { H2, P as DefaultP } from "../../Typography"
 import { importAll, Gap } from "../../../utils"
 import { Anchor, AnchorContainer } from '../../Anchor'
+
+import brantly from './brantly.png'
+import avatar from './avatar.png'
 
 const HeroContainer = styled("div")`
   padding: 120px 20px;
@@ -65,23 +67,25 @@ const Avatar = () => {
   const containerRefTwo = useRef()
 
   useEffect(() => {
-    window.onscroll = throttle(() => {
-      const containerOneTop = containerRefOne.current.getBoundingClientRect().top
-      const opacity = ((containerOneTop - window.innerHeight/3) - window.innerHeight/4)/(window.innerHeight)*4
-      const opacityTwo = (1 - opacity) - 1
-      containerRefOne.current.style.opacity = opacity;
-      containerRefTwo.current.style.opacity = opacityTwo;
-    }, 10)
+    window.onscroll = () => {
+      window.requestAnimationFrame(() => {
+        const containerOneTop = containerRefOne.current.getBoundingClientRect().top
+        const opacity = ((containerOneTop - window.innerHeight/3) - window.innerHeight/4)/(window.innerHeight)*4
+        const opacityTwo = (1 - opacity) - 1
+        containerRefOne.current.style.opacity = opacity;
+        containerRefTwo.current.style.opacity = opacityTwo;
+      })
+    }
   }, [])
 
   return (
    <AvatarContainer>
      <AvatarContainerInner ref={containerRefOne}>
-       <AvatarImg src={"http://placehold.it/34/34"} />
+       <AvatarImg src={avatar} />
        <AvatarText>0x98...674</AvatarText>
      </AvatarContainerInner>
      <AvatarContainerInner ref={containerRefTwo}>
-       <AvatarImg src={"http://placehold.it/34/34"} />
+       <AvatarImg src={brantly} />
       <AvatarText style={{ marginBottom: '4px' }}>brantly.eth</AvatarText>
      </AvatarContainerInner>
    </AvatarContainer>
