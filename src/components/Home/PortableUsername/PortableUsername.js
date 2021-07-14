@@ -67,7 +67,7 @@ const Avatar = () => {
   useEffect(() => {
     window.onscroll = throttle(() => {
       const containerOneTop = containerRefOne.current.getBoundingClientRect().top
-      const opacity = ((containerOneTop - window.innerHeight/2) - window.innerHeight/4)/(window.innerHeight)*4
+      const opacity = ((containerOneTop - window.innerHeight/3) - window.innerHeight/4)/(window.innerHeight)*4
       const opacityTwo = (1 - opacity) - 1
       containerRefOne.current.style.opacity = opacity;
       containerRefTwo.current.style.opacity = opacityTwo;
@@ -82,7 +82,7 @@ const Avatar = () => {
      </AvatarContainerInner>
      <AvatarContainerInner ref={containerRefTwo}>
        <AvatarImg src={"http://placehold.it/34/34"} />
-     <AvatarText>brantly.eth</AvatarText>
+      <AvatarText style={{ marginBottom: '4px' }}>brantly.eth</AvatarText>
      </AvatarContainerInner>
    </AvatarContainer>
   )
