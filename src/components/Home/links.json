@@ -184,10 +184,6 @@
     "link": "https://colorverse.io/",
     "name": "Colorverse"
   },
-  "cometh": {
-    "link": "https://www.cometh.io/",
-    "name": "Cometh"
-  },
   "covalent": {
     "link": "https://www.covalenthq.com/",
     "name": "Covalent"
@@ -240,17 +236,9 @@
     "link": "https://decentraland.org/",
     "name": "Decentraland"
   },
-  "defiportfoliotracker": {
-    "link": "https://portfolio.defiprime.com/",
-    "name": "DeFi Portfolio Tracker"
-  },
   "defisaver": {
     "link": "https://defisaver.com/",
     "name": "Defi Saver"
-  },
-  "defiwatch": {
-    "link": "https://defiwatch.io/",
-    "name": "Defi Watch"
   },
   "defi777": {
     "link": "https://defi777.com/",
@@ -328,10 +316,6 @@
     "link": "https://emiswap.com/",
     "name": "EmiSwap"
   },
-  "emoon": {
-    "link": "https://www.emoon.io/",
-    "name": "Emoon"
-  },
   "encirca": {
     "link": "https://www.encirca.com/eth/",
     "name": "EnCirca"
@@ -339,10 +323,6 @@
   "enjin": {
     "link": "https://enjin.io/products/wallet",
     "name": "Enjin"
-  },
-  "enjinx": {
-    "link": "https://enjinx.io/",
-    "name": "EnjinX"
   },
   "ensportal": {
     "link": "https://ensportal.com/",
@@ -412,10 +392,6 @@
   "ethsimple": {
     "link": "https://ethsimple.com/",
     "name": "ETHSimple"
-  },
-  "existnames": {
-    "link": "http://existnames.xyz/",
-    "name": "Existential Name Search"
   },
   "fabrx": {
     "link": "https://www.fabrx.io/",
@@ -643,17 +619,9 @@
     "link": "https://myetherwallet.com/",
     "name": "MyEtherWallet"
   },
-  "namestack": {
-    "link": "https://www.namestack.io/",
-    "name": "Namestack"
-  },
   "nethereum": {
     "link": "http://playground.nethereum.com/",
     "name": "Nethereum Playground"
-  },
-  "nexusmutual": {
-    "link": "https://nexusmutual.io/",
-    "name": "Nexus Mutual"
   },
   "nftfi": {
     "link": "https://nftfi.com/",
@@ -724,10 +692,6 @@
     "link": "https://www.poap.xyz//",
     "name": "POAP"
   },
-  "podcrypt": {
-    "link": "https://podcrypt.app/",
-    "name": "Podcrypt"
-  },
   "pods": {
     "link": "https://www.pods.finance/",
     "name": "Pods Finance"
@@ -735,10 +699,6 @@
   "polyient": {
     "link": "https://dex.polyient.games/",
     "name": "Polyient DEX"
-  },
-  "pooltogether": {
-    "link": "https://www.pooltogether.com/",
-    "name": "Pool Together"
   },
   "poolsvision": {
     "link": "http://pools.vision/",
@@ -772,10 +732,6 @@
     "link": "https://rainbow.me/",
     "name": "Rainbow",
     "featuredWallet": 2
-  },
-  "rarible": {
-    "link": "https://rarible.com/",
-    "name": "Rarible"
   },
   "realitycards": {
     "link": "https://realitycards.io/",
@@ -907,10 +863,6 @@
     "link": "https://www.withtally.com/",
     "name": "Tally"
   },
-  "temporal": {
-    "link": "https://temporal.cloud/",
-    "name": "Temporal"
-  },
   "theconvospace": {
     "link": "https://theconvo.space/",
     "name": "The Convo Space"
@@ -986,26 +938,6 @@
     "link": "https://unlock-protocol.com/",
     "name": "Unlock"
   },
-  "unstoppable": {
-    "link": "https://unstoppabledomains.com/browser",
-    "name": "Unstoppable Browser"
-  },
-  "unstoppablechat": {
-    "link": "https://unstoppabledomains.com/chat",
-    "name": "Unstoppable Chat"
-  },
-  "unstoppabledns": {
-    "link": "https://community.unstoppabledomains.com/t/configure-your-browser-for-unstoppable-domains/1469",
-    "name": "Unstoppable DNS Resolver"
-  },
-  "unstoppableextension": {
-    "link": "https://unstoppabledomains.com/extension",
-    "name": "Unstoppable Extension"
-  },
-  "unstoppablewallet": {
-    "link": "https://unstoppable.money/",
-    "name": "Unstoppable Wallet"
-  },
   "waffle": {
     "link": "https://getwaffle.io/",
     "name": "Waffle"
@@ -1029,10 +961,6 @@
   "yearnfinance": {
     "link": "https://yearn.finance/",
     "name": "yearn.finance"
-  },
-  "yellowsubdomain": {
-    "link": "https://yellowsubdomain.io/",
-    "name": "Yellow Subdomain"
   },
   "zapperfi": {
     "link": "https://www.zapper.fi/",
