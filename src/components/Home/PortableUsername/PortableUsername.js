@@ -1,10 +1,10 @@
-import React, { useRef, useEffect, useState } from "react"
-import { motion, useViewportScroll, useTransform } from "framer-motion"
+import React, { useRef, useEffect } from "react"
+import { motion } from "framer-motion"
 import styled from "@emotion/styled"
 import { useTranslation } from "react-i18next"
 
 import { H2, P as DefaultP } from "../../Typography"
-import { importAll, Gap } from "../../../utils"
+import { Gap } from "../../../utils"
 import { Anchor, AnchorContainer } from '../../Anchor'
 
 import brantly from './brantly.png'
@@ -47,18 +47,18 @@ const AvatarContainer = styled('div')`
   border-radius: 40px;
   display: flex;
   align-items: center;
-  padding-left: 30px;
+  justify-content: center;
  `
 
 const AvatarImg = styled('img')`
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   margin-right: 20px;
 `
 
 const AvatarText = styled('div')`
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 300;
 `
 
@@ -70,7 +70,7 @@ const Avatar = () => {
     window.onscroll = () => {
       window.requestAnimationFrame(() => {
         const containerOneTop = containerRefOne.current.getBoundingClientRect().top
-        const opacity = ((containerOneTop - window.innerHeight/3) - window.innerHeight/4)/(window.innerHeight)*4
+        const opacity = ((containerOneTop - window.innerHeight/2) - window.innerHeight/4)/(window.innerHeight)*4
         const opacityTwo = (1 - opacity) - 1
         containerRefOne.current.style.opacity = opacity;
         containerRefTwo.current.style.opacity = opacityTwo;
@@ -80,22 +80,17 @@ const Avatar = () => {
 
   return (
    <AvatarContainer>
-     <AvatarContainerInner ref={containerRefOne}>
+     <AvatarContainerInner ref={containerRefOne} style={{opacity: 0}}>
        <AvatarImg src={avatar} />
        <AvatarText>0x98...674</AvatarText>
      </AvatarContainerInner>
      <AvatarContainerInner ref={containerRefTwo}>
        <AvatarImg src={brantly} />
-      <AvatarText style={{ marginBottom: '4px' }}>brantly.eth</AvatarText>
+      <AvatarText>brantly.eth</AvatarText>
      </AvatarContainerInner>
    </AvatarContainer>
   )
 }
-
-const rawCoins = importAll(
-  require.context("./coins", false, /\.(png|jpe?g|svg)$/)
-)
-const coins = [...rawCoins, ...rawCoins, ...rawCoins]
 
 export default function PortableUsername(props) {
   const { t } = useTranslation()
