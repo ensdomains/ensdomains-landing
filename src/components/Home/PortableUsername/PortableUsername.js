@@ -80,11 +80,11 @@ const Avatar = () => {
 
   return (
    <AvatarContainer>
-     <AvatarContainerInner ref={containerRefOne} style={{opacity: 0}}>
+     <AvatarContainerInner ref={containerRefOne}>
        <AvatarImg src={avatar} />
        <AvatarText>0x98...674</AvatarText>
      </AvatarContainerInner>
-     <AvatarContainerInner ref={containerRefTwo}>
+     <AvatarContainerInner ref={containerRefTwo} style={{opacity: 0}}>
        <AvatarImg src={brantly} />
       <AvatarText>brantly.eth</AvatarText>
      </AvatarContainerInner>
