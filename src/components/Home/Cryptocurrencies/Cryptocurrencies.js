@@ -8,7 +8,7 @@ import wallet from "./wallet.svg"
 import { Anchor, AnchorContainer } from '../../Anchor'
 
 const HeroContainer = styled("div")`
-  padding: 120px 20px;
+  padding: 120px 20px 0px 20px;
   background: white;
   display: flex;
   justify-content: center;

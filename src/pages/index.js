@@ -2,8 +2,8 @@ import React from "react"
 import "normalize.css"
 
 import Navigation from "../components/Navigation"
-import AdditionalFeatures from "../components/Home/AdditionalFeatures/"
 import Cryptocurrencies from "../components/Home/Cryptocurrencies/"
+import PortableUsername from "../components/Home/PortableUsername/"
 import DecentralisedWebsites from "../components/Home/DecentralisedWebsites/"
 import Ecosystem from "../components/Home/Ecosystem/"
 import Hero from "../components/Home/Hero"
@@ -20,11 +20,11 @@ export default function Home(props) {
       <Navigation />
       <Hero />
       <Carousel />
-      <Cryptocurrencies />
+      <PortableUsername />
       <Statistics />
+      <Cryptocurrencies />
       <DecentralisedWebsites />
       <TraditionalDomains />
-      <AdditionalFeatures />
       <Ecosystem />
       <GetInvolved />
       <Footer />
