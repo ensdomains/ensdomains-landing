@@ -114,6 +114,10 @@
     "link": "https://wallet.burnerfactory.com/",
     "name": "Burner Wallet"
   },
+  "capitaldex": {
+    "link": "https://capitaldex.exchange/#/",
+    "name": "Capital DEX"
+  },
   "carbonfyi": {
     "link": "https://carbon.fyi/",
     "name": "carbon.fyi"
@@ -137,6 +141,10 @@
   "chainshot": {
     "link": "https://www.chainshot.com/",
     "name": "ChainShot"
+  },
+  "chargedparticles": {
+    "link": "https://charged.fi/",
+    "name": "Charged Particles"
   },
   "chilliswap": {
     "link": "https://exchange.chilliswap.org/",
@@ -243,6 +251,10 @@
   "defisaver": {
     "link": "https://defisaver.com/",
     "name": "Defi Saver"
+  },
+  "defiswap": {
+    "link": "https://crypto.com/defi/swap",
+    "name": "Defi Swap"
   },
   "defi777": {
     "link": "https://defi777.com/",
@@ -516,6 +528,10 @@
   "kwikswap": {
     "link": "https://app.kwikswap.org/",
     "name": "Kwikswap"
+  },
+  "kyberdmm": {
+    "link": "https://dmm.exchange/#/swap",
+    "name": "Kyber DMM"
   },
   "kyberswap": {
     "link": "https://kyberswap.com/swap",
@@ -949,6 +965,10 @@
   "unlock": {
     "link": "https://unlock-protocol.com/",
     "name": "Unlock"
+  },
+  "varenfinance": {
+    "link": "https://varen.exchange/#/swap",
+    "name": "Varen Finance"
   },
   "waffle": {
     "link": "https://getwaffle.io/",
