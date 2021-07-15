@@ -8,11 +8,11 @@ import twitter from "../assets/twitter.png"
 function getTitle(pathname) {
   switch (pathname) {
     case "/":
-      return "ENS"
+      return "ENS | Ethereum Name Service"
     case "/about":
-      return "ENS | About"
+      return "ENS | Organization"
     default:
-      return "ENS"
+      return "ENS | Ethereum Name Service"
   }
 }
 
@@ -23,11 +23,11 @@ export default function Layout({ children, data, location }) {
         meta={[
           {
             name: "description",
-            content: "Human readable names for the Ethereum network",
+            content: "Your web3 username, a name for all your cryptocurrency addresses, and decentralised websites.",
           },
           {
             name: "keywords",
-            content: "ENS, Ethereum, Ethereum Name Service, Names, True Names",
+            content: "ENS, Ethereum, Ethereum Name Service, .eth domains, blockchain domains",
           },
           {
             name: "twitter:card",
