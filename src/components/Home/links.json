@@ -102,6 +102,10 @@
     "name": "Brave",
     "featuredBrowser": 1
   },
+  "btswap": {
+    "link": "https://btswap.com/#/",
+    "name": "BTswap"
+  },
   "buidlhub": {
     "link": "https://buidlhub.com/",
     "name": "BUIDLHub"
@@ -432,6 +436,10 @@
   "gnosissafemultisig": {
     "link": "https://gnosis-safe.io",
     "name": "Gnosis Safe Multisig"
+  },
+  "gridplus": {
+    "link": "https://gridplus.io/",
+    "name": "GridPlus"
   },
   "guarda": {
     "link": "http://guarda.co/",
@@ -842,6 +850,10 @@
   "sushiswap": {
     "link": "https://sushi.com/",
     "name": "SushiSwap"
+  },
+  "swapmatic": {
+    "link": "https://app.swapmatic.io/",
+    "name": "SwapMatic"
   },
   "swapx": {
     "link": "https://www.swapx.org/",
