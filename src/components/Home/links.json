@@ -328,10 +328,6 @@
     "link": "https://emiswap.com/",
     "name": "EmiSwap"
   },
-  "emoon": {
-    "link": "https://www.emoon.io/",
-    "name": "Emoon"
-  },
   "encirca": {
     "link": "https://www.encirca.com/eth/",
     "name": "EnCirca"
@@ -339,10 +335,6 @@
   "enjin": {
     "link": "https://enjin.io/products/wallet",
     "name": "Enjin"
-  },
-  "enjinx": {
-    "link": "https://enjinx.io/",
-    "name": "EnjinX"
   },
   "ensportal": {
     "link": "https://ensportal.com/",
@@ -736,10 +728,6 @@
     "link": "https://dex.polyient.games/",
     "name": "Polyient DEX"
   },
-  "pooltogether": {
-    "link": "https://www.pooltogether.com/",
-    "name": "Pool Together"
-  },
   "poolsvision": {
     "link": "http://pools.vision/",
     "name": "Pools.Vision"
@@ -985,26 +973,6 @@
   "unlock": {
     "link": "https://unlock-protocol.com/",
     "name": "Unlock"
-  },
-  "unstoppable": {
-    "link": "https://unstoppabledomains.com/browser",
-    "name": "Unstoppable Browser"
-  },
-  "unstoppablechat": {
-    "link": "https://unstoppabledomains.com/chat",
-    "name": "Unstoppable Chat"
-  },
-  "unstoppabledns": {
-    "link": "https://community.unstoppabledomains.com/t/configure-your-browser-for-unstoppable-domains/1469",
-    "name": "Unstoppable DNS Resolver"
-  },
-  "unstoppableextension": {
-    "link": "https://unstoppabledomains.com/extension",
-    "name": "Unstoppable Extension"
-  },
-  "unstoppablewallet": {
-    "link": "https://unstoppable.money/",
-    "name": "Unstoppable Wallet"
   },
   "waffle": {
     "link": "https://getwaffle.io/",
