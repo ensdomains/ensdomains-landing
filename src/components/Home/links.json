@@ -809,6 +809,10 @@
     "link": "https://www.sendusdc.net/",
     "name": "SendUSDC"
   },
+  "shapeshift": {
+    "link": "https://shapeshift.com/",
+    "name": "ShapeShift"
+  },
   "shibaswap": {
     "link": "https://shibaswap.com/",
     "name": "ShibaSwap"
