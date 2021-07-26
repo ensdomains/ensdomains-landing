@@ -102,6 +102,10 @@
     "name": "Brave",
     "featuredBrowser": 1
   },
+  "brd": {
+    "link": "https://brd.com/",
+    "name": "BRD"
+  },
   "btswap": {
     "link": "https://btswap.com/#/",
     "name": "BTswap"
@@ -576,6 +580,10 @@
   "mailchain": {
     "link": "https://mailchain.xyz/",
     "name": "Mailchain"
+  },
+  "masterpiece": {
+    "link": "https://masterpiece.so/",
+    "name": "Masterpiece"
   },
   "mathwallet": {
     "link": "https://www.mathwallet.org/en/",
