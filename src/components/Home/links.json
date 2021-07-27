@@ -75,7 +75,7 @@
   },
   "blockchaincom": {
     "link": "https://www.blockchain.com/",
-    "name": "Blockchain.com"
+    "name": "Blockchain"
   },
   "blockhead": {
     "link": "https://blockhead.info/",
@@ -234,7 +234,7 @@
   },
   "dappquery": {
     "link": "https://dappquery.com/integration/ens",
-    "name": "Dappquery"
+    "name": "Dapp Query"
   },
   "dappradar": {
     "link": "https://dappradar.com/",
@@ -487,7 +487,7 @@
   },
   "interspacechat": {
     "link": "https://interspace.chat/",
-    "name": "interspace.chat"
+    "name": "Interspace Chat"
   },
   "ipfs": {
     "link": "https://ipfs.io/",
@@ -645,7 +645,7 @@
   },
   "mycryptocheckout": {
     "link": "https://wordpress.org/plugins/mycryptocheckout/",
-    "name": "MyCryptoCheckout"
+    "name": "My Crypto Checkout"
   },
   "myEtherWallet": {
     "link": "https://myetherwallet.com/",
@@ -673,7 +673,7 @@
   },
   "nonfungible": {
     "link": "https://nonfungible.com/",
-    "name": "NonFungible.com"
+    "name": "NonFungible"
   },
   "onemillionsdevs": {
     "link": "https://join.onemilliondevs.com/",
@@ -978,6 +978,10 @@
     "link": "https://unlock-protocol.com/",
     "name": "Unlock"
   },
+  "unstoppablewallet": {
+    "link": "https://unstoppable.money/",
+    "name": "Unstoppable Wallet"
+  },
   "varenfinance": {
     "link": "https://varen.exchange/#/swap",
     "name": "Varen Finance"
@@ -1004,7 +1008,7 @@
   },
   "yearnfinance": {
     "link": "https://yearn.finance/",
-    "name": "yearn.finance"
+    "name": "Yearn"
   },
   "zapperfi": {
     "link": "https://www.zapper.fi/",
