@@ -928,6 +928,10 @@
     "link": "https://www.tokenpocket.pro/",
     "name": "TokenPocket"
   },
+  "tokentax": {
+    "link": "https://tokentax.co/",
+    "name": "TokenTax"
+  },
   "tornado": {
     "link": "https://tornado.cash/",
     "name": "Tornado Cash"
