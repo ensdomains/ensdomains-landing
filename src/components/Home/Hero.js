@@ -3,10 +3,13 @@ import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import mq from "../../mediaQuery"
 
-const Title = styled("h2")`
+import { Button } from "../Typography"
+
+const Title = styled("h1")`
   font-size: 24px;
   font-weight: 300;
   margin-top: 0;
+  margin-bottom: 0.4em;
   color: white;
   text-align: center;
   max-width: 800px;
@@ -22,6 +25,15 @@ const HeroContainer = styled("div")`
   background-image: linear-gradient(90deg, #513eff 0%, #52e5ff 100%);
   display: flex;
   justify-content: center;
+
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+`
+
+const Launch = styled(Button)`
+  margin: 0 auto 0;
+  margin-block-end: 2em;
 `
 
 export default function Hero(props) {
@@ -29,6 +41,9 @@ export default function Hero(props) {
   return (
     <HeroContainer>
       <Title>{t("home.hero.title")}</Title>
+      <Launch href="https://app.ens.domains">
+        {t("home.carousel.launch")}
+      </Launch>
     </HeroContainer>
   )
 }

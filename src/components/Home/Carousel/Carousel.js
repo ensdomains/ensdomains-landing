@@ -134,9 +134,9 @@ const Title = styled("h3")`
   opacity: 0.7;
 `
 
-const Launch = styled(Button)`
+{/*const Launch = styled(Button)`
   margin: 0 auto 0;
-`
+`*/}
 
 const customRenderThumb = ({ children, t }) => {
   return children.map((item, i) => {
@@ -193,9 +193,9 @@ export default function HeroCarousel(props) {
           <img src={manageImg} />
         </Slide>
       </Carousel>
-      <Launch href="https://app.ens.domains">
+      {/*<Launch href="https://app.ens.domains">
         {t("home.carousel.launch")}
-      </Launch>
+      </Launch>*/}
     </CarouselContainer>
   )
 }
