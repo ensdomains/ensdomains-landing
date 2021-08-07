@@ -740,6 +740,10 @@
     "link": "https://dex.polyient.games/",
     "name": "Polyient DEX"
   },
+  "pooledmoney": {
+    "link": "https://pooled.money/",
+    "name": "pooled.money"
+  },
   "poolsvision": {
     "link": "http://pools.vision/",
     "name": "Pools.Vision"
