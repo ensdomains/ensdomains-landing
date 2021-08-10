@@ -704,13 +704,17 @@
     "link": "https://ownbit.io/en/",
     "name": "OwnBit"
   },
+  "paraswap": {
+    "link": "https://paraswap.io/",
+    "name": "ParaSwap"
+  },
   "parcel": {
     "link": "https://parcel.money/",
     "name": "Parcel"
   },
-  "paraswap": {
-    "link": "https://paraswap.io/",
-    "name": "ParaSwap"
+  "partybid": {
+    "link": "https://www.partybid.app/",
+    "name": "PartyBid"
   },
   "paytomat": {
     "link": "https://paytomat.com/en/",
