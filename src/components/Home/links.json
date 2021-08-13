@@ -376,6 +376,10 @@
     "link": "https://ethblock.art/",
     "name": "EthBlockArt"
   },
+  "ethcontractapp": {
+    "link": "https://ethcontract.app/",
+    "name": "ethcontract.app"
+  },
   "ethdns": {
     "link": "https://www.wealdtech.com/articles/using-ethdns-to-host-your-dns-domain/",
     "name": "EthDNS"
