@@ -368,6 +368,10 @@
     "link": "https://app.eswap.tube/",
     "name": "Eswap"
   },
+  "etag": {
+    "link": "https://etag-eth.ipns.dweb.link/#/",
+    "name": "ETag"
+  },
   "ethaf": {
     "link": "https://eth.af/",
     "name": "Eth.af"
@@ -493,13 +497,21 @@
     "link": "https://www.hyaliko.com/",
     "name": "Hyaliko"
   },
-  "inscribe": {
-    "link": "https://inscribe.so/",
-    "name": "Inscribe"
+  "ideamarket": {
+    "link": "https://ideamarket.io/",
+    "name": "Ideamarket"
+  },
+  "impersonator": {
+    "link": "https://apoorvlathey.com/impersonator/",
+    "name": "Impersonator"
   },
   "imToken": {
     "link": "https://token.im/",
     "name": "imToken"
+  },
+  "inscribe": {
+    "link": "https://inscribe.so/",
+    "name": "Inscribe"
   },
   "interspacechat": {
     "link": "https://interspace.chat/",
@@ -1041,6 +1053,10 @@
   "wyre": {
     "link": "https://www.sendwyre.com/",
     "name": "Wyre"
+  },
+  "xummwallet": {
+    "link": "https://xumm.app/",
+    "name": "XUMM"
   },
   "yearnfinance": {
     "link": "https://yearn.finance/",
