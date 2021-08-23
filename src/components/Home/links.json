@@ -662,6 +662,10 @@
     "link": "https://mooniswap.exchange/",
     "name": "Mooniswap"
   },
+  "moonshotbots": {
+    "link": "https://bots.moonshotcollective.space/",
+    "name": "Moonshot Bots"
+  },
   "multis": {
     "link": "https://multis.co/",
     "name": "Multis"
