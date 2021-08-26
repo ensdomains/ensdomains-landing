@@ -64,7 +64,7 @@ const Domains = styled("div")`
   }
 `
 
-const domains = [".xyz", ".kred", ".luxe", ".club", ".art", ""]
+const domains = [".com", ".org", ".io", ".xyz", ".art", "& more"]
 
 export default function TraditionalDomains(props) {
   const { t } = useTranslation()
