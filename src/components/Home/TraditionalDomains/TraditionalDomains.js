@@ -83,7 +83,7 @@ export default function TraditionalDomains(props) {
           ))}
         </Domains>
       </DomainWrapper>
-      <Button href="https://docs.ens.domains/dns-registrar-guide">
+      <Button href="https://medium.com/the-ethereum-name-service/step-by-step-guide-to-importing-a-dns-domain-name-to-ens-d2d15feb03e8">
         {t("c.learnMore")}
       </Button>
     </Container>
