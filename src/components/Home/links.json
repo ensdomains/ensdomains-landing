@@ -172,6 +172,10 @@
     "link": "https://wallet.coinbase.com/",
     "name": "Coinbase Wallet"
   },
+  "coinbasewalletextension": {
+    "link": "https://chrome.google.com/webstore/detail/coinbase-wallet-extension/hnfanknocfeofbddgcijnmhnfnkdnaad",
+    "name": "Coinbase Wallet Extension"
+  },
   "coindreams": {
     "link": "https://coindreams.io/",
     "name": "CoinDreams"
@@ -299,6 +303,10 @@
   "dxdao": {
     "link": "https://daotalk.org/c/daos/dx-dao",
     "name": "Dxdao"
+  },
+  "dynalock": {
+    "link": "https://play.google.com/store/apps/details?id=cz.telematix.ethereumwallet",
+    "name": "Dynalock"
   },
   "earnfi": {
     "link": "https://earni.fi/",
