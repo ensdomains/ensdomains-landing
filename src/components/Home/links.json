@@ -469,6 +469,10 @@
     "link": "https://frontierwallet.com/",
     "name": "Frontier Wallet"
   },
+  "geocitieseth": {
+    "link": "https://geocities.eth.link/",
+    "name": "GeoCities.eth"
+  },
   "genie": {
     "link": "https://genie.xyz/",
     "name": "Genie"
