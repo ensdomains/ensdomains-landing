@@ -1058,6 +1058,10 @@
     "link": "https://varen.exchange/#/swap",
     "name": "Varen Finance"
   },
+  "venly": {
+    "link": "https://www.venly.io/",
+    "name": "Venly"
+  },
   "waffle": {
     "link": "https://getwaffle.io/",
     "name": "Waffle"
