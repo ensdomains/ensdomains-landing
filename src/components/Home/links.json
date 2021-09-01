@@ -400,6 +400,10 @@
     "link": "https://marketplace.visualstudio.com/items?itemName=ericglau.defi-ls",
     "name": "Ethereum DeFi Language Support"
   },
+  "ethlimo": {
+    "link": "https://eth.limo/",
+    "name": "eth.limo"
+  },
   "ethlink": {
     "link": "https://eth.link/",
     "name": "eth.link"
