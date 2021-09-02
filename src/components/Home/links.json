@@ -465,6 +465,10 @@
     "link": "https://foundation.app/",
     "name": "Foundation"
   },
+  "frame": {
+    "link": "https://frame.sh/",
+    "name": "Frame"
+  },
   "freeens": {
     "link": "http://freeens.xyz/",
     "name": "Free ENS"
