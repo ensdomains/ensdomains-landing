@@ -35,7 +35,7 @@ const team = [
     name: "Makoto Inoue",
     title: "JS & Solidity Developer",
     img: makoto,
-    link: "https://twitter.com/makoto_inoue",
+    link: "https://gist.github.com/makoto/c6f2e5abdaacb69b1d9a6bae990800c4",
   },
   {
     name: "Rebecca Liebert",
@@ -50,7 +50,7 @@ const team = [
     link: "https://twitter.com/DeanEigenmann",
   },
   {
-    name: "Brantly Millegan",
+    name: "brantly.eth",
     title: "Director of Operations",
     img: brantly,
     link: "https://twitter.com/BrantlyMillegan",
@@ -62,7 +62,7 @@ const team = [
     link: "http://linkedin.com/in/jimgmcdonald",
   },
   {
-    name: "Kevin Gaspar",
+    name: "validator.eth",
     title: "Support Lead",
     img: kevin,
     link: "https://twitter.com/ValidatorEth",
