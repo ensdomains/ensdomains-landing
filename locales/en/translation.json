@@ -83,7 +83,7 @@
     "hero": "The Ethereum Name Service is an open source blockchain-based naming protocol.",
     "aboutENS": {
       "title": "About ENS",
-      "text": "Started at the Ethereum Foundation in early 2017, ENS spun off as a separate organization in 2018. ENS is managed by the Singaporean non-profit True Names LTD and is a public good, a basic piece of Internet infrastructure that belongs to the community. We welcome all feedback and contributions!",
+      "text": "Started at the Ethereum Foundation in early 2017, ENS spun off with a separate organization in 2018. ENS development is managed by the Singaporean non-profit True Names LTD and is a public good, a basic piece of Internet infrastructure that belongs to the community. We welcome all feedback and contributions!",
       "support": "We have received generous financial support from:",
       "support2": "Representatives of ENS participate in the greater Internet community:"
     },
@@ -96,7 +96,7 @@
     },
     "root": {
       "title": "Managing the ENS root",
-      "text": "To facilitate the possibility of upgrades and maintenance, and in exceptional circumstances to handle problems with ENS, the ENS root is initially owned by a four of seven multisig, with members of related projects as keyholders. In the long term, we would like the root multisig to be replaced by some form of distributed decision making process, as such systems become available."
+      "text": "To facilitate the possibility of upgrades and maintenance, the ENS root is controlled by a four of seven multisig, with members of related projects as keyholders. In the long term, we would like the root multisig to be replaced by some form of distributed decision making process, as such systems become available."
     }
   }
 }
