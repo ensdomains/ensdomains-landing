@@ -112,19 +112,6 @@ export default function AboutDescription(props) {
   const { t } = useTranslation()
   return (
     <>
-    <Description id='about-benefits'>
-      <DescriptionInner>
-        <AnchorContainer href={'#about-benefits'}>
-          <h2>{t("about.benefits.title")}<Anchor /></h2>
-        </AnchorContainer>
-        <div>
-          <p>{t("about.benefits.text")}</p>
-          <LearnMore href="https://medium.com/the-ethereum-name-service/why-ens-uses-ethereum-and-eth-not-a-bespoke-blockchain-and-token-36f86727e71f">
-            {t("c.learnMore")}
-          </LearnMore>
-        </div>
-      </DescriptionInner>
-    </Description>
     <Description id='about-root'>
       <DescriptionInner>
         <AnchorContainer href={'#about-root'}>
