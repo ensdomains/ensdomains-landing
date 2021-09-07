@@ -62,7 +62,7 @@ const team = [
     link: "http://linkedin.com/in/jimgmcdonald",
   },
   {
-    name: "validator.eth",
+    name: "Kevin | validator.eth",
     title: "Support Lead",
     img: kevin,
     link: "https://twitter.com/ValidatorEth",
