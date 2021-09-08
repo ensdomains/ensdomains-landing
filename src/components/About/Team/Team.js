@@ -15,6 +15,7 @@ import kevin from "./photos/kevin.png"
 import leon from "./photos/leon.png"
 import richard from "./photos/richard.png"
 import muhammed from "./photos/muhammed.png"
+import alisha from "./photos/alisha.png"
 import hoverCircle from "./hoverCircle.png"
 import { Anchor, AnchorContainer } from '../../Anchor'
 
@@ -84,6 +85,12 @@ const team = [
     title: "Full Stack Developer",
     img: muhammed,
     link: "https://twitter.com/tanrikuIu",
+  },
+  {
+    name: "alisha.eth",
+    title: "Community Manager",
+    img: alisha,
+    link: "https://twitter.com/futurealisha",
   }
 ]
 
