@@ -714,6 +714,10 @@
     "link": "https://bots.moonshotcollective.space/",
     "name": "Moonshot Bots"
   },
+  "mover": {
+    "link": "https://viamover.com/",
+    "name": "Mover"
+  },
   "multis": {
     "link": "https://multis.co/",
     "name": "Multis"
@@ -1137,6 +1141,10 @@
   "zora": {
     "link": "https://zora.co/",
     "name": "Zora"
+  },
+  "1inch": {
+    "link": "https://1inch.io/",
+    "name": "1inch"
   },
   "3box": {
     "link": "https://3box.io/hub",
