@@ -244,6 +244,10 @@
     "link": "https://dappnode.io/",
     "name": "DAppNode"
   },
+  "dappradar": {
+    "link": "https://dappradar.com/",
+    "name": "DappRadar"
+  },
   "dappquery": {
     "link": "https://dappquery.com/integration/ens",
     "name": "Dapp Query"
