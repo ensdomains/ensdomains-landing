@@ -28,6 +28,10 @@
     "link": "https://www.ambo.io",
     "name": "Ambo"
   },
+  "append": {
+    "link": "https://tryappend.com/",
+    "name": "Append"
+  },
   "aragon": {
     "link": "https://aragon.org/",
     "name": "Aragon"
@@ -549,6 +553,10 @@
     "link": "https://apoorvlathey.com/impersonator/",
     "name": "Impersonator"
   },
+  "immutables": {
+    "link": "https://www.immutables.co/#/",
+    "name": "Immutables"
+  },
   "imToken": {
     "link": "https://token.im/",
     "name": "imToken"
@@ -561,13 +569,13 @@
     "link": "https://interspace.chat/",
     "name": "Interspace Chat"
   },
-  "ipfs": {
-    "link": "https://ipfs.io/",
-    "name": "IPFS"
-  },
   "invoicebuild": {
     "link": "https://invoice.build/",
     "name": "Invoice.build"
+  },
+  "ipfs": {
+    "link": "https://ipfs.io/",
+    "name": "IPFS"
   },
   "isotile": {
     "link": "https://isotile.com/",
