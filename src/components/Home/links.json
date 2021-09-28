@@ -738,6 +738,10 @@
     "link": "https://viamover.com/",
     "name": "Mover"
   },
+  "msgs": {
+    "link": "https://msgs.decentralandalytics.com/",
+    "name": "msgs.eth"
+  },
   "multis": {
     "link": "https://multis.co/",
     "name": "Multis"
