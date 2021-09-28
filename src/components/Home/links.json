@@ -272,9 +272,13 @@
     "link": "https://decentraland.org/",
     "name": "Decentraland"
   },
+  "defiexplore": {
+    "link": "https://defiexplore.com/",
+    "name": "DeFi Explore"
+  },
   "defisaver": {
     "link": "https://defisaver.com/",
-    "name": "Defi Saver"
+    "name": "DeFi Saver"
   },
   "defiswap": {
     "link": "https://crypto.com/defi/swap",
@@ -589,6 +593,10 @@
     "link": "https://nft.jgndefi.com/",
     "name": "JGN-NFT"
   },
+  "juiceboxprotocol": {
+    "link": "https://juicebox.money/#/",
+    "name": "Juicebox"
+  },
   "keplr": {
     "link": "https://wallet.keplr.app/",
     "name": "Keplr"
@@ -774,6 +782,10 @@
   "nonfungible": {
     "link": "https://nonfungible.com/",
     "name": "NonFungible"
+  },
+  "nounsdao": {
+    "link": "https://nouns.wtf/",
+    "name": "Nouns DAO"
   },
   "onemillionsdevs": {
     "link": "https://join.onemilliondevs.com/",
@@ -969,6 +981,10 @@
   "stakeonme": {
     "link": "https://stakeonme.com/",
     "name": "StakeOnMe"
+  },
+  "stakewise": {
+    "link": "https://stakewise.io/",
+    "name": "Stakewise"
   },
   "status": {
     "link": "https://status.im/",
