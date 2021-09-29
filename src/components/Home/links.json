@@ -1064,6 +1064,10 @@
     "name": "The Graph",
     "featuredApp": 4
   },
+  "tiledao": {
+    "link": "https://tiles.art/",
+    "name": "Tiles"
+  },
   "tokenallowancechecker": {
     "link": "https://tac.dappstar.io/",
     "name": "Token Allowance Checker"
