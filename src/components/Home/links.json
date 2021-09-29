@@ -665,6 +665,10 @@
     "link": "https://loopring.org/",
     "name": "Loopring"
   },
+  "lootexchange": {
+    "link": "https://www.loot.exchange/",
+    "name": "Loot Exchange"
+  },
   "luaswap": {
     "link": "https://app.luaswap.org/#/swap",
     "name": "LuaSwap"
