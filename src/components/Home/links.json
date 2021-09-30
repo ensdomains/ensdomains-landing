@@ -795,6 +795,10 @@
     "link": "https://nifty.ink/",
     "name": "Nifty Ink"
   },
+  "niftyorchard": {
+    "link": "https://niftyorchard.com/",
+    "name": "Nifty Orchard"
+  },
   "nonfungible": {
     "link": "https://nonfungible.com/",
     "name": "NonFungible"
@@ -1063,6 +1067,10 @@
     "link": "https://thegraph.com/",
     "name": "The Graph",
     "featuredApp": 4
+  },
+  "thehistoricalrecord": {
+    "link": "https://thehistoricalrecord.com/",
+    "name": "The Historical Record"
   },
   "tiledao": {
     "link": "https://tiles.art/",
