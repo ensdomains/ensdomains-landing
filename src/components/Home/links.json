@@ -158,6 +158,10 @@
     "link": "https://charged.fi/",
     "name": "Charged Particles"
   },
+  "chatrooms": {
+    "link": "https://chatrooms.eth.link/",
+    "name": "Chatrooms"
+  },
   "chilliswap": {
     "link": "https://exchange.chilliswap.org/",
     "name": "Chilliswap"
