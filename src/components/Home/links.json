@@ -868,13 +868,17 @@
     "link": "https://paytomat.com/en/",
     "name": "Paytomat"
   },
+  "piedao": {
+    "link": "https://www.piedao.org/",
+    "name": "PieDAO"
+  },
   "pillar": {
     "link": "https://pillarproject.io/",
     "name": "Pillar"
   },
-  "piedao": {
-    "link": "https://www.piedao.org/",
-    "name": "PieDAO"
+  "pixelportraits": {
+    "link": "https://www.thepixelportraits.me/",
+    "name": "Pixel Portraits"
   },
   "plugcool": {
     "link": "https://plug.cool/",
