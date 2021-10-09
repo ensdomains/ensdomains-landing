@@ -85,7 +85,7 @@ const Avatar = () => {
        <AvatarText>0x98...674</AvatarText>
      </AvatarContainerInner>
      <AvatarContainerInner ref={containerRefTwo} style={{opacity: 0}}>
-       <AvatarImg src={brantly} />
+       <AvatarImg src={brantlypunk} />
       <AvatarText>brantly.eth</AvatarText>
      </AvatarContainerInner>
    </AvatarContainer>
