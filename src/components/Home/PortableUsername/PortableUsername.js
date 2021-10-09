@@ -7,7 +7,7 @@ import { H2, P as DefaultP } from "../../Typography"
 import { Gap } from "../../../utils"
 import { Anchor, AnchorContainer } from '../../Anchor'
 
-import brantly from './brantly.png'
+import brantlypunk from './brantlypunk.png'
 import avatar from './avatar.png'
 
 const HeroContainer = styled("div")`
