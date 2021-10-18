@@ -236,6 +236,10 @@
     "link": "https://croco.finance/",
     "name": "Croco Finance"
   },
+  "cryptex": {
+    "link": "https://cryptex.finance/",
+    "name": "Cryptex Finance"
+  },
   "cryptostamp": {
     "link": "https://crypto.post.at/",
     "name": "Crypto Stamp"
@@ -427,6 +431,10 @@
   "ethcontractapp": {
     "link": "https://ethcontract.app/",
     "name": "ethcontract.app"
+  },
+  "ethtx": {
+    "link": "https://ethtx.info/",
+    "name": "EthTx Decoder"
   },
   "ethdns": {
     "link": "https://www.wealdtech.com/articles/using-ethdns-to-host-your-dns-domain/",
