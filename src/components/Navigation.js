@@ -223,13 +223,9 @@ export default function Navigation() {
       </div>
 
       <Links menuOpen={menuOpen}>
-        <a href="https://discord.gg/ens">
-          {t("Community")}
-        </a>
-        <Link to="/about">{t("nav.about")}</Link>
-        <a href="https://medium.com/the-ethereum-name-service">
-          {t("nav.blog")}
-        </a>
+        <a href="https://discord.gg/ens">Community</a>
+        <Link to="/about">Team</Link>
+        <a href="https://docs.ens.domains/">Docs</a>
 
         <Separator />
         <LanguageSwitcher />
@@ -239,17 +235,13 @@ export default function Navigation() {
       <MobileLinks menuOpen={menuOpen}>
         <LanguageSwitcher mobile={true} />
         <li>
-          <a href="https://discord.gg/ens">
-            {t("Community")}
-          </a>
+          <a href="https://discord.gg/ens">Community</a>
         </li>
         <li>
-          <Link to="/about">{t("nav.about")}</Link>
+          <Link to="/about">Team</Link>
         </li>
         <li>
-          <a href="https://medium.com/the-ethereum-name-service">
-            {t("nav.blog")}
-          </a>
+          <a href="https://docs.ens.domains/">Docs</a>
         </li>
         <li>
           <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>
