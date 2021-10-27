@@ -223,6 +223,9 @@ export default function Navigation() {
       </div>
 
       <Links menuOpen={menuOpen}>
+        <a href="https://discord.gg/ens">
+          {t("Community")}
+        </a>
         <Link to="/about">{t("nav.about")}</Link>
         <a href="https://medium.com/the-ethereum-name-service">
           {t("nav.blog")}
@@ -235,6 +238,11 @@ export default function Navigation() {
 
       <MobileLinks menuOpen={menuOpen}>
         <LanguageSwitcher mobile={true} />
+        <li>
+          <a href="https://discord.gg/ens">
+            {t("Community")}
+          </a>
+        </li>
         <li>
           <Link to="/about">{t("nav.about")}</Link>
         </li>
