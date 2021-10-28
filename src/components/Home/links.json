@@ -1022,6 +1022,10 @@
     "name": "Showtime",
     "featuredApp": 3
   },
+  "sismo": {
+    "link": "https://sismo.io/",
+    "name": "Sismo"
+  },
   "snapshotlabs": {
     "link": "https://snapshot.page/",
     "name": "Snapshot"
