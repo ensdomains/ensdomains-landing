@@ -48,17 +48,15 @@ const BannerContent = styled(`div`)`
 export const MainPageBannerContainer = styled(`div`)`
   z-index:111111;
   position: absolute;
-  top: 6px;
-  right: 0;
+  top: 97px;
   background: #ffffff;
   border-radius: 14px;
   display: grid;
   padding: 15px 0px;
   grid-template-columns: 73px 1fr 50px;
-  ${mq.small`
-    left: 40px;
-    margin-left: 150px;
-    width: 550px;
+  ${mq.medium`
+    margin: auto;
+    width: 600px;
     height: 50px;
   `}
 `
@@ -73,7 +71,7 @@ export function DAOBannerContent() {
           ENS is decentralizing governance, and we need delegates.
         </BannerContent>
       </div>
-      <ArrowLink target="_blank" rel="noreferrer" href="https://google.com">
+      <ArrowLink target="_blank" rel="noreferrer" href="https://ens.mirror.xyz">
         <ArrowSmall src={Arrow} />
       </ArrowLink>
     </>

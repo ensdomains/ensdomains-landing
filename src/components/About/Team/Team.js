@@ -103,6 +103,7 @@ const TeamContainer = styled("div")`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-top: 20px;
 
   h3 {
@@ -207,10 +208,10 @@ function TeamMember({ member }) {
 export default function Team(props) {
   const { t } = useTranslation()
   return (
-      <TeamContainer id='about-team'>
-        <MainPageBannerContainer>
-          <DAOBannerContent />
-        </MainPageBannerContainer>
+    <TeamContainer id='about-team'>
+      <MainPageBannerContainer>
+        <DAOBannerContent />
+      </MainPageBannerContainer>
 
         <AnchorContainer href={'#about-team'}>
           <h3>{t("about.team.title")}<Anchor /></h3>
@@ -220,6 +221,6 @@ export default function Team(props) {
             <TeamMember member={member} />
           ))}
         </TeamMembers>
-      </TeamContainer>
+    </TeamContainer>
   )
 }
