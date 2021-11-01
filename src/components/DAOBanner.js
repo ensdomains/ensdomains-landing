@@ -56,7 +56,7 @@ export const MainPageBannerContainer = styled(`div`)`
   grid-template-columns: 73px 1fr 50px;
   ${mq.medium`
     margin: auto;
-    width: 600px;
+    width: 750px;
     height: 50px;
   `}
 `
@@ -68,7 +68,7 @@ export function DAOBannerContent() {
       <div>
         <BannerTitle>ENS DAO: A Call for Delegates</BannerTitle>
         <BannerContent>
-          ENS is decentralizing governance, and we need delegates.
+          ENS is decentralizing governance, and are accepting submissions for delegates.
         </BannerContent>
       </div>
       <ArrowLink target="_blank" rel="noreferrer" href="https://ens.mirror.xyz">
