@@ -21,7 +21,9 @@ const LogoSmall = styled(motion.img)`
   box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.06);
 `
 
-const ArrowLink = styled(`a`)``
+const Link = styled(`a`)`
+  text-decoration: none;
+`
 
 const ArrowSmall = styled(motion.img)`
   height: 100%;
@@ -51,9 +53,11 @@ export const MainPageBannerContainer = styled(`div`)`
   top: 97px;
   background: #ffffff;
   border-radius: 14px;
-  display: grid;
   padding: 15px 0px;
-  grid-template-columns: 73px 1fr 50px;
+  a {
+    display: grid;
+    grid-template-columns: 73px 1fr 50px;
+  }
   ${mq.medium`
     margin: auto;
     width: 750px;
@@ -63,7 +67,7 @@ export const MainPageBannerContainer = styled(`div`)`
 
 export function DAOBannerContent() {
   return (
-    <>
+    <Link target="_blank" rel="noreferrer" href="https://ens.mirror.xyz">
       <LogoSmall src={ENSIcon} />
       <div>
         <BannerTitle>ENS DAO: A Call for Delegates</BannerTitle>
@@ -71,9 +75,7 @@ export function DAOBannerContent() {
           ENS is decentralizing governance, and accepting submissions for delegates.
         </BannerContent>
       </div>
-      <ArrowLink target="_blank" rel="noreferrer" href="https://ens.mirror.xyz">
-        <ArrowSmall src={Arrow} />
-      </ArrowLink>
-    </>
+      <ArrowSmall src={Arrow} />
+    </Link>
   )
 }
