@@ -33,7 +33,7 @@
       "tor": "Usa ENS para acceder más fácilmente a los servicios ocultos de Tor .onion."
     },
     "carousel": {
-      "launch": "Lanzar App",
+      "launch": "Abrir App",
       "manage": "organiza",
       "register": "registra",
       "search": "busca"
@@ -91,6 +91,6 @@
   "nav": {
     "about": "Organización",
     "blog": "Blog",
-    "launch": "Lanzar App"
+    "launch": "Abrir App"
   }
 }
