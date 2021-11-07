@@ -126,6 +126,10 @@
     "link": "https://wallet.burnerfactory.com/",
     "name": "Burner Wallet"
   },
+  "cancelethereumtransactions": {
+    "link": "https://cancel-ethereum-transactions.web.app/cancel",
+    "name": "Cancel Ethereum Transactions"
+  },
   "capitaldex": {
     "link": "https://capitaldex.exchange/#/",
     "name": "Capital DEX"
@@ -713,6 +717,10 @@
     "link": "https://app.luaswap.org/#/swap",
     "name": "LuaSwap"
   },
+  "lyrafinance": {
+    "link": "https://www.lyra.finance/",
+    "name": "Lyra Finance"
+  },
   "makersplace": {
     "link": "https://makersplace.com/",
     "name": "MakersPlace"
@@ -867,6 +875,10 @@
   "otterscan": {
     "link": "https://github.com/wmitsuda/otterscan",
     "name": "Otterscan"
+  },
+  "ourspaces": {
+    "link": "https://www.ourspaces.xyz/",
+    "name": "Spaces"
   },
   "ownbit": {
     "link": "https://ownbit.io/en/",
