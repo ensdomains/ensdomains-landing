@@ -819,6 +819,10 @@
     "link": "https://myetherwallet.com/",
     "name": "MyEtherWallet"
   },
+  "namebazaar": {
+    "link": "https://namebazaar.io/",
+    "name": "Name Bazaar"
+  },
   "nethereum": {
     "link": "http://playground.nethereum.com/",
     "name": "Nethereum Playground"
