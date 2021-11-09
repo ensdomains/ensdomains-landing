@@ -67,12 +67,12 @@ export const MainPageBannerContainer = styled(`div`)`
 
 export function DAOBannerContent() {
   return (
-    <Link target="_blank" rel="noreferrer" href="https://ens.mirror.xyz">
+    <Link target="_blank" rel="noreferrer" href="https://ens.mirror.xyz/5cGl-Y37aTxtokdWk21qlULmE1aSM_NuX9fstbOPoWU">
       <LogoSmall src={ENSIcon} />
       <div>
-        <BannerTitle>ENS DAO: A Call for Delegates</BannerTitle>
+        <BannerTitle>$ENS Now Available for Claiming.</BannerTitle>
         <BannerContent>
-          ENS is decentralizing governance, and accepting submissions for delegates.
+          Claim your $ENS and participate in ENS governance.
         </BannerContent>
       </div>
       <ArrowSmall src={Arrow} />
