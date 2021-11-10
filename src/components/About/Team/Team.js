@@ -4,13 +4,10 @@ import { useTranslation } from "react-i18next"
 
 import mq from "../../../mediaQuery"
 
-import becca from "./photos/becca.png"
-import dean from "./photos/dean.png"
 import jeff from "./photos/jeff.png"
 import nick from "./photos/nick.png"
 import makoto from "./photos/makoto.png"
 import brantly from "./photos/brantly.png"
-import jim from "./photos/jim.png"
 import kevin from "./photos/kevin.png"
 import leon from "./photos/leon.png"
 import richard from "./photos/richard.png"
@@ -43,28 +40,10 @@ const team = [
     link: "https://gist.github.com/makoto/c6f2e5abdaacb69b1d9a6bae990800c4",
   },
   {
-    name: "Rebecca Liebert",
-    title: "Graphic Designer",
-    img: becca,
-    link: "http://beccaliebert.com/",
-  },
-  {
-    name: "Dean Eigenmann",
-    title: "Solidity Developer",
-    img: dean,
-    link: "https://twitter.com/DeanEigenmann",
-  },
-  {
     name: "brantly.eth",
     title: "Director of Operations",
     img: brantly,
     link: "https://twitter.com/BrantlyMillegan",
-  },
-  {
-    name: "Jim McDonald",
-    title: "EthDNS Developer",
-    img: jim,
-    link: "http://linkedin.com/in/jimgmcdonald",
   },
   {
     name: "Kevin | validator.eth",
