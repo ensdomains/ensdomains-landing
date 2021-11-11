@@ -1,8 +1,12 @@
 {
+  "aave": {
+    "link": "https://aave.com/",
+    "name": "Aave",
+    "featuredApp": 5
+  },
   "aavegotchi": {
     "link": "https://aavegotchi.com/",
-    "name": "Aavegotchi",
-    "featuredApp": 5
+    "name": "Aavegotchi"
   },
   "accointing": {
     "link": "https://www.accointing.com/",
@@ -873,7 +877,8 @@
   },
   "opensea": {
     "link": "https://opensea.io",
-    "name": "OpenSea"
+    "name": "OpenSea",
+    "featuredApp": 4
   },
   "opera": {
     "link": "https://www.opera.com",
@@ -1137,8 +1142,7 @@
   },
   "thegraph": {
     "link": "https://thegraph.com/",
-    "name": "The Graph",
-    "featuredApp": 4
+    "name": "The Graph"
   },
   "thehistoricalrecord": {
     "link": "https://thehistoricalrecord.com/",
