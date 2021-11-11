@@ -557,6 +557,10 @@
     "link": "https://gnosis-safe.io",
     "name": "Gnosis Safe Multisig"
   },
+  "gopocket": {
+    "link": "https://gopocket.security/",
+    "name": "Go Pocket"
+  },
   "gridplus": {
     "link": "https://gridplus.io/",
     "name": "GridPlus"
@@ -830,6 +834,10 @@
   "nftfi": {
     "link": "https://nftfi.com/",
     "name": "NFTfi"
+  },
+  "nftscan": {
+    "link": "https://nftscan.com/",
+    "name": "NFTSCAN"
   },
   "nftscollectors": {
     "link": "https://nftscollectors.app/",
