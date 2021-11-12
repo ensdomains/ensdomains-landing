@@ -1088,6 +1088,10 @@
     "name": "Status",
     "featuredBrowser": 4
   },
+  "steakwallet": {
+    "link": "https://steakwallet.fi/",
+    "name": "Steakwallet"
+  },
   "stib": {
     "link": "https://stib.co/",
     "name": "StiB"
