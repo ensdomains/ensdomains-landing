@@ -142,29 +142,29 @@ const customRenderThumb = ({ children, t }) => {
   return children.map((item, i) => {
     if (i === 0) {
       return (
-        <div key={i}>
+        <React.Fragment key={i}>
           <SearchIcon />
           <Title>{t("home.carousel.search")}</Title>
           <Dot className="dot" />
-        </div>
+        </React.Fragment>
       )
     }
     if (i === 1) {
       return (
-        <div key={i}>
+        <React.Fragment key={i}>
           <RegisterIcon />
           <Title>{t("home.carousel.register")}</Title>
           <Dot className="dot" />
-        </div>
+        </React.Fragment>
       )
     }
     if (i === 2) {
       return (
-        <div key={i}>
+        <React.Fragment key={i}>
           <ManageIcon />
           <Title>{t("home.carousel.manage")}</Title>
           <Dot className="dot" />
-        </div>
+        </React.Fragment>
       )
     }
 
