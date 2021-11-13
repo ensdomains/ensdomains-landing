@@ -9,7 +9,7 @@ import links from "../links.json"
 import appSvg from "./app.svg"
 import browserSvg from "./browser.svg"
 import walletSvg from "./wallet.svg"
-import { Anchor, AnchorContainer } from '../../Anchor'
+import { Anchor, AnchorContainer } from "../../Anchor"
 
 function sortApps(array, property) {
   return array.sort((a, b) => {
@@ -171,9 +171,12 @@ export default function Ecosystem(props) {
   const sortedBrowsers = sortApps(browsers, "featuredBrowser")
 
   return (
-    <Container id='home-ecosystem'>
-      <AnchorContainer href={'#home-ecosystem'}>
-        <H2>{t("home.ecosystem.title")}<Anchor /></H2>
+    <Container id="home-ecosystem">
+      <AnchorContainer href={"#home-ecosystem"}>
+        <H2>
+          {t("home.ecosystem.title")}
+          <Anchor />
+        </H2>
       </AnchorContainer>
       <Section>
         <h3>
@@ -182,7 +185,7 @@ export default function Ecosystem(props) {
         </h3>
         <Grid animate={{ height: moreWallets ? "auto" : "200px" }}>
           {sortedWallets.map(app => (
-            <GridItem app={app} />
+            <GridItem app={app} key={app.name} />
           ))}
         </Grid>
         <More href="#" onClick={() => setMoreWallets(!moreWallets)}>
@@ -198,7 +201,7 @@ export default function Ecosystem(props) {
         </h3>
         <Grid animate={{ height: moreApps ? "auto" : "200px" }}>
           {sortedApps.map(app => (
-            <GridItem app={app} />
+            <GridItem app={app} key={app.name} />
           ))}
         </Grid>
         <More href="#" onClick={() => setMoreApps(!moreApps)}>
@@ -214,7 +217,7 @@ export default function Ecosystem(props) {
         </h3>
         <Grid animate={{ height: moreBrowsers ? "auto" : "200px" }}>
           {sortedBrowsers.map(app => (
-            <GridItem app={app} />
+            <GridItem app={app} key={app.name} />
           ))}
         </Grid>
         <More href="#" onClick={() => setMoreBrowsers(!moreBrowsers)}>

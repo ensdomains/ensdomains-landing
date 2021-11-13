@@ -93,7 +93,7 @@ const FooterColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   ${mq.medium`
     align-items: flex-start;
   `};
@@ -105,8 +105,8 @@ export default function Footer(props) {
       <Logo />
       <SocialContainer>
         {social.map(s => (
-          <ExternalLink href={s.link}>
-            <img src={s.img} />
+          <ExternalLink href={s.link} key={s.link}>
+            <img src={s.img} alt={s.text} />
             {s.text}
           </ExternalLink>
         ))}

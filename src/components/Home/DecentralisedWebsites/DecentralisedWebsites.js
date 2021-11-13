@@ -70,7 +70,7 @@ export default function DecentralisedWebsites(props) {
           <motion.img src={blur1} style={{ opacity: inView ? 1 : 0 }} />
         </ImageTransition>
         <ImageTransition>
-          <img src={website1} />
+          <img src={website1} alt={t("website")} />
         </ImageTransition>
         <ImageTransition>
           <motion.img src={website3} animate={{ opacity: inView ? 0 : 1 }} />

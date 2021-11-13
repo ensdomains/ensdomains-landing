@@ -1,7 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { Global, css } from "@emotion/core"
-import styled from "@emotion/styled"
 import favicon from "../assets/favicon.ico"
 import twitter from "../assets/twitter.png"
 
