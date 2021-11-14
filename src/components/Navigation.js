@@ -20,7 +20,7 @@ const Nav = styled("nav")`
   justify-content: space-between;
   padding: 20px 40px;
   position: sticky;
-  z-index: 100000;
+  z-index: 2147483647;
   top: 0;
 
   .mobile-nav {
