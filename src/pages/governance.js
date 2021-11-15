@@ -252,9 +252,15 @@ export default function Governance(props) {
           </ContentInner>
         </Content>
         <Footer>
-          <img src={twitterGrey}/>
-          <img src={discussGrey}/>
-          <img src={discordGrey}/>
+          <a href={"https://twitter.com/ensdomains"}>
+            <img src={twitterGrey}/>
+          </a>
+          <a href={"https://discuss.ens.domains/"}>
+            <img src={discussGrey}/>
+          </a>
+          <a href={"https://discord.com/invite/qDYkrFKAUW"}>
+            <img src={discordGrey}/>
+          </a>
         </Footer>
       </Container>
 

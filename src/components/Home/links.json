@@ -1,8 +1,12 @@
 {
+  "aave": {
+    "link": "https://aave.com/",
+    "name": "Aave",
+    "featuredApp": 5
+  },
   "aavegotchi": {
     "link": "https://aavegotchi.com/",
-    "name": "Aavegotchi",
-    "featuredApp": 5
+    "name": "Aavegotchi"
   },
   "accointing": {
     "link": "https://www.accointing.com/",
@@ -557,6 +561,10 @@
     "link": "https://gnosis-safe.io",
     "name": "Gnosis Safe Multisig"
   },
+  "gopocket": {
+    "link": "https://gopocket.security/",
+    "name": "Go Pocket"
+  },
   "gridplus": {
     "link": "https://gridplus.io/",
     "name": "GridPlus"
@@ -831,6 +839,10 @@
     "link": "https://nftfi.com/",
     "name": "NFTfi"
   },
+  "nftscan": {
+    "link": "https://nftscan.com/",
+    "name": "NFTSCAN"
+  },
   "nftscollectors": {
     "link": "https://nftscollectors.app/",
     "name": "NFTs Collectors"
@@ -865,7 +877,8 @@
   },
   "opensea": {
     "link": "https://opensea.io",
-    "name": "OpenSea"
+    "name": "OpenSea",
+    "featuredApp": 4
   },
   "opera": {
     "link": "https://www.opera.com",
@@ -1075,6 +1088,10 @@
     "name": "Status",
     "featuredBrowser": 4
   },
+  "steakwallet": {
+    "link": "https://steakwallet.fi/",
+    "name": "Steakwallet"
+  },
   "stib": {
     "link": "https://stib.co/",
     "name": "StiB"
@@ -1129,8 +1146,7 @@
   },
   "thegraph": {
     "link": "https://thegraph.com/",
-    "name": "The Graph",
-    "featuredApp": 4
+    "name": "The Graph"
   },
   "thehistoricalrecord": {
     "link": "https://thehistoricalrecord.com/",
