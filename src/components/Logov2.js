@@ -7,6 +7,7 @@ const LogoContainer = styled("div")`
     width: 150px;
     margin-right: 10px;
   }
+  margin-left: -25px;
 `
 
 export default function Logo({ className }) {

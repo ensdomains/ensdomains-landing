@@ -9,11 +9,12 @@ import mq from "../mediaQuery"
 import topography from "../assets/topography.svg"
 import discord from "../assets/discord.svg"
 import discuss from "../assets/discuss.svg"
-import twitterBlue from "../assets/twitterBlue.svg"
+import governance from "../assets/governance.svg"
 import mirror from "../assets/mirror.svg"
 import twitterGrey from "../assets/twitterGrey.svg"
 import discordGrey from "../assets/discordGrey.svg"
 import discussGrey from "../assets/discussGrey.svg"
+import whiteENS from "../assets/whiteENS.svg"
 
 
 const Container = styled("div")`
@@ -94,12 +95,12 @@ const MainBoxBottomText = styled("div")`
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
-  line-height: 100%;
+  line-height: 110%;
   letter-spacing: -0.5px;
   color: #FFFFFF;
 `
 
-const Box = styled("div")`
+const Box = styled("a")`
   background: ${p => p.backgroundColor};
   border: 1px solid ${p => p.borderColor};
   box-sizing: border-box;
@@ -156,28 +157,32 @@ const standardBoxData = [
     text: "Chat in Discord",
     color: "#854BFF",
     backgroundColor: "#E1DAF7",
-    borderColor: "#C0B2EA"
+    borderColor: "#C0B2EA",
+    link: 'https://discord.com/invite/qDYkrFKAUW'
   },
   {
     icon: discuss,
     text: "Join the forum",
     color: "#DE7224",
     backgroundColor: "rgba(238, 148, 83, 0.1)",
-    borderColor: "#F8D1B6"
+    borderColor: "#F8D1B6",
+    link: 'https://discuss.ens.domains/'
   },
   {
-    icon: twitterBlue,
-    text: "Follow on Twitter",
+    icon: governance,
+    text: "Governance docs",
     color: "#4D90F1",
     backgroundColor: "rgba(77, 144, 241, 0.1)",
-    borderColor: "#B0D0FF"
+    borderColor: "#B0D0FF",
+    link: 'https://docs.ens.domains/v/governance/'
   },
   {
     icon: mirror,
     text: "Read on Mirror",
     color: "#2C2C32",
     backgroundColor: "#E8E7EF",
-    borderColor: "#D2CFE4"
+    borderColor: "#D2CFE4",
+    link: ''
   }
 ]
 
@@ -191,11 +196,17 @@ const BottomText = styled("div")`
   color: ${p => p.color};
 `
 
+const BoxIcon = styled('img')`
+`
+
 const StandardBox = ({ color, backgroundColor, text, icon, borderColor }) => (
   <Box {...{ backgroundColor, borderColor }}>
     <BoxContent>
       <BoxContentTop>
-        <img src={icon}/>
+        <BoxIcon
+          style={{width: icon === governance ? '40px' : 'initial'}}
+          src={icon}
+        />
       </BoxContentTop>
       <BoxContentBottom>
         <BottomText {...{ color }}>
@@ -218,11 +229,13 @@ export default function Governance(props) {
                 <MainBoxInner>
                   <MainBoxContent>
                     <BoxContentTop>
-
+                      <BoxIcon
+                        src={whiteENS}
+                      />
                     </BoxContentTop>
                     <BoxContentBottom>
                       <MainBoxBottomText>
-                        Claim your airdrop
+                        Claim your $ENS governance token airdrop
                       </MainBoxBottomText>
                     </BoxContentBottom>
                   </MainBoxContent>

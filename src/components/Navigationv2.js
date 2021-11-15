@@ -16,7 +16,7 @@ const Nav = styled("nav")`
   transition: 0.2s;
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 20px 40px 0px 40px;
   position: sticky;
   z-index: 100000;
   top: 0;
@@ -139,9 +139,22 @@ const Links = styled("div")`
   display: none;
   align-items: center;
   a {
-    color: #717171;
+    font-family: JakartaSans;
     text-decoration: none;
     margin-right: 20px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.01em;
+    color: #717171;
+
+    opacity: 0.6;
+  }
+  
+  a:last-child {
+    margin-right: 0px;
   }
 
   ${mq.medium`
@@ -151,7 +164,7 @@ const Links = styled("div")`
 
 const MobileLinks = styled("ul")`
   background: #121d46;
-  font-family: Overpass;
+  font-family: JakartaSans;
   font-size: 22px;
   color: #717171;
   text-align: center;
@@ -222,7 +235,7 @@ export default function Navigation() {
         <Link to="/about">Team</Link>
         <a href="https://docs.ens.domains/">Docs</a>
 
-        <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>
+        <Launch style={{opacity: 1}} href="https://app.ens.domains">{t("nav.launch")}</Launch>
       </Links>
 
       <MobileLinks menuOpen={menuOpen}>
