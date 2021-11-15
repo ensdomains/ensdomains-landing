@@ -48,20 +48,6 @@ export default function Layout({ children, data, location }) {
       />
       <Global
         styles={css`
-          @font-face {
-            font-family: "JakartaSans";
-            src: url("../assets/webfonts/PlusJakartaSans-Regular.woff2") format("woff2"),
-            url("../assets/webfonts/PlusJakartaSans-Regular.woff") format("woff");
-            font-weight: normal;
-          }
-
-          @font-face {
-            font-family: "JakartaSans";
-            src: url("../assets/webfonts/PlusJakartaSans-Bold.woff2") format("woff2"),
-            url("../assets/webfonts/PlusJakartaSans-Bold.woff") format("woff");
-            font-weight: bold;
-          }
-
           body {
             font-family: Overpass;
           }
