@@ -29,6 +29,9 @@ const Content = styled("div")`
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 1400px;
+  width: 100%;
+  align-self: center;
 `
 
 const ContentInner = styled("div")`
@@ -69,11 +72,12 @@ const ContentInnerInner = styled("div")`
   `}
 `
 
-const MainBox = styled("div")`
+const MainBox = styled("a")`
   background: linear-gradient(330.4deg, #44BCF0 4.54%, #7298F8 59.2%, #A099FF 148.85%);
   border-radius: 30px;
   position: relative;
   height: 300px;
+  text-decoration: none;
 
   ${mq.large`
     grid-row-start: 1;
@@ -89,6 +93,7 @@ const MainBoxInner = styled("div")`
   right: 0;
   bottom: 0;
   position: absolute;
+  background-size: cover;
 `
 
 const MainBoxBottomText = styled("div")`
@@ -106,6 +111,7 @@ const Box = styled("a")`
   box-sizing: border-box;
   border-radius: 24px;
   height: 200px;
+  text-decoration: none;
 
   ${mq.large`
     height: initial;
@@ -182,7 +188,7 @@ const standardBoxData = [
     color: "#2C2C32",
     backgroundColor: "#E8E7EF",
     borderColor: "#D2CFE4",
-    link: ''
+    link: 'https://ens.mirror.xyz/'
   }
 ]
 
@@ -199,8 +205,8 @@ const BottomText = styled("div")`
 const BoxIcon = styled('img')`
 `
 
-const StandardBox = ({ color, backgroundColor, text, icon, borderColor }) => (
-  <Box {...{ backgroundColor, borderColor }}>
+const StandardBox = ({ color, backgroundColor, text, icon, borderColor, link }) => (
+  <Box {...{ backgroundColor, borderColor }} href={link} target={"_blank"}>
     <BoxContent>
       <BoxContentTop>
         <BoxIcon
@@ -225,7 +231,7 @@ export default function Governance(props) {
         <Content>
           <ContentInner>
             <ContentInnerInner>
-              <MainBox>
+              <MainBox href={"https://claim.ens.domains"} target={"_blank"}>
                 <MainBoxInner>
                   <MainBoxContent>
                     <BoxContentTop>
