@@ -14,6 +14,8 @@ import GetInvolved from "../components/GetInvolved"
 import Footer from "../components/Footer"
 import Layout from "../components/Layout"
 
+import "../css/typography.css"
+
 export default function Home(props) {
   return (
     <Layout {...props}>

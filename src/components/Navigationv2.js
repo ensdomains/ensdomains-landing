@@ -2,17 +2,15 @@ import React, { useState } from "react"
 import styled from "@emotion/styled"
 import { useTranslation } from "react-i18next"
 import { Link } from "gatsby"
-import Logo from "./Logo"
-import { Button } from "./Typography"
+import Logo from "./Logov2"
+import { Buttonv2 } from "./Typography"
 
 import mq from "../mediaQuery"
-import LanguageSwitcher from "./LanguageSwitcher"
 
 const Nav = styled("nav")`
-  background-image: linear-gradient(90deg, #513eff 0%, #52e5ff 100%);
   ${p =>
-    p.menuOpen &&
-    `
+  p.menuOpen &&
+  `
     background: #121d46;
   `};
   transition: 0.2s;
@@ -24,6 +22,7 @@ const Nav = styled("nav")`
   top: 0;
 
   .mobile-nav {
+    padding-top: 10px;
     ${mq.medium`
       display: none;
     `};
@@ -68,7 +67,7 @@ const Nav = styled("nav")`
   .hamburger-inner::after {
     width: 30px;
     height: 1px;
-    background-color: #fff;
+    background: #717171;
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
@@ -132,7 +131,7 @@ const Nav = styled("nav")`
   .hamburger--collapse-r.is-active .hamburger-inner,
   .hamburger--collapse-r.is-active .hamburger-inner::after,
   .hamburger--collapse-r.is-active .hamburger-inner::before {
-    background: #fff;
+    background: #717171;
   }
 `
 
@@ -140,7 +139,7 @@ const Links = styled("div")`
   display: none;
   align-items: center;
   a {
-    color: white;
+    color: #717171;
     text-decoration: none;
     margin-right: 20px;
   }
@@ -154,7 +153,7 @@ const MobileLinks = styled("ul")`
   background: #121d46;
   font-family: Overpass;
   font-size: 22px;
-  color: #ffffff;
+  color: #717171;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -166,8 +165,8 @@ const MobileLinks = styled("ul")`
   top: 100%;
   opacity: 0;
   ${p =>
-    p.menuOpen &&
-    `
+  p.menuOpen &&
+  `
     opacity: 1;
     transform: translateX(0);
   `}
@@ -190,13 +189,8 @@ const MobileLinks = styled("ul")`
   }
 `
 
-const Launch = styled(Button)``
-
-const Separator = styled("div")`
-  width: 1px;
-  height: 25px;
-  background: white;
-  margin-right: 20px;
+const Launch = styled(Buttonv2)`
+  color: white !important;
 `
 
 export default function Navigation() {
@@ -228,13 +222,10 @@ export default function Navigation() {
         <Link to="/about">Team</Link>
         <a href="https://docs.ens.domains/">Docs</a>
 
-        <Separator />
-        <LanguageSwitcher />
         <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>
       </Links>
 
       <MobileLinks menuOpen={menuOpen}>
-        <LanguageSwitcher mobile={true} />
         <li>
           <a href="/governance">Governance</a>
         </li>

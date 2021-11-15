@@ -40,3 +40,20 @@ export const Button = styled("a")`
   padding: 13px 30px;
   text-decoration: none;
 `
+
+export const Buttonv2 = styled("a")`
+  background: linear-gradient(330.4deg, #44BCF0 4.54%, #7298F8 59.2%, #A099FF 148.85%);
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  font-family: "JakartaSans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+
+  padding: 13px 30px;
+  text-decoration: none;
+  line-height: 21px;
+`

@@ -48,7 +48,7 @@ const BannerContent = styled(`div`)`
 `
 
 export const MainPageBannerContainer = styled(`div`)`
-  z-index:111111;
+  z-index:9000;
   position: absolute;
   top: 97px;
   background: #ffffff;
