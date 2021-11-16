@@ -4,10 +4,9 @@ import logo from "../assets/ensLogov2.svg"
 
 const LogoContainer = styled("div")`
   .ens-logo {
-    width: 150px;
+    width: 104px;
     margin-right: 10px;
   }
-  margin-left: -25px;
 `
 
 export default function Logo({ className }) {

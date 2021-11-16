@@ -4,6 +4,7 @@ html, body, #___gatsby, #gatsby-focus-wrapper {
 
 body {
     margin: 0px;
+    background: #f6f7fa;
 }
 
 div[role="group"][tabindex] {

@@ -17,13 +17,17 @@ const Nav = styled("nav")`
   transition: 0.2s;
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px 0px 40px;
+  padding: 30px 40px 20px 40px;
   position: sticky;
   z-index: 100000;
   top: 0;
+  background: #f6f7fa;
+
+  ${mq.medium`
+      padding: 60px 60px 10px 60px;
+    `};
 
   .mobile-nav {
-    padding-top: 10px;
     ${mq.medium`
       display: none;
     `};

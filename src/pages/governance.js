@@ -17,6 +17,7 @@ import discussGrey from "../assets/discussGrey.svg"
 import whiteENS from "../assets/whiteENS.svg"
 import { useTranslation } from "react-i18next"
 
+import "../css/global.css"
 
 const Container = styled("div")`
   display: flex;
