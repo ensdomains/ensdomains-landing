@@ -98,5 +98,12 @@
       "title": "Managing the ENS root",
       "text": "To facilitate the possibility of upgrades and maintenance, the ENS root is controlled by a four of seven multisig, with members of related projects as keyholders. In the long term, we would like the root multisig to be replaced by some form of distributed decision making process, as such systems become available."
     }
+  },
+  "governance": {
+    "claim": "Claim your $ENS governance token airdrop",
+    "discord": "Chat in Discord",
+    "discuss": "Join the forum",
+    "governance": "Governance docs",
+    "mirror": "Read on Mirror"
   }
 }
