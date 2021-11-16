@@ -168,7 +168,7 @@ const Links = styled("div")`
 `
 
 const MobileLinks = styled("ul")`
-  background: #121d46;
+  background: #f6f7fa;
   font-family: JakartaSans;
   font-size: 22px;
   color: #717171;
@@ -202,7 +202,7 @@ const MobileLinks = styled("ul")`
   }
 
   a {
-    color: white;
+    color: #717171;
     text-decoration: none;
   }
 `
