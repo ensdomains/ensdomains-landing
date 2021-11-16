@@ -15,6 +15,7 @@ import twitterGrey from "../assets/twitterGrey.svg"
 import discordGrey from "../assets/discordGrey.svg"
 import discussGrey from "../assets/discussGrey.svg"
 import whiteENS from "../assets/whiteENS.svg"
+import { useTranslation } from "react-i18next"
 
 
 const Container = styled("div")`
@@ -152,7 +153,7 @@ const Footer = styled("div")`
   justify-content: flex-end;
   padding: 50px 20px 20px 0;
   
-  & > img {
+  &>a {
     margin-right: 10px;    
   }
 `
@@ -160,7 +161,7 @@ const Footer = styled("div")`
 const standardBoxData = [
   {
     icon: discord,
-    text: "Chat in Discord",
+    text: "discord",
     color: "#854BFF",
     backgroundColor: "#E1DAF7",
     borderColor: "#C0B2EA",
@@ -168,7 +169,7 @@ const standardBoxData = [
   },
   {
     icon: discuss,
-    text: "Join the forum",
+    text: "discuss",
     color: "#DE7224",
     backgroundColor: "rgba(238, 148, 83, 0.1)",
     borderColor: "#F8D1B6",
@@ -176,7 +177,7 @@ const standardBoxData = [
   },
   {
     icon: governance,
-    text: "Governance docs",
+    text: "governance",
     color: "#4D90F1",
     backgroundColor: "rgba(77, 144, 241, 0.1)",
     borderColor: "#B0D0FF",
@@ -184,7 +185,7 @@ const standardBoxData = [
   },
   {
     icon: mirror,
-    text: "Read on Mirror",
+    text: "mirror",
     color: "#2C2C32",
     backgroundColor: "#E8E7EF",
     borderColor: "#D2CFE4",
@@ -205,25 +206,31 @@ const BottomText = styled("div")`
 const BoxIcon = styled('img')`
 `
 
-const StandardBox = ({ color, backgroundColor, text, icon, borderColor, link }) => (
-  <Box {...{ backgroundColor, borderColor }} href={link} target={"_blank"}>
-    <BoxContent>
-      <BoxContentTop>
-        <BoxIcon
-          style={{width: icon === governance ? '40px' : 'initial'}}
-          src={icon}
-        />
-      </BoxContentTop>
-      <BoxContentBottom>
-        <BottomText {...{ color }}>
-          {text}
-        </BottomText>
-      </BoxContentBottom>
-    </BoxContent>
-  </Box>
-)
+const StandardBox = ({ color, backgroundColor, text, icon, borderColor, link }) => {
+  const { t } = useTranslation()
+
+  return (
+    <Box {...{ backgroundColor, borderColor }} href={link} target={"_blank"}>
+      <BoxContent>
+        <BoxContentTop>
+          <BoxIcon
+            style={{width: icon === governance ? '40px' : 'initial'}}
+            src={icon}
+          />
+        </BoxContentTop>
+        <BoxContentBottom>
+          <BottomText {...{ color }}>
+            {t(`governance.${text}`)}
+          </BottomText>
+        </BoxContentBottom>
+      </BoxContent>
+    </Box>
+  );
+}
 
 export default function Governance(props) {
+  const { t } = useTranslation()
+
   return (
     <Layout {...props}>
       <Navigation/>
@@ -241,7 +248,7 @@ export default function Governance(props) {
                     </BoxContentTop>
                     <BoxContentBottom>
                       <MainBoxBottomText>
-                        Claim your $ENS governance token airdrop
+                        {t("governance.claim")}
                       </MainBoxBottomText>
                     </BoxContentBottom>
                   </MainBoxContent>

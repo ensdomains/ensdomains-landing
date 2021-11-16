@@ -6,6 +6,7 @@ import Logo from "./Logov2"
 import { Buttonv2 } from "./Typography"
 
 import mq from "../mediaQuery"
+import LanguageSwitcher from "./LanguageSwitcherv2"
 
 const Nav = styled("nav")`
   ${p =>
@@ -206,6 +207,13 @@ const Launch = styled(Buttonv2)`
   color: white !important;
 `
 
+const Separator = styled("div")`
+  width: 1px;
+  height: 25px;
+  background: #717171;
+  margin-right: 20px;
+`
+
 export default function Navigation() {
   const { t } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
@@ -235,6 +243,8 @@ export default function Navigation() {
         <Link to="/about">Team</Link>
         <a href="https://docs.ens.domains/">Docs</a>
 
+        <Separator />
+        <LanguageSwitcher />
         <Launch style={{opacity: 1}} href="https://app.ens.domains">{t("nav.launch")}</Launch>
       </Links>
 
