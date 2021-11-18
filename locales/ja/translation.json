@@ -17,6 +17,10 @@
       "register": "登録",
       "launch": "アプリを起動"
     },
+    "portableUsername": {
+      "title": "Your Web3 Username",
+      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+    },
     "cryptocurrencies": {
       "title": "あなたの全ての暗号通貨にひとつの名前を",
       "text": "もう長いアドレスをコピーして貼り付ける必要はありません。ENS名を使用すれば、全てのアドレスを保存し、任意の暗号通貨で支払いを受け取ることができます。"

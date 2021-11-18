@@ -17,6 +17,10 @@
       "register": "registreer",
       "launch": "Open App"
     },
+    "portableUsername": {
+      "title": "Your Web3 Username",
+      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+    },
     "cryptocurrencies": {
       "title": "Één Naam Voor Al je Cryptovaluta",
       "text": "Nooit meer lange adressen kopiëren en plakken. Gebruik je ENS naam om al je adressen op de slaan en betalingen te ontvangen in alle cryptovaluta."
