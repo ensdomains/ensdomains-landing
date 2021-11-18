@@ -17,6 +17,10 @@
       "register": "registra",
       "launch": "Avvia App"
     },
+    "portableUsername": {
+      "title": "Your Web3 Username",
+      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+    },
     "cryptocurrencies": {
       "title": "Un solo Nome Per Tutti i tuoi Indirizzi",
       "text": "Niente più copia e incolla di indirizzi lunghi. Usa il tuo nome ENS per memorizzare tutti i tuoi indirizzi e ricevere qualsiasi criptovaluta, token o NFT."

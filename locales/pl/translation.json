@@ -38,6 +38,10 @@
       "register": "zarejestruj się",
       "search": "szukaj"
     },
+    "portableUsername": {
+      "title": "Your Web3 Username",
+      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+    },
     "cryptocurrencies": {
       "text": "Koniec z kopiowaniem i wklejaniem długich adresów. Użyj swojej nazwy ENS, aby przechowywać wszystkie swoje adresy i otrzymywać płatności w dowolnej kryptowalucie.",
       "title": "Jeden Adres Dla Wszystkich Twoich Kryptowalut"

@@ -38,6 +38,10 @@
       "register": "đăng ký",
       "search": "tìm"
     },
+    "portableUsername": {
+      "title": "Your Web3 Username",
+      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+    },
     "cryptocurrencies": {
       "text": "Không cần phải chép và dán những địa chỉ dài dòng nữa. Dùng ENS để lưu trữ tất địa chỉ và thực hành thanh toán với mọi loại tiền điện tử",
       "title": "Một Tên Miền Cho Mọi Loại Tiền Điện Tử Bạn Sở Hữu"

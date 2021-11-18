@@ -17,6 +17,10 @@
       "register": "注册",
       "launch": "打开 App"
     },
+    "portableUsername": {
+      "title": "Your Web3 Username",
+      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+    },
     "cryptocurrencies": {
       "title": "让您的各种加密货币拥有一个统一的域名",
       "text": "不必再复制和粘贴长地址。使用您的 ENS 域名来绑定您的各种加密货币地址，并接收加密货币的付款。"

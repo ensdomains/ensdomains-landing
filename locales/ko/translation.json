@@ -38,6 +38,10 @@
       "register": "등록",
       "search": "검색"
     },
+    "portableUsername": {
+      "title": "Your Web3 Username",
+      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+    },
     "cryptocurrencies": {
       "text": "더 이상 긴 주소를 복붙할 필요가 없습니다. ENS 이름을 이용하여 모든 종류의 암호화폐 주소를 저장하고 암호화폐 결제에 사용하세요.",
       "title": "모든 암호화폐를 위한 하나의 이름"
