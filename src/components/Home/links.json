@@ -392,6 +392,10 @@
     "link": "https://eidoo.io/",
     "name": "Eidoo"
   },
+  "eipnftio": {
+    "link": "https://eipnft.io/home",
+    "name": "eipnft.io"
+  },
   "eliteswap": {
     "link": "https://eliteswap.io/#/swap",
     "name": "Elite Swap"
@@ -556,6 +560,10 @@
   "gitcoin": {
     "link": "https://gitcoin.co/",
     "name": "Gitcoin"
+  },
+  "gmxyz": {
+    "link": "https://gm.xyz/",
+    "name": "gm.xyz"
   },
   "gnosissafe": {
     "link": "https://safe.gnosis.io",
