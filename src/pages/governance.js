@@ -166,7 +166,7 @@ const standardBoxData = [
     color: "#854BFF",
     backgroundColor: "#E1DAF7",
     borderColor: "#C0B2EA",
-    link: 'https://discord.com/invite/qDYkrFKAUW'
+    link: 'https://chat.ens.domains/'
   },
   {
     icon: discuss,
@@ -266,7 +266,7 @@ export default function Governance(props) {
           <a href={"https://discuss.ens.domains/"}>
             <img src={discussGrey}/>
           </a>
-          <a href={"https://discord.com/invite/qDYkrFKAUW"}>
+          <a href={"https://chat.ens.domains/"}>
             <img src={discordGrey}/>
           </a>
         </Footer>
