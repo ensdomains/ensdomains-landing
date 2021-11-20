@@ -243,7 +243,7 @@ export default function Navigation() {
 
       <Links menuOpen={menuOpen}>
         <a href="/governance">Governance</a>
-        <a href="https://discord.gg/ens">Community</a>
+        <a href="https://chat.ens.domains/">Community</a>
         <Link to="/about">Team</Link>
         <a href="https://docs.ens.domains/">Docs</a>
 
@@ -257,7 +257,7 @@ export default function Navigation() {
           <a href="/governance">Governance</a>
         </li>
         <li>
-          <a href="https://discord.gg/ens">Community</a>
+          <a href="https://chat.ens.domains/">Community</a>
         </li>
         <li>
           <Link to="/about">Team</Link>
