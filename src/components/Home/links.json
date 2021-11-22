@@ -921,6 +921,10 @@
     "link": "https://ownbit.io/en/",
     "name": "OwnBit"
   },
+  "paradigmfaucet": {
+    "link": "https://faucet.paradigm.xyz/",
+    "name": "Paradigm MultiFaucet"
+  },
   "paraswap": {
     "link": "https://paraswap.io/",
     "name": "ParaSwap"
