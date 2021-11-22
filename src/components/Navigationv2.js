@@ -5,8 +5,13 @@ import { Link } from "gatsby"
 import Logo from "./Logov2"
 import { Buttonv2 } from "./Typography"
 
+// import { useLocation } from "@reach/router"
+
 import mq from "../mediaQuery"
 import LanguageSwitcher from "./LanguageSwitcherv2"
+
+import close from "../assets/close.svg"
+import menu from "../assets/menu.svg"
 
 const Nav = styled("nav")`
   ${p =>
@@ -33,130 +38,16 @@ const Nav = styled("nav")`
     `};
   }
 
-  .hamburger {
-    padding: 10px 0 15px 15px;
-    display: inline-block;
-    cursor: pointer;
-    transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    font: inherit;
-    color: inherit;
-    text-transform: none;
-    background-color: transparent;
-    border: 0;
-    margin: 0;
-    overflow: visible;
-    &:is-active {
-      padding-top: 15px;
-    }
-  }
-  .hamburger:hover {
-    opacity: 0.7;
-  }
-
-  .hamburger-box {
-    width: 40px;
-    height: 24px;
-    display: inline-block;
-    position: relative;
-  }
-
-  .hamburger-inner {
-    display: block;
-    top: 50%;
-    margin-top: -2px;
-  }
-  .hamburger-inner,
-  .hamburger-inner::before,
-  .hamburger-inner::after {
-    width: 30px;
-    height: 1px;
-    background: #717171;
-    border-radius: 4px;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-  }
-
-  .hamburger-inner::before,
-  .hamburger-inner::after {
-    content: "";
-    display: block;
-  }
-
-  .hamburger-inner::after {
-    content: "";
-    display: none;
-  }
-
-  .hamburger-inner::before {
-    top: -10px;
-  }
-  .hamburger-inner::after {
-    bottom: -10px;
-  }
-
-  .hamburger--collapse-r .hamburger-inner {
-    top: auto;
-    bottom: 0;
-    transition-duration: 0.13s;
-    transition-delay: 0.13s;
-    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  .hamburger--collapse-r .hamburger-inner::after {
-    top: -20px;
-    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-      opacity 0.1s linear;
-  }
-  .hamburger--collapse-r .hamburger-inner::before {
-    transition: all 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-      transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-
-  .hamburger--collapse-r.is-active .hamburger-inner {
-    transform: translate3d(0, -10px, 0) rotate(45deg);
-    transition-delay: 0.22s;
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  .hamburger--collapse-r.is-active .hamburger-inner::after {
-    top: 0;
-    opacity: 0;
-    transition: all 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-      opacity 0.1s 0.22s linear;
-  }
-  .hamburger--collapse-r.is-active .hamburger-inner::before {
-    top: 0;
-    transform: rotate(90deg);
-    transition: all 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-      transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  .hamburger--collapse-r.is-active .hamburger-inner,
-  .hamburger--collapse-r.is-active .hamburger-inner::after,
-  .hamburger--collapse-r.is-active .hamburger-inner::before {
-    background: #717171;
+  .reset {
+    background: none;
+    border: none;
+    padding-top: 6px;
   }
 `
 
 const Links = styled("div")`
   display: none;
   align-items: center;
-  a {
-    font-family: JakartaSans;
-    text-decoration: none;
-    margin-right: 20px;
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 23px;
-    letter-spacing: -0.01em;
-    color: #717171;
-
-    opacity: 0.6;
-  }
   
   a:last-child {
     margin-right: 0px;
@@ -175,24 +66,28 @@ const MobileLinks = styled("ul")`
   text-align: center;
   padding: 0;
   margin: 0;
-  transform: translateX(-100%);
+  transform: translateY(-100%);
   transition: 0.3s;
   position: absolute;
   left: 0;
   width: 100%;
   top: 100%;
   opacity: 0;
+  z-index: -1;
   ${p =>
   p.menuOpen &&
   `
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
+    z-index: 1;
   `}
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 
   li {
     list-style: none;
@@ -203,6 +98,7 @@ const MobileLinks = styled("ul")`
 
   a {
     color: #717171;
+    font-weight: bold;
     text-decoration: none;
   }
 `
@@ -213,13 +109,43 @@ const Launch = styled(Buttonv2)`
 
 const Separator = styled("div")`
   width: 1px;
-  height: 25px;
+  height: 48px;
   background: #717171;
+  opacity: 0.3;
   margin-right: 20px;
+  margin-left: 16px;
+`
+
+const NavLink = styled("a")`
+  font-family: "JakartaSans";
+  text-decoration: none;
+  margin-right: 20px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.01em;
+  color: #717171;
+  opacity: 0.6;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  ${p => p.active && `color: #4D90F1; opacity: 1;`}
 `
 
 export default function Navigation() {
   const { t } = useTranslation()
+  // const location = useLocation();
+  // const pathname = location.pathname;
   const [menuOpen, setMenuOpen] = useState(false)
   return (
     <Nav menuOpen={menuOpen}>
@@ -228,24 +154,20 @@ export default function Navigation() {
       </Link>
 
       <div className="mobile-nav">
-        <button
-          className={`hamburger hamburger--collapse-r ${
-            menuOpen ? "is-active" : ""
-          }`}
+      <button
           type="button"
+          className="reset"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span className="hamburger-box">
-            <span className="hamburger-inner" />
-          </span>
+        {!menuOpen ? <img src={menu} width="36" css={menuOpen ? {opacity: '1'} : {opacity: '0.3'}}/> : <img src={close} width="36" />}
         </button>
       </div>
 
       <Links menuOpen={menuOpen}>
-        <a href="/governance">Governance</a>
-        <a href="https://chat.ens.domains/">Community</a>
-        <Link to="/about">Team</Link>
-        <a href="https://docs.ens.domains/">Docs</a>
+        <NavLink href="/governance" active={true}>Governance</NavLink>
+        <NavLink href="https://chat.ens.domains/">Community</NavLink>
+        <NavLink to="/about">Team</NavLink>
+        <NavLink href="https://docs.ens.domains/">Docs</NavLink>
 
         <Separator />
         <LanguageSwitcher />
