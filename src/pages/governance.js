@@ -54,7 +54,7 @@ const ContentInnerInner = styled("div")`
   grid-gap: 20px;
   width: 100%;
   box-sizing: border-box;
-  padding: 0px 15px;
+  padding: 0px 16px;
   max-width: 500px;
   margin: 0 auto;
 
@@ -80,6 +80,11 @@ const MainBox = styled("a")`
   position: relative;
   height: 300px;
   text-decoration: none;
+  transition: all 0.2s ease-in-out; 
+
+  &:hover {
+    transform: scale(101%);
+  }
 
   ${mq.large`
     grid-row-start: 1;
@@ -114,6 +119,10 @@ const Box = styled("a")`
   border-radius: 24px;
   height: 200px;
   text-decoration: none;
+  transition: all 0.2s ease-in-out; 
+  &:hover {
+    transform: scale(102%);
+  }
 
   ${mq.large`
     height: initial;
@@ -126,7 +135,7 @@ const BoxContent = styled("div")`
   flex-direction: column;
   height: 100%;
   box-sizing: border-box;
-  padding: 25px;
+  padding: 32px;
 
   ${mq.large`
     padding: 36px;
@@ -134,9 +143,7 @@ const BoxContent = styled("div")`
 `
 
 const MainBoxContent = styled(BoxContent)`
-  ${mq.large`
-    padding: 48px;
-  `}
+  padding: 36px;
 `
 
 const BoxContentTop = styled("div")`
@@ -261,13 +268,13 @@ export default function Governance(props) {
         </Content>
         <Footer>
           <a href={"https://twitter.com/ensdomains"}>
-            <img src={twitterGrey}/>
+            <img src={twitterGrey} width="34" css={{marginTop: '2px'}} />
           </a>
           <a href={"https://discuss.ens.domains/"}>
-            <img src={discussGrey}/>
+            <img src={discussGrey} width="33" />
           </a>
           <a href={"https://chat.ens.domains/"}>
-            <img src={discordGrey}/>
+            <img src={discordGrey} width="30" css={{marginLeft: '4px'}}/>
           </a>
         </Footer>
       </Container>

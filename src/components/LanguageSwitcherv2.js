@@ -63,7 +63,7 @@ function getLang(lang) {
 }
 
 const ActiveLanguage = styled("div")`
-  color: #717171;
+  color: #2b2b2b;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -91,6 +91,16 @@ const ActiveLanguage = styled("div")`
 
 const LanguageSwitcherContainer = styled("div")`
   position: relative;
+  background: white;
+  padding-right: 0px;
+  margin-right: 12px;
+  height: 48px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    border: 1px solid rgba(0,0,0,0.2);
+  }
   ${props =>
     props.mobile
       ? `
@@ -111,9 +121,12 @@ const Dropdown = styled(motion.div)`
         top: 100%;
         right: 0;
         margin-top: 20px;
-        border-radius: 8px;
-        box-shadow: -4px 18px 70px 0 rgba(108, 143, 167, 0.32);
-        width: 230px;
+        border-radius: 16px;
+        box-shadow: -4px 18px 70px 0 rgba(0, 0, 0, 0.06);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        width: 240px;
+        max-height: 400px;
+        overflow: scroll;
       `}
 
   ${props =>
@@ -137,13 +150,22 @@ const Dropdown = styled(motion.div)`
   `
       : `
     a {
-      color: #adbbcd;
-      padding: 20px 30px;
-      border-bottom: 1px solid #dfdfdf;
+      font-family: JakartaSans;
+      text-decoration: none;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 23px;
+      letter-spacing: -0.01em;
+      color: #717171;
+      padding: 20px 30px 20px 30px;
       list-style: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-right: 0px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      transition: all 0.2s ease-in-out;
       
       &:hover {
         color: #2b2b2b;
@@ -155,6 +177,7 @@ const Dropdown = styled(motion.div)`
       }
       &:last-child {
         border-bottom: none;
+        padding-right: 30px;
       }
     }
   `}
@@ -215,7 +238,7 @@ export default function LanguageSwitcher({ mobile }) {
             {LANGUAGES.map(language => {
               return (
                 <Link to={originalPath} language={language.value}>
-                  <span>{language.label}</span>
+                  <span css={{paddingRight: "12px"}}>{language.label}</span>
                   <Ball selected={selectedLanguage.value === language.value} />
                 </Link>
               )
