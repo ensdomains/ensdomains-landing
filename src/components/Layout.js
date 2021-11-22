@@ -6,12 +6,12 @@ import twitter from "../assets/twitter.png"
 
 function getTitle(pathname) {
   switch (pathname) {
-    case "/":
-      return "ENS | Ethereum Name Service"
+    case "/governance":
+      return "Governance"
     case "/about":
-      return "ENS | Organization"
+      return "About ENS"
     default:
-      return "ENS | Ethereum Name Service"
+      return "Ethereum Name Service"
   }
 }
 

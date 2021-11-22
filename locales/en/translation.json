@@ -5,7 +5,7 @@
   "nav": {
     "about": "Team",
     "blog": "Blog",
-    "launch": "Launch App"
+    "launch": "Go to app"
   },
   "home": {
     "hero": {
@@ -15,10 +15,10 @@
       "search": "search",
       "manage": "manage",
       "register": "register",
-      "launch": "Launch App"
+      "launch": "Launch app"
     },
     "portableUsername": {
-      "title": "Your Web3 Username",
+      "title": "Your web3 username",
       "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
     },
     "cryptocurrencies": {
@@ -100,10 +100,10 @@
     }
   },
   "governance": {
-    "claim": "Claim your $ENS governance token airdrop",
-    "discord": "Chat in Discord",
+    "claim": "Claim your $ENS",
+    "discord": "Chat on Discord",
     "discuss": "Join the forum",
-    "governance": "Governance docs",
+    "governance": "Documentation",
     "mirror": "Read on Mirror"
   }
 }
