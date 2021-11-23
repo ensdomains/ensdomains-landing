@@ -18,8 +18,8 @@
       "launch": "アプリを起動"
     },
     "portableUsername": {
-      "title": "Your Web3 Username",
-      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+      "title": "あなたのWeb3ユーザー名",
+      "text": "サンドボックス化されたユーザー名はもう不要です。自分のユーザー名を保有し、アバターやその他のプロフィールデータを保存、サービス間で利用することができます。"
     },
     "cryptocurrencies": {
       "title": "あなたの全ての暗号通貨にひとつの名前を",
@@ -54,7 +54,7 @@
 
       "textRecord": "ENS名にプロフィール情報をテキストレコードで添付できます。",
 
-      "subDomains": "プロジェクトのユーザ名としてENSサブドメインを作成できます。",
+      "subDomains": "プロジェクトのユーザー名としてENSサブドメインを作成できます。",
       "dns": "特定の名前で従来のDNSレコードを保存し、提供します。",
       "tor": "ENSを使用して、Tor.onionの隠れたサービスにもっと簡単にアクセスできます。",
       "erc721": ".ETH名はERC721準拠のNFTです。"
