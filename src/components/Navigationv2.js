@@ -91,7 +91,7 @@ const MobileLinks = styled("ul")`
 
   li {
     list-style: none;
-    padding: 20px;
+    padding: 20px 0px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     width: 100%;
   }
@@ -101,6 +101,10 @@ const MobileLinks = styled("ul")`
     font-weight: bold;
     text-decoration: none;
   }
+
+  ${mq.medium`
+    display: none;
+  `};
 `
 
 const Launch = styled(Buttonv2)`
@@ -166,7 +170,7 @@ export default function Navigation() {
       <Links menuOpen={menuOpen}>
         <NavLink href="/governance" active={true}>Governance</NavLink>
         <NavLink href="https://chat.ens.domains/">Community</NavLink>
-        <NavLink to="/about">Team</NavLink>
+        <NavLink href="/about">Team</NavLink>
         <NavLink href="https://docs.ens.domains/">Docs</NavLink>
 
         <Separator />
