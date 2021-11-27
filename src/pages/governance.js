@@ -159,7 +159,7 @@ const Footer = styled("div")`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 50px 20px 20px 0;
+  padding: 20px 20px 20px 0;
   
   &>a {
     margin-right: 10px;    
