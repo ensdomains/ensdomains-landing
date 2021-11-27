@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion"
 import styled from "@emotion/styled"
-import React, { useState, useContext } from "react"
-import { useTranslation } from "react-i18next"
+import React, { useState } from "react"
 
 import { Link, useI18next, I18nextContext } from "gatsby-plugin-react-i18next"
 
@@ -57,10 +56,6 @@ const LANGUAGES = [
     label: "Tiếng Việt (VI)",
   },
 ]
-
-function getLang(lang) {
-  return LANGUAGES.find(l => l.value === lang)
-}
 
 const ActiveLanguage = styled("div")`
   color: white;

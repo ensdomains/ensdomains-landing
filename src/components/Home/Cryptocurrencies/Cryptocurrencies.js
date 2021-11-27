@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React from "react"
 import { motion, useViewportScroll, useTransform } from "framer-motion"
 import styled from "@emotion/styled"
 import { useTranslation } from "react-i18next"
@@ -91,10 +91,10 @@ export default function Cryptocurrencies(props) {
           <P>{t("home.cryptocurrencies.text")}</P>
 
           <WalletAnimation>
-            <img className="wallet" src={wallet} />
+            <img className="wallet" src={wallet} alt={t("wallet")} />
             <Coins style={{ x: x }}>
-              {coins.map(coin => {
-                return <img src={coin.src} />
+              {coins.map((coin, index) => {
+                return <img src={coin.src} alt={coin.name} key={index} />
               })}
             </Coins>
           </WalletAnimation>

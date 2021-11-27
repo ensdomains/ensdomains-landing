@@ -13,7 +13,6 @@ import leon from "./photos/leon.png"
 import richard from "./photos/richard.png"
 import muhammed from "./photos/muhammed.png"
 import alisha from "./photos/alisha.png"
-import hoverCircle from "./hoverCircle.png"
 import { Anchor, AnchorContainer } from '../../Anchor'
 import {
   MainPageBannerContainer,
@@ -175,7 +174,7 @@ function TeamMember({ member }) {
   return (
     <TeamMemberContainer href={member.link}>
       <div className="img-wrapper">
-        <img src={member.img} className="photo" />
+        <img src={member.img} className="photo" alt={member.name} />
         <div className="hover" />
       </div>
       <h4>{member.name}</h4>

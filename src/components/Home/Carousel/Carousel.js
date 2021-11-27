@@ -142,31 +142,33 @@ const customRenderThumb = ({ children, t }) => {
   return children.map((item, i) => {
     if (i === 0) {
       return (
-        <>
+        <React.Fragment key={i}>
           <SearchIcon />
           <Title>{t("home.carousel.search")}</Title>
           <Dot className="dot" />
-        </>
+        </React.Fragment>
       )
     }
     if (i === 1) {
       return (
-        <>
+        <React.Fragment key={i}>
           <RegisterIcon />
           <Title>{t("home.carousel.register")}</Title>
           <Dot className="dot" />
-        </>
+        </React.Fragment>
       )
     }
     if (i === 2) {
       return (
-        <>
+        <React.Fragment key={i}>
           <ManageIcon />
           <Title>{t("home.carousel.manage")}</Title>
           <Dot className="dot" />
-        </>
+        </React.Fragment>
       )
     }
+
+    return null
   })
 }
 
@@ -184,13 +186,13 @@ export default function HeroCarousel(props) {
         renderThumbs={children => customRenderThumb({ children, t })}
       >
         <Slide>
-          <img src={searchImg} />
+          <img src={searchImg} alt={t("search")} />
         </Slide>
         <Slide>
-          <img src={registerImg} />
+          <img src={registerImg} alt={t("register")} />
         </Slide>
         <Slide>
-          <img src={manageImg} />
+          <img src={manageImg} alt={t("manage")} />
         </Slide>
       </Carousel>
       <Launch href="https://app.ens.domains">
