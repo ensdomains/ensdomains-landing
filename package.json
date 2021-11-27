@@ -22,8 +22,9 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "@ensdomains/thorin": "0.2.0",
     "framer-motion": "^2.6.2",
-    "gatsby": "^2.22.15",
+    "gatsby": "^3.0.3",
     "gatsby-plugin-emotion": "^4.3.4",
     "gatsby-plugin-google-analytics": "^2.3.4",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -31,12 +32,13 @@
     "gh-pages": "^3.1.0",
     "i18next": "^19.6.3",
     "normalize.css": "^8.0.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.7.0",
     "react-intersection-observer": "^8.26.2",
-    "react-responsive-carousel": "^3.2.8"
+    "react-responsive-carousel": "^3.2.8",
+    "styled-components": "5.3.3"
   },
   "devDependencies": {
     "prettier": "2.0.5"

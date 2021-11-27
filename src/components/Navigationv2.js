@@ -3,9 +3,7 @@ import styled from "@emotion/styled"
 import { useTranslation } from "react-i18next"
 import { Link } from "gatsby"
 import Logo from "./Logov2"
-import { Buttonv2 } from "./Typography"
-
-// import { useLocation } from "@reach/router"
+import { Button } from "@ensdomains/thorin";
 
 import mq from "../mediaQuery"
 import LanguageSwitcher from "./LanguageSwitcherv2"
@@ -103,8 +101,8 @@ const MobileLinks = styled("ul")`
   }
 `
 
-const Launch = styled(Buttonv2)`
-  color: white !important;
+const Launch = styled(Button)`
+  padding: 13px 30px !important;
 `
 
 const Separator = styled("div")`
@@ -171,7 +169,10 @@ export default function Navigation() {
 
         <Separator />
         <LanguageSwitcher />
-        <Launch style={{opacity: 1}} href="https://app.ens.domains">{t("nav.launch")}</Launch>
+        <Launch
+          style={{opacity: 1}} href="https://app.ens.domains"
+          text={t("nav.launch")}
+        />
       </Links>
 
       <MobileLinks menuOpen={menuOpen}>
@@ -188,7 +189,10 @@ export default function Navigation() {
           <a href="https://docs.ens.domains/">Docs</a>
         </li>
         <li>
-          <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>
+          <Launch
+            href="https://app.ens.domains"
+            text={t("nav.launch")}
+          />
         </li>
       </MobileLinks>
     </Nav>
