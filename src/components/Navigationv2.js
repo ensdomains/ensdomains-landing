@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import { useTranslation } from "react-i18next"
 import { Link } from "gatsby"
 import Logo from "./Logov2"
-import { Button } from "@ensdomains/thorin";
+import { Button } from "@ensdomains/thorin"
 
 import mq from "../mediaQuery"
 import LanguageSwitcher from "./LanguageSwitcherv2"
@@ -13,8 +13,8 @@ import menu from "../assets/menu.svg"
 
 const Nav = styled("nav")`
   ${p =>
-  p.menuOpen &&
-  `
+          p.menuOpen &&
+          `
     background: #121d46;
   `};
   transition: 0.2s;
@@ -46,7 +46,7 @@ const Nav = styled("nav")`
 const Links = styled("div")`
   display: none;
   align-items: center;
-  
+
   a:last-child {
     margin-right: 0px;
   }
@@ -73,8 +73,8 @@ const MobileLinks = styled("ul")`
   opacity: 0;
   z-index: -1;
   ${p =>
-  p.menuOpen &&
-  `
+          p.menuOpen &&
+          `
     opacity: 1;
     transform: translateY(0);
     z-index: 1;
@@ -85,7 +85,7 @@ const MobileLinks = styled("ul")`
   justify-content: space-between;
   align-items: center;
   padding-bottom: 36px;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
   li {
     list-style: none;
@@ -153,16 +153,17 @@ export default function Navigation() {
   return (
     <Nav menuOpen={menuOpen}>
       <Link to="/">
-        <Logo />
+        <Logo/>
       </Link>
 
       <div className="mobile-nav">
-      <button
+        <button
           type="button"
           className="reset"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-        {!menuOpen ? <img src={menu} width="36" css={menuOpen ? {opacity: '1'} : {opacity: '0.3'}}/> : <img src={close} width="36" />}
+          {!menuOpen ? <img src={menu} width="36" css={menuOpen ? { opacity: "1" } : { opacity: "0.3" }}/> :
+            <img src={close} width="36"/>}
         </button>
       </div>
 
@@ -172,12 +173,14 @@ export default function Navigation() {
         <NavLink href="/about">Team</NavLink>
         <NavLink href="https://docs.ens.domains/">Docs</NavLink>
 
-        <Separator />
-        <LanguageSwitcher />
-        <Launch
-          style={{opacity: 1}} href="https://app.ens.domains"
-          text={t("nav.launch")}
-        />
+        <Separator/>
+        <LanguageSwitcher/>
+        <a href="https://app.ens.domains">
+          <Launch
+            style={{ opacity: 1 }}
+            text={t("nav.launch")}
+          />
+        </a>
       </Links>
 
       <MobileLinks menuOpen={menuOpen}>
@@ -194,10 +197,11 @@ export default function Navigation() {
           <a href="https://docs.ens.domains/">Docs</a>
         </li>
         <li>
-          <Launch
-            href="https://app.ens.domains"
-            text={t("nav.launch")}
-          />
+          <a href="https://app.ens.domains">
+            <Launch
+              text={t("nav.launch")}
+            />
+          </a>
         </li>
       </MobileLinks>
     </Nav>
