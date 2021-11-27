@@ -107,6 +107,7 @@ const MobileLinks = styled("ul")`
 
 const Launch = styled(Button)`
   padding: 13px 30px !important;
+  font-family: JakartaSans;
 `
 
 const Separator = styled("div")`

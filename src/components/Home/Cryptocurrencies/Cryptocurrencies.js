@@ -94,7 +94,8 @@ export default function Cryptocurrencies(props) {
             <img className="wallet" src={wallet} alt={t("wallet")} />
             <Coins style={{ x: x }}>
               {coins.map((coin, index) => {
-                return <img src={coin.src} alt={coin.name} key={index} />
+                console.log('coin: ', coin)
+                return <img src={coin.src.default} alt={coin.name} key={index} />
               })}
             </Coins>
           </WalletAnimation>

@@ -93,7 +93,7 @@ function GridItem({ app }) {
   const details = app
   return (
     <GridItemContainer href={details.link}>
-      <img src={app.src} alt={`${details.name} logo`} />
+      <img src={app.src.default} alt={`${details.name} logo`} />
       <h3>{details.name ? details.name : "name not defined in links.json"}</h3>
     </GridItemContainer>
   )
