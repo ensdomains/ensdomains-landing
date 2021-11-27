@@ -197,13 +197,14 @@ export default function LanguageSwitcher({ mobile }) {
         <AnimatePresence>
           <Dropdown
             mobile={mobile}
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            initial={{ opacity: 0, height: 0, overflowY: 'hidden', maxHeight: '60vh' }}
+            animate={{ opacity: 1, height: "auto", overflowY: 'auto'  }}
+            
             exit={{ opacity: 0, height: 0 }}
           >
             {LANGUAGES.map(language => {
               return (
-                <Link to={originalPath} language={language.value}>
+                <Link to={originalPath} language={language.value} key={language.value}>
                   <span>{language.label}</span>
                   <Ball selected={selectedLanguage.value === language.value} />
                 </Link>
