@@ -9,7 +9,7 @@
   },
   "home": {
     "hero": {
-      "title": "Domini decentralizzati per wallet, siti web, & altro."
+      "title": "Nomi di dominio decentralizzati per wallet, siti web & altro."
     },
     "carousel": {
       "search": "cerca",
@@ -22,37 +22,37 @@
       "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
     },
     "cryptocurrencies": {
-      "title": "Un solo Nome Per Tutti i tuoi Indirizzi",
-      "text": "Niente più copia e incolla di indirizzi lunghi. Usa il tuo nome ENS per memorizzare tutti i tuoi indirizzi e ricevere qualsiasi criptovaluta, token o NFT."
+      "title": "Un solo Dominio Per Tutti i tuoi Indirizzi",
+      "text": "Niente più copia e incolla di lunghi indirizzi. Usa il tuo nome di dominio ENS per tutti i tuoi indirizzi e ricevere qualsiasi criptovaluta, token o NFT."
     },
     "statistics": {
-      "title": "ENS è lo standard di denominazione blockchain più ampiamente integrato.",
-      "names": "Nomi",
+      "title": "ENS è lo standard blockchain più ampiamente integrato.",
+      "names": "Domini",
       "services": "Integrazioni",
       "owners": "Proprietari"
     },
     "decentralisedWebsites": {
       "title": "Siti Web decentralizzati",
-      "text": "Avvia siti Web decentralizzati resistenti alla censura con ENS. Carica il tuo sito web su IPFS e accedi con il tuo nome ENS."
+      "text": "Avvia siti Web decentralizzati resistenti alla censura con ENS. Carica il tuo sito web su IPFS e accedi con il tuo dominio ENS."
     },
     "dns": {
       "title": "Usa Domini tradizionali",
-      "text1": "Il suffisso del nome nativo per ENS è .ETH, che ha tutti i vantaggi di sicurezza dell'essere blockchain-nativo.",
-      "text2": "Puoi anche utilizzare ENS con i nomi DNS che già possiedi. ENS supporta molti nomi DNS, tra cui:"
+      "text1": "Il suffisso del dominio nativo ENS è .ETH, che ha tutti i vantaggi di sicurezza nativi della blockchain.",
+      "text2": "Puoi anche utilizzare ENS con i nomi di dominio DNS in tuo possesso. ENS supporta molti DNS, tra cui:"
     },
     "ecosystem": {
       "title": "Ecosistema ENS",
       "wallets": "Wallets",
       "apps": "Apps",
       "browsers": "Browsers",
-      "seeMore": "Leggi più",
-      "seeLess": "Leggi meno"
+      "seeMore": "Leggi di più",
+      "seeLess": "Leggi di meno"
     },
     "additionalFeatures": {
       "title": "Caratteristiche aggiuntive",
-      "recordType": "Crea il tuo personale record type per il tuo progetto.",
+      "recordType": "Crea il tuo record type personale per il tuo progetto.",
 
-      "textRecord": "Allega le informazioni del profilo al tuo nome ENS con record di testo.",
+      "textRecord": "Allega le informazioni del profilo al tuo dominio ENS con dei record testuali.",
 
       "subDomains": "Crea sottodomini ENS come nomi utente per il tuo progetto.",
       "dns": "Memorizza e fornisci i record DNS tradizionali con determinati nomi.",
@@ -60,14 +60,14 @@
       "erc721": "I nomi .ETH sono NFT conformi a ERC721."
     },
     "getInvolved": {
-      "title": "Fatti coinvolgere",
+      "title": "Partecipa",
       "subscribe": {
         "title": "Registrati alla nostra mailing list",
-        "cta": "Sottoscrivi"
+        "cta": "Registrati"
       },
       "community": {
         "title": "Unisciti alla nostra comunità Discord",
-        "cta": "Unisciti a Discord"
+        "cta": "Vai a Discord"
       },
       "forums": {
         "title": "Discuti sul nostro forum",
@@ -75,28 +75,28 @@
       },
       "documentation": {
         "title": "Leggi la nostra documentazione",
-        "cta": "Leggi docs"
+        "cta": "Leggi"
       }
     }
   },
   "about": {
-    "hero": "Ethereum Name Service è un protocollo di denominazione open source basato su blockchain.",
+    "hero": "Ethereum Name Service è un protocollo di naming open source basato su blockchain.",
     "aboutENS": {
       "title": "Info su ENS",
-      "text": "Avviato presso la Fondazione Ethereum all'inizio del 2017, ENS è diventato un'organizzazione separata nel 2018. ENS è gestito dall'organizzazione no-profit di Singapore True Names LTD ed è un bene pubblico, una parte fondamentale dell'infrastruttura Internet che appartiene alla comunità. Sono graditi tutti i feedback e contributi!",
+      "text": "Iniziato dalla Fondazione Ethereum all'inizio del 2017, ENS è diventato un'organizzazione indipendente nel 2018. ENS è gestito dall'organizzazione no-profit di Singapore True Names LTD ed è un bene pubblico, una parte fondamentale dell'infrastruttura Internet che appartiene alla comunità. Sono graditi tutti i feedback e contributi!",
       "support": "Abbiamo ricevuto un generoso sostegno da:",
-      "support2": "I rappresentanti dell'ENS partecipano alla più vasta comunità di Internet:"
+      "support2": "I rappresentanti di ENS partecipano alla più vasta comunità di Internet:"
     },
     "team": {
       "title": "Incontra il team"
     },
     "benefits": {
       "title": "Vantaggi di Ethereum",
-      "text": "Sebbene supporti una vasta gamma di risorse non-Ethereum, ENS funziona sulla blockchain di Ethereum. Ciò propaga tutti i vantaggi del decentramento, della sicurezza, della resistenza alla censura e della programmabilità della blockchain di Ethereum ai Domini Internet, abilitando nuove funzionalità come l'autocustodia, la componibilità nel più ampio ecosistema di smart contract di Ethereum e altro ancora."
+      "text": "Sebbene supporti una vasta gamma di risorse non-Ethereum, ENS utilizza la blockchain Ethereum. Questo porta tutti i vantaggi della decentralizzazione, sicurezza, resistenza alla censura e programmabilità della blockchain Ethereum ai Domain Name Internet, abilitando nuove funzionalità come l'auto-custodia, la componibilità nel più ampio ecosistema di smart contract Ethereum, e altro ancora."
     },
     "root": {
-      "title": "Gestire la root di ENS",
-      "text": "Per facilitare la possibilità di aggiornamenti e manutenzione e, in circostanze eccezionali, per gestire problemi con ENS, la root di ENS è inizialmente di proprietà di un wallet multisignature quattro su sette, composto da membri di progetti correlati che sono titolari delle chiavi. Sul lungo periodo, vorremmo che il multisig di root fosse sostituito da una qualche forma di processo decisionale distribuito, non appena tali sistemi saranno disponibili e fruibili."
+      "title": "Gestire la root ENS",
+      "text": "Per facilitare la possibilità di aggiornamenti, manutenzione e - in circostanze eccezionali - per gestire problemi, la root ENS è inizialmente di proprietà di un wallet multisig four-of-seven, composto da membri di progetti correlati titolari delle chiavi. A lungo termine vorremmo che il multisig fosse sostituito da una qualche forma di processo decisionale distribuito, non appena tali sistemi saranno disponibili e fruibili."
     }
   }
 }
