@@ -8,6 +8,7 @@ const Description = styled("div")`
   display: flex;
   justify-content: center;
   padding: 120px 20px;
+  background: white;
 `
 
 const DescriptionInner = styled("div")`

@@ -113,7 +113,7 @@ export default function AboutENS(props) {
           <p>{t("about.aboutENS.support")}</p>
           <Logos>
             {partners.map(logo => (
-              <img src={logo.src} alt={logo.name} />
+              <img src={logo.src.default} alt={logo.name} />
             ))}
           </Logos>
         </List1>
@@ -122,7 +122,7 @@ export default function AboutENS(props) {
 
           <Logos>
             {associated.map(logo => (
-              <img src={logo.src} alt={logo.name} />
+              <img src={logo.src.default} alt={logo.name} />
             ))}
           </Logos>
         </List2>
