@@ -56,6 +56,10 @@
     "link": "https://authereum.org/",
     "name": "Authereum"
   },
+  "backdrop": {
+    "link": "https://backdrop.so/",
+    "name": "Backdrop"
+  },
   "balancer": {
     "link": "https://balancer.fi/",
     "name": "Balancer"
@@ -968,6 +972,10 @@
   "pillar": {
     "link": "https://pillarproject.io/",
     "name": "Pillar"
+  },
+  "pixelmap": {
+    "link": "https://pixelmap.io/",
+    "name": "Pixel Map"
   },
   "pixelportraits": {
     "link": "https://www.thepixelportraits.me/",
