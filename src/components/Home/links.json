@@ -953,6 +953,10 @@
     "link": "https://faucet.paradigm.xyz/",
     "name": "Paradigm MultiFaucet"
   },
+  "parallel": {
+    "link": "https://parallel.life/",
+    "name": "Parallel"
+  },
   "paraswap": {
     "link": "https://paraswap.io/",
     "name": "ParaSwap"
