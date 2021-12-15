@@ -72,6 +72,10 @@
     "link": "https://www.bankless.community/",
     "name": "BanklessDAO"
   },
+  "beacon": {
+    "link": "https://impervious.com/beacon",
+    "name": "Beacon"
+  },
   "bitcoindotcomwallet": {
     "link": "https://www.bitcoin.com/",
     "name": "Bitcoin.com Wallet",
@@ -133,6 +137,10 @@
   "burnerwallet": {
     "link": "https://wallet.burnerfactory.com/",
     "name": "Burner Wallet"
+  },
+  "buymeacryptocoffee": {
+    "link": "https://www.buymeacryptocoffee.xyz/",
+    "name": "Buy Me a Crypto Coffee"
   },
   "cancelethereumtransactions": {
     "link": "https://cancel-ethereum-transactions.web.app/cancel",
@@ -805,6 +813,10 @@
   "mevu": {
     "link": "https://mevu.bet/",
     "name": "meVu"
+  },
+  "mgs": {
+    "link": "https://seeder.mutant.garden/",
+    "name": "Mutant Garden Seeder"
   },
   "miniswap": {
     "link": "https://www.minidex.com/",
