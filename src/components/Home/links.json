@@ -432,6 +432,10 @@
     "link": "https://enjin.io/products/wallet",
     "name": "Enjin"
   },
+  "ensme": {
+    "link": "https://ens.me/",
+    "name": "ENS.me"
+  },
   "ensportal": {
     "link": "https://ensportal.com/",
     "name": "ENSPortal"
