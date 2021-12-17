@@ -190,6 +190,10 @@
     "link": "https://chipdip.io/",
     "name": "ChipDips"
   },
+  "clarity": {
+    "link": "https://www.clarity.so/",
+    "name": "Clarity"
+  },
   "cloudflare": {
     "link": "https://www.cloudflare.com/",
     "name": "Cloudflare",
