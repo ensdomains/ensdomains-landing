@@ -923,6 +923,10 @@
     "link": "https://www.niftex.org/",
     "name": "NIFTEX"
   },
+  "niftygateway": {
+    "link": "https://niftygateway.com/",
+    "name": "Nifty Gateway"
+  },
   "niftyink": {
     "link": "https://nifty.ink/",
     "name": "Nifty Ink"
@@ -1004,6 +1008,10 @@
   "paytomat": {
     "link": "https://paytomat.com/en/",
     "name": "Paytomat"
+  },
+  "picklefinance": {
+    "link": "https://app.pickle.finance/",
+    "name": "Pickle Finance"
   },
   "piedao": {
     "link": "https://www.piedao.org/",
@@ -1097,6 +1105,10 @@
   "revokecash": {
     "link": "https://revoke.cash/",
     "name": "Revoke.Cash"
+  },
+  "ribbonfinance": {
+    "link": "https://app.ribbon.finance/",
+    "name": "Ribbon Finance"
   },
   "rigoblock": {
     "link": "http://rigoblock.eth.link/",
