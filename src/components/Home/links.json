@@ -581,6 +581,10 @@
     "link": "http://freeens.xyz/",
     "name": "Free ENS"
   },
+  "frenspage": {
+    "link": "https://frens.page/",
+    "name": "frens.page"
+  },
   "frontierwallet": {
     "link": "https://frontierwallet.com/",
     "name": "Frontier Wallet"
@@ -825,6 +829,10 @@
   "mgs": {
     "link": "https://seeder.mutant.garden/",
     "name": "Mutant Garden Seeder"
+  },
+  "milliondollartokenpage": {
+    "link": "https://milliondollartokenpage.com/",
+    "name": "Million Dollar Token Page"
   },
   "miniswap": {
     "link": "https://www.minidex.com/",
@@ -1333,6 +1341,10 @@
   "walleth": {
     "link": "https://walleth.org/",
     "name": "WallETH"
+  },
+  "web3images": {
+    "link": "https://web3-images.kibalabs.com/",
+    "name": "Web3 Images"
   },
   "whiteswap": {
     "link": "https://ws.exchange/",
