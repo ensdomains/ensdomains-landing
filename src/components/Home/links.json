@@ -436,6 +436,10 @@
     "link": "https://enjin.io/products/wallet",
     "name": "Enjin"
   },
+  "ensideas": {
+    "link": "https://ensideas.com/",
+    "name": "ENS Ideas"
+  },
   "ensme": {
     "link": "https://ens.me/",
     "name": "ENS.me"
@@ -483,6 +487,10 @@
   "etheria": {
     "link": "https://etheria.world/",
     "name": "Etheria"
+  },
+  "ethme": {
+    "link": "https://ethme.at/",
+    "name": "ETHME"
   },
   "ethrone": {
     "link": "https://ethronegame.com/",
@@ -532,6 +540,10 @@
   "ethsimple": {
     "link": "https://ethsimple.com/",
     "name": "ETHSimple"
+  },
+  "ethxyz": {
+    "link": "https://eth.xyz/",
+    "name": "ETH.XYZ"
   },
   "fabrx": {
     "link": "https://www.fabrx.io/",
@@ -668,6 +680,10 @@
   "ideamarket": {
     "link": "https://ideamarket.io/",
     "name": "Ideamarket"
+  },
+  "iexec": {
+    "link": "https://github.com/iExecBlockchainComputing/iexec-sdk",
+    "name": "iExec SDK"
   },
   "impersonator": {
     "link": "https://apoorvlathey.com/impersonator/",
@@ -1065,6 +1081,10 @@
     "link": "https://primitive.finance/",
     "name": "Primitive"
   },
+  "prysm": {
+    "link": "https://prysm.xyz/",
+    "name": "Prysm"
+  },
   "puma": {
     "link": "https://www.pumabrowser.com/",
     "name": "Puma"
@@ -1170,6 +1190,10 @@
   "sockexplorer": {
     "link": "https://sockexplorer.eth.link/",
     "name": "Sock Explorer"
+  },
+  "spheron": {
+    "link": "https://argoapp.net/",
+    "name": "Spheron"
   },
   "spiderdex": {
     "link": "https://www.spiderdex.com/",
