@@ -360,6 +360,10 @@
     "link": "https://deversifi.com/",
     "name": "DeversiFI"
   },
+  "devparty": {
+    "link": "https://devparty.io/",
+    "name": "Devparty"
+  },
   "dexwallet": {
     "link": "https://www.dexwallet.io/",
     "name": "DexWallet"
@@ -820,6 +824,10 @@
   "mailchain": {
     "link": "https://mailchain.xyz/",
     "name": "Mailchain"
+  },
+  "manifoldstudio": {
+    "link": "https://studio.manifold.xyz/",
+    "name": "Manifold Studio"
   },
   "masknetwork": {
     "link": "https://mask.io/",
