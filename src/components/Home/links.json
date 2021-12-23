@@ -669,6 +669,10 @@
     "link": "https://hodlberg.com/",
     "name": "Hodlberg Financial"
   },
+  "hopexchange": {
+    "link": "https://hop.exchange/",
+    "name": "Hop Exchange"
+  },
   "huddle01": {
     "link": "https://huddle01.com/",
     "name": "Huddle01"
@@ -1153,6 +1157,10 @@
   "sablier": {
     "link": "https://sablier.finance/",
     "name": "Sablier"
+  },
+  "saddlefinance": {
+    "link": "https://saddle.finance/#/",
+    "name": "Saddle"
   },
   "safekeep": {
     "link": "https://safekeep.app/",
