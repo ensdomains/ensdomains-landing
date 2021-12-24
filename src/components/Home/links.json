@@ -1001,6 +1001,10 @@
     "name": "Opera",
     "featuredBrowser": 2
   },
+  "opyn": {
+    "link": "http://opyn.co/",
+    "name": "Opyn"
+  },
   "originprotocol": {
     "link": "https://www.originprotocol.com/en",
     "name": "Origin Protocol"
