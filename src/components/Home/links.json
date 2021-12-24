@@ -717,6 +717,10 @@
     "link": "https://interspace.chat/",
     "name": "Interspace Chat"
   },
+  "inversefinance": {
+    "link": "https://www.inverse.finance/",
+    "name": "Inverse Finance"
+  },
   "invoicebuild": {
     "link": "https://invoice.build/",
     "name": "Invoice.build"
