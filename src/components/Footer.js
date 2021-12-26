@@ -43,7 +43,7 @@ const social = [
   },
   {
     img: github,
-    text: "Github",
+    text: "GitHub",
     link: "https://github.com/ensdomains",
   },
 ]
