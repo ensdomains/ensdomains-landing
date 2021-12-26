@@ -496,6 +496,10 @@
     "link": "https://etheria.world/",
     "name": "Etheria"
   },
+  "ethleaderboard": {
+    "link": "https://ethleaderboard.xyz/",
+    "name": ".eth Leaderboard"
+  },
   "ethme": {
     "link": "https://ethme.at/",
     "name": "ETHME"
@@ -1017,6 +1021,10 @@
     "link": "https://www.originprotocol.com/en",
     "name": "Origin Protocol"
   },
+  "otterclam": {
+    "link": "https://www.otterclam.finance/#/",
+    "name": "OtterClam"
+  },
   "otterscan": {
     "link": "https://github.com/wmitsuda/otterscan",
     "name": "Otterscan"
@@ -1316,6 +1324,10 @@
     "link": "https://tiles.art/",
     "name": "Tiles"
   },
+  "tkreth": {
+    "link": "https://tkr.eth.limo/#ens",
+    "name": "TickerDAO"
+  },
   "tokenallowancechecker": {
     "link": "https://tac.dappstar.io/",
     "name": "Token Allowance Checker"
@@ -1409,6 +1421,10 @@
   "waffle": {
     "link": "https://getwaffle.io/",
     "name": "Waffle"
+  },
+  "wagmidao": {
+    "link": "https://wenwagmi.com/stake",
+    "name": "WagmiDAO"
   },
   "walleth": {
     "link": "https://walleth.org/",
