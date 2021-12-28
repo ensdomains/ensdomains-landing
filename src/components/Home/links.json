@@ -922,6 +922,10 @@
     "link": "https://msgs.decentralandalytics.com/",
     "name": "msgs.eth"
   },
+  "mstable": {
+    "link": "https://mstable.app/",
+    "name": "mStable"
+  },
   "multis": {
     "link": "https://multis.co/",
     "name": "Multis"
@@ -1226,6 +1230,10 @@
   "snapshotlabs": {
     "link": "https://snapshot.page/",
     "name": "Snapshot"
+  },
+  "snowbank": {
+    "link": "https://dapp.snowbank.finance/",
+    "name": "Snowbank DAO"
   },
   "sockexplorer": {
     "link": "https://sockexplorer.eth.link/",
