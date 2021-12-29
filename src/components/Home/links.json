@@ -432,6 +432,10 @@
     "link": "https://eliteswap.io/#/swap",
     "name": "Elite Swap"
   },
+  "elyfi": {
+    "link": "https://www.elyfi.world/en",
+    "name": "ELYFI"
+  },
   "emiswap": {
     "link": "https://emiswap.com/",
     "name": "EmiSwap"
@@ -1461,6 +1465,10 @@
   "xummwallet": {
     "link": "https://xumm.app/",
     "name": "XUMM"
+  },
+  "yamfinance": {
+    "link": "https://yam.finance/",
+    "name": "Yam Finance"
   },
   "yearnfinance": {
     "link": "https://yearn.finance/",
