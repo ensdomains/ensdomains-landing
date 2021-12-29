@@ -918,6 +918,10 @@
     "link": "https://bots.moonshotcollective.space/",
     "name": "Moonshot Bots"
   },
+  "movement": {
+    "link": "https://www.movement.fm/",
+    "name": "movement"
+  },
   "mover": {
     "link": "https://viamover.com/",
     "name": "Mover"
