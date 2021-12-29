@@ -1478,6 +1478,10 @@
     "link": "https://yearn.finance/",
     "name": "Yearn"
   },
+  "yieldprotocol": {
+    "link": "https://yieldprotocol.com/",
+    "name": "Yield Protocol"
+  },
   "zapperfi": {
     "link": "https://www.zapper.fi/",
     "name": "Zapper.fi"
