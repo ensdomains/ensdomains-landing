@@ -865,6 +865,10 @@
     "link": "https://www.mathwallet.org/en/",
     "name": "Math Wallet"
   },
+  "meetwithwallet": {
+    "link": "https://meetwithwallet.xyz/",
+    "name": "Meet with Wallet"
+  },
   "metamask": {
     "link": "https://metamask.io/",
     "name": "MetaMask Extension",
