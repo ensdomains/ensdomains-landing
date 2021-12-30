@@ -36,6 +36,10 @@
     "link": "https://www.ambo.io",
     "name": "Ambo"
   },
+  "angle": {
+    "link": "https://app.angle.money/#/",
+    "name": "Angle"
+  },
   "append": {
     "link": "https://tryappend.com/",
     "name": "Append"
@@ -1222,6 +1226,10 @@
     "link": "https://realitycards.io/",
     "name": "Reality Cards"
   },
+  "realworldassetmarket": {
+    "link": "https://rwamarket.io/",
+    "name": "Real-World Asset Market"
+  },
   "redireth": {
     "link": "http://redir.eth.link/",
     "name": "Redir.eth"
@@ -1500,6 +1508,10 @@
   "unicly": {
     "link": "https://www.app.unic.ly/",
     "name": "Unicly"
+  },
+  "union": {
+    "link": "https://app.union.finance/",
+    "name": "Union"
   },
   "uniswap": {
     "link": "https://uniswap.io/",
