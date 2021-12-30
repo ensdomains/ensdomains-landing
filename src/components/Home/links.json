@@ -1542,6 +1542,10 @@
     "link": "https://getwaffle.io/",
     "name": "Waffle"
   },
+  "wagmicards": {
+    "link": "https://www.wagmi.cards/",
+    "name": "wagmi.cards"
+  },
   "wagmidao": {
     "link": "https://wenwagmi.com/stake",
     "name": "WagmiDAO"
@@ -1565,6 +1569,10 @@
   "worldwidewebb": {
     "link": "https://worldwideweb3.com/",
     "name": "Worldwide Webb"
+  },
+  "worthinnft": {
+    "link": "https://www.worthinnft.com/",
+    "name": "WorthInNFT"
   },
   "wyre": {
     "link": "https://www.sendwyre.com/",
