@@ -36,6 +36,10 @@
     "link": "https://www.ambo.io",
     "name": "Ambo"
   },
+  "angle": {
+    "link": "https://app.angle.money/#/",
+    "name": "Angle"
+  },
   "append": {
     "link": "https://tryappend.com/",
     "name": "Append"
@@ -1221,6 +1225,10 @@
   "realitycards": {
     "link": "https://realitycards.io/",
     "name": "Reality Cards"
+  },
+  "realworldassetmarket": {
+    "link": "https://rwamarket.io/",
+    "name": "Real-World Asset Market"
   },
   "redireth": {
     "link": "http://redir.eth.link/",
