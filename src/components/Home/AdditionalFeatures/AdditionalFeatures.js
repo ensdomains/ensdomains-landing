@@ -11,6 +11,7 @@ import file from "./assets/file.svg"
 import onion from "./assets/onion.svg"
 import usernames from "./assets/usernames.svg"
 
+import { Anchor, AnchorContainer } from '../../Anchor'
 import mq from "../../../mediaQuery"
 
 const features = [
@@ -47,13 +48,13 @@ const features = [
   {
     name: "erc721",
     img: cards,
-    link: "https://eips.ethereum.org/EIPS/eip-721",
+    link: "https://medium.com/the-ethereum-name-service/reminder-that-ens-names-are-nfts-what-this-means-for-your-names-b7bcbea8715e",
   },
 ]
 
 const AdditionalFeaturesContainer = styled("div")`
   background: white;
-  padding: 120px 20px;
+  padding: 120px 20px 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,8 +118,11 @@ const Title = styled(H2)`
 export default function AdditionalFeatures(props) {
   const { t } = useTranslation()
   return (
-    <AdditionalFeaturesContainer>
-      <Title>{t("home.additionalFeatures.title")}</Title>
+    <AdditionalFeaturesContainer id='home-additional-features'>
+      <AnchorContainer href={'#home-additional-features'}>
+        <Title>{t("home.additionalFeatures.title")}<Anchor /></Title>
+      </AnchorContainer>
+      
       <FeaturesContainer>
         {features.map(f => (
           <Feature feature={f} />

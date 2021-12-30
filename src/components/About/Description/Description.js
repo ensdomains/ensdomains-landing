@@ -2,12 +2,13 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useTranslation } from "react-i18next"
 import mq from "../../../mediaQuery"
-import { Button } from "../../Typography"
+import { Anchor, AnchorContainer } from "../../Anchor"
 
 const Description = styled("div")`
   display: flex;
   justify-content: center;
   padding: 120px 20px;
+  background: white;
 `
 
 const DescriptionInner = styled("div")`
@@ -55,8 +56,8 @@ const members = [
   { name: "Dan Finlay", company: "Metamask" },
   { name: "Taylor Monahan", company: "MyCrypto" },
   { name: "Aron Fischer", company: "Colony" },
-  { name: "Piper Merriam", company: "Ethereum Foundation" },
-  { name: "Jarrad Hope", company: "Status" },
+  { name: "Jason Carver", company: "Ethereum Foundation" },
+  { name: "Martin Swende", company: "Ethereum Foundation" },
 ]
 
 const Members = styled("dl")`
@@ -102,34 +103,29 @@ const Member = styled("div")`
   }
 `
 
-const LearnMore = styled(Button)`
-  display: inline-flex;
-  margin: 20px 0 40px;
-`
-
 export default function AboutDescription(props) {
   const { t } = useTranslation()
   return (
-    <Description>
-      <DescriptionInner>
-        <h2>{t("about.benefits.title")}</h2>
-        <div>
-          <p>{t("about.benefits.text")}</p>
-          <LearnMore href="https://medium.com/the-ethereum-name-service/why-ens-uses-ethereum-and-eth-not-a-bespoke-blockchain-and-token-36f86727e71f">
-            {t("c.learnMore")}
-          </LearnMore>
-        </div>
-        <h2>{t("about.root.title")}</h2>
-        <p>{t("about.root.text")}</p>
-        <div />
-        <Members>
-          {members.map(member => (
-            <Member>
-              <dt>{member.name}</dt> <dd>{member.company}</dd>
-            </Member>
-          ))}
-        </Members>
-      </DescriptionInner>
-    </Description>
+    <>
+      <Description id="about-root">
+        <DescriptionInner>
+          <AnchorContainer href={"#about-root"}>
+            <h2>
+              {t("about.root.title")}
+              <Anchor />
+            </h2>
+          </AnchorContainer>
+          <p>{t("about.root.text")}</p>
+          <div />
+          <Members>
+            {members.map(member => (
+              <Member>
+                <dt>{member.name}</dt> <dd>{member.company}</dd>
+              </Member>
+            ))}
+          </Members>
+        </DescriptionInner>
+      </Description>
+    </>
   )
 }

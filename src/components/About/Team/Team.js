@@ -4,14 +4,20 @@ import { useTranslation } from "react-i18next"
 
 import mq from "../../../mediaQuery"
 
-import becca from "./photos/becca.png"
-import dean from "./photos/dean.png"
 import jeff from "./photos/jeff.png"
 import nick from "./photos/nick.png"
 import makoto from "./photos/makoto.png"
 import brantly from "./photos/brantly.png"
-import jim from "./photos/jim.png"
-import hoverCircle from "./hoverCircle.png"
+import kevin from "./photos/kevin.png"
+import leon from "./photos/leon.png"
+import richard from "./photos/richard.png"
+import muhammed from "./photos/muhammed.png"
+import alisha from "./photos/alisha.png"
+import { Anchor, AnchorContainer } from '../../Anchor'
+import {
+  MainPageBannerContainer,
+  DAOBannerContent
+} from '../../DAOBanner'
 
 const team = [
   {
@@ -22,7 +28,7 @@ const team = [
   },
   {
     name: "Jeff Lau",
-    title: "Frontend Developer",
+    title: "Frontend & Solidity Developer",
     img: jeff,
     link: "https://twitter.com/_jefflau",
   },
@@ -30,32 +36,44 @@ const team = [
     name: "Makoto Inoue",
     title: "JS & Solidity Developer",
     img: makoto,
-    link: "https://twitter.com/makoto_inoue",
+    link: "https://gist.github.com/makoto/c6f2e5abdaacb69b1d9a6bae990800c4",
   },
   {
-    name: "Rebecca Liebert",
-    title: "Graphic Designer",
-    img: becca,
-    link: "http://beccaliebert.com/",
-  },
-  {
-    name: "Dean Eigenmann",
-    title: "Solidity Developer",
-    img: dean,
-    link: "https://twitter.com/DeanEigenmann",
-  },
-  {
-    name: "Brantly Millegan",
+    name: "brantly.eth",
     title: "Director of Operations",
     img: brantly,
     link: "https://twitter.com/BrantlyMillegan",
   },
   {
-    name: "Jim Mcdonald",
-    title: "EthDNS Developer",
-    img: jim,
-    link: "http://linkedin.com/in/jimgmcdonald",
+    name: "Kevin | validator.eth",
+    title: "Support Lead",
+    img: kevin,
+    link: "https://twitter.com/ValidatorEth",
   },
+  {
+    name: "Leon Talbert",
+    title: "Frontend Developer",
+    img: leon,
+    link: "https://twitter.com/talbert_leon",
+  },
+  {
+    name: "Richard Moore",
+    title: "Solidity Developer",
+    img: richard,
+    link: "https://twitter.com/ricmoo",
+  },
+  {
+    name: "Muhammed Tanrıkulu",
+    title: "Full Stack Developer",
+    img: muhammed,
+    link: "https://twitter.com/tanrikuIu",
+  },
+  {
+    name: "alisha.eth",
+    title: "Community Manager",
+    img: alisha,
+    link: "https://twitter.com/futurealisha",
+  }
 ]
 
 const TeamContainer = styled("div")`
@@ -63,6 +81,8 @@ const TeamContainer = styled("div")`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding-top: 20px;
 
   h3 {
     font-family: Overpass;
@@ -71,6 +91,10 @@ const TeamContainer = styled("div")`
     color: #2b2b2b;
     text-align: center;
   }
+  
+  ${mq.medium`
+    padding-top: 80px;
+  `};
 `
 
 const TeamMembers = styled("section")`
@@ -150,7 +174,7 @@ function TeamMember({ member }) {
   return (
     <TeamMemberContainer href={member.link}>
       <div className="img-wrapper">
-        <img src={member.img} className="photo" />
+        <img src={member.img} className="photo" alt={member.name} />
         <div className="hover" />
       </div>
       <h4>{member.name}</h4>
@@ -162,13 +186,19 @@ function TeamMember({ member }) {
 export default function Team(props) {
   const { t } = useTranslation()
   return (
-    <TeamContainer>
-      <h3>{t("about.team.title")}</h3>
-      <TeamMembers>
-        {team.map(member => (
-          <TeamMember member={member} />
-        ))}
-      </TeamMembers>
+    <TeamContainer id='about-team'>
+      <MainPageBannerContainer>
+        <DAOBannerContent />
+      </MainPageBannerContainer>
+
+        <AnchorContainer href={'#about-team'}>
+          <h3>{t("about.team.title")}<Anchor /></h3>
+        </AnchorContainer>
+        <TeamMembers>
+          {team.map(member => (
+            <TeamMember member={member} />
+          ))}
+        </TeamMembers>
     </TeamContainer>
   )
 }

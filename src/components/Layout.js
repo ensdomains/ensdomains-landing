@@ -1,18 +1,17 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { Global, css } from "@emotion/core"
-import styled from "@emotion/styled"
 import favicon from "../assets/favicon.ico"
 import twitter from "../assets/twitter.png"
 
 function getTitle(pathname) {
   switch (pathname) {
-    case "/":
-      return "ENS"
+    case "/governance":
+      return "Governance"
     case "/about":
-      return "ENS | About"
+      return "About ENS"
     default:
-      return "ENS"
+      return "Ethereum Name Service"
   }
 }
 
@@ -23,28 +22,28 @@ export default function Layout({ children, data, location }) {
         meta={[
           {
             name: "description",
-            content: "Human readable names for the Ethereum network",
+            content: "Your web3 username, a name for all your cryptocurrency addresses, and decentralised websites."
           },
           {
             name: "keywords",
-            content: "ENS, Ethereum, Ethereum Name Service, Names, True Names",
+            content: "ENS, Ethereum, Ethereum Name Service, .eth domains, blockchain domains"
           },
           {
             name: "twitter:card",
-            content: "summary",
+            content: "summary"
           },
           {
             name: "twitter:title",
-            content: "Ethereum Name Service",
+            content: "Ethereum Name Service"
           },
           {
             property: "og:image",
-            content: `https://ens.domains${twitter}`,
-          },
+            content: `https://ens.domains${twitter}`
+          }
         ]}
         title={getTitle(location.pathname)}
         link={[
-          { rel: "shortcut icon", type: "image/x-icon", href: `${favicon}` },
+          { rel: "shortcut icon", type: "image/x-icon", href: `${favicon}` }
         ]}
       />
       <Global

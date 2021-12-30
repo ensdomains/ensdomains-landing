@@ -8,6 +8,7 @@ import mailingList from "../assets/mailingList.svg"
 import documentation from "../assets/documentation.svg"
 import community from "../assets/community.svg"
 import forum from "../assets/forum.svg"
+import { Anchor, AnchorContainer } from './Anchor'
 
 const links = [
   {
@@ -20,9 +21,9 @@ const links = [
   {
     name: "community",
     img: community,
-    text: "Join our Gitter community",
-    cta: "Join Gitter",
-    link: "https://gitter.im/ethereum/go-ethereum/name-registry",
+    text: "Join our Discord community",
+    cta: "Join Discord",
+    link: "https://chat.ens.domains/",
   },
   {
     name: "forums",
@@ -117,12 +118,12 @@ const ExternalLink = styled("a")`
 export default function GetInvolved(props) {
   const { t } = useTranslation()
   return (
-    <Container>
-      <H2>{t("home.getInvolved.title")}</H2>
+    <Container id='get-involved'>
+      <AnchorContainer href={'#get-involved'}><H2>{t("home.getInvolved.title")}<Anchor /></H2></AnchorContainer>
       <Links>
         {links.map(l => (
-          <LinkItem>
-            <img src={l.img} />
+          <LinkItem key={l.name}>
+            <img src={l.img} alt={t(l.name)} />
             <h3>{t(`home.getInvolved.${l.name}.title`)}</h3>
             <ExternalLink href={l.link}>
               {t(`home.getInvolved.${l.name}.cta`)}

@@ -10,10 +10,11 @@ import website2 from "./website2.png"
 import website3 from "./website3.png"
 import blur1 from "./blur1.jpg"
 import blur2 from "./blur2.jpg"
+import { Anchor, AnchorContainer } from '../../Anchor'
 
 const Container = styled("div")`
   background: white;
-  padding: 120px 20px;
+  padding: 120px 20px 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,8 +58,11 @@ export default function DecentralisedWebsites(props) {
   })
 
   return (
-    <Container>
-      <H2>{t("home.decentralisedWebsites.title")}</H2>
+    <Container id='home-decentralised-websites'>
+      <AnchorContainer href={'#home-decentralised-websites'}>
+        <H2>{t("home.decentralisedWebsites.title")}<Anchor /></H2>
+      </AnchorContainer>
+
       <P>{t("home.decentralisedWebsites.text")}</P>
       <ImageAnimation ref={ref}>
         <ImageTransition>
@@ -66,14 +70,14 @@ export default function DecentralisedWebsites(props) {
           <motion.img src={blur1} style={{ opacity: inView ? 1 : 0 }} />
         </ImageTransition>
         <ImageTransition>
-          <img src={website1} />
+          <img src={website1} alt={t("website")} />
         </ImageTransition>
         <ImageTransition>
           <motion.img src={website3} animate={{ opacity: inView ? 0 : 1 }} />
           <motion.img src={blur2} animate={{ opacity: inView ? 1 : 0 }} />
         </ImageTransition>
       </ImageAnimation>
-      <Button href="https://medium.com/the-ethereum-name-service/upload-to-ipfs-directly-from-the-ens-manager-with-new-tool-ac055db5d2fe">
+      <Button href="https://medium.com/the-ethereum-name-service/cloudflare-and-fleek-make-ens-ipfs-site-deployment-as-easy-as-ever-262c990a7514">
         {t("c.learnMore")}
       </Button>
     </Container>

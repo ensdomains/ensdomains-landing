@@ -6,6 +6,7 @@ import Logo from "./Logo"
 import { Button } from "./Typography"
 
 import mq from "../mediaQuery"
+import LanguageSwitcher from "./LanguageSwitcher"
 
 const Nav = styled("nav")`
   background-image: linear-gradient(90deg, #513eff 0%, #52e5ff 100%);
@@ -19,7 +20,7 @@ const Nav = styled("nav")`
   justify-content: space-between;
   padding: 20px 40px;
   position: sticky;
-  z-index: 100000;
+  z-index: 2147483647;
   top: 0;
 
   .mobile-nav {
@@ -222,20 +223,29 @@ export default function Navigation() {
       </div>
 
       <Links menuOpen={menuOpen}>
-        <Link to="/about">{t("nav.about")}</Link>
-        <a href="https://medium.com/the-ethereum-name-service">{t("nav.blog")}</a>
+        <a href="/governance">Governance</a>
+        <a href="https://chat.ens.domains/">Community</a>
+        <Link to="/about">Team</Link>
+        <a href="https://docs.ens.domains/">Docs</a>
+
         <Separator />
+        <LanguageSwitcher />
         <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>
       </Links>
 
       <MobileLinks menuOpen={menuOpen}>
+        <LanguageSwitcher mobile={true} />
         <li>
-          <Link to="/about">{t("nav.about")}</Link>
+          <a href="/governance">Governance</a>
         </li>
         <li>
-          <a href="https://medium.com/the-ethereum-name-service">
-            {t("nav.blog")}
-          </a>
+          <a href="https://chat.ens.domains/">Community</a>
+        </li>
+        <li>
+          <Link to="/about">Team</Link>
+        </li>
+        <li>
+          <a href="https://docs.ens.domains/">Docs</a>
         </li>
         <li>
           <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>

@@ -83,6 +83,20 @@ const SocialContainer = styled("div")`
 const MailTo = styled("a")`
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+`
+
+const FooterColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ${mq.medium`
+    align-items: flex-start;
+  `};
 `
 
 export default function Footer(props) {
@@ -91,13 +105,18 @@ export default function Footer(props) {
       <Logo />
       <SocialContainer>
         {social.map(s => (
-          <ExternalLink href={s.link}>
-            <img src={s.img} />
+          <ExternalLink href={s.link} key={s.link}>
+            <img src={s.img} alt={s.text} />
             {s.text}
           </ExternalLink>
         ))}
       </SocialContainer>
-      <MailTo href="mailto:press.ens.domains">press@ens.domains</MailTo>
+      <FooterColumn>
+        <MailTo href="mailto:press@ens.domains">press@ens.domains</MailTo>
+        <MailTo href="https://docs.ens.domains/bug-bounty-program">
+          Bug Bounty
+        </MailTo>
+      </FooterColumn>
     </FooterContainer>
   )
 }

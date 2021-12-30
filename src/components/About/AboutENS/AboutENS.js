@@ -4,6 +4,7 @@ import { useTranslation, Trans } from "react-i18next"
 
 import mq from "../../../mediaQuery"
 import { importAll } from "../../../utils"
+import { Anchor, AnchorContainer } from '../../Anchor'
 
 const partners = importAll(
   require.context("./partners", false, /\.(png|jpe?g|svg)$/)
@@ -15,13 +16,13 @@ const associated = importAll(
 
 const AboutENSContainer = styled("div")`
   background: white;
-  padding: 20px 0;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   ${mq.medium`
-    padding: 80px 0;
+    padding-top: 80px;
   `};
 
   h3 {
@@ -90,8 +91,10 @@ const List2 = styled("div")``
 export default function AboutENS(props) {
   const { t } = useTranslation()
   return (
-    <AboutENSContainer>
-      <h3>{t("about.aboutENS.title")}</h3>
+    <AboutENSContainer id='about-ens'>
+      <AnchorContainer href={'#about-ens'}>
+        <h3>{t("about.aboutENS.title")}<Anchor /></h3>
+      </AnchorContainer>
 
       <p className="prelede">
         <Trans i18nKey="about.aboutENS.text">
@@ -110,7 +113,7 @@ export default function AboutENS(props) {
           <p>{t("about.aboutENS.support")}</p>
           <Logos>
             {partners.map(logo => (
-              <img src={logo.src} alt={logo.name} />
+              <img src={logo.src.default} alt={logo.name} />
             ))}
           </Logos>
         </List1>
@@ -119,7 +122,7 @@ export default function AboutENS(props) {
 
           <Logos>
             {associated.map(logo => (
-              <img src={logo.src} alt={logo.name} />
+              <img src={logo.src.default} alt={logo.name} />
             ))}
           </Logos>
         </List2>

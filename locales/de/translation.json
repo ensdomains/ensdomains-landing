@@ -17,6 +17,10 @@
       "register": "Registrieren",
       "launch": "App starten"
     },
+    "portableUsername": {
+      "title": "Your Web3 Username",
+      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+    },
     "cryptocurrencies": {
       "title": "Ein Name für alle Ihre Kryptowährungen",
       "text": "Kein Kopieren und Eintippen langer Adressen mehr. Benutzen Sie ENS-Namen, um alle Ihre Adressen zu speichern und Zahlungen in jeder beliebigen Kryptowährung zu erhalten."
@@ -62,8 +66,8 @@
         "cta": "Abonnieren"
       },
       "community": {
-        "title": "Treten Sie unserer Gitter Community bei",
-        "cta": "Gitter beitreten"
+        "title": "Treten Sie unserer Discord Community bei",
+        "cta": "Discord beitreten"
       },
       "forums": {
         "title": "Diskutieren Sie in unserem Forum",

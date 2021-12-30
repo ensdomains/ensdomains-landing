@@ -1,0 +1,100 @@
+{
+  "c": {
+    "learnMore": "Lees meer"
+  },
+  "nav": {
+    "about": "Organisatie",
+    "blog": "Blog",
+    "launch": "Open App"
+  },
+  "home": {
+    "hero": {
+      "title": "Gedecentraliseerde namen voor wallets, websites, en meer."
+    },
+    "carousel": {
+      "search": "zoek",
+      "manage": "beheer",
+      "register": "registreer",
+      "launch": "Open App"
+    },
+    "portableUsername": {
+      "title": "Your Web3 Username",
+      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+    },
+    "cryptocurrencies": {
+      "title": "Één Naam Voor Al je Cryptovaluta",
+      "text": "Nooit meer lange adressen kopiëren en plakken. Gebruik je ENS naam om al je adressen op de slaan en betalingen te ontvangen in alle cryptovaluta."
+    },
+    "statistics": {
+      "title": "ENS is de meest breed geïmplementeerde blockchain benaming standaard.",
+      "names": "Namen",
+      "services": "Integraties",
+      "owners": "Eigenaren"
+    },
+    "decentralisedWebsites": {
+      "title": "Gedecentraliseerde Websites",
+      "text": "Lanceer censuur-resistente gedecentraliseerde websites met ENS. Upload je website naar IPFS in onze Manager en bezoek hem door middel van je ENS naam."
+    },
+    "dns": {
+      "title": "Gebruik Conventionele Domeinnamen",
+      "text1": "De suffix voor ENS is .ETH, welke alle veiligheidsvoordelen heeft van het draaien op een blockchain.",
+      "text2": "Je kan ENS ook gebruiken met DNS domeinnamen die je al hebt. ENS ondersteunt veel DNS namen, waaronder:"
+    },
+    "ecosystem": {
+      "title": "ENS Ecosysteem",
+      "wallets": "Wallets",
+      "apps": "Apps",
+      "browsers": "Browsers",
+      "seeMore": "Bekijk Meer",
+      "seeLess": "Bekijk Minder"
+    },
+    "additionalFeatures": {
+      "title": "Overige Features",
+      "recordType": "Maak een eigen record type voor je project.",
+      "textRecord": "Voeg profiel informatie toe aan je ENS naam met tekst velden.",
+      "subDomains": "Maak ENS subdomeinen als gebruikersnamen voor je project.",
+      "dns": "Sla DNS records met bepaalde namen op en serveer ze.",
+      "tor": "Gebruik ENS om makkelijker toegang te krijgen tot Tor .onion diensten.",
+      "erc721": ".ETH namen zijn ERC721-compliant NFTs."
+    },
+    "getInvolved": {
+      "title": "Doe Mee",
+      "subscribe": {
+        "title": "Meld je aan voor onze mailing lijst",
+        "cta": "Aanmelden"
+      },
+      "community": {
+        "title": "Meedoen met onze Discord community",
+        "cta": "Doe mee op Discord"
+      },
+      "forums": {
+        "title": "Discussieer op ons forum",
+        "cta": "Discussieer"
+      },
+      "documentation": {
+        "title": "Lees onze documentatie",
+        "cta": "Lees docs"
+      }
+    }
+  },
+  "about": {
+    "hero": "De Ethereum Name Service is een open source benaming protocol gebouwd op blockchain technologie.",
+    "aboutENS": {
+      "title": "Over ENS",
+      "text": "ENS is gestart bij de Ethereum Foundation in begin 2017. Daarna is ENS als losse organisatie losgekomen in 2018. ENS wordt beheerd door de Singaporeaanse non-profit True Names LTD en is een publieke dienst, een basaal stuk Internet infrastructuur dat ten gunste komt aan de gemeenschap. We verwelkomen alle feedback en contributies!",
+      "support": "Wij hebben vrijgevige ondersteuning ontvangen van:",
+      "support2": "Vertegenwoordigers van ENS nemen deel aan de bredere Internet gemeenschap:"
+    },
+    "team": {
+      "title": "Over het team"
+    },
+    "benefits": {
+      "title": "Voordelen van Ethereum",
+      "text": "Hoewel het een breed scala aan middelen die niet op Ethereum draaien ondersteunt draait ENS op de Ethereum blockchain. Dit bied de voordelen van decentralisatie, veiligheid, censuur resistentie en programmeerbaarheid van de Ethereum blockchain aan Internet benamingen, wat nieuwe functies toestaat zoals self-custody, samenstelbaarheid in het bredere Ethereum ecosysteem, en meer."
+    },
+    "root": {
+      "title": "Het Beheer van de ENS Root",
+      "text": "Om de mogelijkheid van upgrades en onderhoud te faciliteren, en in uitzonderlijke omstandigheden problemen met ENS af te handelen, is de ENS root initieel in het eigendom van een vier van zeven multisig, met leden van gerelateerde projecten als sleutelhouders. Op de lange termijn willen we graag de multisig vervangen door een vorm van decentrale beslissingsvorming, wanneer dergelijke systemen beschikbaar worden."
+    }
+  }
+}

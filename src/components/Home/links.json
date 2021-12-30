@@ -1,4 +1,13 @@
 {
+  "aave": {
+    "link": "https://aave.com/",
+    "name": "Aave",
+    "featuredApp": 5
+  },
+  "aavegotchi": {
+    "link": "https://aavegotchi.com/",
+    "name": "Aavegotchi"
+  },
   "accointing": {
     "link": "https://www.accointing.com/",
     "name": "Accointing"
@@ -7,10 +16,13 @@
     "link": "http://almonit.eth.link/",
     "name": "Almonit"
   },
+  "alchemydao": {
+    "link": "https://alchemydao.com/",
+    "name": "AlchemyDAO"
+  },
   "almonitextension": {
     "link": "http://almonit.eth.link/",
-    "name": "Almonit Extension",
-    "featuredBrowser": 5
+    "name": "Almonit Extension"
   },
   "alphawallet": {
     "link": "https://alphawallet.com",
@@ -20,34 +32,82 @@
     "link": "https://www.ambo.io",
     "name": "Ambo"
   },
+  "append": {
+    "link": "https://tryappend.com/",
+    "name": "Append"
+  },
   "aragon": {
     "link": "https://aragon.org/",
     "name": "Aragon"
   },
+  "archerswap": {
+    "link": "https://swap.archerdao.io/#/swap",
+    "name": "Archerswap"
+  },
   "argent": {
     "link": "https://www.argent.xyz/",
-    "name": "Argent",
-    "featuredWallet": 2
+    "name": "Argent"
   },
-  "art": {
-    "link": "https://art.art/digital-twin/",
-    "name": ".ART"
+  "argo": {
+    "link": "https://argoapp.live/",
+    "name": "Argo"
   },
   "authereum": {
     "link": "https://authereum.org/",
     "name": "Authereum"
   },
+  "backdrop": {
+    "link": "https://backdrop.so/",
+    "name": "Backdrop"
+  },
+  "balancer": {
+    "link": "https://balancer.fi/",
+    "name": "Balancer"
+  },
   "bankless": {
     "link": "https://www.microsoft.com/en-us/p/bankless/9p50f616xcdj",
     "name": "Bankless"
   },
-  "bitfinex": {
-    "link": "https://www.bitfinex.com/",
-    "name": "Bitfinex"
+  "banklessdao": {
+    "link": "https://www.bankless.community/",
+    "name": "BanklessDAO"
+  },
+  "barnbridge": {
+    "link": "https://app.barnbridge.com/",
+    "name": "BarnBridge"
+  },
+  "beacon": {
+    "link": "https://impervious.com/beacon",
+    "name": "Beacon"
+  },
+  "bitcoindotcomwallet": {
+    "link": "https://www.bitcoin.com/",
+    "name": "Bitcoin.com Wallet",
+    "featuredWallet": 5
   },
   "bitsearch": {
     "link": "https://bitsear.ch/",
     "name": "Bitsear.ch"
+  },
+  "blackholeswap": {
+    "link": "https://blackholeswap.com/swap",
+    "name": "BlackHoleSwap"
+  },
+  "blankwallet": {
+    "link": "https://www.goblank.io/",
+    "name": "Blank Wallet"
+  },
+  "blockchaincom": {
+    "link": "https://www.blockchain.com/",
+    "name": "Blockchain"
+  },
+  "blockhead": {
+    "link": "https://blockhead.info/",
+    "name": "Blockhead"
+  },
+  "blocknative": {
+    "link": "https://blocknative.com/",
+    "name": "Blocknative"
   },
   "blockscan": {
     "link": "https://blockscan.com/",
@@ -57,10 +117,22 @@
     "link": "https://blocto.portto.io/en/",
     "name": "Blocto"
   },
+  "boxswap": {
+    "link": "https://app.boxswap.io/#/swap",
+    "name": "Boxswap"
+  },
   "brave": {
     "link": "https://brave.com/",
     "name": "Brave",
     "featuredBrowser": 1
+  },
+  "brd": {
+    "link": "https://brd.com/",
+    "name": "BRD"
+  },
+  "btswap": {
+    "link": "https://btswap.com/#/",
+    "name": "BTswap"
   },
   "buidlhub": {
     "link": "https://buidlhub.com/",
@@ -70,6 +142,34 @@
     "link": "https://wallet.burnerfactory.com/",
     "name": "Burner Wallet"
   },
+  "buymeacryptocoffee": {
+    "link": "https://www.buymeacryptocoffee.xyz/",
+    "name": "Buy Me a Crypto Coffee"
+  },
+  "cancelethereumtransactions": {
+    "link": "https://cancel-ethereum-transactions.web.app/cancel",
+    "name": "Cancel Ethereum Transactions"
+  },
+  "capitaldex": {
+    "link": "https://capitaldex.exchange/#/",
+    "name": "Capital DEX"
+  },
+  "carbonfyi": {
+    "link": "https://carbon.fyi/",
+    "name": "carbon.fyi"
+  },
+  "carbonraindrops": {
+    "link": "https://carbonraindrops.com/",
+    "name": "Carbon Raindrops"
+  },
+  "cardpunks": {
+    "link": "https://cardpunks.eth.link/",
+    "name": "Cardpunks"
+  },
+  "ccswap": {
+    "link": "https://app.ccswap.org/",
+    "name": "CCSwap"
+  },
   "chainlink": {
     "link": "https://chain.link/",
     "name": "Chainlink"
@@ -78,38 +178,123 @@
     "link": "https://www.chainshot.com/",
     "name": "ChainShot"
   },
-  "cipher": {
-    "link": "https://www.cipherbrowser.com/",
-    "name": "Cipher"
+  "chargedparticles": {
+    "link": "https://charged.fi/",
+    "name": "Charged Particles"
+  },
+  "chatrooms": {
+    "link": "https://chatrooms.eth.link/",
+    "name": "Chatrooms"
+  },
+  "chilliswap": {
+    "link": "https://exchange.chilliswap.org/",
+    "name": "Chilliswap"
+  },
+  "chipdips": {
+    "link": "https://chipdip.io/",
+    "name": "ChipDips"
+  },
+  "clarity": {
+    "link": "https://www.clarity.so/",
+    "name": "Clarity"
+  },
+  "cloudflare": {
+    "link": "https://www.cloudflare.com/",
+    "name": "Cloudflare",
+    "featuredBrowser": 5
   },
   "cloversnetwork": {
     "link": "https://clovers.network/",
     "name": "Clovers Network"
   },
+  "coinbase": {
+    "link": "https://coinbase.com/",
+    "name": "Coinbase",
+    "featuredWallet": 1
+  },
+  "coinbasewallet": {
+    "link": "https://wallet.coinbase.com/",
+    "name": "Coinbase Wallet"
+  },
+  "coinbasewalletextension": {
+    "link": "https://chrome.google.com/webstore/detail/coinbase-wallet-extension/hnfanknocfeofbddgcijnmhnfnkdnaad",
+    "name": "Coinbase Wallet Extension"
+  },
+  "coindreams": {
+    "link": "https://coindreams.io/",
+    "name": "CoinDreams"
+  },
+  "coinhako": {
+    "link": "https://www.coinhako.com/",
+    "name": "Coinhako"
+  },
   "coinomi": {
     "link": "https://www.coinomi.com/en/",
     "name": "Coinomi"
-  },
-  "coinbase": {
-    "link": "https://wallet.coinbase.com/",
-    "name": "Coinbase Wallet",
-    "featuredWallet": 1
   },
   "coinrequest": {
     "link": "https://coinrequest.io/",
     "name": "CoinRequest"
   },
+  "coinvise": {
+    "link": "https://coinvise.co/",
+    "name": "Coinvise"
+  },
   "colony": {
     "link": "https://colony.io/",
     "name": "Colony"
+  },
+  "colorverse": {
+    "link": "https://colorverse.io/",
+    "name": "Colorverse"
+  },
+  "connext": {
+    "link": "https://connextscan.io/",
+    "name": "Connext Explorer"
+  },
+  "context": {
+    "link": "https://context.app/",
+    "name": "Context"
   },
   "covalent": {
     "link": "https://www.covalenthq.com/",
     "name": "Covalent"
   },
+  "cowswap": {
+    "link": "https://cowswap.exchange/#/swap",
+    "name": "CowSwap"
+  },
+  "creamfinance": {
+    "link": "https://app.cream.finance/",
+    "name": "C.R.E.A.M."
+  },
+  "crocofinance": {
+    "link": "https://croco.finance/",
+    "name": "Croco Finance"
+  },
+  "cryptex": {
+    "link": "https://cryptex.finance/",
+    "name": "Cryptex Finance"
+  },
+  "cryptostamp": {
+    "link": "https://crypto.post.at/",
+    "name": "Crypto Stamp"
+  },
+  "cryptoverselogin": {
+    "link": "https://cryptoauth.io/",
+    "name": "Cryptoverse Login"
+  },
   "cryptovoxels": {
     "link": "https://www.cryptovoxels.com/",
     "name": "Cryptovoxels"
+  },
+  "cryptowrapped": {
+    "link": "https://www.cryptowrapped.xyz/",
+    "name": "Crypto Wrapped"
+  },
+  "cyberconnect": {
+    "link": "https://cyberconnect.me/",
+    "name": "Cyber Connect"
   },
   "daostack": {
     "link": "https://daostack.io/",
@@ -118,6 +303,18 @@
   "dappnode": {
     "link": "https://dappnode.io/",
     "name": "DAppNode"
+  },
+  "dappradar": {
+    "link": "https://dappradar.com/",
+    "name": "DappRadar"
+  },
+  "dappquery": {
+    "link": "https://dappquery.com/integration/ens",
+    "name": "Dapp Query"
+  },
+  "davatar": {
+    "link": "https://www.davatar.xyz/",
+    "name": "Davatar"
   },
   "dcent": {
     "link": "https://dcentwallet.com/",
@@ -129,20 +326,19 @@
   },
   "decentraland": {
     "link": "https://decentraland.org/",
-    "name": "Decentraland",
-    "featuredApp": 2
+    "name": "Decentraland"
   },
-  "defiportfoliotracker": {
-    "link": "https://portfolio.defiprime.com/",
-    "name": "DeFi Portfolio Tracker"
+  "defiexplore": {
+    "link": "https://defiexplore.com/",
+    "name": "DeFi Explore"
   },
   "defisaver": {
     "link": "https://defisaver.com/",
-    "name": "Defi Saver"
+    "name": "DeFi Saver"
   },
-  "defiwatch": {
-    "link": "https://defiwatch.io/",
-    "name": "Defi Watch"
+  "defiswap": {
+    "link": "https://crypto.com/defi/swap",
+    "name": "Defi Swap"
   },
   "defi777": {
     "link": "https://defi777.com/",
@@ -160,17 +356,41 @@
     "link": "https://dether.io/",
     "name": "Dether"
   },
+  "devdaovisualizer": {
+    "link": "https://devdao.raz.works/#/",
+    "name": "DevDao Visualizer"
+  },
   "deversifi": {
     "link": "https://deversifi.com/",
     "name": "DeversiFI"
   },
-  "dexblue": {
-    "link": "https://dex.blue/",
-    "name": "dex.blue"
+  "devparty": {
+    "link": "https://devparty.io/",
+    "name": "Devparty"
   },
   "dexwallet": {
     "link": "https://www.dexwallet.io/",
     "name": "DexWallet"
+  },
+  "dhedge": {
+    "link": "https://app.dhedge.org/",
+    "name": "dHEDGE"
+  },
+  "dia": {
+    "link": "https://www.diadata.org/",
+    "name": "DIA"
+  },
+  "dnsxyz": {
+    "link": "https://dns.xyz/",
+    "name": "DNS.XYZ"
+  },
+  "doomcatrescue": {
+    "link": "https://www.doom.cat/",
+    "name": "Doom Cat Rescue"
+  },
+  "dopewars": {
+    "link": "https://dopewars.gg/",
+    "name": "Dope Wars"
   },
   "drip": {
     "link": "https://www.dripscore.com/",
@@ -180,21 +400,53 @@
     "link": "https://daotalk.org/c/daos/dx-dao",
     "name": "Dxdao"
   },
+  "dynalock": {
+    "link": "https://play.google.com/store/apps/details?id=cz.telematix.ethereumwallet",
+    "name": "Dynalock"
+  },
+  "earnifi": {
+    "link": "https://earni.fi/",
+    "name": "Earnifi"
+  },
   "easycryptoname": {
     "link": "https://easycryptoname.com/",
     "name": "Easy Crypto Name"
+  },
+  "easydns": {
+    "link": "https://easydns.com/",
+    "name": "easyDNS"
+  },
+  "eauth": {
+    "link": "https://eauth.pelith.com/",
+    "name": "Eauth"
   },
   "edge": {
     "link": "https://edge.app/",
     "name": "Edge"
   },
+  "effigyim": {
+    "link": "https://effigy.im/",
+    "name": "effigy.im"
+  },
   "eidoo": {
     "link": "https://eidoo.io/",
     "name": "Eidoo"
   },
-  "emoon": {
-    "link": "https://www.emoon.io/",
-    "name": "Emoon"
+  "eipnftio": {
+    "link": "https://eipnft.io/home",
+    "name": "eipnft.io"
+  },
+  "eliteswap": {
+    "link": "https://eliteswap.io/#/swap",
+    "name": "Elite Swap"
+  },
+  "elyfi": {
+    "link": "https://www.elyfi.world/en",
+    "name": "ELYFI"
+  },
+  "emiswap": {
+    "link": "https://emiswap.com/",
+    "name": "EmiSwap"
   },
   "encirca": {
     "link": "https://www.encirca.com/eth/",
@@ -204,9 +456,13 @@
     "link": "https://enjin.io/products/wallet",
     "name": "Enjin"
   },
-  "enjinx": {
-    "link": "https://enjinx.io/",
-    "name": "EnjinX"
+  "ensideas": {
+    "link": "https://ensideas.com/",
+    "name": "ENS Ideas"
+  },
+  "ensme": {
+    "link": "https://ens.me/",
+    "name": "ENS.me"
   },
   "ensportal": {
     "link": "https://ensportal.com/",
@@ -216,6 +472,58 @@
     "link": "https://ensuser.com/",
     "name": "ENSUser"
   },
+  "epns": {
+    "link": "https://epns.io/",
+    "name": "EPNS"
+  },
+  "ercgraph": {
+    "link": "https://ercgraph.live/",
+    "name": "ERCGraph"
+  },
+  "esteroids": {
+    "link": "https://esteroids.eth.link/",
+    "name": "Esteroids"
+  },
+  "eswap": {
+    "link": "https://app.eswap.tube/",
+    "name": "Eswap"
+  },
+  "etag": {
+    "link": "https://etag-eth.ipns.dweb.link/#/",
+    "name": "ETag"
+  },
+  "ethaf": {
+    "link": "https://eth.af/",
+    "name": "Eth.af"
+  },
+  "ethblockart": {
+    "link": "https://ethblock.art/",
+    "name": "EthBlockArt"
+  },
+  "ethcontractapp": {
+    "link": "https://ethcontract.app/",
+    "name": "ethcontract.app"
+  },
+  "etheria": {
+    "link": "https://etheria.world/",
+    "name": "Etheria"
+  },
+  "ethleaderboard": {
+    "link": "https://ethleaderboard.xyz/",
+    "name": ".eth Leaderboard"
+  },
+  "ethme": {
+    "link": "https://ethme.at/",
+    "name": "ETHME"
+  },
+  "ethrone": {
+    "link": "https://ethronegame.com/",
+    "name": "Ethrone"
+  },
+  "ethtx": {
+    "link": "https://ethtx.info/",
+    "name": "EthTx Decoder"
+  },
   "ethdns": {
     "link": "https://www.wealdtech.com/articles/using-ethdns-to-host-your-dns-domain/",
     "name": "EthDNS"
@@ -223,6 +531,14 @@
   "ethereumdefilanguagesupport": {
     "link": "https://marketplace.visualstudio.com/items?itemName=ericglau.defi-ls",
     "name": "Ethereum DeFi Language Support"
+  },
+  "ethlimo": {
+    "link": "https://eth.limo/",
+    "name": "eth.limo"
+  },
+  "ethlink": {
+    "link": "https://eth.link/",
+    "name": "eth.link"
   },
   "ethmail": {
     "link": "http://ethmail.cc/",
@@ -234,19 +550,28 @@
   },
   "etherscan": {
     "link": "https://etherscan.io",
-    "name": "Etherscan"
+    "name": "Etherscan",
+    "featuredApp": 2
   },
   "etherscanquick": {
     "link": "https://chrome.google.com/webstore/detail/etherscan-quick/nplfockicpoicmabmpjjkdiepdajflbn",
     "name": "Etherscan Quick"
   },
+  "ethsign": {
+    "link": "https://ethsign.xyz/#/",
+    "name": "EthSign"
+  },
   "ethsimple": {
     "link": "https://ethsimple.com/",
     "name": "ETHSimple"
   },
-  "existnames": {
-    "link": "http://existnames.xyz/",
-    "name": "Existential Name Search"
+  "ethxyz": {
+    "link": "https://eth.xyz/",
+    "name": "ETH.XYZ"
+  },
+  "exquisiteland": {
+    "link": "https://exquisite.land/",
+    "name": "Exquisite Land"
   },
   "fabrx": {
     "link": "https://www.fabrx.io/",
@@ -256,6 +581,22 @@
     "link": "https://f12.network/",
     "name": "Fantastic12"
   },
+  "farmfol": {
+    "link": "https://farmfol.io/",
+    "name": "farmfol.io"
+  },
+  "fingertip": {
+    "link": "https://impervious.com/fingertip.html",
+    "name": "Fingertip"
+  },
+  "fishvote": {
+    "link": "https://www.fish.vote/",
+    "name": "Fish.vote"
+  },
+  "flashbotstools": {
+    "link": "https://flashbots.tools/",
+    "name": "Flashbots.tools"
+  },
   "fleek": {
     "link": "https://fleek.co/",
     "name": "Fleek"
@@ -264,13 +605,49 @@
     "link": "https://beta.floatify.net/",
     "name": "Floatify"
   },
+  "flooredapes": {
+    "link": "https://flooredape.io/",
+    "name": "flooredApe"
+  },
+  "foundation": {
+    "link": "https://foundation.app/",
+    "name": "Foundation"
+  },
+  "foxgame": {
+    "link": "https://fox.game/",
+    "name": "Fox Game"
+  },
+  "frame": {
+    "link": "https://frame.sh/",
+    "name": "Frame"
+  },
+  "freeens": {
+    "link": "http://freeens.xyz/",
+    "name": "Free ENS"
+  },
+  "frenspage": {
+    "link": "https://frens.page/",
+    "name": "frens.page"
+  },
   "frontierwallet": {
     "link": "https://frontierwallet.com/",
     "name": "Frontier Wallet"
   },
+  "geocitieseth": {
+    "link": "https://geocities.eth.link/",
+    "name": "GeoCities.eth"
+  },
+  "genie": {
+    "link": "https://genie.xyz/",
+    "name": "Genie"
+  },
   "gitcoin": {
     "link": "https://gitcoin.co/",
     "name": "Gitcoin"
+  },
+  "gmxyz": {
+    "link": "https://gm.xyz/",
+    "name": "gm.xyz"
   },
   "gnosissafe": {
     "link": "https://safe.gnosis.io",
@@ -280,50 +657,173 @@
     "link": "https://gnosis-safe.io",
     "name": "Gnosis Safe Multisig"
   },
+  "gopocket": {
+    "link": "https://gopocket.security/",
+    "name": "Go Pocket"
+  },
+  "gridplus": {
+    "link": "https://gridplus.io/",
+    "name": "GridPlus"
+  },
+  "groprotocol": {
+    "link": "https://www.gro.xyz/",
+    "name": "Gro"
+  },
   "guarda": {
     "link": "http://guarda.co/",
     "name": "Guarda"
   },
+  "guild": {
+    "link": "https://www.guild.xyz/",
+    "name": "Guild"
+  },
+  "hakkafinance": {
+    "link": "https://hakka.finance/",
+    "name": "Hakka Finance"
+  },
+  "headsupeuchre": {
+    "link": "https://www.headsupeuchre.com/",
+    "name": "Heads Up Euchre"
+  },
+  "hoardexchange": {
+    "link": "https://hoard.market/",
+    "name": "Hoard Exchange"
+  },
+  "hodlbergfinancial": {
+    "link": "https://hodlberg.com/",
+    "name": "Hodlberg Financial"
+  },
+  "hopexchange": {
+    "link": "https://hop.exchange/",
+    "name": "Hop Exchange"
+  },
+  "huddle01": {
+    "link": "https://huddle01.com/",
+    "name": "Huddle01"
+  },
   "huobi": {
     "link": "https://www.huobiwallet.com/",
-    "name": "Huobi",
-    "featuredWallet": 5
+    "name": "Huobi"
+  },
+  "hyaliko": {
+    "link": "https://www.hyaliko.com/",
+    "name": "Hyaliko"
+  },
+  "icytools": {
+    "link": "https://icy.tools/",
+    "name": "icy.tools"
+  },
+  "ideamarket": {
+    "link": "https://ideamarket.io/",
+    "name": "Ideamarket"
+  },
+  "iexec": {
+    "link": "https://github.com/iExecBlockchainComputing/iexec-sdk",
+    "name": "iExec SDK"
+  },
+  "impersonator": {
+    "link": "https://apoorvlathey.com/impersonator/",
+    "name": "Impersonator"
+  },
+  "immutables": {
+    "link": "https://www.immutables.co/#/",
+    "name": "Immutables"
   },
   "imToken": {
     "link": "https://token.im/",
     "name": "imToken"
   },
+  "inscribe": {
+    "link": "https://inscribe.so/",
+    "name": "Inscribe"
+  },
   "interspacechat": {
     "link": "https://interspace.chat/",
-    "name": "interspace.chat"
+    "name": "Interspace Chat"
+  },
+  "inversefinance": {
+    "link": "https://www.inverse.finance/",
+    "name": "Inverse Finance"
+  },
+  "invoicebuild": {
+    "link": "https://invoice.build/",
+    "name": "Invoice.build"
   },
   "ipfs": {
     "link": "https://ipfs.io/",
     "name": "IPFS"
   },
+  "isotile": {
+    "link": "https://isotile.com/",
+    "name": "Isotile"
+  },
   "jarvis": {
     "link": "https://beta.jarvis.network/welcome",
     "name": "Jarvis"
+  },
+  "juggernaut": {
+    "link": "https://nft.jgndefi.com/",
+    "name": "JGN-NFT"
+  },
+  "juiceboxprotocol": {
+    "link": "https://juicebox.money/#/",
+    "name": "Juicebox"
   },
   "keplr": {
     "link": "https://wallet.keplr.app/",
     "name": "Keplr"
   },
+  "keystone": {
+    "link": "https://keyst.one/",
+    "name": "Keystone"
+  },
+  "kickback": {
+    "link": "https://kickback.events/",
+    "name": "Kickback"
+  },
+  "kingswap": {
+    "link": "https://www.kingswap.io/",
+    "name": "Kingswap Exchange"
+  },
   "knownorigin": {
     "link": "https://knownorigin.io/",
     "name": "KnownOrigin"
   },
-  "kred": {
-    "link": "https://nft.kred/",
-    "name": "Kred"
+  "knowyourdefi": {
+    "link": "https://www.knowyourdefi.com/",
+    "name": "KnowYourDefi"
+  },
+  "kwikswap": {
+    "link": "https://app.kwikswap.org/",
+    "name": "Kwikswap"
+  },
+  "kyberdmm": {
+    "link": "https://dmm.exchange/#/swap",
+    "name": "Kyber DMM"
   },
   "kyberswap": {
     "link": "https://kyberswap.com/swap",
     "name": "KyberSwap"
   },
+  "larvalabs": {
+    "link": "https://larvalabs.com/",
+    "name": "LarvaLabs"
+  },
+  "lazy3d": {
+    "link": "https://lazy3d.com/",
+    "name": "Lazy3D"
+  },
   "leth": {
     "link": "https://www.inzhoop.com/",
     "name": "LETH"
+  },
+  "litgateway": {
+    "link": "https://litgateway.com/",
+    "name": "Lit Gateway"
+  },
+  "linkswap": {
+    "link": "https://linkswap.app/",
+    "name": "Linkswap"
   },
   "localcoinswap": {
     "link": "https://localcoinswap.com/",
@@ -335,20 +835,47 @@
   },
   "loopring": {
     "link": "https://loopring.org/",
-    "name": "Loopring",
-    "featuredApp": 4
+    "name": "Loopring"
   },
-  "luxe": {
-    "link": "http://nic.luxe/",
-    "name": ".LUXE"
+  "lootexchange": {
+    "link": "https://www.loot.exchange/",
+    "name": "Loot Exchange"
+  },
+  "luaswap": {
+    "link": "https://app.luaswap.org/#/swap",
+    "name": "LuaSwap"
+  },
+  "lyrafinance": {
+    "link": "https://www.lyra.finance/",
+    "name": "Lyra Finance"
+  },
+  "makersplace": {
+    "link": "https://makersplace.com/",
+    "name": "MakersPlace"
   },
   "mailchain": {
     "link": "https://mailchain.xyz/",
     "name": "Mailchain"
   },
+  "manifoldstudio": {
+    "link": "https://studio.manifold.xyz/",
+    "name": "Manifold Studio"
+  },
+  "masknetwork": {
+    "link": "https://mask.io/",
+    "name": "Mask Network"
+  },
+  "masterpiece": {
+    "link": "https://masterpiece.so/",
+    "name": "Masterpiece"
+  },
   "mathwallet": {
     "link": "https://www.mathwallet.org/en/",
     "name": "Math Wallet"
+  },
+  "meetwithwallet": {
+    "link": "https://meetwithwallet.xyz/",
+    "name": "Meet with Wallet"
   },
   "metamask": {
     "link": "https://metamask.io/",
@@ -363,17 +890,65 @@
     "link": "https://mevu.bet/",
     "name": "meVu"
   },
+  "mgs": {
+    "link": "https://seeder.mutant.garden/",
+    "name": "Mutant Garden Seeder"
+  },
+  "milliondollartokenpage": {
+    "link": "https://milliondollartokenpage.com/",
+    "name": "Million Dollar Token Page"
+  },
+  "miniswap": {
+    "link": "https://www.minidex.com/",
+    "name": "MiniSwap"
+  },
+  "mintable": {
+    "link": "https://mintable.app/",
+    "name": "Mintable"
+  },
   "mintbase": {
     "link": "https://mintbase.io/",
     "name": "Mintbase"
   },
-  "mosendo": {
-    "link": "https://mosendo.com/",
-    "name": "Mosendo"
+  "mirror": {
+    "link": "https://mirror.xyz/",
+    "name": "Mirror"
   },
-  "mulewtf": {
-    "link": "https://mule.wtf/",
-    "name": "Mule.WTF"
+  "mistx": {
+    "link": "https://app.mistx.io/#/exchange",
+    "name": "mistX"
+  },
+  "moca": {
+    "link": "https://museumofcryptoart.com/",
+    "name": "Museum of Crypto Art"
+  },
+  "moments": {
+    "link": "https://www.moments.ms/",
+    "name": "Moments"
+  },
+  "mooniswap": {
+    "link": "https://mooniswap.exchange/",
+    "name": "Mooniswap"
+  },
+  "moonshotbots": {
+    "link": "https://bots.moonshotcollective.space/",
+    "name": "Moonshot Bots"
+  },
+  "movement": {
+    "link": "https://www.movement.fm/",
+    "name": "movement"
+  },
+  "mover": {
+    "link": "https://viamover.com/",
+    "name": "Mover"
+  },
+  "msgs": {
+    "link": "https://msgs.decentralandalytics.com/",
+    "name": "msgs.eth"
+  },
+  "mstable": {
+    "link": "https://mstable.app/",
+    "name": "mStable"
   },
   "multis": {
     "link": "https://multis.co/",
@@ -390,76 +965,181 @@
   },
   "mycryptocheckout": {
     "link": "https://wordpress.org/plugins/mycryptocheckout/",
-    "name": "MyCryptoCheckout"
+    "name": "My Crypto Checkout"
   },
   "myEtherWallet": {
     "link": "https://myetherwallet.com/",
     "name": "MyEtherWallet"
   },
-  "namestack": {
-    "link": "https://www.namestack.io/",
-    "name": "Namestack"
+  "namebazaar": {
+    "link": "https://namebazaar.io/",
+    "name": "Name Bazaar"
   },
   "nethereum": {
     "link": "http://playground.nethereum.com/",
     "name": "Nethereum Playground"
   },
-  "nexusmutual": {
-    "link": "https://nexusmutual.io/",
-    "name": "Nexus Mutual"
+  "nftfi": {
+    "link": "https://nftfi.com/",
+    "name": "NFTfi"
+  },
+  "nftscan": {
+    "link": "https://nftscan.com/",
+    "name": "NFTSCAN"
+  },
+  "nftscollectors": {
+    "link": "https://nftscollectors.app/",
+    "name": "NFTs Collectors"
+  },
+  "niftex": {
+    "link": "https://www.niftex.org/",
+    "name": "NIFTEX"
+  },
+  "niftygateway": {
+    "link": "https://niftygateway.com/",
+    "name": "Nifty Gateway"
+  },
+  "niftyink": {
+    "link": "https://nifty.ink/",
+    "name": "Nifty Ink"
+  },
+  "niftyorchard": {
+    "link": "https://niftyorchard.com/",
+    "name": "Nifty Orchard"
   },
   "nonfungible": {
     "link": "https://nonfungible.com/",
-    "name": "NonFungible.com"
+    "name": "NonFungible"
+  },
+  "nounsdao": {
+    "link": "https://nouns.wtf/",
+    "name": "Nouns DAO"
+  },
+  "oceanprotocol": {
+    "link": "https://oceanprotocol.com/",
+    "name": "Ocean Protocol"
+  },
+  "olympusdao": {
+    "link": "https://app.olympusdao.finance/",
+    "name": "OlympusDAO"
   },
   "onemillionsdevs": {
     "link": "https://join.onemilliondevs.com/",
     "name": "OneMillionsDevs"
   },
+  "onjuno": {
+    "link": "https://onjuno.com/crypto",
+    "name": "OnJuno"
+  },
   "opensea": {
     "link": "https://opensea.io",
-    "name": "OpenSea"
+    "name": "OpenSea",
+    "featuredApp": 4
   },
   "opera": {
     "link": "https://www.opera.com",
     "name": "Opera",
     "featuredBrowser": 2
   },
+  "opyn": {
+    "link": "http://opyn.co/",
+    "name": "Opyn"
+  },
   "originprotocol": {
     "link": "https://www.originprotocol.com/en",
     "name": "Origin Protocol"
+  },
+  "otterclam": {
+    "link": "https://www.otterclam.finance/#/",
+    "name": "OtterClam"
+  },
+  "otterscan": {
+    "link": "https://github.com/wmitsuda/otterscan",
+    "name": "Otterscan"
+  },
+  "ourspaces": {
+    "link": "https://www.ourspaces.xyz/",
+    "name": "Spaces"
   },
   "ownbit": {
     "link": "https://ownbit.io/en/",
     "name": "OwnBit"
   },
+  "paradigmfaucet": {
+    "link": "https://faucet.paradigm.xyz/",
+    "name": "Paradigm MultiFaucet"
+  },
+  "parallel": {
+    "link": "https://parallel.life/",
+    "name": "Parallel"
+  },
   "paraswap": {
     "link": "https://paraswap.io/",
     "name": "ParaSwap"
+  },
+  "parcel": {
+    "link": "https://parcel.money/",
+    "name": "Parcel"
+  },
+  "partybid": {
+    "link": "https://www.partybid.app/",
+    "name": "PartyBid"
   },
   "paytomat": {
     "link": "https://paytomat.com/en/",
     "name": "Paytomat"
   },
+  "picklefinance": {
+    "link": "https://app.pickle.finance/",
+    "name": "Pickle Finance"
+  },
+  "piedao": {
+    "link": "https://www.piedao.org/",
+    "name": "PieDAO"
+  },
   "pillar": {
     "link": "https://pillarproject.io/",
     "name": "Pillar"
+  },
+  "pixelmap": {
+    "link": "https://pixelmap.io/",
+    "name": "Pixel Map"
+  },
+  "pixelportraits": {
+    "link": "https://www.thepixelportraits.me/",
+    "name": "Pixel Portraits"
+  },
+  "plugcool": {
+    "link": "https://plug.cool/",
+    "name": "plug.cool"
   },
   "poap": {
     "link": "https://www.poap.xyz//",
     "name": "POAP"
   },
-  "podcrypt": {
-    "link": "https://podcrypt.app/",
-    "name": "Podcrypt"
+  "pods": {
+    "link": "https://www.pods.finance/",
+    "name": "Pods Finance"
   },
-  "pooltogether": {
-    "link": "https://www.pooltogether.com/",
-    "name": "Pool Together"
+  "polyient": {
+    "link": "https://dex.polyient.games/",
+    "name": "Polyient DEX"
+  },
+  "pooledmoney": {
+    "link": "https://pooled.money/",
+    "name": "pooled.money"
+  },
+  "poolsuite": {
+    "link": "https://poolsuite.net/",
+    "name": "Poolsuite"
   },
   "poolsvision": {
     "link": "http://pools.vision/",
     "name": "Pools.Vision"
+  },
+  "pooltogether": {
+    "link": "https://pooltogether.com/",
+    "name": "PoolTogether"
   },
   "portal": {
     "link": "https://www.portal.network",
@@ -469,9 +1149,42 @@
     "link": "https://portle.io/",
     "name": "Portle"
   },
+  "primitivefinance": {
+    "link": "https://primitive.finance/",
+    "name": "Primitive"
+  },
+  "prysm": {
+    "link": "https://prysm.xyz/",
+    "name": "Prysm"
+  },
+  "puma": {
+    "link": "https://www.pumabrowser.com/",
+    "name": "Puma"
+  },
+  "punkscapes": {
+    "link": "https://punkscape.xyz/",
+    "name": "Punkscapes"
+  },
+  "rabbithole": {
+    "link": "https://rabbithole.gg/",
+    "name": "RabbitHole"
+  },
+  "rabby": {
+    "link": "https://rabby.io/",
+    "name": "Rabby"
+  },
+  "radicle": {
+    "link": "https://radicle.xyz/",
+    "name": "Radicle"
+  },
   "rainbow": {
     "link": "https://rainbow.me/",
-    "name": "Rainbow"
+    "name": "Rainbow",
+    "featuredWallet": 2
+  },
+  "realitycards": {
+    "link": "https://realitycards.io/",
+    "name": "Reality Cards"
   },
   "redireth": {
     "link": "http://redir.eth.link/",
@@ -485,6 +1198,10 @@
     "link": "https://revoke.cash/",
     "name": "Revoke.Cash"
   },
+  "ribbonfinance": {
+    "link": "https://app.ribbon.finance/",
+    "name": "Ribbon Finance"
+  },
   "rigoblock": {
     "link": "http://rigoblock.eth.link/",
     "name": "RigoBlock"
@@ -497,13 +1214,66 @@
     "link": "https://sablier.finance/",
     "name": "Sablier"
   },
+  "saddlefinance": {
+    "link": "https://saddle.finance/#/",
+    "name": "Saddle"
+  },
   "safekeep": {
     "link": "https://safekeep.app/",
     "name": "SafeKeep"
   },
+  "sakeswap": {
+    "link": "https://sakeswap.finance/",
+    "name": "SakeSwap"
+  },
+  "sandwichedwtf": {
+    "link": "https://sandwiched.wtf/",
+    "name": "Sandwiched.wtf"
+  },
+  "seaswap": {
+    "link": "https://seaswap.exchange/swap",
+    "name": "SeaSwap"
+  },
   "securedns": {
     "link": "https://github.com/Texnomic/SecureDNS",
     "name": "SecureDNS"
+  },
+  "sendusdc": {
+    "link": "https://www.sendusdc.net/",
+    "name": "SendUSDC"
+  },
+  "shapeshift": {
+    "link": "https://shapeshift.com/",
+    "name": "ShapeShift"
+  },
+  "shibaswap": {
+    "link": "https://shibaswap.com/",
+    "name": "ShibaSwap"
+  },
+  "showtime": {
+    "link": "https://tryshowtime.com/",
+    "name": "Showtime",
+    "featuredApp": 3
+  },
+  "sismo": {
+    "link": "https://sismo.io/",
+    "name": "Sismo"
+  },
+  "snapshotlabs": {
+    "link": "https://snapshot.page/",
+    "name": "Snapshot"
+  },
+  "snowbank": {
+    "link": "https://dapp.snowbank.finance/",
+    "name": "Snowbank DAO"
+  },
+  "sockexplorer": {
+    "link": "https://sockexplorer.eth.link/",
+    "name": "Sock Explorer"
+  },
+  "spheron": {
+    "link": "https://argoapp.net/",
+    "name": "Spheron"
   },
   "spiderdex": {
     "link": "https://www.spiderdex.com/",
@@ -513,43 +1283,114 @@
     "link": "https://stablepay.io/",
     "name": "StablePay"
   },
-  "sureswap": {
-    "link": "https://beta.sureswap.app/",
-    "name": "SureSwap"
-  },
   "stakeonme": {
     "link": "https://stakeonme.com/",
     "name": "StakeOnMe"
+  },
+  "stakewise": {
+    "link": "https://stakewise.io/",
+    "name": "Stakewise"
   },
   "status": {
     "link": "https://status.im/",
     "name": "Status",
     "featuredBrowser": 4
   },
+  "steakwallet": {
+    "link": "https://steakwallet.fi/",
+    "name": "Steakwallet"
+  },
   "stib": {
     "link": "https://stib.co/",
     "name": "StiB"
+  },
+  "stuckwithu": {
+    "link": "http://stuckwithu.eth.link/",
+    "name": "Stuck with U"
+  },
+  "sumswap": {
+    "link": "https://swap.sumswap.org/",
+    "name": "Sumswap"
+  },
+  "superfluid": {
+    "link": "https://www.superfluid.finance/",
+    "name": "Superfluid"
+  },
+  "sureswap": {
+    "link": "https://beta.sureswap.app/",
+    "name": "SureSwap"
+  },
+  "sushiswap": {
+    "link": "https://sushi.com/",
+    "name": "SushiSwap"
+  },
+  "swapmatic": {
+    "link": "https://app.swapmatic.io/",
+    "name": "SwapMatic"
+  },
+  "swapx": {
+    "link": "https://www.swapx.org/",
+    "name": "SwapX"
   },
   "swarm": {
     "link": "https://github.com/ethersphere/swarm",
     "name": "Swarm"
   },
+  "sybil": {
+    "link": "https://sybil.org/",
+    "name": "Sybil"
+  },
   "synthetix": {
     "link": "https://docs.synthetix.io/integrations/ens/",
     "name": "Synthetix"
   },
-  "temporal": {
-    "link": "https://temporal.cloud/",
-    "name": "Temporal"
+  "tally": {
+    "link": "https://www.withtally.com/",
+    "name": "Tally"
+  },
+  "theconvospace": {
+    "link": "https://theconvo.space/",
+    "name": "The Convo Space"
+  },
+  "thegraph": {
+    "link": "https://thegraph.com/",
+    "name": "The Graph"
+  },
+  "thehistoricalrecord": {
+    "link": "https://thehistoricalrecord.com/",
+    "name": "The Historical Record"
+  },
+  "tiledao": {
+    "link": "https://tiles.art/",
+    "name": "Tiles"
+  },
+  "tkreth": {
+    "link": "https://tkr.eth.limo/#ens",
+    "name": "TickerDAO"
   },
   "tokenallowancechecker": {
     "link": "https://tac.dappstar.io/",
     "name": "Token Allowance Checker"
   },
+  "tokenizedtweets": {
+    "link": "https://tokenizedtweets.com/",
+    "name": "Tokenized Tweets"
+  },
+  "tokenlists": {
+    "link": "https://tokenlists.org/",
+    "name": "Token Lists"
+  },
+  "tokenpocket": {
+    "link": "https://www.tokenpocket.pro/",
+    "name": "TokenPocket"
+  },
+  "tokentax": {
+    "link": "https://tokentax.co/",
+    "name": "TokenTax"
+  },
   "tornado": {
     "link": "https://tornado.cash/",
-    "name": "Tornado Cash",
-    "featuredApp": 3
+    "name": "Tornado Cash"
   },
   "torque": {
     "link": "https://torque.loans",
@@ -565,8 +1406,11 @@
   },
   "truffle": {
     "link": "https://www.trufflesuite.com/",
-    "name": "Truffle Suite",
-    "featuredApp": 5
+    "name": "Truffle Suite"
+  },
+  "trusteewallet": {
+    "link": "https://trusteeglobal.com/",
+    "name": "Trustee Wallet"
   },
   "trustlessfund": {
     "link": "https://trustless.fund/",
@@ -577,50 +1421,90 @@
     "name": "Trust Wallet",
     "featuredWallet": 3
   },
+  "twitterenstipper": {
+    "link": "https://chrome.google.com/webstore/detail/twitter-ens-tipper/gnkipbkkefgbkghkinhggmhggbmjoknp/",
+    "name": "Twitter ENS Tipper"
+  },
+  "umbra": {
+    "link": "http://umbra.cash/",
+    "name": "Umbra"
+  },
+  "unicly": {
+    "link": "https://www.app.unic.ly/",
+    "name": "Unicly"
+  },
   "uniswap": {
     "link": "https://uniswap.io/",
-    "name": "UniSwap",
+    "name": "Uniswap",
     "featuredApp": 1
-  },
-  "universallogin": {
-    "link": "https://universallogin.io",
-    "name": "Universal Login"
   },
   "unlock": {
     "link": "https://unlock-protocol.com/",
     "name": "Unlock"
   },
-  "unstoppable": {
-    "link": "https://unstoppabledomains.com/browser",
-    "name": "Unstoppable Browser"
+  "unstoppablewallet": {
+    "link": "https://unstoppable.money/",
+    "name": "Unstoppable Wallet"
   },
-  "unstoppablechat": {
-    "link": "https://unstoppabledomains.com/chat",
-    "name": "Unstoppable Chat"
+  "usedapp": {
+    "link": "https://usedapp.io/",
+    "name": "useDApp"
   },
-  "unstoppableextension": {
-    "link": "https://unstoppabledomains.com/extension",
-    "name": "Unstoppable Extension"
+  "varenfinance": {
+    "link": "https://varen.exchange/#/swap",
+    "name": "Varen Finance"
+  },
+  "venly": {
+    "link": "https://www.venly.io/",
+    "name": "Venly"
   },
   "waffle": {
     "link": "https://getwaffle.io/",
     "name": "Waffle"
   },
+  "wagmidao": {
+    "link": "https://wenwagmi.com/stake",
+    "name": "WagmiDAO"
+  },
   "walleth": {
     "link": "https://walleth.org/",
     "name": "WallETH"
+  },
+  "web3images": {
+    "link": "https://web3-images.kibalabs.com/",
+    "name": "Web3 Images"
+  },
+  "whiteswap": {
+    "link": "https://ws.exchange/",
+    "name": "WhiteSwap"
   },
   "wip2p": {
     "link": "http://ens.wip2p.com/",
     "name": "WIP2P"
   },
+  "worldwidewebb": {
+    "link": "https://worldwideweb3.com/",
+    "name": "Worldwide Webb"
+  },
   "wyre": {
     "link": "https://www.sendwyre.com/",
     "name": "Wyre"
   },
-  "yellowsubdomain": {
-    "link": "https://yellowsubdomain.io/",
-    "name": "Yellow Subdomain"
+  "xummwallet": {
+    "link": "https://xumm.app/",
+    "name": "XUMM"
+  },
+  "yamfinance": {
+    "link": "https://yam.finance/",
+    "name": "Yam Finance"
+  },
+  "yearnfinance": {
+    "link": "https://yearn.finance/",
+    "name": "Yearn"
+  },
+  "yieldprotocol": {
+    "link": "https://yieldprotocol.com/",
+    "name": "Yield Protocol"
   },
   "zapperfi": {
     "link": "https://www.zapper.fi/",
@@ -634,12 +1518,24 @@
     "link": "https://www.zippie.com/",
     "name": "Zippie"
   },
+  "zora": {
+    "link": "https://zora.co/",
+    "name": "Zora"
+  },
   "1inch": {
-    "link": "https://1inch.exchange/",
-    "name": "1inch Exchange"
+    "link": "https://1inch.io/",
+    "name": "1inch"
+  },
+  "1inchwallet": {
+    "link": "https://1inch.io/",
+    "name": "1inch Wallet"
   },
   "3box": {
     "link": "https://3box.io/hub",
     "name": "3Box Hub"
+  },
+  "3fmutual": {
+    "link": "https://3fmutual.com/",
+    "name": "3F Mutual"
   }
 }

@@ -3,13 +3,13 @@
     "learnMore": "Learn more"
   },
   "nav": {
-    "about": "Organization",
+    "about": "Team",
     "blog": "Blog",
-    "launch": "Launch App"
+    "launch": "Go to app"
   },
   "home": {
     "hero": {
-      "title": "Decentralized naming for wallets, websites, & more."
+      "title": "Decentralised naming for wallets, websites, & more."
     },
     "carousel": {
       "search": "search",
@@ -17,9 +17,13 @@
       "register": "register",
       "launch": "Launch app"
     },
+    "portableUsername": {
+      "title": "Your web3 username",
+      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+    },
     "cryptocurrencies": {
-      "title": "One Name For All of Your Cryptocurrencies",
-      "text": "No more copying and pasting long addresses. Use your ENS name to store all of your addresses and receive payments in any cryptocurrency."
+      "title": "One Name For All of Your Addresses",
+      "text": "No more copying and pasting long addresses. Use your ENS name to store all of your addresses and receive any cryptocurrency, token, or NFT."
     },
     "statistics": {
       "title": "ENS is the most widely integrated blockchain naming standard.",
@@ -29,12 +33,12 @@
     },
     "decentralisedWebsites": {
       "title": "Decentralised Websites",
-      "text": "Launch censorship-resistant decentralized websites with ENS. Upload your website to IPFS in our Manager and access it with your ENS name."
+      "text": "Launch censorship-resistant decentralised websites with ENS. Upload your website to IPFS and access it with your ENS name."
     },
     "dns": {
       "title": "Use Traditional Domains",
       "text1": "The native name suffix for ENS is .ETH, which has the full security benefits of being blockchain-native.",
-      "text2": "You can also use ENS with DNS names you already own. ENS supports many DNS names, including:"
+      "text2": "You can also use ENS with DNS names you already own. ENS supports most DNS names, including:"
     },
     "ecosystem": {
       "title": "ENS Ecosystem",
@@ -62,8 +66,8 @@
         "cta": "Subscribe"
       },
       "community": {
-        "title": "Join our Gitter community",
-        "cta": "Join Gitter"
+        "title": "Join our Discord community",
+        "cta": "Join Discord"
       },
       "forums": {
         "title": "Discuss on our forum",
@@ -79,8 +83,8 @@
     "hero": "The Ethereum Name Service is an open source blockchain-based naming protocol.",
     "aboutENS": {
       "title": "About ENS",
-      "text": "Started at the Ethereum Foundation in early 2017, ENS spun off as a separate organization in 2018. ENS is managed by the Singaporean non-profit True Names LTD and is a public good, a basic piece of Internet infrastructure that belongs to the community. We welcome all feedback and contributions!",
-      "support": "We have received generous support from:",
+      "text": "Started at the Ethereum Foundation in early 2017, ENS spun off with a separate organization in 2018. ENS development is managed by the Singaporean non-profit True Names LTD and is a public good, a basic piece of Internet infrastructure that belongs to the community. We welcome all feedback and contributions!",
+      "support": "We have received generous financial support from:",
       "support2": "Representatives of ENS participate in the greater Internet community:"
     },
     "team": {
@@ -92,7 +96,14 @@
     },
     "root": {
       "title": "Managing the ENS root",
-      "text": "To facilitate the possibility of upgrades and maintenance, and in exceptional circumstances to handle problems with ENS, the ENS root is initially owned by a four of seven multisig, with members of related projects as keyholders. In the long term, we would like the root multisig to be replaced by some form of distributed decision making process, as such systems become available."
+      "text": "To facilitate the possibility of upgrades and maintenance, the ENS root is controlled by a four of seven multisig, with members of related projects as keyholders. In the long term, we would like the root multisig to be replaced by some form of distributed decision making process, as such systems become available."
     }
+  },
+  "governance": {
+    "claim": "Claim your $ENS",
+    "discord": "Chat on Discord",
+    "discuss": "Join the forum",
+    "governance": "Documentation",
+    "mirror": "Read on Mirror"
   }
 }

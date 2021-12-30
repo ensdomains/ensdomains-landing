@@ -1,0 +1,100 @@
+{
+  "about": {
+    "aboutENS": {
+      "support": "Nous avons reçu le soutien de :",
+      "support2": "Les représentants d'ENS participent à la grande communauté Internet :",
+      "text": "Fondée à la Fondation Ethereum au début de 2017, ENS est devenu une organisation distincte en 2018. ENS est gérée par l'organisation à but non lucratif singapourienne True Names LTD et est un bien public, une infrastructure Internet de base appartenant à la communauté. Nous apprécions tous les commentaires et contributions!",
+      "title": "À propos"
+    },
+    "benefits": {
+      "text": "Bien qu'il prenne en charge un large éventail d'actifs non-Ethereum, ENS fonctionne sur la blockchain Ethereum. Cela apporte les avantages de la décentralisation, de la sécurité, de la résistance à la censure et de la programmabilité de la blockchain Ethereum au nommage sur Internet, permettant de nouvelles fonctionnalités telles que l'auto-gestion, l'utilisation dans le grand écosystème des contrats intelligents Ethereum, et plus encore.",
+      "title": "Les avantages d'Ethereum"
+    },
+    "hero": "Le service de noms Ethereum (ENS) est un protocole de nommage basé sur la blockchain open source Ethereum.",
+    "root": {
+      "text": "Pour faciliter les mises à jour et maintenances, et dans des circonstances exceptionnelles pour gérer les problèmes avec ENS, la racine ENS est initialement détenue par quatre des sept multisig, avec des membres de projets connexes en tant que détenteurs de clés. À long terme, nous aimerions que le multisig racine soit remplacé par une forme de processus de prise de décision distribué, à mesure que de tels systèmes deviennent disponibles.",
+      "title": "Gérer la racine ENS"
+    },
+    "team": {
+      "title": "Rencontrer l'équipe"
+    }
+  },
+  "c": {
+    "learnMore": "En apprendre plus"
+  },
+  "home": {
+    "additionalFeatures": {
+      "dns": "Stockez et associez des enregistrements DNS traditionnels avec certains noms.",
+      "erc721": "Les noms .ETH sont des tokens NFT compatibles ERC721.",
+      "recordType": "Créez votre propre type d'enregistrement pour votre projet.",
+      "subDomains": "Créez vos sous-domaines ENS pour vos projets.",
+      "textRecord": "Associez les informations de votre profil à votre nom ENS avec un enregistrement Texte (TXT).",
+      "title": "Fonctionnalités supplémentaires",
+      "tor": "Utilisez ENS pour accéder plus facilement aux services cachés de Tor (.onion)."
+    },
+    "carousel": {
+      "launch": "Lancer l'application",
+      "manage": "Gérer",
+      "register": "Enregistrer",
+      "search": "Rechercher"
+    },
+    "portableUsername": {
+      "title": "Your Web3 Username",
+      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+    },
+    "cryptocurrencies": {
+      "text": "Plus besoin de copier coller de longues adresses. Utilisez votre nom ENS pour stocker toutes vos adresses et recevoir des paiements dans n'importe quelle cryptomonnaie.",
+      "title": "Un Nom Pour Toutes vos Cryptomonnaies"
+    },
+    "decentralisedWebsites": {
+      "text": "Lancez des sites Web décentralisés résistants à la censure avec ENS. Déployez votre site web sur IPFS dans notre gestionnaire et accédez-y avec votre nom ENS.",
+      "title": "Site Web décentralisés"
+    },
+    "dns": {
+      "text1": "Le suffixe de nom natif pour ENS est .ETH, qui présente tous les avantages de sécurité d'être natif à la blockchain Ethereum.",
+      "text2": "Vous pouvez également utiliser ENS avec des noms DNS que vous possédez déjà. ENS prend en charge de nombreux noms DNS, notamment:",
+      "title": "Utilisez des noms de domaine traditionnels"
+    },
+    "ecosystem": {
+      "apps": "Applications",
+      "browsers": "Navigateurs",
+      "seeLess": "Voir moins",
+      "seeMore": "Voir plus",
+      "title": "Ecosystème ENS",
+      "wallets": "Portefeuilles numériques"
+    },
+    "getInvolved": {
+      "community": {
+        "cta": "Rejoindre Discord",
+        "title": "Rejoindre notre communauté Discord"
+      },
+      "documentation": {
+        "cta": "Lire la documentation",
+        "title": "Lire notre documentation"
+      },
+      "forums": {
+        "cta": "Discuter",
+        "title": "Discuter sur notre forum"
+      },
+      "subscribe": {
+        "cta": "S'abonner",
+        "title": "S'abonner à notre mailing list"
+      },
+      "title": "Participer"
+    },
+    "hero": {
+      "title": "Noms de domaine décentralisés pour portefeuilles numériques, sites web & plus."
+    },
+    "statistics": {
+      "names": "Noms",
+      "owners": "Propriétaires",
+      "services": "Intégrations",
+      "title": "ENS est le système de nommage sur Blockchain le plus utilisé dans le monde."
+    }
+  },
+  "nav": {
+    "about": "Organisation",
+    "blog": "Blog",
+    "launch": "Lancer l'application"
+  }
+}
