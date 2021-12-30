@@ -1473,6 +1473,10 @@
     "name": "Trust Wallet",
     "featuredWallet": 3
   },
+  "tutela": {
+    "link": "https://tutela.xyz/",
+    "name": "Tutela"
+  },
   "twitterenstipper": {
     "link": "https://chrome.google.com/webstore/detail/twitter-ens-tipper/gnkipbkkefgbkghkinhggmhggbmjoknp/",
     "name": "Twitter ENS Tipper"
