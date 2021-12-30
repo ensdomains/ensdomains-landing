@@ -28,6 +28,10 @@
     "link": "https://alphawallet.com",
     "name": "AlphaWallet"
   },
+  "airswap": {
+    "link": "https://www.airswap.io/#/",
+    "name": "Airswap"
+  },
   "ambo": {
     "link": "https://www.ambo.io",
     "name": "Ambo"
@@ -79,6 +83,10 @@
   "beacon": {
     "link": "https://impervious.com/beacon",
     "name": "Beacon"
+  },
+  "beholder": {
+    "link": "https://app.behodler.io/",
+    "name": "Beholder"
   },
   "bitcoindotcomwallet": {
     "link": "https://www.bitcoin.com/",
@@ -324,6 +332,10 @@
     "link": "https://debank.com/",
     "name": "DeBank"
   },
+  "decenttokenvesting": {
+    "link": "https://vesting.decentlabs.io/",
+    "name": "Decent Token Vesting"
+  },
   "decentraland": {
     "link": "https://decentraland.org/",
     "name": "Decentraland"
@@ -344,6 +356,10 @@
     "link": "https://defi777.com/",
     "name": "DeFi777"
   },
+  "defor": {
+    "link": "https://www.defor.io/",
+    "name": "Defor"
+  },
   "defswap": {
     "link": "https://defswap.eth.link/",
     "name": "Defswap"
@@ -351,6 +367,10 @@
   "democracyearth": {
     "link": "https://democracy.earth/",
     "name": "Democracy Earth"
+  },
+  "derivadex": {
+    "link": "https://insurance.derivadex.com/",
+    "name": "DerivaDEX"
   },
   "dether": {
     "link": "https://dether.io/",
@@ -733,6 +753,10 @@
     "link": "https://token.im/",
     "name": "imToken"
   },
+  "indexcoop": {
+    "link": "https://app.indexcoop.com/",
+    "name": "Index"
+  },
   "inscribe": {
     "link": "https://inscribe.so/",
     "name": "Inscribe"
@@ -841,6 +865,10 @@
     "link": "https://www.loot.exchange/",
     "name": "Loot Exchange"
   },
+  "lostpoets": {
+    "link": "https://lostpoets.xyz/",
+    "name": "Lost Poets"
+  },
   "luaswap": {
     "link": "https://app.luaswap.org/#/swap",
     "name": "LuaSwap"
@@ -890,10 +918,6 @@
     "link": "https://mevu.bet/",
     "name": "meVu"
   },
-  "mgs": {
-    "link": "https://seeder.mutant.garden/",
-    "name": "Mutant Garden Seeder"
-  },
   "milliondollartokenpage": {
     "link": "https://milliondollartokenpage.com/",
     "name": "Million Dollar Token Page"
@@ -921,6 +945,10 @@
   "moca": {
     "link": "https://museumofcryptoart.com/",
     "name": "Museum of Crypto Art"
+  },
+  "momentranks": {
+    "link": "https://momentranks.com/",
+    "name": "MomentRanks"
   },
   "moments": {
     "link": "https://www.moments.ms/",
@@ -957,6 +985,10 @@
   "multisender": {
     "link": "https://multisender.app/",
     "name": "Multisender"
+  },
+  "mgs": {
+    "link": "https://seeder.mutant.garden/",
+    "name": "Mutant Garden Seeder"
   },
   "myCrypto": {
     "link": "https://mycrypto.com/",
@@ -1271,6 +1303,10 @@
     "link": "https://sockexplorer.eth.link/",
     "name": "Sock Explorer"
   },
+  "sorbetfinance": {
+    "link": "https://www.sorbet.finance/",
+    "name": "Sorbet Finance"
+  },
   "spheron": {
     "link": "https://argoapp.net/",
     "name": "Spheron"
@@ -1336,9 +1372,17 @@
     "link": "https://github.com/ethersphere/swarm",
     "name": "Swarm"
   },
+  "swapr": {
+    "link": "https://swapr.eth.link/",
+    "name": "Swapr"
+  },
   "sybil": {
     "link": "https://sybil.org/",
     "name": "Sybil"
+  },
+  "synapse": {
+    "link": "https://synapseprotocol.com/",
+    "name": "Synapse"
   },
   "synthetix": {
     "link": "https://docs.synthetix.io/integrations/ens/",
@@ -1367,6 +1411,10 @@
   "tkreth": {
     "link": "https://tkr.eth.limo/#ens",
     "name": "TickerDAO"
+  },
+  "tokemak": {
+    "link": "https://www.tokemak.xyz/",
+    "name": "Tokemak"
   },
   "tokenallowancechecker": {
     "link": "https://tac.dappstar.io/",
@@ -1403,6 +1451,10 @@
   "totem": {
     "link": "https://totem.network",
     "name": "Totem"
+  },
+  "tracer": {
+    "link": "https://pools.tracer.finance/",
+    "name": "Tracer"
   },
   "truffle": {
     "link": "https://www.trufflesuite.com/",
