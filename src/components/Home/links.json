@@ -1133,6 +1133,10 @@
     "link": "https://pillarproject.io/",
     "name": "Pillar"
   },
+  "pinefinance": {
+    "link": "https://pine.finance/",
+    "name": "Pine.finance"
+  },
   "pixelmap": {
     "link": "https://pixelmap.io/",
     "name": "Pixel Map"
@@ -1221,6 +1225,10 @@
   "redireth": {
     "link": "http://redir.eth.link/",
     "name": "Redir.eth"
+  },
+  "relay": {
+    "link": "https://app.relaychain.com/",
+    "name": "Relay"
   },
   "request": {
     "link": "https://request.network/",
@@ -1318,6 +1326,10 @@
   "stablepay": {
     "link": "https://stablepay.io/",
     "name": "StablePay"
+  },
+  "stakedao": {
+    "link": "https://app.stakedao.org/",
+    "name": "Stake DAO"
   },
   "stakeonme": {
     "link": "https://stakeonme.com/",
