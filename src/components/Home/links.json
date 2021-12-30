@@ -28,6 +28,10 @@
     "link": "https://alphawallet.com",
     "name": "AlphaWallet"
   },
+  "airswap": {
+    "link": "https://www.airswap.io/#/",
+    "name": "Airswap"
+  },
   "ambo": {
     "link": "https://www.ambo.io",
     "name": "Ambo"
