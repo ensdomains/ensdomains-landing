@@ -1129,6 +1129,10 @@
     "link": "http://pools.vision/",
     "name": "Pools.Vision"
   },
+  "pooltogether": {
+    "link": "https://pooltogether.com/",
+    "name": "PoolTogether"
+  },
   "portal": {
     "link": "https://www.portal.network",
     "name": "Portal"
