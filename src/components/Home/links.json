@@ -304,6 +304,10 @@
     "link": "https://www.cryptowrapped.xyz/",
     "name": "Crypto Wrapped"
   },
+  "curiocards": {
+    "link": "https://curio.cards/",
+    "name": "Curio Cards"
+  },
   "cyberconnect": {
     "link": "https://cyberconnect.me/",
     "name": "Cyber Connect"
@@ -1306,6 +1310,10 @@
   "sismo": {
     "link": "https://sismo.io/",
     "name": "Sismo"
+  },
+  "slice": {
+    "link": "https://slice.so/",
+    "name": "Slice"
   },
   "snapshotlabs": {
     "link": "https://snapshot.page/",
