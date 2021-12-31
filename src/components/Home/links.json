@@ -215,6 +215,10 @@
     "name": "Cloudflare",
     "featuredBrowser": 5
   },
+  "cloutchat": {
+    "link": "https://cloutchat.xyz/",
+    "name": "Cloutchat"
+  },
   "cloversnetwork": {
     "link": "https://clovers.network/",
     "name": "Clovers Network"
@@ -425,8 +429,8 @@
     "name": "Drip"
   },
   "dxdao": {
-    "link": "https://daotalk.org/c/daos/dx-dao",
-    "name": "Dxdao"
+    "link": "https://dxdao.eth.link/",
+    "name": "DXdao"
   },
   "dynalock": {
     "link": "https://play.google.com/store/apps/details?id=cz.telematix.ethereumwallet",
@@ -597,6 +601,10 @@
     "link": "https://eth.xyz/",
     "name": "ETH.XYZ"
   },
+  "exponent": {
+    "link": "https://app.exponent.cx/",
+    "name": "Exponent"
+  },
   "exquisiteland": {
     "link": "https://exquisite.land/",
     "name": "Exquisite Land"
@@ -712,6 +720,10 @@
   "hakkafinance": {
     "link": "https://hakka.finance/",
     "name": "Hakka Finance"
+  },
+  "harvestart": {
+    "link": "https://harvest.art/",
+    "name": "Harvest.art"
   },
   "headsupeuchre": {
     "link": "https://www.headsupeuchre.com/",
@@ -865,6 +877,10 @@
     "link": "https://linkswap.app/",
     "name": "Linkswap"
   },
+  "lobby": {
+    "link": "https://www.lobby.so/",
+    "name": "Lobby"
+  },
   "localcoinswap": {
     "link": "https://localcoinswap.com/",
     "name": "LocalCoinSwap"
@@ -888,6 +904,10 @@
   "luaswap": {
     "link": "https://app.luaswap.org/#/swap",
     "name": "LuaSwap"
+  },
+  "lunarpay": {
+    "link": "https://www.lunarpay.in/",
+    "name": "Lunar Pay"
   },
   "lyrafinance": {
     "link": "https://www.lyra.finance/",
@@ -920,6 +940,10 @@
   "meetwithwallet": {
     "link": "https://meetwithwallet.xyz/",
     "name": "Meet with Wallet"
+  },
+  "messarigovernor": {
+    "link": "https://messari.io/governor/",
+    "name": "Messari Governor"
   },
   "metafora": {
     "link": "https://metafora.app/",
@@ -1059,9 +1083,17 @@
     "link": "https://niftyorchard.com/",
     "name": "Nifty Orchard"
   },
+  "nildao": {
+    "link": "https://www.nildao.xyz/",
+    "name": "Nil DAO"
+  },
   "nonfungible": {
     "link": "https://nonfungible.com/",
     "name": "NonFungible"
+  },
+  "notlarvalabs": {
+    "link": "https://notlarvalabs.com/",
+    "name": "Not Larva Labs"
   },
   "nounsdao": {
     "link": "https://nouns.wtf/",
@@ -1165,6 +1197,10 @@
     "link": "https://www.thepixelportraits.me/",
     "name": "Pixel Portraits"
   },
+  "pixletstudio": {
+    "link": "https://www.pixlet.studio/",
+    "name": "Pixlet Studio"
+  },
   "plugcool": {
     "link": "https://plug.cool/",
     "name": "plug.cool"
@@ -1250,6 +1286,10 @@
     "link": "http://redir.eth.link/",
     "name": "Redir.eth"
   },
+  "reimaginedfi": {
+    "link": "https://www.reimagined.fi/app",
+    "name": "ReFi"
+  },
   "relay": {
     "link": "https://app.relaychain.com/",
     "name": "Relay"
@@ -1306,6 +1346,10 @@
     "link": "https://www.sendusdc.net/",
     "name": "SendUSDC"
   },
+  "sentible": {
+    "link": "https://sentible.app/",
+    "name": "Sentible"
+  },
   "shapeshift": {
     "link": "https://shapeshift.com/",
     "name": "ShapeShift"
@@ -1322,6 +1366,10 @@
   "sismo": {
     "link": "https://sismo.io/",
     "name": "Sismo"
+  },
+  "skylabsnft": {
+    "link": "http://skylabsnft.com/",
+    "name": "SkyLabs"
   },
   "slice": {
     "link": "https://slice.so/",
