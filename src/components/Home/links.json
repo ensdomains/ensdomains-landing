@@ -821,6 +821,10 @@
     "link": "https://www.kingswap.io/",
     "name": "Kingswap Exchange"
   },
+  "kintsugifauceth": {
+    "link": "https://faucet.kintsugi.themerge.dev/",
+    "name": "Kintsugi FaucETH"
+  },
   "knownorigin": {
     "link": "https://knownorigin.io/",
     "name": "KnownOrigin"
