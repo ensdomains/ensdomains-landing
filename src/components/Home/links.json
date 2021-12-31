@@ -617,6 +617,10 @@
     "link": "https://impervious.com/fingertip.html",
     "name": "Fingertip"
   },
+  "findeth": {
+    "link": "https://findeth.io/",
+    "name": "FindETH"
+  },
   "fishvote": {
     "link": "https://www.fish.vote/",
     "name": "Fish.vote"
@@ -912,6 +916,10 @@
   "meetwithwallet": {
     "link": "https://meetwithwallet.xyz/",
     "name": "Meet with Wallet"
+  },
+  "metafora": {
+    "link": "https://metafora.app/",
+    "name": "Metafora"
   },
   "metamask": {
     "link": "https://metamask.io/",
