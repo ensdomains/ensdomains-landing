@@ -617,6 +617,10 @@
     "link": "https://impervious.com/fingertip.html",
     "name": "Fingertip"
   },
+  "findeth": {
+    "link": "https://findeth.io/",
+    "name": "FindETH"
+  },
   "fishvote": {
     "link": "https://www.fish.vote/",
     "name": "Fish.vote"
@@ -633,7 +637,7 @@
     "link": "https://beta.floatify.net/",
     "name": "Floatify"
   },
-  "flooredapes": {
+  "flooredape": {
     "link": "https://flooredape.io/",
     "name": "flooredApe"
   },
@@ -817,6 +821,10 @@
     "link": "https://www.kingswap.io/",
     "name": "Kingswap Exchange"
   },
+  "kintsugifauceth": {
+    "link": "https://faucet.kintsugi.themerge.dev/",
+    "name": "Kintsugi FaucETH"
+  },
   "knownorigin": {
     "link": "https://knownorigin.io/",
     "name": "KnownOrigin"
@@ -912,6 +920,10 @@
   "meetwithwallet": {
     "link": "https://meetwithwallet.xyz/",
     "name": "Meet with Wallet"
+  },
+  "metafora": {
+    "link": "https://metafora.app/",
+    "name": "Metafora"
   },
   "metamask": {
     "link": "https://metamask.io/",
