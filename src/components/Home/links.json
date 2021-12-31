@@ -777,6 +777,10 @@
     "link": "https://token.im/",
     "name": "imToken"
   },
+  "inb0x": {
+    "link": "https://inb0x.life/",
+    "name": "Inb0x"
+  },
   "indexcoop": {
     "link": "https://app.indexcoop.com/",
     "name": "Index"
@@ -1669,6 +1673,10 @@
   "zapperfi": {
     "link": "https://www.zapper.fi/",
     "name": "Zapper.fi"
+  },
+  "zang": {
+    "link": "https://beta.zang.gallery/",
+    "name": "Zang"
   },
   "zerion": {
     "link": "https://zerion.io/",
