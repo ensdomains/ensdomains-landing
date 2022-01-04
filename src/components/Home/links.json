@@ -60,6 +60,10 @@
     "link": "https://argoapp.live/",
     "name": "Argo"
   },
+  "armada": {
+    "link": "https://tryarmada.com/",
+    "name": "Armada"
+  },
   "authereum": {
     "link": "https://authereum.org/",
     "name": "Authereum"
@@ -873,13 +877,17 @@
     "link": "https://www.inzhoop.com/",
     "name": "LETH"
   },
-  "litgateway": {
-    "link": "https://litgateway.com/",
-    "name": "Lit Gateway"
+  "lilithswap": {
+    "link": "https://staking.lilithswap.com/",
+    "name": "Lilith Swap"
   },
   "linkswap": {
     "link": "https://linkswap.app/",
     "name": "Linkswap"
+  },
+  "litgateway": {
+    "link": "https://litgateway.com/",
+    "name": "Lit Gateway"
   },
   "lobby": {
     "link": "https://www.lobby.so/",
@@ -940,6 +948,10 @@
   "mathwallet": {
     "link": "https://www.mathwallet.org/en/",
     "name": "Math Wallet"
+  },
+  "mazury": {
+    "link": "https://app.mazury.xyz/",
+    "name": "Mazury"
   },
   "meetwithwallet": {
     "link": "https://meetwithwallet.xyz/",
@@ -1374,6 +1386,10 @@
   "sismo": {
     "link": "https://sismo.io/",
     "name": "Sismo"
+  },
+  "skiff": {
+    "link": "https://www.skiff.org/",
+    "name": "Skiff"
   },
   "skylabsnft": {
     "link": "http://skylabsnft.com/",
