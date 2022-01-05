@@ -749,6 +749,10 @@
     "link": "https://huddle01.com/",
     "name": "Huddle01"
   },
+  "hundredfinance": {
+    "link": "https://hundred.finance/",
+    "name": "Hundred Finance"
+  },
   "huobi": {
     "link": "https://www.huobiwallet.com/",
     "name": "Huobi"
@@ -1325,6 +1329,10 @@
   "ribbonfinance": {
     "link": "https://app.ribbon.finance/",
     "name": "Ribbon Finance"
+  },
+  "ricochetxchange": {
+    "link": "https://ricochet.exchange/",
+    "name": "Ricochet Exchange"
   },
   "rigoblock": {
     "link": "http://rigoblock.eth.link/",
