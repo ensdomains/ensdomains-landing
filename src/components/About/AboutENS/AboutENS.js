@@ -4,7 +4,7 @@ import { useTranslation, Trans } from "react-i18next"
 
 import mq from "../../../mediaQuery"
 import { importAll } from "../../../utils"
-import { Anchor, AnchorContainer } from '../../Anchor'
+import { Anchor, AnchorContainer } from "../../Anchor"
 
 const partners = importAll(
   require.context("./partners", false, /\.(png|jpe?g|svg)$/)
@@ -91,9 +91,12 @@ const List2 = styled("div")``
 export default function AboutENS(props) {
   const { t } = useTranslation()
   return (
-    <AboutENSContainer id='about-ens'>
-      <AnchorContainer href={'#about-ens'}>
-        <h3>{t("about.aboutENS.title")}<Anchor /></h3>
+    <AboutENSContainer id="about-ens">
+      <AnchorContainer href={"#about-ens"}>
+        <h3>
+          {t("about.aboutENS.title")}
+          <Anchor />
+        </h3>
       </AnchorContainer>
 
       <p className="prelede">

@@ -13,11 +13,8 @@ import leon from "./photos/leon.png"
 import richard from "./photos/richard.png"
 import muhammed from "./photos/muhammed.png"
 import alisha from "./photos/alisha.png"
-import { Anchor, AnchorContainer } from '../../Anchor'
-import {
-  MainPageBannerContainer,
-  DAOBannerContent
-} from '../../DAOBanner'
+import { Anchor, AnchorContainer } from "../../Anchor"
+import { MainPageBannerContainer, DAOBannerContent } from "../../DAOBanner"
 
 const team = [
   {
@@ -73,7 +70,7 @@ const team = [
     title: "Community Manager",
     img: alisha,
     link: "https://twitter.com/futurealisha",
-  }
+  },
 ]
 
 const TeamContainer = styled("div")`
@@ -91,7 +88,7 @@ const TeamContainer = styled("div")`
     color: #2b2b2b;
     text-align: center;
   }
-  
+
   ${mq.medium`
     padding-top: 80px;
   `};
@@ -186,19 +183,22 @@ function TeamMember({ member }) {
 export default function Team(props) {
   const { t } = useTranslation()
   return (
-    <TeamContainer id='about-team'>
+    <TeamContainer id="about-team">
       <MainPageBannerContainer>
         <DAOBannerContent />
       </MainPageBannerContainer>
 
-        <AnchorContainer href={'#about-team'}>
-          <h3>{t("about.team.title")}<Anchor /></h3>
-        </AnchorContainer>
-        <TeamMembers>
-          {team.map(member => (
-            <TeamMember member={member} />
-          ))}
-        </TeamMembers>
+      <AnchorContainer href={"#about-team"}>
+        <h3>
+          {t("about.team.title")}
+          <Anchor />
+        </h3>
+      </AnchorContainer>
+      <TeamMembers>
+        {team.map(member => (
+          <TeamMember member={member} />
+        ))}
+      </TeamMembers>
     </TeamContainer>
   )
 }

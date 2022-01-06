@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 import { Button, H2, P } from "../../Typography"
 
 import mq from "../../../mediaQuery"
-import { Anchor, AnchorContainer } from '../../Anchor'
+import { Anchor, AnchorContainer } from "../../Anchor"
 
 const Container = styled("div")`
   background: white;
@@ -69,9 +69,12 @@ const domains = [".com", ".org", ".io", ".app", ".xyz", ".art"]
 export default function TraditionalDomains(props) {
   const { t } = useTranslation()
   return (
-    <Container id='home-traditional-domains'>
-      <AnchorContainer href={'#home-traditional-domains'}>
-        <H2>{t("home.dns.title")}<Anchor /></H2>
+    <Container id="home-traditional-domains">
+      <AnchorContainer href={"#home-traditional-domains"}>
+        <H2>
+          {t("home.dns.title")}
+          <Anchor />
+        </H2>
       </AnchorContainer>
 
       <Desc>{t("home.dns.text1")}</Desc>

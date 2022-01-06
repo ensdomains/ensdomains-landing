@@ -13,8 +13,8 @@ import menu from "../assets/menu.svg"
 
 const Nav = styled("nav")`
   ${p =>
-          p.menuOpen &&
-          `
+    p.menuOpen &&
+    `
     background: #121d46;
   `};
   transition: 0.2s;
@@ -73,8 +73,8 @@ const MobileLinks = styled("ul")`
   opacity: 0;
   z-index: -1;
   ${p =>
-          p.menuOpen &&
-          `
+    p.menuOpen &&
+    `
     opacity: 1;
     transform: translateY(0);
     z-index: 1;
@@ -153,7 +153,7 @@ export default function Navigation() {
   return (
     <Nav menuOpen={menuOpen}>
       <Link to="/">
-        <Logo/>
+        <Logo />
       </Link>
 
       <div className="mobile-nav">
@@ -162,24 +162,31 @@ export default function Navigation() {
           className="reset"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {!menuOpen ? <img src={menu} width="36" css={menuOpen ? { opacity: "1" } : { opacity: "0.3" }}/> :
-            <img src={close} width="36"/>}
+          {!menuOpen ? (
+            <img
+              src={menu}
+              width="36"
+              css={menuOpen ? { opacity: "1" } : { opacity: "0.3" }}
+              alt={menu}
+            />
+          ) : (
+            <img src={close} width="36" alt="Close" />
+          )}
         </button>
       </div>
 
       <Links menuOpen={menuOpen}>
-        <NavLink href="/governance" active={true}>Governance</NavLink>
+        <NavLink href="/governance" active={true}>
+          Governance
+        </NavLink>
         <NavLink href="https://chat.ens.domains/">Community</NavLink>
         <NavLink href="/about">Team</NavLink>
         <NavLink href="https://docs.ens.domains/">Docs</NavLink>
 
-        <Separator/>
-        <LanguageSwitcher/>
+        <Separator />
+        <LanguageSwitcher />
         <a href="https://app.ens.domains">
-          <Launch
-            style={{ opacity: 1 }}
-            text={t("nav.launch")}
-          />
+          <Launch style={{ opacity: 1 }} text={t("nav.launch")} />
         </a>
       </Links>
 
@@ -198,9 +205,7 @@ export default function Navigation() {
         </li>
         <li>
           <a href="https://app.ens.domains">
-            <Launch
-              text={t("nav.launch")}
-            />
+            <Launch text={t("nav.launch")} />
           </a>
         </li>
       </MobileLinks>

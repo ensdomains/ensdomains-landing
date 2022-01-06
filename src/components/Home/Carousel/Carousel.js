@@ -94,7 +94,7 @@ const CarouselContainer = styled("div")`
   }
 `
 
-const BG = styled("div")`
+const Bg = styled("div")`
   position: absolute;
   height: 150px;
   width: 100%;
@@ -176,7 +176,7 @@ export default function HeroCarousel(props) {
   const { t } = useTranslation()
   return (
     <CarouselContainer>
-      <BG />
+      <Bg />
       <Carousel
         centerMode
         swipeable={true}

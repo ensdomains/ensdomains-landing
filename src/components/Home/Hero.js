@@ -2,10 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import mq from "../../mediaQuery"
-import {
-  MainPageBannerContainer,
-  DAOBannerContent
-} from '../DAOBanner'
+import { MainPageBannerContainer, DAOBannerContent } from "../DAOBanner"
 
 const Title = styled("h2")`
   font-size: 24px;

@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 import { H2, P as DefaultP } from "../../Typography"
 import { importAll } from "../../../utils"
 import wallet from "./wallet.svg"
-import { Anchor, AnchorContainer } from '../../Anchor'
+import { Anchor, AnchorContainer } from "../../Anchor"
 
 const HeroContainer = styled("div")`
   padding: 120px 20px 0px 20px;
@@ -83,23 +83,26 @@ export default function Cryptocurrencies(props) {
   const { t } = useTranslation()
   const x = useTransform(scrollYProgress, [0, 1], [0, -1000])
   return (
-      <HeroContainer id='home-title'>
-        <Wrapper>
-          <AnchorContainer href={'#home-title'}>
-            <H2>{t("home.cryptocurrencies.title")}<Anchor /></H2>
-          </AnchorContainer>
-          <P>{t("home.cryptocurrencies.text")}</P>
+    <HeroContainer id="home-title">
+      <Wrapper>
+        <AnchorContainer href={"#home-title"}>
+          <H2>
+            {t("home.cryptocurrencies.title")}
+            <Anchor />
+          </H2>
+        </AnchorContainer>
+        <P>{t("home.cryptocurrencies.text")}</P>
 
-          <WalletAnimation>
-            <img className="wallet" src={wallet} alt={t("wallet")} />
-            <Coins style={{ x: x }}>
-              {coins.map((coin, index) => {
-                console.log('coin: ', coin)
-                return <img src={coin.src.default} alt={coin.name} key={index} />
-              })}
-            </Coins>
-          </WalletAnimation>
-        </Wrapper>
-      </HeroContainer>
+        <WalletAnimation>
+          <img className="wallet" src={wallet} alt={t("wallet")} />
+          <Coins style={{ x: x }}>
+            {coins.map((coin, index) => {
+              console.log("coin: ", coin)
+              return <img src={coin.src.default} alt={coin.name} key={index} />
+            })}
+          </Coins>
+        </WalletAnimation>
+      </Wrapper>
+    </HeroContainer>
   )
 }

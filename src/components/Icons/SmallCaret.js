@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "@emotion/styled"
 
-const SVG = styled("svg")``
+const Svg = styled("svg")``
 
 export default function SmallCaret({ className }) {
   return (
-    <SVG
+    <Svg
       className={className}
       width="12"
       height="7"
@@ -16,6 +16,6 @@ export default function SmallCaret({ className }) {
         fill="white"
         fill-rule="evenodd"
       />
-    </SVG>
+    </Svg>
   )
 }

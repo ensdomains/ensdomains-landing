@@ -1,11 +1,11 @@
 import React from "react"
 
-import styled from '@emotion/styled/macro'
-import mq from '../mediaQuery'
+import styled from "@emotion/styled/macro"
+import mq from "../mediaQuery"
 
-import { motion } from 'framer-motion'
-import ENSIcon from './Icons/ENSIcon.svg'
-import Arrow from './Icons/Arrow.svg'
+import { motion } from "framer-motion"
+import ENSIcon from "./Icons/ENSIcon.svg"
+import Arrow from "./Icons/Arrow.svg"
 
 const LogoSmall = styled(motion.img)`
   padding: 10px;
@@ -48,7 +48,7 @@ const BannerContent = styled(`div`)`
 `
 
 export const MainPageBannerContainer = styled(`div`)`
-  z-index:9000;
+  z-index: 9000;
   position: absolute;
   top: 97px;
   background: #ffffff;
@@ -67,7 +67,11 @@ export const MainPageBannerContainer = styled(`div`)`
 
 export function DAOBannerContent() {
   return (
-    <Link target="_blank" rel="noreferrer" href="https://ens.mirror.xyz/5cGl-Y37aTxtokdWk21qlULmE1aSM_NuX9fstbOPoWU">
+    <Link
+      target="_blank"
+      rel="noreferrer"
+      href="https://ens.mirror.xyz/5cGl-Y37aTxtokdWk21qlULmE1aSM_NuX9fstbOPoWU"
+    >
       <LogoSmall src={ENSIcon} />
       <div>
         <BannerTitle>$ENS Now Available for Claiming.</BannerTitle>
