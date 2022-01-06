@@ -877,6 +877,10 @@
     "link": "https://lazy3d.com/",
     "name": "Lazy3D"
   },
+  "lemmafinance": {
+    "link": "https://www.lemma.finance/",
+    "name": "Lemma Finance"
+  },
   "leth": {
     "link": "https://www.inzhoop.com/",
     "name": "LETH"
@@ -1041,6 +1045,10 @@
   "mstable": {
     "link": "https://mstable.app/",
     "name": "mStable"
+  },
+  "multichain": {
+    "link": "https://multichain.org/",
+    "name": "Multichain"
   },
   "multis": {
     "link": "https://multis.co/",
@@ -1361,6 +1369,10 @@
   "securedns": {
     "link": "https://github.com/Texnomic/SecureDNS",
     "name": "SecureDNS"
+  },
+  "seedlefinance": {
+    "link": "https://www.seedle.finance/",
+    "name": "Seedle Finance"
   },
   "sentible": {
     "link": "https://sentible.app/",
