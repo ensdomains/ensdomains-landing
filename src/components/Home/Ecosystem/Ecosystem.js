@@ -109,6 +109,9 @@ const More = styled("p")`
     cursor: pointer;
   }
 `
+const Title = styled("div")`
+  margin-top: 5px;
+`
 
 export default function Ecosystem(props) {
   const { t } = useTranslation()
@@ -181,7 +184,7 @@ export default function Ecosystem(props) {
       <Section>
         <h3>
           <img src={walletSvg} alt="wallet svg" />
-          {t("home.ecosystem.wallets")}
+          <Title>{t("home.ecosystem.wallets")}</Title>
         </h3>
         <Grid animate={{ height: moreWallets ? "auto" : "200px" }}>
           {sortedWallets.map(app => (
@@ -197,7 +200,7 @@ export default function Ecosystem(props) {
       <Section>
         <h3>
           <img src={appSvg} alt="app svg" />
-          {t("home.ecosystem.apps")}
+          <Title>{t("home.ecosystem.apps")}</Title>
         </h3>
         <Grid animate={{ height: moreApps ? "auto" : "200px" }}>
           {sortedApps.map(app => (
@@ -213,7 +216,7 @@ export default function Ecosystem(props) {
       <Section>
         <h3>
           <img src={browserSvg} alt="browser svg" />
-          {t("home.ecosystem.browsers")}
+          <Title>{t("home.ecosystem.browsers")}</Title>
         </h3>
         <Grid animate={{ height: moreBrowsers ? "auto" : "200px" }}>
           {sortedBrowsers.map(app => (
