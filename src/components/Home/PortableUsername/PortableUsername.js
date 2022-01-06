@@ -60,6 +60,7 @@ const AvatarImg = styled('img')`
 const AvatarText = styled('div')`
   font-size: 45px;
   font-weight: 300;
+  margin-top: 7px;
 `
 
 const Avatar = () => {
