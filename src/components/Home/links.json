@@ -472,10 +472,6 @@
     "link": "https://eipnft.io/home",
     "name": "eipnft.io"
   },
-  "eliteswap": {
-    "link": "https://eliteswap.io/#/swap",
-    "name": "Elite Swap"
-  },
   "elyfi": {
     "link": "https://www.elyfi.world/en",
     "name": "ELYFI"
@@ -592,10 +588,6 @@
   "etherscanquick": {
     "link": "https://chrome.google.com/webstore/detail/etherscan-quick/nplfockicpoicmabmpjjkdiepdajflbn",
     "name": "Etherscan Quick"
-  },
-  "ethsign": {
-    "link": "https://ethsign.xyz/#/",
-    "name": "EthSign"
   },
   "ethsimple": {
     "link": "https://ethsimple.com/",
@@ -1135,10 +1127,6 @@
     "link": "https://app.olympusdao.finance/",
     "name": "OlympusDAO"
   },
-  "onemillionsdevs": {
-    "link": "https://join.onemilliondevs.com/",
-    "name": "OneMillionsDevs"
-  },
   "onjuno": {
     "link": "https://onjuno.com/crypto",
     "name": "OnJuno"
@@ -1265,10 +1253,6 @@
     "link": "https://www.portal.network",
     "name": "Portal"
   },
-  "portle": {
-    "link": "https://portle.io/",
-    "name": "Portle"
-  },
   "primitivefinance": {
     "link": "https://primitive.finance/",
     "name": "Primitive"
@@ -1374,10 +1358,6 @@
     "link": "https://github.com/Texnomic/SecureDNS",
     "name": "SecureDNS"
   },
-  "sendusdc": {
-    "link": "https://www.sendusdc.net/",
-    "name": "SendUSDC"
-  },
   "sentible": {
     "link": "https://sentible.app/",
     "name": "Sentible"
@@ -1431,10 +1411,6 @@
     "link": "https://argoapp.net/",
     "name": "Spheron"
   },
-  "spiderdex": {
-    "link": "https://www.spiderdex.com/",
-    "name": "SpiderDEX"
-  },
   "stablepay": {
     "link": "https://stablepay.io/",
     "name": "StablePay"
@@ -1475,10 +1451,6 @@
   "superfluid": {
     "link": "https://www.superfluid.finance/",
     "name": "Superfluid"
-  },
-  "sureswap": {
-    "link": "https://beta.sureswap.app/",
-    "name": "SureSwap"
   },
   "sushiswap": {
     "link": "https://sushi.com/",
@@ -1673,10 +1645,6 @@
   "wip2p": {
     "link": "http://ens.wip2p.com/",
     "name": "WIP2P"
-  },
-  "worldwidewebb": {
-    "link": "https://worldwideweb3.com/",
-    "name": "Worldwide Webb"
   },
   "worthinnft": {
     "link": "https://www.worthinnft.com/",
