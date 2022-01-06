@@ -589,6 +589,10 @@
     "link": "https://chrome.google.com/webstore/detail/etherscan-quick/nplfockicpoicmabmpjjkdiepdajflbn",
     "name": "Etherscan Quick"
   },
+  "ethsign": {
+    "link": "https://ethsign.xyz/#/",
+    "name": "EthSign"
+  },
   "ethsimple": {
     "link": "https://ethsimple.com/",
     "name": "ETHSimple"
