@@ -1322,6 +1322,10 @@
     "link": "https://request.network/",
     "name": "Request"
   },
+  "revery": {
+    "link": "https://revery.so/",
+    "name": "Revery"
+  },
   "revokecash": {
     "link": "https://revoke.cash/",
     "name": "Revoke.Cash"
