@@ -292,6 +292,10 @@
     "link": "https://croco.finance/",
     "name": "Croco Finance"
   },
+  "crocrow": {
+    "link": "https://crocrow.com/",
+    "name": "CRO CROW"
+  },
   "cryptex": {
     "link": "https://cryptex.finance/",
     "name": "Cryptex Finance"
@@ -1442,6 +1446,10 @@
   "stakeonme": {
     "link": "https://stakeonme.com/",
     "name": "StakeOnMe"
+  },
+  "stakessocial": {
+    "link": "https://stakes.social/",
+    "name": "Stakes.social"
   },
   "stakewise": {
     "link": "https://stakewise.io/",
