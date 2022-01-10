@@ -92,6 +92,10 @@
     "link": "https://impervious.com/beacon",
     "name": "Beacon"
   },
+  "beefyfinance": {
+    "link": "https://www.beefy.finance/",
+    "name": "Beefy.finance"
+  },
   "beholder": {
     "link": "https://app.behodler.io/",
     "name": "Beholder"
@@ -531,6 +535,10 @@
   "ethaf": {
     "link": "https://eth.af/",
     "name": "Eth.af"
+  },
+  "etharmy": {
+    "link": "https://eth.army/",
+    "name": "Eth.army"
   },
   "ethblockart": {
     "link": "https://ethblock.art/",
@@ -1143,6 +1151,10 @@
     "link": "https://app.olympusdao.finance/",
     "name": "OlympusDAO"
   },
+  "omnibridge": {
+    "link": "https://omni.xdaichain.com/",
+    "name": "OmniBridge"
+  },
   "onjuno": {
     "link": "https://onjuno.com/crypto",
     "name": "OnJuno"
@@ -1427,6 +1439,10 @@
     "link": "https://sockexplorer.eth.link/",
     "name": "Sock Explorer"
   },
+  "songaday": {
+    "link": "https://songaday.world/",
+    "name": "Song a Day"
+  },
   "sorbetfinance": {
     "link": "https://www.sorbet.finance/",
     "name": "Sorbet Finance"
@@ -1666,6 +1682,10 @@
     "link": "https://web3-images.kibalabs.com/",
     "name": "Web3 Images"
   },
+  "wepiggy": {
+    "link": "https://www.wepiggy.com/",
+    "name": "WePiggy"
+  },
   "whiteswap": {
     "link": "https://ws.exchange/",
     "name": "WhiteSwap"
@@ -1721,6 +1741,10 @@
   "zora": {
     "link": "https://zora.co/",
     "name": "Zora"
+  },
+  "0exchange": {
+    "link": "https://app.0.exchange/",
+    "name": "0 Exchange"
   },
   "1inch": {
     "link": "https://1inch.io/",
