@@ -1427,6 +1427,10 @@
     "link": "https://sockexplorer.eth.link/",
     "name": "Sock Explorer"
   },
+  "songaday": {
+    "link": "https://songaday.world/",
+    "name": "Song a Day"
+  },
   "sorbetfinance": {
     "link": "https://www.sorbet.finance/",
     "name": "Sorbet Finance"
