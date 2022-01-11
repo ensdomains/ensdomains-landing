@@ -8,7 +8,7 @@ import mailingList from "../assets/mailingList.svg"
 import documentation from "../assets/documentation.svg"
 import community from "../assets/community.svg"
 import forum from "../assets/forum.svg"
-import { Anchor, AnchorContainer } from './Anchor'
+import { Anchor, AnchorContainer } from "./Anchor"
 
 const links = [
   {
@@ -118,8 +118,13 @@ const ExternalLink = styled("a")`
 export default function GetInvolved(props) {
   const { t } = useTranslation()
   return (
-    <Container id='get-involved'>
-      <AnchorContainer href={'#get-involved'}><H2>{t("home.getInvolved.title")}<Anchor /></H2></AnchorContainer>
+    <Container id="get-involved">
+      <AnchorContainer href={"#get-involved"}>
+        <H2>
+          {t("home.getInvolved.title")}
+          <Anchor />
+        </H2>
+      </AnchorContainer>
       <Links>
         {links.map(l => (
           <LinkItem key={l.name}>

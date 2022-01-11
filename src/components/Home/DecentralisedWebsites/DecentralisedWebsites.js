@@ -10,7 +10,7 @@ import website2 from "./website2.png"
 import website3 from "./website3.png"
 import blur1 from "./blur1.jpg"
 import blur2 from "./blur2.jpg"
-import { Anchor, AnchorContainer } from '../../Anchor'
+import { Anchor, AnchorContainer } from "../../Anchor"
 
 const Container = styled("div")`
   background: white;
@@ -58,9 +58,12 @@ export default function DecentralisedWebsites(props) {
   })
 
   return (
-    <Container id='home-decentralised-websites'>
-      <AnchorContainer href={'#home-decentralised-websites'}>
-        <H2>{t("home.decentralisedWebsites.title")}<Anchor /></H2>
+    <Container id="home-decentralised-websites">
+      <AnchorContainer href={"#home-decentralised-websites"}>
+        <H2>
+          {t("home.decentralisedWebsites.title")}
+          <Anchor />
+        </H2>
       </AnchorContainer>
 
       <P>{t("home.decentralisedWebsites.text")}</P>

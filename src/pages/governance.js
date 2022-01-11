@@ -75,12 +75,17 @@ const ContentInnerInner = styled("div")`
 `
 
 const MainBox = styled("a")`
-  background: linear-gradient(330.4deg, #44BCF0 4.54%, #7298F8 59.2%, #A099FF 148.85%);
+  background: linear-gradient(
+    330.4deg,
+    #44bcf0 4.54%,
+    #7298f8 59.2%,
+    #a099ff 148.85%
+  );
   border-radius: 30px;
   position: relative;
   height: 300px;
   text-decoration: none;
-  transition: all 0.2s ease-in-out; 
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     transform: scale(101%);
@@ -109,7 +114,7 @@ const MainBoxBottomText = styled("div")`
   font-size: 32px;
   line-height: 110%;
   letter-spacing: -0.5px;
-  color: #FFFFFF;
+  color: #ffffff;
 `
 
 const Box = styled("a")`
@@ -119,7 +124,7 @@ const Box = styled("a")`
   border-radius: 24px;
   height: 200px;
   text-decoration: none;
-  transition: all 0.2s ease-in-out; 
+  transition: all 0.2s ease-in-out;
   &:hover {
     transform: scale(102%);
   }
@@ -146,13 +151,9 @@ const MainBoxContent = styled(BoxContent)`
   padding: 36px;
 `
 
-const BoxContentTop = styled("div")`
+const BoxContentTop = styled("div")``
 
-`
-
-const BoxContentBottom = styled("div")`
-
-`
+const BoxContentBottom = styled("div")``
 
 const Footer = styled("div")`
   flex-shrink: 0;
@@ -160,9 +161,9 @@ const Footer = styled("div")`
   align-items: center;
   justify-content: flex-end;
   padding: 20px 20px 20px 0;
-  
-  &>a {
-    margin-right: 10px;    
+
+  & > a {
+    margin-right: 10px;
   }
 `
 
@@ -173,7 +174,7 @@ const standardBoxData = [
     color: "#854BFF",
     backgroundColor: "#E1DAF7",
     borderColor: "#C0B2EA",
-    link: 'https://chat.ens.domains/'
+    link: "https://chat.ens.domains/",
   },
   {
     icon: discuss,
@@ -181,7 +182,7 @@ const standardBoxData = [
     color: "#DE7224",
     backgroundColor: "rgba(238, 148, 83, 0.1)",
     borderColor: "#F8D1B6",
-    link: 'https://discuss.ens.domains/'
+    link: "https://discuss.ens.domains/",
   },
   {
     icon: governance,
@@ -189,7 +190,7 @@ const standardBoxData = [
     color: "#4D90F1",
     backgroundColor: "rgba(77, 144, 241, 0.1)",
     borderColor: "#B0D0FF",
-    link: 'https://docs.ens.domains/v/governance/'
+    link: "https://docs.ens.domains/v/governance/",
   },
   {
     icon: mirror,
@@ -197,8 +198,8 @@ const standardBoxData = [
     color: "#2C2C32",
     backgroundColor: "#E8E7EF",
     borderColor: "#D2CFE4",
-    link: 'https://ens.mirror.xyz/'
-  }
+    link: "https://ens.mirror.xyz/",
+  },
 ]
 
 const BottomText = styled("div")`
@@ -211,10 +212,16 @@ const BottomText = styled("div")`
   color: ${p => p.color};
 `
 
-const BoxIcon = styled('img')`
-`
+const BoxIcon = styled("img")``
 
-const StandardBox = ({ color, backgroundColor, text, icon, borderColor, link }) => {
+const StandardBox = ({
+  color,
+  backgroundColor,
+  text,
+  icon,
+  borderColor,
+  link,
+}) => {
   const { t } = useTranslation()
 
   return (
@@ -222,18 +229,16 @@ const StandardBox = ({ color, backgroundColor, text, icon, borderColor, link }) 
       <BoxContent>
         <BoxContentTop>
           <BoxIcon
-            style={{width: icon === governance ? '40px' : 'initial'}}
+            style={{ width: icon === governance ? "40px" : "initial" }}
             src={icon}
           />
         </BoxContentTop>
         <BoxContentBottom>
-          <BottomText {...{ color }}>
-            {t(`governance.${text}`)}
-          </BottomText>
+          <BottomText {...{ color }}>{t(`governance.${text}`)}</BottomText>
         </BoxContentBottom>
       </BoxContent>
     </Box>
-  );
+  )
 }
 
 export default function Governance(props) {
@@ -241,7 +246,7 @@ export default function Governance(props) {
 
   return (
     <Layout {...props}>
-      <Navigation/>
+      <Navigation />
       <Container>
         <Content>
           <ContentInner>
@@ -250,9 +255,7 @@ export default function Governance(props) {
                 <MainBoxInner>
                   <MainBoxContent>
                     <BoxContentTop>
-                      <BoxIcon
-                        src={whiteENS}
-                      />
+                      <BoxIcon src={whiteENS} />
                     </BoxContentTop>
                     <BoxContentBottom>
                       <MainBoxBottomText>
@@ -268,17 +271,26 @@ export default function Governance(props) {
         </Content>
         <Footer>
           <a href={"https://twitter.com/ensdomains"}>
-            <img src={twitterGrey} width="34" css={{marginTop: '2px'}} />
+            <img
+              src={twitterGrey}
+              width="34"
+              css={{ marginTop: "2px" }}
+              alt="Twitter"
+            />
           </a>
           <a href={"https://discuss.ens.domains/"}>
-            <img src={discussGrey} width="33" />
+            <img src={discussGrey} width="33" alt="Discuss" />
           </a>
           <a href={"https://chat.ens.domains/"}>
-            <img src={discordGrey} width="30" css={{marginLeft: '4px'}}/>
+            <img
+              src={discordGrey}
+              width="30"
+              css={{ marginLeft: "4px" }}
+              alt="Discord"
+            />
           </a>
         </Footer>
       </Container>
-
     </Layout>
   )
 }
