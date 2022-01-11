@@ -18,8 +18,8 @@
       "launch": "打开 App"
     },
     "portableUsername": {
-      "title": "Your Web3 Username",
-      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+      "title": "你的 Web3 用户名",
+      "text": "拒绝沙箱式用户名。真正掌控您自己的用户名，并在各种服务中使用您存储的头像和其他个人资料。"
     },
     "cryptocurrencies": {
       "title": "让您的各种加密货币拥有一个统一的域名",
@@ -64,7 +64,7 @@
         "cta": "去订阅"
       },
       "community": {
-        "title": "加入我们的 Discord 交流",
+        "title": "加入我们的 Discord 社区",
         "cta": "去交流"
       },
       "forums": {
@@ -81,9 +81,9 @@
     "hero": "以太坊名称服务是一种基于开源区块链的命名协议。",
     "aboutENS": {
       "title": "关于 ENS",
-      "text": "ENS 于 2017 年初在以太坊基金会成立，2018 年独立运营。ENS 由新加坡非营利性组织 True Names LTD 管理，是一项公益事业，是属于社区的互联网基础设施的一部分。我们欢迎任何贡献和反馈！",
-      "support": "我们得到的慷慨支持来自：",
-      "support2": "ENS 的代表们参与着更庞大的互联网社区："
+      "text": "ENS 于 2017 年初在以太坊基金会成立，2018 年独立运营。ENS 由新加坡非营利性组织 True Names LTD 管理，是一项公益事业，是属于社区的互联网基础设施的一部分。我们欢迎任何贡献和反馈!",
+      "support": "我们得到的慷慨支持来自: ",
+      "support2": "ENS 的代表们参与着更庞大的互联网社区: "
     },
     "team": {
       "title": "团队成员"
