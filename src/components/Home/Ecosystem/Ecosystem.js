@@ -87,6 +87,12 @@ const GridItemContainer = styled("a")`
     color: #5284ff;
     text-align: center;
   }
+
+  :hover {
+    h3 {
+      color: #1256ff;
+    }
+  }
 `
 
 function GridItem({ app }) {
