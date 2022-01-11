@@ -508,6 +508,10 @@
     "link": "https://ensportal.com/",
     "name": "ENSPortal"
   },
+  "enstools": {
+    "link": "https://ens.tools/",
+    "name": "ENS.tools"
+  },
   "ensuser": {
     "link": "https://ensuser.com/",
     "name": "ENSUser"
