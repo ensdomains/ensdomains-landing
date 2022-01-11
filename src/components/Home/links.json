@@ -137,6 +137,10 @@
     "link": "https://blocto.portto.io/en/",
     "name": "Blocto"
   },
+  "bombmoney": {
+    "link": "http://bomb.money/",
+    "name": "bomb.money"
+  },
   "boxswap": {
     "link": "https://app.boxswap.io/#/swap",
     "name": "Boxswap"
@@ -1454,6 +1458,10 @@
   "spheron": {
     "link": "https://argoapp.net/",
     "name": "Spheron"
+  },
+  "squeeth": {
+    "link": "https://squeeth.com/",
+    "name": "Squeeth"
   },
   "stablepay": {
     "link": "https://stablepay.io/",
