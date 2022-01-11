@@ -64,7 +64,7 @@ export const importAll = (r, extraData = {}) =>
     }
   })
 
-export const Gap = styled('div')`
+export const Gap = styled("div")`
   width: 100%;
   height: ${p => p.size * 4}px;
 `

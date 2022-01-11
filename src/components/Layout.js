@@ -22,28 +22,30 @@ export default function Layout({ children, data, location }) {
         meta={[
           {
             name: "description",
-            content: "Your web3 username, a name for all your cryptocurrency addresses, and decentralised websites."
+            content:
+              "Your web3 username, a name for all your cryptocurrency addresses, and decentralised websites.",
           },
           {
             name: "keywords",
-            content: "ENS, Ethereum, Ethereum Name Service, .eth domains, blockchain domains"
+            content:
+              "ENS, Ethereum, Ethereum Name Service, .eth domains, blockchain domains",
           },
           {
             name: "twitter:card",
-            content: "summary"
+            content: "summary",
           },
           {
             name: "twitter:title",
-            content: "Ethereum Name Service"
+            content: "Ethereum Name Service",
           },
           {
             property: "og:image",
-            content: `https://ens.domains${twitter}`
-          }
+            content: `https://ens.domains${twitter}`,
+          },
         ]}
         title={getTitle(location.pathname)}
         link={[
-          { rel: "shortcut icon", type: "image/x-icon", href: `${favicon}` }
+          { rel: "shortcut icon", type: "image/x-icon", href: `${favicon}` },
         ]}
       />
       <Global

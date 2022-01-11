@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion"
 import styled from "@emotion/styled"
-import React, { useState, useContext } from "react"
-import { useTranslation } from "react-i18next"
+import React, { useState } from "react"
 
 import { Link, useI18next, I18nextContext } from "gatsby-plugin-react-i18next"
 
@@ -62,10 +61,6 @@ const LANGUAGES = [
   },
 ]
 
-function getLang(lang) {
-  return LANGUAGES.find(l => l.value === lang)
-}
-
 const ActiveLanguage = styled("div")`
   color: #2b2b2b;
   text-transform: uppercase;
@@ -99,11 +94,11 @@ const LanguageSwitcherContainer = styled("div")`
   padding-right: 0px;
   margin-right: 12px;
   height: 48px;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   transition: all 0.2s ease-in-out;
   &:hover {
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
   }
   ${props =>
     props.mobile
@@ -200,7 +195,7 @@ const Ball = styled("div")`
   `}
 `
 
-const LanguageLabel = styled('span')`
+const LanguageLabel = styled("span")`
   font-family: JakartaSans;
   font-style: normal;
   font-weight: bold;
@@ -224,7 +219,9 @@ export default function LanguageSwitcher({ mobile }) {
         mobile={mobile}
         onClick={() => setShowDropdown(show => !show)}
       >
-        <LanguageLabel>{mobile ? selectedLanguage.label : selectedLanguage.value}</LanguageLabel>
+        <LanguageLabel>
+          {mobile ? selectedLanguage.label : selectedLanguage.value}
+        </LanguageLabel>
         <RotatingSmallCaret
           start="top"
           rotated={showDropdown}
@@ -242,7 +239,7 @@ export default function LanguageSwitcher({ mobile }) {
             {LANGUAGES.map(language => {
               return (
                 <Link to={originalPath} language={language.value}>
-                  <span css={{paddingRight: "12px"}}>{language.label}</span>
+                  <span css={{ paddingRight: "12px" }}>{language.label}</span>
                   <Ball selected={selectedLanguage.value === language.value} />
                 </Link>
               )
