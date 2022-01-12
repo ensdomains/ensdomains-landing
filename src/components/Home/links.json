@@ -276,6 +276,10 @@
     "link": "https://colorverse.io/",
     "name": "Colorverse"
   },
+  "compvote": {
+    "link": "https://comp.vote/",
+    "name": "Comp.vote"
+  },
   "connext": {
     "link": "https://connextscan.io/",
     "name": "Connext Explorer"
@@ -1115,6 +1119,10 @@
     "link": "https://nftscollectors.app/",
     "name": "NFTs Collectors"
   },
+  "nidhidao": {
+    "link": "https://www.nidhidao.finance/",
+    "name": "Nidhi DAO"
+  },
   "niftex": {
     "link": "https://www.niftex.org/",
     "name": "NIFTEX"
@@ -1653,6 +1661,10 @@
     "link": "https://uniswap.io/",
     "name": "Uniswap",
     "featuredApp": 1
+  },
+  "univote": {
+    "link": "https://uni.vote/",
+    "name": "Uni.vote"
   },
   "unlock": {
     "link": "https://unlock-protocol.com/",
