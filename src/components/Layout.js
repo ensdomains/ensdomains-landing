@@ -50,6 +50,9 @@ export default function Layout({ children, data, location }) {
       />
       <Global
         styles={css`
+          html, body, #___gatsby, #gatsby-focus-wrapper {
+            height: ${location?.pathname === '/governance' ? '100%' : 'initial'};
+          }
           body {
             font-family: Overpass;
           }

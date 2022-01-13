@@ -13,6 +13,7 @@ import leon from "./photos/leon.png"
 import richard from "./photos/richard.png"
 import muhammed from "./photos/muhammed.png"
 import alisha from "./photos/alisha.png"
+import taytems from "./photos/taytems.png"
 import { Anchor, AnchorContainer } from "../../Anchor"
 import { MainPageBannerContainer, DAOBannerContent } from "../../DAOBanner"
 
@@ -70,6 +71,12 @@ const team = [
     title: "Community Manager",
     img: alisha,
     link: "https://twitter.com/futurealisha",
+  },
+  {
+    name: "taytems.eth",
+    title: "Frontend Developer",
+    img: taytems,
+    link: "https://twitter.com/taytemss",
   },
 ]
 
