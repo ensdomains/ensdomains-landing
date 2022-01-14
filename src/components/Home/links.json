@@ -512,6 +512,10 @@
     "link": "https://ens.me/",
     "name": "ENS.me"
   },
+  "ensparty": {
+    "link": "https://ens-party.vercel.app/",
+    "name": "ENS Party"
+  },
   "ensportal": {
     "link": "https://ensportal.com/",
     "name": "ENSPortal"
@@ -724,6 +728,10 @@
   "gopocket": {
     "link": "https://gopocket.security/",
     "name": "Go Pocket"
+  },
+  "grapefinance": {
+    "link": "https://grapefinance.app/",
+    "name": "Grape Finance"
   },
   "gridplus": {
     "link": "https://gridplus.io/",
@@ -1430,6 +1438,10 @@
     "link": "https://tryshowtime.com/",
     "name": "Showtime",
     "featuredApp": 3
+  },
+  "sliksafe": {
+    "link": "https://www.sliksafe.com/",
+    "name": "Slik Safe"
   },
   "sismo": {
     "link": "https://sismo.io/",
