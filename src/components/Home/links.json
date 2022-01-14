@@ -1427,6 +1427,10 @@
     "name": "Showtime",
     "featuredApp": 3
   },
+  "sliksafe": {
+    "link": "https://www.sliksafe.com/",
+    "name": "Slik Safe"
+  },
   "sismo": {
     "link": "https://sismo.io/",
     "name": "Sismo"
