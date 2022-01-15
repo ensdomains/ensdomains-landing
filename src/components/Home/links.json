@@ -512,6 +512,10 @@
     "link": "https://ens.me/",
     "name": "ENS.me"
   },
+  "ensnamepicker": {
+    "link": "https://www.ensnamepicker.io/",
+    "name": "ENS Name Picker"
+  },
   "ensparty": {
     "link": "https://ens-party.vercel.app/",
     "name": "ENS Party"
