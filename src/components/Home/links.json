@@ -166,6 +166,10 @@
     "link": "https://wallet.burnerfactory.com/",
     "name": "Burner Wallet"
   },
+  "buycoins": {
+    "link": "https://buycoins.africa/",
+    "name": "Buycoins"
+  },
   "buymeacryptocoffee": {
     "link": "https://www.buymeacryptocoffee.xyz/",
     "name": "Buy Me a Crypto Coffee"
