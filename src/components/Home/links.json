@@ -452,6 +452,10 @@
     "link": "https://www.dripscore.com/",
     "name": "Drip"
   },
+  "drips": {
+    "link": "https://drips.network/",
+    "name": "Drips"
+  },
   "dxdao": {
     "link": "https://dxdao.eth.link/",
     "name": "DXdao"
