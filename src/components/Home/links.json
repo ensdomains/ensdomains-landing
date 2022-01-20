@@ -340,6 +340,14 @@
     "link": "https://cyberconnect.me/",
     "name": "Cyber Connect"
   },
+  "dakiya": {
+    "link": "https://www.dakiya.xyz/",
+    "name": "Dakiya"
+  },
+  "daohaus": {
+    "link": "https://daohaus.club/",
+    "name": "DAOhaus"
+  },
   "daostack": {
     "link": "https://daostack.io/",
     "name": "DAOStack"
@@ -451,6 +459,10 @@
   "drip": {
     "link": "https://www.dripscore.com/",
     "name": "Drip"
+  },
+  "drips": {
+    "link": "https://drips.network/",
+    "name": "Drips"
   },
   "dxdao": {
     "link": "https://dxdao.eth.link/",
@@ -1329,6 +1341,10 @@
     "link": "https://www.pumabrowser.com/",
     "name": "Puma"
   },
+  "purrnelopescountryclub": {
+    "link": "https://www.purrnelopescountryclub.com/claim/ens",
+    "name": "Purrnelope's Country Club"
+  },
   "punkscapes": {
     "link": "https://punkscape.xyz/",
     "name": "Punkscapes"
@@ -1495,6 +1511,10 @@
     "link": "https://argoapp.net/",
     "name": "Spheron"
   },
+  "squiddao": {
+    "link": "https://squid.xyz/",
+    "name": "SquidDAO"
+  },
   "squeeth": {
     "link": "https://squeeth.com/",
     "name": "Squeeth"
@@ -1587,6 +1607,10 @@
   "theconvospace": {
     "link": "https://theconvo.space/",
     "name": "The Convo Space"
+  },
+  "thedapplist": {
+    "link": "https://thedapplist.com/",
+    "name": "The Dapp List"
   },
   "thegraph": {
     "link": "https://thegraph.com/",
