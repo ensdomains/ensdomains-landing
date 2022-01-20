@@ -1187,6 +1187,10 @@
     "link": "https://notlarvalabs.com/",
     "name": "Not Larva Labs"
   },
+  "oasis": {
+    "link": "https://oasis.app/",
+    "name": "Oasis.app"
+  },
   "nounsdao": {
     "link": "https://nouns.wtf/",
     "name": "Nouns DAO"
@@ -1461,6 +1465,10 @@
   "shibaswap": {
     "link": "https://shibaswap.com/",
     "name": "ShibaSwap"
+  },
+  "showme": {
+    "link": "https://showme.fan/",
+    "name": "ShowMe"
   },
   "showtime": {
     "link": "https://tryshowtime.com/",
