@@ -905,6 +905,10 @@
     "link": "https://faucet.kintsugi.themerge.dev/",
     "name": "Kintsugi FaucETH"
   },
+  "klimadao": {
+    "link": "https://www.klimadao.finance/",
+    "name": "KlimaDAO"
+  },
   "knownorigin": {
     "link": "https://knownorigin.io/",
     "name": "KnownOrigin"
@@ -1308,6 +1312,10 @@
   "pods": {
     "link": "https://www.pods.finance/",
     "name": "Pods Finance"
+  },
+  "pointer": {
+    "link": "https://www.pointer.gg/",
+    "name": "Pointer"
   },
   "polyient": {
     "link": "https://dex.polyient.games/",
