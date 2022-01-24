@@ -1321,6 +1321,10 @@
     "link": "https://www.pointer.gg/",
     "name": "Pointer"
   },
+  "polychaintwitterdrop": {
+    "link": "https://www.polychain.tech/twitter",
+    "name": "Polychain Twitter Airdrop"
+  },
   "polyient": {
     "link": "https://dex.polyient.games/",
     "name": "Polyient DEX"
@@ -1789,6 +1793,10 @@
   "wip2p": {
     "link": "http://ens.wip2p.com/",
     "name": "WIP2P"
+  },
+  "wizardsdao": {
+    "link": "https://wizardsdao.com/",
+    "name": "WizardsDAO"
   },
   "worldwidewebb": {
     "link": "https://www.webb.game/",
