@@ -56,6 +56,10 @@
     "link": "https://www.argent.xyz/",
     "name": "Argent"
   },
+  "arcx": {
+    "link": "https://arcx.money/",
+    "name": "ARCx"
+  },
   "argo": {
     "link": "https://argoapp.live/",
     "name": "Argo"
@@ -648,6 +652,10 @@
   "ethxyz": {
     "link": "https://eth.xyz/",
     "name": "ETH.XYZ"
+  },
+  "exodiafinance": {
+    "link": "https://exodia.fi/",
+    "name": "EXODIA Finance"
   },
   "exponent": {
     "link": "https://app.exponent.cx/",
@@ -1576,6 +1584,10 @@
     "link": "https://stib.co/",
     "name": "StiB"
   },
+  "strikefinance": {
+    "link": "https://strike.org/",
+    "name": "Strike Finance"
+  },
   "stuckwithu": {
     "link": "http://stuckwithu.eth.link/",
     "name": "Stuck with U"
@@ -1821,6 +1833,10 @@
   "yamfinance": {
     "link": "https://yam.finance/",
     "name": "Yam Finance"
+  },
+  "yaxis": {
+    "link": "https://www.yaxis.io/",
+    "name": "yAxis"
   },
   "yearnfinance": {
     "link": "https://yearn.finance/",
