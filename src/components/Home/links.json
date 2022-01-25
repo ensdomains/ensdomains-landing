@@ -1822,6 +1822,10 @@
     "link": "https://yam.finance/",
     "name": "Yam Finance"
   },
+  "yaxis": {
+    "link": "https://www.yaxis.io/",
+    "name": "yAxis"
+  },
   "yearnfinance": {
     "link": "https://yearn.finance/",
     "name": "Yearn"
