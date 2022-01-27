@@ -733,6 +733,10 @@
     "link": "https://geocities.eth.link/",
     "name": "GeoCities.eth"
   },
+  "gem": {
+    "link": "https://www.gem.xyz/",
+    "name": "Gem"
+  },
   "genie": {
     "link": "https://genie.xyz/",
     "name": "Genie"
@@ -936,6 +940,10 @@
   "kyberswap": {
     "link": "https://kyberswap.com/swap",
     "name": "KyberSwap"
+  },
+  "l2savings": {
+    "link": "https://www.l2savings.org/",
+    "name": "L2Savings"
   },
   "larvalabs": {
     "link": "https://larvalabs.com/",
@@ -1218,6 +1226,10 @@
   "omnibridge": {
     "link": "https://omni.xdaichain.com/",
     "name": "OmniBridge"
+  },
+  "onchainart": {
+    "link": "https://www.0xchain.art/",
+    "name": "On-Chain Art"
   },
   "onjuno": {
     "link": "https://onjuno.com/crypto",
@@ -1539,6 +1551,10 @@
     "link": "https://www.sorbet.finance/",
     "name": "Sorbet Finance"
   },
+  "sovryn": {
+    "link": "https://bitocracy.sovryn.app/",
+    "name": "Sovryn"
+  },
   "spheron": {
     "link": "https://argoapp.net/",
     "name": "Spheron"
@@ -1546,6 +1562,10 @@
   "squiddao": {
     "link": "https://squid.xyz/",
     "name": "SquidDAO"
+  },
+  "spkz": {
+    "link": "https://spkz.io/",
+    "name": "SPKZ"
   },
   "squeeth": {
     "link": "https://squeeth.com/",
@@ -1849,6 +1869,10 @@
   "zapperfi": {
     "link": "https://www.zapper.fi/",
     "name": "Zapper.fi"
+  },
+  "youngplatform": {
+    "link": "https://youngplatform.com/",
+    "name": "Young Platform"
   },
   "zang": {
     "link": "https://beta.zang.gallery/",
