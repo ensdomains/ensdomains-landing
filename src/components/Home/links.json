@@ -424,6 +424,10 @@
     "link": "https://dether.io/",
     "name": "Dether"
   },
+  "deusdao": {
+    "link": "https://deus.finance/",
+    "name": "DEUS Finance DAO"
+  },
   "devdaovisualizer": {
     "link": "https://devdao.raz.works/#/",
     "name": "DevDao Visualizer"
@@ -1501,6 +1505,10 @@
   "shibaswap": {
     "link": "https://shibaswap.com/",
     "name": "ShibaSwap"
+  },
+  "shields": {
+    "link": "https://shields.build/",
+    "name": "Shields"
   },
   "showme": {
     "link": "https://showme.fan/",
