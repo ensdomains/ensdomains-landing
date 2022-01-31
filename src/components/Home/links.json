@@ -765,6 +765,10 @@
     "link": "https://gopocket.security/",
     "name": "Go Pocket"
   },
+  "goodghosting": {
+    "link": "https://goodghosting.com/",
+    "name": "GoodGhosting"
+  },
   "grapefinance": {
     "link": "https://grapefinance.app/",
     "name": "Grape Finance"
@@ -1174,6 +1178,10 @@
   "nftscollectors": {
     "link": "https://nftscollectors.app/",
     "name": "NFTs Collectors"
+  },
+  "nftx": {
+    "link": "https://nftx.io/",
+    "name": "NFTX"
   },
   "nidhidao": {
     "link": "https://www.nidhidao.finance/",
