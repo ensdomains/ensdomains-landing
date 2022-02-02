@@ -64,7 +64,7 @@ const team = [
     name: "Muhammed Tanrıkulu",
     title: "Full Stack Developer",
     img: muhammed,
-    link: "https://twitter.com/tanrikuIu",
+    link: "https://twitter.com/md_tanrikulu",
   },
   {
     name: "alisha.eth",
