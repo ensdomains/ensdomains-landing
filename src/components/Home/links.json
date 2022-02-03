@@ -528,6 +528,10 @@
     "link": "https://enjin.io/products/wallet",
     "name": "Enjin"
   },
+  "ensbook": {
+    "link": "https://ensbook.xyz/",
+    "name": "ENSBook"
+  },
   "ensideas": {
     "link": "https://ensideas.com/",
     "name": "ENS Ideas"
