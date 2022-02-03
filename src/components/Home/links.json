@@ -528,6 +528,10 @@
     "link": "https://enjin.io/products/wallet",
     "name": "Enjin"
   },
+  "ensbook": {
+    "link": "https://ensbook.xyz/",
+    "name": "ENSBook"
+  },
   "ensideas": {
     "link": "https://ensideas.com/",
     "name": "ENS Ideas"
@@ -748,6 +752,10 @@
   "gitcoin": {
     "link": "https://gitcoin.co/",
     "name": "Gitcoin"
+  },
+  "glosseta": {
+    "link": "https://www.glosseta.com/enspect",
+    "name": "Glosseta"
   },
   "gmxyz": {
     "link": "https://gm.xyz/",
@@ -1675,6 +1683,10 @@
   "tallywallet": {
     "link": "https://tally.cash/",
     "name": "Tally"
+  },
+  "tempusfinance": {
+    "link": "https://tempus.finance/",
+    "name": "Tempus"
   },
   "theconvospace": {
     "link": "https://theconvo.space/",
