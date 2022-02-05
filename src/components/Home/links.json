@@ -1430,6 +1430,10 @@
     "name": "Rainbow",
     "featuredWallet": 2
   },
+  "rareblocks": {
+    "link": "http://rareblocks.xyz/",
+    "name": "Rareblocks"
+  },
   "realitycards": {
     "link": "https://realitycards.io/",
     "name": "Reality Cards"
