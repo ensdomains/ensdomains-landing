@@ -56,7 +56,7 @@ const team = [
   },
   {
     name: "Richard Moore",
-    title: "Solidity Developer",
+    title: "Advisor",
     img: richard,
     link: "https://twitter.com/ricmoo",
   },
