@@ -7,7 +7,7 @@ import { H2, P as DefaultP } from "../../Typography"
 import { Gap } from "../../../utils"
 import { Anchor, AnchorContainer } from "../../Anchor"
 
-import brantlypunk from "./brantlypunk.png"
+import nickAvatar from "./nick.png"
 import avatar from "./avatar.png"
 
 const HeroContainer = styled("div")`
@@ -54,7 +54,7 @@ const AvatarImg = styled("img")`
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 10px;
 `
 
 const AvatarText = styled("div")`
@@ -90,8 +90,8 @@ const Avatar = () => {
         <AvatarText>0x98...674</AvatarText>
       </AvatarContainerInner>
       <AvatarContainerInner ref={containerRefTwo} style={{ opacity: 0 }}>
-        <AvatarImg src={brantlypunk} />
-        <AvatarText>brantly.eth</AvatarText>
+        <AvatarImg src={nickAvatar} />
+        <AvatarText>nick.eth</AvatarText>
       </AvatarContainerInner>
     </AvatarContainer>
   )

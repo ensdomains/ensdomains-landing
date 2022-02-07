@@ -1,0 +1,14 @@
+{
+  "site": {
+    "id": "ce81fafb-d453-4435-ba75-0efcfeaf4c22",
+    "team": "ensbot-team",
+    "platform": "ipfs",
+    "source": "ipfs",
+    "name": "bitter-snowflake-7007"
+  },
+  "build": {
+    "baseDir": "",
+    "publicDir": "public",
+    "rootDir": ""
+  }
+}
