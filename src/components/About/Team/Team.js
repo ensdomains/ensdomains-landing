@@ -37,12 +37,6 @@ const team = [
     link: "https://gist.github.com/makoto/c6f2e5abdaacb69b1d9a6bae990800c4",
   },
   {
-    name: "brantly.eth",
-    title: "Director of Operations",
-    img: brantly,
-    link: "https://twitter.com/BrantlyMillegan",
-  },
-  {
     name: "Kevin | validator.eth",
     title: "Support Lead",
     img: kevin,
