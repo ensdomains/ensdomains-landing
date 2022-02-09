@@ -813,6 +813,10 @@
     "link": "https://www.headsupeuchre.com/",
     "name": "Heads Up Euchre"
   },
+  "hedgies": {
+    "link": "https://hedgies.wtf/",
+    "name": "Hedgies"
+  },
   "hoardexchange": {
     "link": "https://hoard.market/",
     "name": "Hoard Exchange"
@@ -1426,6 +1430,10 @@
     "name": "Rainbow",
     "featuredWallet": 2
   },
+  "rareblocks": {
+    "link": "http://rareblocks.xyz/",
+    "name": "Rareblocks"
+  },
   "realitycards": {
     "link": "https://realitycards.io/",
     "name": "Reality Cards"
@@ -1913,6 +1921,10 @@
   "zippie": {
     "link": "https://www.zippie.com/",
     "name": "Zippie"
+  },
+  "zigzagexchange": {
+    "link": "https://info.zigzag.exchange/",
+    "name": "ZigZag Exchange"
   },
   "zora": {
     "link": "https://zora.co/",
