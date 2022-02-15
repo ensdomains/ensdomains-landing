@@ -72,6 +72,10 @@
     "link": "https://authereum.org/",
     "name": "Authereum"
   },
+  "backdfund": {
+    "link": "https://backd.fund/",
+    "name": "Backd"
+  },
   "backdrop": {
     "link": "https://backdrop.so/",
     "name": "Backdrop"
@@ -757,6 +761,10 @@
     "link": "https://www.glosseta.com/enspect",
     "name": "Glosseta"
   },
+  "gmx": {
+    "link": "https://gmx.io/",
+    "name": "GMX"
+  },
   "gmxyz": {
     "link": "https://gm.xyz/",
     "name": "gm.xyz"
@@ -924,6 +932,10 @@
   "keystone": {
     "link": "https://keyst.one/",
     "name": "Keystone"
+  },
+  "kalidao": {
+    "link": "https://app.kalidao.xyz/",
+    "name": "KaliDAO"
   },
   "kickback": {
     "link": "https://kickback.events/",
@@ -1219,6 +1231,10 @@
     "link": "https://www.nildao.xyz/",
     "name": "Nil DAO"
   },
+  "nolossclub": {
+    "link": "https://nolossclub.com/",
+    "name": "NO LOSS CLUB"
+  },
   "nonfungible": {
     "link": "https://nonfungible.com/",
     "name": "NonFungible"
@@ -1320,6 +1336,10 @@
   "paytomat": {
     "link": "https://paytomat.com/en/",
     "name": "Paytomat"
+  },
+  "phantomdao": {
+    "link": "https://phantomdao.xyz/",
+    "name": "PhantomDAO"
   },
   "picklefinance": {
     "link": "https://app.pickle.finance/",
@@ -1751,6 +1771,10 @@
   "torus": {
     "link": "https://tor.us/",
     "name": "Torus"
+  },
+  "torquemoney": {
+    "link": "https://torque.money/",
+    "name": "Torque"
   },
   "totem": {
     "link": "https://totem.network",
