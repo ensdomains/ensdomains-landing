@@ -76,7 +76,7 @@ export function DAOBannerContent() {
       <div>
         <BannerTitle>$ENS Now Available for Claiming.</BannerTitle>
         <BannerContent>
-          Claim your $ENS and participate in ENS governance.
+          If you owned an ENS name before October 31st 2021, you can claim $ENS and participate in ENS governance.
         </BannerContent>
       </div>
       <ArrowSmall src={Arrow} />
