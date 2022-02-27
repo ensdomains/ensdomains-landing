@@ -88,6 +88,10 @@
     "link": "https://www.microsoft.com/en-us/p/bankless/9p50f616xcdj",
     "name": "Bankless"
   },
+  "banklessacademy": {
+    "link": "https://app.banklessacademy.com/",
+    "name": "Bankless Academy"
+  },
   "banklessdao": {
     "link": "https://www.bankless.community/",
     "name": "BanklessDAO"
@@ -1369,6 +1373,10 @@
     "link": "https://www.pixlet.studio/",
     "name": "Pixlet Studio"
   },
+  "plasmafinance": {
+    "link": "https://plasma.finance/",
+    "name": "Plasma.finance"
+  },
   "plugcool": {
     "link": "https://plug.cool/",
     "name": "plug.cool"
@@ -1453,6 +1461,10 @@
   "rareblocks": {
     "link": "http://rareblocks.xyz/",
     "name": "Rareblocks"
+  },
+  "raricapital": {
+    "link": "https://app.rari.capital/",
+    "name": "Rari Capital"
   },
   "realitycards": {
     "link": "https://realitycards.io/",
@@ -1574,6 +1586,10 @@
   "skylabsnft": {
     "link": "http://skylabsnft.com/",
     "name": "SkyLabs"
+  },
+  "skytale": {
+    "link": "https://skytale.finance/",
+    "name": "Skytale"
   },
   "slice": {
     "link": "https://slice.so/",
