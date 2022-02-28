@@ -181,6 +181,7 @@ export default function Navigation() {
         </NavLink>
         <NavLink href="https://chat.ens.domains/">Community</NavLink>
         <NavLink href="/about">Team</NavLink>
+        <NavLink href="/jobs">Jobs</NavLink>
         <NavLink href="https://docs.ens.domains/">Docs</NavLink>
 
         <Separator />
@@ -199,6 +200,9 @@ export default function Navigation() {
         </li>
         <li>
           <Link to="/about">Team</Link>
+        </li>
+        <li>
+          <Link to="/jobs">Jobs</Link>
         </li>
         <li>
           <a href="https://docs.ens.domains/">Docs</a>
