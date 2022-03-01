@@ -1514,6 +1514,10 @@
     "link": "http://rigoblock.eth.link/",
     "name": "RigoBlock"
   },
+  "rinkebyfaucet": {
+    "link": "https://rinkebyfaucet.com/",
+    "name": "Rinkeby Faucet by Alchemny"
+  },
   "roles": {
     "link": "https://roles.rug.tech/",
     "name": "ROLES by RUG.TECH"
