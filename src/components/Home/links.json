@@ -997,6 +997,10 @@
     "link": "https://www.inzhoop.com/",
     "name": "LETH"
   },
+  "light": {
+    "link": "https://light.so/",
+    "name": "Light"
+  },
   "lilithswap": {
     "link": "https://staking.lilithswap.com/",
     "name": "Lilith Swap"
