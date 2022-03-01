@@ -997,6 +997,10 @@
     "link": "https://www.inzhoop.com/",
     "name": "LETH"
   },
+  "light": {
+    "link": "https://light.so/",
+    "name": "Light"
+  },
   "lilithswap": {
     "link": "https://staking.lilithswap.com/",
     "name": "Lilith Swap"
@@ -1020,6 +1024,14 @@
   "localcryptos": {
     "link": "https://localcryptos.com/",
     "name": "LocalCryptos"
+  },
+  "looksmutable": {
+    "link": "https://looksmutable.com/",
+    "name": "looksmutable"
+  },
+  "looksrare": {
+    "link": "https://looksrare.org/",
+    "name": "LooksRrare"
   },
   "loopring": {
     "link": "https://loopring.org/",
@@ -1198,6 +1210,10 @@
   "nftfi": {
     "link": "https://nftfi.com/",
     "name": "NFTfi"
+  },
+  "nftreplicas": {
+    "link": "https://nftreplicas.xyz/",
+    "name": "NFT Replicas"
   },
   "nftscan": {
     "link": "https://nftscan.com/",
@@ -1505,6 +1521,10 @@
   "rigoblock": {
     "link": "http://rigoblock.eth.link/",
     "name": "RigoBlock"
+  },
+  "rinkebyfaucet": {
+    "link": "https://rinkebyfaucet.com/",
+    "name": "Rinkeby Faucet by Alchemny"
   },
   "roles": {
     "link": "https://roles.rug.tech/",
@@ -1857,6 +1877,10 @@
   "usedapp": {
     "link": "https://usedapp.io/",
     "name": "useDApp"
+  },
+  "value": {
+    "link": "https://value.app/",
+    "name": "Value"
   },
   "varenfinance": {
     "link": "https://varen.exchange/#/swap",
