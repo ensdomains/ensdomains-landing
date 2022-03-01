@@ -1858,6 +1858,10 @@
     "link": "https://usedapp.io/",
     "name": "useDApp"
   },
+  "value": {
+    "link": "https://value.app/",
+    "name": "Value"
+  },
   "varenfinance": {
     "link": "https://varen.exchange/#/swap",
     "name": "Varen Finance"
