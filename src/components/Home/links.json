@@ -1398,8 +1398,12 @@
     "name": "plug.cool"
   },
   "poap": {
-    "link": "https://www.poap.xyz//",
+    "link": "https://www.poap.xyz/",
     "name": "POAP"
+  },
+  "poapart": {
+    "link": "https://poap.art/",
+    "name": "POAP.art"
   },
   "pods": {
     "link": "https://www.pods.finance/",
