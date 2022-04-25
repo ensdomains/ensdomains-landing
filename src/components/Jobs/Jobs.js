@@ -33,7 +33,7 @@ export default function Jobs() {
   return (
     <>
       <JobContainer>
-        <h3>General Manager</h3>
+        <h3 id="gm">General Manager</h3>
         <p>
           After recently undergoing a ‘decentralisation event’ and the formation of a community-managed DAO to handle
           the governance of the ENS protocol, True Names is looking for a General Manager to help direct TNL’s future
@@ -117,7 +117,7 @@ export default function Jobs() {
       </JobContainer>
 
       <JobContainer>
-        <h3>Lead Developer Advocate</h3>
+        <h3 id="lead-dev-advocate">Lead Developer Advocate</h3>
         <p>
           ENS is only as useful as the number of places you can use it. It’ll be this person’s job to take ENS from +400
           integrations to thousands, help us improve our documentation, manage libraries, help projects integrate ENS,
@@ -178,7 +178,7 @@ export default function Jobs() {
       </JobContainer>
 
       <JobContainer style={{ paddingBottom: 150 }}>
-        <h3>Senior Web UI/UX Designer</h3>
+        <h3 id="senior-designer">Senior Web UI/UX Designer</h3>
         <p>
           We view ourselves as the 'soft wrapper' around ethereum, helping to make it much easier to use, and this idea
           is the inspiration for our logo. A large part of achieving this goal revolves around the UI/UX of our applications.
