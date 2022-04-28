@@ -238,7 +238,7 @@ export default function Jobs() {
               Someone who has knowledge of the blockchain/web3 space and the unique design challenges that it presents.
             </li>
             <li>
-              Experience workign remotely with a team located in many different time zones.
+              Experience working remotely with a team located in many different time zones.
             </li>
           </ul>
         </p>
