@@ -116,6 +116,9 @@ export default function Footer(props) {
         <MailTo href="https://docs.ens.domains/bug-bounty-program">
           Bug Bounty
         </MailTo>
+        <MailTo href="https://raw.githubusercontent.com/ensdomains/media-kit/main/ENS%20Media%20Kit.zip">
+          Media Kit
+        </MailTo>
       </FooterColumn>
     </FooterContainer>
   )
