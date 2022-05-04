@@ -1,23 +1,20 @@
-import React from "react"
 import styled from "@emotion/styled"
 import "normalize.css"
-
-import Layout from "../components/Layout"
-import Navigation from "../components/Navigationv2"
-import mq from "../mediaQuery"
-
-import topography from "../assets/topography.svg"
+import React from "react"
+import { useTranslation } from "react-i18next"
+import dao from "../assets/dao.svg"
 import discord from "../assets/discord.svg"
+import discordGrey from "../assets/discordGrey.svg"
 import discuss from "../assets/discuss.svg"
+import discussGrey from "../assets/discussGrey.svg"
 import governance from "../assets/governance.svg"
 import mirror from "../assets/mirror.svg"
+import tally from "../assets/tally.svg"
 import twitterGrey from "../assets/twitterGrey.svg"
-import discordGrey from "../assets/discordGrey.svg"
-import discussGrey from "../assets/discussGrey.svg"
-import whiteENS from "../assets/whiteENS.svg"
-import { useTranslation } from "react-i18next"
-
+import Layout from "../components/Layout"
+import Navigation from "../components/Navigationv2"
 import "../css/global.css"
+import mq from "../mediaQuery"
 
 const Container = styled("div")`
   display: flex;
@@ -59,7 +56,7 @@ const ContentInnerInner = styled("div")`
   margin: 0 auto;
 
   ${mq.large`
-    grid-template-columns: minmax(0, 4fr) minmax(0, 3fr) minmax(0, 3fr);
+    grid-template-columns: minmax(0, 3fr) minmax(0, 3fr) minmax(0, 3fr);
     grid-template-rows: repeat(2, auto);
     grid-gap: 20px;
     position: absolute;
@@ -72,49 +69,6 @@ const ContentInnerInner = styled("div")`
     max-width: initial;
     margin: initial;
   `}
-`
-
-const MainBox = styled("a")`
-  background: linear-gradient(
-    330.4deg,
-    #44bcf0 4.54%,
-    #7298f8 59.2%,
-    #a099ff 148.85%
-  );
-  border-radius: 30px;
-  position: relative;
-  height: 300px;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    transform: scale(101%);
-  }
-
-  ${mq.large`
-    grid-row-start: 1;
-    grid-row-end: 3;
-    height: initial;
-  `}
-`
-
-const MainBoxInner = styled("div")`
-  background: url("${topography}");
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  background-size: cover;
-`
-
-const MainBoxBottomText = styled("div")`
-  font-style: normal;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 110%;
-  letter-spacing: -0.5px;
-  color: #ffffff;
 `
 
 const Box = styled("a")`
@@ -147,10 +101,6 @@ const BoxContent = styled("div")`
   `}
 `
 
-const MainBoxContent = styled(BoxContent)`
-  padding: 36px;
-`
-
 const BoxContentTop = styled("div")``
 
 const BoxContentBottom = styled("div")``
@@ -168,6 +118,14 @@ const Footer = styled("div")`
 `
 
 const standardBoxData = [
+  {
+    icon: dao,
+    text: "dao",
+    color: "#A764FC",
+    backgroundColor: "rgba(180, 120, 255, 0.1)",
+    borderColor: "#D6B6FF",
+    link: "https://constitution.ens.domains",
+  },
   {
     icon: discord,
     text: "discord",
@@ -199,6 +157,15 @@ const standardBoxData = [
     backgroundColor: "#E8E7EF",
     borderColor: "#D2CFE4",
     link: "https://ens.mirror.xyz/",
+  },
+  {
+    icon: tally,
+    text: "tally",
+    color: "#00CBB5",
+    backgroundColor: "rgba(98, 244, 228, 0.2)",
+    borderColor: "#62F4E4",
+    link:
+      "https://www.tally.xyz/governance/eip155:1:0x323A76393544d5ecca80cd6ef2A560C6a395b7E3",
   },
 ]
 
@@ -251,20 +218,6 @@ export default function Governance(props) {
         <Content>
           <ContentInner>
             <ContentInnerInner>
-              <MainBox href={"https://claim.ens.domains"} target={"_blank"}>
-                <MainBoxInner>
-                  <MainBoxContent>
-                    <BoxContentTop>
-                      <BoxIcon src={whiteENS} />
-                    </BoxContentTop>
-                    <BoxContentBottom>
-                      <MainBoxBottomText>
-                        {t("governance.claim")}
-                      </MainBoxBottomText>
-                    </BoxContentBottom>
-                  </MainBoxContent>
-                </MainBoxInner>
-              </MainBox>
               {standardBoxData.map(StandardBox)}
             </ContentInnerInner>
           </ContentInner>

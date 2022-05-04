@@ -104,6 +104,8 @@
     "discord": "Chat on Discord",
     "discuss": "Join the forum",
     "governance": "Documentation",
-    "mirror": "Read on Mirror"
+    "mirror": "Read on Mirror",
+    "dao": "Buy a Constitution",
+    "tally": "Vote on Proposals"
   }
 }
