@@ -56,6 +56,9 @@ export default function Layout({ children, data, location }) {
           body {
             font-family: Overpass;
           }
+          #gatsby-focus-wrapper {
+            height: 100vh;
+          }
         `}
       />
       {children}
