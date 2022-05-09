@@ -6,6 +6,7 @@ import mq from "../mediaQuery"
 import { motion } from "framer-motion"
 import ENSIcon from "./Icons/ENSIcon.svg"
 import Arrow from "./Icons/Arrow.svg"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 const LogoSmall = styled(motion.img)`
   padding: 10px;
@@ -66,6 +67,7 @@ export const MainPageBannerContainer = styled(`div`)`
 `
 
 export function DAOBannerContent() {
+  const { t } = useTranslation()
   return (
     <Link
       target="_blank"
@@ -74,9 +76,9 @@ export function DAOBannerContent() {
     >
       <LogoSmall src={ENSIcon} />
       <div>
-        <BannerTitle>$ENS Now Available for Claiming.</BannerTitle>
+        <BannerTitle>{t('constitution.title')}</BannerTitle>
         <BannerContent>
-          If you owned an ENS name before October 31st 2021, you can claim $ENS and participate in ENS governance.
+        {t('constitution.description')}
         </BannerContent>
       </div>
       <ArrowSmall src={Arrow} />

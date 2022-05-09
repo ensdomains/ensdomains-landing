@@ -51,9 +51,7 @@
     "additionalFeatures": {
       "title": "Caratteristiche aggiuntive",
       "recordType": "Crea il tuo record type personale per il tuo progetto.",
-
       "textRecord": "Allega le informazioni del profilo al tuo dominio ENS con dei record testuali.",
-
       "subDomains": "Crea sottodomini ENS come nomi utente per il tuo progetto.",
       "dns": "Memorizza e fornisci i record DNS tradizionali con determinati nomi.",
       "tor": "Usa ENS per accedere più facilmente ai servizi nascosti Tor .onion.",
@@ -98,5 +96,18 @@
       "title": "Gestire la root ENS",
       "text": "Per facilitare la possibilità di aggiornamenti, manutenzione e - in circostanze eccezionali - per gestire problemi, la root ENS è inizialmente di proprietà di un wallet multisig four-of-seven, composto da membri di progetti correlati titolari delle chiavi. A lungo termine vorremmo che il multisig fosse sostituito da una qualche forma di processo decisionale distribuito, non appena tali sistemi saranno disponibili e fruibili."
     }
+  },
+  "governance": {
+    "claim": "Claim your $ENS",
+    "discord": "Chat on Discord",
+    "discuss": "Join the forum",
+    "governance": "Documentation",
+    "mirror": "Read on Mirror",
+    "dao": "Buy a Constitution",
+    "tally": "Vote on Proposals"
+  },
+  "constitution": {
+    "title": "ENS constitution book now available",
+    "description": "A printed copy of the ENS constitution and its signers is now available in hardcover and ultra-limited edition of 50"
   }
 }
