@@ -20,6 +20,13 @@ const LogoSmall = styled(motion.img)`
     #a099ff 148.85%
   );
   box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.06);
+
+  ${({ $daoGradient }) =>
+    $daoGradient &&
+    `
+    background: linear-gradient(323.31deg, #DE82FF -15.56%, #7F6AFF 108.43%);
+  `}
+
 `
 
 const Link = styled(`a`)`
@@ -74,7 +81,7 @@ export function DAOBannerContent() {
       rel="noreferrer"
       href="https://ens.mirror.xyz/5cGl-Y37aTxtokdWk21qlULmE1aSM_NuX9fstbOPoWU"
     >
-      <LogoSmall src={ENSIcon} />
+      <LogoSmall $daoGradient={true} src={ENSIcon} />
       <div>
         <BannerTitle>{t('constitution.title')}</BannerTitle>
         <BannerContent>
