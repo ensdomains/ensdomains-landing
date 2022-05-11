@@ -96,5 +96,18 @@
       "title": "Het Beheer van de ENS Root",
       "text": "Om de mogelijkheid van upgrades en onderhoud te faciliteren, en in uitzonderlijke omstandigheden problemen met ENS af te handelen, is de ENS root initieel in het eigendom van een vier van zeven multisig, met leden van gerelateerde projecten als sleutelhouders. Op de lange termijn willen we graag de multisig vervangen door een vorm van decentrale beslissingsvorming, wanneer dergelijke systemen beschikbaar worden."
     }
+  },
+  "governance": {
+    "claim": "Claim your $ENS",
+    "discord": "Chat on Discord",
+    "discuss": "Join the forum",
+    "governance": "Documentation",
+    "mirror": "Read on Mirror",
+    "dao": "Buy a Constitution",
+    "tally": "Vote on Proposals"
+  },
+  "constitution": {
+    "title": "ENS constitution book now available",
+    "description": "A printed copy of the ENS constitution and its signers is now available in hardcover and ultra-limited edition of 50"
   }
 }

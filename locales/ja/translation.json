@@ -51,9 +51,7 @@
     "additionalFeatures": {
       "title": "追加機能",
       "recordType": "プロジェクト独自のレコードタイプを作成できます。",
-
       "textRecord": "ENS名にプロフィール情報をテキストレコードで添付できます。",
-
       "subDomains": "プロジェクトのユーザー名としてENSサブドメインを作成できます。",
       "dns": "特定の名前で従来のDNSレコードを保存し、提供します。",
       "tor": "ENSを使用して、Tor.onionの隠れたサービスにもっと簡単にアクセスできます。",
@@ -98,5 +96,18 @@
       "title": "ENSルートの管理",
       "text": "アップグレードやメンテナンスの可能性を容易にするため、また、例外的なENSの問題に対処するために、ENSのルートは、当初は7人中4人のマルチシグで所有し、関連するプロジェクトのメンバーをキー所有者としています。長期的には、そのようなシステムが利用可能になるなら、ルートのマルチシグを何らかの形で分散型の意思決定プロセスに置き換えたいと考えています。"
     }
+  },
+  "governance": {
+    "claim": "Claim your $ENS",
+    "discord": "Chat on Discord",
+    "discuss": "Join the forum",
+    "governance": "Documentation",
+    "mirror": "Read on Mirror",
+    "dao": "Buy a Constitution",
+    "tally": "Vote on Proposals"
+  },
+  "constitution": {
+    "title": "ENS constitution book now available",
+    "description": "A printed copy of the ENS constitution and its signers is now available in hardcover and ultra-limited edition of 50"
   }
 }

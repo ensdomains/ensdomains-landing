@@ -3,29 +3,27 @@ import React from "react"
 import styled from "@emotion/styled/macro"
 import mq from "../mediaQuery"
 
-import { motion } from "framer-motion"
 import ENSIcon from "./Icons/ENSIcon.svg"
 import Arrow from "./Icons/Arrow.svg"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
-const LogoSmall = styled(motion.img)`
+const LogoSmall = styled.img`
+  width: 48px;
+  height: 48px;
   padding: 10px;
   border-radius: 50%;
   margin: auto;
   display: block;
-  background: linear-gradient(
-    330.4deg,
-    #44bcf0 4.54%,
-    #7298f8 59.2%,
-    #a099ff 148.85%
-  );
+  background: linear-gradient(323.31deg, #de82ff -15.56%, #7f6aff 108.43%);
   box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
 `
 
 const Link = styled(`a`)`
   text-decoration: none;
 `
 
-const ArrowSmall = styled(motion.img)`
+const ArrowSmall = styled.img`
   height: 100%;
   margin: auto;
   display: block;
@@ -35,50 +33,58 @@ const ArrowSmall = styled(motion.img)`
 
 const BannerTitle = styled(`div`)`
   color: #0e0e0e;
+  letter-spacing: -0.01em;
   font-weight: bold;
   font-size: 18px;
 `
 
 const BannerContent = styled(`div`)`
   color: #787878;
-  margin-top: 8px;
   font-size: 18px;
+  margin-top: 2px;
   font-weight: 500;
   font-size: 15px;
 `
 
 export const MainPageBannerContainer = styled(`div`)`
-  z-index: 9000;
-  position: absolute;
   top: 97px;
   background: #ffffff;
   border-radius: 14px;
-  padding: 15px 0px;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
   a {
+    flex-grow: 1;
     display: grid;
     grid-template-columns: 73px 1fr 50px;
   }
   ${mq.medium`
-    margin: auto;
-    width: 750px;
-    height: 50px;
+    width: 700px;
   `}
 `
 
+const BannerContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+`
+
 export function DAOBannerContent() {
+  const { t } = useTranslation()
   return (
     <Link
       target="_blank"
       rel="noreferrer"
-      href="https://ens.mirror.xyz/5cGl-Y37aTxtokdWk21qlULmE1aSM_NuX9fstbOPoWU"
+      href="https://constitution.ens.domains"
     >
       <LogoSmall src={ENSIcon} />
-      <div>
-        <BannerTitle>$ENS Now Available for Claiming.</BannerTitle>
-        <BannerContent>
-          If you owned an ENS name before October 31st 2021, you can claim $ENS and participate in ENS governance.
-        </BannerContent>
-      </div>
+      <BannerContentWrapper>
+        <BannerTitle>{t("constitution.title")}</BannerTitle>
+        <BannerContent>{t("constitution.description")}</BannerContent>
+      </BannerContentWrapper>
       <ArrowSmall src={Arrow} />
     </Link>
   )

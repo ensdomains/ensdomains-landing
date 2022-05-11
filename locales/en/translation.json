@@ -107,5 +107,9 @@
     "mirror": "Read on Mirror",
     "dao": "Buy a Constitution",
     "tally": "Vote on Proposals"
+  },
+  "constitution": {
+    "title": "ENS constitution book now available",
+    "description": "A printed copy of the ENS constitution and its signers is now available in hardcover and ultra-limited edition of 50"
   }
 }

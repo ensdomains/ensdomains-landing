@@ -96,5 +96,18 @@
       "title": "ENS 根域的管理",
       "text": "为了便于升级和维护，以及在特殊情况下处理 ENS 问题，ENS 根域最初由一个 7 人 4 签的多签合约所控制，相关项目的成员作为这个合约的密钥持有人。从长远来看，在系统允许的情况下，我们希望这个控制根域的多签合约会被某种形式的去中心化决策程序所取代。"
     }
+  },
+  "governance": {
+    "claim": "Claim your $ENS",
+    "discord": "Chat on Discord",
+    "discuss": "Join the forum",
+    "governance": "Documentation",
+    "mirror": "Read on Mirror",
+    "dao": "Buy a Constitution",
+    "tally": "Vote on Proposals"
+  },
+  "constitution": {
+    "title": "ENS constitution book now available",
+    "description": "A printed copy of the ENS constitution and its signers is now available in hardcover and ultra-limited edition of 50"
   }
 }

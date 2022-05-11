@@ -17,6 +17,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "i18n": "npx i18next-locales-sync -p en -s cn de es fr it ja ko nl pl pt ru vi -l ./locales/",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
@@ -41,6 +42,7 @@
     "styled-components": "5.3.3"
   },
   "devDependencies": {
+    "i18next-locales-sync": "^1.1.2",
     "prettier": "2.0.5"
   },
   "repository": {

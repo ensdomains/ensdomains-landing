@@ -51,9 +51,7 @@
     "additionalFeatures": {
       "title": "Zusätzliche Features",
       "recordType": "Erstellen Sie einen eigenen Datensatz-Typ für Ihr Projekt.",
-
       "textRecord": "Fügen Sie Ihrem ENS-Namen Profilinformationen mit Texteinträgen hinzu..",
-
       "subDomains": "Erstellen Sie ENS-Subdomains als Benutzernamen für Ihr Projekt.",
       "dns": "Speichern und nutzen Sie traditionelle DNS Records mit bestimmten Domains.",
       "tor": "Verwenden Sie ENS, um leichter auf die versteckten Dienste von Tor .onion zuzugreifen.",
@@ -98,5 +96,18 @@
       "title": "Verwaltung der ENS-Root",
       "text": "Um die Möglichkeit von Upgrades und Wartungsarbeiten zu erleichtern und in Ausnahmefällen Probleme mit ENS zu bewältigen, befindet sich die ENS-Root zunächst im Besitz eines Vier- oder Sieben-Multisigs, mit Mitgliedern verwandter Projekte als Schlüsselinhabern. Langfristig möchten wir, dass die Root-Multisig durch eine Form der verteilten Entscheidungsfindung ersetzt wird, sobald solche Systeme verfügbar sind."
     }
+  },
+  "governance": {
+    "claim": "Claim your $ENS",
+    "discord": "Chat on Discord",
+    "discuss": "Join the forum",
+    "governance": "Documentation",
+    "mirror": "Read on Mirror",
+    "dao": "Buy a Constitution",
+    "tally": "Vote on Proposals"
+  },
+  "constitution": {
+    "title": "ENS constitution book now available",
+    "description": "A printed copy of the ENS constitution and its signers is now available in hardcover and ultra-limited edition of 50"
   }
 }
