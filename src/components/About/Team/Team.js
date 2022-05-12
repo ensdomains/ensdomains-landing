@@ -13,6 +13,7 @@ import richard from "./photos/richard.png"
 import muhammed from "./photos/muhammed.png"
 import alisha from "./photos/alisha.png"
 import taytems from "./photos/taytems.png"
+import david from "./photos/david.png"
 import { Anchor, AnchorContainer } from "../../Anchor"
 import { MainPageBannerContainer, DAOBannerContent } from "../../DAOBanner"
 
@@ -71,6 +72,12 @@ const team = [
     img: taytems,
     link: "https://twitter.com/taytemss",
   },
+  {
+    name: "davidchu.eth",
+    title: "Frontend Developer",
+    img: david,
+    link: "https://twitter.com/davidchuETH"
+  }
 ]
 
 const TeamContainer = styled("div")`
