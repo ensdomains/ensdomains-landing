@@ -91,7 +91,7 @@ export default function Statistics(props) {
       </AnchorContainer>
       <Stats>
         <p>
-          <strong>1,157m</strong> <span>{t("home.statistics.names")}</span>
+          <strong>1.12m</strong> <span>{t("home.statistics.names")}</span>
         </p>
         <p>
           <strong>{integrationsCount}</strong>{" "}
