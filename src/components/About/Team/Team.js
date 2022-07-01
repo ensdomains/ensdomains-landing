@@ -14,10 +14,18 @@ import muhammed from "./photos/muhammed.png"
 import alisha from "./photos/alisha.png"
 import taytems from "./photos/taytems.png"
 import david from "./photos/david.png"
+import khori from "./photos/khori.png"
+import luc from "./photos/luc.png"
 import { Anchor, AnchorContainer } from "../../Anchor"
 import { MainPageBannerContainer, DAOBannerContent } from "../../DAOBanner"
 
 const team = [
+  {
+    name: "Khori Whittaker",
+    title: "Executive Director",
+    img: khori,
+    link: 'https://twitter.com/KhoriWhittaker'
+  },
   {
     name: "Nick Johnson",
     title: "Creator & Lead Developer",
@@ -77,6 +85,12 @@ const team = [
     title: "Frontend Developer",
     img: david,
     link: "https://twitter.com/davidchuETH"
+  },
+  {
+    name: "Luc van Kampen",
+    title: "Developer Relations",
+    img: luc,
+    link: 'https://twitter.com/lucemansnl'
   }
 ]
 
