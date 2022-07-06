@@ -24,7 +24,7 @@ const team = [
     name: "Khori Whittaker",
     title: "Executive Director",
     img: khori,
-    link: 'https://twitter.com/KhoriWhittaker'
+    link: "https://twitter.com/KhoriWhittaker",
   },
   {
     name: "Nick Johnson",
@@ -84,14 +84,14 @@ const team = [
     name: "davidchu.eth",
     title: "Frontend Developer",
     img: david,
-    link: "https://twitter.com/davidchuETH"
+    link: "https://twitter.com/davidchuETH",
   },
   {
     name: "Luc van Kampen",
     title: "Developer Relations",
     img: luc,
-    link: 'https://twitter.com/lucemansnl'
-  }
+    link: "https://twitter.com/lucemansnl",
+  },
 ]
 
 const TeamContainer = styled("div")`
@@ -205,10 +205,6 @@ export default function Team(props) {
   const { t } = useTranslation()
   return (
     <TeamContainer id="about-team">
-      <MainPageBannerContainer>
-        <DAOBannerContent />
-      </MainPageBannerContainer>
-
       <AnchorContainer href={"#about-team"}>
         <h3>
           {t("about.team.title")}
