@@ -111,6 +111,17 @@ export default function AboutENS(props) {
           community. We welcome all feedback and contributions!
         </Trans>
       </p>
+
+      <AnchorContainer href={"#about-tnl"}>
+        <h3>
+          {t("about.aboutTNL.title")}
+          <Anchor />
+        </h3>
+      </AnchorContainer>
+
+      <p className="prelede">
+        <Trans i18nKey="about.aboutTNL.text"></Trans>
+      </p>
       <Support>
         <List1>
           <p>{t("about.aboutENS.support")}</p>

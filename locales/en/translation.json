@@ -80,15 +80,19 @@
     }
   },
   "about": {
-    "hero": "The Ethereum Name Service is an open source blockchain-based naming protocol.",
+    "hero": "ENS is an open source blockchain-based naming protocol",
     "aboutENS": {
       "title": "About ENS",
-      "text": "Started at the Ethereum Foundation in early 2017, ENS spun off with a separate organization in 2018. ENS development is managed by the Singaporean non-profit True Names LTD and is a public good, a basic piece of Internet infrastructure that belongs to the community. We welcome all feedback and contributions!",
+      "text": "Started at the Ethereum Foundation in early 2017, ENS is a public good, a basic piece of Internet infrastructure that belongs to the community. Anyone and everyone is free to interact with the protocol as they are permissionless contracts on the Ethereum blockchain.",
       "support": "We have received generous financial support from:",
       "support2": "Representatives of ENS participate in the greater Internet community:"
     },
+    "aboutTNL": {
+      "title": "About True Names Limited",
+      "text": "Founded in 2018, True Names Limited (TNL) is a Singapore-based non-profit organisation and is responsible for the core software development of ENS. This includes the ENS app, open source libraries and core smart contracts"
+    },
     "team": {
-      "title": "Meet the team"
+      "title": "Meet the TNL team"
     },
     "benefits": {
       "title": "Benefits of Ethereum",
