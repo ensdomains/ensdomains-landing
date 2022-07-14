@@ -1586,6 +1586,10 @@
     "link": "https://sentible.app/",
     "name": "Sentible"
   },
+  "sequencewallet": {
+    "link": "https://sequence.app/",
+    "name": "Sequence Wallet"
+  },
   "shapeshift": {
     "link": "https://shapeshift.com/",
     "name": "ShapeShift"

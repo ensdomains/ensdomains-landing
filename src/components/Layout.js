@@ -31,16 +31,62 @@ export default function Layout({ children, data, location }) {
               "ENS, Ethereum, Ethereum Name Service, .eth domains, blockchain domains",
           },
           {
+            name: "googlebot",
+            content:
+              "index, follow",
+          },
+          {
+            name: "robots",
+            content:
+              "index, follow",
+          },
+          {
             name: "twitter:card",
-            content: "summary",
+            content: "summary_large_image",
           },
           {
             name: "twitter:title",
             content: "Ethereum Name Service",
           },
           {
+            name: "twitter:site",
+            content: "@ensdomains",
+          },
+          {
+            property: "og:description",
+            content: "Your web3 username, a readable name for all your cryptocurrency addresses, and decentralised websites.",
+          },
+          {
+            property: "og:type",
+            content: "website",
+          },
+          {
             property: "og:image",
-            content: `https://ens.domains${twitter}`,
+            content: `https://ens.domains/static/twitter-49d4bb2b55c07c5f5900e95860401fd0.png`,
+          },
+          {
+            property: "og:image:alt",
+            content: `Ethereum Name Service`,
+          },
+          {
+            property: "og:image:width",
+            content: `390px`,
+          },
+          {
+            property: "og:image:height",
+            content: `258px`,
+          },
+          {
+            property: "og:site_name",
+            content: `Ethereum Name Service`,
+          },
+          {
+            property: "og:title",
+            content: `Ethereum Name Service`,
+          },
+          {
+            property: "og:url",
+            content: `https://ens.domains`,
           },
         ]}
         title={getTitle(location.pathname)}
