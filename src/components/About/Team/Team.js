@@ -16,6 +16,7 @@ import taytems from "./photos/taytems.png"
 import david from "./photos/david.png"
 import khori from "./photos/khori.png"
 import luc from "./photos/luc.png"
+import dom from "./photos/dom.png"
 import { Anchor, AnchorContainer } from "../../Anchor"
 import { MainPageBannerContainer, DAOBannerContent } from "../../DAOBanner"
 
@@ -92,6 +93,12 @@ const team = [
     img: luc,
     link: "https://twitter.com/lucemansnl",
   },
+  {
+    name: "Dom Perri",
+    title: "Product Designer",
+    img: dom,
+    link: "https://twitter.com/dperrieth",
+  },
 ]
 
 const TeamContainer = styled("div")`
@@ -132,6 +139,10 @@ const TeamMemberContainer = styled("a")`
 
   ${mq.medium`
     width: calc(25% - 40px);
+  `}
+
+  ${mq.large`
+    width: calc(20% - 40px);
   `}
 
   .img-wrapper {
