@@ -16,6 +16,7 @@ import taytems from "./photos/taytems.png"
 import david from "./photos/david.png"
 import khori from "./photos/khori.png"
 import luc from "./photos/luc.png"
+import dom from "./photos/dom.png"
 import { Anchor, AnchorContainer } from "../../Anchor"
 import { MainPageBannerContainer, DAOBannerContent } from "../../DAOBanner"
 
@@ -91,6 +92,12 @@ const team = [
     title: "Developer Relations",
     img: luc,
     link: "https://twitter.com/lucemansnl",
+  },
+  {
+    name: "Dom Perri",
+    title: "Product Designer",
+    img: dom,
+    link: "https://twitter.com/dperrieth",
   },
 ]
 
