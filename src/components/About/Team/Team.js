@@ -141,6 +141,10 @@ const TeamMemberContainer = styled("a")`
     width: calc(25% - 40px);
   `}
 
+  ${mq.large`
+    width: calc(20% - 40px);
+  `}
+
   .img-wrapper {
     width: 100%;
     margin-bottom: 0;
