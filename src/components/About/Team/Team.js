@@ -70,7 +70,7 @@ const team = [
   },
   {
     name: "alisha.eth",
-    title: "Community Manager",
+    title: "Governance Lead",
     img: alisha,
     link: "https://twitter.com/futurealisha",
   },
