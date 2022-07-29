@@ -43,7 +43,7 @@ export default function Jobs() {
           <h3 id="senior-designer">Project Manager (Part Time)</h3>
           <section>
             <h4>About the role:</h4>
-            <p>As Project Manager (part time), you will join the TNL team at a critical point in our history. We are off to the races to improve and advance the Ethereum Name Service as the premier web3 naming protocol. You will support our frontend and backend teams by removing roadblocks and ensuring that we upgrade our effectiveness.</p>
+            <p>As Project Manager (part time - 20 hours per week), you will join the TNL team at a critical point in our history. We are off to the races to improve and advance the Ethereum Name Service as the premier web3 naming protocol. You will support our frontend and backend teams by removing roadblocks and ensuring that we upgrade our effectiveness.</p>
           </section>
           <section>
             <h4>About the team:</h4>
