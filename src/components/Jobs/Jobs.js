@@ -13,10 +13,17 @@ const JobContainer = styled("div")`
     font-weight: 200;
     font-size: 28px;
     color: #2b2b2b;
-    text-align: left;
   }
 
-  p {
+  h4 {
+    font-family: Overpass;
+    width: 100%;
+    max-width: 720px;
+    padding: 0 20px;
+    font-weight: bold;
+  }
+
+  p, section {
     font-family: Karma;
     color: #2b2b2b;
     font-size: 16px;
@@ -33,70 +40,47 @@ export default function Jobs() {
   return (
     <>
       <JobContainer style={{ paddingBottom: 150 }}>
-        <h3 id="senior-designer">Senior Web UI/UX Designer</h3>
-        <p>
-          We view ourselves as the 'soft wrapper' around ethereum, helping to make it much easier to use, and this idea
-          is the inspiration for our logo. A large part of achieving this goal revolves around the UI/UX of our applications.
-          We are currently undergoing a complete redesign of all of our user facing applications and are looking
-          for a designer to come on board and help us complete this thus helping to make the blockchain more accessible.
-        </p>
-        <p>
-          What you'll be doing:
-          <ul>
-            <li>
-              Creating effective UI/UX design for something that is brand new to most people, helping to onboard non-crypto natives into the next version of the web.
-            </li>
-            <li>
-              Working closely with the app team who will be ready and eager to implement your designs.
-            </li>
-            <li>
-              Creating a Design System that will allow for efficient creation of new pages and allow for people outside of the team to create great-looking web3 apps.
-            </li>
-            <li>
-              Building and creating many flows from scratch, solving UI/UX problems that have never been solved before. There is an opportunity here to set the trend for how things are done in web3 for years to come.
-            </li>
-          </ul>
-        </p>
-        <p>
-          What we are looking for:
-          <ul>
-            <li>
-              Intrinsic motivation and good time management. We are a fully remote team and trust everyone to work without needing to be micro-managed.
-            </li>
-            <li>
-              Someone who is excited by the prospect of breaking new ground, unlike web2 the best UI/UX solutions in web3 have yet to be designed/built.
-            </li>
-            <li>
-              Experience in creating and maintaining a Design System.
-            </li>
-            <li>
-              Good knowledge of responsive web design patterns and UX best practices.
-            </li>
-            <li>
-              Strong verbal and written English communication skills.
-            </li>
-            <li>
-              Someone who is open to sharing work in progress and comfortable with taking constructive input from the team. This will be particularly important if you are not familiar with the web3 space.
-            </li>
-            <li>
-              Experience or evidence of ability to lead junior and mid-level designers.
-            </li>
-          </ul>
-        </p>
-        <p>
-          Nice to haves:
-          <ul>
-            <li>
-              Experience with Figma/InVision.
-            </li>
-            <li>
-              Someone who has knowledge of the blockchain/web3 space and the unique design challenges that it presents.
-            </li>
-            <li>
-              Experience working remotely with a team located in many different time zones.
-            </li>
-          </ul>
-        </p>
+          <h3 id="senior-designer">Project Manager (Part Time)</h3>
+          <section>
+            <h4>About the role:</h4>
+            <p>As Project Manager (part time - 20 hours per week), you will join the TNL team at a critical point in our history. We are off to the races to improve and advance the Ethereum Name Service as the premier web3 naming protocol. You will support our frontend and backend teams by removing roadblocks and ensuring that we upgrade our effectiveness.</p>
+          </section>
+          <section>
+            <h4>About the team:</h4>
+            <p>
+            TNL believes in hiring top quality talent and then giving them broad authority to move things forward as they see fit. You will be working with a global team that has a myriad of backgrounds and experiences. People who have worked at the biggest tech companies and the smallest startups, crypto veterans and relative newcomers, colleagues who have been entrepreneurs in their own right and those who have worked in the public and private sectors. If you’re the type of person who gets excited about creating the future you’ll fit right in.
+            </p>
+          </section>
+          <section>
+            <h4>What you&#x2019;ll do:</h4>
+            <ul>
+              <li>Energetically lead and ensure that the teams build and ship according to agreed upon expectations.</li>
+              <li>Manage risks, assumptions, issues, and dependencies between teams and projects, both internal and external.</li>
+              <li>Improve our processes and speed with an eye toward team member satisfaction and product quality for end users.</li>
+              <li>Actively remove roadblocks for developers and designers.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Who we&#x2019;re looking for:</h4>
+            <ul>
+              <li>Working experience as a developer, or 4+ years of experience working directly with developers as a product manager or project manager in the technology field.</li>
+              <li>Extensive experience leading, coordinating, and facilitating software teams and sprints.</li>
+              <li>Strong organization and documentation skills and an ability to gather requirements, acceptance criteria, etc.</li>
+              <li>Experience guiding team members in adopting processes in ways that meet their unique needs iteratively.</li>
+              <li>Experience with using Github.</li>
+              <li>Familiarity with blockchain products, and an eagerness to learn more.</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Nice to haves:</h4>
+            <ul>
+              <li>Working experience in web3 development (i.e. Solidity experience)</li>
+              <li>You're a practicing Scrum Master and/or Project Manager for the last 3+ years</li>
+              <li>You're a certified Agile practitioner (e.g. CSM, CSPO, PMI-ACP, etc)</li>
+              <li>You're a certified PMP</li>
+              <li>You're an ENS user!</li>
+            </ul>
+          </section>
       </JobContainer>
     </>
   )
