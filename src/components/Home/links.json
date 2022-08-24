@@ -118,8 +118,7 @@
   },
   "bitcoindotcomwallet": {
     "link": "https://www.bitcoin.com/",
-    "name": "Bitcoin.com Wallet",
-    "featuredWallet": 5
+    "name": "Bitcoin.com Wallet"
   },
   "bitsearch": {
     "link": "https://bitsear.ch/",
@@ -262,11 +261,13 @@
   },
   "coinbasewallet": {
     "link": "https://wallet.coinbase.com/",
-    "name": "Coinbase Wallet"
+    "name": "Coinbase Wallet",
+    "featuredWallet": 2
   },
   "coinbasewalletextension": {
     "link": "https://chrome.google.com/webstore/detail/coinbase-wallet-extension/hnfanknocfeofbddgcijnmhnfnkdnaad",
-    "name": "Coinbase Wallet Extension"
+    "name": "Coinbase Wallet Extension",
+    "featuredBrowser": 2
   },
   "coindreams": {
     "link": "https://coindreams.io/",
@@ -1197,7 +1198,7 @@
   "myCrypto": {
     "link": "https://mycrypto.com/",
     "name": "MyCrypto",
-    "featuredWallet": 4
+    "featuredWallet": 5
   },
   "mycryptocheckout": {
     "link": "https://wordpress.org/plugins/mycryptocheckout/",
@@ -1310,8 +1311,7 @@
   },
   "opera": {
     "link": "https://www.opera.com",
-    "name": "Opera",
-    "featuredBrowser": 2
+    "name": "Opera"
   },
   "opyn": {
     "link": "http://opyn.co/",
@@ -1488,7 +1488,7 @@
   "rainbow": {
     "link": "https://rainbow.me/",
     "name": "Rainbow",
-    "featuredWallet": 2
+    "featuredWallet": 3
   },
   "rareblocks": {
     "link": "http://rareblocks.xyz/",
@@ -1855,7 +1855,7 @@
   "trustwallet": {
     "link": "https://trustwallet.com/",
     "name": "Trust Wallet",
-    "featuredWallet": 3
+    "featuredWallet": 4
   },
   "tutela": {
     "link": "https://tutela.xyz/",
