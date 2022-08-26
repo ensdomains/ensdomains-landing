@@ -18,8 +18,8 @@
       "launch": "앱 실행하기"
     },
     "portableUsername": {
-      "title": "Your Web3 Username",
-      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+      "title": "Web3 사용자 이름",
+      "text": "한정적인 사용자 이름은 그만. 나만의 사용자 이름을 소유하여 아바타 및 기타 프로필 데이터를 저장하고 서비스 전반에 걸쳐 사용하세요."
     },
     "cryptocurrencies": {
       "title": "모든 암호화폐를 위한 하나의 이름",
@@ -32,7 +32,7 @@
       "owners": "소유자"
     },
     "decentralisedWebsites": {
-      "title": "탈중화된 웹사이트",
+      "title": "탈중앙화된 웹사이트",
       "text": "ENS를 이용하여 검열 저항성이 있는 탈중화 웹사이트를 출시하세요. 매니저를 이용하여 웹사이트를 IPFS에 업로드하고 ENS 이름으로 접근할 수 있습니다."
     },
     "dns": {
@@ -107,7 +107,7 @@
     "tally": "Vote on Proposals"
   },
   "constitution": {
-    "title": "ENS constitution book now available",
-    "description": "A printed copy of the ENS constitution and its signers is now available in hardcover and ultra-limited edition of 50"
+    "title": "ENS 헌법서가 출시되었습니다",
+    "description": "ENS 헌법과 서명자 목록 인쇄본은 하드커버 책과 50개의 초한정판으로 제공됩니다."
   }
 }
