@@ -163,7 +163,7 @@
   "brave": {
     "link": "https://brave.com/",
     "name": "Brave",
-    "featuredBrowser": 1
+    "featuredBrowser": 2
   },
   "brd": {
     "link": "https://brd.com/",
@@ -267,7 +267,7 @@
   "coinbasewalletextension": {
     "link": "https://chrome.google.com/webstore/detail/coinbase-wallet-extension/hnfanknocfeofbddgcijnmhnfnkdnaad",
     "name": "Coinbase Wallet Extension",
-    "featuredBrowser": 2
+    "featuredBrowser": 1
   },
   "coindreams": {
     "link": "https://coindreams.io/",
