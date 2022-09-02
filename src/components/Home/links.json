@@ -13,7 +13,7 @@
     "name": "Accointing"
   },
   "almonit": {
-    "link": "http://almonit.eth.link/",
+    "link": "https://almonit.eth.limo/",
     "name": "Almonit"
   },
   "alchemydao": {
@@ -21,7 +21,7 @@
     "name": "AlchemyDAO"
   },
   "almonitextension": {
-    "link": "http://almonit.eth.link/",
+    "link": "https://almonit.eth.limo/",
     "name": "Almonit Extension"
   },
   "alohabrowser": {
@@ -206,7 +206,7 @@
     "name": "Carbon Raindrops"
   },
   "cardpunks": {
-    "link": "https://cardpunks.eth.link/",
+    "link": "https://cardpunks.eth.limo/",
     "name": "Cardpunks"
   },
   "ccswap": {
@@ -214,7 +214,7 @@
     "name": "CCSwap"
   },
   "chainlink": {
-    "link": "https://chain.link/",
+    "link": "https://chain.limo/",
     "name": "Chainlink"
   },
   "chainshot": {
@@ -226,7 +226,7 @@
     "name": "Charged Particles"
   },
   "chatrooms": {
-    "link": "https://chatrooms.eth.link/",
+    "link": "https://chatrooms.eth.limo/",
     "name": "Chatrooms"
   },
   "chilliswap": {
@@ -422,7 +422,7 @@
     "name": "Defor"
   },
   "defswap": {
-    "link": "https://defswap.eth.link/",
+    "link": "https://defswap.eth.limo/",
     "name": "Defswap"
   },
   "democracyearth": {
@@ -486,7 +486,7 @@
     "name": "Drips"
   },
   "dxdao": {
-    "link": "https://dxdao.eth.link/",
+    "link": "https://dxdao.eth.limo/",
     "name": "DXdao"
   },
   "dynalock": {
@@ -582,7 +582,7 @@
     "name": "ERCGraph"
   },
   "esteroids": {
-    "link": "https://esteroids.eth.link/",
+    "link": "https://esteroids.eth.limo/",
     "name": "Esteroids"
   },
   "eswap": {
@@ -640,10 +640,6 @@
   "ethlimo": {
     "link": "https://eth.limo/",
     "name": "eth.limo"
-  },
-  "ethlink": {
-    "link": "https://eth.link/",
-    "name": "eth.link"
   },
   "ethmail": {
     "link": "http://ethmail.cc/",
@@ -755,7 +751,7 @@
     "name": "Galleria"
   },
   "geocitieseth": {
-    "link": "https://geocities.eth.link/",
+    "link": "https://geocities.eth.limo/",
     "name": "GeoCities.eth"
   },
   "gem": {
@@ -1511,7 +1507,7 @@
     "name": "Real-World Asset Market"
   },
   "redireth": {
-    "link": "http://redir.eth.link/",
+    "link": "https://redir.eth.limo/",
     "name": "Redir.eth"
   },
   "reimaginedfi": {
@@ -1539,7 +1535,7 @@
     "name": "Ribbon Finance"
   },
   "rigoblock": {
-    "link": "http://rigoblock.eth.link/",
+    "link": "https://rigoblock.eth.limo/",
     "name": "RigoBlock"
   },
   "rinkebyfaucet": {
@@ -1648,7 +1644,7 @@
     "name": "Snowbank DAO"
   },
   "sockexplorer": {
-    "link": "https://sockexplorer.eth.link/",
+    "link": "https://sockexplorer.eth.limo/",
     "name": "Sock Explorer"
   },
   "songaday": {
@@ -1717,7 +1713,7 @@
     "name": "Strike Finance"
   },
   "stuckwithu": {
-    "link": "http://stuckwithu.eth.link/",
+    "link": "https://stuckwithu.eth.limo/",
     "name": "Stuck with U"
   },
   "sumswap": {
@@ -1745,7 +1741,7 @@
     "name": "Swarm"
   },
   "swapr": {
-    "link": "https://swapr.eth.link/",
+    "link": "https://swapr.eth.limo/",
     "name": "Swapr"
   },
   "sybil": {
