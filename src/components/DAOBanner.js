@@ -75,15 +75,11 @@ const BannerContentWrapper = styled.div`
 export function DAOBannerContent() {
   const { t } = useTranslation()
   return (
-    <Link
-      target="_blank"
-      rel="noreferrer"
-      href="https://constitution.ens.domains"
-    >
+    <Link target="_blank" rel="noreferrer" href="https://swag.ens.domains">
       <LogoSmall src={ENSIcon} />
       <BannerContentWrapper>
-        <BannerTitle>{t("constitution.title")}</BannerTitle>
-        <BannerContent>{t("constitution.description")}</BannerContent>
+        <BannerTitle>{t("swag.title")}</BannerTitle>
+        <BannerContent>{t("swag.description")}</BannerContent>
       </BannerContentWrapper>
       <ArrowSmall src={Arrow} />
     </Link>
