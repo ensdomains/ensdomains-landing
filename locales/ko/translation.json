@@ -109,5 +109,9 @@
   "constitution": {
     "title": "ENS 헌법서가 출시되었습니다",
     "description": "ENS 헌법과 서명자 목록 인쇄본은 하드커버 책과 50개의 초한정판으로 제공됩니다"
+  },
+  "swag": {
+    "title": "보고타 devcon의 ENS 수집품",
+    "description": "Devcon에 갈 예정이라면 swag.ens.domains에 등록하여 맞춤형 ENS 수집품을 받으세요!"
   }
 }
