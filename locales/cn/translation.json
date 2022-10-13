@@ -19,7 +19,7 @@
     },
     "portableUsername": {
       "title": "你的 Web3 用户名",
-      "text": "拒绝沙箱式用户名。真正掌控您自己的用户名，并在各种服务中使用您存储的头像和其他个人资料。"
+      "text": "拒绝沙盒式用户名。真正掌控您自己的用户名，并在各种服务中使用您存储的头像和其他个人资料。"
     },
     "cryptocurrencies": {
       "title": "让您的各种加密货币拥有一个统一的域名",
@@ -85,6 +85,10 @@
       "support": "我们得到的慷慨支持来自: ",
       "support2": "ENS 的代表们参与着更庞大的互联网社区: "
     },
+    "aboutTNL": {
+      "title": "关于 True Names Limited",
+      "text": "True Names Limited (TNL) 成立于 2018 年，是一家总部位于新加坡的非营利组织，负责 ENS 的核心软件开发，包括 ENS app、开源库和核心智能合约等。"
+    },
     "team": {
       "title": "团队成员"
     },
@@ -98,16 +102,20 @@
     }
   },
   "governance": {
-    "claim": "Claim your $ENS",
-    "discord": "Chat on Discord",
-    "discuss": "Join the forum",
-    "governance": "Documentation",
-    "mirror": "Read on Mirror",
-    "dao": "Buy a Constitution",
-    "tally": "Vote on Proposals"
+    "claim": "领取您的 $ENS",
+    "discord": "在 Discord 上交流",
+    "discuss": "进入论坛",
+    "governance": "文档",
+    "mirror": "在 Mirror 上了解",
+    "dao": "购买 ENS 章程",
+    "tally": "为 ENS 提案投票"
   },
   "constitution": {
-    "title": "ENS constitution book now available",
-    "description": "A printed copy of the ENS constitution and its signers is now available in hardcover and ultra-limited edition of 50"
+    "title": "ENS 章程已经出版了",
+    "description": "ENS 章程及其签署成员的印刷版已经发布，目前有精装版和旗舰版，其中旗舰版限量 50 份"
+  },
+  "swag": {
+    "title": "波哥大 Devcon 上的 ENS 赠品",
+    "description": "如果你要去 Devcon， 在 swag.ens.domains 注册，可以获得个性化的 ENS 赠品!"
   }
 }
