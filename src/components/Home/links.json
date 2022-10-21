@@ -1215,7 +1215,7 @@
   "nethereum": {
     "link": "http://playground.nethereum.com/",
     "name": "Nethereum Playground"
-  },  
+  },
   "nextme": {
     "link": "https://nextme.one/",
     "name": "Nextme"
@@ -1307,6 +1307,10 @@
   "onchainart": {
     "link": "https://www.0xchain.art/",
     "name": "On-Chain Art"
+  },
+  "onekey": {
+    "link": "https://onekey.so/download/",
+    "name": "OneKey"
   },
   "onjuno": {
     "link": "https://onjuno.com/crypto",
