@@ -1,6 +1,6 @@
-import React from "react"
 import styled from "@emotion/styled"
-import { useTranslation, Trans } from "react-i18next"
+import React from "react"
+import { Trans, useTranslation } from "react-i18next"
 
 import mq from "../../../mediaQuery"
 import { importAll } from "../../../utils"
@@ -103,7 +103,7 @@ export default function AboutENS(props) {
         <Trans i18nKey="about.aboutENS.text">
           Started at the Ethereum Foundation in early 2017, ENS spun off as a
           separate organization in 2018. ENS is managed by the Singaporean
-          non-profit True Names LTD and is a{" "}
+          non-profit ENS Labs LTD and is a{" "}
           <a href="https://medium.com/the-ethereum-name-service/who-should-own-the-naming-system-of-the-future-ens-as-a-public-good-10e4a0ab71d8">
             public good
           </a>
@@ -112,15 +112,15 @@ export default function AboutENS(props) {
         </Trans>
       </p>
 
-      <AnchorContainer href={"#about-tnl"}>
+      <AnchorContainer href={"#about-ens-labs"}>
         <h3>
-          {t("about.aboutTNL.title")}
+          {t("about.aboutENSLabs.title")}
           <Anchor />
         </h3>
       </AnchorContainer>
 
       <p className="prelede">
-        <Trans i18nKey="about.aboutTNL.text"></Trans>
+        <Trans i18nKey="about.aboutENSLabs.text"></Trans>
       </p>
       <Support>
         <List1>

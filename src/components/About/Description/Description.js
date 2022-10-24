@@ -1,5 +1,5 @@
-import React from "react"
 import styled from "@emotion/styled"
+import React from "react"
 import { useTranslation } from "react-i18next"
 import mq from "../../../mediaQuery"
 import { Anchor, AnchorContainer } from "../../Anchor"
@@ -51,7 +51,7 @@ const DescriptionInner = styled("div")`
 `
 
 const members = [
-  { name: "Nick Johnson", company: "True Names Limited" },
+  { name: "Nick Johnson", company: "ENS Labs Limited" },
   { name: "Sergey Nazarov", company: "Chainlink" },
   { name: "Dan Finlay", company: "Metamask" },
   { name: "Taylor Monahan", company: "MyCrypto" },

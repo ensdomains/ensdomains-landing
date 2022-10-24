@@ -87,12 +87,12 @@
       "support": "We have received generous financial support from:",
       "support2": "Representatives of ENS participate in the greater Internet community:"
     },
-    "aboutTNL": {
-      "title": "About True Names Limited",
-      "text": "Founded in 2018, True Names Limited (TNL) is a Singapore-based non-profit organisation and is responsible for the core software development of ENS. This includes the ENS app, open source libraries and core smart contracts"
+    "aboutENSLabs": {
+      "title": "About ENS Labs Limited",
+      "text": "Founded in 2018, ENS Labs Limited is a Singapore-based non-profit organisation and is responsible for the core software development of ENS. This includes the ENS app, open source libraries and core smart contracts"
     },
     "team": {
-      "title": "Meet the TNL team"
+      "title": "Meet the ENS Labs team"
     },
     "benefits": {
       "title": "Benefits of Ethereum",
