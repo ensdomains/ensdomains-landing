@@ -818,6 +818,10 @@
     "link": "https://www.guild.xyz/",
     "name": "Guild"
   },
+  "holder": {
+    "link": "https://www.holder.xyz/",
+    "name": "Holder"
+  },
   "hakkafinance": {
     "link": "https://hakka.finance/",
     "name": "Hakka Finance"
@@ -1215,7 +1219,7 @@
   "nethereum": {
     "link": "http://playground.nethereum.com/",
     "name": "Nethereum Playground"
-  },  
+  },
   "nextme": {
     "link": "https://nextme.one/",
     "name": "Nextme"
@@ -1739,6 +1743,10 @@
   "sushiswap": {
     "link": "https://sushi.com/",
     "name": "SushiSwap"
+  },
+  "sturdyfinance": {
+    "link": "https://sturdy.finance/",
+    "name": "Sturdy Finance"
   },
   "swapmatic": {
     "link": "https://app.swapmatic.io/",
