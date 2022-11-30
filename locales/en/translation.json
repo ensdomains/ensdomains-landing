@@ -51,9 +51,7 @@
     "additionalFeatures": {
       "title": "Additional Features",
       "recordType": "Create your project’s own record type.",
-
       "textRecord": "Attach profile information to your ENS name with text records.",
-
       "subDomains": "Create ENS subdomains as usernames for your project.",
       "dns": "Store and serve traditional DNS records with certain names.",
       "tor": "Use ENS to more easily access Tor .onion hidden services.",
