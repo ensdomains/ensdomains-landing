@@ -59,6 +59,7 @@
     },
     "getInvolved": {
       "title": "Get Involved",
+      "supportTitle": "Get Support",
       "subscribe": {
         "title": "Subscribe to our mailing list",
         "cta": "Subscribe"
@@ -74,6 +75,14 @@
       "documentation": {
         "title": "Read our documentation",
         "cta": "Read docs"
+      },
+      "supportEmail": {
+        "title": "Email the support team",
+        "cta": "Email"
+      },
+      "supportDiscord": {
+        "title": "Open a ticket in discord",
+        "cta": "Join Discord"
       }
     }
   },
