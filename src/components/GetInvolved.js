@@ -41,6 +41,23 @@ const links = [
   },
 ]
 
+const supportLinks = [
+  {
+    name: "supportEmail",
+    img: mailingList,
+    text: "Email the support team",
+    cta: "Email",
+    link: "mailto:support@ens.domains",
+  },
+  {
+    name: "supportDiscord",
+    img: community,
+    text: "Open a ticket in discord",
+    cta: "Join Discord",
+    link: "https://discord.com/channels/742384562646286509/912184614632689734",
+  },
+]
+
 const Container = styled("div")`
   background: #253c8f;
   display: flex;
@@ -118,24 +135,45 @@ const ExternalLink = styled("a")`
 export default function GetInvolved(props) {
   const { t } = useTranslation()
   return (
-    <Container id="get-involved">
-      <AnchorContainer href={"#get-involved"}>
-        <H2>
-          {t("home.getInvolved.title")}
-          <Anchor />
-        </H2>
-      </AnchorContainer>
-      <Links>
-        {links.map(l => (
-          <LinkItem key={l.name}>
-            <img src={l.img} alt={t(l.name)} />
-            <h3>{t(`home.getInvolved.${l.name}.title`)}</h3>
-            <ExternalLink href={l.link}>
-              {t(`home.getInvolved.${l.name}.cta`)}
-            </ExternalLink>
-          </LinkItem>
-        ))}
-      </Links>
-    </Container>
+    <>
+      <Container id="get-involved">
+        <AnchorContainer href={"#get-involved"}>
+          <H2>
+            {t("home.getInvolved.title")}
+            <Anchor />
+          </H2>
+        </AnchorContainer>
+        <Links>
+          {links.map(l => (
+            <LinkItem key={l.name}>
+              <img src={l.img} alt={t(l.name)} />
+              <h3>{t(`home.getInvolved.${l.name}.title`)}</h3>
+              <ExternalLink href={l.link}>
+                {t(`home.getInvolved.${l.name}.cta`)}
+              </ExternalLink>
+            </LinkItem>
+          ))}
+        </Links>
+      </Container>
+      <Container id="get-involved" style={{ paddingTop: 0 }}>
+        <AnchorContainer href={"#get-support"}>
+          <H2>
+            {t("home.getInvolved.supportTitle")}
+            <Anchor />
+          </H2>
+        </AnchorContainer>
+        <Links>
+          {supportLinks.map(l => (
+            <LinkItem key={l.name}>
+              <img src={l.img} alt={t(l.name)} />
+              <h3>{t(`home.getInvolved.${l.name}.title`)}</h3>
+              <ExternalLink href={l.link}>
+                {t(`home.getInvolved.${l.name}.cta`)}
+              </ExternalLink>
+            </LinkItem>
+          ))}
+        </Links>
+      </Container>
+    </>
   )
 }
