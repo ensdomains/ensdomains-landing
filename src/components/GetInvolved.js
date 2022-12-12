@@ -155,7 +155,7 @@ export default function GetInvolved(props) {
           ))}
         </Links>
       </Container>
-      <Container id="get-involved" style={{ paddingTop: 0 }}>
+      <Container id="get-support" style={{ paddingTop: 0 }}>
         <AnchorContainer href={"#get-support"}>
           <H2>
             {t("home.getInvolved.supportTitle")}
