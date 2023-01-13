@@ -59,6 +59,7 @@
     },
     "getInvolved": {
       "title": "Mitmachen",
+      "supportTitle": "Bekomme Support",
       "subscribe": {
         "title": "Abonnieren Sie unsere Mailingliste",
         "cta": "Abonnieren"
@@ -74,6 +75,14 @@
       "documentation": {
         "title": "Lesen Sie unsere Dokumentation",
         "cta": "Docs lesen"
+      },
+      "supportEmail": {
+        "title": "Schreibe eine E-Mail an das Support Team",
+        "cta": "E-Mail"
+      },
+      "supportDiscord": {
+        "title": "Eröffne ein Support Ticket im Discord",
+        "cta": "Discord beitreten"
       }
     }
   },
@@ -107,7 +116,7 @@
     "tally": "Vote on Proposals"
   },
   "constitution": {
-    "title": "ENS constitution book now available",
-    "description": "A printed copy of the ENS constitution and its signers is now available in hardcover and ultra-limited edition of 50"
+    "title": "ENS-Verfassung ab sofort erhältlich",
+    "description": "Ein gedrucktes Exemplar der ENS-Verfassung und ihrer Unterzeichner ist jetzt als Hardcover und in einer ultra-limitierten Auflage von 50 Stück erhältlich"
   }
 }
