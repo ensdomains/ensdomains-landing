@@ -66,5 +66,11 @@ module.exports = {
         exclude: [],
       },
     },
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `ens.domains`,
+      }
+    },
   ],
 }
