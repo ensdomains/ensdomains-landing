@@ -93,7 +93,9 @@ export default function Layout({ children, data, location }) {
         link={[
           { rel: "shortcut icon", type: "image/x-icon", href: `${favicon}` },
         ]}
-      />
+      >
+        <script async="" defer=""  data-domain="ens.domains" src="https://plausible.io/js/script.outbound-links.js"></script>
+      </Helmet>
       <Global
         styles={css`
           html, body, #___gatsby, #gatsby-focus-wrapper {
