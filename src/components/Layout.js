@@ -93,7 +93,9 @@ export default function Layout({ children, data, location }) {
         link={[
           { rel: "shortcut icon", type: "image/x-icon", href: `${favicon}` },
         ]}
-      />
+      >
+        <script>console.log("success")</script>
+      </Helmet>
       <Global
         styles={css`
           html, body, #___gatsby, #gatsby-focus-wrapper {
