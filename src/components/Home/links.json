@@ -152,10 +152,6 @@
     "link": "https://blocto.portto.io/en/",
     "name": "Blocto"
   },
-  "blurio": {
-    "link": "https://blur.io/",
-    "name": "Blur.io"
-  },
   "bombmoney": {
     "link": "http://bomb.money/",
     "name": "bomb.money"
@@ -376,10 +372,6 @@
   "dappnode": {
     "link": "https://dappnode.io/",
     "name": "DAppNode"
-  },
-  "dappradar": {
-    "link": "https://dappradar.com/",
-    "name": "DappRadar"
   },
   "dappquery": {
     "link": "https://dappquery.com/integration/ens",
@@ -734,10 +726,6 @@
     "link": "https://flashbots.tools/",
     "name": "Flashbots.tools"
   },
-  "flipxyz": {
-    "link": "https://flip.xyz/",
-    "name": "Flip.xyz"
-  },
   "fleek": {
     "link": "https://fleek.co/",
     "name": "Fleek"
@@ -749,10 +737,6 @@
   "flooredape": {
     "link": "https://flooredape.io/",
     "name": "flooredApe"
-  },
-  "foundation": {
-    "link": "https://foundation.app/",
-    "name": "Foundation"
   },
   "foxgame": {
     "link": "https://fox.game/",
@@ -1037,10 +1021,6 @@
   "leth": {
     "link": "https://www.inzhoop.com/",
     "name": "LETH"
-  },
-  "lido": {
-    "link": "https://stake.lido.fi/",
-    "name": "Lido"
   },
   "light": {
     "link": "https://light.so/",
@@ -1493,10 +1473,6 @@
     "link": "https://dex.polyient.games/",
     "name": "Polyient DEX"
   },
-  "polygonbridge": {
-    "link": "https://wallet.polygon.technology/",
-    "name": "Polygon Bridge"
-  },
   "pooledmoney": {
     "link": "https://pooled.money/",
     "name": "pooled.money"
@@ -1808,10 +1784,6 @@
     "link": "https://sturdy.finance/",
     "name": "Sturdy Finance"
   },
-  "swaptransit": {
-    "link": "https://swap.transit.finance/",
-    "name": "Swap Transit"
-  },
   "swapmatic": {
     "link": "https://app.swapmatic.io/",
     "name": "SwapMatic"
@@ -1851,10 +1823,6 @@
   "tempusfinance": {
     "link": "https://tempus.finance/",
     "name": "Tempus"
-  },
-  "texturepunx": {
-    "link": "https://texturepunx.com/",
-    "name": "Texture Punks"
   },
   "theconvospace": {
     "link": "https://theconvo.space/",
