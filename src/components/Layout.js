@@ -94,7 +94,7 @@ export default function Layout({ children, data, location }) {
           { rel: "shortcut icon", type: "image/x-icon", href: `${favicon}` },
         ]}
       >
-        <script async="" defer=""  data-domain="ens.domains" src="https://plausible.io/js/script.outbound-links.js"></script>
+        <script async="" defer=""  data-domain="ens.domains, rollup.ens" src="https://plausible.io/js/script.outbound-links.js"></script>
       </Helmet>
       <Global
         styles={css`
