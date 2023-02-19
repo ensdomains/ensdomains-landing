@@ -100,6 +100,7 @@ export default function Layout({ children, data, location }) {
         styles={css`
           html, body, #___gatsby, #gatsby-focus-wrapper {
             height: ${location?.pathname === '/governance' ? '100%' : 'initial'};
+            overflow-x: hidden;
           }
           body {
             font-family: Overpass;
