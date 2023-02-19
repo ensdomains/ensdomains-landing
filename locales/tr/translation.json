@@ -1,21 +1,21 @@
 {
   "c": {
-    "learnMore": "Learn more"
+    "learnMore": "Daha fazla bilgi"
   },
   "nav": {
-    "about": "Team",
+    "about": "Takim",
     "blog": "Blog",
-    "launch": "Go to app"
+    "launch": "Uygulamayı aç"
   },
   "home": {
     "hero": {
       "title": "Decentralised naming for wallets, websites, & more."
     },
     "carousel": {
-      "search": "search",
-      "manage": "manage",
-      "register": "register",
-      "launch": "Launch app"
+      "search": "ara",
+      "manage": "yönet",
+      "register": "kayıt ol",
+      "launch": "Uygulamayı başlat"
     },
     "portableUsername": {
       "title": "Your web3 username",
