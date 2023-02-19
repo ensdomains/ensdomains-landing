@@ -18,8 +18,8 @@
       "launch": "Open App"
     },
     "portableUsername": {
-      "title": "Your Web3 Username",
-      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+      "title": "Uw Web3-gebruikersnaam",
+      "text": "Geen sandboxed-gebruikersnamen meer. Bezit uw eigen gebruikersnaam, sla avatars en andere profielgegevens op, en gebruik deze met alle diensten."
     },
     "cryptocurrencies": {
       "title": "Één Naam Voor Al je Cryptovaluta",
@@ -98,16 +98,16 @@
     }
   },
   "governance": {
-    "claim": "Claim your $ENS",
-    "discord": "Chat on Discord",
-    "discuss": "Join the forum",
-    "governance": "Documentation",
-    "mirror": "Read on Mirror",
-    "dao": "Buy a Constitution",
-    "tally": "Vote on Proposals"
+    "claim": "Claim uw $ENS",
+    "discord": "Chat op Discord",
+    "discuss": "Doe mee met het forum",
+    "governance": "Documentatie",
+    "mirror": "Lees op Mirror",
+    "dao": "Koop een Constitutieboek",
+    "tally": "Stem op Voorstellen"
   },
   "constitution": {
-    "title": "ENS constitution book now available",
-    "description": "A printed copy of the ENS constitution and its signers is now available in hardcover and ultra-limited edition of 50"
+    "title": "ENS constitutieboek nu beschikbaar",
+    "description": "Een gedrukt exemplaar van het ENS-Constitutieboek en zijn ondertekenaars is nu verkrijgbaar in hardcover en in een ultra beperkte oplage van 50"
   }
 }
