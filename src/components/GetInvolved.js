@@ -14,29 +14,21 @@ const links = [
   {
     name: "subscribe",
     img: mailingList,
-    text: "Subscribe to our mailing list",
-    cta: "Subscribe",
     link: "https://ensdomains.substack.com/p/coming-soon",
   },
   {
     name: "community",
     img: community,
-    text: "Join our Discord community",
-    cta: "Join Discord",
     link: "https://chat.ens.domains/",
   },
   {
     name: "forums",
     img: forum,
-    text: "Discuss on our forum",
-    cta: "Discuss",
     link: "https://discuss.ens.domains/",
   },
   {
     name: "documentation",
     img: documentation,
-    text: "Read our documentation",
-    cta: "Read Docs",
     link: "https://docs.ens.domains/",
   },
 ]
@@ -45,15 +37,11 @@ const supportLinks = [
   {
     name: "supportEmail",
     img: mailingList,
-    text: "Email the support team",
-    cta: "Email",
     link: "mailto:support@ens.domains",
   },
   {
     name: "supportDiscord",
     img: community,
-    text: "#create-a-ticket in Discord",
-    cta: "Go to Discord",
     link: "https://chat.ens.domains/",
   },
 ]
@@ -117,7 +105,7 @@ const LinkItem = styled("div")`
     margin: 0;
 
     ${mq.medium`
-      font-size: 44px;
+      font-size: 42px;
     `};
   }
   a {

@@ -81,8 +81,8 @@
         "cta": "Email"
       },
       "supportDiscord": {
-        "title": "Open a ticket in discord",
-        "cta": "Join Discord"
+        "title": "#create-a-ticket in Discord",
+        "cta": "Go to Discord"
       }
     }
   },
