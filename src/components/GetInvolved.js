@@ -52,9 +52,9 @@ const supportLinks = [
   {
     name: "supportDiscord",
     img: community,
-    text: "Open a ticket in discord",
-    cta: "Join Discord",
-    link: "https://discord.com/channels/742384562646286509/912184614632689734",
+    text: "#create-a-ticket in Discord",
+    cta: "Go to Discord",
+    link: "https://chat.ens.domains/",
   },
 ]
 
