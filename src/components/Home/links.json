@@ -1948,6 +1948,10 @@
     "link": "https://tiles.art/",
     "name": "Tiles"
   },
+  "timelesswallet": {
+    "link": "https://timelesswallet.xyz/",
+    "name": "Timeless Wallet"
+  },
   "tkreth": {
     "link": "https://tkr.eth.limo/#ens",
     "name": "TickerDAO"
