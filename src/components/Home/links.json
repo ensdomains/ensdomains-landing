@@ -56,10 +56,6 @@
     "link": "https://aragon.org/",
     "name": "Aragon"
   },
-  "arborfinance": {
-    "link": "https://arbor.finance/",
-    "name": "Arbor Finance"
-  },
   "archerswap": {
     "link": "https://swap.archerdao.io/#/swap",
     "name": "Archerswap"
@@ -80,10 +76,6 @@
     "link": "https://tryarmada.com/",
     "name": "Armada"
   },
-  "arrakis": {
-    "link": "https://www.arrakis.finance/",
-    "name": "Arrakis"
-  },
   "authereum": {
     "link": "https://authereum.org/",
     "name": "Authereum"
@@ -95,10 +87,6 @@
   "backdrop": {
     "link": "https://backdrop.so/",
     "name": "Backdrop"
-  },
-  "badgerdao": {
-    "link": "https://badger.com/",
-    "name": "BadgerDAO"
   },
   "balancer": {
     "link": "https://balancer.fi/",
@@ -131,10 +119,6 @@
   "beholder": {
     "link": "https://app.behodler.io/",
     "name": "Beholder"
-  },
-  "benddao": {
-    "link": "https://www.benddao.xyz/",
-    "name": "BendDAO"
   },
   "bitcoindotcomwallet": {
     "link": "https://www.bitcoin.com/",
@@ -501,10 +485,6 @@
     "link": "https://app.dodoex.io/",
     "name": "DODOex"
   },
-  "doodles": {
-    "link": "https://doodles.app/",
-    "name": "Doodles"
-  },
   "doomcatrescue": {
     "link": "https://www.doom.cat/",
     "name": "Doom Cat Rescue"
@@ -802,10 +782,6 @@
     "link": "https://apps.apple.com/us/app/galleria-explore-nfts/id1604013393",
     "name": "Galleria"
   },
-  "gashawk": {
-    "link": "https://gashawk.io/",
-    "name": "GasHawk"
-  },
   "gem": {
     "link": "https://www.gem.xyz/",
     "name": "Gem"
@@ -1001,10 +977,6 @@
   "kalidao": {
     "link": "https://app.kalidao.xyz/",
     "name": "KaliDAO"
-  },
-  "keep3rnetwork": {
-    "link": "https://keep3r.network/",
-    "name": "Keep3r Network"
   },
   "keplr": {
     "link": "https://wallet.keplr.app/",
@@ -1211,10 +1183,6 @@
     "link": "https://mintbase.io/",
     "name": "Mintbase"
   },
-  "mintyourpfp": {
-    "link": "https://mintyourpfp.xyz/",
-    "name": "Mint Your PFP"
-  },
   "mirror": {
     "link": "https://mirror.xyz/",
     "name": "Mirror"
@@ -1250,10 +1218,6 @@
   "moonshotbots": {
     "link": "https://bots.moonshotcollective.space/",
     "name": "Moonshot Bots"
-  },
-  "morpho": {
-    "link": "https://www.morpho.xyz/",
-    "name": "Morpho"
   },
   "movement": {
     "link": "https://www.movement.fm/",
@@ -1453,10 +1417,6 @@
     "link": "https://faucet.paradigm.xyz/",
     "name": "Paradigm MultiFaucet"
   },
-  "paragraph": {
-    "link": "https://paragraph.xyz/",
-    "name": "Paragraph"
-  },
   "parallel": {
     "link": "https://parallel.life/",
     "name": "Parallel"
@@ -1573,10 +1533,6 @@
     "link": "https://primitive.finance/",
     "name": "Primitive"
   },
-  "protocolart": {
-    "link": "https://protocol.art/",
-    "name": "Protocol.art"
-  },
   "prysm": {
     "link": "https://prysm.xyz/",
     "name": "Prysm"
@@ -1630,10 +1586,6 @@
     "link": "https://rwamarket.io/",
     "name": "Real-World Asset Market"
   },
-  "redacted": {
-    "link": "https://redacted.finance/",
-    "name": "Redacted"
-  },
   "redireth": {
     "link": "https://redir.eth.limo/",
     "name": "Redir.eth"
@@ -1657,10 +1609,6 @@
   "revokecash": {
     "link": "https://revoke.cash/",
     "name": "Revoke.Cash"
-  },
-  "rhinofi": {
-    "link": "https://rhino.fi/",
-    "name": "rhino.fi"
   },
   "ribbonfinance": {
     "link": "https://app.ribbon.finance/",
@@ -1860,10 +1808,6 @@
     "link": "https://sturdy.finance/",
     "name": "Sturdy Finance"
   },
-  "sudoswap": {
-    "link": "https://sudoswap.xyz/",
-    "name": "sudoswap"
-  },
   "sumswap": {
     "link": "https://swap.sumswap.org/",
     "name": "Sumswap"
@@ -1915,10 +1859,6 @@
   "tallywallet": {
     "link": "https://tally.cash/",
     "name": "Tally"
-  },
-  "teamfinance": {
-    "link": "https://www.team.finance/",
-    "name": "Team Finance"
   },
   "tempusfinance": {
     "link": "https://tempus.finance/",
@@ -2061,10 +2001,6 @@
   "usedapp": {
     "link": "https://usedapp.io/",
     "name": "useDApp"
-  },
-  "uwu": {
-    "link": "https://uwulend.fi/",
-    "name": "Uwu"
   },
   "value": {
     "link": "https://value.app/",
