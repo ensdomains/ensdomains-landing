@@ -1183,6 +1183,10 @@
     "link": "https://mintbase.io/",
     "name": "Mintbase"
   },
+  "mintyourpfp": {
+    "link": "https://mintyourpfp.xyz/",
+    "name": "Mint Your PFP"
+  },
   "mirror": {
     "link": "https://mirror.xyz/",
     "name": "Mirror"
@@ -1416,6 +1420,10 @@
   "paradigmfaucet": {
     "link": "https://faucet.paradigm.xyz/",
     "name": "Paradigm MultiFaucet"
+  },
+  "paragraph": {
+    "link": "https://paragraph.xyz/",
+    "name": "Paragraph"
   },
   "parallel": {
     "link": "https://parallel.life/",
