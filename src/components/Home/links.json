@@ -52,6 +52,10 @@
     "link": "https://tryappend.com/",
     "name": "Append"
   },
+  "approvals": {
+    "link": "https://approvals.xyz/",
+    "name": "Approvals"
+  },
   "aragon": {
     "link": "https://aragon.org/",
     "name": "Aragon"
@@ -99,6 +103,10 @@
   "badgerdao": {
     "link": "https://badger.com/",
     "name": "BadgerDAO"
+  },
+  "badgexyz": {
+    "link": "https://www.badge.xyz/",
+    "name": "Badge"
   },
   "balancer": {
     "link": "https://balancer.fi/",
@@ -260,6 +268,10 @@
   "chargedparticles": {
     "link": "https://charged.fi/",
     "name": "Charged Particles"
+  },
+  "charmverse": {
+    "link": "https://www.charmverse.io/",
+    "name": "CharmVerse"
   },
   "chatrooms": {
     "link": "https://chatrooms.eth.limo/",
@@ -608,6 +620,10 @@
   "ensdata": {
     "link": "https://ensdata.net/",
     "name": "ENS Data"
+  },
+  "ensdoc": {
+    "link": "https://doc3.me/",
+    "name": "ENS Doc"
   },
   "ensideas": {
     "link": "https://ensideas.com/",
@@ -989,6 +1005,10 @@
   "inscribe": {
     "link": "https://inscribe.so/",
     "name": "Inscribe"
+  },
+  "interface": {
+    "link": "https://www.interface.social/",
+    "name": "Interface"
   },
   "interspacechat": {
     "link": "https://interspace.chat/",
@@ -2101,6 +2121,10 @@
   "unlock": {
     "link": "https://unlock-protocol.com/",
     "name": "Unlock"
+  },
+  "unlonely": {
+    "link": "https://www.unlonely.app/",
+    "name": "Unlonely"
   },
   "unstoppablewallet": {
     "link": "https://unstoppable.money/",
