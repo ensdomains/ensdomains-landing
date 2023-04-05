@@ -156,6 +156,10 @@
     "link": "https://www.blockchain.com/",
     "name": "Blockchain"
   },
+  "blockchainsmokers": {
+    "link": "https://blockchainsmokers.xyz/",
+    "name": "blockchainsmokers"
+  },
   "blockhead": {
     "link": "https://blockhead.info/",
     "name": "Blockhead"
@@ -248,6 +252,10 @@
   "chainshot": {
     "link": "https://www.chainshot.com/",
     "name": "ChainShot"
+  },
+  "chainstory": {
+    "link": "https://www.chainstory.xyz/",
+    "name": "ChainStory"
   },
   "chargedparticles": {
     "link": "https://charged.fi/",
@@ -413,6 +421,10 @@
     "link": "https://www.davatar.xyz/",
     "name": "Davatar"
   },
+  "daylight": {
+    "link": "www.daylight.xyz",
+    "name": "Daylight"
+  },
   "dcent": {
     "link": "https://dcentwallet.com/",
     "name": "D'CENT Wallet"
@@ -525,6 +537,10 @@
     "link": "https://drips.network/",
     "name": "Drips"
   },
+  "dustsweeper": {
+    "link": "https://www.dustsweeper.xyz/",
+    "name": "Dust Sweeper"
+  },
   "dxdao": {
     "link": "https://dxdao.eth.limo/",
     "name": "DXdao"
@@ -588,6 +604,10 @@
   "ensbook": {
     "link": "https://ensbook.xyz/",
     "name": "ENSBook"
+  },
+  "ensdata": {
+    "link": "https://ensdata.net/",
+    "name": "ENS Data"
   },
   "ensideas": {
     "link": "https://ensideas.com/",
@@ -717,6 +737,10 @@
   "euler": {
     "link": "https://app.euler.finance/",
     "name": "Euler Dapp"
+  },
+  "everyname": {
+    "link": "https://www.everyname.xyz/",
+    "name": "Everyname"
   },
   "exodiafinance": {
     "link": "https://exodia.fi/",
@@ -893,6 +917,10 @@
   "hex": {
     "link": "https://hex.com/",
     "name": "Hex"
+  },
+  "highlight": {
+    "link": "https://highlight.xyz/",
+    "name": "Highlight"
   },
   "hoardexchange": {
     "link": "https://hoard.market/",
@@ -1178,6 +1206,10 @@
     "link": "https://metafora.app/",
     "name": "Metafora"
   },
+  "metagame": {
+    "link": "https://www.themetagame.xyz/",
+    "name": "Metagame"
+  },
   "metamask": {
     "link": "https://metamask.io/",
     "name": "MetaMask Extension",
@@ -1307,6 +1339,10 @@
   "nextme": {
     "link": "https://nextme.one/",
     "name": "Nextme"
+  },
+  "nftd": {
+    "link": "https://nf.td/",
+    "name": "NF.TD"
   },
   "nftfi": {
     "link": "https://nftfi.com/",
@@ -1706,6 +1742,10 @@
     "link": "https://sandwiched.wtf/",
     "name": "Sandwiched.wtf"
   },
+  "saymore": {
+    "link": "https://saymore.tv/",
+    "name": "Say More"
+  },
   "seaswap": {
     "link": "https://seaswap.exchange/swap",
     "name": "SeaSwap"
@@ -1844,9 +1884,17 @@
     "link": "https://steakwallet.fi/",
     "name": "Steakwallet"
   },
+  "stelo": {
+    "link": "https://www.stelolabs.com/",
+    "name": "Stelo"
+  },
   "stib": {
     "link": "https://stib.co/",
     "name": "StiB"
+  },
+  "stickies": {
+    "link": "https://stickies.xyz/",
+    "name": "Stickies"
   },
   "strikefinance": {
     "link": "https://strike.org/",
