@@ -18,7 +18,6 @@ import khori from "./photos/khori.png"
 import luc from "./photos/luc.png"
 import dom from "./photos/dom.png"
 import { Anchor, AnchorContainer } from "../../Anchor"
-import { MainPageBannerContainer, DAOBannerContent } from "../../DAOBanner"
 
 const team = [
   {
