@@ -96,7 +96,7 @@ const team = [
     name: "Dom Perri",
     title: "Product Designer",
     img: dom,
-    link: "https://twitter.com/dperrieth",
+    link: "https://twitter.com/domicoeth",
   },
 ]
 
