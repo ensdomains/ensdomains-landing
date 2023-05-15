@@ -1509,6 +1509,10 @@
     "link": "https://ownbit.io/en/",
     "name": "OwnBit"
   },
+  "pancakeswap": {
+    "link": "https://pancakeswap.finance/",
+    "name": "PancakeSwap"
+  },
   "paradigmfaucet": {
     "link": "https://faucet.paradigm.xyz/",
     "name": "Paradigm MultiFaucet"
