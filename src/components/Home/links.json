@@ -1511,7 +1511,8 @@
   },
   "pancakeswap": {
     "link": "https://pancakeswap.finance/",
-    "name": "PancakeSwap"
+    "name": "PancakeSwap",
+    "featuredApp": 3
   },
   "paradigmfaucet": {
     "link": "https://faucet.paradigm.xyz/",
@@ -1812,8 +1813,7 @@
   },
   "showtime": {
     "link": "https://tryshowtime.com/",
-    "name": "Showtime",
-    "featuredApp": 3
+    "name": "Showtime"
   },
   "sismo": {
     "link": "https://sismo.io/",
