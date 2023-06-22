@@ -13,8 +13,11 @@ const Content = styled.div(({ theme }) => [
     flex-direction: column;
     gap: ${theme.space["6"]};
     padding: 0 ${theme.space["4"]} ${theme.space["6"]};
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
   `,
-  mq.md.min(css`
+  mq.sm.min(css`
     padding: 0 ${theme.space["10"]} ${theme.space["10"]};
     gap: ${theme.space["10"]};
   `),

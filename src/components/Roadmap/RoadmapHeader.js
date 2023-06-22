@@ -13,6 +13,7 @@ const Container = styled.div(({ theme }) => [
   mq.sm.min(css`
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 ${theme.space['4']};
   `),
 ])
 

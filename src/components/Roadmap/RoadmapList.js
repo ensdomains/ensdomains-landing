@@ -17,6 +17,7 @@ export default function RoadmapList() {
           description="What we've done that is now live."
           items={completed}
           color="green"
+          expandable
         />
       )}
       {inProgress.length > 0 && (

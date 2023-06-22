@@ -46,7 +46,7 @@ const RotatableIcon = styled(DownChevronSVG)(
   `,
 )
 
-const DisplayMore = styled.div(({ theme, $color = 'green' }) => [
+const DisplayMore = styled.div(({ theme }) => [
   css`
     display: flex;
     justify-content: center;
@@ -54,7 +54,7 @@ const DisplayMore = styled.div(({ theme, $color = 'green' }) => [
     gap: ${theme.space['2']};
     border-top: 1px solid ${theme.colors.border};
     padding: ${theme.space['2']};
-    color: ${theme.colors[`${$color}Primary`]};
+    color: ${theme.colors.bluePrimary};
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
@@ -64,19 +64,20 @@ const DisplayMore = styled.div(({ theme, $color = 'green' }) => [
     }
 
     :hover {
-      background: ${theme.colors[`${$color}Surface`]};
       transform: translateY(-1px);
+      color: ${theme.colors.blueActive};
     }
   `,
   mq.sm.min(css``),
 ])
 
-export default function SectionCard({ title, description, color = 'blue', items = [] }) {
+export default function SectionCard({ title, description, color = 'blue', items = [], expandable = false }) {
   const [displayCount, setDisplayCount] = React.useState(DISPLAY_INTERVAL)
   const displayedItems = React.useMemo(() => {
+    if (!expandable) return items
     return items.slice(0, displayCount)
-  }, [items, displayCount])
-  const showShowMore = items.length > DISPLAY_INTERVAL
+  }, [items, displayCount, expandable])
+  const showShowMore = expandable && items.length > DISPLAY_INTERVAL
   const expandDirection = displayedItems.length < items.length ? 'more' : 'less'
   return (
     <StyledCard>
