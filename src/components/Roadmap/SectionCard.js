@@ -5,7 +5,7 @@ import { Card, DownChevronSVG, Typography, mq } from '@ensdomains/thorin_next'
 
 import SectionItem from './SectionItem'
 
-const DISPLAY_INTERVAL = 2
+const DISPLAY_INTERVAL = 3
 
 const StyledCard = styled(Card)(
   () => css`
@@ -72,11 +72,12 @@ const DisplayMore = styled.div(({ theme }) => [
 ])
 
 export default function SectionCard({ title, description, color = 'blue', items = [], expandable = false }) {
-  const [displayCount, setDisplayCount] = React.useState(DISPLAY_INTERVAL)
+  const [expanded, setExpanded] = React.useState(false)
   const displayedItems = React.useMemo(() => {
     if (!expandable) return items
-    return items.slice(0, displayCount)
-  }, [items, displayCount, expandable])
+    if (expanded) return items
+    return items.slice(0, DISPLAY_INTERVAL)
+  }, [items, expanded, expandable])
   const showShowMore = expandable && items.length > DISPLAY_INTERVAL
   const expandDirection = displayedItems.length < items.length ? 'more' : 'less'
   return (
@@ -98,8 +99,8 @@ export default function SectionCard({ title, description, color = 'blue', items 
             $color={color}
             onClick={() => {
               if (expandDirection === 'more')
-                return setDisplayCount((prev) => prev + DISPLAY_INTERVAL)
-              setDisplayCount(DISPLAY_INTERVAL)
+                return setExpanded(true)
+              setExpanded(false)
             }}
           >
             <span>See {expandDirection}</span>

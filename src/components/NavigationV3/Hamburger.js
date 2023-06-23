@@ -160,32 +160,6 @@ export default function Hamburger() {
   const [height, setHeight] = React.useState(null)
   const [animation, setAnimation] = React.useState(null)
   const [isOpen, setIsOpen] = React.useState(false)
-  // const router = useRouter()
-
-  // const setCurrentView = React.useCallback((view: View) => {
-  //   _setCurrentView((prev) => {
-  //     if (prev === view) return prev
-  //     if (view === 'main') {
-  //       setAnimation({
-  //         component: <LanguageMenu setCurrentView={setCurrentView} />,
-  //         direction: 'backwards',
-  //       })
-  //     } else {
-  //       setAnimation({
-  //         component: <MainMenu {...{ setCurrentView, setIsOpen, setHasFeedbackForm }} />,
-  //         direction: 'forwards',
-  //       })
-  //     }
-  //     return view
-  //   })
-  // }, [])
-
-  // set the view back to main when the menu is closed
-  // React.React.useEffect(() => {
-  //   if (!isOpen) {
-  //     setCurrentView('main')
-  //   }
-  // }, [isOpen, setCurrentView])
 
   // close the menu when the user clicks outside of the menu
   React.useEffect(() => {
@@ -234,27 +208,9 @@ export default function Hamburger() {
 
   const button = (
     <Button ref={btnRef} $active={isOpen} onClick={() => setIsOpen((prev) => !prev)}>
-      <MenuSVG />
+      {isOpen ?  <CrossSVG/> : <MenuSVG /> }
     </Button>
   )
-
-  // if (isInitial) return button
-
-  // const currentComponent = {
-  //   main: <MainMenu {...{ setCurrentView, setIsOpen, hasFeedbackForm, setHasFeedbackForm }} />,
-  //   language: <LanguageMenu setCurrentView={setCurrentView} />,
-  // }[currentView]
-
-  // const componentWithAnimation = (
-  //   <>
-  //     {animation && (
-  //       <SlideContainer ref={slideRef} $direction={animation.direction}>
-  //         {animation.direction === 'forwards' ? currentComponent : animation.component}
-  //       </SlideContainer>
-  //     )}
-  //     {animation?.direction === 'forwards' ? animation.component : currentComponent}
-  //   </>
-  // )
 
   const componentWithAnimation = <MainMenu {...{ setIsOpen, hasFeedbackForm, setHasFeedbackForm }} />
   return (

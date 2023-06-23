@@ -30,7 +30,7 @@ export default function RoadmapHeader() {
   return (
     <SplitHeader
     leading={<Typography fontVariant="headingOne">ENS Labs roadmap</Typography>}
-    trailing={<Button suffix={<OutlinkSVG />}>Feature requests</Button>}
+    trailing={<Button suffix={<OutlinkSVG />} as='a' href='https://ens.canny.io' target='_blank'>Feature requests</Button>}
     />
   )
 }
