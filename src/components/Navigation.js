@@ -1,7 +1,7 @@
-import React, { useState } from "react"
 import styled from "@emotion/styled"
-import { useTranslation } from "react-i18next"
 import { Link } from "gatsby"
+import React, { useState } from "react"
+import { useTranslation } from "react-i18next"
 import Logo from "./Logo"
 import { Button } from "./Typography"
 
@@ -139,18 +139,17 @@ const Nav = styled("nav")`
 const Links = styled("div")`
   display: none;
   align-items: center;
+  max-width: 40vw;
+  justify-content: flex-end;
   a {
     color: white;
     text-decoration: none;
-    margin-right: 20px;
-    height: 25px;
+    margin: 5px 20px 5px 0;
   }
 
   ${mq.medium`
     display: flex;
     flex-wrap: wrap;
-    max-width: 40vw;
-    justify-content: flex-end;
   `}
 
   ${mq.large`
