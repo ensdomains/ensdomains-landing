@@ -8,7 +8,6 @@ import upNext from "./content/upNext.json"
 import onPause from "./content/onPause.json"
 
 export default function RoadmapList() {
-  const content = [completed, inProgress, upNext, onPause]
   return (
     <React.Fragment>
       {completed.length > 0 && (
