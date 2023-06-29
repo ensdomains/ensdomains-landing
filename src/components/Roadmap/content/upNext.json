@@ -1,22 +1,22 @@
 [
   {
     "title": "Layer 2 Ecosystems",
-    "description": "We are currently exploring ways for ENS to interact with Layer 2 ecosystems. Stay tuned for research updates from our team.",
+    "description": "Exploring ways for ENS to interact with Layer 2 ecosystems.",
     "icon": "Eth"
   },
   {
-    "title": "Sign-in with Ethereum (SIWE)",
-    "description": "We will be incorporating the SIWE standard into the Manager app.",
+    "title": "Sign-in With Ethereum (SIWE)",
+    "description": "Integration of the SIWE standard into the ENS manager.",
     "icon": "Key"
   },
   {
     "title": "Favourites",
-    "description": "We are planning to reintroduce an improved 'favorites' feature within the manager application.",
+    "description": "Re-introduction of an improved \"favourites\" feature within the ENS manager.",
     "icon": "Heart"
   },
   {
     "title": "Dark Mode",
-    "description": "We’ll be introducing dark mode to the manager application.",
+    "description": "Dark mode for the ENS manager.",
     "icon": "Moon"
   }
 ]

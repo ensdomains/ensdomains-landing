@@ -1,26 +1,26 @@
 [
   {
-    "title": "Normalization Integration",
-    "description": "We've integrated the [new normalization standards](https://github.com/adraffy/ensip-15/blob/master/ens-improvement-proposals/ensip-15-normalization-standard.md) into our manager application.",
-    "tag": "Launched May 2023",
+    "title": "Normalisation Integration",
+    "description": "Integration of the [new normalisation standard](https://docs.ens.domains/ens-improvement-proposals/ensip-15-normalization-standard) into the ENS manager.",
+    "tag": "Launched April 2023",
     "icon": "CheckCircle"
   },
   {
-    "title": "V3 Launch",
-    "description": "We launched the third version of our ens.domains Manager application. For a more detailed overview, please refer to our [blog post](https://mirror.xyz/taytems.eth/0EDU9u4zItawHZdoQmJN0evj7UZLAdYepR1Yz2oADP8)",
+    "title": "Manager App V3",
+    "description": "The next generation manager for ENS, read more [here](https://mirror.xyz/taytems.eth/0EDU9u4zItawHZdoQmJN0evj7UZLAdYepR1Yz2oADP8).",
     "tag": "Launched April 2023",
     "icon": "Browser"
   },
   {
     "title": "NameWrapper",
-    "description": "The ENS Name Wrapper contract upgrades new & existing ENS domains by turning them into ERC1155 tokens, which allows for users to have better controls and consistency when working with domains.",
-    "tag": "Launched April 2023",
-    "icon": "Nametag"
+    "description": "Allows ENS names to become ERC1155 tokens, enabling better controls and consistency for users.",
+    "tag": "Launched March 2023",
+    "icon": "FastForward"
   },
   {
     "title": "CCIP Read",
-    "description": "The integration of  [EIP-3668](https://eips.ethereum.org/EIPS/eip-3668), authored by ENS founder Nick Johnson, allows for the next wave of scalability within the ENS ecosystem by allowing users to create full ENS profiles for free off chain.",
-    "tag": "Launched January 2023",
+    "description": "The next wave of scalability within the ENS ecosystem, which enables users create full ENS profiles for free offchain.",
+    "tag": "Launched October 2022",
     "icon": "UpCircle"
   }
 ]
