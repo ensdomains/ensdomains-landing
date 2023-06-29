@@ -93,10 +93,7 @@ export default function Hamburger() {
 
   const containerRef = React.useRef(null)
   const btnRef = React.useRef(null)
-  const slideRef = React.useRef(null)
 
-  const [height, setHeight] = React.useState(null)
-  const [animation, setAnimation] = React.useState(null)
   const [isOpen, setIsOpen] = React.useState(false)
 
   // close the menu when the user clicks outside of the menu
