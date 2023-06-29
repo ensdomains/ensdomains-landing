@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Layer 2 Ecosystems",
+    "description": "Exploring ways for ENS to interact with Layer 2 ecosystems.",
+    "icon": "Eth"
+  },
+  {
+    "title": "Sign-in With Ethereum (SIWE)",
+    "description": "Integration of the SIWE standard into the ENS manager.",
+    "icon": "Key"
+  },
+  {
+    "title": "Favourites",
+    "description": "Re-introduction of an improved \"favourites\" feature within the ENS manager.",
+    "icon": "Heart"
+  },
+  {
+    "title": "Dark Mode",
+    "description": "Dark mode for the ENS manager.",
+    "icon": "Moon"
+  }
+]
