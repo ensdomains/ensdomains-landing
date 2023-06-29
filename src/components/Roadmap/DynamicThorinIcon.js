@@ -1,5 +1,21 @@
-import React from 'react'
-import { PlusCircleSVG, FastForwardSVG, FlameSVG, MoonSVG, HeartSVG, EthSVG, NametagSVG, GasPumpSVG, PersonSVG  } from '@ensdomains/thorin_next'
+import {
+  BrowserSVG,
+  CheckCircleSVG,
+  CogSVG,
+  EthSVG,
+  FastForwardSVG,
+  FlameSVG,
+  GasPumpSVG,
+  HeartSVG,
+  KeySVG,
+  MoonSVG,
+  NametagSVG,
+  PersonSVG,
+  PlusCircleSVG,
+  SpannerAltSVG,
+  UpCircleSVG,
+} from "@ensdomains/thorin_next"
+import React from "react"
 
 const DYNAMIC_ICONS = {
   PlusCircle: PlusCircleSVG,
@@ -11,6 +27,12 @@ const DYNAMIC_ICONS = {
   Nametag: NametagSVG,
   GasPump: GasPumpSVG,
   Person: PersonSVG,
+  Browser: BrowserSVG,
+  UpCircle: UpCircleSVG,
+  CheckCircle: CheckCircleSVG,
+  SpannerAlt: SpannerAltSVG,
+  Cog: CogSVG,
+  Key: KeySVG,
 }
 
 export default function DynamicThorinIcon({ icon }) {

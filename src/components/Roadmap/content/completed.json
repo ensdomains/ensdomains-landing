@@ -1,20 +1,26 @@
 [
   {
-    "title": "Manager app V3",
-    "description": "A complete rebuild of the manager app.",
+    "title": "Normalisation Integration",
+    "description": "Integration of the [new normalisation standard](https://docs.ens.domains/ens-improvement-proposals/ensip-15-normalization-standard) into the ENS manager.",
     "tag": "Launched April 2023",
-    "icon": "PlusCircle"
+    "icon": "CheckCircle"
+  },
+  {
+    "title": "Manager App V3",
+    "description": "The next generation manager for ENS, read more [here](https://mirror.xyz/taytems.eth/0EDU9u4zItawHZdoQmJN0evj7UZLAdYepR1Yz2oADP8).",
+    "tag": "Launched April 2023",
+    "icon": "Browser"
   },
   {
     "title": "NameWrapper",
-    "description": "New functionality for creating a trustless ecosystem of names.",
+    "description": "Allows ENS names to become ERC1155 tokens, enabling better controls and consistency for users.",
     "tag": "Launched March 2023",
     "icon": "FastForward"
   },
   {
     "title": "CCIP Read",
-    "description": "Supporting offchain and gasless name creation.",
+    "description": "The next wave of scalability within the ENS ecosystem, which enables users create full ENS profiles for free offchain.",
     "tag": "Launched October 2022",
-    "icon": "Flame"
+    "icon": "UpCircle"
   }
 ]

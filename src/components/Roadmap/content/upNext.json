@@ -1,17 +1,22 @@
 [
   {
-    "title": "L2 support",
-    "description": "Exploring how ENS will work with Layer 2 ecosystems.",
+    "title": "Layer 2 Ecosystems",
+    "description": "Exploring ways for ENS to interact with Layer 2 ecosystems.",
     "icon": "Eth"
   },
   {
-    "title": "Subname registrars",
-    "description": "Understanding the best practices for subname registrars with the new namewrapper. [Join the discussion](https://support.ens.domains) in the community",
-    "icon": "Nametag"
+    "title": "Sign-in With Ethereum (SIWE)",
+    "description": "Integration of the SIWE standard into the ENS manager.",
+    "icon": "Key"
   },
   {
-    "title": "Gasless DNS imports",
-    "description": "Importing DNS names without gas using CCIP read.",
-    "icon": "GasPump"
+    "title": "Favourites",
+    "description": "Re-introduction of an improved \"favourites\" feature within the ENS manager.",
+    "icon": "Heart"
+  },
+  {
+    "title": "Dark Mode",
+    "description": "Dark mode for the ENS manager.",
+    "icon": "Moon"
   }
 ]
