@@ -1,12 +1,17 @@
 [
   {
-    "title": "Dark mode",
-    "description": "You asked for it, it's happening. We're adding dark mode to the manager app!",
-    "icon": "Moon"
+    "title": "Gasless DNS Name Claiming",
+    "description": "Our team is working on a gas-free method for claiming DNS names utilizing CCIP Read.",
+    "icon": "GasPump"
   },
   {
-    "title": "SIWE & Favourites",
-    "description": "Don't worry, we didn't forget favourites. We just wanted to make it more powerful.",
-    "icon": "Heart"
+    "title": "ENSJS V3 Refactor",
+    "description": "We're in the process of re-factoring ENSJS, an essential tool that provides JavaScript bindings for the Ethereum Name Service",
+    "icon": "SpannerAlt"
+  },
+  {
+    "title": "Development Pipeline Improvements",
+    "description": "Changes are being made to our testing pipeline to allow feature releases to be expedited.",
+    "icon": "Cog"
   }
 ]

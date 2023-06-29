@@ -9,11 +9,11 @@ const defaultValue = {
 }
 
 const queries = {
-  xs: '(min-width: 400px)',
-  sm: '(min-width: 576px)',
+  xs: '(min-width: 360px)',
+  sm: '(min-width: 640px)',
   md: '(min-width: 768px)',
-  lg: '(min-width: 992px)',
-  xl: '(min-width: 1200px)',
+  lg: '(min-width: 1024px)',
+  xl: '(min-width: 1280px)',
 }
 
 const BreakpointContext = React.createContext(defaultValue)
