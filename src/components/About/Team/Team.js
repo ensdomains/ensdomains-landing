@@ -105,12 +105,6 @@ const team = [
     link: "https://twitter.com/domicoeth",
   },
   {
-    name: "domico.eth",
-    title: "Product Designer",
-    img: dom,
-    link: "https://twitter.com/domicoeth",
-  },
-  {
     name: "sadaf.eth",
     title: "Director of Marketing",
     img: sadaf,
