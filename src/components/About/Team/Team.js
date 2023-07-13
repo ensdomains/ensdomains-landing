@@ -17,6 +17,12 @@ import david from "./photos/david.png"
 import khori from "./photos/khori.png"
 import luc from "./photos/luc.png"
 import dom from "./photos/dom.png"
+import rasmus from "./photos/rasmus.png"
+import serenae from "./photos/serenae.png"
+import zadok from "./photos/zadok.png"
+import greg from "./photos/greg.png"
+import marta from "./photos/marta.png"
+import sadaf from "./photos/sadaf.png"
 import { Anchor, AnchorContainer } from "../../Anchor"
 
 const team = [
@@ -93,10 +99,52 @@ const team = [
     link: "https://twitter.com/lucemansnl",
   },
   {
-    name: "Dom Perri",
+    name: "domico.eth",
     title: "Product Designer",
     img: dom,
     link: "https://twitter.com/domicoeth",
+  },
+  {
+    name: "domico.eth",
+    title: "Product Designer",
+    img: dom,
+    link: "https://twitter.com/domicoeth",
+  },
+  {
+    name: "sadaf.eth",
+    title: "Director of Marketing",
+    img: sadaf,
+    link: "https://twitter.com/sadaf_eth",
+  },
+  {
+    name: "cthulu.eth",
+    title: "Strategic Initiatives",
+    img: rasmus,
+    link: "https://twitter.com/Cthulu_dot_eth",
+  },
+  {
+    name: "Serenae.eth",
+    title: "Dev Experience",
+    img: serenae,
+    link: "https://twitter.com/serenae_fansubs",
+  },
+  {
+    name: "Zadok7.eth",
+    title: "Community Manager",
+    img: zadok,
+    link: "https://twitter.com/realZadok7",
+  },
+  {
+    name: "gregskril.eth",
+    title: "Experiments",
+    img: greg,
+    link: "https://twitter.com/gregskril",
+  },
+  {
+    name: "Marta Cura",
+    title: "Director of Business Development",
+    img: marta,
+    link: "https://twitter.com/mvcura",
   },
 ]
 
