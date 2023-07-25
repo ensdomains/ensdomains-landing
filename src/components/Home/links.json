@@ -1786,6 +1786,14 @@
     "link": "https://www.seedle.finance/",
     "name": "Seedle Finance"
   },
+  "sendingme": {
+    "link": "https://sending.me/",
+    "name": "SendingMe"
+  },
+ "sendingnetwork": {
+    "link": "https://www.sending.network/",
+    "name": "SendingNetwork"
+  },
   "sentible": {
     "link": "https://sentible.app/",
     "name": "Sentible"
