@@ -53,20 +53,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-101611202-2",
-        // Puts tracking script in the head instead of the body
-        head: false,
-        // Setting this parameter is optional
-        anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
-        // Avoids sending pageview hits from custom paths
-        exclude: [],
-      },
-    },
-    {
       resolve: `gatsby-plugin-gtag`,
       options: {
         // your google Measurement ID
@@ -77,5 +63,16 @@ module.exports = {
         anonymize: true,
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets\/social/
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+    }
   ],
 }

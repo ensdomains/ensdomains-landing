@@ -1,7 +1,7 @@
-import React, { useState } from "react"
 import styled from "@emotion/styled"
-import { useTranslation } from "react-i18next"
 import { Link } from "gatsby"
+import React, { useState } from "react"
+import { useTranslation } from "react-i18next"
 import Logo from "./Logo"
 import { Button } from "./Typography"
 
@@ -139,15 +139,37 @@ const Nav = styled("nav")`
 const Links = styled("div")`
   display: none;
   align-items: center;
+  max-width: 40vw;
+  justify-content: flex-end;
   a {
     color: white;
     text-decoration: none;
-    margin-right: 20px;
+    margin: 5px 20px 5px 0;
   }
 
   ${mq.medium`
     display: flex;
-  `};
+    flex-wrap: wrap;
+  `}
+
+  ${mq.large`
+    flex-wrap: nowrap;
+  `}
+`
+
+const CTAContent = styled("div")`
+  display: none;
+  align-items: center;
+
+  ${mq.medium`
+    display: flex;
+  `}
+`
+
+const EndContent = styled("div")`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `
 
 const MobileLinks = styled("ul")`
@@ -208,31 +230,36 @@ export default function Navigation() {
         <Logo />
       </Link>
 
-      <div className="mobile-nav">
-        <button
-          className={`hamburger hamburger--collapse-r ${
-            menuOpen ? "is-active" : ""
-          }`}
-          type="button"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span className="hamburger-box">
-            <span className="hamburger-inner" />
-          </span>
-        </button>
-      </div>
+      <EndContent>
+        <div className="mobile-nav">
+          <button
+            className={`hamburger hamburger--collapse-r ${
+              menuOpen ? "is-active" : ""
+            }`}
+            type="button"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span className="hamburger-box">
+              <span className="hamburger-inner" />
+            </span>
+          </button>
+        </div>
 
-      <Links menuOpen={menuOpen}>
-        <a href="/governance">Governance</a>
-        <a href="https://chat.ens.domains/">Community</a>
-        <Link to="/about">Team</Link>
-        <Link to="/jobs">Jobs</Link>
-        <a href="https://docs.ens.domains/">Docs</a>
+        <Links>
+          <a href="/governance">Governance</a>
+          <a href="https://chat.ens.domains/">Community</a>
+          <Link to="/about">Team</Link>
+          <Link to="/jobs">Jobs</Link>
+          <a href="https://docs.ens.domains/">Docs</a>
+          <Link to="/roadmap">Roadmap</Link>
+        </Links>
 
-        <Separator />
-        <LanguageSwitcher />
-        <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>
-      </Links>
+        <CTAContent>
+          <Separator />
+          <LanguageSwitcher />
+          <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>
+        </CTAContent>
+      </EndContent>
 
       <MobileLinks menuOpen={menuOpen}>
         <LanguageSwitcher mobile={true} />
@@ -250,6 +277,9 @@ export default function Navigation() {
         </li>
         <li>
           <a href="https://docs.ens.domains/">Docs</a>
+        </li>
+        <li>
+          <Link to="/roadmap">Roadmap</Link>
         </li>
         <li>
           <Launch href="https://app.ens.domains">{t("nav.launch")}</Launch>
