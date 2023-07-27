@@ -3,7 +3,7 @@
     "learnMore": "Daha fazla bilgi"
   },
   "nav": {
-    "about": "Takim",
+    "about": "Hakkımızda",
     "blog": "Blog",
     "launch": "Uygulamayı aç"
   },
@@ -19,26 +19,26 @@
     },
     "portableUsername": {
       "title": "Web3 kullanıcı adınız",
-      "text": "Artık korumalı kullanıcı adları yok. Kullanıcı adınızin sahibi olun, avatar ve diğer profil verilerinizi saklayın ve hizmetler arasında kullanın."
+      "text": "Artık izole edilmiş kullanıcı adları yok. Kullanıcı adınızin sahibi olun, avatar ve diğer profil verilerinizi saklayın ve hizmetler arasında kullanın."
     },
     "cryptocurrencies": {
       "title": "Tüm Adresleriniz için Tek Bir İsim",
       "text": "Uzun adresleri kopyalayıp yapıştırmaya son. Tüm adreslerinizi saklamak ve herhangi bir kripto para, token veya NFT almak için ENS adınızı kullanın."
     },
     "statistics": {
-      "title": "ENS, en yaygın şekilde entegre edilmiş blockchain adlandırma standardıdır.",
-      "names": "Isimler",
+      "title": "ENS, en yaygın şekilde entegre edilmiş blokzinciri adlandırma standardıdır.",
+      "names": "İsimler",
       "services": "Entegrasyonlar",
       "owners": "Sahipler"
     },
     "decentralisedWebsites": {
       "title": "Merkezi Olmayan Web Siteleri",
-      "text": "ENS ile sansüre dayanıklı merkezi olmayan web siteleri başlatın. Web sitenizi IPFS'ye yükleyin ve ENS adınızla erişin."
+      "text": "ENS ile sansüre dayanıklı merkezi olmayan web siteleri oluşturun. Web sitenizi IPFS'ye yükleyin ve ENS adınızla erişin."
     },
     "dns": {
       "title": "Geleneksel Alan Adlarını Kullanın",
-      "text1": "ENS için yerel ad soneki, blockchainın tüm güvenlik avantajlarına sahip olan .ETH'dir.",
-      "text2": "ENS'yi sahip olduğunuz diğer DNS adlarıyla da kullanabilirsiniz. ENS, aşağıdakiler de dahil olmak üzere çoğu DNS adını destekler:"
+      "text1": "ENS için yerel ad uzantısı, blokzincirinin tüm güvenlik avantajlarına sahip olan .ETH'dir.",
+      "text2": "ENS'i sahip olduğunuz diğer DNS adlarıyla da kullanabilirsiniz. ENS, aşağıdakiler de dahil olmak üzere çoğu DNS adını destekler:"
     },
     "ecosystem": {
       "title": "ENS Ekosistemi",
@@ -87,7 +87,7 @@
     }
   },
   "about": {
-    "hero": "ENS açık kaynak kodlu blockchain tabanlı bir adlandırma protokolüdür",
+    "hero": "ENS açık kaynak kodlu blokzinciri tabanlı bir adlandırma protokolüdür",
     "aboutENS": {
       "title": "ENS Hakkında",
       "text": "2017'nin başlarında Ethereum Vakfı'nda başlatılan ENS bir kamu malıdır, topluma ait temel bir İnternet altyapısı parçasıdır. Ethereum blok zincirinde izinsiz sözleşmeler oldukları için herkes protokolle etkileşime girmekte özgürdür.",
