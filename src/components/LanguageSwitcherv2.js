@@ -59,6 +59,10 @@ const LANGUAGES = [
     value: "vi",
     label: "Tiếng Việt (VI)",
   },
+  {
+    value: "tr",
+    label: "Türkçe (TR)",
+  },
 ]
 
 const ActiveLanguage = styled("div")`
