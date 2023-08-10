@@ -27,7 +27,7 @@
     "@ensdomains/thorin_next": "npm:@ensdomains/thorin@^0.6.40",
     "babel-plugin-styled-components": "^2.1.3",
     "framer-motion": "^2.6.2",
-    "gatsby": "^3.0.3",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-emotion": "^4.3.4",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-react-i18next": "^0.0.25",
