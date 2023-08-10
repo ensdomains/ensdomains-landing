@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 import DefaultLogo from "./Logo"
 import twitter from "../assets/twitter.svg"
 import github from "../assets/github.svg"
-import medium from "../assets/medium.svg"
+import mirror from "../assets/mirror_white.svg"
 
 import mq from "../mediaQuery"
 
@@ -37,9 +37,9 @@ const social = [
     link: "https://twitter.com/ensdomains",
   },
   {
-    img: medium,
-    text: "Medium",
-    link: "https://medium.com/the-ethereum-name-service",
+    img: mirror,
+    text: "Mirror",
+    link: "https://ens.mirror.xyz",
   },
   {
     img: github,
@@ -106,7 +106,7 @@ export default function Footer(props) {
       <SocialContainer>
         {social.map(s => (
           <ExternalLink href={s.link} key={s.link}>
-            <img src={s.img} alt={s.text} />
+            <img src={s.img} alt={s.text} height={24}/>
             {s.text}
           </ExternalLink>
         ))}

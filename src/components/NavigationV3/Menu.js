@@ -10,7 +10,8 @@ import SocialDiscord from '../../assets/social/SocialDiscord.svg'
 import SocialDiscourse from '../../assets/social/SocialDiscourse.svg'
 import SocialDiscourseColour from '../../assets/social/SocialDiscourseColour.svg'
 import SocialGithub from '../../assets/social/SocialGithub.svg'
-import SocialMedium from '../../assets/social/SocialMedium.svg'
+import SocialMirror from '../../assets/social/SocialMirror.svg'
+import SocialMirrorColour from '../../assets/social/SocialMirrorColour.svg'
 import SocialTwitter from '../../assets/social/SocialTwitter.svg'
 import SocialYoutube from '../../assets/social/SocialYoutube.svg'
 import SocialIcon from './SocialIcon'
@@ -115,9 +116,9 @@ export default function MainMenu() {
         <SocialIcon Icon={SocialGithub} color="#0F0F0F" href="https://github.com/ensdomains" />
         <SocialIcon Icon={SocialDiscord} color="#7F83FF" href="https://chat.ens.domains" />
         <SocialIcon
-          Icon={SocialMedium}
-          color="#0F0F0F"
-          href="https://medium.com/the-ethereum-name-service"
+          Icon={SocialMirror}
+          ColoredIcon={SocialMirrorColour}
+          href="https://ens.mirror.xyz"
         />
         <SocialIcon
           Icon={SocialDiscourse}
