@@ -92,7 +92,7 @@
     "link": "https://www.arrakis.finance/",
     "name": "Arrakis"
   },
-   "atticc": {
+  "atticc": {
     "link": "https://atticc.xyz/",
     "name": "Atticc"
   },
@@ -1794,7 +1794,7 @@
     "link": "https://sending.me/",
     "name": "SendingMe"
   },
- "sendingnetwork": {
+  "sendingnetwork": {
     "link": "https://www.sending.network/",
     "name": "SendingNetwork"
   },
@@ -2189,6 +2189,11 @@
   "web3images": {
     "link": "https://web3-images.kibalabs.com/",
     "name": "Web3 Images"
+  },
+  "webacy": {
+    "link": "https://dapp.webacy.com/onboarding/signup",
+    "name": "Webacy",
+    "featuredApp": 6
   },
   "wepiggy": {
     "link": "https://www.wepiggy.com/",
