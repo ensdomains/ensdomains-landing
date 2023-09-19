@@ -11,7 +11,6 @@ import kevin from "./photos/kevin.png"
 import leon from "./photos/leon.png"
 import richard from "./photos/richard.png"
 import muhammed from "./photos/muhammed.png"
-import alisha from "./photos/alisha.png"
 import taytems from "./photos/taytems.png"
 import david from "./photos/david.png"
 import khori from "./photos/khori.png"
@@ -73,12 +72,6 @@ const team = [
     title: "Full Stack Developer",
     img: muhammed,
     link: "https://twitter.com/md_tanrikulu",
-  },
-  {
-    name: "alisha.eth",
-    title: "Governance Lead",
-    img: alisha,
-    link: "https://twitter.com/futurealisha",
   },
   {
     name: "taytems.eth",
