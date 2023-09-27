@@ -1,5 +1,7 @@
 ## ENS Homepage V2
 
+The homepage for the ENS project, vist [here](https://ens.domains/). 
+
 ### Translations
 
 Translations use `react-i18next` and translations are located in: `locales/language/translation.json`.
