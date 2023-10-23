@@ -18,10 +18,12 @@ import luc from "./photos/luc.png"
 import dom from "./photos/dom.png"
 import rasmus from "./photos/rasmus.png"
 import serenae from "./photos/serenae.png"
-import zadok from "./photos/zadok.png"
 import greg from "./photos/greg.png"
 import marta from "./photos/marta.png"
 import sadaf from "./photos/sadaf.png"
+import oneeightfour from "./photos/184.png"
+import evan from "./photos/evan.png"
+import prototest from "./photos/prototest.png"
 import { Anchor, AnchorContainer } from "../../Anchor"
 
 const team = [
@@ -116,12 +118,6 @@ const team = [
     link: "https://twitter.com/serenae_fansubs",
   },
   {
-    name: "Zadok7.eth",
-    title: "Community Manager",
-    img: zadok,
-    link: "https://twitter.com/realZadok7",
-  },
-  {
     name: "gregskril.eth",
     title: "Experiments",
     img: greg,
@@ -132,6 +128,24 @@ const team = [
     title: "Director of Business Development",
     img: marta,
     link: "https://twitter.com/mvcura",
+  },
+  {
+    name: "184.eth",
+    title: "Support Lead",
+    img: oneeightfour,
+    link: "https://twitter.com/184eth",
+  },
+  {
+    name: "Evan Moyer",
+    title: "Community Manager",
+    img: evan,
+    link: "https://warpcast.com/evanmoyer.eth",
+  },
+  {
+    name: "prototest.eth",
+    title: "QA Engineer",
+    img: prototest,
+    link: "https://twitter.com/sg8ens",
   },
 ]
 
