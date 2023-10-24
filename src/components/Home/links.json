@@ -858,6 +858,10 @@
     "link": "https://www.gem.xyz/",
     "name": "Gem"
   },
+  "gemwallet": {
+    "link": "https://gemwallet.com/",
+    "name": "Gem Wallet"
+  },
   "genie": {
     "link": "https://genie.xyz/",
     "name": "Genie"
@@ -2310,9 +2314,5 @@
   "9dcc": {
     "link": "https://www.9dcc.market/",
     "name": "9dcc Market"
-  },
-  "gemwallet": {
-    "link": "https://gemwallet.com/",
-    "name": "Gem Wallet"
-  },
+  }
 }
