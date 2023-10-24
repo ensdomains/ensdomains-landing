@@ -2310,5 +2310,9 @@
   "9dcc": {
     "link": "https://www.9dcc.market/",
     "name": "9dcc Market"
-  }
+  },
+  "gemwallet": {
+    "link": "https://gemwallet.com/",
+    "name": "Gem Wallet"
+  },
 }
