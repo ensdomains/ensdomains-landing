@@ -858,6 +858,10 @@
     "link": "https://www.gem.xyz/",
     "name": "Gem"
   },
+  "gemwallet": {
+    "link": "https://gemwallet.com/",
+    "name": "Gem Wallet"
+  },
   "genie": {
     "link": "https://genie.xyz/",
     "name": "Genie"
