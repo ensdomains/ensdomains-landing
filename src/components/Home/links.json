@@ -261,6 +261,10 @@
     "link": "https://app.ccswap.org/",
     "name": "CCSwap"
   },
+  "chainaware": {
+    "link": "https://chainaware.ai/",
+    "name": "ChainAware"
+  },
   "chainlink": {
     "link": "https://chain.link/",
     "name": "Chainlink"
