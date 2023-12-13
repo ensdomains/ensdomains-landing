@@ -1,5 +1,17 @@
 [
   {
+    "title": "ENSjs Refactor",
+    "description": "A new slimmed down re-write of the JavaScript ENS library.",
+    "tag": "Launched December 2023",
+    "icon": "SpannerAlt"
+  },
+  {
+    "title": "EVM Gateway",
+    "description": "A generic CCIP-Read gateway for fetching state proofs of data on other EVM chains.",
+    "tag": "Launched November 2023",
+    "icon": "HorizontalOutwardArrows"
+  },
+  {
     "title": "Normalisation Integration",
     "description": "Integration of the [new normalisation standard](https://docs.ens.domains/ens-improvement-proposals/ensip-15-normalization-standard) into the ENS manager.",
     "tag": "Launched April 2023",

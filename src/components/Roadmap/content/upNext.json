@@ -13,5 +13,10 @@
     "title": "Dark Mode",
     "description": "Dark mode for the ENS manager.",
     "icon": "Moon"
+  },
+  {
+    "title": "Eth.link Site Refresh",
+    "description": "Refreshing the Eth.link site with Thorin styles.",
+    "icon": "Link"
   }
 ]
