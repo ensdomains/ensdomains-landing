@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 import DefaultLogo from "./Logo"
 import twitter from "../assets/twitter.svg"
 import github from "../assets/github.svg"
-import mirror from "../assets/mirror_white.svg"
+import blog from "../assets/blog.svg"
 
 import mq from "../mediaQuery"
 
@@ -37,9 +37,9 @@ const social = [
     link: "https://twitter.com/ensdomains",
   },
   {
-    img: mirror,
-    text: "Mirror",
-    link: "https://ens.mirror.xyz",
+    img: blog,
+    text: "Blog",
+    link: "https://blog.ens.domains",
   },
   {
     img: github,
