@@ -8,7 +8,7 @@ const Title = styled("h2")`
   font-weight: 300;
   color: white;
   text-align: center;
-  max-width: 800px;
+  max-width: 600px;
   padding: 0 20px;
 
   ${mq.medium`
