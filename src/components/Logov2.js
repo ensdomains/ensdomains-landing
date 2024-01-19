@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import logo from "../assets/ensLogov2.svg"
+import logo from "../assets/logo.svg"
 
 const LogoContainer = styled("div")`
   .ens-logo {

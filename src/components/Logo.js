@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import logo from "../assets/ensLogo.svg"
-import logoText from "../assets/ensLogoText.svg"
+import logo from "../assets/logo.svg"
 
 const LogoContainer = styled("div")`
   height: 48px;
@@ -24,8 +23,7 @@ const LogoContainer = styled("div")`
 export default function Logo({ className }) {
   return (
     <LogoContainer className={className}>
-      <img src={logo} alt="ENS Logo" className="ens-logo" />
-      <img src={logoText} alt="ENS Logo text" className="ens-logo-text" />
+      <img src={logo} alt="ENS Logo" />
     </LogoContainer>
   )
 }

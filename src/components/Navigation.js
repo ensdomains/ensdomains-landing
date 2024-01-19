@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
-import Logo from "./Logo"
+import Logo from "./Logov2"
 import { Button } from "./Typography"
 
 import mq from "../mediaQuery"
