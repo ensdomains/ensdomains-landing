@@ -1,8 +1,9 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
 import styled from "@emotion/styled"
-import { Anchor, AnchorContainer } from "../Anchor"
-import {H2,P} from '../Typography'
+import { Anchor, AnchorContainer } from "../../Anchor"
+import {H2,P} from '../../Typography'
+import offchainImg from './offchain.svg'
 
 const Container = styled("div")`
   background: white;
@@ -28,6 +29,7 @@ export default function Offchain() {
           </H2>
         </AnchorContainer>
         <Desc>{t("home.offchain.text")}</Desc>
+        <img src={offchainImg} alt="offchain illustration" />
       </Container>
     )
   }

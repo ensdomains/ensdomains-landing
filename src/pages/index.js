@@ -13,7 +13,7 @@ import TraditionalDomains from "../components/Home/TraditionalDomains/"
 import GetInvolved from "../components/GetInvolved"
 import Footer from "../components/Footer"
 import Layout from "../components/Layout"
-import Offchain from '../components/Home/Offchain'
+import Offchain from '../components/Home/Offchain/Offchain'
 
 export default function Home(props) {
   return (
