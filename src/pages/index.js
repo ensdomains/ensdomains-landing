@@ -13,6 +13,7 @@ import TraditionalDomains from "../components/Home/TraditionalDomains/"
 import GetInvolved from "../components/GetInvolved"
 import Footer from "../components/Footer"
 import Layout from "../components/Layout"
+import Offchain from '../components/Home/Offchain'
 
 export default function Home(props) {
   return (
@@ -25,6 +26,7 @@ export default function Home(props) {
       <Cryptocurrencies />
       <DecentralisedWebsites />
       <TraditionalDomains />
+      <Offchain />
       <Ecosystem />
       <GetInvolved />
       <Footer />
