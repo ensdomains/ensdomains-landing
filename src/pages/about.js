@@ -9,7 +9,6 @@ import Footer from "../components/Footer"
 import Description from "../components/About/Description/"
 import AboutENS from "../components/About/AboutENS/"
 import AboutHero from "../components/About/AboutHero"
-import Team from "../components/About/Team/"
 
 export default function About(props) {
   return (
@@ -17,7 +16,6 @@ export default function About(props) {
       <Navigation />
       <AboutHero />
       <AboutENS />
-      <Team />
       <Description />
       <GetInvolved />
       <Footer />
