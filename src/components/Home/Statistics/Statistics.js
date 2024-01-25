@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useMemo } from "react"
 import styled from "@emotion/styled"
 import statsBG from "./statsBG.jpg"
 import { useTranslation } from "react-i18next"
@@ -87,7 +87,9 @@ export default function Statistics(props) {
     loadIntegrations().then(data => setIntegrations(data))
   }, [])
 
-  const integrationsCount = Object.keys(integrations).length
+  const integrationsCount = useMemo(() => Object.keys(integrations).length, [
+    integrations,
+  ])
   return (
     <HeroContainer id="home-statistics">
       <AnchorContainer href={"#home-statistics"}>

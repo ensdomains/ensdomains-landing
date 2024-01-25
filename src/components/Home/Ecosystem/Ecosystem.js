@@ -177,8 +177,10 @@ export default function Ecosystem(props) {
       )
     }
 
-    getImages()
-  }, [])
+    if (links.length !== 0) {
+      getImages()
+    }
+  }, [loadIntegrations])
 
   const sortedWallets = sortApps(wallets, "featuredWallet")
   const sortedApps = sortApps(apps, "featuredApp")
