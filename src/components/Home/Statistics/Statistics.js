@@ -1,12 +1,12 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "@emotion/styled"
 import statsBG from "./statsBG.jpg"
 import { useTranslation } from "react-i18next"
 
 import { H2 as DefaultH2 } from "../../Typography"
 import mq from "../../../mediaQuery"
-import integrations from "../links.json"
 import { Anchor, AnchorContainer } from "../../Anchor"
+import { loadIntegrations } from "../../../utils"
 
 const HeroContainer = styled("div")`
   padding: 60px 20px;
@@ -80,6 +80,13 @@ const Stats = styled("div")`
 
 export default function Statistics(props) {
   const { t } = useTranslation()
+
+  const [integrations, setIntegrations] = useState([])
+
+  useEffect(() => {
+    loadIntegrations().then(data => setIntegrations(data))
+  }, [])
+
   const integrationsCount = Object.keys(integrations).length
   return (
     <HeroContainer id="home-statistics">
