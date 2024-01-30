@@ -1,127 +1,127 @@
 {
     "c": {
-      "learnMore": "Learn more"
+      "learnMore": "اعرف أكثر"
     },
     "nav": {
-      "about": "Team",
-      "blog": "Blog",
-      "launch": "Go to app"
+      "about": "الفريق",
+      "blog": "المدونة",
+      "launch": "اذهب للتطبيق"
     },
     "home": {
       "hero": {
-        "title": "Decentralised naming for wallets, websites, & more."
+        "title": "التسمية اللامركزية للمحافظ المشفرة ومواقع الويب والمزيد"
       },
       "carousel": {
-        "search": "search",
-        "manage": "manage",
-        "register": "register",
-        "launch": "Launch app"
+        "search": "البحث",
+        "manage": "الإدارة",
+        "register": "التسجيل",
+        "launch": "افتح التطبيق"
       },
       "portableUsername": {
-        "title": "Your web3 username",
-        "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+        "title": "اسم مستخدم الويب 3 الخاص بك",
+        "text": "لا مزيد من أسماء المستخدمين المُقيدة. امتلك اسم المستخدم الخاص بك، وقم بتخزين  صورتك الرمزية والمزيد من البيانات الأخرى  بملفك الشخصي واستخدمها عبر الخدمات المختلفة."
       },
       "cryptocurrencies": {
-        "title": "One Name For All of Your Addresses",
-        "text": "No more copying and pasting long addresses. Use your ENS name to store all of your addresses and receive any cryptocurrency, token, or NFT."
+        "title": "اسم واحد لجميع عناوينك المشفرة",
+        "text": "\u2067 لا داعي لنسخ ولصق عناوين المحافظ الطويلة بعد الآن. استخدم الإسم الخاص بك بخدمة إسم الإيثيريوم (ENS) لتخزين جميع عناوين المحافظ المشفرة الخاصة بك واستلم العملات الرقمية والرموز (token) والرموز الغير قابلة للاستبدال (NFT)."
       },
       "statistics": {
-        "title": "ENS is the most widely integrated blockchain naming standard.",
-        "names": "Names",
-        "services": "Integrations",
-        "owners": "Owners"
+        "title": "\u2067 خدمة إسم الإيثيريوم (ENS) هي معيار تسمية سلسلة الكتل (Blockchain) الأكثر انتشاراً وتكاملاً.",
+        "names": "الأسماء المسجلة",
+        "services": "الخدمات والتكاملات",
+        "owners": "المُلّاك"
       },
       "decentralisedWebsites": {
-        "title": "Decentralised Websites",
-        "text": "Launch censorship-resistant decentralised websites with ENS. Upload your website to IPFS and access it with your ENS name."
+        "title": "مواقع الويب اللامركزية",
+        "text": "\u2067 قم بإطلاق مواقع ويب لامركزية ومقاومة للتقييد. ارفع موقع الويب الخاص بك عبر IPFS وغيرها وقم بالوصول إليه باستخدام اسم الإيثيريوم (ENS) الخاص بك."
       },
       "dns": {
-        "title": "Use Traditional Domains",
-        "text1": "The native name suffix for ENS is .ETH, which has the full security benefits of being blockchain-native.",
-        "text2": "You can also use ENS with DNS names you already own. ENS supports most DNS names, including:"
+        "title": "استخدم النطاقات التقليدية",
+        "text1": "\u2067 الإمتداد الأساسي لأسماء ENS هو ETH. حيث يتمتع بكامل فوائد الحماية لكونه مدمج بسلسلة الكتل (Blockchain).",
+        "text2": "\u2067 يمكنك أيضًا استخدام ENS مع أسماء DNS التي تمتلكها بالفعل. تدعم ENS معظم أسماء DNS، بما في ذلك:"
       },
       "ecosystem": {
-        "title": "ENS Ecosystem",
-        "wallets": "Wallets",
-        "apps": "Apps",
-        "browsers": "Browsers",
-        "seeMore": "See More",
-        "seeLess": "See Less"
+        "title": "ENS منظومة",
+        "wallets": "المحافظ",
+        "apps": "التطبيقات",
+        "browsers": "المتصفحات",
+        "seeMore": "اظهر المزيد",
+        "seeLess": "اظهر أقل"
       },
       "additionalFeatures": {
-        "title": "Additional Features",
-        "recordType": "Create your project’s own record type.",
-        "textRecord": "Attach profile information to your ENS name with text records.",
-        "subDomains": "Create ENS subdomains as usernames for your project.",
-        "dns": "Store and serve traditional DNS records with certain names.",
-        "tor": "Use ENS to more easily access Tor .onion hidden services.",
-        "erc721": ".ETH names are ERC721-compliant NFTs."
+        "title": "ميزات إضافية",
+        "recordType": "أنشئ نوع سجل خاص بمشروعك",
+        "textRecord": "\u2067 اربط معلومات الملف الشخصي بإسم ENS الخاص بك باستخدام سجلات النص (text records).",
+        "subDomains": "\u2067 أنشئ نطاقات فرعية لـ ENS كأسماء مستخدمين لمشروعك.",
+        "dns": "\u2067 قم بتخزين وتقديم سجلات DNS التقليدية مع أسماء معينة.",
+        "tor": "\u2067 استخدم ENS للوصول بسهولة أكبر إلى خدمات Tor .onion المخفية.",
+        "erc721": "\u2067 أسماء ETH. متوافقة مع معيار ERC721 للرموز الغير قابلة للاستبدال (NFTs)."
       },
       "getInvolved": {
-        "title": "Get Involved",
-        "supportTitle": "Get Support",
+        "title": "شاركنا",
+        "supportTitle": "احصل على الدعم",
         "subscribe": {
-          "title": "Subscribe to our mailing list",
-          "cta": "Subscribe"
+          "title": "اشترك في قائمتنا البريدية",
+          "cta": "اشترك"
         },
         "community": {
-          "title": "Join our Discord community",
-          "cta": "Join Discord"
+          "title": "انضم لمجتمع ديسكورد الخاص بنا",
+          "cta": "انضم"
         },
         "forums": {
-          "title": "Discuss on our forum",
-          "cta": "Discuss"
+          "title": "ناقش في المنتدى الخاص بنا",
+          "cta": "ناقش"
         },
         "documentation": {
-          "title": "Read our documentation",
-          "cta": "Read docs"
+          "title": "إقرأ الوثائق الخاصة بنا",
+          "cta": "إقرأ"
         },
         "supportEmail": {
-          "title": "Email the support team",
-          "cta": "Email"
+          "title": "أرسل بريدًا إلكترونيًا إلى فريق الدعم",
+          "cta": "البريد الإلكتروني"
         },
         "supportDiscord": {
-          "title": "#create-a-ticket in Discord",
-          "cta": "Go to Discord"
+          "title": "#create-a-ticket أنشء تذكرة بالديسكورد",
+          "cta": "اذهب للديسكورد"
         }
       }
     },
     "about": {
-      "hero": "ENS is an open source blockchain-based naming protocol",
+      "hero": "\u2067 ENS هو بروتوكول تسمية مفتوح المصدر قائم على سلسلة الكتل (Blockchain).",
       "aboutENS": {
-        "title": "About ENS",
-        "text": "Started at the Ethereum Foundation in early 2017, ENS is a public good, a basic piece of Internet infrastructure that belongs to the community. Anyone and everyone is free to interact with the protocol as they are permissionless contracts on the Ethereum blockchain.",
-        "support": "We have received generous financial support from:",
-        "support2": "Representatives of ENS participate in the greater Internet community:"
+        "title": "ENS عن",
+        "text": "\u2067 بدأت في مؤسسة إيثيريوم في أوائل عام 2017، ENS هي خدمة عامة، وجزء أساسي من بنية الإنترنت التحتية التي تنتمي للمجتمع. أي شخص والجميع حر في التفاعل مع البروتوكول كونه عقوداً بدون إذن على سلسلة الكتل إيثيريوم.",
+        "support": "\u2067 لقد تلقينا دعمًا ماليًا سخيًا من:",
+        "support2": "\u2067 ممثلو ENS يشاركون في المجتمع الأوسع للإنترنت:"
       },
       "aboutENSLabs": {
-        "title": "About ENS Labs Limited",
-        "text": "Founded in 2018, ENS Labs Limited is a Singapore-based non-profit organisation and is responsible for the core software development of ENS. This includes the ENS app, open source libraries and core smart contracts"
+        "title": "ENS Labs Limited عن",
+        "text": "\u2067 تأسست في عام 2018، ENS Labs Limited هي منظمة غير ربحية مقرها سنغافورة وهي مسؤولة عن تطوير البرمجيات الأساسية لـ ENS. ويشمل ذلك تطبيق ENS، المكتبات مفتوحة المصدر والعقود الذكية الأساسية."
       },
       "team": {
-        "title": "Meet the ENS Labs team"
+        "title": "\u2067 قابل فريق ENS Labs"
       },
       "benefits": {
-        "title": "Benefits of Ethereum",
-        "text": "Though it supports a wide range of non-Ethereum assets, ENS runs on the Ethereum blockchain. This brings the benefits of decentralization, security, censorship-resistance, and programmability of the Ethereum blockchain to Internet naming, enabling new features like self-custody, composability in the greater Ethereum smart-contract ecosystem, and more."
+        "title": "فوائد الإيثريوم",
+        "text": "\u2067 على الرغم من أنه يدعم مجموعة واسعة من الأصول غير الإيثيريوم، إلا أن ENS يعمل على سلسلة كتل الإيثيريوم. هذا يجلب فوائد اللامركزية، والأمان، ومقاومة الرقابة، والبرمجة لسلسلة كتل الإيثيريوم لنظام التسمية عبر الإنترنت، مما يتيح ميزات جديدة مثل الحفظ الذاتي، والتركيبية في منظومة العقود الذكية الأوسع للإيثيريوم، والمزيد."
       },
       "root": {
-        "title": "Managing the ENS root",
-        "text": "To facilitate the possibility of upgrades and maintenance, the ENS root is controlled by a four of seven multisig, with members of related projects as keyholders. In the long term, we would like the root multisig to be replaced by some form of distributed decision making process, as such systems become available."
+        "title": "\u2067 إدارة جذر ENS",
+        "text": "\u2067 لتسهيل إمكانية الترقيات والصيانة، يتم التحكم في جذر ENS من خلال توقيع متعدد (multisig) يتطلب أربعة من سبعة، مع وجود أعضاء من مشاريع ذات صلة كحاملي المفاتيح (keyholders). على المدى الطويل، نود أن يتم استبدال التوقيع المتعدد للجذر بشكل من أشكال عملية اتخاذ القرار الموزعة، بمجرد توفر مثل هذه الأنظمة."
       }
     },
     "governance": {
-      "claim": "Claim your $ENS",
-      "discord": "Chat on Discord",
-      "discuss": "Join the forum",
-      "governance": "Documentation",
-      "mirror": "Read on Mirror",
-      "dao": "Buy a Constitution",
-      "tally": "Vote on Proposals"
+      "claim": "\u2067 احصل على ENS$ الخاص بك",
+      "discord": "الدردشة على ديسكورد",
+      "discuss": "انضم إلى المنتدى",
+      "governance": "التوثيق",
+      "mirror": "Mirror اقرأ على",
+      "dao": "اشترِ دستورًا",
+      "tally": "صوّت على المقترحات"
     },
     "constitution": {
-      "title": "ENS constitution book now available",
-      "description": "A printed copy of the ENS constitution and its signers is now available in hardcover and ultra-limited edition of 50"
+      "title": "\u2067 كتاب دستور ENS متاح الآن",
+      "description": "\u2067 نسخة مطبوعة من دستور ENS والموقعين عليه متوفرة الآن بغلاف صلب وطبعة فائقة الحصرية محدودة بخمسين نسخة"
     }
   }
   
