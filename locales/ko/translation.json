@@ -59,6 +59,7 @@
     },
     "getInvolved": {
       "title": "참여하기",
+      "supportTitle": "지원 받기",
       "subscribe": {
         "title": "메일링 리스트를 구독하세요.",
         "cta": "구독하기"
@@ -74,6 +75,14 @@
       "documentation": {
         "title": "문서를 읽어 보세요.",
         "cta": "문서 읽기"
+      },
+      "supportEmail": {
+        "title": "지원 팀에 이메일 보내기",
+        "cta": "이메일 보내기"
+      },
+      "supportDiscord": {
+        "title": "Discord에서 #create-a-ticket",
+        "cta": "Discord로 가기"
       }
     }
   },
