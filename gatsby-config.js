@@ -12,7 +12,8 @@ const languages = [
   "vi",
   "ru",
   "pt",
-  "tr"
+  "tr",
+  "ar"
 ]
 
 module.exports = {
