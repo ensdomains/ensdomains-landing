@@ -2,7 +2,7 @@ import React from "react"
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
 import Logo from "../Logov2"
-import { Typography, mq} from "@ensdomains/thorin_next"
+import { Typography, mq } from "@ensdomains/thorin_next"
 
 import Hamburger from "./Hamburger"
 

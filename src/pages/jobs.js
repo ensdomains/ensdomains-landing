@@ -7,7 +7,6 @@ import AboutJobs from "../components/Jobs/AboutJobs"
 import Footer from "../components/Footer"
 import Jobs from "../components/Jobs/Jobs"
 
-
 export default function Job(props) {
   return (
     <Layout {...props}>

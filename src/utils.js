@@ -71,7 +71,7 @@ export const Gap = styled("div")`
 
 export const loadIntegrations = async () => {
   const res = await fetch(
-    `https://github.com/ensdomains/integrations/blob/main/links.json`
+    `https://raw.githubusercontent.com/ensdomains/integrations/main/links.json`
   )
 
   return await res.json()
