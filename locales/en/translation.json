@@ -40,7 +40,7 @@
       "text2": "You can also use ENS with DNS names you already own. ENS supports most DNS names, including:"
     },
     "offchain": {
-      "title": "Names “off-chain”",
+      "title": "Names “offchain”",
       "text": "ENS supports names that exist outside the blockchain via CCIP read. You can permissionlessly import your DNS domains, distribute subnames, store records and much more for free."
     },
     "ecosystem": {
