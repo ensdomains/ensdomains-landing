@@ -86,7 +86,7 @@ export default function TraditionalDomains(props) {
           ))}
         </Domains>
       </DomainWrapper>
-      <Button href="https://medium.com/the-ethereum-name-service/step-by-step-guide-to-importing-a-dns-domain-name-to-ens-d2d15feb03e8">
+      <Button href="https://support.ens.domains/en/articles/7882690-claim-your-dns-name-onchain-in-ens">
         {t("c.learnMore")}
       </Button>
     </Container>
