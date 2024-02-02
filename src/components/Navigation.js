@@ -248,7 +248,6 @@ export default function Navigation() {
         <Links>
           <a href="/governance">Governance</a>
           <a href="https://chat.ens.domains/">Community</a>
-          <Link to="/jobs">Jobs</Link>
           <a href="https://docs.ens.domains/">Docs</a>
           <Link to="/roadmap">Roadmap</Link>
         </Links>
@@ -267,9 +266,6 @@ export default function Navigation() {
         </li>
         <li>
           <a href="https://chat.ens.domains/">Community</a>
-        </li>
-        <li>
-          <Link to="/jobs">Jobs</Link>
         </li>
         <li>
           <a href="https://docs.ens.domains/">Docs</a>
