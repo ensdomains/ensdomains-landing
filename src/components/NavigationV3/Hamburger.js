@@ -1,15 +1,20 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
-import MainMenu from './Menu'
+import React from "react"
+import styled, { css } from "styled-components"
+import MainMenu from "./Menu"
 
-import { CrossSVG, DynamicPopover, MenuSVG, Modal } from '@ensdomains/thorin_next'
+import {
+  CrossSVG,
+  DynamicPopover,
+  MenuSVG,
+  Modal,
+} from "@ensdomains/thorin_next"
 
-import { useBreakpoint } from '../../utils/BreakpointProvider'
+import { useBreakpoint } from "../../utils/BreakpointProvider"
 
 const Button = styled.button(
   ({ theme, $active }) => css`
     position: relative;
-    padding: ${theme.space['2']};
+    padding: ${theme.space["2"]};
     border-radius: ${theme.radii.full};
 
     transition: all 0.15s ease-in-out;
@@ -19,8 +24,8 @@ const Button = styled.button(
 
     & > svg {
       display: block;
-      width: ${theme.space['4']};
-      height: ${theme.space['4']};
+      width: ${theme.space["4"]};
+      height: ${theme.space["4"]};
     }
 
     &:hover {
@@ -32,7 +37,7 @@ const Button = styled.button(
       background-color: ${theme.colors.greyLight};
       color: ${theme.colors.textPrimary};
     `}
-  `,
+  `
 )
 
 const MobileCard = styled.div(
@@ -43,14 +48,14 @@ const MobileCard = styled.div(
     overflow: hidden;
     position: relative;
 
-    border-radius: ${theme.radii['2xLarge']};
+    border-radius: ${theme.radii["2xLarge"]};
     background-color: ${theme.colors.background};
 
     transition: all 0.2s ease-out;
 
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-  `,
+  `
 )
 
 const CloseButton = styled.button(
@@ -59,7 +64,7 @@ const CloseButton = styled.button(
     background-color: ${theme.colors.background};
 
     position: absolute;
-    bottom: -${theme.space['4']};
+    bottom: -${theme.space["4"]};
     left: 50%;
     transform: translate(-50%, 100%);
 
@@ -67,14 +72,14 @@ const CloseButton = styled.button(
     align-items: center;
     justify-content: center;
 
-    padding: ${theme.space['2']};
+    padding: ${theme.space["2"]};
 
     svg {
       display: block;
-      width: ${theme.space['4']};
-      height: ${theme.space['4']};
+      width: ${theme.space["4"]};
+      height: ${theme.space["4"]};
     }
-  `,
+  `
 )
 
 const DesktopDropdownCard = styled.div(
@@ -82,10 +87,10 @@ const DesktopDropdownCard = styled.div(
     overflow: hidden;
     position: relative;
     background-color: ${theme.colors.background};
-    border-radius: ${theme.radii['2xLarge']};
+    border-radius: ${theme.radii["2xLarge"]};
     border: 1px solid ${theme.colors.border};
     transition: all 0.2s ease-out;
-  `,
+  `
 )
 
 export default function Hamburger() {
@@ -98,30 +103,34 @@ export default function Hamburger() {
 
   // close the menu when the user clicks outside of the menu
   React.useEffect(() => {
-    const handleClick = (e) => {
+    const handleClick = e => {
       if (
         !containerRef.current?.contains(e.target) &&
         !btnRef.current?.contains(e.target) &&
-        (e.target).isConnected
+        e.target.isConnected
       ) {
         setIsOpen(false)
       }
     }
 
     if (isOpen) {
-      window.addEventListener('click', handleClick)
+      window.addEventListener("click", handleClick)
     } else {
-      window.removeEventListener('click', handleClick)
+      window.removeEventListener("click", handleClick)
     }
 
     return () => {
-      window.removeEventListener('click', handleClick)
+      window.removeEventListener("click", handleClick)
     }
   }, [isOpen])
 
   const button = (
-    <Button ref={btnRef} $active={isOpen} onClick={() => setIsOpen((prev) => !prev)}>
-      {isOpen ?  <CrossSVG/> : <MenuSVG /> }
+    <Button
+      ref={btnRef}
+      $active={isOpen}
+      onClick={() => setIsOpen(prev => !prev)}
+    >
+      {isOpen ? <CrossSVG /> : <MenuSVG />}
     </Button>
   )
 
@@ -133,8 +142,8 @@ export default function Hamburger() {
           isOpen={isOpen}
           anchorRef={btnRef}
           popover={
-            <DesktopDropdownCard ref={containerRef} >
-             <MainMenu />
+            <DesktopDropdownCard ref={containerRef}>
+              <MainMenu />
             </DesktopDropdownCard>
           }
           placement="bottom"
@@ -143,12 +152,8 @@ export default function Hamburger() {
           align="end"
         />
       ) : (
-        <Modal
-          open={isOpen}
-          onDismiss={() => setIsOpen(false)}
-          alignTop
-        >
-          <MobileCard ref={containerRef} >
+        <Modal open={isOpen} onDismiss={() => setIsOpen(false)} alignTop>
+          <MobileCard ref={containerRef}>
             <MainMenu />
           </MobileCard>
           <CloseButton onClick={() => setIsOpen(false)}>

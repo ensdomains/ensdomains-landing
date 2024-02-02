@@ -12,11 +12,12 @@ const languages = [
   "vi",
   "ru",
   "pt",
-  "tr"
+  "tr",
 ]
 
 module.exports = {
   plugins: [
+    "gatsby-plugin-pnpm",
     {
       // including a plugin from outside the plugins folder needs the path to it
       resolve: `gatsby-plugin-react-i18next`,
@@ -37,7 +38,7 @@ module.exports = {
         pages: [
           {
             matchPath: "/ignored-page",
-            languages
+            languages,
           },
         ],
       },
@@ -54,15 +55,15 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets\/social/
-        }
-      }
+          include: /assets\/social/,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-styled-components`,
-    }
+    },
   ],
 }

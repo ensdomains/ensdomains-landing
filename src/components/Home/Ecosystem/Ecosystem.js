@@ -4,8 +4,7 @@ import styled from "@emotion/styled"
 import { motion } from "framer-motion"
 
 import { H2 } from "../../Typography"
-import { importAll } from "../../../utils"
-import links from "../links.json"
+import { importAll, loadIntegrations } from "../../../utils"
 import appSvg from "./app.svg"
 import browserSvg from "./browser.svg"
 import walletSvg from "./wallet.svg"
@@ -128,6 +127,12 @@ export default function Ecosystem(props) {
   const [moreApps, setMoreApps] = useState(false)
   const [moreBrowsers, setMoreBrowsers] = useState(false)
 
+  const [links, setLinks] = useState([])
+
+  useEffect(() => {
+    loadIntegrations().then(data => setLinks(data))
+  }, [])
+
   useEffect(() => {
     async function getImages() {
       const walletsPromise = require.context(
@@ -172,8 +177,10 @@ export default function Ecosystem(props) {
       )
     }
 
-    getImages()
-  }, [])
+    if (links.length !== 0) {
+      getImages()
+    }
+  }, [loadIntegrations])
 
   const sortedWallets = sortApps(wallets, "featuredWallet")
   const sortedApps = sortApps(apps, "featuredApp")
