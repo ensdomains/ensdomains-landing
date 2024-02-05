@@ -68,7 +68,7 @@ const CarouselContainer = styled("div")`
       }
     }
 
-    .thumb.selected. {
+    .thumb.selected {
       border: none;
     }
 
@@ -78,18 +78,6 @@ const CarouselContainer = styled("div")`
 
     .thumb.selected h3 {
       opacity: 1;
-    }
-
-    svg {
-      height: 90px;
-    }
-
-    .dot {
-      display: none;
-    }
-
-    .thumb.selected .dot {
-      display: block;
     }
   }
 `
@@ -115,18 +103,10 @@ const Slide = styled("div")`
   }
 `
 
-const Dot = styled("div")`
-  background: white;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-`
-
 const Title = styled("h3")`
   font-family: Overpass;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 20px;
+  font-weight: bold;
+  font-size: 16px;
   color: #ffffff;
   letter-spacing: 1px;
   text-align: center;
@@ -145,7 +125,6 @@ const customRenderThumb = ({ children, t }) => {
         <React.Fragment key={i}>
           <SearchIcon />
           <Title>{t("home.carousel.search")}</Title>
-          <Dot className="dot" />
         </React.Fragment>
       )
     }
@@ -154,7 +133,6 @@ const customRenderThumb = ({ children, t }) => {
         <React.Fragment key={i}>
           <RegisterIcon />
           <Title>{t("home.carousel.register")}</Title>
-          <Dot className="dot" />
         </React.Fragment>
       )
     }
@@ -163,7 +141,6 @@ const customRenderThumb = ({ children, t }) => {
         <React.Fragment key={i}>
           <ManageIcon />
           <Title>{t("home.carousel.manage")}</Title>
-          <Dot className="dot" />
         </React.Fragment>
       )
     }
@@ -178,11 +155,16 @@ export default function HeroCarousel(props) {
     <CarouselContainer>
       <Bg />
       <Carousel
+        autoPlay
+        infiniteLoop
         centerMode
         swipeable={true}
+        stopOnHover={false}
         centerSlidePercentage={65}
         selectedItem={1}
         showIndicators={false}
+        showStatus={false}
+        showArrows={false}
         renderThumbs={children => customRenderThumb({ children, t })}
       >
         <Slide>

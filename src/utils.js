@@ -68,3 +68,11 @@ export const Gap = styled("div")`
   width: 100%;
   height: ${p => p.size * 4}px;
 `
+
+export const loadIntegrations = async () => {
+  const res = await fetch(
+    `https://raw.githubusercontent.com/ensdomains/integrations/main/links.json`
+  )
+
+  return await res.json()
+}

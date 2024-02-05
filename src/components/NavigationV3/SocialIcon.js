@@ -1,5 +1,5 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
+import React from "react"
+import styled, { css } from "styled-components"
 
 const SocialIconWrapper = styled.a(
   ({ theme }) => css`
@@ -8,9 +8,9 @@ const SocialIconWrapper = styled.a(
     display: flex;
     align-items: center;
     justify-content: center;
-    width: ${theme.space['6']};
-    min-height: ${theme.space['6']};
-  `,
+    width: ${theme.space["6"]};
+    min-height: ${theme.space["6"]};
+  `
 )
 
 const StyledIcon = styled.div(
@@ -23,7 +23,7 @@ const StyledIcon = styled.div(
     ${SocialIconWrapper}:hover && {
       fill: ${$iconColor};
     }
-  `,
+  `
 )
 
 const StyledColoredIcon = styled.div(
@@ -36,17 +36,12 @@ const StyledColoredIcon = styled.div(
     ${SocialIconWrapper}:hover && {
       opacity: 1;
     }
-  `,
+  `
 )
 
-export default function SocialIcon({
-  Icon,
-  ColoredIcon,
-  color,
-  href,
-}) {
+export default function SocialIcon({ Icon, ColoredIcon, color, href }) {
   return (
-    <SocialIconWrapper href={href} target='_blank'>
+    <SocialIconWrapper href={href} target="_blank">
       <StyledIcon key={href} $iconColor={color} as={Icon} />
       {ColoredIcon && <StyledColoredIcon as={ColoredIcon} />}
     </SocialIconWrapper>

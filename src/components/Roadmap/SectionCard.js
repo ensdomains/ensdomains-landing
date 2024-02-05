@@ -47,12 +47,14 @@ const RotatableIcon = styled(DownChevronSVG)(
   `
 )
 
-const ListWrapper = styled.div(() => css`
-  overflow: hidden;
-  transition: height 0.3s ease-in-out;
-`)
+const ListWrapper = styled.div(
+  () => css`
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  `
+)
 
-const List = styled.div(({theme}) => [
+const List = styled.div(({ theme }) => [
   css`
     display: flex;
     flex-direction: column;
@@ -103,7 +105,7 @@ export default function SectionCard({
   }, [items, expanded, expandable])
   const showShowMore = expandable && items.length > DISPLAY_INTERVAL
   const expandDirection = displayedItems.length < items.length ? "more" : "less"
-  
+
   // Smooth expand/collapse
   const contentRef = React.useRef(null)
   const [height, setHeight] = React.useState(undefined)
@@ -113,16 +115,16 @@ export default function SectionCard({
     preExit: true,
   })
   React.useEffect(() => {
-    if (['preEnter', 'preExit'].includes(state)) {
+    if (["preEnter", "preExit"].includes(state)) {
       const startingHeight = contentRef.current.getBoundingClientRect().height
       setHeight(startingHeight)
-      setExpanded(state === 'preEnter')
+      setExpanded(state === "preEnter")
     }
-    if (['entering', 'exiting'].includes(state)) {
+    if (["entering", "exiting"].includes(state)) {
       const endingHeight = contentRef.current.getBoundingClientRect().height
       setHeight(endingHeight)
     }
-    if (['entered', 'exited'].includes(state)) {
+    if (["entered", "exited"].includes(state)) {
       setHeight(undefined)
     }
   }, [state, setHeight])
@@ -137,7 +139,7 @@ export default function SectionCard({
               {description}
             </Typography>
           </div>
-          <ListWrapper style={{height: height}}>
+          <ListWrapper style={{ height: height }}>
             <List ref={contentRef}>
               {displayedItems.map(props => (
                 <SectionItem key={props.title} color={color} {...props} />

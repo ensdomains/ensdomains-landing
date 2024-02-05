@@ -180,8 +180,6 @@ export default function Navigation() {
           Governance
         </NavLink>
         <NavLink href="https://chat.ens.domains/">Community</NavLink>
-        <NavLink href="/about">Team</NavLink>
-        <NavLink href="/jobs">Jobs</NavLink>
         <NavLink href="https://docs.ens.domains/">Docs</NavLink>
 
         <Separator />
@@ -197,12 +195,6 @@ export default function Navigation() {
         </li>
         <li>
           <a href="https://chat.ens.domains/">Community</a>
-        </li>
-        <li>
-          <Link to="/about">Team</Link>
-        </li>
-        <li>
-          <Link to="/jobs">Jobs</Link>
         </li>
         <li>
           <a href="https://docs.ens.domains/">Docs</a>

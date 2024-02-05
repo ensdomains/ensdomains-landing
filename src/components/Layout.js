@@ -17,7 +17,7 @@ function getTitle(pathname) {
 
 export default function Layout({ children, data, location }) {
   return (
-    <>
+    <div style={{ paddingTop: 110 }}>
       <Helmet
         meta={[
           {
@@ -32,13 +32,11 @@ export default function Layout({ children, data, location }) {
           },
           {
             name: "googlebot",
-            content:
-              "index, follow",
+            content: "index, follow",
           },
           {
             name: "robots",
-            content:
-              "index, follow",
+            content: "index, follow",
           },
           {
             name: "twitter:card",
@@ -54,7 +52,8 @@ export default function Layout({ children, data, location }) {
           },
           {
             property: "og:description",
-            content: "Your web3 username, a readable name for all your cryptocurrency addresses, and decentralised websites.",
+            content:
+              "Your web3 username, a readable name for all your cryptocurrency addresses, and decentralised websites.",
           },
           {
             property: "og:type",
@@ -94,12 +93,22 @@ export default function Layout({ children, data, location }) {
           { rel: "shortcut icon", type: "image/x-icon", href: `${favicon}` },
         ]}
       >
-        <script async="" defer=""  data-domain="ens.domains, rollup.ens" src="https://plausible.io/js/script.outbound-links.js"></script>
+        <script
+          async=""
+          defer=""
+          data-domain="ens.domains, rollup.ens"
+          src="https://plausible.io/js/script.outbound-links.js"
+        ></script>
       </Helmet>
       <Global
         styles={css`
-          html, body, #___gatsby, #gatsby-focus-wrapper {
-            height: ${location?.pathname === '/governance' ? '100%' : 'initial'};
+          html,
+          body,
+          #___gatsby,
+          #gatsby-focus-wrapper {
+            height: ${location?.pathname === "/governance"
+              ? "100%"
+              : "initial"};
           }
           body {
             font-family: Overpass;
@@ -110,6 +119,6 @@ export default function Layout({ children, data, location }) {
         `}
       />
       {children}
-    </>
+    </div>
   )
 }

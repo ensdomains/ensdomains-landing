@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
-import Logo from "./Logo"
+import Logo from "./Logov2"
 import { Button } from "./Typography"
 
 import mq from "../mediaQuery"
@@ -20,8 +20,7 @@ const Nav = styled("nav")`
   justify-content: space-between;
   padding: 20px 40px;
   position: sticky;
-  z-index: 2147483647;
-  top: 0;
+  z-index: 2147483639;
 
   .mobile-nav {
     ${mq.medium`
@@ -248,8 +247,6 @@ export default function Navigation() {
         <Links>
           <a href="/governance">Governance</a>
           <a href="https://chat.ens.domains/">Community</a>
-          <Link to="/about">Team</Link>
-          <Link to="/jobs">Jobs</Link>
           <a href="https://docs.ens.domains/">Docs</a>
           <Link to="/roadmap">Roadmap</Link>
         </Links>
@@ -268,12 +265,6 @@ export default function Navigation() {
         </li>
         <li>
           <a href="https://chat.ens.domains/">Community</a>
-        </li>
-        <li>
-          <Link to="/about">Team</Link>
-        </li>
-        <li>
-          <Link to="/jobs">Jobs</Link>
         </li>
         <li>
           <a href="https://docs.ens.domains/">Docs</a>

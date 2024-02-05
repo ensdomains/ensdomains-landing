@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const defaultValue = {
   xs: false,
@@ -9,18 +9,16 @@ const defaultValue = {
 }
 
 const queries = {
-  xs: '(min-width: 360px)',
-  sm: '(min-width: 640px)',
-  md: '(min-width: 768px)',
-  lg: '(min-width: 1024px)',
-  xl: '(min-width: 1280px)',
+  xs: "(min-width: 360px)",
+  sm: "(min-width: 640px)",
+  md: "(min-width: 768px)",
+  lg: "(min-width: 1024px)",
+  xl: "(min-width: 1280px)",
 }
 
 const BreakpointContext = React.createContext(defaultValue)
 
-function BreakpointProvider({
-  children,
-}) {
+function BreakpointProvider({ children }) {
   const [queryMatch, setQueryMatch] = React.useState({})
 
   React.useEffect(() => {
@@ -30,16 +28,18 @@ function BreakpointProvider({
 
     const handleQueryListener = () => {
       const updatedMatches = keys.reduce((acc, media) => {
-        acc[media] = !!(mediaQueryLists[media] && mediaQueryLists[media]?.matches)
+        acc[media] = !!(
+          mediaQueryLists[media] && mediaQueryLists[media]?.matches
+        )
         return acc
-      }, {} )
+      }, {})
       setQueryMatch(updatedMatches)
     }
 
     if (window && window.matchMedia) {
       const matches = {}
-      keys.forEach((media) => {
-        if (typeof queries[media] === 'string') {
+      keys.forEach(media => {
+        if (typeof queries[media] === "string") {
           mediaQueryLists[media] = window.matchMedia(queries[media])
           matches[media] = mediaQueryLists[media]?.matches || false
         } else {
@@ -48,8 +48,8 @@ function BreakpointProvider({
       })
       setQueryMatch(matches)
       isAttached = true
-      keys.forEach((media) => {
-        if (typeof queries[media] === 'string') {
+      keys.forEach(media => {
+        if (typeof queries[media] === "string") {
           mediaQueryLists[media]?.addListener(handleQueryListener)
         }
       })
@@ -57,8 +57,8 @@ function BreakpointProvider({
 
     return () => {
       if (isAttached) {
-        keys.forEach((media) => {
-          if (typeof queries[media] === 'string') {
+        keys.forEach(media => {
+          if (typeof queries[media] === "string") {
             mediaQueryLists[media]?.removeListener(handleQueryListener)
           }
         })
@@ -66,13 +66,17 @@ function BreakpointProvider({
     }
   }, [queries])
 
-  return <BreakpointContext.Provider value={queryMatch}>{children}</BreakpointContext.Provider>
+  return (
+    <BreakpointContext.Provider value={queryMatch}>
+      {children}
+    </BreakpointContext.Provider>
+  )
 }
 
 function useBreakpoint() {
   const context = React.useContext(BreakpointContext)
   if (context === defaultValue) {
-    throw new Error('useBreakpoint must be used within BreakpointProvider')
+    throw new Error("useBreakpoint must be used within BreakpointProvider")
   }
   return context
 }

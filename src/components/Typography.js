@@ -41,6 +41,20 @@ export const Button = styled("a")`
   text-decoration: none;
 `
 
+export const ButtonSecondary = styled("a")`
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 23px;
+  font-family: Overpass;
+  font-weight: 600;
+  font-size: 14px;
+  color: #5284ff;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 13px 30px;
+  text-decoration: none;
+`
+
 export const Buttonv2 = styled("a")`
   background: linear-gradient(
     330.4deg,
