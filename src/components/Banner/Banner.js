@@ -49,7 +49,7 @@ const TextContainer = styled("div")`
 
 export default function Banner() {
   return (
-    <Container href="https://blog.ens.domains/post/beginners-guide-to-ethereum-and-ens">
+    <Container href="https://blog.ens.domains/post/godaddy-partners-with-ens">
       <StopParentIcon />
       <TextContainer>
         <div>Link your GoDaddy domains to ENS, without any gas!</div>
