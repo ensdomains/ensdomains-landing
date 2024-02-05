@@ -2,12 +2,12 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const IconBase = styled("svg")`
-  g {
+  path {
     opacity: 0.7;
     transition: 0.2s;
   }
 
-  &:hover g {
+  &:hover path {
     opacity: 1;
   }
   ${p =>
