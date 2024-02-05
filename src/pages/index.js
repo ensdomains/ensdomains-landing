@@ -2,6 +2,7 @@ import React from "react"
 import "normalize.css"
 
 import Navigation from "../components/Navigation"
+import Banner from "../components/Banner/Banner.js"
 import Cryptocurrencies from "../components/Home/Cryptocurrencies/"
 import PortableUsername from "../components/Home/PortableUsername/"
 import DecentralisedWebsites from "../components/Home/DecentralisedWebsites/"
@@ -18,6 +19,7 @@ import Offchain from "../components/Home/Offchain/Offchain"
 export default function Home(props) {
   return (
     <Layout {...props}>
+      <Banner />
       <Navigation />
       <Hero />
       <Carousel />

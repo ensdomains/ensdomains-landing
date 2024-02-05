@@ -17,7 +17,7 @@ function getTitle(pathname) {
 
 export default function Layout({ children, data, location }) {
   return (
-    <>
+    <div style={{ paddingTop: 110 }}>
       <Helmet
         meta={[
           {
@@ -119,6 +119,6 @@ export default function Layout({ children, data, location }) {
         `}
       />
       {children}
-    </>
+    </div>
   )
 }
