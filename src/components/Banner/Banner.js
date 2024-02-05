@@ -52,7 +52,7 @@ export default function Banner() {
     <Container href="https://blog.ens.domains/post/beginners-guide-to-ethereum-and-ens">
       <StopParentIcon />
       <TextContainer>
-        <div>Link your StopParent domains to ENS, without any gas!</div>
+        <div>Link your GoDaddy domains to ENS, without any gas!</div>
         <LearnMore>
           Learn More <UpRightArrow />
         </LearnMore>
