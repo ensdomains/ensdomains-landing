@@ -46,7 +46,7 @@ export default function Hero(props) {
       <Title>{t("home.hero.title")}</Title>
       <ButtonContainer>
       <ButtonSecondary href="https://app.ens.domains">Get your name</ButtonSecondary>
-      <ButtonSecondary>Learn more</ButtonSecondary>
+      <ButtonSecondary href="https://blog.ens.domains/post/beginners-guide-to-ethereum-and-ens">Learn more</ButtonSecondary>
       </ButtonContainer>
     </HeroContainer>
   )
