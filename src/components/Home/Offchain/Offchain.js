@@ -4,6 +4,7 @@ import styled from "@emotion/styled"
 import { Anchor, AnchorContainer } from "../../Anchor"
 import {H2,P} from '../../Typography'
 import offchainImg from './offchain.svg'
+import mq from '../../../mediaQuery'
 
 const Container = styled("div")`
   background: white;
@@ -18,19 +19,23 @@ const Desc = styled(P)`
   text-align: center;
 `
 
+const Img = styled.img`
+  max-width: 498px;
+  width: 100%;
+`
+
 export default function Offchain() {
-    const { t } = useTranslation()
-    return (
-      <Container id="home-offchain">
-        <AnchorContainer href={"#home-offchain"}>
-          <H2>
-            {t("home.offchain.title")}
-            <Anchor />
-          </H2>
-        </AnchorContainer>
-        <Desc>{t("home.offchain.text")}</Desc>
-        <img src={offchainImg} alt="offchain illustration" />
-      </Container>
-    )
-  }
-  
+  const { t } = useTranslation()
+  return (
+    <Container id="home-offchain">
+      <AnchorContainer href={"#home-offchain"}>
+        <H2>
+          {t("home.offchain.title")}
+          <Anchor />
+        </H2>
+      </AnchorContainer>
+      <Desc>{t("home.offchain.text")}</Desc>
+      <Img src={offchainImg} alt="offchain illustration" />
+    </Container>
+  )
+}
