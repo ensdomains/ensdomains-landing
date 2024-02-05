@@ -11,9 +11,9 @@
       "title": "Welcome to the New Internet"
     },
     "carousel": {
-      "search": "search",
-      "manage": "manage",
-      "register": "register",
+      "search": "Search",
+      "manage": "Manage",
+      "register": "Register",
       "launch": "Go to app"
     },
     "portableUsername": {

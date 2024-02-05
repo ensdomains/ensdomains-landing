@@ -79,10 +79,6 @@ const CarouselContainer = styled("div")`
     .thumb.selected h3 {
       opacity: 1;
     }
-
-    svg {
-      height: 90px;
-    }
   }
 `
 
@@ -107,12 +103,10 @@ const Slide = styled("div")`
   }
 `
 
-
 const Title = styled("h3")`
   font-family: Overpass;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 20px;
+  font-weight: bold;
+  font-size: 16px;
   color: #ffffff;
   letter-spacing: 1px;
   text-align: center;
@@ -161,11 +155,16 @@ export default function HeroCarousel(props) {
     <CarouselContainer>
       <Bg />
       <Carousel
+        autoPlay
+        infiniteLoop
         centerMode
         swipeable={true}
+        stopOnHover={false}
         centerSlidePercentage={65}
         selectedItem={1}
         showIndicators={false}
+        showStatus={false}
+        showArrows={false}
         renderThumbs={children => customRenderThumb({ children, t })}
       >
         <Slide>
