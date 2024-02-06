@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { Global, css } from "@emotion/core"
 import favicon from "../assets/favicon.ico"
-import twitter from "../assets/twitter.png"
+import ogImage from "../../static/og-image.png"
 
 function getTitle(pathname) {
   switch (pathname) {
@@ -53,7 +53,7 @@ export default function Layout({ children, data, location }) {
           {
             property: "og:description",
             content:
-            "Decentralised naming for the new internet. No more copying and pasting long addresses.",
+              "Decentralised naming for the new internet. No more copying and pasting long addresses.",
           },
           {
             property: "og:type",
@@ -61,7 +61,7 @@ export default function Layout({ children, data, location }) {
           },
           {
             property: "og:image",
-            content: `https://ens.domains/static/og-image.png`,
+            content: ogImage,
           },
           {
             property: "og:image:alt",
