@@ -129,7 +129,6 @@ export default function Ecosystem(props) {
 
   const [links, setLinks] = useState([])
 
-
   useEffect(() => {
     loadIntegrations().then(data => setLinks(data))
   }, [])

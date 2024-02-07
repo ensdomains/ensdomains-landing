@@ -42,7 +42,7 @@ export const Button = styled("a")`
 `
 
 export const ButtonSecondary = styled("a")`
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
   border-radius: 23px;
   font-family: Overpass;

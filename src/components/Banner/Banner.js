@@ -1,7 +1,5 @@
+import React from "react"
 import styled from "@emotion/styled"
-import { Link } from "gatsby"
-import React, { useState } from "react"
-import { useTranslation } from "react-i18next"
 import StopParentIcon from "./StopParent"
 
 const Container = styled("a")`

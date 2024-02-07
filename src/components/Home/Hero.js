@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import mq from "../../mediaQuery"
-import { ButtonSecondary } from '../Typography'
+import { ButtonSecondary } from "../Typography"
 
 const Title = styled("h2")`
   font-size: 28px;
@@ -45,8 +45,12 @@ export default function Hero(props) {
     <HeroContainer>
       <Title>{t("home.hero.title")}</Title>
       <ButtonContainer>
-      <ButtonSecondary href="https://app.ens.domains">Get your name</ButtonSecondary>
-      <ButtonSecondary href="https://blog.ens.domains/post/beginners-guide-to-ethereum-and-ens">Learn more</ButtonSecondary>
+        <ButtonSecondary href="https://app.ens.domains">
+          Get your name
+        </ButtonSecondary>
+        <ButtonSecondary href="https://blog.ens.domains/post/beginners-guide-to-ethereum-and-ens">
+          Learn more
+        </ButtonSecondary>
       </ButtonContainer>
     </HeroContainer>
   )

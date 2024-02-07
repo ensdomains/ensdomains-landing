@@ -2,7 +2,7 @@ import React from "react"
 import { motion, useViewportScroll, useTransform } from "framer-motion"
 import styled from "@emotion/styled"
 import { useTranslation } from "react-i18next"
-import { H2, P as DefaultP,Button } from "../../Typography"
+import { H2, P as DefaultP, Button } from "../../Typography"
 import { importAll } from "../../../utils"
 import wallet from "./wallet.svg"
 import { Anchor, AnchorContainer } from "../../Anchor"
@@ -107,10 +107,11 @@ export default function Cryptocurrencies(props) {
           </Coins>
         </WalletAnimation>
         <ButtonContainer>
-          <Button href="https://support.ens.domains/en/articles/7900302-ens-use-cases">Learn more</Button>
+          <Button href="https://support.ens.domains/en/articles/7900302-ens-use-cases">
+            Learn more
+          </Button>
         </ButtonContainer>
       </Wrapper>
-     
     </HeroContainer>
   )
 }
