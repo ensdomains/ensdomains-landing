@@ -2,7 +2,6 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { Global, css } from "@emotion/core"
 import favicon from "../assets/favicon.ico"
-import ogImage from "../../static/og-image.png"
 
 function getTitle(pathname) {
   switch (pathname) {
@@ -61,7 +60,7 @@ export default function Layout({ children, data, location }) {
           },
           {
             property: "og:image",
-            content: ogImage,
+            content: "https://ens.domains/og-image.png",
           },
           {
             property: "og:image:alt",
