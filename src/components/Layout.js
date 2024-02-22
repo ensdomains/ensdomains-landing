@@ -67,20 +67,16 @@ export default function Layout({ children, data, location }) {
             content: "https://ens.domains/og-image.png"
           },
           {
-            property: "og:image:type",
-            content: "image/png",
-          },
-          {
             property: "og:image:alt",
             content: `Ethereum Name Service`,
           },
           {
             property: "og:image:width",
-            content: `390px`,
+            content: `1200`,
           },
           {
             property: "og:image:height",
-            content: `258px`,
+            content: `630`,
           },
           {
             property: "og:site_name",
