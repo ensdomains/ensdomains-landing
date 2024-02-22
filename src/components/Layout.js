@@ -60,7 +60,15 @@ export default function Layout({ children, data, location }) {
           },
           {
             property: "og:image",
-            content: "https://ens.domains/og-image.png",
+            content: "http://ens.domains/og-image.png",
+          },
+          {
+            property: "og:image:secure_url",
+            content: "https://ens.domains/og-image.png"
+          },
+          {
+            property: "og:image:type",
+            content: "image/png",
           },
           {
             property: "og:image:alt",
