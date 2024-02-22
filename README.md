@@ -1,6 +1,6 @@
 ## ENS Homepage V2
 
-The homepage for the ENS project, vist [here](https://ens.domains/).
+The homepage for the ENS project, visit [here](https://ens.domains/).
 
 ### Translations
 
