@@ -83,7 +83,7 @@ const FeatureContainer = styled('div')`
     }
 
     a {
-        font-family: Overpass;
+        font-family: Satoshi;
         font-weight: 500;
         text-decoration: none;
         font-size: 20px;

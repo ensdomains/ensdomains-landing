@@ -28,7 +28,7 @@ const AboutENSContainer = styled('div')`
   `};
 
     h3 {
-        font-family: Overpass;
+        font-family: Satoshi;
         font-weight: 200;
         font-size: 28px;
         color: #2b2b2b;
@@ -59,7 +59,7 @@ const Support = styled('div')`
     max-width: 830px;
 
     p {
-        font-family: Overpass;
+        font-family: Satoshi;
         font-weight: 200;
         font-size: 22px;
         color: #2b2b2b;

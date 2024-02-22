@@ -26,7 +26,7 @@ const DescriptionInner = styled('div')`
   `}
 
     p {
-        font-family: Overpass;
+        font-family: Satoshi;
         font-weight: 200;
         font-size: 18px;
         color: #2b2b2b;

@@ -104,7 +104,7 @@ const Slide = styled('div')`
 `;
 
 const Title = styled('h3')`
-    font-family: Overpass;
+    font-family: Satoshi;
     font-weight: bold;
     font-size: 16px;
     color: #ffffff;

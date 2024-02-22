@@ -84,7 +84,7 @@ const GridItemContainer = styled('a')`
     }
 
     h3 {
-        font-family: Overpass;
+        font-family: Satoshi;
         font-weight: 400;
         font-size: 20px;
         color: #5284ff;

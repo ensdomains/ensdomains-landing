@@ -120,7 +120,7 @@ export default function Layout({ children, data, location }) {
                             : 'initial'};
                     }
                     body {
-                        font-family: Overpass;
+                        font-family: Satoshi;
                     }
                     #gatsby-focus-wrapper {
                         height: 100vh;

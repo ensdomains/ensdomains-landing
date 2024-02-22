@@ -173,7 +173,7 @@ const EndContent = styled('div')`
 
 const MobileLinks = styled('ul')`
     background: #121d46;
-    font-family: Overpass;
+    font-family: Satoshi;
     font-size: 22px;
     color: #ffffff;
     text-align: center;

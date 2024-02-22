@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import mq from '../mediaQuery';
 
 export const H2 = styled('h2')`
-    font-family: Overpass;
+    font-family: Satoshi;
     font-weight: 300;
     font-size: 28px;
     margin-top: 0;
@@ -19,7 +19,7 @@ export const H2 = styled('h2')`
 
 export const P = styled('p')`
     font-size: 18px;
-    font-family: Overpass;
+    font-family: Satoshi;
     font-weight: 200;
     line-height: 1.5em;
     max-width: 750px;
@@ -33,7 +33,7 @@ export const Button = styled('a')`
     background: #5284ff;
     box-shadow: 0 10px 21px 0 rgba(38, 61, 145, 0.26);
     border-radius: 23px;
-    font-family: Overpass;
+    font-family: Satoshi;
     font-weight: 500;
     font-size: 14px;
     color: #ffffff;
@@ -47,7 +47,7 @@ export const ButtonSecondary = styled('a')`
     background: #ffffff;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
     border-radius: 23px;
-    font-family: Overpass;
+    font-family: Satoshi;
     font-weight: 600;
     font-size: 14px;
     color: #5284ff;

@@ -16,7 +16,7 @@ const Hero = styled('section')`
   `};
 
     p {
-        font-family: Overpass;
+        font-family: Satoshi;
         font-weight: 200;
         font-size: 28px;
 
