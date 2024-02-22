@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 
 import DefaultLogo from "./Logo"
-import twitter from "../assets/twitter.svg"
+import x from "../assets/x.svg"
 import github from "../assets/github.svg"
 import blog from "../assets/blog.svg"
 
@@ -32,9 +32,9 @@ const FooterContainer = styled("footer")`
 
 const social = [
   {
-    img: twitter,
-    text: "Twitter",
-    link: "https://twitter.com/ensdomains",
+    img: x,
+    text: "X",
+    link: "https://x.com/ensdomains",
   },
   {
     img: blog,

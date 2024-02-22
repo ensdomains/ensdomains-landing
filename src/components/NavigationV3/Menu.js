@@ -112,7 +112,7 @@ export default function MainMenu() {
         <SocialIcon
           Icon={SocialTwitter}
           color="#5298FF"
-          href="https://twitter.com/ensdomains"
+          href="https://x.com/ensdomains"
         />
         <SocialIcon
           Icon={SocialGithub}
