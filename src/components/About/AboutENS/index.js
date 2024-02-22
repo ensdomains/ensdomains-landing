@@ -1,2 +1,1 @@
-import AboutENS from "./AboutENS"
-export default AboutENS
+export { default } from './AboutENS';
