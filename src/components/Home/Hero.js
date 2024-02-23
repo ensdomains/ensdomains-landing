@@ -7,7 +7,7 @@ import { ButtonSecondary } from '../Typography';
 
 const Title = styled('h2')`
     font-size: 28px;
-    font-weight: 300;
+    font-weight: 700;
     color: white;
     text-align: center;
     max-width: 600px;

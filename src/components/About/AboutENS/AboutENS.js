@@ -36,7 +36,6 @@ const AboutENSContainer = styled('div')`
     }
 
     p.prelede {
-        font-family: Karma;
         font-size: 24px;
         color: #2b2b2b;
         font-weight: 200;

@@ -76,7 +76,6 @@ const FeatureContainer = styled('div')`
     }
 
     p {
-        font-family: Karma;
         font-size: 20px;
         color: #2b2b2b;
         line-height: 30px;

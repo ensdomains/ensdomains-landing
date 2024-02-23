@@ -99,8 +99,7 @@ const LinkItem = styled('div')`
     }
     h3 {
         font-size: 34px;
-        font-family: Karma;
-        font-weight: 300;
+        font-weight: 700;
         color: white;
         grid-area: title;
         margin: 0;

@@ -39,7 +39,6 @@ const DescriptionInner = styled('div')`
     }
 
     h2 {
-        font-family: Karma;
         font-weight: 200;
         font-size: 24px;
         color: #2b2b2b;
@@ -76,7 +75,6 @@ const Member = styled('div')`
     flex-direction: column;
 
     dt {
-        font-family: Karma;
         font-weight: 200;
         font-size: 34px;
         color: #2b2b2b;
@@ -91,7 +89,6 @@ const Member = styled('div')`
 
     dd {
         margin: 0;
-        font-family: Karma;
         font-weight: 200;
         font-size: 18px;
         color: #2b2b2b;

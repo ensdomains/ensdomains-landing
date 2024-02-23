@@ -48,7 +48,6 @@ const social = [
 ];
 
 const ExternalLink = styled('a')`
-    font-family: Karma;
     font-size: 28px;
     color: white;
     text-decoration: none;

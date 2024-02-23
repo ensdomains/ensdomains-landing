@@ -5,7 +5,7 @@ import mq from '../mediaQuery';
 
 export const H2 = styled('h2')`
     font-family: Satoshi;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 28px;
     margin-top: 0;
     margin-bottom: 20px;

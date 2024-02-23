@@ -51,7 +51,6 @@ const Domains = styled('div')`
     flex-direction: row;
   `}
     li {
-        font-family: Karma;
         font-weight: 300;
         font-size: 58px;
         padding-bottom: 0;

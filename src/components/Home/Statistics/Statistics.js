@@ -19,7 +19,6 @@ const HeroContainer = styled('div')`
 `;
 
 const H2 = styled(DefaultH2)`
-    font-family: Karma;
     color: #2b2b2b;
     text-align: center;
     max-width: 900px;
@@ -28,7 +27,7 @@ const H2 = styled(DefaultH2)`
     line-height: 36px;
 
     ${mq.medium`
-    font-weight: 300;
+    font-weight: 700;
     font-size: 52px;
     line-height: 62px;
     margin: 0 auto 50px;
@@ -38,25 +37,25 @@ const H2 = styled(DefaultH2)`
 const Stats = styled('div')`
     display: flex;
     flex-direction: column;
-    font-family: Karma;
-    font-weight: 300;
+    font-weight: 700;
     margin: 0 auto 0;
     max-width: 800px;
 
     ${mq.small`
     flex-direction: row;
     justify-content: space-between;
+    gap: 64px;
   `}
 
     strong {
-        font-size: 60px;
+        font-size: 45px;
         color: #2c46a6;
         ${mq.small`
-      font-size: 90px;
+      font-size: 60px;
     `};
 
         ${mq.large`
-      font-size: 120px;
+      font-size: 92px;
     `};
     }
     span {
