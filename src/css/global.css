@@ -3,6 +3,7 @@ body {
     background: #f6f7fa;
     font-family: "Satoshi", sans-serif;
     font-feature-settings: "ss01" on, "ss03" on;
+    font-weight: 500;
 }
 
 div[role="group"][tabindex] {

@@ -163,6 +163,8 @@ export default function Ecosystem(properties) {
                 browsersPromise,
             ]);
 
+            console.log('XXXXXXXXXXXXXXX', { wallets });
+
             setApps(
                 importAll(apps).map((item) => {
                     return {
@@ -189,10 +191,15 @@ export default function Ecosystem(properties) {
             );
         }
 
-        if (links.length > 0) {
+        console.log('lots of imagesz');
+
+        if (Object.keys(links).length > 0) {
+            console.log('lots of images');
             getImages();
         }
     }, [links]);
+
+    console.log('LINKS', { links });
 
     const sortedWallets = sortApps(wallets, 'featuredWallet');
     const sortedApps = sortApps(apps, 'featuredApp');
