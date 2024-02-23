@@ -1,2 +1,1 @@
-import Cryptocurrencies from "./Cryptocurrencies"
-export default Cryptocurrencies
+export { default } from './Cryptocurrencies';

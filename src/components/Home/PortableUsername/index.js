@@ -1,2 +1,1 @@
-import PortableUsername from "./PortableUsername"
-export default PortableUsername
+export { default } from './PortableUsername';
