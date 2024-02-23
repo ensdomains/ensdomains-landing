@@ -90,7 +90,7 @@ const List1 = styled('div')``;
 
 const List2 = styled('div')``;
 
-export default function AboutENS(properties) {
+export default function AboutENS() {
     const { t } = useTranslation();
 
     return (

@@ -1,7 +1,10 @@
-import styled from '@emotion/styled';
 import 'normalize.css';
+import '../css/global.css';
+
+import styled from '@emotion/styled';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+
 import dao from '../assets/dao.svg';
 import discord from '../assets/discord.svg';
 import discordGrey from '../assets/discordGrey.svg';
@@ -11,24 +14,6 @@ import governance from '../assets/governance.svg';
 import mirror from '../assets/mirror.svg';
 import tally from '../assets/tally.svg';
 import xGrey from '../assets/xGrey.svg';
-import Layout from '../components/Layout';
-import Navigation from '../components/Navigationv2';
-import '../css/global.css';
-import mq from '../mediaQuery';
-
-import styled from '@emotion/styled';
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-
-import dao from '../assets/dao.svg';
-import discord from '../assets/discord.svg';
-import discordGrey from '../assets/discordGrey.svg';
-import discuss from '../assets/discuss.svg';
-import discussGrey from '../assets/discussGrey.svg';
-import governance from '../assets/governance.svg';
-import mirror from '../assets/mirror.svg';
-import tally from '../assets/tally.svg';
-import twitterGrey from '../assets/twitterGrey.svg';
 import Layout from '../components/Layout';
 import Navigation from '../components/Navigationv2';
 import mq from '../mediaQuery';
@@ -181,8 +166,7 @@ const standardBoxData = [
         color: '#00CBB5',
         backgroundColor: 'rgba(98, 244, 228, 0.2)',
         borderColor: '#62F4E4',
-        link:
-            'https://www.tally.xyz/governance/eip155:1:0x323A76393544d5ecca80cd6ef2A560C6a395b7E3',
+        link: 'https://www.tally.xyz/governance/eip155:1:0x323A76393544d5ecca80cd6ef2A560C6a395b7E3',
     },
 ];
 
@@ -233,11 +217,9 @@ const StandardBox = ({
     );
 };
 
-export default function Governance(props) {
-    const { t } = useTranslation();
-
+export default function Governance(properties) {
     return (
-        <Layout {...props}>
+        <Layout {...properties}>
             <Navigation />
             <Container>
                 <Content>

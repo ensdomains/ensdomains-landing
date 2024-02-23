@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
-import DefaultLogo from "./Logo"
-import x from "../assets/x.svg"
-import github from "../assets/github.svg"
-import blog from "../assets/blog.svg"
-
-import mq from "../mediaQuery"
+import blog from '../assets/blog.svg';
+import github from '../assets/github.svg';
+import x from '../assets/x.svg';
+import mq from '../mediaQuery';
+import DefaultLogo from './Logo';
 
 const Logo = styled(DefaultLogo)`
     margin-bottom: 20px;
@@ -31,22 +30,22 @@ const FooterContainer = styled('footer')`
 `;
 
 const social = [
-  {
-    img: x,
-    text: "X",
-    link: "https://x.com/ensdomains",
-  },
-  {
-    img: blog,
-    text: "Blog",
-    link: "https://blog.ens.domains",
-  },
-  {
-    img: github,
-    text: "GitHub",
-    link: "https://github.com/ensdomains",
-  },
-]
+    {
+        img: x,
+        text: 'X',
+        link: 'https://x.com/ensdomains',
+    },
+    {
+        img: blog,
+        text: 'Blog',
+        link: 'https://blog.ens.domains',
+    },
+    {
+        img: github,
+        text: 'GitHub',
+        link: 'https://github.com/ensdomains',
+    },
+];
 
 const ExternalLink = styled('a')`
     font-size: 28px;

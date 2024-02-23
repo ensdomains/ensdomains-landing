@@ -32,7 +32,7 @@ const Hero = styled('section')`
     }
 `;
 
-export default function AboutHero(properties) {
+export default function AboutHero() {
     const { t } = useTranslation();
 
     return (
