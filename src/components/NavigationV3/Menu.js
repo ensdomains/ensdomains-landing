@@ -111,7 +111,7 @@ export default function MainMenu() {
             <SocialSection>
                 <SocialIcon
                     Icon={SocialX}
-                    color="#FFFFFF"
+                    color="#000000"
                     href="https://x.com/ensdomains"
                 />
                 <SocialIcon
