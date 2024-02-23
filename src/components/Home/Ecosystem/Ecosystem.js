@@ -85,7 +85,7 @@ const GridItemContainer = styled('a')`
 
     h3 {
         font-family: Satoshi;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 20px;
         color: #5284ff;
         text-align: center;

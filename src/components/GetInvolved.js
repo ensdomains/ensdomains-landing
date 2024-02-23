@@ -98,14 +98,14 @@ const LinkItem = styled('div')`
     `};
     }
     h3 {
-        font-size: 34px;
+        font-size: 24px;
         font-weight: 700;
         color: white;
         grid-area: title;
         margin: 0;
 
         ${mq.medium`
-      font-size: 42px;
+      font-size: 32px;
     `};
     }
     a {

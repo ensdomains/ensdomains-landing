@@ -51,7 +51,7 @@ const ExternalLink = styled('a')`
     font-size: 28px;
     color: white;
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 500;
     margin-bottom: 20px;
     img {
         margin-right: 8px;
