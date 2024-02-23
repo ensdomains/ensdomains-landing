@@ -13,6 +13,12 @@ export default function Layout({ children, data, location }) {
                     data-domain="ens.domains, rollup.ens"
                     src="https://plausible.io/js/script.outbound-links.js"
                 ></script>
+                <script
+                    async=""
+                    defer=""
+                    data-domain="blog.ens.domains"
+                    src="https://ens.v3x.report/js/script.js"
+                ></script>
             </Helmet>
             <Global
                 styles={css`
