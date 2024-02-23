@@ -1,78 +1,85 @@
-import styled from "@emotion/styled"
+/* eslint-disable sonarjs/cognitive-complexity */
+import styled from '@emotion/styled';
 
 export function modulate(value, rangeA, rangeB, limit) {
-  let fromHigh, fromLow, result, toHigh, toLow
-  if (limit == null) {
-    limit = false
-  }
-  fromLow = rangeA[0]
-  fromHigh = rangeA[1]
-  toLow = rangeB[0]
-  toHigh = rangeB[1]
-  result = toLow + ((value - fromLow) / (fromHigh - fromLow)) * (toHigh - toLow)
-  if (limit === true) {
-    if (toLow < toHigh) {
-      if (result < toLow) {
-        return toLow
-      }
-      if (result > toHigh) {
-        return toHigh
-      }
-    } else {
-      if (result > toLow) {
-        return toLow
-      }
-      if (result < toHigh) {
-        return toHigh
-      }
+    if (limit == undefined) {
+        limit = false;
     }
-  }
-  return result
+
+    const [fromLow, fromHigh] = rangeA;
+    const [toLow, toHigh] = rangeB;
+    const result =
+        toLow + ((value - fromLow) / (fromHigh - fromLow)) * (toHigh - toLow);
+
+    if (limit === true) {
+        if (toLow < toHigh) {
+            if (result < toLow) {
+                return toLow;
+            }
+
+            if (result > toHigh) {
+                return toHigh;
+            }
+        } else {
+            if (result > toLow) {
+                return toLow;
+            }
+
+            if (result < toHigh) {
+                return toHigh;
+            }
+        }
+    }
+
+    return result;
 }
 
-export function isElementInViewport(el) {
-  var rect = el.getBoundingClientRect()
+export function isElementInViewport(element) {
+    const rect = element.getBoundingClientRect();
 
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight ||
-        document.documentElement.clientHeight) /*or $(window).height() */ &&
-    rect.right <=
-      (window.innerWidth ||
-        document.documentElement.clientWidth) /*or $(window).width() */
-  )
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+            (window.innerHeight ||
+                document.documentElement
+                    .clientHeight) /*or $(window).height() */ &&
+        rect.right <=
+            (window.innerWidth ||
+                document.documentElement.clientWidth) /*or $(window).width() */
+    );
 }
 
 export const importAll = (r, extraData = {}) =>
-  r.keys().map(item => {
-    let fileName = item.replace(/\.(png|jpe?g|svg)$/, "").replace("./", "")
-    let parsed = item
-      .replace(/\.(png|jpe?g|svg)$/, "")
-      .replace(/([A-Z])/g, " $1")
-      .replace("./", "")
-    let obj = {
-      fileName: fileName,
-      name: parsed,
-      src: r(item),
-    }
+    r.keys().map((item) => {
+        const fileName = item
+            .replace(/\.(png|jpe?g|svg)$/, '')
+            .replace('./', '');
+        const parsed = item
+            .replace(/\.(png|jpe?g|svg)$/, '')
+            .replace(/([A-Z])/g, ' $1')
+            .replace('./', '');
+        const object = {
+            fileName: fileName,
+            name: parsed,
+            src: r(item),
+        };
 
-    return {
-      ...obj,
-      ...extraData[parsed],
-    }
-  })
+        return {
+            ...object,
+            ...extraData[parsed],
+        };
+    });
 
-export const Gap = styled("div")`
-  width: 100%;
-  height: ${p => p.size * 4}px;
-`
+export const Gap = styled('div')`
+    width: 100%;
+    height: ${(p) => p.size * 4}px;
+`;
 
 export const loadIntegrations = async () => {
-  const res = await fetch(
-    `https://raw.githubusercontent.com/ensdomains/integrations/main/links.json`
-  )
+    const response = await fetch(
+        'https://raw.githubusercontent.com/ensdomains/integrations/main/links.json'
+    );
 
-  return await res.json()
-}
+    return await response.json();
+};

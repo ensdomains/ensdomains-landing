@@ -23,7 +23,7 @@
       <rect fill="url(#c)" transform="rotate(-90 138.5 89.2516)" x="127" y="86.7516" width="23" height="5" rx="2.5"/>
       <rect fill="url(#b)" x="15" y="96.7516" width="126" height="5" rx="2.5"/>
     </g>
-    <text font-family="Karma-Medium, Karma" font-size="22" font-weight="400" fill="#5162FF">
+    <text font-family="Satoshi" font-size="22" font-weight="400" fill="#5162FF">
       <tspan x="19.5" y="70">name.eth</tspan>
     </text>
   </g>

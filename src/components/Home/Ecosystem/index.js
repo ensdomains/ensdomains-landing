@@ -1,2 +1,1 @@
-import Ecosystem from "./Ecosystem"
-export default Ecosystem
+export { default } from './Ecosystem';
