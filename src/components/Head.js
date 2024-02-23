@@ -42,7 +42,29 @@ export const Head = ({ location, params: _, data: _2, pageContext: _3 }) => {
             <meta name="og:site_name" content="Ethereum Name Service" />
             <meta name="og:title" content="Ethereum Name Service" />
             <meta name="og:url" content="https://ens.domains" />
-            {/* <meta name="og:locale" content="en_US" /> */}
+            {[
+                'cn',
+                'de',
+                'en',
+                'es',
+                'fr',
+                'it',
+                'ja',
+                'ko',
+                'nl',
+                'pl',
+                'pt',
+                'ru',
+                'tr',
+                'vi',
+            ].map((lang) => (
+                <link
+                    key={lang}
+                    rel="alternate"
+                    hrefLang={lang}
+                    href={`https://ens.domains/${lang}/`}
+                />
+            ))}
             <title>{getTitle(location.pathname)}</title>
             <link rel="canonical" href="https://ens.domains" />
             <link rel="shortcut icon" type="image/x-icon" href={favicon} />
