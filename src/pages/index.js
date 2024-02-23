@@ -17,6 +17,8 @@ import TraditionalDomains from '../components/Home/TraditionalDomains/';
 import Layout from '../components/Layout';
 import Navigation from '../components/Navigation';
 
+export { Head } from '../components/Head';
+
 export default function Home(properties) {
     return (
         <Layout {...properties}>

@@ -24,6 +24,8 @@ const Content = styled.div(({ theme }) => [
     `),
 ]);
 
+export { Head } from '../components/Head';
+
 export default function Roadmap(properties) {
     return (
         <Layout {...properties}>

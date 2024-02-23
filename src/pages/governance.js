@@ -218,6 +218,8 @@ const StandardBox = ({
     );
 };
 
+export { Head } from '../components/Head';
+
 export default function Governance(properties) {
     const { t } = useTranslation();
 
