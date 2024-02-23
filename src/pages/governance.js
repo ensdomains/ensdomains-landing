@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/no-nested-template-literals */
 import 'normalize.css';
 import '../css/global.css';
 
@@ -14,7 +13,7 @@ import discussGrey from '../assets/discussGrey.svg';
 import governance from '../assets/governance.svg';
 import mirror from '../assets/mirror.svg';
 import tally from '../assets/tally.svg';
-import twitterGrey from '../assets/twitterGrey.svg';
+import xGrey from '../assets/xGrey.svg';
 import Layout from '../components/Layout';
 import Navigation from '../components/Navigationv2';
 import mq from '../mediaQuery';
@@ -218,11 +217,7 @@ const StandardBox = ({
     );
 };
 
-export { Head } from '../components/Head';
-
 export default function Governance(properties) {
-    const { t } = useTranslation();
-
     return (
         <Layout {...properties}>
             <Navigation />
@@ -235,12 +230,12 @@ export default function Governance(properties) {
                     </ContentInner>
                 </Content>
                 <Footer>
-                    <a href={'https://twitter.com/ensdomains'}>
+                    <a href={'https://x.com/ensdomains'}>
                         <img
-                            src={twitterGrey}
-                            width="34"
+                            src={xGrey}
+                            width="30"
                             css={{ marginTop: '2px' }}
-                            alt="Twitter"
+                            alt="X"
                         />
                     </a>
                     <a href={'https://discuss.ens.domains/'}>

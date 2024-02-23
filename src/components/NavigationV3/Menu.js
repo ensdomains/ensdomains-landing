@@ -9,7 +9,7 @@ import SocialDiscourseColour from '../../assets/social/SocialDiscourseColour.svg
 import SocialGithub from '../../assets/social/SocialGithub.svg';
 import SocialMirror from '../../assets/social/SocialMirror.svg';
 import SocialMirrorColour from '../../assets/social/SocialMirrorColour.svg';
-import SocialTwitter from '../../assets/social/SocialTwitter.svg';
+import SocialX from '../../assets/social/SocialX.svg';
 import SocialYoutube from '../../assets/social/SocialYoutube.svg';
 import SocialIcon from './SocialIcon';
 
@@ -110,9 +110,9 @@ export default function MainMenu() {
             </RoutesSection>
             <SocialSection>
                 <SocialIcon
-                    Icon={SocialTwitter}
-                    color="#5298FF"
-                    href="https://twitter.com/ensdomains"
+                    Icon={SocialX}
+                    color="#000000"
+                    href="https://x.com/ensdomains"
                 />
                 <SocialIcon
                     Icon={SocialGithub}

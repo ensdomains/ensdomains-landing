@@ -3,7 +3,7 @@ import React from 'react';
 
 import blog from '../assets/blog.svg';
 import github from '../assets/github.svg';
-import twitter from '../assets/twitter.svg';
+import x from '../assets/x.svg';
 import mq from '../mediaQuery';
 import DefaultLogo from './Logo';
 
@@ -31,9 +31,9 @@ const FooterContainer = styled('footer')`
 
 const social = [
     {
-        img: twitter,
-        text: 'Twitter',
-        link: 'https://twitter.com/ensdomains',
+        img: x,
+        text: 'X',
+        link: 'https://x.com/ensdomains',
     },
     {
         img: blog,
