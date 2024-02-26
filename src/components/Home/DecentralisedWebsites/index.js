@@ -1,2 +1,1 @@
-import DecentralisedWebsites from "./DecentralisedWebsites"
-export default DecentralisedWebsites
+export { default } from './DecentralisedWebsites';

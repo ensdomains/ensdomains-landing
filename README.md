@@ -1,6 +1,6 @@
 ## ENS Homepage V2
 
-The homepage for the ENS project, vist [here](https://ens.domains/).
+The homepage for the ENS project, visit [here](https://ens.domains/).
 
 ### Translations
 
@@ -12,7 +12,7 @@ Please copy the `en.translation.json` and add the translation to allow us to add
 
 If your app [integrates with ENS](https://docs.ens.domains/dapp-developer-guide/ens-enabling-your-dapp) and would like to have your logo into our website, please raise a PR following the instruction below.
 
-#### 1. Add your company detail to src/components/Home/links.json in the following format. Please place your company name in the alphabetical order.
+#### 1. Add your company detail to `src/components/Home/links.json` in the following format. Please place your company name in the alphabetical order.
 
 ```
  "productname": {
