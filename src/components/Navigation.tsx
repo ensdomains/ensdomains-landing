@@ -8,8 +8,12 @@ import LanguageSwitcher from './LanguageSwitcher';
 import Logo from './Logov2';
 import { Button } from './Typography';
 
+const ALink = styled(Link)`
+    text-decoration: none;
+    color: var(--ens-dark-blue);
+`;
+
 const Nav = styled('nav')`
-    background-image: linear-gradient(90deg, #513eff 0%, #52e5ff 100%);
     ${(p) =>
         p.menuOpen &&
         `
@@ -18,7 +22,7 @@ const Nav = styled('nav')`
     transition: 0.2s;
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 40px;
     position: sticky;
     z-index: 2147483639;
 
@@ -138,14 +142,8 @@ const Nav = styled('nav')`
 const Links = styled('div')`
     display: none;
     align-items: center;
-    max-width: 40vw;
     justify-content: flex-end;
-    a {
-        color: white;
-        text-decoration: none;
-        margin: 5px 20px 5px 0;
-    }
-
+    gap: 32px;
     ${mq.medium`
     display: flex;
     flex-wrap: wrap;
@@ -246,34 +244,34 @@ export default function Navigation() {
                 </div>
 
                 <Links>
-                    <a href="/governance">Governance</a>
-                    <a href="https://chat.ens.domains/">Community</a>
-                    <a href="https://docs.ens.domains/">Docs</a>
-                    <Link to="/roadmap">Roadmap</Link>
-                </Links>
-
-                <CTAContent>
-                    <Separator />
+                    <ALink to="/governance">{t('nav.governance')}</ALink>
+                    <ALink to="https://chat.ens.domains/">
+                        {t('nav.community')}
+                    </ALink>
+                    <ALink to="https://docs.ens.domains/">
+                        {t('nav.docs')}
+                    </ALink>
+                    <ALink to="/roadmap">{t('nav.roadmap')}</ALink>
                     <LanguageSwitcher />
                     <Launch href="https://app.ens.domains">
                         {t('nav.launch')}
                     </Launch>
-                </CTAContent>
+                </Links>
             </EndContent>
 
             <MobileLinks menuOpen={menuOpen}>
                 <LanguageSwitcher mobile={true} />
                 <li>
-                    <a href="/governance">Governance</a>
+                    <a href="/governance">{t('nav.governance')}</a>
                 </li>
                 <li>
-                    <a href="https://chat.ens.domains/">Community</a>
+                    <a href="https://chat.ens.domains/">{t('nav.community')}</a>
                 </li>
                 <li>
-                    <a href="https://docs.ens.domains/">Docs</a>
+                    <a href="https://docs.ens.domains/">{t('nav.docs')}</a>
                 </li>
                 <li>
-                    <Link to="/roadmap">Roadmap</Link>
+                    <Link to="/roadmap">{t('nav.roadmap')}</Link>
                 </li>
                 <li>
                     <Launch href="https://app.ens.domains">

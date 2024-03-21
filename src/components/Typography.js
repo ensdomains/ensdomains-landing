@@ -31,16 +31,13 @@ export const P = styled('p')`
 
 export const Button = styled('a')`
     background: #5284ff;
-    box-shadow: 0 10px 21px 0 rgba(38, 61, 145, 0.26);
-    border-radius: 23px;
-    font-family: Satoshi;
-    font-weight: 500;
-    font-size: 14px;
+    border-radius: 4px;
+    font-family: monospace;
     color: #ffffff;
-    letter-spacing: 0.5px;
     text-align: center;
     padding: 13px 30px;
     text-decoration: none;
+    background-color: var(--ens-blue);
 `;
 
 export const ButtonSecondary = styled('a')`

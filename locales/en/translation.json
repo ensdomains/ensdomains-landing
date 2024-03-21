@@ -4,11 +4,15 @@
   },
   "nav": {
     "blog": "Blog",
-    "launch": "Go to app"
+    "launch": "Launch App",
+    "governance": "Governance",
+    "community": "Community",
+    "docs": "Docs",
+    "roadmap": "Roadmap"
   },
   "home": {
     "hero": {
-      "title": "Welcome to the New Internet"
+      "title": "Welcome to your New Internet"
     },
     "carousel": {
       "search": "Search",

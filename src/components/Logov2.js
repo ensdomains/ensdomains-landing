@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
-import logo from '../assets/logo.svg';
+import logo from '../assets/_/ens_logo_text_dark.svg';
 
 const LogoContainer = styled('div')`
     .ens-logo {

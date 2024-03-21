@@ -65,13 +65,15 @@ const LANGUAGES = [
 ];
 
 const ActiveLanguage = styled('div')`
-    color: white;
+    color: var(--ens-blue);
     text-transform: uppercase;
     display: flex;
     justify-content: center;
     height: 100%;
-    padding: 0 20px;
+    padding: 6px 12px;
     align-items: center;
+    background: var(--ens-light-blue);
+    border-radius: 6px;
 
     ${(properties) =>
         properties.mobile
