@@ -8,12 +8,20 @@ const LogoContainer = styled('div')`
         width: 104px;
         margin-right: 10px;
     }
+
+    .ens-logo--dark {
+        filter: invert(1);
+    }
 `;
 
-export default function Logo({ className }) {
+export default function Logo({ className, style }) {
     return (
         <LogoContainer className={className}>
-            <img src={logo} alt="ENS Logo" className="ens-logo" />
+            <img
+                src={logo}
+                alt="ENS Logo"
+                className={`ens-logo ens-logo--${style}`}
+            />
         </LogoContainer>
     );
 }

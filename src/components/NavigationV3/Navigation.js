@@ -28,11 +28,12 @@ const NavRight = styled.div(
     `
 );
 
-export default function Navigation() {
+// `logoStyle` should be 'dark' or undefined
+export default function Navigation({ logoStyle }) {
     return (
         <Nav>
             <Link to="/">
-                <Logo />
+                <Logo style={logoStyle} />
             </Link>
             <NavRight>
                 <Typography fontVariant="bodyBold" color="grey">
