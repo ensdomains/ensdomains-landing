@@ -4,15 +4,12 @@
     "description": "ENS Domains homepage v2",
     "version": "0.2.0",
     "license": "MIT",
+    "type": "module",
     "scripts": {
-        "build": "gatsby build",
-        "dev": "gatsby develop",
+        "build": "next build",
+        "dev": "next",
         "develop": "pnpm run dev",
         "start": "pnpm run dev",
-        "serve": "gatsby serve",
-        "clean": "gatsby clean",
-        "i18n": "npx i18next-locales-sync -p en -s cn de es fr it ja ko nl pl pt ru vi -l ./locales/",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
         "lint": "eslint -c .eslintrc.json --ext .js ./src"
     },
     "dependencies": {
@@ -31,6 +28,7 @@
         "gatsby-plugin-styled-components": "^6.13.1",
         "gh-pages": "^3.2.3",
         "i18next": "^19.9.2",
+        "next": "^14.1.4",
         "normalize.css": "^8.0.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
