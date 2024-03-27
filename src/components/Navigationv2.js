@@ -145,7 +145,8 @@ const NavLink = styled('a')`
     ${(p) => p.active && 'color: #4D90F1; opacity: 1;'}
 `;
 
-export default function Navigation() {
+// `logoStyle` should be 'dark' or undefined
+export default function Navigation({ logoStyle }) {
     const { t } = useTranslation();
     // const location = useLocation();
     // const pathname = location.pathname;
@@ -154,7 +155,7 @@ export default function Navigation() {
     return (
         <Nav menuOpen={menuOpen}>
             <Link to="/">
-                <Logo />
+                <Logo style={logoStyle} />
             </Link>
 
             <div className="mobile-nav">

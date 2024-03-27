@@ -32,7 +32,7 @@ export default function Roadmap(properties) {
             <BreakpointProvider>
                 <ThemeProvider theme={lightTheme}>
                     <ThorinGlobalStyles />
-                    <Navigation logoStyle="dark" />
+                    <Navigation logoStyle="blue" />
                     <Content>
                         <RoadmapHeader />
                         <RoadmapList />

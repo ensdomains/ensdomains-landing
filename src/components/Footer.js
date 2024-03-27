@@ -2,16 +2,18 @@ import styled from '@emotion/styled';
 import React from 'react';
 
 import blog from '../assets/blog.svg';
+import { ENSLogo } from '../assets/ENSLogo';
 import github from '../assets/github.svg';
 import x from '../assets/x.svg';
 import mq from '../mediaQuery';
-import DefaultLogo from './Logo';
 
-const Logo = styled(DefaultLogo)`
+const LogoWrapper = styled.div`
+    height: 48px;
     margin-bottom: 20px;
+
     ${mq.medium`
-    margin-bottom: 0;
-  `};
+        margin-bottom: 0;
+    `};
 `;
 
 const FooterContainer = styled('footer')`
@@ -100,7 +102,9 @@ const FooterColumn = styled.div`
 export default function Footer(properties) {
     return (
         <FooterContainer>
-            <Logo />
+            <LogoWrapper>
+                <ENSLogo />
+            </LogoWrapper>
             <SocialContainer>
                 {social.map((s) => (
                     <ExternalLink href={s.link} key={s.link}>

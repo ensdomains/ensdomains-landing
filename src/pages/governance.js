@@ -219,8 +219,8 @@ const StandardBox = ({
 
 export default function Governance(properties) {
     return (
-        <Layout {...properties}>
-            <Navigation />
+        <Layout {...properties} paddingTop={0}>
+            <Navigation logoStyle="blue" />
             <Container>
                 <Content>
                     <ContentInner>
