@@ -58,7 +58,6 @@ const Links = styled('div')`
 
 const MobileLinks = styled('ul')`
     background: #f6f7fa;
-    font-family: JakartaSans;
     font-size: 22px;
     color: #717171;
     text-align: center;
@@ -107,7 +106,6 @@ const MobileLinks = styled('ul')`
 
 const Launch = styled(Button)`
     padding: 13px 30px !important;
-    font-family: JakartaSans;
 `;
 
 const Separator = styled('div')`
@@ -120,7 +118,6 @@ const Separator = styled('div')`
 `;
 
 const NavLink = styled('a')`
-    font-family: 'JakartaSans';
     text-decoration: none;
     margin-right: 20px;
 

@@ -152,7 +152,6 @@ const Dropdown = styled(motion.div)`
   `
             : `
     a {
-      font-family: JakartaSans;
       text-decoration: none;
       font-style: normal;
       font-weight: bold;
@@ -199,7 +198,6 @@ const Ball = styled('div')`
 `;
 
 const LanguageLabel = styled('span')`
-    font-family: JakartaSans;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;

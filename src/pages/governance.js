@@ -22,7 +22,6 @@ const Container = styled('div')`
     display: flex;
     flex-direction: column;
     height: calc(100% - 120px);
-    font-family: JakartaSans;
 `;
 
 const Content = styled('div')`
