@@ -66,7 +66,6 @@ export const Buttonv2 = styled('a')`
     );
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.04);
     border-radius: 12px;
-    font-family: 'JakartaSans';
     font-style: normal;
     font-weight: bold;
     font-size: 17px;

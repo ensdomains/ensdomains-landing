@@ -28,11 +28,11 @@ export { Head } from '../components/Head';
 
 export default function Roadmap(properties) {
     return (
-        <Layout {...properties}>
+        <Layout {...properties} paddingTop={0}>
             <BreakpointProvider>
                 <ThemeProvider theme={lightTheme}>
                     <ThorinGlobalStyles />
-                    <Navigation />
+                    <Navigation logoStyle="blue" />
                     <Content>
                         <RoadmapHeader />
                         <RoadmapList />

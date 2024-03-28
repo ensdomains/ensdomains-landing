@@ -22,7 +22,6 @@ const Container = styled('div')`
     display: flex;
     flex-direction: column;
     height: calc(100% - 120px);
-    font-family: JakartaSans;
 `;
 
 const Content = styled('div')`
@@ -219,8 +218,8 @@ const StandardBox = ({
 
 export default function Governance(properties) {
     return (
-        <Layout {...properties}>
-            <Navigation />
+        <Layout {...properties} paddingTop={0}>
+            <Navigation logoStyle="blue" />
             <Container>
                 <Content>
                     <ContentInner>

@@ -3,9 +3,9 @@ import { css, Global } from '@emotion/core';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-export default function Layout({ children, data: _, location }) {
+export default function Layout({ children, data: _, location, paddingTop }) {
     return (
-        <div style={{ paddingTop: 110 }}>
+        <div style={{ paddingTop: paddingTop ?? 110 }}>
             <Helmet>
                 <script
                     async=""
