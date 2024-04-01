@@ -1,5 +1,4 @@
 /* eslint-disable sonarjs/cognitive-complexity */
-import styled from '@emotion/styled';
 
 export function modulate(value, rangeA, rangeB, limit) {
     if (limit == undefined) {
@@ -71,10 +70,7 @@ export const importAll = (r, extraData = {}) =>
         };
     });
 
-export const Gap = styled('div')`
-    width: 100%;
-    height: ${(p) => p.size * 4}px;
-`;
+
 
 export const loadIntegrations = async () => {
     const response = await fetch(
