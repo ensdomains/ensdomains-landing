@@ -2,5 +2,9 @@
     "i18n-ally.localesPaths": [
         "locales"
     ],
-    "i18n-ally.keystyle": "nested"
+    "i18n-ally.keystyle": "nested",
+    // "eslint.experimental.useFlatConfig": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    }
 }
