@@ -1,5 +1,7 @@
 import { AppProps } from 'next/app'
-import {Head} from '../src/_/components/Head'
+import { Head } from '../components/Head'
+import 'normalize.css'
+import { appWithTranslation } from 'next-i18next'
 
 const App = ({ pageProps, Component }: AppProps) => {
   return (
@@ -10,4 +12,4 @@ const App = ({ pageProps, Component }: AppProps) => {
   )
 }
 
-export default App
+export default appWithTranslation(App)

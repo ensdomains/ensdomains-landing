@@ -1,6 +1,5 @@
 import React from 'react'
 import NextHead from 'next/head'
-import favicon from '../assets/favicon.ico'
 
 function getTitle(pathname: string) {
   switch (pathname) {
@@ -43,9 +42,9 @@ export const Head = ({ location }: { location?: string }) => {
       <meta name="og:title" content="Ethereum Name Service" />
       <meta name="og:url" content="https://ens.domains" />
       {/* <meta name="og:locale" content="en_US" /> */}
-      <title>{getTitle(location.pathname)}</title>
+      <title>{getTitle(location)}</title>
       <link rel="canonical" href="https://ens.domains" />
-      <link rel="shortcut icon" type="image/x-icon" href={favicon.src} />
+      <link rel="shortcut icon" type="image/x-icon" href="/legacy_assets/favicon.ico" />
     </NextHead>
   )
 }

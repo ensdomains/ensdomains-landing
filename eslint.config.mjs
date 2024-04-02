@@ -14,7 +14,7 @@ const files = ['src/**/*.ts', 'src/**/*.tsx', 'eslint.config.js']
  * @type {import('eslint').Linter.Config[]}
  */
 export default [
-  stylistic.configs['recommended-flat'],
+  { files, ...stylistic.configs['recommended-flat'] },
   {
     files,
     languageOptions: {

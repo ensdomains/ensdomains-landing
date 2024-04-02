@@ -4,25 +4,25 @@
     "description": "ENS Domains homepage v2",
     "version": "0.2.0",
     "license": "MIT",
-    "type": "module",
     "scripts": {
         "build": "next build",
         "dev": "next",
         "develop": "pnpm run dev",
         "start": "pnpm run dev",
-        "lint": "eslint --config eslint.config.js src"
+        "lint": "eslint --config eslint.config.mjs src"
     },
     "dependencies": {
         "@ensdomains/thorin": "0.2.0",
         "@ensdomains/thorin_next": "npm:@ensdomains/thorin@^0.6.44",
         "framer-motion": "^11.0.24",
         "gh-pages": "^3.2.3",
-        "i18next": "^19.9.2",
+        "i18next": "^23.10.1",
         "next": "^14.1.4",
+        "next-i18next": "^15.2.0",
         "normalize.css": "^8.0.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-i18next": "^11.18.6",
+        "react-i18next": "^14.1.0",
         "react-intersection-observer": "^8.34.0",
         "react-is": "16.12.0",
         "react-markdown": "^8.0.7",
@@ -37,7 +37,7 @@
         "@typescript-eslint/parser": "^5.62.0",
         "eslint": "^8.57.0",
         "eslint-plugin-v3xlabs": "^1.6.5",
-        "i18next-locales-sync": "^1.2.1",
+        "i18next-locales-sync": "^2.0.1",
         "postcss-custom-media": "^10.0.4",
         "stylelint": "^16.3.1",
         "typescript": "^5.3.3"
