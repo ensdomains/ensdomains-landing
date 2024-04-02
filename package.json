@@ -9,7 +9,7 @@
         "dev": "next",
         "develop": "pnpm run dev",
         "start": "pnpm run dev",
-        "lint": "eslint --config eslint.config.mjs src"
+        "lint": "eslint ./src --ext .ts,.tsx"
     },
     "dependencies": {
         "@ensdomains/thorin": "0.2.0",
@@ -27,7 +27,8 @@
         "react-is": "16.12.0",
         "react-markdown": "^8.0.7",
         "react-responsive-carousel": "^3.2.23",
-        "react-transition-state": "^1.1.5"
+        "react-transition-state": "^1.1.5",
+        "typescript": "^5.4.3"
     },
     "devDependencies": {
         "@stylistic/eslint-plugin": "^1.7.0",
@@ -39,8 +40,7 @@
         "eslint-plugin-v3xlabs": "^1.6.5",
         "i18next-locales-sync": "^2.0.1",
         "postcss-custom-media": "^10.0.4",
-        "stylelint": "^16.3.1",
-        "typescript": "^5.3.3"
+        "stylelint": "^16.3.1"
     },
     "repository": {
         "type": "git",

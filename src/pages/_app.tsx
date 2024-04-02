@@ -1,15 +1,17 @@
-import { AppProps } from 'next/app'
-import { Head } from '../components/Head'
-import 'normalize.css'
-import { appWithTranslation } from 'next-i18next'
+import 'normalize.css';
+
+import { AppProps } from 'next/app';
+import { appWithTranslation } from 'next-i18next';
+
+import { Head } from '../components/Head';
 
 const App = ({ pageProps, Component }: AppProps) => {
-  return (
-    <>
-      <Head />
-      <Component {...pageProps} />
-    </>
-  )
-}
+    return (
+        <>
+            <Head />
+            <Component {...pageProps} />
+        </>
+    );
+};
 
-export default appWithTranslation(App)
+export default appWithTranslation(App);
