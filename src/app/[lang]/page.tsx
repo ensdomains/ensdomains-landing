@@ -7,7 +7,6 @@ import { useTranslation } from '../../useTranslation';
 
 export default async function Home({
     params,
-    searchParams,
 }: {
     params: { lang: Language };
     searchParams: any;
@@ -30,6 +29,4 @@ export default async function Home({
     );
 }
 
-export const generateStaticParams = async () => {
-    return [{ lang: 'nl' }, { lang: 'en' }, { lang: 'fr' }, { lang: 'de' }];
-};
+export { generateStaticParams } from '../../utils/getStatic';

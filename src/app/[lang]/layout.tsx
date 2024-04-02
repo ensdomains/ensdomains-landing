@@ -1,5 +1,3 @@
-import 'normalize.css';
-
 import { dir } from 'i18next';
 
 import { Language } from '../../settings';

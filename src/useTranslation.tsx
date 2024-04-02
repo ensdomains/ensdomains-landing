@@ -2,9 +2,9 @@ import { createInstance } from 'i18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
 import { initReactI18next } from 'react-i18next/initReactI18next';
 
-import { getOptions } from './settings';
+import { getOptions, Language } from './settings';
 
-const initI18next = async (lng, ns) => {
+const initI18next = async (lng: Language, ns: string | string[]) => {
     const i18nInstance = createInstance();
 
     await i18nInstance
@@ -12,7 +12,7 @@ const initI18next = async (lng, ns) => {
         .use(
             resourcesToBackend(
                 (language, namespace) =>
-                    import(`../public/locales/${language}/${namespace}.json`)
+                    import(`../locales/${language}/${namespace}.json`)
             )
         )
         .init(getOptions(lng, ns));
@@ -20,14 +20,17 @@ const initI18next = async (lng, ns) => {
     return i18nInstance;
 };
 
-export async function useTranslation(lng, ns, options = {}) {
+export async function useTranslation(
+    lng: Language,
+    ns: string | string[],
+    options: { keyPrefix?: string } = {}
+) {
     const i18nextInstance = await initI18next(lng, ns);
 
     return {
         t: i18nextInstance.getFixedT(
             lng,
             Array.isArray(ns) ? ns[0] : ns,
-            // @ts-ignore
             options.keyPrefix
         ),
         i18n: i18nextInstance,
