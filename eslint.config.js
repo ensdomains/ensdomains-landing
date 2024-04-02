@@ -36,7 +36,7 @@ export default [
       ...ts.configs['eslint-recommended'].rules,
       ...ts.configs['recommended'].rules,
       'no-var': 'error',
-      '@stylistic/max-len': ['error', { code: 100 }],
+      '@stylistic/max-len': ['error', { code: 120 }],
     },
   },
 ]

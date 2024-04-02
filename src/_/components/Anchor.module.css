@@ -1,0 +1,17 @@
+.path {
+  transition: 0.2s;
+  fill:  attr(data-color ,#C7D3E3);
+  width: attr(data-px px);
+}
+
+.svg g {
+  fill:  attr(data-color ,#C7D3E3);
+}
+
+.svg {
+  transform: scale(attr(data-scale, 1));
+}
+
+.anchor {
+  text-decoration: none;
+}
