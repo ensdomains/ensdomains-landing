@@ -1,7 +1,5 @@
-/* eslint-disable sonarjs/no-nested-template-literals */
 import { useTranslation } from 'react-i18next'
 
-import mq from '../../mediaQuery'
 import styles from './AboutHero.module.css'
 
 export default function AboutHero() {
@@ -10,40 +8,6 @@ export default function AboutHero() {
   return (
     <section className={styles.section}>
       <p>{t('about.hero')}</p>
-      <style jsx>
-        {`
-                    section {
-                        background-image: linear-gradient(
-                            90deg,
-                            #513eff 0%,
-                            #52e5ff 100%
-                        );
-                        padding: 40px 20px;
-                        display: flex;
-                        justify-content: center;
-
-                        ${mq.medium`
-                            padding: 120px 20px;
-                        `}
-                    }
-
-                    p {
-                        font-family: Satoshi;
-                        font-weight: 200;
-                        font-size: 28px;
-
-                        color: #ffffff;
-                        letter-spacing: 0;
-                        text-align: center;
-                        line-height: 1.3em;
-                        margin: 0;
-                        max-width: 880px;
-                        ${mq.medium`
-                            font-size: 56px;
-                        `}
-                    }
-                `}
-      </style>
     </section>
   )
 }

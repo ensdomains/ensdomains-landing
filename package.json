@@ -37,6 +37,7 @@
     },
     "devDependencies": {
         "@stylistic/eslint-plugin": "^1.7.0",
+        "@stylistic/stylelint-plugin": "^2.1.1",
         "@types/react": "^18.2.73",
         "@types/react-helmet": "^6.1.11",
         "@typescript-eslint/parser": "^5.62.0",
@@ -44,6 +45,8 @@
         "eslint-plugin-v3xlabs": "^1.6.5",
         "gatsby-plugin-pnpm": "^1.2.10",
         "i18next-locales-sync": "^1.2.1",
+        "postcss-custom-media": "^10.0.4",
+        "stylelint": "^16.3.1",
         "typescript": "^5.3.3"
     },
     "repository": {

@@ -1,0 +1,82 @@
+.description {
+  display: flex;
+  justify-content: center;
+  padding: 120px 20px;
+  background: white;
+}
+
+.descriptionInner {
+  background: white;
+  display: grid;
+  max-width: 1000px;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+.descriptionInner p {
+  font-family: Satoshi;
+  font-weight: 200;
+  font-size: 18px;
+  color: #2b2b2b;
+  line-height: 38px;
+  margin: 0;
+}
+.descriptionInner h2 {
+  font-weight: 200;
+  font-size: 24px;
+  color: #2b2b2b;
+  line-height: 56px;
+  margin: 0;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px 20px;
+}
+.member {
+  display: flex;
+  flex-direction: column;
+}
+.member dd {
+  margin: 0;
+  font-weight: 200;
+  font-size: 18px;
+  color: #2b2b2b;
+  line-height: 42px;
+  text-align: center;
+}
+.member dt {
+  font-weight: 200;
+  font-size: 34px;
+  color: #2b2b2b;
+  line-height: 42px;
+  text-align: center;
+}
+
+@media (--small) {
+  .members {
+    grid-template-columns: 1fr 1fr;
+  }
+  .member dd {
+    font-size: 24px;
+    text-align: left;
+  }
+  .member dt {
+
+    font-size: 44px;
+    text-align: left;
+  }
+}
+
+@media (--medium) {
+  .descriptionInner {
+    grid-template-columns: 1fr 2.7fr;
+    grid-gap: 50px;
+  }
+  .descriptionInner p {
+    font-size: 28px;
+  }
+  .descriptionInner h2 {
+    font-size: 42px;
+  }
+}

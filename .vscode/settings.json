@@ -3,6 +3,8 @@
         "locales"
     ],
     "i18n-ally.keystyle": "nested",
-    "editor.formatOnSave": true,
-    "eslint.experimental.useFlatConfig": true
+    "eslint.experimental.useFlatConfig": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    }
 }
