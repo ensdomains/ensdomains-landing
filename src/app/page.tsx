@@ -1,7 +1,8 @@
+import { useTranslation } from '../useTranslation';
+
 /* eslint-disable unicorn/prevent-abbreviations */
-export default function Home() {
-    // const { t } = useTranslation('translation');
-    const t = (_s) => 'hiz';
+export default async function Home() {
+    const { t } = await useTranslation('en', 'translation');
 
     return (
         <div>
