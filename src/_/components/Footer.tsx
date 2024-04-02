@@ -3,7 +3,6 @@ import React from 'react'
 import blog from '../assets/blog.svg'
 import github from '../assets/github.svg'
 import x from '../assets/x.svg'
-import Logo from './Logo'
 import styles from './Footer.module.css'
 
 const social = [
@@ -27,7 +26,6 @@ const social = [
 export default function Footer() {
   return (
     <footer className={styles.footerContainer}>
-      <Logo className={styles.logo} />
       <div>
         {social.map(s => (
           <a href={s.link} key={s.link}>

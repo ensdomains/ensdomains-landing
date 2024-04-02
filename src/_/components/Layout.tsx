@@ -1,10 +1,10 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
+import Head from 'next/head'
+import { ReactNode } from 'react'
 
-export default function Layout({ children, data: _, location }) {
+export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div>
-      <Helmet>
+      <Head>
         <script
           async
           defer
@@ -19,7 +19,7 @@ export default function Layout({ children, data: _, location }) {
           src="https://ens.v3x.report/js/script.js"
         >
         </script>
-      </Helmet>
+      </Head>
       {children}
     </div>
   )
