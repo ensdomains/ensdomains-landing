@@ -1,68 +1,68 @@
-import styled from '@emotion/styled';
-import { AnimatePresence, motion } from 'framer-motion';
-import { I18nextContext, Link, useI18next } from 'gatsby-plugin-react-i18next';
-import React, { useState } from 'react';
+import styled from '@emotion/styled'
+import { AnimatePresence, motion } from 'framer-motion'
+import { I18nextContext, Link, useI18next } from 'gatsby-plugin-react-i18next'
+import React, { useState } from 'react'
 
-import RotatingSmallCaret from './Icons/RotatingSmallCaret';
+import RotatingSmallCaret from './Icons/RotatingSmallCaret'
 
 const LANGUAGES = [
-    {
-        value: 'en',
-        label: 'English (EN)',
-    },
-    {
-        value: 'cn',
-        label: '简体中文 (CN)',
-    },
-    {
-        value: 'ja',
-        label: '日本語 (JA)',
-    },
-    {
-        value: 'de',
-        label: 'Deutsch (DE)',
-    },
-    {
-        value: 'es',
-        label: 'Español (ES)',
-    },
-    {
-        value: 'fr',
-        label: 'Français (FR)',
-    },
-    {
-        value: 'ko',
-        label: '한국어 (KO)',
-    },
-    {
-        value: 'it',
-        label: 'Italiano (IT)',
-    },
-    {
-        value: 'nl',
-        label: 'Nederlands (NL)',
-    },
-    {
-        value: 'pl',
-        label: 'Polski (PL)',
-    },
-    {
-        value: 'pt',
-        label: 'Português (PT)',
-    },
-    {
-        value: 'ru',
-        label: 'Pусский (RU)',
-    },
-    {
-        value: 'vi',
-        label: 'Tiếng Việt (VI)',
-    },
-    {
-        value: 'tr',
-        label: 'Türkçe (TR)',
-    },
-];
+  {
+    value: 'en',
+    label: 'English (EN)',
+  },
+  {
+    value: 'cn',
+    label: '简体中文 (CN)',
+  },
+  {
+    value: 'ja',
+    label: '日本語 (JA)',
+  },
+  {
+    value: 'de',
+    label: 'Deutsch (DE)',
+  },
+  {
+    value: 'es',
+    label: 'Español (ES)',
+  },
+  {
+    value: 'fr',
+    label: 'Français (FR)',
+  },
+  {
+    value: 'ko',
+    label: '한국어 (KO)',
+  },
+  {
+    value: 'it',
+    label: 'Italiano (IT)',
+  },
+  {
+    value: 'nl',
+    label: 'Nederlands (NL)',
+  },
+  {
+    value: 'pl',
+    label: 'Polski (PL)',
+  },
+  {
+    value: 'pt',
+    label: 'Português (PT)',
+  },
+  {
+    value: 'ru',
+    label: 'Pусский (RU)',
+  },
+  {
+    value: 'vi',
+    label: 'Tiếng Việt (VI)',
+  },
+  {
+    value: 'tr',
+    label: 'Türkçe (TR)',
+  },
+]
 
 const ActiveLanguage = styled('div')`
     color: var(--ens-blue);
@@ -75,7 +75,7 @@ const ActiveLanguage = styled('div')`
     background: var(--ens-light-blue);
     border-radius: 6px;
 
-    ${(properties) =>
+    ${properties =>
         properties.mobile
             ? `
       font-size: 14px;
@@ -91,20 +91,20 @@ const ActiveLanguage = styled('div')`
     &:hover {
         cursor: pointer;
     }
-`;
+`
 
 const LanguageSwitcherContainer = styled('div')`
     position: relative;
-    ${(properties) =>
+    ${properties =>
         properties.mobile
             ? `
     width: 100%;
   `
             : ''}
-`;
+`
 
 const Dropdown = styled(motion.div)`
-    ${(properties) =>
+    ${properties =>
         properties.mobile
             ? `
         position: relative; 
@@ -120,7 +120,7 @@ const Dropdown = styled(motion.div)`
         width: 230px;
       `}
 
-    ${(properties) =>
+    ${properties =>
         properties.mobile
             ? `
 
@@ -162,7 +162,7 @@ const Dropdown = styled(motion.div)`
       }
     }
   `}
-`;
+`
 
 const Ball = styled('div')`
     border-radius: 50%;
@@ -170,72 +170,72 @@ const Ball = styled('div')`
     width: 10px;
     height: 10px;
     box-shadow: 0 0 0 3px white, 0 0 0 4px #5284ff;
-    ${(p) =>
-        p.selected &&
-        `
+    ${p =>
+        p.selected
+        && `
     background: #5284ff;
   `}
-`;
+`
 
 export default function LanguageSwitcher({ mobile }) {
-    const context = React.useContext(I18nextContext);
-    const lang = context.language ? context.language : context.defaultLanguage;
-    const [showDropdown, setShowDropdown] = useState(false);
-    const { originalPath } = useI18next();
-    const selectedLanguage = LANGUAGES.find((l) => l.value === lang);
+  const context = React.useContext(I18nextContext)
+  const lang = context.language ? context.language : context.defaultLanguage
+  const [showDropdown, setShowDropdown] = useState(false)
+  const { originalPath } = useI18next()
+  const selectedLanguage = LANGUAGES.find(l => l.value === lang)
 
-    return (
-        <LanguageSwitcherContainer mobile={mobile}>
-            <ActiveLanguage
-                mobile={mobile}
-                onClick={() => setShowDropdown((show) => !show)}
-            >
-                <span>
-                    {mobile ? selectedLanguage.label : selectedLanguage.value}
-                </span>
-                <RotatingSmallCaret
-                    start="top"
-                    rotated={showDropdown}
-                    highlight={true}
-                />
-            </ActiveLanguage>
-            {showDropdown && (
-                <AnimatePresence>
-                    <Dropdown
-                        mobile={mobile}
-                        initial={{
-                            opacity: 0,
-                            height: 0,
-                            overflowY: 'hidden',
-                            maxHeight: '60vh',
-                        }}
-                        animate={{
-                            opacity: 1,
-                            height: 'auto',
-                            overflowY: 'auto',
-                        }}
-                        exit={{ opacity: 0, height: 0 }}
-                    >
-                        {LANGUAGES.map((language) => {
-                            return (
-                                <Link
-                                    to={originalPath}
-                                    language={language.value}
-                                    key={language.value}
-                                >
-                                    <span>{language.label}</span>
-                                    <Ball
-                                        selected={
-                                            selectedLanguage.value ===
-                                            language.value
+  return (
+    <LanguageSwitcherContainer mobile={mobile}>
+      <ActiveLanguage
+        mobile={mobile}
+        onClick={() => setShowDropdown(show => !show)}
+      >
+        <span>
+          {mobile ? selectedLanguage.label : selectedLanguage.value}
+        </span>
+        <RotatingSmallCaret
+          start="top"
+          rotated={showDropdown}
+          highlight={true}
+        />
+      </ActiveLanguage>
+      {showDropdown && (
+        <AnimatePresence>
+          <Dropdown
+            mobile={mobile}
+            initial={{
+              opacity: 0,
+              height: 0,
+              overflowY: 'hidden',
+              maxHeight: '60vh',
+            }}
+            animate={{
+              opacity: 1,
+              height: 'auto',
+              overflowY: 'auto',
+            }}
+            exit={{ opacity: 0, height: 0 }}
+          >
+            {LANGUAGES.map((language) => {
+              return (
+                <Link
+                  to={originalPath}
+                  language={language.value}
+                  key={language.value}
+                >
+                  <span>{language.label}</span>
+                  <Ball
+                      selected={
+                                            selectedLanguage.value
+                                            === language.value
                                         }
-                                    />
-                                </Link>
-                            );
-                        })}
-                    </Dropdown>
-                </AnimatePresence>
-            )}
-        </LanguageSwitcherContainer>
-    );
+                    />
+                </Link>
+              )
+            })}
+          </Dropdown>
+        </AnimatePresence>
+      )}
+    </LanguageSwitcherContainer>
+  )
 }

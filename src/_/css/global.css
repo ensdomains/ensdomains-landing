@@ -1,5 +1,5 @@
 body {
-    margin: 0px;
+    margin: 0;
     background: #F6F6F6;
     font-family: "Satoshi", sans-serif;
     font-feature-settings: "ss01" on, "ss03" on;
@@ -22,6 +22,7 @@ p {
 }
 
 :root {
+    /* Colors */
     --ens-blue: #0080BC;
     --ens-light-blue: #CEE1E8;
     --ens-medium-blue: #093C52;
@@ -38,6 +39,9 @@ p {
     --ens-gray-2: #E5E5E5;
     --ens-gray-1: #F6F6F6;
     --ens-white: #F6F6F6;
+
+    /* Breakpoints */
+    
 }
 
 h2 {

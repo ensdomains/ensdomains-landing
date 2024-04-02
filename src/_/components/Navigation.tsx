@@ -1,22 +1,22 @@
-import styled from '@emotion/styled';
-import { Link } from 'gatsby';
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import styled from '@emotion/styled'
+import { Link } from 'gatsby'
+import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
-import mq from '../mediaQuery';
-import LanguageSwitcher from './LanguageSwitcher';
-import Logo from './Logov2';
-import { Button } from './Typography';
+import mq from '../mediaQuery'
+import LanguageSwitcher from './LanguageSwitcher'
+import Logo from './Logov2'
+import { Button } from './Typography'
 
 const ALink = styled(Link)`
     text-decoration: none;
     color: var(--ens-dark-blue);
-`;
+`
 
 const Nav = styled('nav')`
-    ${(p) =>
-        p.menuOpen &&
-        `
+    ${p =>
+        p.menuOpen
+        && `
     background: #121d46;
   `};
     transition: 0.2s;
@@ -137,7 +137,7 @@ const Nav = styled('nav')`
     .hamburger--collapse-r.is-active .hamburger-inner::before {
         background: #fff;
     }
-`;
+`
 
 const Links = styled('div')`
     display: none;
@@ -152,7 +152,7 @@ const Links = styled('div')`
     ${mq.large`
     flex-wrap: nowrap;
   `}
-`;
+`
 
 const CTAContent = styled('div')`
     display: none;
@@ -161,13 +161,13 @@ const CTAContent = styled('div')`
     ${mq.medium`
     display: flex;
   `}
-`;
+`
 
 const EndContent = styled('div')`
     display: flex;
     align-items: center;
     justify-content: flex-end;
-`;
+`
 
 const MobileLinks = styled('ul')`
     background: #121d46;
@@ -184,9 +184,9 @@ const MobileLinks = styled('ul')`
     width: 100%;
     top: 100%;
     opacity: 0;
-    ${(p) =>
-        p.menuOpen &&
-        `
+    ${p =>
+        p.menuOpen
+        && `
     opacity: 1;
     transform: translateX(0);
   `}
@@ -207,78 +207,78 @@ const MobileLinks = styled('ul')`
         color: white;
         text-decoration: none;
     }
-`;
+`
 
-const Launch = styled(Button)``;
+const Launch = styled(Button)``
 
 const Separator = styled('div')`
     width: 1px;
     height: 25px;
     background: white;
     margin-right: 20px;
-`;
+`
 
 export default function Navigation() {
-    const { t } = useTranslation();
-    const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useTranslation()
+  const [menuOpen, setMenuOpen] = useState(false)
 
-    return (
-        <Nav menuOpen={menuOpen}>
-            <Link to="/">
-                <Logo />
-            </Link>
+  return (
+    <Nav menuOpen={menuOpen}>
+      <Link to="/">
+        <Logo />
+      </Link>
 
-            <EndContent>
-                <div className="mobile-nav">
-                    <button
-                        className={`hamburger hamburger--collapse-r ${
+      <EndContent>
+        <div className="mobile-nav">
+          <button
+            className={`hamburger hamburger--collapse-r ${
                             menuOpen ? 'is-active' : ''
-                        }`}
-                        type="button"
-                        onClick={() => setMenuOpen(!menuOpen)}
-                    >
-                        <span className="hamburger-box">
-                            <span className="hamburger-inner" />
-                        </span>
-                    </button>
-                </div>
+            }`}
+            type="button"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span className="hamburger-box">
+              <span className="hamburger-inner" />
+            </span>
+          </button>
+        </div>
 
-                <Links>
-                    <ALink to="/governance">{t('nav.governance')}</ALink>
-                    <ALink to="https://chat.ens.domains/">
-                        {t('nav.community')}
-                    </ALink>
-                    <ALink to="https://docs.ens.domains/">
-                        {t('nav.docs')}
-                    </ALink>
-                    <ALink to="/roadmap">{t('nav.roadmap')}</ALink>
-                    <LanguageSwitcher />
-                    <Launch href="https://app.ens.domains">
-                        {t('nav.launch')}
-                    </Launch>
-                </Links>
-            </EndContent>
+        <Links>
+          <ALink to="/governance">{t('nav.governance')}</ALink>
+          <ALink to="https://chat.ens.domains/">
+            {t('nav.community')}
+          </ALink>
+          <ALink to="https://docs.ens.domains/">
+            {t('nav.docs')}
+          </ALink>
+          <ALink to="/roadmap">{t('nav.roadmap')}</ALink>
+          <LanguageSwitcher />
+          <Launch href="https://app.ens.domains">
+            {t('nav.launch')}
+          </Launch>
+        </Links>
+      </EndContent>
 
-            <MobileLinks menuOpen={menuOpen}>
-                <LanguageSwitcher mobile={true} />
-                <li>
-                    <a href="/governance">{t('nav.governance')}</a>
-                </li>
-                <li>
-                    <a href="https://chat.ens.domains/">{t('nav.community')}</a>
-                </li>
-                <li>
-                    <a href="https://docs.ens.domains/">{t('nav.docs')}</a>
-                </li>
-                <li>
-                    <Link to="/roadmap">{t('nav.roadmap')}</Link>
-                </li>
-                <li>
-                    <Launch href="https://app.ens.domains">
-                        {t('nav.launch')}
-                    </Launch>
-                </li>
-            </MobileLinks>
-        </Nav>
-    );
+      <MobileLinks menuOpen={menuOpen}>
+        <LanguageSwitcher mobile={true} />
+        <li>
+          <a href="/governance">{t('nav.governance')}</a>
+        </li>
+        <li>
+          <a href="https://chat.ens.domains/">{t('nav.community')}</a>
+        </li>
+        <li>
+          <a href="https://docs.ens.domains/">{t('nav.docs')}</a>
+        </li>
+        <li>
+          <Link to="/roadmap">{t('nav.roadmap')}</Link>
+        </li>
+        <li>
+          <Launch href="https://app.ens.domains">
+            {t('nav.launch')}
+          </Launch>
+        </li>
+      </MobileLinks>
+    </Nav>
+  )
 }

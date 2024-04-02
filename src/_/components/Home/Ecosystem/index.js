@@ -1,1 +1,1 @@
-export { default } from './Ecosystem';
+export { default } from './Ecosystem'

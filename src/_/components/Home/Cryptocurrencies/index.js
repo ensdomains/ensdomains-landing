@@ -1,1 +1,1 @@
-export { default } from './Cryptocurrencies';
+export { default } from './Cryptocurrencies'

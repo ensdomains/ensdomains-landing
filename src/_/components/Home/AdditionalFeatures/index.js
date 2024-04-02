@@ -1,1 +1,1 @@
-export { default } from './AdditionalFeatures';
+export { default } from './AdditionalFeatures'

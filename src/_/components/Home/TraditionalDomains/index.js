@@ -1,1 +1,1 @@
-export { default } from './TraditionalDomains';
+export { default } from './TraditionalDomains'

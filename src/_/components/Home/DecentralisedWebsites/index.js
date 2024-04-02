@@ -1,1 +1,1 @@
-export { default } from './DecentralisedWebsites';
+export { default } from './DecentralisedWebsites'

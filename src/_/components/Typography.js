@@ -1,7 +1,7 @@
 /* eslint-disable sonarjs/no-nested-template-literals */
-import styled from '@emotion/styled';
+import styled from '@emotion/styled'
 
-import mq from '../mediaQuery';
+import mq from '../mediaQuery'
 
 export const H2 = styled('h2')`
     font-family: Satoshi;
@@ -15,7 +15,7 @@ export const H2 = styled('h2')`
     ${mq.medium`
     font-size: 60px;
   `}
-`;
+`
 
 export const P = styled('p')`
     font-size: 18px;
@@ -27,7 +27,7 @@ export const P = styled('p')`
     ${mq.medium`
     font-size: 28px;
   `}
-`;
+`
 
 export const Button = styled('a')`
     background: #5284ff;
@@ -38,7 +38,7 @@ export const Button = styled('a')`
     padding: 13px 30px;
     text-decoration: none;
     background-color: var(--ens-blue);
-`;
+`
 
 export const ButtonSecondary = styled('a')`
     background: #ffffff;
@@ -52,7 +52,7 @@ export const ButtonSecondary = styled('a')`
     text-align: center;
     padding: 13px 30px;
     text-decoration: none;
-`;
+`
 
 export const Buttonv2 = styled('a')`
     background: linear-gradient(
@@ -74,4 +74,4 @@ export const Buttonv2 = styled('a')`
     padding: 13px 30px;
     text-decoration: none;
     line-height: 21px;
-`;
+`

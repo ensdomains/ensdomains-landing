@@ -1,1 +1,1 @@
-export { default } from './AboutENS';
+export { default } from './AboutENS'

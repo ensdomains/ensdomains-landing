@@ -10,12 +10,11 @@
         "dev": "next",
         "develop": "pnpm run dev",
         "start": "pnpm run dev",
-        "lint": "eslint -c .eslintrc.json --ext .js ./src"
+        "lint": "eslint --config eslint.config.js src"
     },
     "dependencies": {
         "@ensdomains/thorin": "0.2.0",
         "@ensdomains/thorin_next": "npm:@ensdomains/thorin@^0.6.44",
-        "eslint-plugin-jest": "^27.9.0",
         "framer-motion": "^2.9.5",
         "gatsby": "^5.13.3",
         "gatsby-plugin-emotion": "^4.5.0",
@@ -37,14 +36,14 @@
         "react-transition-state": "^1.1.5"
     },
     "devDependencies": {
+        "@stylistic/eslint-plugin": "^1.7.0",
         "@types/react": "^18.2.73",
         "@types/react-helmet": "^6.1.11",
         "@typescript-eslint/parser": "^5.62.0",
-        "eslint": "^8.56.0",
+        "eslint": "^8.57.0",
         "eslint-plugin-v3xlabs": "^1.6.5",
         "gatsby-plugin-pnpm": "^1.2.10",
         "i18next-locales-sync": "^1.2.1",
-        "prettier": "2.0.5",
         "typescript": "^5.3.3"
     },
     "repository": {
