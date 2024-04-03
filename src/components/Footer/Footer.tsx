@@ -1,23 +1,23 @@
 import React from 'react';
 
-import blog from '../assets/blog.svg';
-import github from '../assets/github.svg';
-import x from '../assets/x.svg';
+// import blog from '../../../../public/assets/blog.svg';
+// import github from '../assets/github.svg';
+// import x from '../assets/x.svg';
 import styles from './Footer.module.css';
 
 const social = [
     {
-        img: x,
+        // img: x,
         text: 'X',
         link: 'https://x.com/ensdomains',
     },
     {
-        img: blog,
+        // img: blog,
         text: 'Blog',
         link: 'https://blog.ens.domains',
     },
     {
-        img: github,
+        // img: github,
         text: 'GitHub',
         link: 'https://github.com/ensdomains',
     },
@@ -29,7 +29,7 @@ export default function Footer() {
             <div>
                 {social.map((s) => (
                     <a href={s.link} key={s.link}>
-                        <img src={s.img} alt={s.text} height={24} />
+                        {/* <img src={s.img} alt={s.text} height={24} /> */}
                         {s.text}
                     </a>
                 ))}

@@ -1,0 +1,23 @@
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.space-y-4 > * + * {
+    margin-top: 1rem;
+}
+
+.space-x-4 > * + * {
+    margin-left: 1rem;
+}

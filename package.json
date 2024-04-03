@@ -12,8 +12,6 @@
         "lint": "eslint ./src --ext .ts,.tsx"
     },
     "dependencies": {
-        "@ensdomains/thorin": "0.2.0",
-        "@ensdomains/thorin_next": "npm:@ensdomains/thorin@^0.6.44",
         "framer-motion": "^11.0.24",
         "gh-pages": "^3.2.3",
         "i18next": "^23.10.1",
@@ -45,9 +43,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/ensdomains/ensdomains-landing-v2"
+        "url": "https://github.com/ensdomains/ensdomains-landing"
     },
     "bugs": {
-        "url": "https://github.com/ensdomains/ensdomains-landing-v2/issues"
+        "url": "https://github.com/ensdomains/ensdomains-landing/issues"
     }
 }

@@ -12,7 +12,7 @@ const initI18next = async (lng: Language, ns: string | string[]) => {
         .use(
             resourcesToBackend(
                 (language, namespace) =>
-                    import(`../locales/${language}/${namespace}.json`)
+                    import(`../../locales/${language}/${namespace}.json`)
             )
         )
         .init(getOptions(lng, ns));

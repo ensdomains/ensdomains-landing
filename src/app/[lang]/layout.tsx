@@ -1,6 +1,6 @@
 import { dir } from 'i18next';
 
-import { Language } from '../../settings';
+import { Language } from '../../i18n/settings';
 
 export const metadata = {
     title: 'Next.js',

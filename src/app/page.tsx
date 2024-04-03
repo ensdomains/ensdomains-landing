@@ -1,5 +1,5 @@
 import { LanguageSwitcher } from '../components/LanguageSwitcher/LanguageSwitcher';
-import { useTranslation } from '../useTranslation';
+import { useTranslation } from '../i18n/useTranslation';
 
 /* eslint-disable unicorn/prevent-abbreviations */
 export default async function Home() {

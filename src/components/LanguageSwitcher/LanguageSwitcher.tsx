@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { languages } from '../../settings';
+import { languages } from '../../i18n/settings';
 import styles from './LanguageSwitcher.module.css';
 
 export const LanguageSwitcher = () => {
