@@ -1,8 +1,7 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 
-import Link from 'next/link';
-
-import { Language, languages } from '../../settings';
+import { LanguageSwitcher } from '../../components/LanguageSwitcher/LanguageSwitcher';
+import { Language } from '../../settings';
 import { useTranslation } from '../../useTranslation';
 
 export default async function Home({
@@ -18,13 +17,7 @@ export default async function Home({
             <div>hi</div>
             <h1>{t('home.hero.title')}</h1>
             <div>Active Language: {params.lang}</div>
-            <div>
-                {languages.map((lang) => (
-                    <Link key={lang} href={`/${lang}`}>
-                        {lang}
-                    </Link>
-                ))}
-            </div>
+            <LanguageSwitcher />
         </div>
     );
 }

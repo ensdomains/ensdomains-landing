@@ -1,4 +1,10 @@
 {
+    "recommendations": [
+        "clinyong.vscode-css-modules",
+        "csstools.postcss",
+        "dbaeumer.vscode-eslint",
+        "lokalise.i18n-ally"
+    ],
     "i18n-ally.localesPaths": [
         "locales"
     ],
