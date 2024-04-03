@@ -21,3 +21,8 @@
 .space-x-4 > * + * {
     margin-left: 1rem;
 }
+
+.cursive {
+    font-family: cursive;
+    font-size: 1.2em;
+}
