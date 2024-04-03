@@ -1,5 +1,3 @@
-import { dir } from 'i18next';
-
 import { Language } from '../../i18n/settings';
 
 export const metadata = {
@@ -16,7 +14,7 @@ export default function RootLayout({
     params: { lang: Language };
 }) {
     return (
-        <html lang={params.lang} dir={dir(params.lang)}>
+        <html lang={params.lang}>
             <body>{children}</body>
         </html>
     );

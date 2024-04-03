@@ -1,48 +1,83 @@
 import React from 'react';
 
-// import blog from '../../../../public/assets/blog.svg';
-// import github from '../assets/github.svg';
-// import x from '../assets/x.svg';
 import styles from './Footer.module.css';
 
-const social = [
+const footerItems = [
     {
-        // img: x,
-        text: 'X',
-        link: 'https://x.com/ensdomains',
+        title: 'Join the community',
+        entries: [
+            { title: 'Blog', link: 'https://blog.ens.domains' },
+            { title: 'Feedback', link: '' },
+            {
+                title: 'Discord',
+                link: 'https://chat.ens.domains',
+            },
+            {
+                title: 'Twitter',
+                link: 'https://x.com/ensdomains',
+            },
+            {
+                title: 'Github',
+                link: 'https://github.com/ensdomains',
+            },
+            {
+                title: 'Youtube',
+                link: 'https://youtube.com/ensdomains',
+            },
+            {
+                title: 'Forums',
+                link: 'https://discuss.ens.domains',
+            },
+        ],
     },
     {
-        // img: blog,
-        text: 'Blog',
-        link: 'https://blog.ens.domains',
+        title: 'Need help?',
+        entries: [
+            {
+                title: 'Support',
+                link: 'https://support.ens.domains',
+            },
+            { title: 'Contact', link: '' },
+        ],
     },
     {
-        // img: github,
-        text: 'GitHub',
-        link: 'https://github.com/ensdomains',
+        title: 'ENS',
+        entries: [
+            { title: 'Privacy Policy', link: '' },
+            { title: 'Terms of Use', link: '' },
+            {
+                title: 'Bug Bounty',
+                link: 'https://docs.ens.domains/bugs',
+            },
+            {
+                title: 'Brand',
+                link: 'https://github.com/ensdomains/media-kit',
+            },
+            { title: 'Jobs', link: 'https://' },
+        ],
     },
 ];
 
 export default function Footer() {
     return (
-        <footer className={styles.footerContainer}>
-            <div>
-                {social.map((s) => (
-                    <a href={s.link} key={s.link}>
-                        {/* <img src={s.img} alt={s.text} height={24} /> */}
-                        {s.text}
-                    </a>
-                ))}
-            </div>
-            <div>
-                <a href="mailto:press@ens.domains">press@ens.domains</a>
-                <a href="https://docs.ens.domains/bug-bounty-program">
-                    Bug Bounty
-                </a>
-                <a href="https://github.com/ensdomains/media-kit/releases/latest/">
-                    Media Kit
-                </a>
-            </div>
-        </footer>
+        <>
+            <footer className={styles.container}>
+                <div className={styles.columns}>
+                    {footerItems.map((list) => (
+                        <ul className={styles.ul}>
+                            <div className={styles.h3}>{list.title}</div>
+                            {list.entries.map((entry) => (
+                                <li>
+                                    <a href={entry.link} target="_blank">
+                                        {entry.title}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    ))}
+                </div>
+            </footer>
+            <div className={styles.extra}></div>
+        </>
     );
 }

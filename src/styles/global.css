@@ -4,6 +4,9 @@ body {
     font-family: 'Satoshi', sans-serif;
     font-feature-settings: 'ss01' on, 'ss03' on;
     font-weight: 500;
+
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 div[role='group'][tabindex] {
@@ -13,6 +16,7 @@ div[role='group'][tabindex] {
 .f1 {
     font-family: serif;
 }
+
 .f2 {
     font-family: sans-serif;
 }
