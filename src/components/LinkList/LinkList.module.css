@@ -1,7 +1,5 @@
 .list {
     padding: 0;
-    /* temp horizontal extra padding */
-    margin: 2rem 2rem;
 }
 
 .list li {
@@ -38,11 +36,6 @@
 }
 
 @media (max-width: 768px) {
-    .list {
-        /* temp horizontal extra padding */
-        margin: 1rem 1rem;
-    }
-
     .list li {
         grid-template-columns: 1fr;
     }

@@ -11,7 +11,7 @@ export type ILink = {
 
 export const LinkList: FC<{ links: ILink[] }> = ({ links }) => {
     return (
-        <div>
+        <div className={ui['w-page']}>
             <ul className={styles.list}>
                 {links.map(({ title, href, description }) => (
                     <li>
