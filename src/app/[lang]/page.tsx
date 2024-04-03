@@ -19,9 +19,8 @@ export default async function Home({
     return (
         <div className="page">
             <Navbar />
-            <Header />
+            <Header title={t('home.hero.title')} />
             <div>
-                <h1>{t('home.hero.title')}</h1>
                 <div>Active Language: {params.lang}</div>
                 <LanguageSwitcher />
             </div>

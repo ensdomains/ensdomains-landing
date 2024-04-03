@@ -15,5 +15,10 @@
     },
     "emmet.includeLanguages": {
         "postcss": "css"
-      }
+    },
+    "files.exclude": {
+        "node_modules/": true,
+        ".next/": true,
+        "out/": true,
+    }
 }
