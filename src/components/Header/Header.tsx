@@ -8,11 +8,11 @@ export const Header: FC<{
     description?: string;
 }> = ({ title, tag, description }) => {
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <div>heading / header</div>
             <div>{tag}</div>
             <h1>{title}</h1>
             <div>{description}</div>
-        </div>
+        </header>
     );
 };

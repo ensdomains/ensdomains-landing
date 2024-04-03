@@ -5,7 +5,7 @@ export const Navbar: FC = () => {
     const language = 'en';
 
     return (
-        <div>
+        <nav>
             <div>navbar</div>
             <div>
                 {[
@@ -20,6 +20,6 @@ export const Navbar: FC = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </nav>
     );
 };
