@@ -1,0 +1,40 @@
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-page {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (min-width: 1600px) {
+    .w-page {
+        max-width: 1400px;
+    }
+}
+
+.space-y-4 > * + * {
+    margin-top: 1rem;
+}
+
+.space-x-4 > * + * {
+    margin-left: 1rem;
+}
+
+.cursive {
+    font-family: cursive;
+    font-size: 1.2em;
+}

@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    background: #f6f6f6;
+    font-family: 'Satoshi', sans-serif;
+    font-feature-settings: 'ss01' on, 'ss03' on;
+    font-weight: 500;
+
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+div[role='group'][tabindex] {
+    height: 100%;
+}
+
+.f1 {
+    font-family: serif;
+}
+
+.f2 {
+    font-family: sans-serif;
+}
+
+p {
+    font-family: serif;
+}
+
+:root {
+    /* Colors */
+    --ens-blue: #0080bc;
+    --ens-light-blue: #cee1e8;
+    --ens-medium-blue: #093c52;
+    --ens-dark-blue: #011a25;
+    --ens-magenta: #f53293;
+    --ens-light-magenta: #f2c4da;
+    --ens-green: #007c23;
+    --ens-light-green: #c5ddcc;
+    --ens-dark-brown: #674d49;
+    --ens-light-yellow: #f8f6d6;
+    --ens-yellow: #fff72f;
+    --ens-gray-4: #4a5c63;
+    --ens-gray-3: #c4c7c8;
+    --ens-gray-2: #e5e5e5;
+    --ens-gray-1: #f6f6f6;
+    --ens-white: #f6f6f6;
+}
+
+@custom-media --xs (min-width: 400px);
+@custom-media --small (min-width: 576px);
+@custom-media --medium (min-width: 768px);
+@custom-media --large (min-width: 992px);
+@custom-media --xLarge (min-width: 1200px);
+@custom-media --tallPhone (max-width: 360px) and (min-height: 740px);
+
+h2 {
+    margin: 0;
+}
