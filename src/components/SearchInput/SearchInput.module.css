@@ -19,8 +19,12 @@
   content: '.eth';
 }
 
-.container {
+.searchboxContainer {
   gap: 8px;
+}
+
+.container {
+  gap: 40px;
 }
 
 .inputContainer {
@@ -41,4 +45,13 @@
   line-height: 96%; /* 13.44px */
   letter-spacing: -0.28px; 
   font-family: var(--ens-sans);
+}
+
+.caption {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--ens-sans);
+  line-height: 96%;
+  letter-spacing: -0.4px;
+  color: var(--ens-dark-blue);
 }

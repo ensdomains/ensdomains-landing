@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background: #f6f6f6;
-    font-family: 'Satoshi', sans-serif;
+    font-family: var(--ens-sans), sans-serif;
     font-feature-settings: 'ss01' on, 'ss03' on;
     font-weight: 500;
 
@@ -11,18 +11,6 @@ body {
 
 div[role='group'][tabindex] {
     height: 100%;
-}
-
-.f1 {
-    font-family: serif;
-}
-
-.f2 {
-    font-family: sans-serif;
-}
-
-p {
-    font-family: serif;
 }
 
 :root {
@@ -78,4 +66,12 @@ p {
     font-family: var(--ens-serif);
     font-size: 20px;
     line-height: 112%;
+}
+
+button,input {
+    border-style: none;
+}
+
+a {
+    text-decoration: none;
 }

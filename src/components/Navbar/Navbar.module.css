@@ -1,0 +1,19 @@
+.nav {
+  padding: 20px 16px 20px 36px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.launch {
+  background-color: var(--ens-blue);
+  color: var(--ens-gray-2);
+  padding: 30px 100px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+}

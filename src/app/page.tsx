@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import { LanguageSwitcher } from '../components/LanguageSwitcher/LanguageSwitcher';
+import { Navbar } from '../components/Navbar/Navbar';
 import { SearchInput } from '../components/SearchInput/SearchInput';
 import { useTranslation } from '../i18n/useTranslation';
 import ui from '../styles/ui.module.css';
@@ -12,6 +12,7 @@ export default async function Home() {
 
     return (
         <main>
+            <Navbar t={t} />
             <header
                 className={clsx(
                     ui['flex'],
@@ -28,9 +29,8 @@ export default async function Home() {
                     </span>
                 </h1>
                 <p className={styles.p}>{t('home.hero.text')}</p>
-                <SearchInput />
+                <SearchInput t={t} />
             </header>
-            <LanguageSwitcher />
         </main>
     );
 }
