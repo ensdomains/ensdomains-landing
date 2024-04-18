@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 import { Navbar } from '../components/Navbar/Navbar';
 import { SearchInput } from '../components/SearchInput/SearchInput';
