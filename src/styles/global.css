@@ -34,6 +34,7 @@ div[role='group'][tabindex] {
 
     /* Hover states */
     --ens-hover-blue: #046C9D;
+    --ens-hover-light-blue: #F0F5F8;
 }
 
 @custom-media --xs (min-width: 400px);
@@ -77,4 +78,28 @@ button,input {
 
 a {
     text-decoration: none;
+}
+
+details summary {
+    position: relative;
+  }
+
+details summary::after {
+    content: "▶";
+    position: absolute;
+    margin-left: 8px;
+    bottom: 8px;
+    font-size: 12px;
+}
+
+details[open] summary::after {
+    content: "▼";
+}
+
+summary {
+list-style: none
+}
+
+summary::-webkit-details-marker {
+display: none;
 }

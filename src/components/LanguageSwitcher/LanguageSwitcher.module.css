@@ -1,4 +1,4 @@
-.summary {
+.currentLanguage {
     color: var(--ens-blue);
     leading-trim: both;
     text-edge: cap;
@@ -8,25 +8,39 @@
     font-weight: 500;
     line-height: 120%; 
     letter-spacing: 0.24px;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.summary {
     background-color: var(--ens-light-blue);
     padding: 6px 12px;
     border-radius: 2px;
-    text-transform: uppercase;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.summary::after {
+    color: var(--ens-blue);
 }
 
 .details {
     position: relative;
+    width: 56px;
 }
 
 .dropdown {
     position: absolute;
-    top: 36px;
+    top: 40px;
+    right: 0;
     list-style-type: none;
     padding: 0;
     margin: 0;
     width: max-content;
     background-color: var(--ens-light-blue);
     color: var(--ens-blue);
+    border-radius: 4px;
 }
 
 .language {
@@ -40,4 +54,5 @@
 
 .language:hover {
     color: var(--ens-hover-blue);
+    background-color: #a6c3cd;
 }
