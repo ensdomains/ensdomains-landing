@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background: #f6f6f6;
-    font-family: var(--ens-sans), sans-serif;
+    font-family: var(--ens-sans);
     font-feature-settings: 'ss01' on, 'ss03' on;
     font-weight: 500;
 

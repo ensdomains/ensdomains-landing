@@ -46,7 +46,7 @@
 .language {
     padding: 10px;
     color: var(--ens-blue);
-    font-family: var(--ens-sans), sans-serif;
+    font-family: var(--ens-sans);
     display: block;
     width: 100%;
     box-sizing: border-box;
