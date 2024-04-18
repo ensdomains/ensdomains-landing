@@ -11,5 +11,8 @@
 .header {
   width: 100%;
   gap: 3.75rem;
+  height: 100vh;
+}
+.h1,.p {
   text-align: center;
 }

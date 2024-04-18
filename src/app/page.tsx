@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 
 import { LanguageSwitcher } from '../components/LanguageSwitcher/LanguageSwitcher';
+import { SearchInput } from '../components/SearchInput/SearchInput';
 import { useTranslation } from '../i18n/useTranslation';
 import ui from '../styles/ui.module.css';
 import styles from './page.module.css';
@@ -21,6 +22,7 @@ export default async function Home() {
             >
                 <h1 className={styles.h1}>{t('home.hero.title')}</h1>
                 <p className={styles.p}>{t('home.hero.text')}</p>
+                <SearchInput />
             </header>
             <LanguageSwitcher />
         </main>

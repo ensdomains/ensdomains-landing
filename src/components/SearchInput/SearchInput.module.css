@@ -1,0 +1,44 @@
+.input {
+  display: block;
+  width: 100%;
+  background-color: var(--ens-light-blue);
+  color: var(--ens-dark-blue);
+  padding: 28px;
+  max-width: 1394px;
+  width: 100%;
+  border-style: none;
+  border-radius: 4px;
+  font-size: 76px; 
+  font-weight: 500;
+  line-height: 96%;
+  box-sizing: border-box;
+  font-family: var(--ens-semi-mono);
+}
+
+.input::after {
+  content: '.eth';
+}
+
+.container {
+  gap: 8px;
+}
+
+.inputContainer {
+  color: var(--ens-blue);
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  right: 28px;
+  top: calc(50% - 56px / 2);
+}
+
+.status {
+  color: var(--ens-dark-blue);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 96%; /* 13.44px */
+  letter-spacing: -0.28px; 
+  font-family: var(--ens-sans);
+}
