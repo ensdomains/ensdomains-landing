@@ -55,3 +55,9 @@ p {
 h2 {
     margin: 0;
 }
+
+h1 {
+    font-family: var(--ens-sans);
+    font-weight: 500;
+    font-size: 124px;
+}
