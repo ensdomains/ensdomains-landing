@@ -11,17 +11,21 @@ import styles from './Navbar.module.css';
 export const Navbar: FC<{ t: TFunction<string, string> }> = ({ t }) => {
     return (
         <nav className={clsx(ui.flex, ui['flex-row'], styles.nav)}>
-            <img
-                src="/assets/ens_logo_text_dark.svg"
-                height="30"
-                alt="ENS"
-                width="96"
-            />
+            <Link href="/">
+                <img
+                    src="/assets/ens_logo_text_dark.svg"
+                    height="30"
+                    alt="ENS"
+                    width="96"
+                />
+            </Link>
             <div className={clsx(ui.flex, ui['flex-row'], styles.right)}>
                 <div className={clsx(ui.flex, ui['flex-row'], styles.links)}>
                     {['blog', 'governance', 'community', 'docs', 'roadmap'].map(
                         (item) => (
-                            <Link href={`/${item}`}>{t(`nav.${item}`)}</Link>
+                            <Link href={`/${item}`} className={styles.link}>
+                                {t(`nav.${item}`)}
+                            </Link>
                         )
                     )}
                 </div>

@@ -24,6 +24,14 @@
   background-color: var(--ens-hover-blue);
 }
 
+.link {
+  color: var(--ens-dark-blue);
+}
+
+.link:hover {
+  color: var(--ens-hover-blue);
+}
+
 .links {
   gap: 40px;
 }
