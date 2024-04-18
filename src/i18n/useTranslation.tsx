@@ -1,5 +1,6 @@
 import { createInstance } from 'i18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
+import { useParams } from 'next/navigation';
 import { initReactI18next } from 'react-i18next/initReactI18next';
 
 import { getOptions, Language } from './settings';
@@ -18,6 +19,12 @@ const initI18next = async (lng: Language, ns: string | string[]) => {
         .init(getOptions(lng, ns));
 
     return i18nInstance;
+};
+
+export const useCurrentLanguage = (lang: Language = 'en'): Language => {
+    const parameters = useParams();
+
+    return (parameters['lang'] as Language) || lang;
 };
 
 export async function useTranslation(

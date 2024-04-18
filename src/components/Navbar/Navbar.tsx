@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { TFunction } from 'i18next';
+import Link from 'next/link';
 import { FC } from 'react';
 import { ExternalLink } from 'react-external-link';
 
@@ -16,13 +17,22 @@ export const Navbar: FC<{ t: TFunction<string, string> }> = ({ t }) => {
                 alt="ENS"
                 width="96"
             />
-            <LanguageSwitcher />
-            <ExternalLink
-                href="https://app.ens.domains"
-                className={styles.launch}
-            >
-                {t('nav.launch')}
-            </ExternalLink>
+            <div className={clsx(ui.flex, ui['flex-row'], styles.right)}>
+                <div className={clsx(ui.flex, ui['flex-row'], styles.links)}>
+                    {['blog', 'governance', 'community', 'docs', 'roadmap'].map(
+                        (item) => (
+                            <Link href={`/${item}`}>{t(`nav.${item}`)}</Link>
+                        )
+                    )}
+                </div>
+                <LanguageSwitcher />
+                <ExternalLink
+                    href="https://app.ens.domains"
+                    className={styles.launch}
+                >
+                    {t('nav.launch')}
+                </ExternalLink>
+            </div>
         </nav>
     );
 };

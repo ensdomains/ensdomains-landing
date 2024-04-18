@@ -1,3 +1,43 @@
+.summary {
+    color: var(--ens-blue);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: var(--ens-sans);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; 
+    letter-spacing: 0.24px;
+    background-color: var(--ens-light-blue);
+    padding: 6px 12px;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+.details {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    top: 36px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: max-content;
+    background-color: var(--ens-light-blue);
+    color: var(--ens-blue);
+}
+
 .language {
-    padding: 16px;
+    padding: 10px;
+    color: var(--ens-blue);
+    font-family: var(--ens-sans), sans-serif;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.language:hover {
+    color: var(--ens-hover-blue);
 }

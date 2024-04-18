@@ -31,6 +31,9 @@ div[role='group'][tabindex] {
     --ens-gray-2: #e5e5e5;
     --ens-gray-1: #f6f6f6;
     --ens-white: #f6f6f6;
+
+    /* Hover states */
+    --ens-hover-blue: #046C9D;
 }
 
 @custom-media --xs (min-width: 400px);

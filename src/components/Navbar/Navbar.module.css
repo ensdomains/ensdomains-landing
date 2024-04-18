@@ -17,3 +17,19 @@
   font-weight: 500;
   border-radius: 4px;
 }
+
+.launch:hover {
+  background-color: var(--ens-hover-blue);
+}
+
+.links {
+  gap: 40px;
+}
+
+.links, .right {
+  align-items: center;
+}
+
+.right {
+  gap: 80px;
+}

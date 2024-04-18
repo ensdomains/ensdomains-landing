@@ -15,6 +15,14 @@ export const languages = [
     'de',
 ] as const;
 
+export const languageNames: Record<Language, string> = {
+    en: 'English',
+    ru: 'Русский',
+    de: 'Deutsch',
+    cn: '简体中文',
+    ja: '日本語',
+};
+
 export const fallbackLng = 'en';
 export const defaultNS = 'translation';
 export const cookieName = 'i18next';
