@@ -1,7 +1,6 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 
 import Footer from '../../../components/Footer/Footer';
-import { Header } from '../../../components/Header/Header';
 import { LinkList } from '../../../components/LinkList/LinkList';
 import { Navbar } from '../../../components/Navbar/Navbar';
 import { Language } from '../../../i18n/settings';
@@ -18,11 +17,6 @@ export default async function Home({
     return (
         <div className="page">
             <Navbar />
-            <Header
-                title={'Your platform for change'}
-                tag="Governance"
-                description="Our DAO is more than a component of our governance; it's the lifeblood of our decentralized ethos. Designed for longevity, the DAO nurtures ENS's resilience and flexibility, evolving through a tapestry of community voices."
-            />
 
             <div>Your platform for change</div>
             <div>

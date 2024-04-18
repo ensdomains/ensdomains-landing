@@ -1,7 +1,6 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 
 import Footer from '../../../components/Footer/Footer';
-import { Header } from '../../../components/Header/Header';
 import { LinkList } from '../../../components/LinkList/LinkList';
 import { Navbar } from '../../../components/Navbar/Navbar';
 import { Language } from '../../../i18n/settings';
@@ -18,11 +17,6 @@ export default async function Home({
     return (
         <div className="page">
             <Navbar />
-            <Header
-                title="Build in good company"
-                tag="Developers"
-                description="Whether you're a web3 newbie or a seasoned pro, we're inviting you to help craft a brighter web. ENS is more than just a protocol—it's a movement towards a trustless internet."
-            />
 
             <div>Resources</div>
 

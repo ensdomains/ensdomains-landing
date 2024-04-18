@@ -1,0 +1,15 @@
+.h1 {
+  color: var(--ens-dark-blue);
+  max-width: 12ch;
+}
+
+.p {
+  color: var(--ens-medium-blue);
+  width: 412px;
+}
+
+.header {
+  width: 100%;
+  gap: 3.75rem;
+  text-align: center;
+}

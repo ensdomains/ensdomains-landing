@@ -1,22 +1,28 @@
+import clsx from 'clsx';
+
 import { LanguageSwitcher } from '../components/LanguageSwitcher/LanguageSwitcher';
 import { useTranslation } from '../i18n/useTranslation';
+import ui from '../styles/ui.module.css';
+import styles from './page.module.css';
 
 /* eslint-disable unicorn/prevent-abbreviations */
 export default async function Home() {
     const { t } = await useTranslation('en', 'translation');
 
     return (
-        <div>
-            <h1
-                style={{
-                    color: 'var(--ens-green)',
-                }}
+        <main>
+            <header
+                className={clsx(
+                    ui['flex'],
+                    ui['flex-center'],
+                    ui['flex-col'],
+                    styles.header
+                )}
             >
-                title works
-            </h1>
-            <h2>subtitle looks nice</h2>
-            <p>some paragraph text</p>
+                <h1 className={styles.h1}>{t('home.hero.title')}</h1>
+                <p className={styles.p}>{t('home.hero.text')}</p>
+            </header>
             <LanguageSwitcher />
-        </div>
+        </main>
     );
 }

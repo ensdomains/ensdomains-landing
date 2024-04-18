@@ -10,6 +10,11 @@
     flex-direction: row;
 }
 
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
 .w-full {
     width: 100%;
 }
