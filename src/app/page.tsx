@@ -2,13 +2,14 @@ import clsx from 'clsx';
 
 import { Navbar } from '../components/Navbar/Navbar';
 import { SearchInput } from '../components/SearchInput/SearchInput';
+import { Language } from '../i18n/settings';
 import { useTranslation } from '../i18n/useTranslation';
 import ui from '../styles/ui.module.css';
 import styles from './page.module.css';
 
 /* eslint-disable unicorn/prevent-abbreviations */
-export default async function Home() {
-    const { t } = await useTranslation('en', 'translation');
+export default async function Home({ lang = 'en' }: { lang?: Language }) {
+    const { t } = await useTranslation(lang, 'translation');
 
     return (
         <main>

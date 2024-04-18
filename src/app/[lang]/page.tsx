@@ -1,51 +1,15 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 
-import Footer from '../../components/Footer/Footer';
-import { LanguageSwitcher } from '../../components/LanguageSwitcher/LanguageSwitcher';
-import { Navbar } from '../../components/Navbar/Navbar';
 import { Language } from '../../i18n/settings';
-import { useTranslation } from '../../i18n/useTranslation';
+import Home from '../page';
 
-export default async function Home({
+export default async function LocaleHome({
     params,
 }: {
     params: { lang: Language };
     searchParams: any;
 }) {
-    const { t } = await useTranslation(params.lang, 'translation');
-
-    return (
-        <div className="page">
-            <Navbar />
-            <div>
-                <div>Active Language: {params.lang}</div>
-                <LanguageSwitcher />
-            </div>
-
-            <div>yourname.eth</div>
-
-            <div>your web3 username</div>
-
-            <div>farewell to complexity</div>
-
-            <div>consistent accross the web</div>
-
-            <div>true ownership</div>
-
-            <div>go on your way</div>
-
-            <div>your gateway to the new internet</div>
-
-            <div>
-                <div>a public good shaped by you</div>
-                <div>join our community</div>
-            </div>
-
-            <div>stats (names, integrations, owners)</div>
-
-            <Footer />
-        </div>
-    );
+    return <Home lang={params.lang} />;
 }
 
 export { generateStaticParams } from '../../utils/getStatic';
