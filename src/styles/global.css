@@ -52,12 +52,30 @@ p {
 @custom-media --xLarge (min-width: 1200px);
 @custom-media --tallPhone (max-width: 360px) and (min-height: 740px);
 
-h2 {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
+
+/* TYPOGRAPHY */
 
 h1 {
     font-family: var(--ens-sans);
     font-weight: 500;
     font-size: 124px;
+    letter-spacing: -0.03em;
+    line-height: 93%;
+}
+
+h2 {
+    font-family: var(--ens-sans);
+    font-weight: 500;
+    font-size: 100px;
+    letter-spacing: -0.01em;
+    line-height: 90%;
+}
+
+p {
+    font-family: var(--ens-serif);
+    font-size: 20px;
+    line-height: 112%;
 }
