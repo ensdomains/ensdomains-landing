@@ -21,6 +21,15 @@ export const languageNames: Record<Language, string> = {
     de: 'Deutsch',
     cn: '简体中文',
     ja: '日本語',
+    it: 'Italiano',
+    tr: 'Türkçe',
+    fr: 'Français',
+    es: 'Español',
+    pl: 'Polski',
+    ko: '한국어',
+    nl: 'Nederlands',
+    vi: '㗂越',
+    pt: 'Português',
 };
 
 export const fallbackLng = 'en';
