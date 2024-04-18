@@ -1,6 +1,6 @@
 .h1 {
   color: var(--ens-dark-blue);
-  max-width: 12ch;
+  max-width: 16ch;
 }
 
 .p {
@@ -15,4 +15,17 @@
 }
 .h1,.p {
   text-align: center;
+}
+
+.feelBetter {
+  font-family: var(--ens-semi-mono);
+  letter-spacing: -3.72px; 
+}
+.feelBetter::before {
+  content: '[';
+  color: var(--ens-light-blue);
+}
+.feelBetter::after {
+  content: ']';
+  color: var(--ens-light-blue);
 }

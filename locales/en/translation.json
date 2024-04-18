@@ -12,7 +12,8 @@
   },
   "home": {
     "hero": {
-      "title": "Welcome to your New Internet",
+      "title": "Making the Internet",
+      "subtitle": "Feel Better",
       "text": "For every dreamer, creator, and change-maker tired of the old internet, Web3 is here. ENS is more than a protocol – it's a commitment to a better web, built for everyone."
     },
     "carousel": {

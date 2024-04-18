@@ -62,15 +62,15 @@ h1 {
     font-family: var(--ens-sans);
     font-weight: 500;
     font-size: 124px;
-    letter-spacing: -0.03em;
-    line-height: 93%;
+    letter-spacing: -2.48px; 
+    line-height: 96%;
 }
 
 h2 {
     font-family: var(--ens-sans);
     font-weight: 500;
     font-size: 100px;
-    letter-spacing: -0.01em;
+    letter-spacing: -2px; 
     line-height: 90%;
 }
 

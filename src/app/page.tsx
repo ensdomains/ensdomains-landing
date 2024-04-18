@@ -20,7 +20,13 @@ export default async function Home() {
                     styles.header
                 )}
             >
-                <h1 className={styles.h1}>{t('home.hero.title')}</h1>
+                <h1 className={styles.h1}>
+                    {t('home.hero.title')}
+                    <br />
+                    <span className={styles.feelBetter}>
+                        {t('home.hero.subtitle')}
+                    </span>
+                </h1>
                 <p className={styles.p}>{t('home.hero.text')}</p>
                 <SearchInput />
             </header>
