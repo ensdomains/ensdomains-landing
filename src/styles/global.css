@@ -37,11 +37,11 @@ div[role='group'][tabindex] {
     --ens-hover-light-blue: #F0F5F8;
 }
 
-@custom-media --xs (min-width: 400px);
-@custom-media --small (min-width: 576px);
-@custom-media --medium (min-width: 768px);
-@custom-media --large (min-width: 992px);
-@custom-media --xLarge (min-width: 1200px);
+@custom-media --xs (max-width: 400px);
+@custom-media --small (max-width: 576px);
+@custom-media --medium (max-width: 768px);
+@custom-media --large (max-width: 1024px);
+@custom-media --xLarge (max-width: 1200px);
 @custom-media --tallPhone (max-width: 360px) and (min-height: 740px);
 
 h1, h2, h3, h4, h5, h6, p {
