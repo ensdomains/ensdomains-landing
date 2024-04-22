@@ -4,6 +4,7 @@ import Footer from '../../../components/Footer/Footer';
 import { LinkList } from '../../../components/LinkList/LinkList';
 import { Navbar } from '../../../components/Navbar/Navbar';
 import { Language } from '../../../i18n/settings';
+import { useTranslation } from '../../../i18n/useTranslation';
 
 export default async function Home({
     params,
@@ -11,12 +12,11 @@ export default async function Home({
     params: { lang: Language };
     searchParams: any;
 }) {
-    // const { t } = await useTranslation(params.lang, 'translation');
+    const { t } = await useTranslation(params.lang, 'translation');
 
     return (
         <div className="page">
-            <Navbar />
-
+            <Navbar t={t} />
             <LinkList
                 links={[
                     {

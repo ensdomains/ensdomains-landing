@@ -45,3 +45,13 @@
   gap: 80px;
   justify-content: end;
 }
+
+
+
+@media (max-width: 1024px) {
+  .launch {
+    width: 189px;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+}

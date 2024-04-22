@@ -16,7 +16,7 @@ export default async function Home({
 
     return (
         <div className="page">
-            <Navbar />
+            <Navbar t={t} />
 
             <div>Your platform for change</div>
             <div>

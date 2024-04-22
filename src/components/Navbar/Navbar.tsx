@@ -13,7 +13,7 @@ export const Navbar: FC<{ t: TFunction<string, string> }> = ({ t }) => {
         <nav className={clsx(ui.flex, ui['flex-row'], styles.nav)}>
             <Link href="/">
                 <img
-                    src="/assets/ens_logo_text_dark.svg"
+                    src={'/assets/ens_logo_dark.svg'}
                     height="30"
                     alt="ENS"
                     width="96"
