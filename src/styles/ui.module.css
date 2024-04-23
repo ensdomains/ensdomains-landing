@@ -23,8 +23,9 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 100px 1rem;
 }
+
 
 .my-100 {
     margin-top: 100px;
@@ -33,13 +34,14 @@
 
 @media (min-width: 1024px) {
     .w-page {
-        padding: 0 4rem;
+        padding: 120px 4rem;
     }
 }
 
 @media (min-width: 1600px) {
     .w-page {
         max-width: 1374px;
+        padding: 200px 0;
     }
 }
 
