@@ -16,7 +16,7 @@ export default async function Home({
 
     return (
         <div className="page">
-            <Navbar t={t} />
+            <Navbar t={t} lang={params.lang} />
 
             <div>Ready for integration?</div>
 

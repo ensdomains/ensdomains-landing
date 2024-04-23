@@ -43,3 +43,17 @@
     font-family: cursive;
     font-size: 1.2em;
 }
+
+.button {
+    background-color: var(--ens-blue);
+    color: var(--ens-gray-2);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.button:hover {
+    /* background-color: var(--ens-light-blue); */
+}

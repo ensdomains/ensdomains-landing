@@ -15,7 +15,7 @@ export default async function Home({ lang = 'en' }: { lang?: Language }) {
 
     return (
         <main>
-            <Navbar t={t} />
+            <Navbar t={t} lang={lang} />
             <header
                 className={clsx(
                     ui['flex'],
