@@ -9,6 +9,10 @@ body {
     overflow-x: hidden;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 div[role='group'][tabindex] {
     height: 100%;
 }

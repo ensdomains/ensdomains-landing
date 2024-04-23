@@ -20,15 +20,15 @@
 }
 
 .w-page {
-    max-width: 85vw;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 200px 0;
+    padding: 0 1rem;
 }
 
 @media (min-width: 1600px) {
     .w-page {
-        max-width: 1400px;
+        max-width: 1374px;
     }
 }
 
