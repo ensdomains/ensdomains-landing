@@ -1,7 +1,8 @@
 .header {
     width: 100%;
     gap: 2rem;
-    min-height: min(80vh, 800px);
+    min-height: min(80vh, 700px);
+    padding: 5rem 1rem;
 }
 
 .tag {
@@ -18,7 +19,8 @@
 
 .p {
     color: var(--ens-medium-blue);
-    width: 412px;
+    width: 100%;
+    max-width: 412px;
 }
 
 .h1,
@@ -45,6 +47,14 @@
     display: grid;
     gap: 1.5rem;
     grid-template-columns: 1fr 1fr;
+}
+
+/* Mobile Small only (640 and below) */
+@media (max-width: 640px) {
+    .cta {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
 }
 
 .cta a:first-child {

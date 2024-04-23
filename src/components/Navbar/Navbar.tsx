@@ -21,16 +21,12 @@ export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
             <Link href={langPrefix || '/'}>
                 <img
                     src={'/assets/ens_logo_dark.svg'}
-                    height="30"
                     alt="ENS"
-                    width="96"
                     className={(styles.logo, styles.tabletOnly)}
                 />
                 <img
                     src={'/assets/ens_logo_text_dark.svg'}
-                    height="30"
                     alt="ENS"
-                    width="96"
                     className={(styles.logo, styles.desktopOnly)}
                 />
             </Link>
