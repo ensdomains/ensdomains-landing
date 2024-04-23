@@ -42,7 +42,6 @@
 .extra {
   height: 40px;
   width: 100%;
-  background-color: var(--ens-white);
 }
 
 @media (max-width: 690px) {
