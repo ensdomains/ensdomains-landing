@@ -25,6 +25,8 @@
 
 .container {
   gap: 40px;
+  margin-top: 100px;
+  padding-bottom: 100px;
 }
 
 .inputContainer {

@@ -1,0 +1,27 @@
+.box {
+  transition-duration: 0.5s;
+  transition-property: 'right';
+  transition-delay: 0.75s;
+  position: absolute;
+}
+
+.container {
+  position: relative;
+}
+
+.container > :nth-child(1) {
+  right: 0px;
+}
+
+.container > :nth-child(1).animating {
+  right: 100px;
+}
+
+.container > :nth-child(2) {
+  left: 0px;
+  transition-delay: 1s;
+}
+
+.container > :nth-child(2).animating {
+  left: 100px;
+}

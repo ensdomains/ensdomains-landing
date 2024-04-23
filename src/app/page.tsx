@@ -7,6 +7,7 @@ import { Carousel } from '../components/Carousel/Carousel';
 import { ColorCards } from '../components/ColorCards/ColorCards';
 import { FeaturePreview } from '../components/FeaturePreview/FeaturePreview';
 import { Header } from '../components/Header/Header';
+import { MessageAnimation } from '../components/MessageAnimation/MessageAnimation';
 import { Navbar } from '../components/Navbar/Navbar';
 import { SearchInput } from '../components/SearchInput/SearchInput';
 import { TwoCol } from '../components/TwoCol/TwoCol';
@@ -32,7 +33,7 @@ export default async function Home({
                 description={t('home.hero.text')}
             />
             <SearchInput t={t} />
-            <section className={ui['w-page']}>
+            <section className={clsx(ui['my-100'], ui['w-page'])}>
                 <div className={clsx(ui.flex, ui['flex-col'], styles.title)}>
                     <h2>{t('home.features.title')}</h2>
                     <p>{t('home.features.text')}</p>
@@ -46,7 +47,9 @@ export default async function Home({
                         indicatorColor="ens-white"
                         position={0}
                         gridSrc="/assets/blue-grid.svg"
-                    />
+                    >
+                        <MessageAnimation />
+                    </FeaturePreview>
                     <FeaturePreview
                         title={t('home.features.consistent.title')}
                         text={t('home.features.consistent.text')}
@@ -66,7 +69,6 @@ export default async function Home({
                         gridSrc="/assets/green-grid.svg"
                     />
                 </Carousel>
-
                 <div
                     className={clsx(
                         ui['w-page'],
