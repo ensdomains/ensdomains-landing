@@ -36,16 +36,28 @@ export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
             </Link>
             <div className={clsx(ui.flex, ui['flex-row'], styles.right)}>
                 <div className={clsx(ui.flex, ui['flex-row'], styles.links)}>
-                    {['blog', 'governance', 'community', 'docs', 'roadmap'].map(
-                        (item) => (
-                            <Link
-                                href={`/${lang}/${item}`}
-                                className={styles.link}
-                            >
+                    {[
+                        'developers',
+                        'ecosystem',
+                        'governance',
+                        'blog',
+                        'roadmap',
+                    ].map((item) => {
+                        const url =
+                            item == 'blog'
+                                ? 'https://blog.ens.domains'
+                                : // eslint-disable-next-line unicorn/no-nested-ternary
+                                item == 'roadmap'
+                                ? // placeholder url
+                                  'https://v3x.fyi/s1'
+                                : `/${lang}/${item}`;
+
+                        return (
+                            <Link href={url} className={styles.link}>
                                 {t(`nav.${item}`)}
                             </Link>
-                        )
-                    )}
+                        );
+                    })}
                 </div>
                 <LanguageSwitcher lang={lang} />
                 <ExternalLink

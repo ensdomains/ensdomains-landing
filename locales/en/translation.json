@@ -3,12 +3,12 @@
     "learnMore": "Learn more"
   },
   "nav": {
-    "blog": "Blog",
-    "launch": "Launch App",
+    "developers": "Developers",
+    "ecosystem": "Ecosystem",
     "governance": "Governance",
-    "community": "Community",
-    "docs": "Docs",
-    "roadmap": "Roadmap"
+    "blog": "Blog",
+    "roadmap": "Roadmap",
+    "launch": "Launch App"
   },
   "home": {
     "hero": {
