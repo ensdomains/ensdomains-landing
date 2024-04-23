@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 'use client';
 
 import { clsx } from 'clsx';
@@ -8,6 +9,7 @@ import { FeaturePreview } from '../components/FeaturePreview/FeaturePreview';
 import { Header } from '../components/Header/Header';
 import { Navbar } from '../components/Navbar/Navbar';
 import { SearchInput } from '../components/SearchInput/SearchInput';
+import { TwoCol } from '../components/TwoCol/TwoCol';
 import { fallbackLng, Language } from '../i18n/settings';
 import { useTranslation } from '../i18n/useTranslation';
 import ui from '../styles/ui.module.css';
@@ -140,33 +142,26 @@ export default async function Home({
                         ui['space-y-40']
                     )}
                 >
-                    <div>
-                        <div>
-                            <div>Governance</div>
-                            <div>
-                                <div>A public good, shaped by you</div>
-                                <p className={ui.cursive}>
-                                    ENS is more than a non-profit -- it's a
-                                    community-governed beacon of trust. Take
-                                    part in shaping an internet where everyone
-                                    has a voice.
-                                </p>
-                            </div>
-                            <a className={ui.button} href="/">
-                                Learn about ENS Governance
-                            </a>
-                        </div>
-                        <div>
-                            <div>Community</div>
-                            <div>
-                                <div>Join our community</div>
-                                <p className={ui.cursive}>Lorem ipsum.</p>
-                            </div>
-                            <a className={ui.button} href="/">
-                                Where to follow us
-                            </a>
-                        </div>
-                    </div>
+                    <TwoCol
+                        cols={[
+                            {
+                                tag: 'Governance',
+                                title: 'A public good, shaped by you',
+                                description:
+                                    // eslint-disable-next-line prettier/prettier
+                                    'ENS is more than a non-profit -- it\'s a community-governed beacon of trust. Take part in shaping an internet where everyone has a voice.',
+                                button: 'Learn about ENS Governance',
+                                href: '/',
+                            },
+                            {
+                                tag: 'Community',
+                                title: 'Join our community',
+                                description: 'Lorem ipsum.',
+                                button: 'Where to follow us',
+                                href: '/',
+                            },
+                        ]}
+                    />
                 </div>
                 <div
                     className={clsx(

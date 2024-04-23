@@ -1,0 +1,30 @@
+.cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.cols > div {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--ens-gray-2);
+}
+
+.cols > div > span {
+    padding: 1rem 0;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    flex-grow: 1;
+    margin-top: 1rem;
+}
+
+.split a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
