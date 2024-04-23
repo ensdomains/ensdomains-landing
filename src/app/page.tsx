@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 'use client';
 
 import { clsx } from 'clsx';
