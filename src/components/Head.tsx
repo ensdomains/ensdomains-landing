@@ -44,11 +44,7 @@ export const Head = ({ location }: { location?: string }) => {
             {/* <meta name="og:locale" content="en_US" /> */}
             <title>{getTitle(location)}</title>
             <link rel="canonical" href="https://ens.domains" />
-            <link
-                rel="shortcut icon"
-                type="image/x-icon"
-                href="/legacy_assets/favicon.ico"
-            />
+            <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         </NextHead>
     );
 };

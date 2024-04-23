@@ -44,50 +44,63 @@ export default async function Home({
                 ]}
             />
 
-            <h2 className={clsx(ui['w-page'])}>$ENS: Power to the People H</h2>
-
-            <div className={ui['w-page']}>
-                <h4>your vote your choice</h4>
+            <div className={ui['my-100']}>
+                <h2 className={clsx(ui['w-page'])}>
+                    $ENS: Power to the People
+                </h2>
             </div>
 
-            <div className={ui['w-page']}>
-                <h4>empower through delegation</h4>
+            <div className={ui['my-100']}>
+                <div className={ui['w-page']}>
+                    <h4>your vote your choice</h4>
+                </div>
+
+                <div className={ui['w-page']}>
+                    <h4>empower through delegation</h4>
+                </div>
+
+                <div className={ui['w-page']}>
+                    <h4>grants for game-changers</h4>
+                </div>
             </div>
 
-            <div className={ui['w-page']}>
-                <h4>grants for game-changers</h4>
+            <div className={ui['my-100']}>
+                <div className={ui['w-page']}>
+                    <h4>Resources</h4>
+                </div>
+
+                <LinkList
+                    links={[
+                        {
+                            title: 'Discord',
+                            href: '',
+                            description: 'Join the community on Discord.',
+                        },
+                        {
+                            title: 'DAO Documentation',
+                            href: '',
+                            description: 'Documentation for the DAO.',
+                        },
+                        {
+                            title: 'Tally Voting',
+                            href: '',
+                            description:
+                                'This repository implements a generic CCIP-Read gateway for fetching state proofs of data on other EVM chains. The intended use is for contracts on L1 to be able to fetch and verify data from contracts on L2 in a read context.',
+                        },
+                    ]}
+                />
             </div>
 
-            <div className={ui['w-page']}>
-                <h4>More Resources</h4>
+            <div className={clsx(ui['w-page'], ui['my-100'])}>
+                <h3>Join the New Internet</h3>
+                <p>TODO</p>
             </div>
 
-            <LinkList
-                links={[
-                    {
-                        title: 'Discord',
-                        href: '',
-                        description: 'Join the community on Discord.',
-                    },
-                    {
-                        title: 'DAO Documentation',
-                        href: '',
-                        description: 'Documentation for the DAO.',
-                    },
-                    {
-                        title: 'Tally Voting',
-                        href: '',
-                        description:
-                            'This repository implements a generic CCIP-Read gateway for fetching state proofs of data on other EVM chains. The intended use is for contracts on L1 to be able to fetch and verify data from contracts on L2 in a read context.',
-                    },
-                ]}
-            />
-
-            <h2 className={clsx(ui['w-page'])}>Join the New Internet</h2>
-
-            <div className={ui['w-page']}>
-                <h4>A public good shaped by you.</h4>
-                <h4>Join our community</h4>
+            <div className={ui['my-100']}>
+                <div className={ui['w-page']}>
+                    <h4>A public good shaped by you.</h4>
+                    <h4>Join our community</h4>
+                </div>
             </div>
 
             <Footer />

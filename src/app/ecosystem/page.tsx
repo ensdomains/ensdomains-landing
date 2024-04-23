@@ -41,35 +41,41 @@ export default async function Home({
                 ]}
             />
 
-            <h2 className={clsx(ui['w-page'])}>Ready for integration?</h2>
+            <div className={ui['my-100']}>
+                <h2 className={clsx(ui['w-page'])}>Ready for integration?</h2>
 
-            <LinkList
-                links={[
-                    {
-                        title: 'Robust Web3 Foundation',
-                        href: '',
-                        description:
-                            'Gain access to a built-in audience, establishing your brand as a key player in the new internet era.',
-                    },
-                    {
-                        title: 'Unparalleled Trust',
-                        href: '',
-                        description:
-                            // eslint-disable-next-line quotes
-                            "Trust isn't a buzzword, it's our foundation. As a non-profit, DAO-governed protocol, we're committed to security and integrity.",
-                    },
-                    {
-                        title: 'Need more resources?',
-                        href: '',
-                        description:
-                            'ENS is more powerful than you think. See below for more resources on how to integrate ENS into your organization.',
-                    },
-                ]}
-            />
+                <LinkList
+                    links={[
+                        {
+                            title: 'Robust Web3 Foundation',
+                            href: '',
+                            description:
+                                'Gain access to a built-in audience, establishing your brand as a key player in the new internet era.',
+                        },
+                        {
+                            title: 'Unparalleled Trust',
+                            href: '',
+                            description:
+                                // eslint-disable-next-line quotes
+                                "Trust isn't a buzzword, it's our foundation. As a non-profit, DAO-governed protocol, we're committed to security and integrity.",
+                        },
+                        {
+                            title: 'Need more resources?',
+                            href: '',
+                            description:
+                                'ENS is more powerful than you think. See below for more resources on how to integrate ENS into your organization.',
+                        },
+                    ]}
+                />
+            </div>
 
-            <h3 className={clsx(ui['w-page'])}>exploring a partnership?</h3>
+            <div className={ui['my-100']}>
+                <h3 className={clsx(ui['w-page'])}>exploring a partnership?</h3>
+            </div>
 
-            <h4 className={clsx(ui['w-page'])}>featured partners</h4>
+            <div className={ui['my-100']}>
+                <h4 className={clsx(ui['w-page'])}>featured partners</h4>
+            </div>
 
             <Footer />
         </div>

@@ -26,6 +26,17 @@
     padding: 0 1rem;
 }
 
+.my-100 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+@media (min-width: 1024px) {
+    .w-page {
+        padding: 0 4rem;
+    }
+}
+
 @media (min-width: 1600px) {
     .w-page {
         max-width: 1374px;
