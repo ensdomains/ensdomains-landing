@@ -35,6 +35,9 @@ div[role='group'][tabindex] {
     /* Hover states */
     --ens-hover-blue: #046C9D;
     --ens-hover-light-blue: #F0F5F8;
+
+    --page-text: var(--ens-dark-blue);
+    --page-bg: var(--ens-light-blue);
 }
 
 @custom-media --xs (max-width: 400px);

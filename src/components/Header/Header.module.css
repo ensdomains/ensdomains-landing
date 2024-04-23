@@ -1,11 +1,18 @@
 .header {
     width: 100%;
     gap: 2rem;
-    min-height: 75vh;
+    min-height: min(80vh, 800px);
+}
+
+.tag {
+    background: var(--page-bg);
+    color: var(--page-text);
+    padding: 0.4rem 1rem;
+    border-radius: 0.3rem;
 }
 
 .h1 {
-    color: var(--ens-dark-blue);
+    color: var(--page-text);
     max-width: 16ch;
 }
 
@@ -26,16 +33,26 @@
 
 .feelBetter::before {
     content: '[';
-    color: var(--ens-light-blue);
+    color: var(--page-bg);
 }
 
 .feelBetter::after {
     content: ']';
-    color: var(--ens-light-blue);
+    color: var(--page-bg);
 }
 
 .cta {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: 1fr 1fr;
+}
+
+.cta a:first-child {
+    background: var(--page-text);
+    color: var(--page-bg);
+}
+
+.cta a {
+    background: var(--page-bg);
+    color: var(--page-text);
 }

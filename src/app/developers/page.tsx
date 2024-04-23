@@ -1,5 +1,6 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 import clsx from 'clsx';
+import { CSSProperties } from 'react';
 
 import Footer from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
@@ -18,7 +19,15 @@ export default async function Home({
     const { t } = await useTranslation(params.lang, 'translation');
 
     return (
-        <div className="page">
+        <div
+            className="page"
+            style={
+                {
+                    '--page-text': 'var(--ens-magenta)',
+                    '--page-bg': 'var(--ens-light-magenta)',
+                } as CSSProperties
+            }
+        >
             <Navbar t={t} lang={params.lang} />
 
             <Header

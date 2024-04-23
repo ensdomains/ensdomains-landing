@@ -23,7 +23,7 @@ export const Header: FC<
                 styles.header
             )}
         >
-            {tag && <div>{tag}</div>}
+            {tag && <div className={styles.tag}>{tag}</div>}
             <h1 className={styles.h1}>
                 {title}
                 {subtitle && (

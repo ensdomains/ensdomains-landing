@@ -21,9 +21,8 @@ export default async function Home({
                 title={t('home.hero.title')}
                 subtitle={t('home.hero.subtitle')}
                 description={t('home.hero.text')}
-            >
-                <SearchInput t={t} />
-            </Header>
+            />
+            <SearchInput t={t} />
             <section>
                 <h2>{t('home.features.title')}</h2>
             </section>
