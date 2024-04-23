@@ -9,7 +9,10 @@
   },
   "home": {
     "hero": {
-      "title": "Gedecentraliseerde namen voor wallets, websites, en meer."
+      "title": "Maakt het Internet",
+      "subtitle": "Gewoon Beter",
+      "text": "Voor elke dromer, creator en gebruiker die het oude internet beu is.\n ENS is meer dan een protocol: het is een streven naar een beter internet, gebouwd voor en door iedereen.",
+      "inputCaption": "Registreer jou .eth naam"
     },
     "carousel": {
       "search": "zoek",
