@@ -2,13 +2,19 @@ import '../styles/global.css';
 
 import { clsx } from 'clsx';
 import { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { EB_Garamond, Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 import { ReactNode } from 'react';
 
 const inter = Inter({
     weight: 'variable',
     variable: '--ens-sans-fb',
+    subsets: ['cyrillic'],
+});
+
+const ebGaramond = EB_Garamond({
+    weight: 'variable',
+    variable: '--ens-serif-fb',
     subsets: ['cyrillic'],
 });
 
@@ -85,6 +91,7 @@ const ABCMarist = localFont({
         },
     ],
     variable: '--ens-serif',
+    fallback: ['var(--ens-serif-fb)', 'serif'],
 });
 
 export const metadata: Metadata = {
@@ -107,6 +114,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             lang="en"
             className={clsx(
                 inter.variable,
+                ebGaramond.variable,
                 ABCMonumentGrotesk.variable,
                 ABCMonumentGroteskMono.variable,
                 ABCMonumentGroteskSemiMono.variable,
