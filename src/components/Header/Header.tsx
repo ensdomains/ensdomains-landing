@@ -10,10 +10,9 @@ export const Header: FC<
         subtitle?: string;
         description?: string;
         tag?: string;
-        color?: string;
         cta?: [string, string][];
     }>
-> = ({ title, subtitle, tag, description, color, children, cta }) => {
+> = ({ title, subtitle, tag, description, children, cta }) => {
     return (
         <header
             className={clsx(

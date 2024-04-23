@@ -35,7 +35,6 @@ export default async function Home({
                 tag={t('governance.hero.tag')}
                 title={t('governance.hero.title')}
                 description={t('governance.hero.text')}
-                color=""
                 cta={[
                     [t('governance.hero.cta1'), 'https://docs.ens.domains/dao'],
                     [
