@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { LinkList } from '../../components/LinkList/LinkList';
 import { Navbar } from '../../components/Navbar/Navbar';
+import { TwoCol } from '../../components/TwoCol/TwoCol';
 import { Language } from '../../i18n/settings';
 import { useTranslation } from '../../i18n/useTranslation';
 import ui from '../../styles/ui.module.css';
@@ -82,17 +83,34 @@ export default async function Home({
             </div>
 
             <div className={clsx(ui['w-page'], ui['my-100'])}>
-                LR section here
-                <h4>New to Web3?</h4>
-                <h4>For the Web3 wizards</h4>
+                <TwoCol
+                    cols={[
+                        {
+                            tag: 'Quickstart Guide',
+                            title: 'New to Web3?',
+                            description:
+                                'Starting in web3 should be exhilarating, not intimidating. Dive into our straightforward guides to begin with ease and confidence.',
+                            href: '',
+                            button: 'Quickstart Guide',
+                        },
+                        {
+                            tag: 'ENS Contracts',
+                            title: 'For the Web3 wizards',
+                            description:
+                                'Need more depth? Our comprehensive documentation offers deep insights and expert tips for the web3 savvy.',
+                            button: 'ENS Contracts',
+                            href: '',
+                        },
+                    ]}
+                />
             </div>
 
             <div className={clsx(ui['w-page'], ui['my-100'])}>
-                <h3>grants for gamechangers</h3>
+                <h3>Grants for Game-Changers</h3>
             </div>
 
             <div className={clsx(ui['w-page'], ui['my-100'])}>
-                <h3>our bug bounty: your peace of mind</h3>
+                <h3>Our Bug Bounty: Your Peace of Mind</h3>
             </div>
 
             <Footer />

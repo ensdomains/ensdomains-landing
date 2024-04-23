@@ -66,13 +66,20 @@
 }
 
 .button {
-    background-color: var(--ens-blue);
-    color: var(--ens-gray-2);
+    background-color: var(--page-text);
+    /* background-color: var(--ens-blue); */
+    /* color: var(--ens-gray-2); */
+    color: var(--page-bg);
     padding: 1rem 2rem;
     font-size: 1rem;
     font-weight: 500;
     border-radius: 4px;
     text-align: center;
+}
+
+.button-secondary {
+    background-color: var(--page-bg);
+    color: var(--page-text);
 }
 
 .button:hover {
