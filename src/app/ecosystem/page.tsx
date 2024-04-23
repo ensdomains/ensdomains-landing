@@ -41,7 +41,7 @@ export default async function Home({
                 ]}
             />
 
-            <div className={ui['my-100']}>
+            <div className={clsx(ui['my-100'], ui['space-y-40'])}>
                 <h2 className={clsx(ui['w-page'])}>Ready for integration?</h2>
 
                 <LinkList

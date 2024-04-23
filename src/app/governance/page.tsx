@@ -64,7 +64,7 @@ export default async function Home({
                 </div>
             </div>
 
-            <div className={ui['my-100']}>
+            <div className={clsx(ui['my-100'], ui['space-y-40'])}>
                 <div className={ui['w-page']}>
                     <h4>Resources</h4>
                 </div>

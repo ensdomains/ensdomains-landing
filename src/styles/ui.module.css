@@ -51,9 +51,15 @@
     margin-left: 1rem;
 }
 
+.space-y-40 > * + * {
+    margin-top: 40px;
+}
+
+
 .cursive {
-    font-family: cursive;
+    font-family: var(--ens-serif);
     font-size: 1.2em;
+    color: var(--ens-medium-blue);
 }
 
 .button {
