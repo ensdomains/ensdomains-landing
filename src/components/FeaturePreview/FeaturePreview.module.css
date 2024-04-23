@@ -23,7 +23,8 @@
 }
 
 .text {
-  width: 412px;
+  max-width: 412px;
+  max-width: 100%;
 }
 
 .dot {
