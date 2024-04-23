@@ -1,5 +1,7 @@
+import clsx from 'clsx';
 import React from 'react';
 
+import ui from '../../styles/ui.module.css';
 import styles from './Footer.module.css';
 
 const footerItems = [
@@ -77,7 +79,7 @@ export default function Footer() {
                     ))}
                 </div>
             </footer>
-            <div className={styles.extra}></div>
+            <div className={clsx(styles.extra, ui['dots-bg'])}></div>
         </>
     );
 }
