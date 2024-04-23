@@ -1,10 +1,14 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 
+import clsx from 'clsx';
+
 import Footer from '../../../components/Footer/Footer';
 import { LinkList } from '../../../components/LinkList/LinkList';
 import { Navbar } from '../../../components/Navbar/Navbar';
 import { Language } from '../../../i18n/settings';
 import { useTranslation } from '../../../i18n/useTranslation';
+import ui from '../../../styles/ui.module.css';
+import styles from './page.module.css';
 
 export default async function Home({
     params,
@@ -17,6 +21,18 @@ export default async function Home({
     return (
         <div className="page">
             <Navbar t={t} lang={params.lang} />
+            <header
+                className={clsx(
+                    ui['flex'],
+                    ui['flex-center'],
+                    ui['flex-col'],
+                    styles.header
+                )}
+            >
+                <div>{t('ecosystem.hero.tag')}</div>
+                <h1 className={styles.h1}>{t('ecosystem.hero.title')}</h1>
+                <p className={styles.p}>{t('ecosystem.hero.text')}</p>
+            </header>
 
             <div>Ready for integration?</div>
 

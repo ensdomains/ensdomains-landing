@@ -1,10 +1,14 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 
+import clsx from 'clsx';
+
 import Footer from '../../../components/Footer/Footer';
 import { LinkList } from '../../../components/LinkList/LinkList';
 import { Navbar } from '../../../components/Navbar/Navbar';
 import { Language } from '../../../i18n/settings';
 import { useTranslation } from '../../../i18n/useTranslation';
+import ui from '../../../styles/ui.module.css';
+import styles from './page.module.css';
 
 export default async function Home({
     params,
@@ -18,13 +22,18 @@ export default async function Home({
         <div className="page">
             <Navbar t={t} lang={params.lang} />
 
-            <div>Your platform for change</div>
-            <div>
-                Our DAO is more than a component of our governance; it's the
-                lifeblood of our decentralized ethos. Designed for longevity,
-                the DAO nurtures ENS's resilience and flexibility, evolving
-                through a tapestry of community voices.
-            </div>
+            <header
+                className={clsx(
+                    ui['flex'],
+                    ui['flex-center'],
+                    ui['flex-col'],
+                    styles.header
+                )}
+            >
+                <div>{t('governance.hero.tag')}</div>
+                <h1 className={styles.h1}>{t('governance.hero.title')}</h1>
+                <p className={styles.p}>{t('governance.hero.text')}</p>
+            </header>
 
             <div>$ENS: Power to the People</div>
 
