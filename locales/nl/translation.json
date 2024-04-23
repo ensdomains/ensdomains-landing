@@ -3,8 +3,11 @@
     "learnMore": "Lees meer"
   },
   "nav": {
-    "about": "Organisatie",
+    "developers": "Developers",
+    "ecosystem": "Ecosysteem",
+    "governance": "Bestuur",
     "blog": "Blog",
+    "roadmap": "Roadmap",
     "launch": "Open App"
   },
   "home": {

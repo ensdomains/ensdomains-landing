@@ -3,7 +3,7 @@ import resourcesToBackend from 'i18next-resources-to-backend';
 import { useParams } from 'next/navigation';
 import { initReactI18next } from 'react-i18next/initReactI18next';
 
-import { getOptions, Language } from './settings';
+import { fallbackLng, getOptions, Language } from './settings';
 
 const initI18next = async (lng: Language, ns: string | string[]) => {
     const i18nInstance = createInstance();
@@ -21,7 +21,7 @@ const initI18next = async (lng: Language, ns: string | string[]) => {
     return i18nInstance;
 };
 
-export const useCurrentLanguage = (lang: Language = 'en'): Language => {
+export const useCurrentLanguage = (lang: Language = fallbackLng): Language => {
     const parameters = useParams();
 
     return (parameters['lang'] as Language) || lang;

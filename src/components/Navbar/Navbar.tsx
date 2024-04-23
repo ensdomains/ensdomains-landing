@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { FC } from 'react';
 import { ExternalLink } from 'react-external-link';
 
+import { getLangPrefix } from '../../i18n/langPrefix';
 import { Language } from '../../i18n/settings';
 import ui from '../../styles/ui.module.css';
-// import { mq, useMq } from '../../utils/useMq';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import styles from './Navbar.module.css';
 
@@ -14,11 +14,11 @@ export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
     t,
     lang,
 }) => {
-    // const isTablet = useMq(mq.tablet);
+    const langPrefix = getLangPrefix(lang);
 
     return (
         <nav className={clsx(ui.flex, ui['flex-row'], styles.nav)}>
-            <Link href="/">
+            <Link href={langPrefix || '/'}>
                 <img
                     src={'/assets/ens_logo_dark.svg'}
                     height="30"
@@ -50,7 +50,7 @@ export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
                                 item == 'roadmap'
                                 ? // placeholder url
                                   'https://v3x.fyi/s1'
-                                : `/${lang}/${item}`;
+                                : `${langPrefix}/${item}`;
 
                         return (
                             <Link href={url} className={styles.link}>
