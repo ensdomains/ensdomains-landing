@@ -43,6 +43,7 @@ export default async function Home({
                         backgroundColor="ens-light-blue"
                         indicatorColor="ens-white"
                         position={0}
+                        gridSrc="/assets/blue-grid.svg"
                     />
                     <FeaturePreview
                         title="lol"
@@ -51,6 +52,16 @@ export default async function Home({
                         backgroundColor="ens-light-magenta"
                         indicatorColor="ens-white"
                         position={1}
+                        gridSrc="/assets/magenta-grid.svg"
+                    />
+                    <FeaturePreview
+                        title="lol"
+                        text="kekw2"
+                        textColor="ens-green"
+                        backgroundColor="ens-light-green"
+                        indicatorColor="ens-white"
+                        position={1}
+                        gridSrc="/assets/green-grid.svg"
                     />
                 </Carousel>
 

@@ -5,6 +5,8 @@
   height: 790px;
   padding: 10px;
   border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .menubar {
@@ -16,6 +18,8 @@
 
 .headline {
   padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .dot {

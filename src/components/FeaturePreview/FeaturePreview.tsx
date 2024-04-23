@@ -34,6 +34,7 @@ export const FeaturePreview: FC<
         textColor: Color;
         position: 0 | 1 | 2;
         indicatorColor: Color;
+        gridSrc: `/${string}`;
     } & Omit<HTMLAttributes<HTMLDivElement>, 'title'>
 > = ({
     title,
@@ -45,6 +46,7 @@ export const FeaturePreview: FC<
     textColor,
     style,
     position: currentPosition,
+    gridSrc,
     ...properties
 }) => {
     return (
@@ -53,6 +55,7 @@ export const FeaturePreview: FC<
             title={title}
             style={
                 {
+                    backgroundImage: `url(${gridSrc})`,
                     ...style,
                     '--feature-bg': `var(--${backgroundColor})`,
                     '--feature-text': `var(--${textColor})`,
