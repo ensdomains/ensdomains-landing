@@ -7,21 +7,30 @@
 
 .container {
   position: relative;
+  max-width: 824px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .container > :nth-child(1) {
   right: 0px;
+  opacity: 0;
 }
 
 .container > :nth-child(1).animating {
-  right: 100px;
+  right: 25px;
+  opacity: 1;
 }
 
 .container > :nth-child(2) {
   left: 0px;
+  opacity: 0;
+  top: 104px;
   transition-delay: 1s;
 }
 
 .container > :nth-child(2).animating {
-  left: 100px;
+  left: 50px;
+  opacity: 1;
 }
