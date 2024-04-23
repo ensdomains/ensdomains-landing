@@ -5,16 +5,16 @@ import { FC } from 'react';
 import { ExternalLink } from 'react-external-link';
 
 import { getLangPrefix } from '../../i18n/langPrefix';
-import { Language } from '../../i18n/settings';
+import { fallbackLng, Language } from '../../i18n/settings';
 import ui from '../../styles/ui.module.css';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import styles from './Navbar.module.css';
 
 export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
     t,
-    lang,
+    lang = fallbackLng,
 }) => {
-    const langPrefix = getLangPrefix(lang);
+    const langPrefix = getLangPrefix((lang as Language) || fallbackLng);
 
     return (
         <nav className={clsx(ui.flex, ui['flex-row'], styles.nav)}>
