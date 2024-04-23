@@ -5,6 +5,7 @@ import { Navbar } from '../components/Navbar/Navbar';
 import { SearchInput } from '../components/SearchInput/SearchInput';
 import { fallbackLng, Language } from '../i18n/settings';
 import { useTranslation } from '../i18n/useTranslation';
+import ui from '../styles/ui.module.css';
 
 /* eslint-disable unicorn/prevent-abbreviations */
 export default async function Home({
@@ -23,8 +24,9 @@ export default async function Home({
                 description={t('home.hero.text')}
             />
             <SearchInput t={t} />
-            <section>
+            <section className={ui['w-page']}>
                 <h2>{t('home.features.title')}</h2>
+                <p>{t('home.features.text')}</p>
             </section>
         </main>
     );

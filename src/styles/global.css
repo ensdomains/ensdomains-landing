@@ -69,6 +69,15 @@ h2 {
     line-height: 90%;
 }
 
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 80px;
+    }
+    h2 {
+        font-size: 64px;
+    }
+}
+
 p {
     font-family: var(--ens-serif);
     font-size: 20px;

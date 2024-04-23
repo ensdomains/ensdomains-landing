@@ -23,6 +23,7 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    padding: 200px 0;
 }
 
 @media (min-width: 1600px) {
@@ -56,19 +57,4 @@
 
 .button:hover {
     /* background-color: var(--ens-light-blue); */
-}
-
-.sub1 {
-    /* TODO: Convert to rem */
-    font-size: 100px;
-}
-
-.sub2 {
-    /* TODO: Convert to rem */
-    font-size: 64px;
-}
-
-.sub3 {
-    /* TODO: Convert to rem */
-    font-size: 36px;
 }
