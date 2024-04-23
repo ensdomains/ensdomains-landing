@@ -1,13 +1,10 @@
 'use client';
 
-import { clsx } from 'clsx';
-
+import { Header } from '../components/Header/Header';
 import { Navbar } from '../components/Navbar/Navbar';
 import { SearchInput } from '../components/SearchInput/SearchInput';
 import { fallbackLng, Language } from '../i18n/settings';
 import { useTranslation } from '../i18n/useTranslation';
-import ui from '../styles/ui.module.css';
-import styles from './page.module.css';
 
 /* eslint-disable unicorn/prevent-abbreviations */
 export default async function Home({
@@ -20,24 +17,15 @@ export default async function Home({
     return (
         <main>
             <Navbar t={t} lang={lang} />
-            <header
-                className={clsx(
-                    ui['flex'],
-                    ui['flex-center'],
-                    ui['flex-col'],
-                    styles.header
-                )}
+            <Header
+                tag=""
+                title={t('home.hero.title')}
+                subtitle={t('home.hero.subtitle')}
+                description={t('home.hero.text')}
+                color=""
             >
-                <h1 className={styles.h1}>
-                    {t('home.hero.title')}
-                    <br />
-                    <span className={styles.feelBetter}>
-                        {t('home.hero.subtitle')}
-                    </span>
-                </h1>
-                <p className={styles.p}>{t('home.hero.text')}</p>
                 <SearchInput t={t} />
-            </header>
+            </Header>
         </main>
     );
 }

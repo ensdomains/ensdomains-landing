@@ -3,12 +3,12 @@
 import clsx from 'clsx';
 
 import Footer from '../../../components/Footer/Footer';
+import { Header } from '../../../components/Header/Header';
 import { LinkList } from '../../../components/LinkList/LinkList';
 import { Navbar } from '../../../components/Navbar/Navbar';
 import { Language } from '../../../i18n/settings';
 import { useTranslation } from '../../../i18n/useTranslation';
 import ui from '../../../styles/ui.module.css';
-import styles from './page.module.css';
 
 export default async function Home({
     params,
@@ -22,21 +22,15 @@ export default async function Home({
         <div className="page">
             <Navbar t={t} lang={params.lang} />
 
-            <header
-                className={clsx(
-                    ui['flex'],
-                    ui['flex-center'],
-                    ui['flex-col'],
-                    styles.header
-                )}
-            >
-                <div>{t('governance.hero.tag')}</div>
-                <h1 className={styles.h1}>{t('governance.hero.title')}</h1>
-                <p className={styles.p}>{t('governance.hero.text')}</p>
-            </header>
+            <Header
+                tag={t('governance.hero.tag')}
+                title={t('governance.hero.title')}
+                description={t('governance.hero.text')}
+                color=""
+            />
 
             <div className={clsx(ui.sub1, ui['w-page'])}>
-                $ENS: Power to the People
+                $ENS: Power to the People H
             </div>
 
             <div className={ui['w-page']}>
