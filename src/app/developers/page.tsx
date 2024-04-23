@@ -34,7 +34,6 @@ export default async function Home({
                 tag={t('developers.hero.tag')}
                 title={t('developers.hero.title')}
                 description={t('developers.hero.text')}
-                color=""
                 cta={[
                     [t('developers.hero.cta1'), 'https://docs.ens.domains'],
                     [
