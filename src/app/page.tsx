@@ -40,7 +40,13 @@ export default async function Home({
                         text="kekw"
                         textColor="ens-blue"
                         backgroundColor="ens-light-blue"
-                    ></FeaturePreview>
+                    />
+                    <FeaturePreview
+                        title="lol"
+                        text="kekw2"
+                        textColor="ens-magenta"
+                        backgroundColor="ens-light-magenta"
+                    />
                 </Carousel>
             </section>
         </main>

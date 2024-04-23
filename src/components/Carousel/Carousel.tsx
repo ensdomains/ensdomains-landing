@@ -1,5 +1,7 @@
 import { FC, ReactNode } from 'react';
 
-export const Carousel: FC<{ children: ReactNode }> = ({ children }) => {
-    return <div>{children}</div>;
+import styles from './Carousel.module.css';
+
+export const Carousel: FC<{ children: ReactNode[] }> = ({ children }) => {
+    return <div className={styles.carousel}>{children}</div>;
 };
