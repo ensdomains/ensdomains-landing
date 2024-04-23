@@ -2,13 +2,20 @@ import '../styles/global.css';
 
 import { clsx } from 'clsx';
 import { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 import { ReactNode } from 'react';
+
+const inter = Inter({
+    weight: 'variable',
+    variable: '--ens-sans-fb',
+    subsets: ['cyrillic'],
+});
 
 const ABCMonumentGrotesk = localFont({
     src: '../../fonts/variable.woff2',
     variable: '--ens-sans',
-    fallback: ['sans-serif'],
+    fallback: ['var(--ens-sans-fb)', 'sans-serif'],
 });
 
 const ABCMonumentGroteskMono = localFont({
@@ -99,6 +106,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <html
             lang="en"
             className={clsx(
+                inter.variable,
                 ABCMonumentGrotesk.variable,
                 ABCMonumentGroteskMono.variable,
                 ABCMonumentGroteskSemiMono.variable,

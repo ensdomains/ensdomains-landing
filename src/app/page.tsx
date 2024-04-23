@@ -18,14 +18,15 @@ export default async function Home({
         <main>
             <Navbar t={t} lang={lang} />
             <Header
-                tag=""
                 title={t('home.hero.title')}
                 subtitle={t('home.hero.subtitle')}
                 description={t('home.hero.text')}
-                color=""
             >
                 <SearchInput t={t} />
             </Header>
+            <section>
+                <h2>{t('home.features.title')}</h2>
+            </section>
         </main>
     );
 }
