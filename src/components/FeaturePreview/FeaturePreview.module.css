@@ -1,0 +1,7 @@
+.container {
+  background-color: var(--feature-bg);
+  color: var(--feature-text);
+  height: 790px;
+  padding: 10px;
+  border-radius: 4px;
+}

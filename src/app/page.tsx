@@ -2,6 +2,8 @@
 
 import { clsx } from 'clsx';
 
+import { Carousel } from '../components/Carousel/Carousel';
+import { FeaturePreview } from '../components/FeaturePreview/FeaturePreview';
 import { Header } from '../components/Header/Header';
 import { Navbar } from '../components/Navbar/Navbar';
 import { SearchInput } from '../components/SearchInput/SearchInput';
@@ -32,7 +34,14 @@ export default async function Home({
                     <h2>{t('home.features.title')}</h2>
                     <p>{t('home.features.text')}</p>
                 </div>
-                <div></div>
+                <Carousel>
+                    <FeaturePreview
+                        title="lol"
+                        text="kekw"
+                        textColor="ens-blue"
+                        backgroundColor="ens-light-blue"
+                    ></FeaturePreview>
+                </Carousel>
             </section>
         </main>
     );
