@@ -34,7 +34,9 @@ export default async function Home({
                 <p className={styles.p}>{t('ecosystem.hero.text')}</p>
             </header>
 
-            <div>Ready for integration?</div>
+            <div className={clsx(ui.sub1, ui['w-page'])}>
+                Ready for integration?
+            </div>
 
             <LinkList
                 links={[
@@ -60,9 +62,11 @@ export default async function Home({
                 ]}
             />
 
-            <div>exploring a partnership?</div>
+            <div className={clsx(ui.sub2, ui['w-page'])}>
+                exploring a partnership?
+            </div>
 
-            <div>featured partners</div>
+            <div className={clsx(ui.sub3, ui['w-page'])}>featured partners</div>
 
             <Footer />
         </div>

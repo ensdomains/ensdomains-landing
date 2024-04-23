@@ -34,7 +34,7 @@ export default async function Home({
                 <p className={styles.p}>{t('developers.hero.text')}</p>
             </header>
 
-            <div>Resources</div>
+            <div className={clsx(ui.sub1, ui['w-page'])}>Resources</div>
 
             <LinkList
                 links={[
@@ -70,9 +70,15 @@ export default async function Home({
                 ]}
             />
 
-            <div>grants for gamechangers</div>
+            <div>LR section here</div>
 
-            <div>our bug bounty your peace of mind</div>
+            <div className={clsx(ui.sub2, ui['w-page'])}>
+                grants for gamechangers
+            </div>
+
+            <div className={clsx(ui.sub2, ui['w-page'])}>
+                our bug bounty your peace of mind
+            </div>
 
             <Footer />
         </div>

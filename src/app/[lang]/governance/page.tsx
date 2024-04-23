@@ -35,15 +35,25 @@ export default async function Home({
                 <p className={styles.p}>{t('governance.hero.text')}</p>
             </header>
 
-            <div>$ENS: Power to the People</div>
+            <div className={clsx(ui.sub1, ui['w-page'])}>
+                $ENS: Power to the People
+            </div>
 
-            <div>your vote your choice</div>
+            <div className={ui['w-page']}>
+                <div className={ui.sub3}>your vote your choice</div>
+            </div>
 
-            <div>empower through delegation</div>
+            <div className={ui['w-page']}>
+                <div className={ui.sub3}>empower through delegation</div>
+            </div>
 
-            <div>grants for game-changers</div>
+            <div className={ui['w-page']}>
+                <div className={ui.sub3}>grants for game-changers</div>
+            </div>
 
-            <div>More Resources</div>
+            <div className={ui['w-page']}>
+                <div className={ui.sub3}>More Resources</div>
+            </div>
 
             <LinkList
                 links={[
@@ -66,9 +76,14 @@ export default async function Home({
                 ]}
             />
 
-            <div>Join the New Internet</div>
+            <div className={clsx(ui.sub2, ui['w-page'])}>
+                Join the New Internet
+            </div>
 
-            <div>A public good shaped by you. Join our community</div>
+            <div className={ui['w-page']}>
+                <div>A public good shaped by you. Join our community</div>
+                <div>Join our community</div>
+            </div>
 
             <Footer />
         </div>

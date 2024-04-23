@@ -57,3 +57,18 @@
 .button:hover {
     /* background-color: var(--ens-light-blue); */
 }
+
+.sub1 {
+    /* TODO: Convert to rem */
+    font-size: 100px;
+}
+
+.sub2 {
+    /* TODO: Convert to rem */
+    font-size: 64px;
+}
+
+.sub3 {
+    /* TODO: Convert to rem */
+    font-size: 36px;
+}
