@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout"
 import Navigation from "../components/NavigationV3/Navigation"
-import RoadmapList from "../components/Roadmap/RoadmapList"
-import RoadmapHeader from "../components/Roadmap/RoadmapHeader"
 import { BreakpointProvider } from "../utils/BreakpointProvider"
 import styled, { css, ThemeProvider } from "styled-components"
 import { ThorinGlobalStyles, lightTheme, mq } from "@ensdomains/thorin_next"
-import L2RoadmapBanner from "../components/Roadmap/L2RoadmapBanner"
+import L2RoadmapHeader from "../components/L2Roadmap/L2RoadmapHeader"
+import L2RoadmapIntroCard from "../components/L2Roadmap/L2RoadmapIntroCard"
+import L2RoadmapFlowMaps from "../components/L2Roadmap/L2RoadmapFlowMaps"
 
 const Content = styled.div(({ theme }) => [
   css`
@@ -32,9 +32,9 @@ export default function Roadmap(props) {
           <ThorinGlobalStyles />
           <Navigation />
           <Content>
-            <RoadmapHeader />
-            <L2RoadmapBanner/>
-            <RoadmapList />
+            <L2RoadmapHeader/>
+            <L2RoadmapIntroCard/>
+            <L2RoadmapFlowMaps />
           </Content>
         </ThemeProvider>
       </BreakpointProvider>

@@ -1,0 +1,72 @@
+[
+  {
+    "type": "user"
+  },
+  {
+    "type": "action",
+    "title": "Name Resolution of .eth"
+  },
+  {
+    "type": "subflow",
+    "title": "Initial contracts for resolution",
+    "chain": "ethereum",
+    "contracts": [
+      {
+        "title": "Universal Resolver",
+        "description": "A contract that can resolve any ENS name to an address",
+        "status": "research",
+        "chain": "ethereum",
+        "githubUrl": "https://github.com/ensdomains/contracts",
+        "docsUrl": "https://docs.ens.domains/"
+      },
+      {
+        "title": "Root Registry",
+        "status": "development",
+        "chain": "ethereum",
+        "githubUrl": "",
+        "docsUrl": ""
+      },
+      {
+        "title": ".eth Registry",
+        "status": "testnet",
+        "chain": "ethereum",
+        "githubUrl": "",
+        "docsUrl": ""
+      },
+      {
+        "title": "Public CCIP-read resolver",
+        "status": "done",
+        "chain": "ethereum",
+        "githubUrl": "",
+        "docsUrl": ""
+      }
+    ]
+  },
+  {
+    "type": "subflow",
+    "title": "Infrastructuure",
+    "chain": "offchain",
+    "contracts": [
+      {
+        "title": "EVM CCIP-read Gateway",
+        "status": "research",
+        "chain": "offchain",
+        "githubUrl": "",
+        "docsUrl": ""
+      }
+    ]
+  },
+  {
+    "type": "chainFlow",
+    "chain": "offchain",
+    "contracts": [
+      {
+        "title": "EVM CCIP-read Gateway",
+        "status": "research",
+        "chain": "offchain",
+        "githubUrl": "",
+        "docsUrl": ""
+      }
+    ]
+  }
+]
