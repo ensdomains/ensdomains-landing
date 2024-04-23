@@ -1,66 +1,67 @@
 import clsx from 'clsx';
-import React from 'react';
+import { TFunction } from 'i18next';
+import React, { FC } from 'react';
 
 import ui from '../../styles/ui.module.css';
 import styles from './Footer.module.css';
 
-const footerItems = [
-    {
-        title: 'Join the community',
-        entries: [
-            { title: 'Blog', link: 'https://blog.ens.domains' },
-            { title: 'Feedback', link: '' },
-            {
-                title: 'Discord',
-                link: 'https://chat.ens.domains',
-            },
-            {
-                title: 'Twitter',
-                link: 'https://x.com/ensdomains',
-            },
-            {
-                title: 'Github',
-                link: 'https://github.com/ensdomains',
-            },
-            {
-                title: 'Youtube',
-                link: 'https://youtube.com/ensdomains',
-            },
-            {
-                title: 'Forums',
-                link: 'https://discuss.ens.domains',
-            },
-        ],
-    },
-    {
-        title: 'Need help?',
-        entries: [
-            {
-                title: 'Support',
-                link: 'https://support.ens.domains',
-            },
-            { title: 'Contact', link: '' },
-        ],
-    },
-    {
-        title: 'ENS',
-        entries: [
-            { title: 'Privacy Policy', link: '' },
-            { title: 'Terms of Use', link: '' },
-            {
-                title: 'Bug Bounty',
-                link: 'https://docs.ens.domains/bugs',
-            },
-            {
-                title: 'Brand',
-                link: 'https://github.com/ensdomains/media-kit',
-            },
-            { title: 'Jobs', link: 'https://' },
-        ],
-    },
-];
+export const Footer: FC<{ t: TFunction<string, string> }> = ({ t }) => {
+    const footerItems = [
+        {
+            title: t('footer.community'),
+            entries: [
+                { title: t('footer.blog'), link: 'https://blog.ens.domains' },
+                { title: t('footer.feedback'), link: '' },
+                {
+                    title: t('footer.discord'),
+                    link: 'https://chat.ens.domains',
+                },
+                {
+                    title: t('footer.twitter'),
+                    link: 'https://x.com/ensdomains',
+                },
+                {
+                    title: t('footer.github'),
+                    link: 'https://github.com/ensdomains',
+                },
+                {
+                    title: t('footer.youtube'),
+                    link: 'https://youtube.com/ensdomains',
+                },
+                {
+                    title: t('footer.forums'),
+                    link: 'https://discuss.ens.domains',
+                },
+            ],
+        },
+        {
+            title: t('footer.help'),
+            entries: [
+                {
+                    title: t('footer.support'),
+                    link: 'https://support.ens.domains',
+                },
+                { title: t('footer.contact'), link: '' },
+            ],
+        },
+        {
+            title: t('footer.ens'),
+            entries: [
+                { title: t('footer.privacy-policy'), link: '' },
+                { title: t('footer.tou'), link: '' },
+                {
+                    title: t('footer.bugs'),
+                    link: 'https://docs.ens.domains/bugs',
+                },
+                {
+                    title: t('footer.brand'),
+                    link: 'https://github.com/ensdomains/media-kit',
+                },
+                { title: t('footer.jobs'), link: 'https://' },
+            ],
+        },
+    ];
 
-export default function Footer() {
     return (
         <>
             <footer className={styles.container}>
@@ -82,4 +83,4 @@ export default function Footer() {
             <div className={clsx(styles.extra, ui['dots-bg'])}></div>
         </>
     );
-}
+};

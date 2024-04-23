@@ -120,5 +120,24 @@
       "cta1": "ENS DAO",
       "cta2": "Proposals"
     }
+  },
+  "footer": {
+    "community": "Join the community",
+    "blog": "Blog",
+    "feedback": "Feedback",
+    "discord": "Discord",
+    "twitter": "Twitter",
+    "github": "Github",
+    "youtube": "Youtube",
+    "forums": "Forums",
+    "help": "Need help?",
+    "support": "Support",
+    "contact": "Contact",
+    "ens": "ENS",
+    "privacy-policy": "Privacy Policy",
+    "tou": "Terms of Use",
+    "bugs": "Bug Bounty",
+    "brand": "Brand",
+    "jobs": "Jobs"
   }
 }

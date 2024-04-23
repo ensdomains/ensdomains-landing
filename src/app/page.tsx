@@ -6,7 +6,7 @@ import { clsx } from 'clsx';
 import { Carousel } from '../components/Carousel/Carousel';
 import { ColorCards } from '../components/ColorCards/ColorCards';
 import { FeaturePreview } from '../components/FeaturePreview/FeaturePreview';
-import Footer from '../components/Footer/Footer';
+import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
 import { Navbar } from '../components/Navbar/Navbar';
 import { SearchInput } from '../components/SearchInput/SearchInput';
@@ -174,7 +174,7 @@ export default async function Home({
                     </span>
                 </div>
             </section>
-            <Footer />
+            <Footer t={t} />
         </main>
     );
 }

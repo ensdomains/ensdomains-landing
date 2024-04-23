@@ -120,5 +120,24 @@
       "cta1": "ENS DAO",
       "cta2": "Voorstellen"
     }
+  },
+  "footer": {
+    "blog": "Blog",
+    "brand": "Press",
+    "bugs": "Bug Bounty",
+    "community": "Sluit je aan bij de gemeenschap",
+    "contact": "Contact",
+    "discord": "Discord",
+    "ens": "ENS",
+    "feedback": "Feedback",
+    "forums": "Forums",
+    "github": "Github",
+    "help": "Hulp nodig?",
+    "jobs": "Werken bij",
+    "privacy-policy": "Privacybeleid",
+    "support": "Ondersteuning",
+    "tou": "Gebruiksvoorwaarden",
+    "twitter": "Twitter",
+    "youtube": "Youtube"
   }
 }

@@ -2,7 +2,7 @@
 import clsx from 'clsx';
 import { CSSProperties } from 'react';
 
-import Footer from '../../components/Footer/Footer';
+import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { LinkList } from '../../components/LinkList/LinkList';
 import { Navbar } from '../../components/Navbar/Navbar';
@@ -123,7 +123,7 @@ export default async function Home({
                 <h3>Our Bug Bounty: Your Peace of Mind</h3>
             </div>
 
-            <Footer />
+            <Footer t={t} />
         </div>
     );
 }
