@@ -58,3 +58,8 @@
 .button:hover {
     /* background-color: var(--ens-light-blue); */
 }
+
+.dots-bg {
+    background-image: radial-gradient(var(--page-text) 1px, transparent 0);
+    background-size: 5px 5px;
+}

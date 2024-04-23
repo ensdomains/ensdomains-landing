@@ -33,8 +33,8 @@ div[role='group'][tabindex] {
     --ens-white: #f6f6f6;
 
     /* Hover states */
-    --ens-hover-blue: #046C9D;
-    --ens-hover-light-blue: #F0F5F8;
+    --ens-hover-blue: #046c9d;
+    --ens-hover-light-blue: #f0f5f8;
 
     --page-text: var(--ens-dark-blue);
     --page-bg: var(--ens-light-blue);
@@ -47,7 +47,13 @@ div[role='group'][tabindex] {
 @custom-media --xLarge (max-width: 1200px);
 @custom-media --tallPhone (max-width: 360px) and (min-height: 740px);
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
 }
 
@@ -57,7 +63,7 @@ h1 {
     font-family: var(--ens-sans);
     font-weight: 500;
     font-size: 124px;
-    letter-spacing: -2.48px; 
+    letter-spacing: -2.48px;
     line-height: 96%;
 }
 
@@ -65,7 +71,7 @@ h2 {
     font-family: var(--ens-sans);
     font-weight: 500;
     font-size: 100px;
-    letter-spacing: -2px; 
+    letter-spacing: -2px;
     line-height: 90%;
 }
 
@@ -84,7 +90,8 @@ p {
     line-height: 112%;
 }
 
-button,input {
+button,
+input {
     border-style: none;
 }
 
@@ -94,10 +101,10 @@ a {
 
 details summary {
     position: relative;
-  }
+}
 
 details summary::after {
-    content: "▶";
+    content: '▶';
     position: absolute;
     margin-left: 8px;
     bottom: 8px;
@@ -105,13 +112,13 @@ details summary::after {
 }
 
 details[open] summary::after {
-    content: "▼";
+    content: '▼';
 }
 
 summary {
-list-style: none
+    list-style: none;
 }
 
 summary::-webkit-details-marker {
-display: none;
+    display: none;
 }

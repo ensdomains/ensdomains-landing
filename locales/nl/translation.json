@@ -1,43 +1,44 @@
 {
-    "nav": {
-        "developers": "Developers",
-        "ecosystem": "Ecosysteem",
-        "governance": "Bestuur",
-        "blog": "Blog",
-        "roadmap": "Roadmap",
-        "launch": "Open App"
-    },
-    "home": {
-        "hero": {
-            "title": "Maakt het Internet",
-            "subtitle": "Gewoon Beter",
-            "text": "Voor elke dromer, creator en gebruiker die het oude internet beu is.\n ENS is meer dan een protocol: het is een streven naar een beter internet, gebouwd voor en door iedereen.",
-            "inputCaption": "Registreer jou .eth naam"
-        }
-    },
-    "developers": {
-        "hero": {
-            "tag": "Developers",
-            "title": "Bouw met de beste",
-            "text": "Whether you're a web3 newbie or a seasoned pro, we're inviting you to help craft a brighter web. ENS is more than just a protocol—it's a movement towards a trustless internet."
-        }
-    },
-    "ecosystem": {
-        "hero": {
-            "tag": "Ecosysteem",
-            "title": "Vertrouwd door het\nNieuwe Internet",
-            "text": "ENS is een community van pioneers, die samenwerken aan een intuitiever en betrouwbaarder internet. Het draait niet alleen om deelmaken van Web3; maar een leider te zijn.",
-            "cta1": "Hoe ENS Helpt",
-            "cta2": "Integratie Docs"
-        }
-    },
-    "governance": {
-        "hero": {
-            "tag": "Bestuur",
-            "title": "Jouw platform voor verandering",
-            "text": "Our DAO is the lifeblood of our decentralized ethos. Designed for longevity, the DAO nurtures ENS's resilience and flexibility, evolving through a tapestry of community voices.",
-            "cta1": "ENS DAO",
-            "cta2": "Voorstellen"
-        }
+  "nav": {
+    "developers": "Developers",
+    "ecosystem": "Ecosysteem",
+    "governance": "Bestuur",
+    "blog": "Blog",
+    "roadmap": "Roadmap",
+    "launch": "Open App"
+  },
+  "home": {
+    "hero": {
+      "title": "Maakt het Internet",
+      "subtitle": "Gewoon Beter",
+      "text": "Voor elke dromer, creator en gebruiker die het oude internet beu is.\n ENS is meer dan een protocol: het is een streven naar een beter internet, gebouwd voor en door iedereen.",
+      "inputCaption": "Registreer jou .eth naam"
     }
+  },
+  "developers": {
+    "hero": {
+      "tag": "Developers",
+      "title": "Bouw met de beste",
+      "text": "Of u nu een nieuweling op het gebied van web3 bent of een doorgewinterde professional, wij nodigen u uit om te helpen een helderder internet te creëren. \nENS is meer dan alleen een protocol: het is een beweging in de richting van een betrouwbaar internet.",
+      "cta1": "Developer Documentatie"
+    }
+  },
+  "ecosystem": {
+    "hero": {
+      "tag": "Ecosysteem",
+      "title": "Vertrouwd door het\nNieuwe Internet",
+      "text": "ENS is een community van pioneers, die samenwerken aan een intuitiever en betrouwbaarder internet. Het draait niet alleen om deelmaken van Web3; maar een leider te zijn.",
+      "cta1": "Hoe ENS Helpt",
+      "cta2": "Integratie Docs"
+    }
+  },
+  "governance": {
+    "hero": {
+      "tag": "Bestuur",
+      "title": "Jouw platform voor verandering",
+      "text": "Our DAO is the lifeblood of our decentralized ethos. Designed for longevity, the DAO nurtures ENS's resilience and flexibility, evolving through a tapestry of community voices.",
+      "cta1": "ENS DAO",
+      "cta2": "Voorstellen"
+    }
+  }
 }
