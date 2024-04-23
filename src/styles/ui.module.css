@@ -20,7 +20,7 @@
 }
 
 .w-page {
-    max-width: 1200px;
+    max-width: 85vw;
     width: 100%;
     margin: 0 auto;
     padding: 200px 0;
@@ -57,9 +57,4 @@
 
 .button:hover {
     /* background-color: var(--ens-light-blue); */
-}
-
-.dots-bg {
-    background-image: radial-gradient(var(--page-text) 1px, transparent 0);
-    background-size: 5px 5px;
 }
