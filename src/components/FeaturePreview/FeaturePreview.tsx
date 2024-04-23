@@ -34,7 +34,8 @@ export const FeaturePreview: FC<
             }
             className={clsx(className, styles.container)}
         >
-            <div>
+            <div className={styles.menubar}></div>
+            <div className={styles.headline}>
                 <h3>{title}</h3>
                 <p>{text}</p>
             </div>
