@@ -100,7 +100,9 @@
         "hero": {
             "tag": "Developers",
             "title": "Build in good company",
-            "text": "Whether you're a web3 newbie or a seasoned pro, we're inviting you to help craft a brighter web. ENS is more than just a protocol—it's a movement towards a trustless internet."
+            "text": "Whether you're a web3 newbie or a seasoned pro, we're inviting you to help craft a brighter web. ENS is more than just a protocol—it's a movement towards a trustless internet.",
+            "cta1": "Developer Docs",
+            "cta2": "Github"
         }
     },
     "ecosystem": {
@@ -108,8 +110,8 @@
             "tag": "Ecosystem",
             "title": "Trusted by the\nNew Internet",
             "text": "ENS is a community of pioneers, collectively shaping a more intuitive and trustworthy internet. It's not just about being part of Web3; it's about leading it.",
-            "btn1": "How ENS Helps",
-            "btn2": "Integration Docs"
+            "cta1": "How ENS Helps",
+            "cta2": "Integration Docs"
         }
     },
     "governance": {
@@ -117,8 +119,8 @@
             "tag": "Governance",
             "title": "Your platform for change",
             "text": "Our DAO is the lifeblood of our decentralized ethos. Designed for longevity, the DAO nurtures ENS's resilience and flexibility, evolving through a tapestry of community voices.",
-            "btn1": "ENS DAO",
-            "btn2": "Proposals"
+            "cta1": "ENS DAO",
+            "cta2": "Proposals"
         },
         "claim": "Claim your $ENS",
         "discord": "Chat on Discord",

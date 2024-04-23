@@ -26,6 +26,13 @@ export default async function Home({
                 title={t('developers.hero.title')}
                 description={t('developers.hero.text')}
                 color=""
+                cta={[
+                    [t('developers.hero.cta1'), 'https://docs.ens.domains'],
+                    [
+                        t('developers.hero.cta2'),
+                        'https://github.com/ensdomains',
+                    ],
+                ]}
             />
 
             <div className={clsx(ui.sub1, ui['w-page'])}>Resources</div>

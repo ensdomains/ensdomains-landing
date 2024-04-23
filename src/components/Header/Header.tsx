@@ -11,8 +11,9 @@ export const Header: FC<
         description?: string;
         tag?: string;
         color?: string;
+        cta?: [string, string][];
     }>
-> = ({ title, subtitle, tag, description, color, children }) => {
+> = ({ title, subtitle, tag, description, color, children, cta }) => {
     return (
         <header
             className={clsx(
@@ -34,6 +35,15 @@ export const Header: FC<
             </h1>
             {description && <p className={styles.p}>{description}</p>}
             {children}
+            {cta && (
+                <div className={styles.cta}>
+                    {cta.map(([text, url]) => (
+                        <a key={url} href={url} className={clsx(ui.button)}>
+                            {text}
+                        </a>
+                    ))}
+                </div>
+            )}
         </header>
     );
 };
