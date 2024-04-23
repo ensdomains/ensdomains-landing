@@ -1,6 +1,6 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 
-import Footer from '../../components/Footer/Footer';
+import { Footer } from '../../components/Footer/Footer';
 import { LinkList } from '../../components/LinkList/LinkList';
 import { Navbar } from '../../components/Navbar/Navbar';
 import { Language } from '../../i18n/settings';
@@ -42,7 +42,7 @@ export default async function Home({
                 ]}
             />
 
-            <Footer />
+            <Footer t={t} />
         </div>
     );
 }

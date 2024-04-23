@@ -13,6 +13,66 @@
       "subtitle": "Gewoon Beter",
       "text": "Voor elke dromer, creator en gebruiker die het oude internet beu is.\n ENS is meer dan een protocol: het is een streven naar een beter internet, gebouwd voor en door iedereen.",
       "inputCaption": "Registreer jou .eth naam"
+    },
+    "features": {
+      "consistent": {
+        "text": "Neem uw identiteit gemakkelijk mee tussen services en platforms. \nVergeet het gedoe van meerdere gebruikersnamen.",
+        "title": "Consistent op het internet."
+      },
+      "farewell": {
+        "text": "Geen verwarrende hexadecimale adressen meer. \nUw ENS-naam is gemakkelijk te onthouden en gemakkelijk te delen.",
+        "title": "Neem Afscheid van complexiteit."
+      },
+      "ownership": {
+        "text": "Je ENS-naam is van jou, punt uit. \nGeen tussenpersonen, geen administratieve rompslomp. \nHet is jouw eigendom, ongecensureerd en onherroepelijk.",
+        "title": "Echt eigendom."
+      },
+      "text": "Uw ENS-naam is verankerd in Web3, maar werkt via internet.\nHet is jouw identiteit: eenvoudig, makkelijk te onthouden, en onmiskenbaar de jouwe.",
+      "title": "Uw naam"
+    },
+    "extra": {
+      "community": {
+        "button": "Volg ons",
+        "description": "Lorem ipsum.",
+        "tag": "Gemeenschap",
+        "title": "Sluit je aan bij onze gemeenschap"
+      },
+      "governance": {
+        "button": "Meer over ENS-governance",
+        "description": "ENS is meer dan een non-profitorganisatie: het is een door de gemeenschap bestuurd baken van vertrouwen. \nWerk mee aan het vormgeven van een internet waar iedereen een stem heeft.",
+        "tag": "Bestuur",
+        "title": "Een publiek goed, gevormd door jou"
+      }
+    },
+    "gateway": {
+      "description": "Stel je een wereld voor waarin elk product met elkaar verbonden is tussen internet en web3, waardoor een uniforme, innovatieve ervaring ontstaat.",
+      "title": "Uw toegangspoort tot het nieuwe internet"
+    },
+    "gyow": {
+      "description": "Vind jouw unieke pad in het ENS-ecosysteem. \nWaar je ook begint, we werken allemaal aan een beter internet.",
+      "docs": {
+        "description": "Je bent een ontwikkelaar en je wilt bouwen aan het nieuwe internet.",
+        "title": "Documenten voor ontwikkelaars"
+      },
+      "ens-app": {
+        "description": "Uw ENS-reis begint hier, door uw naam te registreren.",
+        "title": "ENS App"
+      },
+      "ens-dao": {
+        "description": "Sluit u aan bij de ENS-gemeenschap en draag samen met een mondiaal collectief bij.",
+        "title": "ENS DAO"
+      },
+      "title": "Je eigen weg gaan"
+    },
+    "partners": {
+      "button": "Ontdek het ENS-ecosysteem",
+      "description": "Deze samenwerkingspartners leggen de lat hoger bij het verbeteren van het internet en profileren zich als belangrijke partners van ENS.",
+      "tag": "Essentiële partners"
+    },
+    "stats": {
+      "integrations": "%s integraties",
+      "names": "%s namen",
+      "owners": "%s eigenaren"
     }
   },
   "developers": {
@@ -20,7 +80,27 @@
       "tag": "Developers",
       "title": "Bouw met de beste",
       "text": "Of u nu een nieuweling op het gebied van web3 bent of een doorgewinterde professional, wij nodigen u uit om te helpen een helderder internet te creëren. \nENS is meer dan alleen een protocol: het is een beweging in de richting van een betrouwbaar internet.",
-      "cta1": "Developer Documentatie"
+      "cta1": "Developer Documentatie",
+      "cta2": "Github"
+    },
+    "resources": {
+      "ccip-read": {
+        "description": "Het Cross Chain Interoperability Protocol (of kortweg CCIP Read) kan informatie laden via een zogenaamde \"Gateway\"."
+      },
+      "documentation": {
+        "description": "Protocoldocumentatie.",
+        "title": "Documentatie"
+      },
+      "ensjs": {
+        "description": "De ultieme ENS javascript-library, met viem onder de motorkap."
+      },
+      "evmgateway": {
+        "description": "Deze repository implementeert een generieke CCIP-Read-gateway voor het ophalen van state proofs van gegevens op andere EVM chains. \nMet als doel dat contracten op L1 gegevens uit contracten op L2 kunnen ophalen en verifiëren."
+      },
+      "thorin": {
+        "description": "Ontwerpsysteem voor ENS gebouwd met React en styled-components."
+      },
+      "title": "Content"
     }
   },
   "ecosystem": {
@@ -40,5 +120,24 @@
       "cta1": "ENS DAO",
       "cta2": "Voorstellen"
     }
+  },
+  "footer": {
+    "blog": "Blog",
+    "brand": "Press",
+    "bugs": "Bug Bounty",
+    "community": "Sluit je aan bij de gemeenschap",
+    "contact": "Contact",
+    "discord": "Discord",
+    "ens": "ENS",
+    "feedback": "Feedback",
+    "forums": "Forums",
+    "github": "Github",
+    "help": "Hulp nodig?",
+    "jobs": "Werken bij",
+    "privacy-policy": "Privacybeleid",
+    "support": "Ondersteuning",
+    "tou": "Gebruiksvoorwaarden",
+    "twitter": "Twitter",
+    "youtube": "Youtube"
   }
 }

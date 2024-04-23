@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { CSSProperties } from 'react';
 
 import { ColorCards } from '../../components/ColorCards/ColorCards';
-import Footer from '../../components/Footer/Footer';
+import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { LinkList } from '../../components/LinkList/LinkList';
 import { Navbar } from '../../components/Navbar/Navbar';
@@ -127,7 +127,7 @@ export default async function Home({
                 </div>
             </div>
 
-            <Footer />
+            <Footer t={t} />
         </div>
     );
 }
