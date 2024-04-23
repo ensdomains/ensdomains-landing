@@ -37,7 +37,7 @@
 }
 
 .link:hover {
-    color: var(--ens-hover-blue);
+    color: var(--link-hover);
 }
 
 .links {

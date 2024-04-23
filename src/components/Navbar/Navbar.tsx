@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { TFunction } from 'i18next';
 import Link from 'next/link';
-import { FC } from 'react';
+import { CSSProperties, FC } from 'react';
 import { ExternalLink } from 'react-external-link';
 
 import { getLangPrefix } from '../../i18n/langPrefix';
@@ -52,8 +52,23 @@ export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
                                   'https://v3x.fyi/s1'
                                 : `${langPrefix}/${item}`;
 
+                        const color =
+                            {
+                                developers: '--ens-magenta',
+                                ecosystem: '--ens-blue',
+                                governance: '--ens-green',
+                            }[item] || '--ens-hover-blue';
+
                         return (
-                            <Link href={url} className={styles.link}>
+                            <Link
+                                href={url}
+                                className={styles.link}
+                                style={
+                                    {
+                                        '--link-hover': 'var(' + color + ')',
+                                    } as CSSProperties
+                                }
+                            >
                                 {t(`nav.${item}`)}
                             </Link>
                         );
