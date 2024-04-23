@@ -43,7 +43,7 @@ export default async function Home({
                 ]}
             />
 
-            <div className={clsx(ui.sub1, ui['w-page'])}>Resources</div>
+            <h2 className={clsx(ui['w-page'])}>Resources</h2>
 
             <LinkList
                 links={[
@@ -79,15 +79,17 @@ export default async function Home({
                 ]}
             />
 
-            <div>LR section here</div>
-
-            <div className={clsx(ui.sub2, ui['w-page'])}>
-                grants for gamechangers
+            <div>
+                LR section here
+                <h4>New to Web3?</h4>
+                <h4>For the Web3 wizards</h4>
             </div>
 
-            <div className={clsx(ui.sub2, ui['w-page'])}>
+            <h3 className={clsx(ui['w-page'])}>grants for gamechangers</h3>
+
+            <h3 className={clsx(ui['w-page'])}>
                 our bug bounty your peace of mind
-            </div>
+            </h3>
 
             <Footer />
         </div>

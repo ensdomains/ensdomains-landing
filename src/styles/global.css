@@ -79,6 +79,24 @@ h2 {
     line-height: 90%;
 }
 
+h3 {
+    font-family: var(--ens-sans);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 96%; /* 61.44px */
+    letter-spacing: -1.28px;
+}
+
+h4 {
+    font-family: var(--ens-sans);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 96%; /* 34.56px */
+    letter-spacing: -0.72px;
+}
+
 @media (max-width: 1024px) {
     h1 {
         font-size: 80px;

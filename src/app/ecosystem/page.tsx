@@ -41,9 +41,7 @@ export default async function Home({
                 ]}
             />
 
-            <div className={clsx(ui.sub1, ui['w-page'])}>
-                Ready for integration?
-            </div>
+            <h2 className={clsx(ui['w-page'])}>Ready for integration?</h2>
 
             <LinkList
                 links={[
@@ -69,11 +67,9 @@ export default async function Home({
                 ]}
             />
 
-            <div className={clsx(ui.sub2, ui['w-page'])}>
-                exploring a partnership?
-            </div>
+            <h3 className={clsx(ui['w-page'])}>exploring a partnership?</h3>
 
-            <div className={clsx(ui.sub3, ui['w-page'])}>featured partners</div>
+            <h4 className={clsx(ui['w-page'])}>featured partners</h4>
 
             <Footer />
         </div>

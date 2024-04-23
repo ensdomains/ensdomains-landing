@@ -44,24 +44,22 @@ export default async function Home({
                 ]}
             />
 
-            <div className={clsx(ui.sub1, ui['w-page'])}>
-                $ENS: Power to the People H
+            <h2 className={clsx(ui['w-page'])}>$ENS: Power to the People H</h2>
+
+            <div className={ui['w-page']}>
+                <h4>your vote your choice</h4>
             </div>
 
             <div className={ui['w-page']}>
-                <div className={ui.sub3}>your vote your choice</div>
+                <h4>empower through delegation</h4>
             </div>
 
             <div className={ui['w-page']}>
-                <div className={ui.sub3}>empower through delegation</div>
+                <h4>grants for game-changers</h4>
             </div>
 
             <div className={ui['w-page']}>
-                <div className={ui.sub3}>grants for game-changers</div>
-            </div>
-
-            <div className={ui['w-page']}>
-                <div className={ui.sub3}>More Resources</div>
+                <h4>More Resources</h4>
             </div>
 
             <LinkList
@@ -85,13 +83,11 @@ export default async function Home({
                 ]}
             />
 
-            <div className={clsx(ui.sub2, ui['w-page'])}>
-                Join the New Internet
-            </div>
+            <h2 className={clsx(ui['w-page'])}>Join the New Internet</h2>
 
             <div className={ui['w-page']}>
-                <div>A public good shaped by you. Join our community</div>
-                <div>Join our community</div>
+                <h4>A public good shaped by you.</h4>
+                <h4>Join our community</h4>
             </div>
 
             <Footer />
