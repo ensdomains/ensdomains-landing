@@ -13,6 +13,22 @@
       "subtitle": "Gewoon Beter",
       "text": "Voor elke dromer, creator en gebruiker die het oude internet beu is.\n ENS is meer dan een protocol: het is een streven naar een beter internet, gebouwd voor en door iedereen.",
       "inputCaption": "Registreer jou .eth naam"
+    },
+    "features": {
+      "consistent": {
+        "text": "Neem uw identiteit gemakkelijk mee tussen services en platforms. \nVergeet het gedoe van meerdere gebruikersnamen.",
+        "title": "Consistent op het internet."
+      },
+      "farewell": {
+        "text": "Geen verwarrende hexadecimale adressen meer. \nUw ENS-naam is gemakkelijk te onthouden en gemakkelijk te delen.",
+        "title": "Neem Afscheid van complexiteit."
+      },
+      "ownership": {
+        "text": "Je ENS-naam is van jou, punt uit. \nGeen tussenpersonen, geen administratieve rompslomp. \nHet is jouw eigendom, ongecensureerd en onherroepelijk.",
+        "title": "Echt eigendom."
+      },
+      "text": "Uw ENS-naam is verankerd in Web3, maar werkt via internet.\nHet is jouw identiteit: eenvoudig, makkelijk te onthouden, en onmiskenbaar de jouwe.",
+      "title": "Uw naam"
     }
   },
   "developers": {
@@ -20,7 +36,27 @@
       "tag": "Developers",
       "title": "Bouw met de beste",
       "text": "Of u nu een nieuweling op het gebied van web3 bent of een doorgewinterde professional, wij nodigen u uit om te helpen een helderder internet te creëren. \nENS is meer dan alleen een protocol: het is een beweging in de richting van een betrouwbaar internet.",
-      "cta1": "Developer Documentatie"
+      "cta1": "Developer Documentatie",
+      "cta2": "Github"
+    },
+    "resources": {
+      "ccip-read": {
+        "description": "Het Cross Chain Interoperability Protocol (of kortweg CCIP Read) kan informatie laden via een zogenaamde \"Gateway\"."
+      },
+      "documentation": {
+        "description": "Protocoldocumentatie.",
+        "title": "Documentatie"
+      },
+      "ensjs": {
+        "description": "De ultieme ENS javascript-library, met viem onder de motorkap."
+      },
+      "evmgateway": {
+        "description": "Deze repository implementeert een generieke CCIP-Read-gateway voor het ophalen van state proofs van gegevens op andere EVM chains. \nMet als doel dat contracten op L1 gegevens uit contracten op L2 kunnen ophalen en verifiëren."
+      },
+      "thorin": {
+        "description": "Ontwerpsysteem voor ENS gebouwd met React en styled-components."
+      },
+      "title": "Content"
     }
   },
   "ecosystem": {

@@ -45,38 +45,48 @@ export default async function Home({
             />
 
             <div className={clsx(ui['my-100'], ui['space-y-40'])}>
-                <h2 className={clsx(ui['w-page'])}>Resources</h2>
+                <h2 className={clsx(ui['w-page'])}>
+                    {t('developers.resources.title')}
+                </h2>
 
                 <LinkList
                     links={[
                         {
-                            title: 'Documentation',
+                            title: t(
+                                'developers.resources.documentation.title'
+                            ),
                             href: 'https://docs.ens.domains',
-                            description: 'Protocol Documentation.',
+                            description: t(
+                                'developers.resources.documentation.description'
+                            ),
                         },
                         {
                             title: 'ENSjs',
                             href: 'https://github.com/ensdomains/ensjs-v3',
-                            description:
-                                'The ultimate ENS javascript library, with viem under the hood.',
+                            description: t(
+                                'developers.resources.ensjs.description'
+                            ),
                         },
                         {
                             title: 'CCIP Read',
                             href: 'https://docs.ens.domains/ccip',
-                            description:
-                                'The Cross Chain Interoperability Protocol (or CCIP Read for short), can load information by hitting a so called "Gateway".',
+                            description: t(
+                                'developers.resources.ccip-read.description'
+                            ),
                         },
                         {
                             title: 'EVMGateway',
                             href: 'https://github.com/ensdomains/evmgateway',
-                            description:
-                                'This repository implements a generic CCIP-Read gateway for fetching state proofs of data on other EVM chains. The intended use is for contracts on L1 to be able to fetch and verify data from contracts on L2 in a read context.',
+                            description: t(
+                                'developers.resources.evmgateway.description'
+                            ),
                         },
                         {
                             title: 'Thorin',
                             href: 'https://thorin.ens.domains',
-                            description:
-                                'Design system for ENS built with React and styled-components.',
+                            description: t(
+                                'developers.resources.thorin.description'
+                            ),
                         },
                     ]}
                 />
