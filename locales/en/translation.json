@@ -21,5 +21,67 @@
             "title": "Your name",
             "text": "Your ENS name is anchored in Web3, but works across the internet. It’s your identity: simple, memorable, unmistakably yours."
         }
+    },
+    "developers": {
+        "hero": {
+            "tag": "Developers",
+            "title": "Build in good company",
+            "text": "Whether you're a web3 newbie or a seasoned pro, we're inviting you to help craft a brighter web. ENS is more than just a protocol—it's a movement towards a trustless internet.",
+            "cta1": "Developer Docs",
+            "cta2": "Github"
+        }
+    },
+    "ecosystem": {
+        "hero": {
+            "tag": "Ecosystem",
+            "title": "Trusted by the\nNew Internet",
+            "text": "ENS is a community of pioneers, collectively shaping a more intuitive and trustworthy internet. It's not just about being part of Web3; it's about leading it.",
+            "cta1": "How ENS Helps",
+            "cta2": "Integration Docs"
+        }
+    },
+    "governance": {
+        "hero": {
+            "tag": "Governance",
+            "title": "Your platform for change",
+            "text": "Our DAO is the lifeblood of our decentralized ethos. Designed for longevity, the DAO nurtures ENS's resilience and flexibility, evolving through a tapestry of community voices.",
+            "cta1": "ENS DAO",
+            "cta2": "Proposals"
+        },
+        "claim": "Claim your $ENS",
+        "discord": "Chat on Discord",
+        "discuss": "Join the forum",
+        "governance": "Documentation",
+        "mirror": "Read on Mirror",
+        "dao": "Buy a Constitution",
+        "tally": "Vote on Proposals"
+    },
+    "about": {
+        "hero": "ENS is an open source blockchain-based naming protocol",
+        "aboutENS": {
+            "title": "About ENS",
+            "text": "Started at the Ethereum Foundation in early 2017, ENS is a public good, a basic piece of Internet infrastructure that belongs to the community. Anyone and everyone is free to interact with the protocol as they are permissionless contracts on the Ethereum blockchain.",
+            "support": "We have received generous financial support from:",
+            "support2": "Representatives of ENS participate in the greater Internet community:"
+        },
+        "aboutENSLabs": {
+            "title": "About ENS Labs Limited",
+            "text": "Founded in 2018, ENS Labs Limited is a Singapore-based non-profit organisation and is responsible for the core software development of ENS. This includes the ENS app, open source libraries and core smart contracts"
+        },
+        "team": {
+            "title": "Meet the ENS Labs team"
+        },
+        "benefits": {
+            "title": "Benefits of Ethereum",
+            "text": "Though it supports a wide range of non-Ethereum assets, ENS runs on the Ethereum blockchain. This brings the benefits of decentralization, security, censorship-resistance, and programmability of the Ethereum blockchain to Internet naming, enabling new features like self-custody, composability in the greater Ethereum smart-contract ecosystem, and more."
+        },
+        "root": {
+            "title": "Managing the ENS root",
+            "text": "To facilitate the possibility of upgrades and maintenance, the ENS root is controlled by a four of seven multisig, with members of related projects as keyholders. In the long term, we would like the root multisig to be replaced by some form of distributed decision making process, as such systems become available."
+        }
+    },
+    "constitution": {
+        "title": "ENS constitution book now available",
+        "description": "A printed copy of the ENS constitution and its signers is now available in hardcover and ultra-limited edition of 50"
     }
 }

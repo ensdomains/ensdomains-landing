@@ -1,3 +1,9 @@
+.header {
+    width: 100%;
+    gap: 2rem;
+    min-height: 75vh;
+}
+
 .h1 {
     color: var(--ens-dark-blue);
     max-width: 16ch;
@@ -8,11 +14,6 @@
     width: 412px;
 }
 
-.header {
-    width: 100%;
-    gap: 3.75rem;
-    height: 100vh;
-}
 .h1,
 .p {
     text-align: center;
@@ -22,11 +23,19 @@
     font-family: var(--ens-semi-mono);
     letter-spacing: -3.72px;
 }
+
 .feelBetter::before {
     content: '[';
     color: var(--ens-light-blue);
 }
+
 .feelBetter::after {
     content: ']';
     color: var(--ens-light-blue);
+}
+
+.cta {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
 }

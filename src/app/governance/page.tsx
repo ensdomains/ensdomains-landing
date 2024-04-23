@@ -27,6 +27,13 @@ export default async function Home({
                 title={t('governance.hero.title')}
                 description={t('governance.hero.text')}
                 color=""
+                cta={[
+                    [t('governance.hero.cta1'), 'https://docs.ens.domains/dao'],
+                    [
+                        t('governance.hero.cta2'),
+                        'https://docs.ens.domains/dao/proposals',
+                    ],
+                ]}
             />
 
             <div className={clsx(ui.sub1, ui['w-page'])}>
