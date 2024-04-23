@@ -19,7 +19,7 @@ export const Header: FC<
                 ui['flex'],
                 ui['flex-center'],
                 ui['flex-col'],
-                ui['dots-bg'],
+                tag && ui['dots-bg'],
                 styles.header
             )}
         >
