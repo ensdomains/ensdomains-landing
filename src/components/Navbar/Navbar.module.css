@@ -61,6 +61,10 @@
         /* padding: 20px 0; */
         /* font-size: 14px; */
     }
+    .right {
+        /* temp hide until we build mobile */
+        display: none;
+    }
 }
 
 .tabletOnly {
