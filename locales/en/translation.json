@@ -29,6 +29,50 @@
         "title": "True ownership.",
         "text": "Your ENS name is yours, period. No middlemen, no red tape. It's your property, uncensored - and irrevocable."
       }
+    },
+    "gyow": {
+      "title": "Go your own way",
+      "description": "Find your unique path in the ENS ecosystem. No matter where you start, we're all going toward a better internet.",
+      "ens-app": {
+        "title": "ENS App",
+        "description": "Your ENS journey begins here, by registering your name."
+      },
+      "ens-dao": {
+        "title": "ENS DAO",
+        "description": "Join the ENS community to contribute alongside a global collective."
+      },
+      "docs": {
+        "title": "Developer Docs",
+        "description": "You're a developer, and you want to build on the new internet."
+      }
+    },
+    "gateway": {
+      "title": "Your gateway to the New Internet",
+      "description": "Imagine a world where every product is interconnected between the internet and web3, creating a unified, innovative experience."
+    },
+    "partners": {
+      "tag": "Key Partners",
+      "description": "These collaborators are raising the bar in improving the internet, establishing themselves as key partners with ENS.",
+      "button": "Discover the ENS Ecosystem"
+    },
+    "extra": {
+      "governance": {
+        "title": "A public good, shaped by you",
+        "tag": "Governance",
+        "description": "ENS is more than a non-profit -- it's a community-governed beacon of trust. Take part in shaping an internet where everyone has a voice.",
+        "button": "Learn about ENS Governance"
+      },
+      "community": {
+        "tag": "Community",
+        "title": "Join our community",
+        "description": "Lorem ipsum.",
+        "button": "Where to follow us"
+      }
+    },
+    "stats": {
+      "names": "%s names",
+      "integrations": "%s integrations",
+      "owners": "%s owners"
     }
   },
   "developers": {

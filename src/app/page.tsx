@@ -75,30 +75,24 @@ export default async function Home({
                         ui['space-y-40']
                     )}
                 >
-                    <h3>Go your own way</h3>
+                    <h3>{t('home.gyow.title')}</h3>
                     <p className={clsx(ui['max-w-text'], ui.cursive)}>
-                        Find your unique path in the ENS ecosystem. No matter
-                        where you start, we're all going toward a better
-                        internet.
+                        {t('home.gyow.description')}
                     </p>
                     <div>{/* TODO: Train Tracks */}</div>
                     <ColorCards
                         cards={[
                             {
-                                title: 'ENS App',
-                                description:
-                                    'Your ENs journey begins here, by registering your name.',
+                                title: t('home.gyow.ens-app.title'),
+                                description: t('home.gyow.ens-app.description'),
                             },
                             {
-                                title: 'ENS DAO',
-                                description:
-                                    'Join the ENS community to contribute alongside a global collective.',
+                                title: t('home.gyow.ens-dao.title'),
+                                description: t('home.gyow.ens-dao.description'),
                             },
                             {
-                                title: 'Developer Docs',
-                                description:
-                                    // eslint-disable-next-line prettier/prettier
-                                    'You\'re a developer, and you want to build on the new internet.',
+                                title: t('home.gyow.docs.title'),
+                                description: t('home.gyow.docs.description'),
                             },
                         ]}
                     />
@@ -111,27 +105,23 @@ export default async function Home({
                         ui['space-y-40']
                     )}
                 >
-                    <h3>Your gateway to the New Internet</h3>
+                    <h3>{t('home.gateway.title')}</h3>
                     <p className={clsx(ui['max-w-text'], ui.cursive)}>
-                        Imagine a world where every product is interconnected
-                        between the internet and web3, creating a unified,
-                        innovative experience.
+                        {t('home.gateway.description')}
                     </p>
 
                     <div className={ui['space-y-40']}>
-                        <div>Key Partners</div>
+                        <div>{t('home.partners.tag')}</div>
 
                         <div>
                             <p className={clsx(ui['max-w-text'], ui.cursive)}>
-                                These collaborators are raising the bar in
-                                improving the internet, establishing themselves
-                                as key partners with ENS.
+                                {t('home.partners.description')}
                             </p>
                             <div>{/* TODO: partners here */}</div>
                         </div>
 
                         <button className={ui.button}>
-                            Discover the ENS Ecosystem
+                            {t('home.partners.button')}
                         </button>
                     </div>
                 </div>
@@ -145,19 +135,21 @@ export default async function Home({
                     <TwoCol
                         cols={[
                             {
-                                tag: 'Governance',
-                                title: 'A public good, shaped by you',
-                                description:
-                                    // eslint-disable-next-line prettier/prettier
-                                    'ENS is more than a non-profit -- it\'s a community-governed beacon of trust. Take part in shaping an internet where everyone has a voice.',
-                                button: 'Learn about ENS Governance',
+                                tag: t('home.extra.governance.tag'),
+                                title: t('home.extra.governance.title'),
+                                description: t(
+                                    'home.extra.governance.description'
+                                ),
+                                button: t('home.extra.governance.button'),
                                 href: '/',
                             },
                             {
-                                tag: 'Community',
-                                title: 'Join our community',
-                                description: 'Lorem ipsum.',
-                                button: 'Where to follow us',
+                                tag: t('home.extra.community.tag'),
+                                title: t('home.extra.community.title'),
+                                description: t(
+                                    'home.extra.community.description'
+                                ),
+                                button: t('home.extra.community.button'),
                                 href: '/',
                             },
                         ]}
@@ -170,9 +162,15 @@ export default async function Home({
                         ui['space-y-40']
                     )}
                 >
-                    <span>2,580,000+ names</span>
-                    <span>575+ integrations</span>
-                    <span>745,000 owners</span>
+                    <span>
+                        {t('home.stats.names').replace('%s', '2,580,000+')}
+                    </span>
+                    <span>
+                        {t('home.stats.integrations').replace('%s', '575+')}
+                    </span>
+                    <span>
+                        {t('home.stats.owners').replace('%s', '745,000+')}
+                    </span>
                 </div>
             </section>
         </main>

@@ -29,6 +29,50 @@
       },
       "text": "Uw ENS-naam is verankerd in Web3, maar werkt via internet.\nHet is jouw identiteit: eenvoudig, makkelijk te onthouden, en onmiskenbaar de jouwe.",
       "title": "Uw naam"
+    },
+    "extra": {
+      "community": {
+        "button": "Volg ons",
+        "description": "Lorem ipsum.",
+        "tag": "Gemeenschap",
+        "title": "Sluit je aan bij onze gemeenschap"
+      },
+      "governance": {
+        "button": "Meer over ENS-governance",
+        "description": "ENS is meer dan een non-profitorganisatie: het is een door de gemeenschap bestuurd baken van vertrouwen. \nWerk mee aan het vormgeven van een internet waar iedereen een stem heeft.",
+        "tag": "Bestuur",
+        "title": "Een publiek goed, gevormd door jou"
+      }
+    },
+    "gateway": {
+      "description": "Stel je een wereld voor waarin elk product met elkaar verbonden is tussen internet en web3, waardoor een uniforme, innovatieve ervaring ontstaat.",
+      "title": "Uw toegangspoort tot het nieuwe internet"
+    },
+    "gyow": {
+      "description": "Vind jouw unieke pad in het ENS-ecosysteem. \nWaar je ook begint, we werken allemaal aan een beter internet.",
+      "docs": {
+        "description": "Je bent een ontwikkelaar en je wilt bouwen aan het nieuwe internet.",
+        "title": "Documenten voor ontwikkelaars"
+      },
+      "ens-app": {
+        "description": "Uw ENS-reis begint hier, door uw naam te registreren.",
+        "title": "ENS App"
+      },
+      "ens-dao": {
+        "description": "Sluit u aan bij de ENS-gemeenschap en draag samen met een mondiaal collectief bij.",
+        "title": "ENS DAO"
+      },
+      "title": "Je eigen weg gaan"
+    },
+    "partners": {
+      "button": "Ontdek het ENS-ecosysteem",
+      "description": "Deze samenwerkingspartners leggen de lat hoger bij het verbeteren van het internet en profileren zich als belangrijke partners van ENS.",
+      "tag": "Essentiële partners"
+    },
+    "stats": {
+      "integrations": "%s integraties",
+      "names": "%s namen",
+      "owners": "%s eigenaren"
     }
   },
   "developers": {
