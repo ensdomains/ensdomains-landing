@@ -72,3 +72,8 @@
     /* TODO: Convert to rem */
     font-size: 36px;
 }
+
+.dots-bg {
+    background-image: radial-gradient(var(--page-text) 1px, transparent 0);
+    background-size: 5px 5px;
+}
