@@ -10,8 +10,17 @@
 .menubar {
   border-bottom: 1px solid var(--feature-text);
   width: 100%;
+  gap: 6px;
+  padding-bottom: 10px;
 }
 
 .headline {
   padding: 40px 0;
+}
+
+.dot {
+  background-color: var(--dot-color);
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
 }

@@ -40,12 +40,16 @@ export default async function Home({
                         text="kekw"
                         textColor="ens-blue"
                         backgroundColor="ens-light-blue"
+                        indicatorColor="ens-white"
+                        position={0}
                     />
                     <FeaturePreview
                         title="lol"
                         text="kekw2"
                         textColor="ens-magenta"
                         backgroundColor="ens-light-magenta"
+                        indicatorColor="ens-white"
+                        position={1}
                     />
                 </Carousel>
             </section>
