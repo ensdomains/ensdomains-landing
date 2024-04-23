@@ -37,8 +37,8 @@ export default async function Home({
                 </div>
                 <Carousel>
                     <FeaturePreview
-                        title="lol"
-                        text="kekw"
+                        title={t('home.features.farewell.title')}
+                        text={t('home.features.farewell.text')}
                         textColor="ens-blue"
                         backgroundColor="ens-light-blue"
                         indicatorColor="ens-white"
@@ -46,8 +46,8 @@ export default async function Home({
                         gridSrc="/assets/blue-grid.svg"
                     />
                     <FeaturePreview
-                        title="lol"
-                        text="kekw2"
+                        title={t('home.features.consistent.title')}
+                        text={t('home.features.consistent.text')}
                         textColor="ens-magenta"
                         backgroundColor="ens-light-magenta"
                         indicatorColor="ens-white"
@@ -55,8 +55,8 @@ export default async function Home({
                         gridSrc="/assets/magenta-grid.svg"
                     />
                     <FeaturePreview
-                        title="lol"
-                        text="kekw2"
+                        title={t('home.features.ownership.title')}
+                        text={t('home.features.ownership.text')}
                         textColor="ens-green"
                         backgroundColor="ens-light-green"
                         indicatorColor="ens-white"

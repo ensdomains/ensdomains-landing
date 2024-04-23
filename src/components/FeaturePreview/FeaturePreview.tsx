@@ -72,8 +72,8 @@ export const FeaturePreview: FC<
                 ))}
             </div>
             <div className={styles.headline}>
-                <h3>{title}</h3>
-                <p>{text}</p>
+                <h4>{title}</h4>
+                <p className={styles.text}>{text}</p>
             </div>
             {children}
         </div>

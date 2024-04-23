@@ -16,7 +16,19 @@
         },
         "features": {
             "title": "Your name",
-            "text": "Your ENS name is anchored in Web3, but works across the internet. It's your identity: simple, memorable, unmistakably yours."
+            "text": "Your ENS name is anchored in Web3, but works across the internet. It's your identity: simple, memorable, unmistakably yours.",
+            "farewell": {
+                "title": "Farewell to complexity.",
+                "text": "No more confusing hex addresses. Your ENS name is easy to remember, easy to share."
+            },
+            "consistent": {
+                "title": "Consistent across the internet.",
+                "text": "Carry your identity across services and platforms with ease. Forget the hassle of multiple usernames."
+            },
+            "ownership": {
+                "title": "True ownership.",
+                "text": "Your ENS name is yours, period. No middlemen, no red tape. It's your property, uncensored - and irrevocable."
+            }
         }
     },
     "developers": {

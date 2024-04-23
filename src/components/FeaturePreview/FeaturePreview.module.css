@@ -22,6 +22,10 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+.text {
+  width: 412px;
+}
+
 .dot {
   background-color: var(--dot-color);
   width: 12px;
