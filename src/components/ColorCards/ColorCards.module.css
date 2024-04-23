@@ -1,0 +1,28 @@
+.cards {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cards > div {
+    color: var(--ens-white);
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+.cards > div:nth-child(1) {
+    background: var(--ens-blue);
+}
+
+.cards > div:nth-child(2) {
+    background: var(--ens-green);
+}
+
+.cards > div:nth-child(3) {
+    background: var(--ens-magenta);
+}
+
+.cards > div > div:nth-child(2) {
+    margin-top: 1rem;
+}

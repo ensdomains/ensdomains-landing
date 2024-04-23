@@ -3,10 +3,12 @@
 import clsx from 'clsx';
 import { CSSProperties } from 'react';
 
+import { ColorCards } from '../../components/ColorCards/ColorCards';
 import Footer from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { LinkList } from '../../components/LinkList/LinkList';
 import { Navbar } from '../../components/Navbar/Navbar';
+import { SmallLinkList } from '../../components/SmallLinkList/SmallLinkList';
 import { Language } from '../../i18n/settings';
 import { useTranslation } from '../../i18n/useTranslation';
 import ui from '../../styles/ui.module.css';
@@ -69,12 +71,49 @@ export default async function Home({
                 />
             </div>
 
-            <div className={ui['my-100']}>
-                <h3 className={clsx(ui['w-page'])}>exploring a partnership?</h3>
+            <div className={clsx(ui['w-page'], ui['my-100'], ui['space-y-40'])}>
+                <h3>Exploring a partnership?</h3>
+                <p className={ui['max-w-text']}>
+                    Want to collaborate? Our Business Development team is
+                    excited to discuss how an ENS partnership can help.
+                </p>
+                <ColorCards
+                    cards={[
+                        {
+                            title: 'Business Development',
+                            description:
+                                'Speak with our Business Development team to chat about a partnership opportunity.',
+                        },
+                        {
+                            title: 'Explore Opportunities',
+                            description: 'Get ideas on how to work with ENS.',
+                        },
+                    ]}
+                />
             </div>
 
             <div className={ui['my-100']}>
-                <h4 className={clsx(ui['w-page'])}>featured partners</h4>
+                <h4 className={clsx(ui['w-page'])}>Featured Partners</h4>
+                <SmallLinkList
+                    links={[
+                        { title: 'Coinbase', href: '' },
+                        { title: 'Base', href: '' },
+                        { title: 'Uniswap', href: '' },
+                        { title: 'Brave', href: '' },
+                        { title: 'GoDaddy', href: '' },
+                        { title: 'Optimism', href: '' },
+                        { title: 'Solana', href: '' },
+                        { title: 'Ethereum', href: '' },
+                        { title: 'Bitcoin', href: '' },
+                        { title: 'Phantom', href: '' },
+                        { title: 'Opensea', href: '' },
+                        { title: 'Farcaster', href: '' },
+                        { title: 'Etherscan', href: '' },
+                        { title: 'Metamask', href: '' },
+                        { title: 'Rainbow', href: '' },
+                        { title: 'Family', href: '' },
+                    ]}
+                />
             </div>
 
             <Footer />

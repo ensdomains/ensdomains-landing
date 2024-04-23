@@ -3,6 +3,7 @@
 import clsx from 'clsx';
 import { CSSProperties } from 'react';
 
+import { ColorCards } from '../../components/ColorCards/ColorCards';
 import Footer from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { LinkList } from '../../components/LinkList/LinkList';
@@ -91,9 +92,32 @@ export default async function Home({
                 />
             </div>
 
-            <div className={clsx(ui['w-page'], ui['my-100'])}>
+            <div className={clsx(ui['w-page'], ui['my-100'], ui['space-y-40'])}>
                 <h3>Join the New Internet</h3>
-                <p>TODO</p>
+                <p className={ui['max-w-text']}>
+                    Your engagement in ENS governance is more than a vote. It's
+                    your stake in an internet that is democratic, resilient, and
+                    truly centered around its users.
+                </p>
+                <ColorCards
+                    cards={[
+                        {
+                            title: 'ENS DAO',
+                            description:
+                                'You want to join the ENS community and contribute.',
+                        },
+                        {
+                            title: 'Learn More',
+                            description:
+                                'Absorb the wealth of knowledge in our Governance docs.',
+                        },
+                        {
+                            title: 'Delegate Your Tokens',
+                            description:
+                                'Delegate your tokens to an engaged member of the community.',
+                        },
+                    ]}
+                />
             </div>
 
             <div className={ui['my-100']}>

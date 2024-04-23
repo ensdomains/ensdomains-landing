@@ -55,6 +55,9 @@
     margin-top: 40px;
 }
 
+.max-w-text {
+    max-width: 420px;
+}
 
 .cursive {
     font-family: var(--ens-serif);
