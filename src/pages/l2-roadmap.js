@@ -38,7 +38,7 @@ const SubContent = styled.div(({ theme }) => [
 
 export default function Roadmap(props) {
   return (
-    <Layout {...props}>
+    <Layout {...props} paddingTop={0}>
       <BreakpointProvider>
         <ThemeProvider theme={lightTheme}>
           <ThorinGlobalStyles />

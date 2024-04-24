@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
-import Logo from "./Logo"
+import Logo from "../Logov2"
 import { Typography, mq } from "@ensdomains/thorin_next"
 
 import Hamburger from "./Hamburger"
@@ -40,7 +40,7 @@ export default function Navigation() {
   return (
     <Nav>
       <Link to="/">
-        <Logo />
+        <Logo style="blue"/>
       </Link>
       <NavRight>
         <StyledLink to="/">
@@ -48,7 +48,7 @@ export default function Navigation() {
             ENS Domains
           </Typography>
         </StyledLink>
-        <StyledLink to="l2-roadmap">
+        <StyledLink to="/l2-roadmap">
           <Typography fontVariant="bodyBold" color="inherit">
             L2 Roadmap
           </Typography>

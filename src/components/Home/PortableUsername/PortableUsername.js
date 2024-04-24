@@ -69,6 +69,7 @@ const Avatar = () => {
     useEffect(() => {
         window.addEventListener('scroll', () => {
             window.requestAnimationFrame(() => {
+                if (!containerReferenceOne.current) return;
                 const containerOneTop =
                     containerReferenceOne.current.getBoundingClientRect().top;
                 const opacity =
