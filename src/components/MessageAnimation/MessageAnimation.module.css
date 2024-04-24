@@ -3,19 +3,22 @@
   transition-property: 'right';
   transition-delay: 0.75s;
   position: absolute;
+  width: max-content;
+  height: max-content;
 }
 
 .container {
   position: relative;
   max-width: 824px;
   width: 100%;
-  height: 100%;
+  height: 450px;
   margin: 0 auto;
 }
 
 .container > :nth-child(1) {
   right: 0px;
   opacity: 0;
+  top: 35px;
 }
 
 .container > :nth-child(1).animating {
@@ -26,11 +29,35 @@
 .container > :nth-child(2) {
   left: 0px;
   opacity: 0;
-  top: 104px;
+  top: 185px;
   transition-delay: 1s;
 }
 
 .container > :nth-child(2).animating {
+  left: 50px;
+  opacity: 1;
+}
+
+.container > :nth-child(3) {
+  right: 0px;
+  opacity: 0;
+  top: 288px;
+  transition-delay: 1.25s;
+}
+
+.container > :nth-child(3).animating {
+  right: 50px;
+  opacity: 1;
+}
+
+.container > :nth-child(4) {
+  left: 0px;
+  opacity: 0;
+  top: 390px;
+  transition-delay: 1.5s;
+}
+
+.container > :nth-child(4).animating {
   left: 50px;
   opacity: 1;
 }

@@ -26,9 +26,29 @@ export const MessageAnimation = () => {
                     isIntersecting ? styles.animating : undefined
                 )}
                 src="/assets/msg-2.svg"
-                width={537}
+                width={633}
+                height={89}
+                alt="0x0b08dA7068b73A579Bd5E8a8290ff8afd37bc32A"
+            />
+            <img
+                className={clsx(
+                    styles.box,
+                    isIntersecting ? styles.animating : undefined
+                )}
+                src="/assets/msg-3.svg"
+                width={306}
+                height={88}
+                alt="Wow. Go to ens.app"
+            />
+            <img
+                className={clsx(
+                    styles.box,
+                    isIntersecting ? styles.animating : undefined
+                )}
+                src="/assets/msg-4.svg"
+                width={436}
                 height={116}
-                alt="What's your crypto address so I can pay you?"
+                alt="This is so much simpler! Send to mynewname.eth"
             />
         </div>
     );

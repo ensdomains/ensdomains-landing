@@ -61,21 +61,28 @@ export const FeaturePreview: FC<
                     '--feature-text': `var(--${textColor})`,
                 } as CSSProperties
             }
-            className={clsx(className, styles.container)}
+            className={clsx(
+                className,
+                styles.container,
+                ui.flex,
+                ui['flex-col']
+            )}
         >
-            <div className={clsx(ui.flex, ui.fle, styles.menubar)}>
-                {[0, 1, 2].map((position) => (
-                    <Indicator
-                        indicatorColor={indicatorColor}
-                        isCurrent={currentPosition === position}
-                    />
-                ))}
+            <div className={styles.top}>
+                <div className={clsx(ui.flex, ui['flex-row'], styles.menubar)}>
+                    {[0, 1, 2].map((position) => (
+                        <Indicator
+                            indicatorColor={indicatorColor}
+                            isCurrent={currentPosition === position}
+                        />
+                    ))}
+                </div>
+                <div className={styles.headline}>
+                    <h4>{title}</h4>
+                    <p className={styles.text}>{text}</p>
+                </div>
             </div>
-            <div className={styles.headline}>
-                <h4>{title}</h4>
-                <p className={styles.text}>{text}</p>
-            </div>
-            {children}
+            <div className={styles.children}>{children}</div>
         </div>
     );
 };
