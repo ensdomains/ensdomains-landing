@@ -1,7 +1,6 @@
 .box {
-  transition-duration: 0.5s;
-  transition-property: 'right';
-  transition-delay: 0.75s;
+  transition-duration: 0.75s;
+  transition-property: right, left, opacity;
   position: absolute;
   width: max-content;
   height: max-content;
@@ -30,7 +29,7 @@
   left: 0px;
   opacity: 0;
   top: 185px;
-  transition-delay: 1s;
+  transition-delay: 0.5s;
 }
 
 .container > :nth-child(2).animating {
@@ -42,7 +41,7 @@
   right: 0px;
   opacity: 0;
   top: 288px;
-  transition-delay: 1.25s;
+  transition-delay: 0.75s;
 }
 
 .container > :nth-child(3).animating {
@@ -54,7 +53,7 @@
   left: 0px;
   opacity: 0;
   top: 390px;
-  transition-delay: 1.5s;
+  transition-delay: 1s;
 }
 
 .container > :nth-child(4).animating {
