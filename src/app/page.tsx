@@ -5,6 +5,7 @@ import { clsx } from 'clsx';
 
 import { Carousel } from '../components/Carousel/Carousel';
 import { ColorCards } from '../components/ColorCards/ColorCards';
+import { DappsAnimation } from '../components/DappsAnimation/DappsAnimation';
 import { FeaturePreview } from '../components/FeaturePreview/FeaturePreview';
 import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
@@ -59,7 +60,9 @@ export default async function Home({
                         indicatorColor="ens-white"
                         position={1}
                         gridSrc="/assets/magenta-grid.svg"
-                    />
+                    >
+                        <DappsAnimation />
+                    </FeaturePreview>
                     <FeaturePreview
                         title={t('home.features.ownership.title')}
                         text={t('home.features.ownership.text')}
