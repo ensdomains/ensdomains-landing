@@ -40,10 +40,20 @@
   line-height: 96%;
   padding: 10px;
 
-  border-radius: 16.776px;
+  border-radius: 16px;
   border: 1px solid var(--ens-gray-2);
   background: var(--ens-white);
   box-shadow: 0px 24px 30px 0px rgba(14, 61, 104, 0.06);
+
+  cursor: pointer;
+  transition: 125ms;
+  transition-timing-function: ease-in;
+  transform: none;
+}
+
+
+.fndName.animating, .fndName:hover {
+  transform: scale(1.2);
 }
 
 .fndLine {
@@ -60,4 +70,13 @@
 .findGallery > img {
   width: max-content;
   height: max-content;
+}
+
+.swap {
+  background-color: var(--ens-white);
+  padding: 8px;
+
+  border-radius: 12px;
+  background: var(--ens-white);
+  box-shadow: 0px 20px 28px 0px rgba(14, 61, 104, 0.06);
 }
