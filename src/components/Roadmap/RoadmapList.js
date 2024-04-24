@@ -12,7 +12,7 @@ export default function RoadmapList() {
     <React.Fragment>
       {completed.length > 0 && (
         <SectionCard
-          title="Completed"
+          title="Recently completed"
           description="What we've done that is now live."
           items={completed}
           color="green"
