@@ -1,8 +1,8 @@
-import React from "react"; 
-import styled, { css } from "styled-components";
+import React from "react"
+import styled, { css } from "styled-components"
 
 const Container = styled.div(
-  ({ theme }) => css`
+  () => css`
     display: flex;
     flex-direction: row;
     justify-content: stretch;
@@ -25,7 +25,7 @@ const Middle = styled.div(
   ({ theme }) => css`
     flex: 1;
     display: flex;
-  position: relative;
+    position: relative;
     justify-content: center;
     align-items: center;
     gap: ${theme.space["4"]};
@@ -48,7 +48,6 @@ const LeftCurve = styled.div(
     position: absolute;
     width: 100%;
     height: 50px;
-    /* background: ${theme.colors.grey}; */
     left: 50%;
     top: calc(50% - 1px);
     border: 2px solid ${theme.colors.grey};
@@ -61,7 +60,6 @@ const RightCurve = styled.div(
     position: absolute;
     width: 100%;
     height: 50px;
-    /* background: ${theme.colors.grey}; */
     left: -50%;
     top: calc(-50% + 1px);
     border: 2px solid ${theme.colors.grey};
@@ -69,16 +67,18 @@ const RightCurve = styled.div(
   `
 )
 
-export default function VerticalContractAction() {
-return <Container>
-  <Bookends>
-    <LeftCurve/>
-  </Bookends>
-  <Middle>
-    <ArrowStem/>
-  </Middle>
-  <Bookends>
-    <RightCurve/>
-  </Bookends>
-</Container>
+export default function SubflowActionVertical() {
+  return (
+    <Container>
+      <Bookends>
+        <LeftCurve />
+      </Bookends>
+      <Middle>
+        <ArrowStem />
+      </Middle>
+      <Bookends>
+        <RightCurve />
+      </Bookends>
+    </Container>
+  )
 }

@@ -1,0 +1,32 @@
+[
+  {
+    "type": "user"
+  },
+  {
+    "type": "action",
+    "title": "Setting a record on ENS Chain"
+  },
+  {
+    "type": "subflow",
+    "title": "Main contracts",
+    "chain": "ens",
+    "items": [
+      {
+        "type": "contract",
+        "title": ".eth registry",
+        "description": "",
+        "status": "research",
+        "githubUrl": "",
+        "docsUrl": ""
+      },
+      {
+        "type": "contract",
+        "title": "Public Resolver",
+        "description": "",
+        "status": "research",
+        "githubUrl": "",
+        "docsUrl": ""
+      }
+    ]
+  }
+]

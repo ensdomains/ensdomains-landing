@@ -1,29 +1,42 @@
-import { Typography } from "@ensdomains/thorin_next"
+import { Typography, mq } from "@ensdomains/thorin_next"
 import React from "react"
 import styled, { css } from "styled-components"
-import ContractCard from "./ContractCard"
-
-import HorizontalContractAction from "./HorizontalContractAction"
-import VerticalContractConnection from "./VerticalContractConnector"
 
 import primaryColorForChain from "./utils/primaryColorForChain"
+import SubFlowItem from "./SubFlowItem"
+
+import labelForChain from "./utils/labelForChain"
 
 const Container = styled.div(
-  ({ theme, chain }) => css`
+  ({ theme, $chain }) => css`
     display: flex;
     flex-direction: column;
-    gap: ${theme.space["6"]};
-    background: ${theme.colors[`${primaryColorForChain(chain)}Surface`]};
-    padding: ${theme.space["6"]};
+    align-items: center;
+    gap: ${theme.space["4"]};
+    background: ${theme.colors[`${primaryColorForChain($chain)}Surface`]};
+    padding: ${theme.space["4"]};
     border-radius: ${theme.space["2"]};
+
+    ${mq.sm.min(css`
+      gap: ${theme.space["6"]};
+      padding: ${theme.space["6"]};
+    `)}
   `
 )
 
 const Header = styled.div(
   ({ theme }) => css`
     display: flex;
-    justify-content: space-between;
-    gap: ${theme.space["4"]};
+    flex-direction: column-reverse;
+    align-items: center;
+    order: reverse;
+    gap: ${theme.space["2"]};
+    width: ${theme.space.full};
+
+    ${mq.sm.min(css`
+      flex-direction: row;
+      justify-content: space-between;
+    `)}
   `
 )
 
@@ -33,6 +46,7 @@ const Tag = styled.div(
     color: ${theme.colors[`${primaryColorForChain($chain)}Primary`]};
     padding: ${theme.space["1"]} ${theme.space["3"]};
     border-radius: ${theme.radii.full};
+    width: fit-content;
   `
 )
 
@@ -41,32 +55,38 @@ const Content = styled.div(
     display: flex;
     flex-direction: column;
     gap: ${theme.space["4"]};
+    width: ${theme.space.full};
   `
 )
 
 const Row = styled.div(
   ({ theme }) => css`
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: ${theme.space["4"]};
+
+    ${mq.sm.min(css`
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    `)}
   `
 )
 
-const labelForChain = chain => {
-  if (chain === "ethereum") return "Ethereum Mainnet"
-  if (chain === "ens") return "ENS Chain"
-  if (chain === "offchain") return "Offchain"
-  throw new Error(`labelForChain: Unknown chain ${chain}`)
+const calculateSubflowRows = (items) => {
+  if (items.length === 4) return items.flatMap((_, i, _items) => i % 2 === 0 ? [[_items[i], _items[i + 1]]] : [])
+  return [items]
 }
 
-export default function FlowSubflow({ contracts = [], title, chain }) {
-  const contractPairs = contracts.flatMap((contract, i, _contracts) =>
-    i % 2 === 0 ? [[contract, contracts[i + 1]]] : []
-  )
+export default function FlowSubflow({ items = [], title, chain }) {
+  const subflowRows = calculateSubflowRows(items)
+  
   return (
-    <Container chain={chain}>
+    <Container $chain={chain}>
       <Header>
         <Typography
-          fontVariant="body"
+          fontVariant="bodyBold"
           color={`${primaryColorForChain(chain)}Primary`}
         >
           {title}
@@ -78,24 +98,11 @@ export default function FlowSubflow({ contracts = [], title, chain }) {
         </Tag>
       </Header>
       <Content>
-        {contractPairs.map(contractPair => (
+        {subflowRows.map(subflowRow => (
           <React.Fragment>
             <Row>
-              {contractPair.map((contract, contractIdx) =>
-                contract ? (
-                  <React.Fragment>
-                    <ContractCard
-                      {...contract}
-                      style={{ order: contractIdx }}
-                    />
-                    {contractIdx % 2 === 0 ? (
-                      <HorizontalContractAction />
-                    ) : null}
-                  </React.Fragment>
-                ) : null
-              )}
+              {subflowRow.map((item) => item ? <SubFlowItem {...{...item, chain }}/> : null)}
             </Row>
-            <VerticalContractConnection />
           </React.Fragment>
         ))}
       </Content>

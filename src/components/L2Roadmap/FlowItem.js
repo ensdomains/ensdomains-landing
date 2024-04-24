@@ -8,5 +8,5 @@ export default function FlowItem({ type, ...other }) {
   if (type === 'user') return <FlowUser/>
   if (type === 'action') return <FlowAction {...other}/>
   if (type === 'subflow') return <FlowSubflow {...other}/>
-  else return "contract"
+  throw new Error(`FlowItem: Invalid type ${type}`)
 }

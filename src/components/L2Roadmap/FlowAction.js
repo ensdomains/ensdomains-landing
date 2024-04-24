@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { css } from "styled-components"
-import arrowhead from "../../assets/arrowhead_down.svg"
+import ArrowheadDownSVG from "../../assets/roadmap/ArrowheadDown.svg"
 import { Typography } from "@ensdomains/thorin_next"
 
 const ActionContainer = styled.div(
@@ -23,19 +23,18 @@ const ActionTitle = styled.div(
 )
 
 const ArrowContainer = styled.div(
-  ({ theme }) => css`
+  () => css`
     z-index: 0;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 0;
     bottom: 0;
-    background: yellow;
   `
 )
 
 const ArrowStem = styled.div(
-  ({ theme }) => css`
+  () => css`
     position: absolute;
     background: black;
     width: 4px;
@@ -47,8 +46,8 @@ const ArrowStem = styled.div(
   `
 )
 
-const ArrowHeadImg = styled.img(
-  ({ theme }) => css`
+const Arrowhead = styled.div(
+  () => css`
     position: absolute;
     bottom: -4px;
     left: 50%;
@@ -61,7 +60,7 @@ export default function FlowAction({ title }) {
     <ActionContainer>
       <ArrowContainer>
         <ArrowStem />
-        <ArrowHeadImg src={arrowhead} />
+        <Arrowhead as={ArrowheadDownSVG} />
       </ArrowContainer>
       <ActionTitle>
         <Typography fontVariant="body" color="background">

@@ -10,63 +10,111 @@
     "type": "subflow",
     "title": "Initial contracts for resolution",
     "chain": "ethereum",
-    "contracts": [
+    "items": [
       {
+        "type": "contract",
         "title": "Universal Resolver",
         "description": "A contract that can resolve any ENS name to an address",
         "status": "research",
-        "chain": "ethereum",
         "githubUrl": "https://github.com/ensdomains/contracts",
         "docsUrl": "https://docs.ens.domains/"
       },
       {
+        "type": "contract",
         "title": "Root Registry",
-        "status": "development",
-        "chain": "ethereum",
+        "description": "",
+        "status": "research",
         "githubUrl": "",
         "docsUrl": ""
       },
       {
+        "type": "contract",
         "title": ".eth Registry",
-        "status": "testnet",
-        "chain": "ethereum",
+        "description": "",
+        "status": "research",
         "githubUrl": "",
         "docsUrl": ""
       },
       {
+        "type": "contract",
         "title": "Public CCIP-read resolver",
-        "status": "done",
-        "chain": "ethereum",
+        "description": "",
+        "status": "research",
         "githubUrl": "",
         "docsUrl": ""
       }
     ]
+  },
+  {
+    "type": "action",
+    "title": "CCIP-read call"
   },
   {
     "type": "subflow",
-    "title": "Infrastructuure",
+    "title": "Infrastructure",
     "chain": "offchain",
-    "contracts": [
+    "items": [
       {
+        "type": "contract",
         "title": "EVM CCIP-read Gateway",
+        "description": "",
         "status": "research",
-        "chain": "offchain",
         "githubUrl": "",
         "docsUrl": ""
       }
     ]
   },
   {
-    "type": "chainFlow",
-    "chain": "offchain",
-    "contracts": [
+    "type": "action",
+    "title": "Request data from L2"
+  },
+  {
+    "type": "subflow",
+    "title": "Storage contracts for resolution",
+    "chain": "ens",
+    "items": [
       {
-        "title": "EVM CCIP-read Gateway",
+        "type": "contract",
+        "title": "Public Resolver",
+        "description": "",
         "status": "research",
-        "chain": "offchain",
         "githubUrl": "",
         "docsUrl": ""
       }
     ]
+  },
+  {
+    "type": "action",
+    "title": "Return data to client via gateway"
+  },
+  {
+    "type": "subflow",
+    "title": "Verification contracts for resolution",
+    "chain": "ethereum",
+    "items": [
+      {
+        "type": "contract",
+        "title": "Public CCIP-read resolver",
+        "description": "",
+        "status": "research",
+        "githubUrl": "",
+        "docsUrl": ""
+      },
+      {
+        "type": "contract",
+        "title": "EVM Verifier",
+        "description": "",
+        "status": "research",
+        "githubUrl": "",
+        "docsUrl": ""
+      }
+    ]
+  },
+  {
+    "type": "action",
+    "title": "Return verified data to user"
+  },
+  {
+    "type": "user"
   }
 ]

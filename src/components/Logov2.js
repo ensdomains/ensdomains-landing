@@ -6,6 +6,7 @@ const LogoContainer = styled("div")`
   .ens-logo {
     width: 104px;
     margin-right: 10px;
+    fill: red;
   }
 `
 

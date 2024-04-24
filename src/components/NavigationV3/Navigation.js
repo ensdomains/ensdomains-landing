@@ -28,6 +28,14 @@ const NavRight = styled.div(
   `
 )
 
+const StyledLink = styled(Link)(({ theme }) => css`
+  color: ${theme.colors.greyPrimary};
+  transition: color 0.2s;
+  &:hover {
+    color: ${theme.colors.accentPrimary};
+  }
+`)
+
 export default function Navigation() {
   return (
     <Nav>
@@ -35,9 +43,16 @@ export default function Navigation() {
         <Logo />
       </Link>
       <NavRight>
-        <Typography fontVariant="bodyBold" color="grey">
-          ENS Domains
-        </Typography>
+        <StyledLink to="/">
+          <Typography fontVariant="bodyBold" color="inherit">
+            ENS Domains
+          </Typography>
+        </StyledLink>
+        <StyledLink to="l2-roadmap">
+          <Typography fontVariant="bodyBold" color="inherit">
+            L2 Roadmap
+          </Typography>
+        </StyledLink>
         <Hamburger />
       </NavRight>
     </Nav>

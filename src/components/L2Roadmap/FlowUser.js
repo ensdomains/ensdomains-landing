@@ -19,6 +19,11 @@ const IconWrapper = styled.div(
     background: ${theme.colors.backgroundSecondary};
     border-radius: 50%;
     padding: ${theme.space["4"]};
+
+    svg {
+      width: ${theme.space["8"]};
+      height: ${theme.space["8"]};
+    }
   `
 )
 
