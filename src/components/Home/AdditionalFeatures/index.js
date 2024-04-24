@@ -1,2 +1,1 @@
-import AdditionalFeatures from "./AdditionalFeatures"
-export default AdditionalFeatures
+export { default } from './AdditionalFeatures';
