@@ -48,10 +48,10 @@ const TextContainer = styled('div')`
 
 export default function Banner() {
     return (
-        <Container href="https://aboutus.godaddy.net/newsroom/company-news/news-details/2024/GoDaddy-and-Ethereum-Name-Service-Bridge-the-Gap-Between-Domain-Names-and-Crypto-Wallets/default.aspx">
+        <Container href="https://blog.ens.domains/post/ens-integrates-dot-box">
             <StopParentIcon />
             <TextContainer>
-                <div>Link your GoDaddy domains to ENS, without any gas!</div>
+                <div>You can now register .box domains via the ENS app!</div>
                 <LearnMore>
                     Learn More <UpRightArrow />
                 </LearnMore>
