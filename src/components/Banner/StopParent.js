@@ -6,7 +6,7 @@ export default function StopParentIcon({ active }) {
     return (
         <IconBase
             active={active}
-            width="151"
+            width="96"
             height="32"
             className="register-svg"
         >
