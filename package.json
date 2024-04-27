@@ -49,5 +49,6 @@
     },
     "bugs": {
         "url": "https://github.com/ensdomains/ensdomains-landing/issues"
-    }
+    },
+    "packageManager": "pnpm@9.0.6"
 }

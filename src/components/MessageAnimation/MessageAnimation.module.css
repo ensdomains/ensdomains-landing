@@ -11,13 +11,12 @@
   max-width: 824px;
   width: 100%;
   height: 450px;
-  margin: 0 auto;
 }
 
 .container > :nth-child(1) {
   right: 0px;
   opacity: 0;
-  top: 35px;
+  top: 0;
 }
 
 .container > :nth-child(1).animating {
@@ -28,7 +27,7 @@
 .container > :nth-child(2) {
   left: 0px;
   opacity: 0;
-  top: 185px;
+  top: 150px;
   transition-delay: 0.5s;
 }
 
@@ -40,7 +39,7 @@
 .container > :nth-child(3) {
   right: 0px;
   opacity: 0;
-  top: 288px;
+  top: 253px;
   transition-delay: 0.75s;
 }
 
@@ -52,7 +51,7 @@
 .container > :nth-child(4) {
   left: 0px;
   opacity: 0;
-  top: 390px;
+  top: 355px;
   transition-delay: 1s;
 }
 

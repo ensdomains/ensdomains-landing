@@ -33,3 +33,52 @@ export const SearchIcon = (properties: SVGProps<SVGSVGElement>) => (
         </g>
     </svg>
 );
+
+export const ArrowDownIcon = (properties: SVGProps<SVGSVGElement>) => (
+    <svg
+        width="15"
+        height="9"
+        viewBox="0 0 15 9"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        {...properties}
+    >
+        <path
+            d="M1.09082 1.27692L7.38176 7.56786L13.6727 1.27692"
+            stroke="currentColor"
+            stroke-width="1.39799"
+        />
+    </svg>
+);
+
+export const SwapIcon = (properties: SVGProps<SVGSVGElement>) => (
+    <svg
+        width="33"
+        height="32"
+        viewBox="0 0 33 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        {...properties}
+    >
+        <rect
+            x="1.4724"
+            y="2.07579"
+            width="29.4607"
+            height="28.1216"
+            rx="4.01737"
+            fill="#E5E5E5"
+            stroke="#F6F6F6"
+            stroke-width="2.67825"
+        />
+        <path
+            d="M22.2266 14.1278L16.2005 8.10175L10.1744 14.1278"
+            stroke="#093C52"
+            stroke-width="1.33912"
+        />
+        <path
+            d="M10.1748 18.1453L16.2009 24.1713L22.2269 18.1453"
+            stroke="#093C52"
+            stroke-width="1.33912"
+        />
+    </svg>
+);

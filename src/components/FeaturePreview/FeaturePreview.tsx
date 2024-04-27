@@ -82,7 +82,9 @@ export const FeaturePreview: FC<
                     <p className={styles.text}>{text}</p>
                 </div>
             </div>
-            <div className={styles.children}>{children}</div>
+            <div className={clsx(ui.flex, ui['flex-center'], styles.children)}>
+                {children}
+            </div>
         </div>
     );
 };

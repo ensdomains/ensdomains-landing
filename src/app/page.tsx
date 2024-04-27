@@ -61,7 +61,7 @@ export default async function Home({
                         position={1}
                         gridSrc="/assets/magenta-grid.svg"
                     >
-                        <DappsAnimation />
+                        <DappsAnimation t={t} />
                     </FeaturePreview>
                     <FeaturePreview
                         title={t('home.features.ownership.title')}

@@ -1,30 +1,15 @@
 import { clsx } from 'clsx';
-import { useRef, useState } from 'react';
+import { TFunction } from 'i18next';
 
 import ui from '../../styles/ui.module.css';
-import { useEventListener } from '../../utils/useEventListener';
 import { useIntersectionObserver } from '../../utils/useIntersectionObserver';
+import { ArrowDownIcon, SwapIcon } from '../icons';
 import styles from './DappsAnimation.module.css';
 
-export const DappsAnimation = () => {
+export const DappsAnimation = ({ t }: { t: TFunction }) => {
     const { ref, isIntersecting } = useIntersectionObserver({
         threshold: 1,
     });
-
-    const fndProfile = useRef<HTMLDivElement>();
-    const [isAnimating, setIsAnimating] = useState(true);
-
-    useEventListener(
-        'transitionend',
-        () => {
-            if (isIntersecting) {
-                setTimeout(() => {
-                    setIsAnimating(false);
-                }, 1000);
-            }
-        },
-        fndProfile
-    );
 
     return (
         <div
@@ -45,13 +30,8 @@ export const DappsAnimation = () => {
                 )}
             >
                 <div className={styles.fndBg}></div>
-                <div className={styles.fndPfp}></div>
-                <div
-                    className={clsx(
-                        styles.fndName,
-                        isIntersecting && isAnimating && styles.animating
-                    )}
-                >
+                <div className={clsx(styles.pfp, styles.fndPfp)}></div>
+                <div className={clsx(styles.name, styles.fndName)}>
                     placeholder.eth
                 </div>
                 <div className={styles.fndLine}></div>
@@ -61,32 +41,110 @@ export const DappsAnimation = () => {
                     <img
                         src="/assets/fnd-1.png"
                         width={170}
-                        height={74}
+                        height={92}
                         alt=""
                     />
                     <img
                         src="/assets/fnd-2.png"
                         width={170}
-                        height={74}
+                        height={92}
                         alt=""
                     />
                     <img
                         src="/assets/fnd-3.png"
                         width={170}
-                        height={74}
+                        height={92}
                         alt=""
                     />
                 </div>
             </div>
-            <div className={styles.swap}>
-                <div className={styles.header}>
-                    <span>Swap</span>
-                    <div>
-                        <div></div>
+            <div
+                className={clsx(
+                    ui.flex,
+                    ui['flex-col'],
+                    ui['flex-center'],
+                    styles.swap
+                )}
+            >
+                <div
+                    className={clsx(
+                        ui.flex,
+                        ui['flex-row'],
+                        ui['flex-center'],
+                        styles.swapHeader
+                    )}
+                >
+                    <span className={styles.swapTitle}>Swap</span>
+                    <div
+                        className={clsx(
+                            ui.flex,
+                            ui['flex-row'],
+                            ui['flex-center'],
+                            styles.name,
+                            styles.swapName
+                        )}
+                    >
+                        <div
+                            className={clsx(styles.pfp, styles.swapNamePfp)}
+                        ></div>
                         <div>placeholder.eth</div>
                     </div>
                 </div>
+                <div
+                    className={clsx(
+                        ui.flex,
+                        ui['flex-center'],
+                        ui['flex-col'],
+                        styles.swapContainer
+                    )}
+                >
+                    <span className={styles.swapValue}>3,333.50</span>
+                    <div
+                        className={clsx(
+                            ui.flex,
+                            ui['flex-row'],
+                            styles.swapCurrencyToggle
+                        )}
+                    >
+                        <div className={styles.swapIndicator}></div>
+                        <span className={styles.swapCurrency}>USDC</span>
+                        <ArrowDownIcon />
+                    </div>
+                </div>
+
+                <div
+                    className={clsx(
+                        ui.flex,
+                        ui['flex-center'],
+                        ui['flex-col'],
+                        styles.swapContainer,
+                        styles.swapResult
+                    )}
+                >
+                    <SwapIcon className={styles.swapIcon} />
+                    <span className={styles.swapValue}>1.000</span>
+                    <div
+                        className={clsx(
+                            ui.flex,
+                            ui['flex-row'],
+                            styles.swapCurrencyResultToggle
+                        )}
+                    >
+                        <div className={styles.swapIndicator}></div>
+                        <span className={styles.swapCurrency}>ETH</span>
+                        <ArrowDownIcon />
+                    </div>
+                    <button className={styles.swapButton}>
+                        {t('home.features.consistent.swapButton')}
+                    </button>
+                </div>
             </div>
+            <img
+                src="/assets/farcaster.svg"
+                alt=""
+                height={341}
+                className={styles.farcaster}
+            />
         </div>
     );
 };

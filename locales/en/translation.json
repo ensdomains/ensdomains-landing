@@ -23,7 +23,8 @@
       },
       "consistent": {
         "title": "Consistent across the internet.",
-        "text": "Carry your identity across services and platforms with ease. Forget the hassle of multiple usernames."
+        "text": "Carry your identity across services and platforms with ease. Forget the hassle of multiple usernames.",
+        "swapButton": "Swap"
       },
       "ownership": {
         "title": "True ownership.",
