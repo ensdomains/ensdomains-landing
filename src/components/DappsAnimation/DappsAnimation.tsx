@@ -26,7 +26,8 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     styles.fnd,
                     ui.flex,
                     ui['flex-col'],
-                    ui['flex-center']
+                    ui['flex-center'],
+                    isIntersecting && styles.animating
                 )}
             >
                 <div className={styles.fndBg}></div>
@@ -63,7 +64,8 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     ui.flex,
                     ui['flex-col'],
                     ui['flex-center'],
-                    styles.swap
+                    styles.swap,
+                    isIntersecting && styles.animating
                 )}
             >
                 <div
@@ -143,7 +145,10 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                 src="/assets/farcaster.svg"
                 alt=""
                 height={341}
-                className={styles.farcaster}
+                className={clsx(
+                    styles.farcaster,
+                    isIntersecting && styles.animating
+                )}
             />
         </div>
     );

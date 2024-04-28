@@ -197,6 +197,8 @@
   height: 100%;
 }
 
+/* RESPONSIVE STYLES */
+
 @media (min-width: 1024px) {
   .fndName {
     font-size: 14px;
@@ -218,4 +220,27 @@
   .fnd {
     padding-top: 84px;
   }
+}
+
+/* ANIMATION */
+
+
+.fnd, .swap, .farcaster {
+  opacity: 0;
+  transition-duration: 0.75s;
+  transition-property: transform, opacity;
+  transform: translateY(100px);
+}
+
+.swap.animating {
+  transition-delay: 150ms;
+}
+
+.farcaster.animating {
+  transition-delay: 300ms;
+}
+
+.animating {
+  opacity: 1;
+  transform: translateY(0);
 }
