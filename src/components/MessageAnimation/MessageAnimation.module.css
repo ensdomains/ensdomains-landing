@@ -14,48 +14,64 @@
 }
 
 .container > :nth-child(1) {
-  right: 0px;
+  right: -25px;
   opacity: 0;
   top: 0;
 }
 
 .container > :nth-child(1).animating {
-  right: 25px;
+  right: 0;
   opacity: 1;
 }
 
 .container > :nth-child(2) {
-  left: 0px;
+  left: -25px;
   opacity: 0;
   top: 150px;
   transition-delay: 0.5s;
 }
 
 .container > :nth-child(2).animating {
-  left: 50px;
+  left: 0;
   opacity: 1;
 }
 
 .container > :nth-child(3) {
-  right: 0px;
+  right: -25px;
   opacity: 0;
   top: 253px;
   transition-delay: 0.75s;
 }
 
 .container > :nth-child(3).animating {
-  right: 50px;
+  right: 0;
   opacity: 1;
 }
 
 .container > :nth-child(4) {
-  left: 0px;
+  left: -25px;
   opacity: 0;
   top: 355px;
   transition-delay: 1s;
 }
 
 .container > :nth-child(4).animating {
-  left: 50px;
+  left: 0;
   opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: 274px;
+    max-width: 500px;
+  }
+  .container > :nth-child(2) {
+    top: 80px;
+  }
+  .container > :nth-child(3) {
+    top: 140px;
+  }
+  .container > :nth-child(4) {
+    top: 200px;
+  }
 }

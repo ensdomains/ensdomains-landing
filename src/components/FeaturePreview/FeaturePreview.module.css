@@ -2,12 +2,12 @@
   background-color: var(--feature-bg);
   color: var(--feature-text);
   width: 100%;
-  height: 790px;
   padding: 10px;
   border-radius: 4px;
   background-repeat: no-repeat;
   background-position: bottom;
   justify-content: space-between;
+  height: 500px; 
 }
 
 .menubar {
@@ -24,8 +24,8 @@
 }
 
 .text {
-  max-width: 412px;
   width: 100%;
+  max-width: 333px;
 }
 
 .dot {
@@ -38,4 +38,13 @@
 .children {
   width: 100%;
   height: 69%;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    height: 790px;
+  }
+  .text {
+    max-width: 412px;
+  }
 }

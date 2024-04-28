@@ -106,6 +106,9 @@ h4 {
     h2 {
         font-size: 64px;
     }
+    h4 {
+        font-size: 24px; 
+    }
 }
 
 p {

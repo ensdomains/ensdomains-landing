@@ -191,3 +191,9 @@
   font-family: var(--ens-semi-mono);
   font-weight: 500;
 }
+
+@media (max-width: 1024px) {
+  .fndName {
+    font-size: 8px;
+  }
+}
