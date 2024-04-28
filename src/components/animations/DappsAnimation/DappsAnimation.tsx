@@ -115,7 +115,6 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                 <div
                     className={clsx(
                         ui.flex,
-                        ui['flex-center'],
                         ui['flex-col'],
                         styles.swapContainer,
                         styles.swapResult
