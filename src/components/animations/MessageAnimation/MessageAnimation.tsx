@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 
-import { useIntersectionObserver } from '../../utils/useIntersectionObserver';
-import { Dimension } from '../../utils/useMq';
+import { useIntersectionObserver } from '~/utils/useIntersectionObserver';
+import { Dimension } from '~/utils/useMq';
+
 import styles from './MessageAnimation.module.css';
 
 export const MessageAnimation = ({ mq }: { mq: Dimension }) => {

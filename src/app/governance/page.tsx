@@ -3,13 +3,14 @@
 import clsx from 'clsx';
 import { CSSProperties } from 'react';
 
-import { ColorCards } from '../../components/ColorCards/ColorCards';
-import { Footer } from '../../components/Footer/Footer';
-import { Header } from '../../components/Header/Header';
-import { LinkList } from '../../components/LinkList/LinkList';
-import { Navbar } from '../../components/Navbar/Navbar';
-import { Language } from '../../i18n/settings';
-import { useTranslation } from '../../i18n/useTranslation';
+import { ColorCards } from '~/components/ColorCards/ColorCards';
+import { Footer } from '~/components/Footer/Footer';
+import { Header } from '~/components/Header/Header';
+import { LinkList } from '~/components/LinkList/LinkList';
+import { Navbar } from '~/components/Navbar/Navbar';
+import { Language } from '~/i18n/settings';
+import { useTranslation } from '~/i18n/useTranslation';
+
 import ui from '../../styles/ui.module.css';
 
 export default async function Home({

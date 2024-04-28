@@ -3,13 +3,14 @@
 
 import { clsx } from 'clsx';
 
+import { DappsAnimation } from '../components/animations/DappsAnimation/DappsAnimation';
+import { MessageAnimation } from '../components/animations/MessageAnimation/MessageAnimation';
+import { OwnershipAnimation } from '../components/animations/OwnershipAnimation/OwnershipAnimation';
 import { Carousel } from '../components/Carousel/Carousel';
 import { ColorCards } from '../components/ColorCards/ColorCards';
-import { DappsAnimation } from '../components/DappsAnimation/DappsAnimation';
 import { FeaturePreview } from '../components/FeaturePreview/FeaturePreview';
 import { Footer } from '../components/Footer/Footer';
 import { Header } from '../components/Header/Header';
-import { MessageAnimation } from '../components/MessageAnimation/MessageAnimation';
 import { Navbar } from '../components/Navbar/Navbar';
 import { SearchInput } from '../components/SearchInput/SearchInput';
 import { TwoCol } from '../components/TwoCol/TwoCol';
@@ -72,7 +73,7 @@ export default async function Home({
                         position={1}
                         gridSrc="green-grid.svg"
                     >
-                        {() => <div>lol</div>}
+                        {() => <OwnershipAnimation />}
                     </FeaturePreview>
                 </Carousel>
                 <div

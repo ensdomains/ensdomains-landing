@@ -1,10 +1,10 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 
-import { Footer } from '../../components/Footer/Footer';
-import { LinkList } from '../../components/LinkList/LinkList';
-import { Navbar } from '../../components/Navbar/Navbar';
-import { Language } from '../../i18n/settings';
-import { useTranslation } from '../../i18n/useTranslation';
+import { Footer } from '~/components/Footer/Footer';
+import { LinkList } from '~/components/LinkList/LinkList';
+import { Navbar } from '~/components/Navbar/Navbar';
+import { Language } from '~/i18n/settings';
+import { useTranslation } from '~/i18n/useTranslation';
 
 export default async function Home({
     params,

@@ -1,5 +1,5 @@
-import { Language } from '../../../i18n/settings';
 import Page from '../../governance/page';
+import { Language } from '../~/i18n/settings';
 
 export default async function LocaleGovernance({
     params,

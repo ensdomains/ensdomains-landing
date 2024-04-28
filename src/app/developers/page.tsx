@@ -2,13 +2,14 @@
 import clsx from 'clsx';
 import { CSSProperties } from 'react';
 
-import { Footer } from '../../components/Footer/Footer';
-import { Header } from '../../components/Header/Header';
-import { LinkList } from '../../components/LinkList/LinkList';
-import { Navbar } from '../../components/Navbar/Navbar';
-import { TwoCol } from '../../components/TwoCol/TwoCol';
-import { Language } from '../../i18n/settings';
-import { useTranslation } from '../../i18n/useTranslation';
+import { Footer } from '~/components/Footer/Footer';
+import { Header } from '~/components/Header/Header';
+import { LinkList } from '~/components/LinkList/LinkList';
+import { Navbar } from '~/components/Navbar/Navbar';
+import { TwoCol } from '~/components/TwoCol/TwoCol';
+import { Language } from '~/i18n/settings';
+import { useTranslation } from '~/i18n/useTranslation';
+
 import ui from '../../styles/ui.module.css';
 
 export default async function Home({

@@ -1,9 +1,10 @@
 import { clsx } from 'clsx';
 import { TFunction } from 'i18next';
 
-import ui from '../../styles/ui.module.css';
-import { useIntersectionObserver } from '../../utils/useIntersectionObserver';
-import { ArrowDownIcon, SwapIcon } from '../icons';
+import { ArrowDownIcon, SwapIcon } from '~/components/icons';
+import ui from '~/styles/ui.module.css';
+import { useIntersectionObserver } from '~/utils/useIntersectionObserver';
+
 import styles from './DappsAnimation.module.css';
 
 export const DappsAnimation = ({ t }: { t: TFunction }) => {

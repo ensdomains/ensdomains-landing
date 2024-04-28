@@ -1,6 +1,7 @@
 /* eslint-disable unicorn/prevent-abbreviations */
 
-import { Language } from '../../i18n/settings';
+import { Language } from '~/i18n/settings';
+
 import Home from '../page';
 
 export default async function LocaleHome({

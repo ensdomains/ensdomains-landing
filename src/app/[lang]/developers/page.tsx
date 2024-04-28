@@ -1,5 +1,5 @@
-import { Language } from '../../../i18n/settings';
 import Page from '../../developers/page';
+import { Language } from '../~/i18n/settings';
 
 export default async function LocaleDevelopers({
     params,
