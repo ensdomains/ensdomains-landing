@@ -1,6 +1,8 @@
 import { SVGProps } from 'react';
 
-export const SearchIcon = (properties: SVGProps<SVGSVGElement>) => (
+type Properties = SVGProps<SVGSVGElement>;
+
+export const SearchIcon = (properties: Properties) => (
     <svg
         width="56"
         height="59"
@@ -34,7 +36,7 @@ export const SearchIcon = (properties: SVGProps<SVGSVGElement>) => (
     </svg>
 );
 
-export const ArrowDownIcon = (properties: SVGProps<SVGSVGElement>) => (
+export const ArrowDownIcon = (properties: Properties) => (
     <svg
         width="15"
         height="9"
@@ -51,7 +53,7 @@ export const ArrowDownIcon = (properties: SVGProps<SVGSVGElement>) => (
     </svg>
 );
 
-export const SwapIcon = (properties: SVGProps<SVGSVGElement>) => (
+export const SwapIcon = (properties: Properties) => (
     <svg
         width="33"
         height="32"
@@ -79,6 +81,31 @@ export const SwapIcon = (properties: SVGProps<SVGSVGElement>) => (
             d="M10.1748 18.1453L16.2009 24.1713L22.2269 18.1453"
             stroke="#093C52"
             stroke-width="1.33912"
+        />
+    </svg>
+);
+
+export const ArrowUpRightIcon = (properties: Properties) => (
+    <svg
+        width="76"
+        height="44"
+        viewBox="0 0 76 44"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        {...properties}
+    >
+        <path
+            d="M3.62598 43.623V22.2084C3.62598 21.1039 4.52141 20.2084 5.62598 20.2084H53.0566"
+            stroke="currentColor"
+            stroke-width="6"
+        />
+        <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M49.1543 5.90083L69.642 19.5593L49.1543 33.2178L49.1543 5.90083Z"
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="6"
         />
     </svg>
 );

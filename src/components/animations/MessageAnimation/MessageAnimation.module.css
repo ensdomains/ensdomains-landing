@@ -1,3 +1,10 @@
+.container {
+  position: relative;
+  max-width: 824px;
+  width: 100%;
+  height: 450px;
+}
+
 .box {
   transition-duration: 0.75s;
   transition-property: right, left, opacity;
@@ -6,56 +13,53 @@
   height: max-content;
 }
 
-.container {
-  position: relative;
-  max-width: 824px;
-  width: 100%;
-  height: 450px;
+.box:nth-child(2n+1) {
+  filter: drop-shadow(0px 24px 32px rgba(14, 61, 104, 0.06));
 }
 
-.container > :nth-child(1) {
+.box:nth-child(1) {
   right: -25px;
   opacity: 0;
   top: 0;
 }
 
-.container > :nth-child(1).animating {
+.container .box:nth-child(1).animating {
   right: 0;
   opacity: 1;
 }
 
-.container > :nth-child(2) {
+.box:nth-child(2) {
   left: -25px;
   opacity: 0;
   top: 150px;
   transition-delay: 0.5s;
 }
 
-.container > :nth-child(2).animating {
+.box:nth-child(2).animating {
   left: 0;
   opacity: 1;
 }
 
-.container > :nth-child(3) {
+.box:nth-child(3) {
   right: -25px;
   opacity: 0;
   top: 253px;
   transition-delay: 0.75s;
 }
 
-.container > :nth-child(3).animating {
+.box:nth-child(3).animating {
   right: 0;
   opacity: 1;
 }
 
-.container > :nth-child(4) {
+.box:nth-child(4) {
   left: -25px;
   opacity: 0;
   top: 355px;
   transition-delay: 1s;
 }
 
-.container > :nth-child(4).animating {
+.box:nth-child(4).animating {
   left: 0;
   opacity: 1;
 }
@@ -65,13 +69,13 @@
     height: 274px;
     max-width: 500px;
   }
-  .container > :nth-child(2) {
+  .box:nth-child(2) {
     top: 80px;
   }
-  .container > :nth-child(3) {
+  .box:nth-child(3) {
     top: 140px;
   }
-  .container > :nth-child(4) {
+  .box:nth-child(4) {
     top: 200px;
   }
 }

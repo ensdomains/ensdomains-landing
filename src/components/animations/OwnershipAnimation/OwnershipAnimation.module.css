@@ -10,6 +10,7 @@
     background-color: var(--ens-gray-1);
     box-shadow: 0px 12px 16px 0px rgba(14, 61, 104, 0.06); 
     opacity: 0.7;
+    line-height: 90%;
 }
 
 .name {
@@ -19,4 +20,42 @@
 
 .wallet {
     font-size: 10px;
+}
+
+
+@media (min-width: 1024px) {
+    .nameText {
+        font-size: 56px;
+        padding: 20px 26px;
+    }
+    .wallet {
+        font-size: 16px;
+    }
+}
+
+/* ANIMATION */
+
+.upArrow, .downArrow {
+    transition-duration: 500ms;
+    transition-property: transform, opacity;
+    opacity: 0;
+}
+
+.downArrow {
+    transform: translateX(-200px) rotate(0deg);
+    margin-left: 43px;
+}
+
+.upArrow {
+    transform: translateX(200px) rotate(-180deg);
+}
+
+.downArrow.animating {
+    transform: translateX(0) rotate(180deg);
+    opacity: 1;
+}
+
+.upArrow.animating {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
 }

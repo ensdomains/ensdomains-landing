@@ -1,3 +1,5 @@
+'use client';
+
 import { clsx } from 'clsx';
 import { TFunction } from 'i18next';
 
@@ -70,12 +72,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                 )}
             >
                 <div
-                    className={clsx(
-                        ui.flex,
-                        ui['flex-row'],
-                        ui['flex-center'],
-                        styles.swapHeader
-                    )}
+                    className={clsx(ui.flex, ui['flex-row'], styles.swapHeader)}
                 >
                     <span className={styles.swapTitle}>Swap</span>
                     <div
