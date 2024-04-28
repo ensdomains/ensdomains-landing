@@ -48,9 +48,9 @@ export default async function Home({
                         backgroundColor="ens-light-blue"
                         indicatorColor="ens-white"
                         position={0}
-                        gridSrc="/assets/blue-grid.svg"
+                        gridSrc="blue-grid.svg"
                     >
-                        <MessageAnimation />
+                        {(mq) => <MessageAnimation mq={mq} />}
                     </FeaturePreview>
                     <FeaturePreview
                         title={t('home.features.consistent.title')}
@@ -59,19 +59,19 @@ export default async function Home({
                         backgroundColor="ens-light-magenta"
                         indicatorColor="ens-white"
                         position={1}
-                        gridSrc="/assets/magenta-grid.svg"
+                        gridSrc="magenta-grid.svg"
                     >
-                        <DappsAnimation t={t} />
+                        {(mq) => <DappsAnimation t={t} />}
                     </FeaturePreview>
-                    <FeaturePreview
+                    {/* <FeaturePreview
                         title={t('home.features.ownership.title')}
                         text={t('home.features.ownership.text')}
                         textColor="ens-green"
                         backgroundColor="ens-light-green"
                         indicatorColor="ens-white"
                         position={1}
-                        gridSrc="/assets/green-grid.svg"
-                    />
+                        gridSrc="green-grid.svg"
+                    /> */}
                 </Carousel>
                 <div
                     className={clsx(

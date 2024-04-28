@@ -1,17 +1,15 @@
 import clsx from 'clsx';
 
 import { useIntersectionObserver } from '../../utils/useIntersectionObserver';
-import { mq, useMq } from '../../utils/useMq';
+import { Dimension } from '../../utils/useMq';
 import styles from './MessageAnimation.module.css';
 
-export const MessageAnimation = () => {
+export const MessageAnimation = ({ mq }: { mq: Dimension }) => {
     const { ref, isIntersecting } = useIntersectionObserver({
         threshold: 0.75,
     });
 
-    const isTablet = useMq(mq.tablet);
-
-    console.log(isTablet);
+    const isTablet = mq === 'tablet';
 
     return (
         <div className={styles.container} ref={ref}>
@@ -20,7 +18,7 @@ export const MessageAnimation = () => {
                     styles.box,
                     isIntersecting ? styles.animating : undefined
                 )}
-                src={`/assets/msg-1${isTablet ? '-tablet' : ''}.svg`}
+                src={`/assets/${isTablet ? 'tablet/' : ''}msg-1.svg`}
                 width={537}
                 height={116}
                 alt="What's your crypto address so I can pay you?"
@@ -30,7 +28,7 @@ export const MessageAnimation = () => {
                     styles.box,
                     isIntersecting ? styles.animating : undefined
                 )}
-                src={`/assets/msg-2${isTablet ? '-tablet' : ''}.svg`}
+                src={`/assets/${isTablet ? 'tablet/' : ''}msg-2.svg`}
                 width={633}
                 height={89}
                 alt="0x0b08dA7068b73A579Bd5E8a8290ff8afd37bc32A"
@@ -40,7 +38,7 @@ export const MessageAnimation = () => {
                     styles.box,
                     isIntersecting ? styles.animating : undefined
                 )}
-                src={`/assets/msg-3${isTablet ? '-tablet' : ''}.svg`}
+                src={`/assets/${isTablet ? 'tablet/' : ''}msg-3.svg`}
                 width={306}
                 height={88}
                 alt="Wow. Go to ens.app"
@@ -50,7 +48,7 @@ export const MessageAnimation = () => {
                     styles.box,
                     isIntersecting ? styles.animating : undefined
                 )}
-                src={`/assets/msg-4${isTablet ? '-tablet' : ''}.svg`}
+                src={`/assets/${isTablet ? 'tablet/' : ''}msg-4.svg`}
                 width={436}
                 height={116}
                 alt="This is so much simpler! Send to mynewname.eth"

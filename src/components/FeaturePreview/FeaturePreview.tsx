@@ -1,8 +1,11 @@
+'use client';
+
 import { clsx } from 'clsx';
-import { CSSProperties, FC, HTMLAttributes } from 'react';
+import { CSSProperties, FC, HTMLAttributes, ReactNode } from 'react';
 
 import ui from '../../styles/ui.module.css';
 import type { Color } from '../../utils/types';
+import { Dimension, useMq } from '../../utils/useMq';
 import styles from './FeaturePreview.module.css';
 
 const Indicator = ({
@@ -34,8 +37,9 @@ export const FeaturePreview: FC<
         textColor: Color;
         position: 0 | 1 | 2;
         indicatorColor: Color;
-        gridSrc: `/${string}`;
-    } & Omit<HTMLAttributes<HTMLDivElement>, 'title'>
+        gridSrc: string;
+        children: (mq: Dimension) => ReactNode;
+    } & Omit<HTMLAttributes<HTMLDivElement>, 'title' | 'children'>
 > = ({
     title,
     text,
@@ -49,13 +53,17 @@ export const FeaturePreview: FC<
     gridSrc,
     ...properties
 }) => {
+    const mq = useMq();
+
+    const backgroundImage = mq === 'tablet' ? `tablet/${gridSrc}` : gridSrc;
+
     return (
         <div
             {...properties}
             title={title}
             style={
                 {
-                    backgroundImage: `url(${gridSrc})`,
+                    backgroundImage: `url(/assets/${backgroundImage})`,
                     ...style,
                     '--feature-bg': `var(--${backgroundColor})`,
                     '--feature-text': `var(--${textColor})`,
@@ -83,7 +91,7 @@ export const FeaturePreview: FC<
                 </div>
             </div>
             <div className={clsx(ui.flex, ui['flex-center'], styles.children)}>
-                {children}
+                {children(mq)}
             </div>
         </div>
     );

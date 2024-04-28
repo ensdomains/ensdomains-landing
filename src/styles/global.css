@@ -44,13 +44,6 @@ div[role='group'][tabindex] {
     --page-bg: var(--ens-light-blue);
 }
 
-@custom-media --xs (max-width: 400px);
-@custom-media --small (max-width: 576px);
-@custom-media --medium (max-width: 768px);
-@custom-media --large (max-width: 1024px);
-@custom-media --xLarge (max-width: 1200px);
-@custom-media --tallPhone (max-width: 360px) and (min-height: 740px);
-
 h1,
 h2,
 h3,
