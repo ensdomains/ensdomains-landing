@@ -61,9 +61,9 @@ export default async function Home({
                         position={1}
                         gridSrc="magenta-grid.svg"
                     >
-                        {(mq) => <DappsAnimation t={t} />}
+                        {() => <DappsAnimation t={t} />}
                     </FeaturePreview>
-                    {/* <FeaturePreview
+                    <FeaturePreview
                         title={t('home.features.ownership.title')}
                         text={t('home.features.ownership.text')}
                         textColor="ens-green"
@@ -71,7 +71,9 @@ export default async function Home({
                         indicatorColor="ens-white"
                         position={1}
                         gridSrc="green-grid.svg"
-                    /> */}
+                    >
+                        {() => <div>lol</div>}
+                    </FeaturePreview>
                 </Carousel>
                 <div
                     className={clsx(

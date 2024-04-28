@@ -60,7 +60,6 @@ export const FeaturePreview: FC<
     return (
         <div
             {...properties}
-            title={title}
             style={
                 {
                     backgroundImage: `url(/assets/${backgroundImage})`,
