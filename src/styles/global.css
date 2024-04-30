@@ -61,22 +61,24 @@ p {
 h1 {
     font-family: var(--ens-sans);
     font-weight: 500;
-    font-size: 124px;
-    letter-spacing: -2.48px;
     line-height: 96%;
+    
+    font-size: 40px;
+    letter-spacing: -1.2px;
 }
 
 h2 {
     font-family: var(--ens-sans);
     font-weight: 500;
-    font-size: 100px;
     letter-spacing: -2px;
     line-height: 90%;
+
+    font-size: 32px;
+    letter-spacing: -0.32px;
 }
 
 h3 {
     font-family: var(--ens-sans);
-    font-size: 64px;
     font-style: normal;
     font-weight: 500;
     line-height: 96%; /* 61.44px */
@@ -85,29 +87,52 @@ h3 {
 
 h4 {
     font-family: var(--ens-sans);
-    font-size: 36px;
     font-style: normal;
     font-weight: 500;
     line-height: 96%; /* 34.56px */
-    letter-spacing: -0.72px;
-}
-
-@media (max-width: 1024px) {
-    h1 {
-        font-size: 80px;
-    }
-    h2 {
-        font-size: 64px;
-    }
-    h4 {
-        font-size: 24px; 
-    }
+    letter-spacing: -0.48px;
 }
 
 p {
     font-family: var(--ens-serif);
     font-size: 20px;
     line-height: 112%;
+}
+
+/* TYPOGRAPHY/TABLET */
+@media (min-width: 390px) {
+    h1 {
+        font-size: 80px;
+        letter-spacing: -1.6px;
+    }
+    h2 {
+        font-size: 64px;
+        letter-spacing: -1.28px;
+    }
+    h3 {
+        font-size: 40px;
+        letter-spacing: -0.8px;
+    }
+}
+
+/* TYPOGRAPHY/DESKTOP */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 124px;
+        letter-spacing: -3.72px;
+    }
+    h2 {
+        font-size: 100px;
+        letter-spacing: -2px;
+    }
+    h3 {
+        font-size: 64px;
+        letter-spacing: -1.28px;
+    }
+    h4 {
+        font-size: 36px;
+        letter-spacing: -0.72px; 
+    }
 }
 
 button,
