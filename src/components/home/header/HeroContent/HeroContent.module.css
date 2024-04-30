@@ -42,7 +42,6 @@
 }
 
 @media (min-width: 1680px) and (max-width: 2200px) {
-
   .header-ens-link:nth-of-type(2) {
     left: 242px;
   }
@@ -51,6 +50,12 @@
   }
   .header-ens-link:nth-of-type(4) {
     right: -10px;
+  }
+}
+
+@media (max-width: 1680px) {
+  .header-ens-link:nth-of-type(3),  .header-ens-link:nth-of-type(4) {
+    right: unset;
   }
 }
 
@@ -83,13 +88,15 @@
   }
 }
 
-
-@media (min-width: 1024px) and (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .header-ens-link {
     font-size: 30px;
     padding: 13px 16px;
     border-radius: 5px;
   }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
   .header-ens-link:nth-of-type(1) {
     left: -95px;
     top: 98px;
@@ -101,23 +108,70 @@
   .header-ens-link:nth-of-type(3) {
     top: 196px;
     left: max(896px, 82.1%);
+    right: unset;
   }
   .header-ens-link:nth-of-type(4) {
     left: max(820px, 75%);
     top: calc(100% - 130px);
+    right: unset;
   }
   .header-ens-link:nth-of-type(5) {
     left: 13%;
     top: calc(100% - 23px);
   }
 }
-/* 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .header-ens-link:nth-of-type(1) {
-    left: -98px;
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-ens-link:nth-of-type(1) {
+    left: -7%;
+    top: 98px;
   }
   .header-ens-link:nth-of-type(2) {
-    
+    top: 50px;
+    left: 8.4%;
   }
-} */
+  .header-ens-link:nth-of-type(3) {
+    top: 78px;
+    left: 84%;
+  }
+  .header-ens-link:nth-of-type(4) {
+    display: none;
+  }
+  .header-ens-link:nth-of-type(5) {
+    left: 17.4%;
+    top: calc(100% - 23px);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-ens-link {
+    font-size: 24px;
+    padding: 10px 13px;
+    border-radius: 4px;
+  }
+  .header-ens-link:nth-of-type(1), .header-ens-link:nth-of-type(2), .header-ens-link:nth-of-type(4) {
+    display: none;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 768px) {
+  .header-ens-link:nth-of-type(3) {
+    top: 155px;
+    left: 80%;
+  }
+  .header-ens-link:nth-of-type(5) {
+    top: calc(100% - 35px);
+    left: 20%;
+  }
+}
+
+@media (max-width: 390px) {
+  .header-ens-link:nth-of-type(3) {
+    top: 83px;
+    left: 83%;
+  }
+  .header-ens-link:nth-of-type(5) {
+    top: calc(100% - 35px);
+    left: -1px;
+  }
+}

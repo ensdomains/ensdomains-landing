@@ -64,7 +64,7 @@ h1 {
     line-height: 96%;
     
     font-size: 40px;
-    letter-spacing: -1.2px;
+    letter-spacing: -0.8px; 
 }
 
 h2 {
@@ -82,7 +82,7 @@ h3 {
     font-style: normal;
     font-weight: 500;
     line-height: 96%; /* 61.44px */
-    letter-spacing: -1.28px;
+    letter-spacing: -0.48px;
 }
 
 h4 {
@@ -100,7 +100,7 @@ p {
 }
 
 /* TYPOGRAPHY/TABLET */
-@media (min-width: 390px) {
+@media (min-width: 768px) {
     h1 {
         font-size: 80px;
         letter-spacing: -1.6px;
