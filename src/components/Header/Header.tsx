@@ -34,7 +34,7 @@ export const Header: FC<
                 )}
             </h1>
             {description && <p className={styles.p}>{description}</p>}
-            {children}
+            <div className={styles.children}>{children}</div>
             {cta && (
                 <div className={styles.cta}>
                     {cta.map(([text, url]) => (

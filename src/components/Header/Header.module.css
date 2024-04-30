@@ -7,6 +7,10 @@
     position: relative;
 }
 
+.header > :not(.children) {
+    z-index: 1;
+}
+
 @media (min-width: 390px) {
     .header {
         min-height: min(80vh, 560px);
@@ -14,7 +18,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .header {
         min-height: min(80vh, 830px);
         margin-bottom: 100px;

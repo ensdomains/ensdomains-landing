@@ -116,7 +116,7 @@ p {
 }
 
 /* TYPOGRAPHY/DESKTOP */
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     h1 {
         font-size: 124px;
         letter-spacing: -3.72px;

@@ -10,7 +10,7 @@
   position: absolute;
   height: max-content;
   width: max-content;
-  z-index: -1;
+  z-index: 0;
 
   background-color: var(--bg-color);
   color: var(--color);
@@ -57,6 +57,7 @@
 @media (min-width: 1280px) and (max-width: 1679px) {
   .header-ens-link {
     font-size: 38px; 
+    padding: 16px 20px;
   }
   .header-ens-link:nth-of-type(1) {
     left: -118px;
@@ -98,6 +99,7 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .header-ens-link:nth-of-type(1) {
+    left: -98px;
 
   }
 
