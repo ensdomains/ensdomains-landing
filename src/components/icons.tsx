@@ -97,15 +97,15 @@ export const ArrowUpRightIcon = (properties: Properties) => (
         <path
             d="M3.62598 43.623V22.2084C3.62598 21.1039 4.52141 20.2084 5.62598 20.2084H53.0566"
             stroke="currentColor"
-            stroke-width="6"
+            strokeWidth="6"
         />
         <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M49.1543 5.90083L69.642 19.5593L49.1543 33.2178L49.1543 5.90083Z"
             fill="currentColor"
             stroke="currentColor"
-            stroke-width="6"
+            strokeWidth="6"
         />
     </svg>
 );

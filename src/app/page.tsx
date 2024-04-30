@@ -2,7 +2,6 @@
 'use client';
 
 import { clsx } from 'clsx';
-import { ExternalLink } from 'react-external-link';
 
 import { Carousel } from '~/components/Carousel/Carousel';
 import { ColorCards } from '~/components/ColorCards/ColorCards';
@@ -12,6 +11,7 @@ import { Header } from '~/components/Header/Header';
 import { DappsAnimation } from '~/components/home/animations/DappsAnimation/DappsAnimation';
 import { MessageAnimation } from '~/components/home/animations/MessageAnimation/MessageAnimation';
 import { OwnershipAnimation } from '~/components/home/animations/OwnershipAnimation/OwnershipAnimation';
+import { HeroContent } from '~/components/home/header/HeroContent/HeroContent';
 import { Navbar } from '~/components/Navbar/Navbar';
 import { SearchInput } from '~/components/SearchInput/SearchInput';
 import { TwoCol } from '~/components/TwoCol/TwoCol';
@@ -37,18 +37,7 @@ export default async function Home({
                 subtitle={t('home.hero.subtitle')}
                 description={t('home.hero.text')}
             >
-                <ExternalLink
-                    href="https://app.ens.domains/domico.eth"
-                    className={styles['header-ens-link']}
-                >
-                    domico.eth
-                </ExternalLink>
-                <ExternalLink
-                    href="https://app.ens.domains/nick.eth"
-                    className={styles['header-ens-link']}
-                >
-                    nick.eth
-                </ExternalLink>
+                <HeroContent />
             </Header>
             <SearchInput t={t} />
             <section className={clsx(ui['my-100'], ui['w-page'])}>
