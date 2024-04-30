@@ -2,7 +2,7 @@
     padding: 20px 16px 20px 36px;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;

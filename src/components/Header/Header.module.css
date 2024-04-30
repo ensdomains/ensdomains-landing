@@ -4,6 +4,7 @@
     min-height: min(80vh, 620px);
     padding: 88px 16px 32px 16px; 
     margin-bottom: 50px;
+    position: relative;
 }
 
 @media (min-width: 390px) {

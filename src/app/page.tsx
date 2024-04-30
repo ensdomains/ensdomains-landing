@@ -2,20 +2,22 @@
 'use client';
 
 import { clsx } from 'clsx';
+import { ExternalLink } from 'react-external-link';
 
-import { DappsAnimation } from '../components/animations/DappsAnimation/DappsAnimation';
-import { MessageAnimation } from '../components/animations/MessageAnimation/MessageAnimation';
-import { OwnershipAnimation } from '../components/animations/OwnershipAnimation/OwnershipAnimation';
-import { Carousel } from '../components/Carousel/Carousel';
-import { ColorCards } from '../components/ColorCards/ColorCards';
-import { FeaturePreview } from '../components/FeaturePreview/FeaturePreview';
-import { Footer } from '../components/Footer/Footer';
-import { Header } from '../components/Header/Header';
-import { Navbar } from '../components/Navbar/Navbar';
-import { SearchInput } from '../components/SearchInput/SearchInput';
-import { TwoCol } from '../components/TwoCol/TwoCol';
-import { fallbackLng, Language } from '../i18n/settings';
-import { useTranslation } from '../i18n/useTranslation';
+import { Carousel } from '~/components/Carousel/Carousel';
+import { ColorCards } from '~/components/ColorCards/ColorCards';
+import { FeaturePreview } from '~/components/FeaturePreview/FeaturePreview';
+import { Footer } from '~/components/Footer/Footer';
+import { Header } from '~/components/Header/Header';
+import { DappsAnimation } from '~/components/home/animations/DappsAnimation/DappsAnimation';
+import { MessageAnimation } from '~/components/home/animations/MessageAnimation/MessageAnimation';
+import { OwnershipAnimation } from '~/components/home/animations/OwnershipAnimation/OwnershipAnimation';
+import { Navbar } from '~/components/Navbar/Navbar';
+import { SearchInput } from '~/components/SearchInput/SearchInput';
+import { TwoCol } from '~/components/TwoCol/TwoCol';
+import { fallbackLng, Language } from '~/i18n/settings';
+import { useTranslation } from '~/i18n/useTranslation';
+
 import ui from '../styles/ui.module.css';
 import styles from './page.module.css';
 
@@ -34,7 +36,20 @@ export default async function Home({
                 title={t('home.hero.title')}
                 subtitle={t('home.hero.subtitle')}
                 description={t('home.hero.text')}
-            />
+            >
+                <ExternalLink
+                    href="https://app.ens.domains/domico.eth"
+                    className={styles['header-ens-link']}
+                >
+                    domico.eth
+                </ExternalLink>
+                <ExternalLink
+                    href="https://app.ens.domains/nick.eth"
+                    className={styles['header-ens-link']}
+                >
+                    nick.eth
+                </ExternalLink>
+            </Header>
             <SearchInput t={t} />
             <section className={clsx(ui['my-100'], ui['w-page'])}>
                 <div className={clsx(ui.flex, ui['flex-col'], styles.title)}>
