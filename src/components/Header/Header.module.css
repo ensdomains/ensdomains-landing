@@ -1,8 +1,23 @@
 .header {
     width: 100%;
     gap: 2rem;
-    min-height: min(80vh, 700px);
-    padding: 5rem 1rem;
+    min-height: min(80vh, 620px);
+    padding: 88px 16px 32px 16px; 
+    margin-bottom: 50px;
+}
+
+@media (min-width: 390px) {
+    .header {
+        min-height: min(80vh, 560px);
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        min-height: min(80vh, 830px);
+        margin-bottom: 100px;
+    }
 }
 
 .tag {

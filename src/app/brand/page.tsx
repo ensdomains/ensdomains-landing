@@ -15,7 +15,7 @@ export default async function Home({
     const { t } = await useTranslation(params.lang, 'translation');
 
     return (
-        <div className="page">
+        <main className="page">
             <Navbar t={t} lang={params.lang} />
             <LinkList
                 links={[
@@ -43,6 +43,6 @@ export default async function Home({
             />
 
             <Footer t={t} />
-        </div>
+        </main>
     );
 }

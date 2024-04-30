@@ -23,7 +23,7 @@ export default async function Home({
     const { t } = await useTranslation(params.lang, 'translation');
 
     return (
-        <div
+        <main
             className="page"
             style={
                 {
@@ -118,6 +118,6 @@ export default async function Home({
             </div>
 
             <Footer t={t} />
-        </div>
+        </main>
     );
 }
