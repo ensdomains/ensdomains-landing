@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "license": "MIT",
     "scripts": {
-        "build": "gatsby build",
+        "build": "gatsby build && cp -r ./public ./out",
         "dev": "gatsby develop",
         "develop": "pnpm run dev",
         "start": "pnpm run dev",
