@@ -33,6 +33,17 @@ const HeroEnsLink = ({
 
 export const HeroContent = () => (
     <>
+        <div className={styles['position-container']}>
+            <div className={styles['animation-container']}>
+                <img
+                    src="/assets/magenta-animation-bg.svg"
+                    alt=""
+                    height={400}
+                    width={400}
+                />
+                <div className={styles['animated-square']}></div>
+            </div>
+        </div>
         <HeroEnsLink
             name="domico.eth"
             color="ens-blue"
