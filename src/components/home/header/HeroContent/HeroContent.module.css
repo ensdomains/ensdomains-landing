@@ -51,15 +51,15 @@
 
 @keyframes move-diagonal-desktop {
   0%, 50%, 100% {
-    transform: translate(0%, 0%);
+    transform: rotate(45deg) translate(0%, 0%);
     animation-timing-function: ease-in-out; /* Deceleration */
   }
   20% {
-    transform: translate(-125px, -125px);
+    transform: rotate(45deg) translate(-175px, 0);
     animation-timing-function: ease-in-out; /* Deceleration */
   }
   75% {
-    transform: translate(125px, 125px);
+    transform: rotate(45deg) translate(175px, 0);
     animation-timing-function: ease-in-out; /* Deceleration */
   }
 }
