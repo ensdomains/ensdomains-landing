@@ -44,6 +44,13 @@ export const HeroContent = () => (
                 <div className={styles['animated-square']}></div>
             </div>
         </div>
+        <img
+            src="/assets/magenta-element.svg"
+            width={200}
+            height={200}
+            alt=""
+            className={styles['bg-element']}
+        />
         <HeroEnsLink
             name="domico.eth"
             color="ens-blue"
