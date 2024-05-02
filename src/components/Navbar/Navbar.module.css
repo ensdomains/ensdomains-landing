@@ -36,6 +36,7 @@
 
 .link {
     color: var(--ens-dark-blue);
+    font-size: 14px;
 }
 
 .link:hover {

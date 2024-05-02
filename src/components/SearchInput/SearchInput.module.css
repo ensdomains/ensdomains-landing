@@ -3,16 +3,24 @@
   width: 100%;
   background-color: var(--ens-light-blue);
   color: var(--ens-dark-blue);
-  padding: 28px;
-  max-width: 1394px;
-  width: 100%;
   border-style: none;
   border-radius: 4px;
-  font-size: 76px; 
   font-weight: 500;
   line-height: 96%;
   box-sizing: border-box;
   font-family: var(--ens-semi-mono);
+
+  font-size: 52px;
+  padding: 20px 24px;
+  max-width: 882px;
+}
+
+@media (min-width: 1280px) {
+  .input {
+    font-size: 76px;
+    max-width: 1394px;
+    padding: 28px;
+  }
 }
 
 .input::after {
