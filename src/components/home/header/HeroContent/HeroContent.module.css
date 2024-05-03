@@ -28,6 +28,11 @@
   left: calc(50% - 33px/2);
 }
 
+.position-container:nth-of-type(3) .animated-square {
+  top: 0;
+  left: 31px;
+}
+
 .bg-element {
   position: absolute;
 }
@@ -108,6 +113,10 @@
     left: 68.7%;
     top: 60px;
   }
+  .position-container:nth-of-type(3) {
+    left: 6.5%;
+    top: 373px;
+  }
   .animation-container img {
     width: max-content;
     height: max-content;
@@ -116,6 +125,7 @@
     top: 132px;
     left: 80%;
   }
+
 }
 
 @media (max-width: 1680px) {
