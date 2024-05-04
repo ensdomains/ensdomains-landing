@@ -30,7 +30,7 @@
 
 .position-container:nth-of-type(3) .animated-square {
   top: 0;
-  left: 31px;
+  left: 30px;
 }
 
 .bg-element {
@@ -56,32 +56,60 @@
 
 @keyframes move-diagonal-desktop {
   0%, 50%, 100% {
-    transform: rotate(45deg) translate(0%, 0%);
-    animation-timing-function: ease-in-out; /* Deceleration */
+    transform: rotate(45deg) translate(0, 0);
+    animation-timing-function: ease-in-out;
   }
   20% {
     transform: rotate(45deg) translate(-175px, 0);
-    animation-timing-function: ease-in-out; /* Deceleration */
+    animation-timing-function: ease-in-out;
   }
   75% {
     transform: rotate(45deg) translate(175px, 0);
-    animation-timing-function: ease-in-out; /* Deceleration */
+    animation-timing-function: ease-in-out;
   }
 }
 
 @keyframes move-left-right {
   0%, 50%, 100% {
-    transform: translate(0%, 0%);
-    animation-timing-function: ease-in-out; /* Deceleration */
+    transform: translate(0, 0);
+    animation-timing-function: ease-in-out;
   }
-  20% {
+  25% {
     transform: translate(-84px, 0);
-    animation-timing-function: ease-in-out; /* Deceleration */
+    animation-timing-function: ease-in-out;
   }
   75% {
     transform: translate(84px, 0);
-    animation-timing-function: ease-in-out; /* Deceleration */
+    animation-timing-function: ease-in-out;
   }
+}
+
+@keyframes diagonal-bottom-right {
+  0%, 100% {
+    transform: translate(0, 0);
+    animation-timing-function: ease-in-out;
+  }
+  20%, 80% {
+    transform: translate(0, var(--before-curve));
+
+    animation-timing-function: ease-in-out;
+  }
+  30%, 70% {
+    transform: translate(var(--after-curve-right), var(--top));
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translate(var(--end-right), var(--top));
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.position-container:nth-of-type(3) .animated-square {
+  --before-curve: 120px;
+  --after-curve-right: 20px;
+  --top: 135px;
+  --end-right: 138px;
+  animation: diagonal-bottom-right 5s linear infinite;
 }
 
 @media (min-width: 1680px) {
@@ -114,8 +142,8 @@
     top: 60px;
   }
   .position-container:nth-of-type(3) {
-    left: 6.5%;
-    top: 373px;
+    left: 200px;
+    top: calc(100% - 350px);
   }
   .animation-container img {
     width: max-content;
@@ -124,13 +152,6 @@
   .bg-element:nth-last-of-type(1) {
     top: 132px;
     left: 80%;
-  }
-
-}
-
-@media (max-width: 1680px) {
-  .header-ens-link:nth-of-type(3), .header-ens-link:nth-of-type(4) {
-    right: unset;
   }
 }
 
@@ -169,13 +190,21 @@
     left: 75%;
     top: 50px;
   }
-  .animation-container:nth-of-type(1) img {
+  .position-container:nth-of-type(1) img {
     width: 320px;
     height: 320px;
   }
   .position-container:nth-of-type(2) img {
     width: 177px;
     height: 234px;
+  }
+  .position-container:nth-of-type(3) {
+    left: 16%;
+    top: calc(100% - 195px);
+  }
+  .position-container:nth-of-type(3) img {
+    width: 191px; 
+    height: max-content;
   }
   .position-container:nth-of-type(2) .animated-square {
     top: 56px;
@@ -188,6 +217,14 @@
     top: 80px;
     left: 82.5%;
     width: 177px;
+  }
+  .position-container:nth-of-type(3) .animated-square {
+    left: 32px;
+    --before-curve: 118px;
+    --after-curve-right: 20px;
+    --top: 133px;
+    --end-right: 135px;
+    animation: diagonal-bottom-right 5s linear infinite;
   }
 }
 
@@ -239,7 +276,7 @@
     top: 50px;
     left: 77.83%;
   }
-  .animation-container:nth-of-type(1) img {
+  .position-container:nth-of-type(1) img {
     width: 256px;
     height: 256px;
   }
@@ -249,6 +286,22 @@
   }
   .position-container:nth-of-type(2) .animated-square {
     top: 46px;
+  }
+  .position-container:nth-of-type(3) {
+    left: 18%;
+    top: calc(100% - 152px);
+  }
+  .position-container:nth-of-type(3) img {
+    width: 153px;
+    height: max-content;
+  }
+  .position-container:nth-of-type(3) .animated-square {
+    left: 27px;
+    --before-curve: 90px;
+    --after-curve-right: 18px;
+    --top: 106px;
+    --end-right: 108px;
+    animation: diagonal-bottom-right 5s linear infinite;
   }
   .animated-square {
     height: 21px;
@@ -262,7 +315,7 @@
 }
 
 @media (max-width: 1024px) {
-  .position-container:nth-of-type(1) {
+  .position-container:nth-of-type(1), .position-container:nth-of-type(3) {
     display: none;
   }
 }
@@ -357,5 +410,11 @@
   .position-container:nth-of-type(2) {
     top: -30px;
     left: 50%;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .animated-square {
+    animation: none;
   }
 }
