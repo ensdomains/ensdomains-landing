@@ -43,21 +43,18 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     className={clsx(ui.flex, ui['flex-row'], styles.fndGallery)}
                 >
                     <img
+                        className={styles.img}
                         src="/assets/fnd-1.png"
-                        width={170}
-                        height={92}
                         alt=""
                     />
                     <img
+                        className={styles.img}
                         src="/assets/fnd-2.png"
-                        width={170}
-                        height={92}
                         alt=""
                     />
                     <img
+                        className={styles.img}
                         src="/assets/fnd-3.png"
-                        width={170}
-                        height={92}
                         alt=""
                     />
                 </div>

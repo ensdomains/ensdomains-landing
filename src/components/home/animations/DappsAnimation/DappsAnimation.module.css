@@ -1,6 +1,4 @@
 .grid {
-  gap: 12px;
-  height: 207px;
   user-select: none;
   width: 100%;
 }
@@ -35,11 +33,10 @@
 }
 
 .fnd {
-  width: 580px;
+  width: 100%;
   border-radius: 12px;
   background: var(--ens-white);
   position: relative;
-  padding-top: 51px;
 }
 
 .fndPfp {
@@ -77,28 +74,25 @@
 
 .fndGallery {
   gap: 5px;
+  overflow: hidden;
 }
 
-.findGallery > img {
-  width: max-content;
-  height: max-content;
+.img {
+  object-fit: cover;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  object-position: top;
 }
 
 .swap {
   background-color: var(--ens-white);
-  padding: 8px;
 
   border-radius: 12px;
   background: var(--ens-white);
-  width: 256px;
-  gap: 26px;
   height: 100%;
 }
 
 .swapName {
-  font-size: 8px;
-  gap: 6px;
-  padding: 10px;
   color: var(--ens-medium-blue);
 }
 
@@ -117,20 +111,16 @@
 
 .swapTitle {
   color: var(--ens-medium-blue);
-  font-size: 12px;
 }
 
 .swapIndicator {
   background-color: var(--ens-medium-blue);
-  height: 16px;
-  width: 16px;
   border-radius: 99px;
 }
 
 .swapCurrency {
   color:  var(--ens-medium-blue);
   font-family: var(--ens-semi-mono);
-  font-size: 8px;
   font-style: normal;
   font-weight: 500;
   line-height: 96%; /* 8.052px */ 
@@ -138,10 +128,8 @@
 
 .swapCurrencyToggle, .swapCurrencyResultToggle {
   align-items: center;
-  gap: 6px;
   border-radius: 16px;
   width: max-content;
-  padding: 6px;
   color: var(--ens-medium-blue);
 }
 
@@ -151,13 +139,11 @@
 
 .swapCurrencyResultToggle {
   background: var(--ens-white);
-  margin-bottom: 10px;
 }
 
 .swapValue {
   color: var(--ens-medium-blue);
   font-family: var(--ens-mono);
-  font-size: 30px;
   font-style: normal;
   font-weight: 500;
   line-height: 96%;
@@ -169,9 +155,7 @@
 
 .swapResult {
   background: var(--ens-gray-2);
-  height: 165px;
   width: 100%;
-  padding: 6px;
   border-radius: 6px;
   position: relative;
   align-items: center;
@@ -181,7 +165,6 @@
 
 .swapIcon {
   position: absolute;
-  top: -12.5px;
 }
 
 .swapButton {
@@ -203,7 +186,59 @@
 
 /* RESPONSIVE STYLES */
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
+  .img {
+    height: 40px;
+    width: 104px;
+  }
+  .fnd {
+    max-width: 340px;
+    padding-top: 51px;
+  }
+  .swapResult {
+    height: 100px;
+    padding: 4px;
+  }
+  .swapValue {
+    font-size: 18px;
+  }
+  .swap {
+    gap: 10px;
+  }
+  .swapTitle {
+    font-size: 7px;
+  }
+  .swapCurrency {
+    font-size: 5px;
+  }
+  .swapCurrencyToggle, .swapCurrencyResultToggle {
+    padding: 4px;
+    gap: 4px;
+    margin-bottom: 5px;
+  }
+  .swapIndicator {
+    height: 10px;
+    width: 10px;
+  }
+  .grid {
+    gap: 12px;
+  }
+  .swapName {
+    font-size: 5px;
+    gap: 4px;
+    padding: 6px;
+  }
+  .swap {
+    width: 156px;
+    padding: 5px;
+  }
+  .swapIcon {
+    top: -16px;
+    width: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
   .fndName {
     font-size: 14px;
   }
@@ -216,13 +251,59 @@
     padding: 12px 0;
   }
   .grid {
-    height: 342px;
+    gap: 12px;
   }
   .fndBg {
     height: 130px;
   }
   .fnd {
-    padding-top: 84px;
+    max-width: 580px;
+    padding-top: 86px;
+  }
+  .img {
+    height: 92px;
+    width: 170px;
+  }
+  .swapResult {
+    height: 165px;
+    padding: 6px;
+  }
+  .swapValue {
+    font-size: 30px;
+  }
+  .swap {
+    gap: 26px;
+  }
+  .swapTitle {
+    font-size: 12px;
+  }
+  .swapCurrency {
+    font-size: 8px;
+  }
+  .swapCurrencyToggle, .swapCurrencyResultToggle {
+    padding: 6px;
+    gap: 6px;
+  }
+  .swapIndicator {
+    height: 16px;
+    width: 16px;
+  }
+  .swapName {
+    font-size: 8px;
+    gap: 6px;
+    padding: 10px;
+  }
+  .swap {
+    padding: 8px;
+    width: 256px;
+  }
+  .swapIcon {
+    top: -12.5px;
+    height: max-content;
+    width: max-content;
+  }
+  .swapCurrencyToggle {
+    margin-bottom: 10px;
   }
 }
 
