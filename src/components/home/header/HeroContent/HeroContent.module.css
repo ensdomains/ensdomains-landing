@@ -26,6 +26,7 @@
 .position-container:nth-of-type(2) .animated-square {
   top: 30px;
   left: calc(50% - 33px/2);
+  animation: move-left-right 5s linear infinite;
 }
 
 .position-container:nth-of-type(3) .animated-square {
@@ -222,9 +223,6 @@
     width: 191px; 
     height: max-content;
   }
-  .position-container:nth-of-type(2) .animated-square {
-    top: 56px;
-  }
   .animated-square {
     height: 26px;
     width: 26px;
@@ -240,9 +238,9 @@
     --after-curve-right: 20px;
     --top: 133px;
     --end-right: 135px;
-    animation: diagonal-bottom-right 5s linear infinite;
   }
   .position-container:nth-of-type(2) .animated-square {
+    top: 56px;
     --start: -72px;
     --end: 72px;
   }
@@ -288,9 +286,6 @@
   .position-container:nth-of-type(1) .animated-square {
     animation: move-diagonal-desktop 5s linear infinite;
   }
-  .position-container:nth-of-type(2) .animated-square {
-    animation: move-left-right 5s linear infinite;
-  }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
@@ -332,9 +327,6 @@
     width: 142px;
     height: 188px; 
   }
-  .position-container:nth-of-type(2) .animated-square {
-    top: 46px;
-  }
   .position-container:nth-of-type(3) {
     left: 18%;
     top: calc(100% - 152px);
@@ -356,6 +348,7 @@
     width: 142px;
   }
   .position-container:nth-of-type(2) .animated-square {
+    top: 46px;
     --start: -58px;
     --end: 58px;
   }
@@ -419,12 +412,24 @@
     height: 150px; 
   }
   .position-container:nth-of-type(2) .animated-square {
+    left: calc(50% - 16.8px/2);
     top: 35px;
-    animation: move-left-right 5s linear infinite;
+    --start: -66px;
+    --end: 66px;
   }
   .animated-square {
     height: 16.8px;
     width: 16.8px;
+  }
+  .position-container:nth-of-type(4) img {
+    width: 205px;
+    height: max-content;
+  }
+  .position-container:nth-of-type(4) .animated-square {
+    --start: -96px;
+    --end: 96px;
+    left: calc(50% - 16.8px/2);
+    top: calc(50% - 13px);
   }
 }
 
@@ -446,6 +451,10 @@
     top: 4px;
     left: 70.1%;
   }
+  .position-container:nth-of-type(4) {
+    left: -1%;
+    top: calc(100% - 100px);
+  }
 }
 
 @media (max-width: 390px) {
@@ -465,6 +474,10 @@
   .position-container:nth-of-type(2) {
     top: -30px;
     left: 50%;
+  }
+  .position-container:nth-of-type(4) {
+    left: -37%;
+    top: calc(100% - 100px);
   }
 }
 
