@@ -74,7 +74,7 @@ export default async function Home({
                         textColor="ens-green"
                         backgroundColor="ens-light-green"
                         indicatorColor="ens-white"
-                        position={1}
+                        position={2}
                         gridSrc="green-grid.svg"
                     >
                         {() => <OwnershipAnimation />}

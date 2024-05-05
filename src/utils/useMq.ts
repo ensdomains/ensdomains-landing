@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 
 export const queries = {
-    desktop: '(min-width: 1024px)',
-    tablet: '(min-width: 390px) and (max-width: 1024px)',
-    phone: '(max-width: 390px)',
+    desktop: '(min-width: 1280px)',
+    tablet: '(min-width: 768px)',
+    phone: '(max-width: 768px)',
 } as const;
 
 export type Dimension = keyof typeof queries;
