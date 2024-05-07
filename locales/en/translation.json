@@ -29,6 +29,9 @@
       "ownership": {
         "title": "True ownership.",
         "text": "Your ENS name is yours, period. No middlemen, no red tape. It's your property, uncensored - and irrevocable."
+      },
+      "farcaster": {
+        "title": "Home"
       }
     },
     "gyow": {

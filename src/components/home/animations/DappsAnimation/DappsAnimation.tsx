@@ -3,11 +3,59 @@
 import { clsx } from 'clsx';
 import { TFunction } from 'i18next';
 
-import { ArrowDownIcon, SwapIcon } from '~/components/icons';
+import {
+    ArrowDownIcon,
+    FarcastCommentIcon,
+    FarcastLikeIcon,
+    FarcastRecastIcon,
+    SwapIcon,
+} from '~/components/icons';
 import ui from '~/styles/ui.module.css';
 import { useIntersectionObserver } from '~/utils/useIntersectionObserver';
 
+import { CrossFadeImage } from '../CrossFadeImage/CrossFadeImage';
 import styles from './DappsAnimation.module.css';
+
+const sources: { src: string; alt: string }[] = [
+    'domico.eth',
+    'luc.eth',
+    'nick.eth',
+].map((name) => ({ alt: name, src: `/assets/${name}.png` }));
+
+const FarcasterPost = () => (
+    <div className={clsx(ui.flex, ui['flex-col'], styles.farcasterPost)}>
+        <div
+            className={clsx(
+                ui.flex,
+                ui['flex-row'],
+                styles.farcasterPostAuthor
+            )}
+        >
+            <span>katiewav</span>
+            <span className={styles.farcasterPostAuthorHandle}>@katiewav</span>
+        </div>
+        <div className={styles.farcasterPostContent}>
+            How can we create a better ecosystem for Ethereum Name Service?
+        </div>
+        <div
+            className={clsx(
+                ui.flex,
+                ui['flex-row'],
+                styles.farcasterPostButtons
+            )}
+        >
+            <button>
+                <FarcastCommentIcon /> 12
+            </button>
+            <button>
+                <FarcastRecastIcon /> 44
+            </button>
+            <button>
+                <FarcastLikeIcon /> 193
+            </button>
+        </div>
+    </div>
+);
 
 export const DappsAnimation = ({ t }: { t: TFunction }) => {
     const { ref, isIntersecting } = useIntersectionObserver({
@@ -34,10 +82,18 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                 )}
             >
                 <div className={styles.fndBg}></div>
-                <div className={clsx(styles.pfp, styles.fndPfp)}></div>
-                <div className={clsx(styles.name, styles.fndName)}>
-                    placeholder.eth
-                </div>
+                <CrossFadeImage
+                    duration={1500}
+                    className={clsx(styles.pfp, styles.fndPfp)}
+                    {...{ sources }}
+                >
+                    {({ alt }) => (
+                        <div className={clsx(styles.name, styles.fndName)}>
+                            {alt}
+                        </div>
+                    )}
+                </CrossFadeImage>
+
                 <div className={styles.fndLine}></div>
                 <div
                     className={clsx(ui.flex, ui['flex-row'], styles.fndGallery)}
@@ -76,15 +132,17 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                         className={clsx(
                             ui.flex,
                             ui['flex-row'],
-                            ui['flex-center'],
                             styles.name,
                             styles.swapName
                         )}
                     >
-                        <div
+                        <CrossFadeImage
+                            duration={1500}
                             className={clsx(styles.pfp, styles.swapNamePfp)}
-                        ></div>
-                        <div>placeholder.eth</div>
+                            {...{ sources }}
+                        >
+                            {({ alt }) => <div>{alt}</div>}
+                        </CrossFadeImage>
                     </div>
                 </div>
                 <div
@@ -135,15 +193,60 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     </button>
                 </div>
             </div>
-            <img
-                src="/assets/farcaster.svg"
-                alt=""
-                height={341}
+            <div
                 className={clsx(
                     styles.farcaster,
                     isIntersecting && styles.animating
                 )}
-            />
+            >
+                <div className={clsx(styles.farcasterTitle)}>
+                    <CrossFadeImage
+                        duration={1500}
+                        className={styles.farcasterPfp}
+                        {...{ sources }}
+                    />
+                    <div className={styles.farcasterTitleText}>
+                        {t('home.features.farcaster.title')}
+                    </div>
+                </div>
+                <div
+                    className={clsx(
+                        ui.flex,
+                        ui['flex-row'],
+                        styles.farcasterStories
+                    )}
+                >
+                    <img
+                        src="/assets/stories-1.png"
+                        alt=""
+                        height={32}
+                        width={32}
+                    />
+                    <img
+                        src="/assets/stories-2.png"
+                        alt=""
+                        height={32}
+                        width={32}
+                    />
+                    <img
+                        src="/assets/stories-3.png"
+                        alt=""
+                        height={32}
+                        width={32}
+                    />
+                    <img
+                        src="/assets/stories-4.png"
+                        alt=""
+                        height={32}
+                        width={32}
+                    />
+                </div>
+                <div className={clsx(ui.flex, ui['flex-col'])}>
+                    <FarcasterPost />
+                    <FarcasterPost />
+                    <FarcasterPost />
+                </div>
+            </div>
         </div>
     );
 };

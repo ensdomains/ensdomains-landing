@@ -1,6 +1,8 @@
 .grid {
   user-select: none;
   width: 100%;
+  height: 100%;
+  align-items: stretch;
 }
 
 .name {
@@ -9,13 +11,10 @@
   box-shadow: 0px 24px 30px 0px rgba(14, 61, 104, 0.06);
 
   cursor: pointer;
-  transition: 125ms;
-  transition-timing-function: ease-in;
-  transform: none;
+  transition: opacity var(--duration) ease-in-out;
 }
 
 .pfp {
-  background-color: var(--ens-magenta);
   border-radius: 99px;
   z-index: 1;
 }
@@ -43,8 +42,8 @@
   border: 4px solid var(--ens-white);
   margin-bottom: 6px;
 
-  width: 56px;
-  height: 56px; 
+  --width: 56px;
+  --height: 56px; 
 }
 
 .fndName {
@@ -94,11 +93,14 @@
 
 .swapName {
   color: var(--ens-medium-blue);
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .swapNamePfp {
-  width: 16px;
-  height: 16px;
+  --width: 16px;
+  --height: 16px;
 }
 
 .swapHeader {
@@ -182,6 +184,92 @@
 
 .farcaster {
   height: 100%;
+  border-radius: 12px;
+  background-color: var(--ens-white);
+  border: 1px solid var(--ens-gray-2);
+}
+
+.farcasterStories, .farcasterTitle, .farcasterPost {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.farcasterTitle {
+  width: 100%;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 8px;
+}
+
+.farcasterStories {
+  padding-top: 12px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(1, 26, 37, 0.1);
+  padding-bottom: 12px;
+}
+
+.farcasterStories > img {
+  border-radius: 99px;
+}
+
+.farcasterPfp {
+  border-radius: 99px;
+  position: absolute;
+  left: 14px;
+}
+
+.farcasterTitleText {
+  text-align: center;
+}
+
+.farcasterPost {
+  font-size: 9px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 1px solid rgba(1, 26, 37, 0.1);
+}
+
+.farcasterPostAuthor {
+  gap: 4px;
+  line-height: 96%;
+}
+
+.farcasterPost {
+  color: var(--ens-dark-blue);
+  gap: 4px;
+  width: 100%;
+}
+
+.farcasterPostAuthorHandle {
+  color: var(--ens-gray-4);
+}
+
+.farcasterPostButtons {
+  gap: 14px;
+}
+
+.farcasterPostButtons > button {
+  display: block;
+  color: var(--ens-dark-blue);
+  opacity: 0.33;
+  transition: opacity 150ms;
+  background: none;
+  cursor: pointer;
+  font-size: 8px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.farcasterPostButtons > button:hover {
+  opacity: 1;
+}
+
+.farcasterPostContent {
+  font-weight: 400;
+  line-height: 133%;
+  letter-spacing: 0.088px; 
 }
 
 /* RESPONSIVE STYLES */
@@ -252,13 +340,14 @@
   }
   .grid {
     gap: 12px;
+    max-height: 341px;
   }
   .fndBg {
     height: 130px;
   }
   .fnd {
     max-width: 580px;
-    padding-top: 86px;
+    padding-top: 83px;
   }
   .img {
     height: 92px;
@@ -292,6 +381,7 @@
     font-size: 8px;
     gap: 6px;
     padding: 10px;
+    max-width: 106px;
   }
   .swap {
     padding: 8px;
@@ -304,6 +394,18 @@
   }
   .swapCurrencyToggle {
     margin-bottom: 10px;
+  }
+  .farcasterTitleText {
+    font-size: 12px;
+    line-height: 96%;
+  }
+  .farcasterPost {
+    width: 256px;
+  }
+  .farcasterPfp {
+    --height: 16px;
+    --width: 16px;
+    top: 18px;
   }
 }
 
