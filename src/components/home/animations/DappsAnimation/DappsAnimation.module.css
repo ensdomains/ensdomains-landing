@@ -244,6 +244,24 @@
   letter-spacing: 0.088px; 
 }
 
+.farcasterMenu {
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid rgba(1, 26, 37, 0.1);
+  background-color: var(--ens-white);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.farcasterMenu > button {
+  width: 100%;
+  background: none;
+  padding: 0;
+}
+
 /* RESPONSIVE STYLES */
 
 @media (min-width: 768px) {
@@ -346,9 +364,20 @@
   }
   .fndPfp {
     margin-bottom: 4px;
-
     --width: 56px;
     --height: 56px; 
+  }
+  .farcasterMenu {
+    padding: 0 5px;
+    gap: 3px;
+  }
+  .farcasterMenu > button > img {
+    height: 10px;
+    width: 10px;
+  }
+  .farcasterPostButtonsIcon {
+    height: 5px;
+    width: 5px;
   }
 }
 
@@ -389,6 +418,8 @@
   }
   .swap {
     gap: 26px;
+    padding: 8px;
+    width: 256px;
   }
   .swapTitle {
     font-size: 12px;
@@ -409,10 +440,6 @@
     gap: 6px;
     padding: 10px;
     max-width: 106px;
-  }
-  .swap {
-    padding: 8px;
-    width: 256px;
   }
   .swapIcon {
     top: -16px;
@@ -468,6 +495,25 @@
   .farcasterStories {
     padding-top: 12px;
     padding-bottom: 12px;
+  }
+  .swapCurrencyIcon {
+    height: 6px;
+  }
+  .farcasterMenu > button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .farcasterMenu {
+    padding: 0 8px;
+    gap: 5px;
+  }
+  .farcasterMenu > button > img {
+    height: 16px;
+    width: 16px;
+  }
+  .farcasterPostButtonsIcon {
+    height: auto;
+    width: auto;
   }
 }
 

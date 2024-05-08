@@ -45,13 +45,20 @@ const FarcasterPost = () => (
             )}
         >
             <button>
-                <FarcastCommentIcon /> 12
+                <FarcastCommentIcon
+                    className={styles.farcasterPostButtonsIcon}
+                />{' '}
+                12
             </button>
             <button>
-                <FarcastRecastIcon /> 44
+                <FarcastRecastIcon
+                    className={styles.farcasterPostButtonsIcon}
+                />{' '}
+                44
             </button>
             <button>
-                <FarcastLikeIcon /> 193
+                <FarcastLikeIcon className={styles.farcasterPostButtonsIcon} />{' '}
+                193
             </button>
         </div>
     </div>
@@ -245,6 +252,54 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     <FarcasterPost />
                     <FarcasterPost />
                     <FarcasterPost />
+                </div>
+                <div
+                    className={clsx(
+                        ui.flex,
+                        ui['flex-row'],
+                        styles.farcasterMenu
+                    )}
+                >
+                    <button>
+                        <img
+                            src="/assets/home.svg"
+                            height={16}
+                            width={16}
+                            alt=""
+                        />
+                    </button>
+                    <button>
+                        <img
+                            src="/assets/search.svg"
+                            height={16}
+                            width={16}
+                            alt=""
+                        />
+                    </button>
+                    <button>
+                        <img
+                            src="/assets/plus.svg"
+                            height={16}
+                            width={16}
+                            alt=""
+                        />
+                    </button>
+                    <button>
+                        <img
+                            src="/assets/bell.svg"
+                            height={16}
+                            width={16}
+                            alt=""
+                        />
+                    </button>
+                    <button>
+                        <img
+                            src="/assets/group.svg"
+                            height={16}
+                            width={16}
+                            alt=""
+                        />
+                    </button>
                 </div>
             </div>
         </div>
