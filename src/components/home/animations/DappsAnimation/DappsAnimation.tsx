@@ -163,7 +163,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     >
                         <div className={styles.swapIndicator}></div>
                         <span className={styles.swapCurrency}>USDC</span>
-                        <ArrowDownIcon />
+                        <ArrowDownIcon className={styles.swapCurrencyIcon} />
                     </div>
                 </div>
 
@@ -186,7 +186,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     >
                         <div className={styles.swapIndicator}></div>
                         <span className={styles.swapCurrency}>ETH</span>
-                        <ArrowDownIcon />
+                        <ArrowDownIcon className={styles.swapCurrencyIcon} />
                     </div>
                     <button className={styles.swapButton}>
                         {t('home.features.consistent.swapButton')}
