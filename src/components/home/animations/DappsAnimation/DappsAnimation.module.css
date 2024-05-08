@@ -1,8 +1,13 @@
 .grid {
   user-select: none;
-  width: 100%;
-  height: 100%;
-  align-items: stretch;
+  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(2, max-content); 
+  grid-template-rows: repeat(2, max-content); 
+  grid-template-areas: 
+    "fnd fnd"
+    ". ."; 
+  gap: 6px;
 }
 
 .name {
@@ -32,10 +37,13 @@
 }
 
 .fnd {
+  grid-area: fnd;
   width: 100%;
   border-radius: 12px;
   background: var(--ens-white);
   position: relative;
+  
+  max-width: 270px;
 }
 
 .fndPfp {
@@ -68,7 +76,6 @@
 }
 
 .fndGallery {
-  gap: 5px;
   overflow: hidden;
 }
 
@@ -77,6 +84,8 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   object-position: top;
+
+  width: 82px;
 }
 
 .swap {
@@ -175,6 +184,7 @@
 }
 
 .farcaster {
+  width: max-content;
   height: 100%;
   border-radius: 12px;
   background-color: var(--ens-white);
@@ -210,6 +220,9 @@
   border-top: 1px solid rgba(1, 26, 37, 0.1);
   color: var(--ens-dark-blue);
   gap: 4px;
+
+  max-width: 132px;
+  font-size: 5px;
 }
 
 .farcasterPostAuthor {
@@ -266,7 +279,7 @@
 
 @media (min-width: 768px) {
   .img {
-    height: 40px;
+    height: 41px;
     width: 104px;
   }
   .fnd {
@@ -300,8 +313,11 @@
     width: 10px;
   }
   .grid {
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: unset;
+    grid-template-areas: 
+    "fnd . ."; 
     gap: 12px;
-    max-height: 207px;
   }
   .swapName {
     font-size: 5px;
@@ -379,6 +395,11 @@
     height: 5px;
     width: 5px;
   }
+  .fndGallery {
+    padding-left: 12px;
+    padding-right: 12px;
+    gap: 3px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -395,7 +416,6 @@
   }
   .grid {
     gap: 12px;
-    max-height: 341px;
   }
   .fndBg {
     height: 130px;
@@ -405,7 +425,7 @@
     padding-top: 83px;
   }
   .img {
-    height: 94px;
+    height: 104px;
     width: 170px;
   }
   .swapResult {
@@ -514,6 +534,11 @@
   .farcasterPostButtonsIcon {
     height: auto;
     width: auto;
+  }
+  .fndGallery {
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 5px;
   }
 }
 

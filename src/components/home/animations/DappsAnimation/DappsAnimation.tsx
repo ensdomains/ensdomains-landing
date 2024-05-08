@@ -70,15 +70,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
     });
 
     return (
-        <div
-            ref={ref}
-            className={clsx(
-                styles.grid,
-                ui.flex,
-                ui['flex-row'],
-                ui['flex-center']
-            )}
-        >
+        <div ref={ref} className={styles.grid}>
             <div
                 className={clsx(
                     styles.fnd,
