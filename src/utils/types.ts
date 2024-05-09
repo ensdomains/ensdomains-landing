@@ -19,3 +19,5 @@ export type Color =
     | 'ens-hover-light-blue'
     | 'page-text'
     | 'page-bg';
+
+export type ButtonVariant = 'primary' | 'secondary';

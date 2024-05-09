@@ -53,7 +53,7 @@
     max-width: 420px;
 }
 
-.cursive {
+.serif {
     font-family: var(--ens-serif);
     font-size: 1.2em;
     color: var(--ens-medium-blue);
@@ -64,16 +64,25 @@
     /* background-color: var(--ens-blue); */
     /* color: var(--ens-gray-2); */
     color: var(--page-bg);
-    padding: 1rem 2rem;
-    font-size: 1rem;
     font-weight: 500;
     border-radius: 4px;
     text-align: center;
+
+    padding: 20px 60px; 
+    font-size: 14px;
+
+}
+
+@media (min-width: 1280px) {
+    .button {
+        padding: 30px 100px;
+        font-size: 16px;
+    }
 }
 
 .button-secondary {
     background-color: var(--page-bg);
-    color: var(--page-text);
+    color: var(--ens-blue);
 }
 
 .button:hover {

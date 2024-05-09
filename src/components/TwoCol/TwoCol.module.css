@@ -17,7 +17,8 @@
 
 .split {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 1rem;
     flex-grow: 1;
     margin-top: 1rem;
@@ -28,11 +29,16 @@
     justify-content: center;
     align-items: center;
     height: fit-content;
+    width: max-content;
 }
 
 @media (min-width: 1280px) {
     .cols {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
+    }
+    .split {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }

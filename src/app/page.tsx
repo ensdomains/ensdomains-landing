@@ -89,7 +89,7 @@ export default async function Home({
                     )}
                 >
                     <h3>{t('home.gyow.title')}</h3>
-                    <p className={clsx(ui['max-w-text'], ui.cursive)}>
+                    <p className={clsx(ui['max-w-text'], ui.serif)}>
                         {t('home.gyow.description')}
                     </p>
                     <div>{/* TODO: Train Tracks */}</div>
@@ -119,7 +119,7 @@ export default async function Home({
                     )}
                 >
                     <h3>{t('home.gateway.title')}</h3>
-                    <p className={clsx(ui['max-w-text'], ui.cursive)}>
+                    <p className={clsx(ui['max-w-text'], ui.serif)}>
                         {t('home.gateway.description')}
                     </p>
 
@@ -127,7 +127,7 @@ export default async function Home({
                         <div>{t('home.partners.tag')}</div>
 
                         <div>
-                            <p className={clsx(ui['max-w-text'], ui.cursive)}>
+                            <p className={clsx(ui['max-w-text'], ui.serif)}>
                                 {t('home.partners.description')}
                             </p>
                             <div>{/* TODO: partners here */}</div>
@@ -154,6 +154,7 @@ export default async function Home({
                                     'home.extra.governance.description'
                                 ),
                                 button: t('home.extra.governance.button'),
+                                buttonVariant: 'secondary',
                                 href: '/',
                             },
                             {
@@ -163,6 +164,7 @@ export default async function Home({
                                     'home.extra.community.description'
                                 ),
                                 button: t('home.extra.community.button'),
+                                buttonVariant: 'secondary',
                                 href: '/',
                             },
                         ]}

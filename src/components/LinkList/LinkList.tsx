@@ -33,7 +33,7 @@ export const LinkList: FC<{ links: ILink[] }> = ({ links }) => {
                                 </svg>
                             </span>
                         </a>
-                        <span className={ui.cursive}>{description}</span>
+                        <span className={ui.serif}>{description}</span>
                     </li>
                 ))}
             </ul>
