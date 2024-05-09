@@ -153,6 +153,7 @@ export const FarcastRecastIcon = (properties: Properties) => (
         viewBox="0 0 13 9"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        {...properties}
     >
         <g id="Group 2243910">
             <g id="Group 2243908">

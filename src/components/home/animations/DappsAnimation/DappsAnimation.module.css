@@ -40,11 +40,11 @@
 .fnd {
   grid-area: fnd;
   width: 100%;
-  border-radius: 12px;
   background: var(--ens-white);
   position: relative;
   
   max-width: 270px;
+  padding-top: 42px;
 }
 
 .fndPfp {
@@ -53,16 +53,16 @@
   --width: 45px;
 
   border-width: 2px;
-  top: 38px;
+  top: -2px;
 }
 
 .fndName {
   color: var(--ens-dark-blue);
   line-height: 96%;
-  padding: 10px;
   border: 1px solid var(--ens-gray-2);
 
   font-size: 6px;
+  padding: 5px;
 }
 
 
@@ -72,13 +72,15 @@
 
 .grid > * {
   box-shadow: 0px 20px 28px 0px rgba(14, 61, 104, 0.06);
+  border-radius: 6px;
 }
 
 .fndLine {
   height: 1px;
   opacity: 0.2;
   background: var(--ens-gray-3);
-  padding: 16px 0;
+
+  padding: 8px 0;
 }
 
 .fndGallery {
@@ -102,7 +104,6 @@
 .swap {
   background-color: var(--ens-white);
 
-  border-radius: 12px;
   background: var(--ens-white);
   height: 100%;
 }
@@ -152,11 +153,12 @@
 
 .swapCurrencyToggle, .swapCurrencyResultToggle {
   align-items: center;
-  border-radius: 16px;
+  border-radius: 8px;
   width: max-content;
   color: var(--ens-medium-blue);
 
   padding: 4px;
+  gap: 3px;
 }
 
 .swapCurrencyToggle {
@@ -173,6 +175,8 @@
   font-style: normal;
   font-weight: 500;
   line-height: 96%;
+
+  font-size: 16px;
 }
 
 .swapResult {
@@ -183,10 +187,20 @@
   align-items: center;
   justify-content: flex-end;
   margin-top: 4px;
+
+  padding: 4px;
 }
 
 .swapIcon {
   position: absolute;
+
+  height: 13px;
+  width: 13px;
+}
+
+.swapCurrencyIcon {
+  height: 3px;
+  width: 6px;
 }
 
 .swapNamePfp {
@@ -210,19 +224,26 @@
 .farcaster {
   width: max-content;
   height: 100%;
-  border-radius: 12px;
   background-color: var(--ens-white);
   border: 1px solid var(--ens-gray-2);
+
+  border-radius: 6px;
 }
 
 .farcasterTitle {
   width: 100%;
   position: relative;
+
+  padding-top: 10px;
+  padding-bottom: 4px;
 }
 
 .farcasterStories {
   justify-content: space-between;
   border-bottom: 1px solid rgba(1, 26, 37, 0.1);
+
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .farcasterStories > img {
@@ -245,10 +266,16 @@
   width: 100%;
   border-top: 1px solid rgba(1, 26, 37, 0.1);
   color: var(--ens-dark-blue);
-  gap: 4px;
 
   max-width: 132px;
   font-size: 5px;
+  padding: 6px 0;
+  gap: 4px;
+}
+
+.farcasterStories, .farcasterTitle, .farcasterPost {
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .farcasterPostAuthor {
@@ -271,6 +298,8 @@
   display: flex;
   align-items: center;
   gap: 3px;
+
+  font-size: 4px;
 }
 
 .farcasterPostButtons > button:hover {
@@ -301,14 +330,27 @@
   padding: 0;
 }
 
+.farcasterMenu > button > img {
+  height: 8px;
+  width: 8px;
+}
+
 .farcasterStories > img {
   height: 16px;
   width: 16px;
 }
 
+.farcasterPostButtonsIcon {
+  height: 4px;
+  width: 5px;
+}
+
 /* RESPONSIVE STYLES */
 
 @media (min-width: 768px) {
+  .grid > * {
+    border-radius: 12px;
+  }
   .img {
     height: 41px;
     width: 104px;
@@ -322,6 +364,7 @@
   }
   .fndName {
     font-size: 8px;
+    padding: 10px;
   }
   .fndPfp {
     margin-bottom: 4px;
@@ -354,6 +397,7 @@
     padding: 4px;
     gap: 4px;
     margin-bottom: 5px;
+    border-radius: 16px;
   }
   .swapIndicator {
     height: 10px;
@@ -451,6 +495,9 @@
 @media (min-width: 1280px) {
   .fndName {
     font-size: 14px;
+  }
+  .fndLine {
+    padding: 16px 0;
   }
   .fndPfp {
     width: 92px;
