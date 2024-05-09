@@ -26,7 +26,6 @@
 
 .fndBg {
   background-image: url(/assets/fndBg.png);
-  height: 79px;
   width: 100%;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
@@ -34,6 +33,8 @@
   top: 0;
   z-index: 0;
   filter: brightness(0.65);
+  
+  height: 62px;
 }
 
 .fnd {
@@ -47,16 +48,21 @@
 }
 
 .fndPfp {
-  border: 4px solid var(--ens-white);
+  border: solid var(--ens-white);
+  --height: 45px;
+  --width: 45px;
+
+  border-width: 2px;
+  top: 38px;
 }
 
 .fndName {
   color: var(--ens-dark-blue);
   line-height: 96%;
-  font-size: 8px;
   padding: 10px;
-
   border: 1px solid var(--ens-gray-2);
+
+  font-size: 6px;
 }
 
 
@@ -69,7 +75,7 @@
 }
 
 .fndLine {
-  height: 0.979px;
+  height: 1px;
   opacity: 0.2;
   background: var(--ens-gray-3);
   padding: 16px 0;
@@ -77,6 +83,10 @@
 
 .fndGallery {
   overflow: hidden;
+
+  gap: 2px;
+  padding-left: 9.5px;
+  padding-right: 9.5px;
 }
 
 .img {
@@ -86,6 +96,7 @@
   object-position: top;
 
   width: 82px;
+  height: 46px;
 }
 
 .swap {
@@ -101,11 +112,10 @@
   width: 100%;
   align-items: center;
   justify-content: flex-start;
-}
-
-.swapNamePfp {
-  --width: 16px;
-  --height: 16px;
+  
+  font-size: 4px;
+  max-width: 45px;
+  gap: 3px;
 }
 
 .swapHeader {
@@ -118,11 +128,16 @@
 
 .swapTitle {
   color: var(--ens-medium-blue);
+
+  font-size: 6px;
 }
 
 .swapIndicator {
   background-color: var(--ens-medium-blue);
   border-radius: 99px;
+
+  height: 8px;
+  width: 8px;
 }
 
 .swapCurrency {
@@ -131,6 +146,8 @@
   font-style: normal;
   font-weight: 500;
   line-height: 96%; /* 8.052px */ 
+
+  font-size: 4px;
 }
 
 .swapCurrencyToggle, .swapCurrencyResultToggle {
@@ -138,6 +155,8 @@
   border-radius: 16px;
   width: max-content;
   color: var(--ens-medium-blue);
+
+  padding: 4px;
 }
 
 .swapCurrencyToggle {
@@ -170,6 +189,11 @@
   position: absolute;
 }
 
+.swapNamePfp {
+  --height: 8px;
+  --width: 8px;
+}
+
 .swapButton {
   background: var(--ens-medium-blue);
   width: 100%;
@@ -177,10 +201,10 @@
   color: var(--ens-gray-2);
   font-family: var(--ens-semi-mono);
   font-weight: 500;
-
-  padding: 7.5px 0;
-  font-size: 12px;
   cursor: pointer;
+
+  font-size: 10px;
+  padding: 6px 0;
 }
 
 .farcaster {
@@ -213,6 +237,8 @@
 .farcasterTitleText {
   text-align: center;
   color: var(--ens-dark-blue);
+
+  font-size: 6px;
 }
 
 .farcasterPost {
@@ -275,6 +301,11 @@
   padding: 0;
 }
 
+.farcasterStories > img {
+  height: 16px;
+  width: 16px;
+}
+
 /* RESPONSIVE STYLES */
 
 @media (min-width: 768px) {
@@ -286,6 +317,18 @@
     max-width: 340px;
     padding-top: 51px;
   }
+  .fndBg {
+    height: 79px;
+  }
+  .fndName {
+    font-size: 8px;
+  }
+  .fndPfp {
+    margin-bottom: 4px;
+    --width: 56px;
+    --height: 56px; 
+    border-width: 4px;
+  }
   .swapResult {
     padding: 4px;
     margin-top: 0;
@@ -296,6 +339,10 @@
   }
   .swap {
     gap: 10px;
+  }
+  .swapNamePfp {
+    --width: 16px;
+    --height: 16px;
   }
   .swapTitle {
     font-size: 7px;
@@ -340,6 +387,10 @@
   .swapCurrencyIcon {
     height: 4px;
   }
+  .swapButton {
+    font-size: 12px;
+    padding: 7.5px 0;
+  }
   .farcasterPost {
     max-width: 156px;
     font-size: 5px;
@@ -377,11 +428,6 @@
   }  
   .farcasterPostButtons {
     gap: 8px;
-  }
-  .fndPfp {
-    margin-bottom: 4px;
-    --width: 56px;
-    --height: 56px; 
   }
   .farcasterMenu {
     padding: 0 5px;
