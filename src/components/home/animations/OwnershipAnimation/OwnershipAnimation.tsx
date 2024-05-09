@@ -14,15 +14,14 @@ export const OwnershipAnimation = () => {
     });
 
     return (
-        <div
-            ref={ref}
-            className={clsx(ui.flex, ui['flex-row'], styles.container)}
-        >
+        <div ref={ref} className={clsx(ui.flex, styles.container)}>
             <div className={clsx(ui.flex, ui['flex-col'], styles.name)}>
                 <div className={styles.nameText}>steph-kang.eth</div>
                 <span className={styles.wallet}>Hot Wallet</span>
             </div>
-            <div className={clsx(ui.flex, ui['flex-col'])}>
+            <div
+                className={clsx(ui.flex, ui['flex-col'], styles.arrowContainer)}
+            >
                 <ArrowUpRightIcon
                     className={clsx(
                         styles.upArrow,
