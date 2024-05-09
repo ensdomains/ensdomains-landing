@@ -12,7 +12,7 @@
 }
 
 .cols > div > span {
-    padding: 1rem 0;
+    padding: 16px 0;
 }
 
 .split {
@@ -20,14 +20,18 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     flex-grow: 1;
-    margin-top: 1rem;
 
     gap: 40px;
+    padding-top: 24px;
 }
 
 .content {
     gap: 20px;
     flex-direction: column;
+}
+
+.content p {
+    width: fit-content;
 }
 
 .split a {

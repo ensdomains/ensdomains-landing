@@ -95,6 +95,7 @@ h4 {
 
 p {
     font-family: var(--ens-serif);
+    color: var(--ens-medium-blue);
     font-size: 20px;
     line-height: 112%;
 }

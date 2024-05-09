@@ -26,7 +26,7 @@ export const TwoCol: FC<{
                 href,
                 buttonVariant = 'primary',
             }) => (
-                <div className={ui['space-y-40']}>
+                <div>
                     <span>{tag}</span>
                     <div className={styles.split}>
                         <div className={clsx(ui.flex, styles.content)}>

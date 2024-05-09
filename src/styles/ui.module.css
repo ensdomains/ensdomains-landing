@@ -20,21 +20,13 @@
 }
 
 .w-page {
-    max-width: 1374px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .my-100 {
     margin-top: 100px;
     margin-bottom: 100px;
-}
-
-@media (min-width: 1024px) {
-    .w-page {
-        padding: 0 4rem;
-    }
 }
 
 .space-y-4 > * + * {
@@ -55,15 +47,15 @@
 
 .serif {
     font-family: var(--ens-serif);
-    font-size: 1.2em;
     color: var(--ens-medium-blue);
+    line-height: 112%;
+
+    font-size: 12px;
 }
 
 .button {
-    background-color: var(--page-text);
-    /* background-color: var(--ens-blue); */
-    /* color: var(--ens-gray-2); */
-    color: var(--page-bg);
+    background-color: var(--ens-blue);
+    color: var(--ens-gray-2); 
     font-weight: 500;
     border-radius: 4px;
     text-align: center;
@@ -73,12 +65,6 @@
 
 }
 
-@media (min-width: 1280px) {
-    .button {
-        padding: 30px 100px;
-        font-size: 16px;
-    }
-}
 
 .button-secondary {
     background-color: var(--page-bg);
@@ -102,4 +88,26 @@
     opacity: 0.4;
     background-image: radial-gradient(var(--page-text) 1px, transparent 1px);
     background-size: 10px 10px;
+}
+
+
+@media (min-width: 768px) {
+    .w-page {
+        max-width: calc(834px + 2rem);
+        padding: 0 1rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .button {
+        padding: 30px 100px;
+        font-size: 16px;
+    }
+    .serif {
+        font-size: 20px;
+    }
+    .w-page {
+        max-width: calc(1374px + 5rem);
+        padding: 0 2.5rem;
+    }
 }
