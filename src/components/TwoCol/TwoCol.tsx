@@ -29,8 +29,10 @@ export const TwoCol: FC<{
                 <div className={ui['space-y-40']}>
                     <span>{tag}</span>
                     <div className={styles.split}>
-                        <h4>{title}</h4>
-                        <p className={ui.serif}>{description}</p>
+                        <div className={clsx(ui.flex, styles.content)}>
+                            <h4 className={styles.title}>{title}</h4>
+                            <p className={ui.serif}>{description}</p>
+                        </div>
                         <a
                             href={href}
                             className={clsx(
