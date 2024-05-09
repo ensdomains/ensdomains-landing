@@ -55,14 +55,12 @@ export const FeaturePreview: FC<
 }) => {
     const mq = useMq();
 
-    const backgroundImage = mq === 'tablet' ? `tablet/${gridSrc}` : gridSrc;
-
     return (
         <div
             {...properties}
             style={
                 {
-                    backgroundImage: `url(/assets/${backgroundImage})`,
+                    backgroundImage: `url(/assets/${gridSrc})`,
                     ...style,
                     '--feature-bg': `var(--${backgroundColor})`,
                     '--feature-text': `var(--${textColor})`,
