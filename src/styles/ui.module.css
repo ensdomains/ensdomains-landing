@@ -72,7 +72,11 @@
 }
 
 .button:hover {
-    /* background-color: var(--ens-light-blue); */
+    background-color: var(--ens-hover-blue);
+}
+
+.button-secondary:hover {
+    background-color: var(--ens-hover-light-blue);
 }
 
 .dots-bg {
