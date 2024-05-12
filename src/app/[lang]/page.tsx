@@ -6,7 +6,6 @@ export default async function LocaleHome({
     params,
 }: {
     params: { lang: Language };
-    searchParams: any;
 }) {
     return <Home params={params} />;
 }

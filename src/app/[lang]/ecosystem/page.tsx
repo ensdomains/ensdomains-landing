@@ -6,7 +6,6 @@ export default async function LocaleEcosystem({
     params,
 }: {
     params: { lang: Language };
-    searchParams: any;
 }) {
     return <Page params={params} />;
 }

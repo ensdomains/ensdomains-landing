@@ -6,7 +6,6 @@ export default async function LocaleDevelopers({
     params,
 }: {
     params: { lang: Language };
-    searchParams: any;
 }) {
     return <Page params={params} />;
 }

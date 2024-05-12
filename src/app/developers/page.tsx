@@ -15,7 +15,6 @@ export default async function Home({
     params,
 }: {
     params: { lang: Language };
-    searchParams?: any;
 }) {
     const { t } = await useTranslation(params.lang, 'translation');
 
