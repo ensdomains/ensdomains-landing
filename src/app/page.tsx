@@ -44,7 +44,7 @@ export default async function Home({
                     <h2>{t('home.features.title')}</h2>
                     <p>{t('home.features.text')}</p>
                 </div>
-                <Carousel>
+                <Carousel className={ui['w-page']}>
                     <FeaturePreview
                         title={t('home.features.farewell.title')}
                         text={t('home.features.farewell.text')}
@@ -83,27 +83,39 @@ export default async function Home({
                     className={clsx(
                         ui['w-page'],
                         ui['my-100'],
-                        ui['space-y-40'],
                     )}
                 >
-                    <h3>{t('home.gyow.title')}</h3>
-                    <p className={clsx(ui['max-w-text'], ui.serif)}>
-                        {t('home.gyow.description')}
-                    </p>
-                    <div>{/* TODO: Train Tracks */}</div>
+                    <div className={clsx(
+                        ui.flex,
+                        ui['flex-col'],
+                        ui['h3-section'],
+                    )}
+                    >
+                        <h3>{t('home.gyow.title')}</h3>
+                        <p className={clsx(ui['max-w-text'], ui.serif)}>
+                            {t('home.gyow.description')}
+                        </p>
+                    </div>
+                    <div className={styles.trainTrack}>{/* TODO: Train Tracks */}</div>
                     <ColorCards
                         cards={[
                             {
                                 title: t('home.gyow.ens-app.title'),
                                 description: t('home.gyow.ens-app.description'),
+                                color: 'ens-blue',
+                                link: 'https://app.ens.domains',
                             },
                             {
                                 title: t('home.gyow.ens-dao.title'),
                                 description: t('home.gyow.ens-dao.description'),
+                                color: 'ens-green',
+                                link: 'https://discuss.ens.domains',
                             },
                             {
                                 title: t('home.gyow.docs.title'),
                                 description: t('home.gyow.docs.description'),
+                                color: 'ens-magenta',
+                                link: 'https://docs.ens.domains',
                             },
                         ]}
                     />
@@ -115,10 +127,17 @@ export default async function Home({
                         ui['my-100'],
                     )}
                 >
-                    <h3>{t('home.gateway.title')}</h3>
-                    <p className={clsx(ui['max-w-text'], ui.serif)}>
-                        {t('home.gateway.description')}
-                    </p>
+                    <div className={clsx(
+                        ui.flex,
+                        ui['flex-col'],
+                        ui['h3-section'],
+                    )}
+                    >
+                        <h3>{t('home.gateway.title')}</h3>
+                        <p className={clsx(ui['max-w-text'], ui.serif)}>
+                            {t('home.gateway.description')}
+                        </p>
+                    </div>
 
                     <div>
                         <div>{t('home.partners.tag')}</div>
@@ -139,7 +158,6 @@ export default async function Home({
                     className={clsx(
                         ui['w-page'],
                         ui['my-100'],
-                        ui['space-y-40'],
                     )}
                 >
                     <TwoCol

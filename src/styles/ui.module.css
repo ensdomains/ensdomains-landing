@@ -63,7 +63,6 @@
 
     padding: 20px 60px; 
     font-size: 14px;
-
 }
 
 
@@ -91,11 +90,21 @@
     background-size: 10px 10px;
 }
 
+.h3-section {
+    gap: 24px;
+    width: 100%;
+    max-width: 298px;
+}
+
 
 @media (min-width: 768px) {
     .w-page {
         max-width: calc(834px + 2rem);
         padding: 0 1rem;
+    }
+    .h3-section {
+        gap: 32px;
+        max-width: 417px;
     }
 }
 
@@ -110,5 +119,9 @@
     .w-page {
         max-width: calc(1374px + 5rem);
         padding: 0 2.5rem;
+    }
+    .h3-section {
+        gap: 50px;
+        max-width: 550px;
     }
 }

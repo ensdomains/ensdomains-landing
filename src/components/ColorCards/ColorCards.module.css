@@ -1,40 +1,46 @@
-.cards {
+.grid {
     display: grid;
-    gap: 1rem;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
 }
 
-@media (max-width: 1024px) {
-    .cards {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
-}
-
-.cards > div {
+.card {
     color: var(--ens-white);
-    padding: 1rem;
-    border-radius: 0.4rem;
+    background-color: var(--bg);
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: 150ms;
+
+    gap: 24px;
+    min-height: 194px;
+    height: 100%;
+    font-size: 20px;
+    letter-spacing: -0.4px;
 }
 
-.cards > div:nth-child(1) {
-    background: var(--ens-blue);
+.card:hover {
+    background-color: var(--bg-hover);
+    color: var(--page-text);
 }
 
-.cards > div:nth-child(2) {
-    background: var(--ens-green);
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+    .card {
+        min-height: 146px;
+        letter-spacing: -0.24px;
+        font-size: 14px;
+    }
 }
 
-.cards > div:nth-child(3) {
-    background: var(--ens-magenta);
+@media (min-width: 1280px) {
+    .card {
+        gap: 40px;
+        letter-spacing: -0.48px;
+        font-size: 24px;
+        min-height: 240px;
+    }
 }
 
-.cards > div > div:nth-child(2) {
-    margin-top: 1rem;
-}

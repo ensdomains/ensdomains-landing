@@ -35,7 +35,6 @@ const config = tseslint.config(
             '@next/next/no-css-tags': 'warn',
             '@next/next/no-head-element': 'warn',
             '@next/next/no-html-link-for-pages': 'warn',
-            '@next/next/no-img-element': 'off',
             '@next/next/no-styled-jsx-in-document': 'warn',
             '@next/next/no-sync-scripts': 'warn',
             '@next/next/no-title-in-document-head': 'warn',
