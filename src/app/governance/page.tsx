@@ -1,5 +1,3 @@
-/* eslint-disable unicorn/prevent-abbreviations */
-
 import clsx from 'clsx';
 import { CSSProperties } from 'react';
 

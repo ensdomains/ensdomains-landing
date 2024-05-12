@@ -25,13 +25,13 @@ export const OwnershipAnimation = () => {
                 <ArrowUpRightIcon
                     className={clsx(
                         styles.upArrow,
-                        isIntersecting && styles.animating
+                        isIntersecting && styles.animating,
                     )}
                 />
                 <ArrowUpRightIcon
                     className={clsx(
                         styles.downArrow,
-                        isIntersecting && styles.animating
+                        isIntersecting && styles.animating,
                     )}
                 />
             </div>

@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/no-duplicate-string */
 'use client';
 
 import { clsx } from 'clsx';
@@ -21,12 +20,12 @@ import { useTranslation } from '~/i18n/useTranslation';
 import ui from '../styles/ui.module.css';
 import styles from './page.module.css';
 
-/* eslint-disable unicorn/prevent-abbreviations */
+// eslint-disable-next-line @next/next/no-async-client-component
 export default async function Home({
-    lang = fallbackLng,
-}: {
+    params: { lang = fallbackLng },
+}: { params: {
     lang?: Language;
-}) {
+}; }) {
     const { t } = await useTranslation(lang, 'translation');
 
     return (
@@ -55,7 +54,7 @@ export default async function Home({
                         position={0}
                         gridSrc="blue-grid.svg"
                     >
-                        {(mq) => <MessageAnimation mq={mq} />}
+                        {mq => <MessageAnimation mq={mq} />}
                     </FeaturePreview>
                     <FeaturePreview
                         title={t('home.features.consistent.title')}
@@ -84,8 +83,7 @@ export default async function Home({
                     className={clsx(
                         ui['w-page'],
                         ui['my-100'],
-                        // eslint-disable-next-line sonarjs/no-duplicate-string
-                        ui['space-y-40']
+                        ui['space-y-40'],
                     )}
                 >
                     <h3>{t('home.gyow.title')}</h3>
@@ -115,7 +113,6 @@ export default async function Home({
                     className={clsx(
                         ui['w-page'],
                         ui['my-100'],
-                        ui['space-y-40']
                     )}
                 >
                     <h3>{t('home.gateway.title')}</h3>
@@ -123,7 +120,7 @@ export default async function Home({
                         {t('home.gateway.description')}
                     </p>
 
-                    <div className={ui['space-y-40']}>
+                    <div>
                         <div>{t('home.partners.tag')}</div>
 
                         <div>
@@ -142,7 +139,7 @@ export default async function Home({
                     className={clsx(
                         ui['w-page'],
                         ui['my-100'],
-                        ui['space-y-40']
+                        ui['space-y-40'],
                     )}
                 >
                     <TwoCol
@@ -151,7 +148,7 @@ export default async function Home({
                                 tag: t('home.extra.governance.tag'),
                                 title: t('home.extra.governance.title'),
                                 description: t(
-                                    'home.extra.governance.description'
+                                    'home.extra.governance.description',
                                 ),
                                 button: t('home.extra.governance.button'),
                                 buttonVariant: 'secondary',
@@ -161,7 +158,7 @@ export default async function Home({
                                 tag: t('home.extra.community.tag'),
                                 title: t('home.extra.community.title'),
                                 description: t(
-                                    'home.extra.community.description'
+                                    'home.extra.community.description',
                                 ),
                                 button: t('home.extra.community.button'),
                                 buttonVariant: 'secondary',
@@ -174,7 +171,7 @@ export default async function Home({
                     className={clsx(
                         ui['w-page'],
                         ui['my-100'],
-                        ui['space-y-40']
+                        ui['space-y-40'],
                     )}
                 >
                     <span>

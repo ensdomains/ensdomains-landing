@@ -21,12 +21,12 @@ export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
         <nav className={clsx(ui.flex, ui['flex-row'], styles.nav)}>
             <Link href={langPrefix || '/'}>
                 <img
-                    src={'/assets/ens_logo_dark.svg'}
+                    src="/assets/ens_logo_dark.svg"
                     alt="ENS"
                     className={(styles.logo, styles.tabletOnly)}
                 />
                 <img
-                    src={'/assets/ens_logo_text_dark.svg'}
+                    src="/assets/ens_logo_text_dark.svg"
                     alt="ENS"
                     className={(styles.logo, styles.desktopOnly)}
                 />
@@ -40,17 +40,15 @@ export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
                         'blog',
                         'roadmap',
                     ].map((item) => {
-                        const url =
-                            item == 'blog'
+                        const url
+                            = item == 'blog'
                                 ? 'https://blog.ens.domains'
-                                : // eslint-disable-next-line unicorn/no-nested-ternary
-                                item == 'roadmap'
-                                ? // placeholder url
-                                  'https://v3x.fyi/s1'
-                                : `${langPrefix}/${item}`;
+                                : item == 'roadmap'
+                                    ? 'https://v3x.fyi/s1'
+                                    : `${langPrefix}/${item}`;
 
-                        const color =
-                            {
+                        const color
+                            = {
                                 developers: '--ens-magenta',
                                 ecosystem: '--ens-blue',
                                 governance: '--ens-green',

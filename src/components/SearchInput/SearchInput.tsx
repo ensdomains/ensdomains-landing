@@ -12,7 +12,7 @@ export const SearchInput = ({ t }: { t: TFunction<string, string> }) => {
                 ui.flex,
                 ui['flex-col'],
                 ui['flex-center'],
-                styles.container
+                styles.container,
             )}
         >
             <span className={styles.caption}>
@@ -23,7 +23,7 @@ export const SearchInput = ({ t }: { t: TFunction<string, string> }) => {
                 className={clsx(
                     ui.flex,
                     ui['flex-col'],
-                    styles.searchboxContainer
+                    styles.searchboxContainer,
                 )}
             >
                 <div className={styles.inputContainer}>

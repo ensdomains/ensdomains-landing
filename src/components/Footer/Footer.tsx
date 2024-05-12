@@ -66,10 +66,10 @@ export const Footer: FC<{ t: TFunction<string, string> }> = ({ t }) => {
         <>
             <footer className={styles.container}>
                 <div className={styles.columns}>
-                    {footerItems.map((list) => (
+                    {footerItems.map(list => (
                         <ul className={styles.ul}>
                             <div className={styles.h3}>{list.title}</div>
-                            {list.entries.map((entry) => (
+                            {list.entries.map(entry => (
                                 <li>
                                     <a href={entry.link} target="_blank">
                                         {entry.title}

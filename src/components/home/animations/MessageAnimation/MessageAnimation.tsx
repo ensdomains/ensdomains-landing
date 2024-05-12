@@ -19,7 +19,7 @@ export const MessageAnimation = ({ mq }: { mq: Dimension }) => {
             <img
                 className={clsx(
                     styles.box,
-                    isIntersecting ? styles.animating : undefined
+                    isIntersecting ? styles.animating : undefined,
                 )}
                 src={`/assets/${isTablet ? 'tablet/' : ''}msg-1.svg`}
                 width={537}
@@ -29,7 +29,7 @@ export const MessageAnimation = ({ mq }: { mq: Dimension }) => {
             <img
                 className={clsx(
                     styles.box,
-                    isIntersecting ? styles.animating : undefined
+                    isIntersecting ? styles.animating : undefined,
                 )}
                 src={`/assets/${isTablet ? 'tablet/' : ''}msg-2.svg`}
                 width={633}
@@ -39,7 +39,7 @@ export const MessageAnimation = ({ mq }: { mq: Dimension }) => {
             <img
                 className={clsx(
                     styles.box,
-                    isIntersecting ? styles.animating : undefined
+                    isIntersecting ? styles.animating : undefined,
                 )}
                 src={`/assets/${isTablet ? 'tablet/' : ''}msg-3.svg`}
                 width={306}
@@ -49,7 +49,7 @@ export const MessageAnimation = ({ mq }: { mq: Dimension }) => {
             <img
                 className={clsx(
                     styles.box,
-                    isIntersecting ? styles.animating : undefined
+                    isIntersecting ? styles.animating : undefined,
                 )}
                 src={`/assets/${isTablet ? 'tablet/' : ''}msg-4.svg`}
                 width={436}

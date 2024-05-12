@@ -40,7 +40,7 @@ export type Language = (typeof languages)[number];
 
 export function getOptions(
     lng = fallbackLng,
-    ns: string | string[] = defaultNS
+    ns: string | string[] = defaultNS,
 ) {
     return {
         // debug: true,

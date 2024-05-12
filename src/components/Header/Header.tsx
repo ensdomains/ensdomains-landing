@@ -20,7 +20,7 @@ export const Header: FC<
                 ui['flex-center'],
                 ui['flex-col'],
                 tag && ui['dots-bg'],
-                styles.header
+                styles.header,
             )}
         >
             {tag && <div className={styles.tag}>{tag}</div>}

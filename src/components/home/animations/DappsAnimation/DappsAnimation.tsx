@@ -20,7 +20,7 @@ const sources: { src: string; alt: string }[] = [
     'domico.eth',
     'luc.eth',
     'nick.eth',
-].map((name) => ({ alt: name, src: `/assets/${name}.png` }));
+].map(name => ({ alt: name, src: `/assets/${name}.png` }));
 
 const FarcasterPost = () => (
     <div className={clsx(ui.flex, ui['flex-col'], styles.farcasterPost)}>
@@ -28,7 +28,7 @@ const FarcasterPost = () => (
             className={clsx(
                 ui.flex,
                 ui['flex-row'],
-                styles.farcasterPostAuthor
+                styles.farcasterPostAuthor,
             )}
         >
             <span>katiewav</span>
@@ -41,23 +41,26 @@ const FarcasterPost = () => (
             className={clsx(
                 ui.flex,
                 ui['flex-row'],
-                styles.farcasterPostButtons
+                styles.farcasterPostButtons,
             )}
         >
             <button>
                 <FarcastCommentIcon
                     className={styles.farcasterPostButtonsIcon}
-                />{' '}
+                />
+                {' '}
                 12
             </button>
             <button>
                 <FarcastRecastIcon
                     className={styles.farcasterPostButtonsIcon}
-                />{' '}
+                />
+                {' '}
                 44
             </button>
             <button>
-                <FarcastLikeIcon className={styles.farcasterPostButtonsIcon} />{' '}
+                <FarcastLikeIcon className={styles.farcasterPostButtonsIcon} />
+                {' '}
                 193
             </button>
         </div>
@@ -77,7 +80,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     ui.flex,
                     ui['flex-col'],
                     ui['flex-center'],
-                    isIntersecting && styles.animating
+                    isIntersecting && styles.animating,
                 )}
             >
                 <div className={styles.fndBg}></div>
@@ -120,7 +123,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     ui['flex-col'],
                     ui['flex-center'],
                     styles.swap,
-                    isIntersecting && styles.animating
+                    isIntersecting && styles.animating,
                 )}
             >
                 <div
@@ -132,7 +135,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                             ui.flex,
                             ui['flex-row'],
                             styles.name,
-                            styles.swapName
+                            styles.swapName,
                         )}
                     >
                         <CrossFadeImage
@@ -149,7 +152,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                         ui.flex,
                         ui['flex-center'],
                         ui['flex-col'],
-                        styles.swapContainer
+                        styles.swapContainer,
                     )}
                 >
                     <span className={styles.swapValue}>3,333.50</span>
@@ -157,7 +160,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                         className={clsx(
                             ui.flex,
                             ui['flex-row'],
-                            styles.swapCurrencyToggle
+                            styles.swapCurrencyToggle,
                         )}
                     >
                         <div className={styles.swapIndicator}></div>
@@ -171,7 +174,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                         ui.flex,
                         ui['flex-col'],
                         styles.swapContainer,
-                        styles.swapResult
+                        styles.swapResult,
                     )}
                 >
                     <SwapIcon className={styles.swapIcon} />
@@ -180,7 +183,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                         className={clsx(
                             ui.flex,
                             ui['flex-row'],
-                            styles.swapCurrencyResultToggle
+                            styles.swapCurrencyResultToggle,
                         )}
                     >
                         <div className={styles.swapIndicator}></div>
@@ -195,7 +198,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
             <div
                 className={clsx(
                     styles.farcaster,
-                    isIntersecting && styles.animating
+                    isIntersecting && styles.animating,
                 )}
             >
                 <div className={clsx(styles.farcasterTitle)}>
@@ -212,7 +215,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     className={clsx(
                         ui.flex,
                         ui['flex-row'],
-                        styles.farcasterStories
+                        styles.farcasterStories,
                     )}
                 >
                     <img
@@ -249,7 +252,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     className={clsx(
                         ui.flex,
                         ui['flex-row'],
-                        styles.farcasterMenu
+                        styles.farcasterMenu,
                     )}
                 >
                     <button>

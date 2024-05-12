@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/prevent-abbreviations */
 import clsx from 'clsx';
 import { CSSProperties } from 'react';
 
@@ -54,39 +53,39 @@ export default async function Home({
                     links={[
                         {
                             title: t(
-                                'developers.resources.documentation.title'
+                                'developers.resources.documentation.title',
                             ),
                             href: 'https://docs.ens.domains',
                             description: t(
-                                'developers.resources.documentation.description'
+                                'developers.resources.documentation.description',
                             ),
                         },
                         {
                             title: 'ENSjs',
                             href: 'https://github.com/ensdomains/ensjs-v3',
                             description: t(
-                                'developers.resources.ensjs.description'
+                                'developers.resources.ensjs.description',
                             ),
                         },
                         {
                             title: 'CCIP Read',
                             href: 'https://docs.ens.domains/ccip',
                             description: t(
-                                'developers.resources.ccip-read.description'
+                                'developers.resources.ccip-read.description',
                             ),
                         },
                         {
                             title: 'EVMGateway',
                             href: 'https://github.com/ensdomains/evmgateway',
                             description: t(
-                                'developers.resources.evmgateway.description'
+                                'developers.resources.evmgateway.description',
                             ),
                         },
                         {
                             title: 'Thorin',
                             href: 'https://thorin.ens.domains',
                             description: t(
-                                'developers.resources.thorin.description'
+                                'developers.resources.thorin.description',
                             ),
                         },
                     ]}

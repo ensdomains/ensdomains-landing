@@ -9,7 +9,7 @@
         "locales"
     ],
     "i18n-ally.keystyle": "nested",
-    // "eslint.experimental.useFlatConfig": true,
+    "eslint.experimental.useFlatConfig": true,
     "editor.codeActionsOnSave": {
         "source.fixAll": "explicit"
     },
@@ -20,5 +20,6 @@
         "node_modules/": true,
         ".next/": true,
         "out/": true,
-    }
+    },
+    "typescript.tsdk": "node_modules/typescript/lib"
 }

@@ -27,7 +27,7 @@ export const CrossFadeImage = ({
             transitionTimeoutReference.current = window.setTimeout(() => {
                 setCurrentImageIndex(nextImageIndex);
                 setNextImageIndex(
-                    (nextIndex) => (nextIndex + 1) % sources.length
+                    nextIndex => (nextIndex + 1) % sources.length,
                 );
                 setIsTransitioning(false);
             }, duration);
@@ -48,12 +48,13 @@ export const CrossFadeImage = ({
         if (currentImageIndex === index) return 1;
         else if (nextImageIndex === index && isTransitioning) {
             return 1 - duration / 1000 / 2;
-        } else return 0;
+        }
+        else return 0;
     };
 
     const style = (index: number) =>
         ({
-            opacity: opacity(index),
+            'opacity': opacity(index),
             '--duration': `${duration}ms`,
         } as CSSProperties);
 
@@ -73,9 +74,9 @@ export const CrossFadeImage = ({
             </div>
             {typeof children === 'function'
                 ? children({
-                      alt: sources[currentImageIndex].alt,
-                      index: currentImageIndex,
-                  })
+                    alt: sources[currentImageIndex].alt,
+                    index: currentImageIndex,
+                })
                 : undefined}
         </>
     );

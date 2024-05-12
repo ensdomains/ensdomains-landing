@@ -1,7 +1,7 @@
 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g clip-path="url(#clip0_95_4862)">
 <rect x="200" y="-22" width="222" height="293" transform="rotate(90 200 -22)" fill="url(#pattern0_95_4862)"/>
-<path d="M62.3616 -23.4994L62.3616 129.737C62.3616 134.248 66.0184 137.905 70.5298 137.905L126.157 137.905L262.543 137.905C267.054 137.905 270.711 134.248 270.711 129.737M262.543 168.629L182.546 168.629L70.5298 168.629C49.0503 168.629 31.6373 151.216 31.6373 129.736L31.6373 -23.5" stroke="#0080BC" stroke-width="28.402" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M62.3616 -23.4994L62.3616 129.737C62.3616 134.248 66.0184 137.905 70.5298 137.905L126.157 137.905L262.543 137.905C267.054 137.905 270.711 134.248 270.711 129.737M262.543 168.629L182.546 168.629L70.5298 168.629C49.0503 168.629 31.6373 151.216 31.6373 129.736L31.6373 -23.5" stroke="#0080BC" stroke-width="28.402" stroke-miterlimit="10" strokeLinecap="round"/>
 </g>
 <defs>
 <pattern id="pattern0_95_4862" patternContentUnits="objectBoundingBox" width="0.0540541" height="0.0409556">

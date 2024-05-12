@@ -1,5 +1,3 @@
-/* eslint-disable unicorn/prevent-abbreviations */
-
 import clsx from 'clsx';
 import { CSSProperties } from 'react';
 
@@ -59,8 +57,8 @@ export default async function Home({
                             title: 'Unparalleled Trust',
                             href: '',
                             description:
-                                // eslint-disable-next-line quotes
-                                "Trust isn't a buzzword, it's our foundation. As a non-profit, DAO-governed protocol, we're committed to security and integrity.",
+
+                                'Trust isn\'t a buzzword, it\'s our foundation. As a non-profit, DAO-governed protocol, we\'re committed to security and integrity.',
                         },
                         {
                             title: 'Need more resources?',

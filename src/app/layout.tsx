@@ -118,7 +118,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 ABCMonumentGrotesk.variable,
                 ABCMonumentGroteskMono.variable,
                 ABCMonumentGroteskSemiMono.variable,
-                ABCMarist.variable
+                ABCMarist.variable,
             )}
         >
             <body>{children}</body>

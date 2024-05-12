@@ -25,7 +25,8 @@ const Indicator = ({
                         : `var(--${indicatorColor})`,
                 } as CSSProperties
             }
-        ></div>
+        >
+        </div>
     );
 };
 
@@ -60,7 +61,7 @@ export const FeaturePreview: FC<
             {...properties}
             style={
                 {
-                    backgroundImage: `url(/assets/${gridSrc})`,
+                    'backgroundImage': `url(/assets/${gridSrc})`,
                     ...style,
                     '--feature-bg': `var(--${backgroundColor})`,
                     '--feature-text': `var(--${textColor})`,
@@ -70,12 +71,12 @@ export const FeaturePreview: FC<
                 className,
                 styles.container,
                 ui.flex,
-                ui['flex-col']
+                ui['flex-col'],
             )}
         >
             <div className={styles.top}>
                 <div className={clsx(ui.flex, ui['flex-row'], styles.menubar)}>
-                    {[0, 1, 2].map((position) => (
+                    {[0, 1, 2].map(position => (
                         <Indicator
                             indicatorColor={indicatorColor}
                             isCurrent={currentPosition === position}

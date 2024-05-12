@@ -1,5 +1,3 @@
-/* eslint-disable unicorn/prevent-abbreviations */
-
 import { Footer } from '~/components/Footer/Footer';
 import { LinkList } from '~/components/LinkList/LinkList';
 import { Navbar } from '~/components/Navbar/Navbar';
@@ -23,7 +21,6 @@ export default async function Home({
                         title: 'Usage Guidelines',
                         href: '',
                         description:
-                            // eslint-disable-next-line prettier/prettier
                             'If you\'re unsure of our guidelines and how your project would align, please get in touch.',
                     },
                     {
@@ -36,7 +33,6 @@ export default async function Home({
                         title: 'Ecosystem',
                         href: '',
                         description:
-                            // eslint-disable-next-line prettier/prettier
                             'If you\'re building on ENS without an official partnership, you\'re an Ecosystem builder. This might include;',
                     },
                 ]}

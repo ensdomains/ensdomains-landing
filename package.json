@@ -9,7 +9,7 @@
         "dev": "next",
         "develop": "pnpm run dev",
         "start": "pnpm run dev",
-        "lint": "eslint ./src --ext .ts,.tsx"
+        "lint": "eslint ./src -c eslint.config.mjs"
     },
     "dependencies": {
         "clsx": "^2.1.0",
@@ -31,14 +31,14 @@
         "typescript": "^5.4.3"
     },
     "devDependencies": {
+        "@next/eslint-plugin-next": "^14.2.3",
         "@stylistic/eslint-plugin": "^1.7.0",
         "@stylistic/stylelint-plugin": "^2.1.1",
         "@types/node": "^20.12.3",
         "@types/react": "^18.2.73",
         "@types/react-helmet": "^6.1.11",
-        "@typescript-eslint/parser": "^5.62.0",
-        "eslint": "^8.57.0",
-        "eslint-plugin-v3xlabs": "^1.6.5",
+        "@typescript-eslint/parser": "^7.8.0",
+        "eslint": "^9.2.0",
         "i18next-locales-sync": "^2.0.1",
         "postcss-custom-media": "^10.0.4",
         "stylelint": "^16.3.1"

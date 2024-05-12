@@ -12,8 +12,8 @@ function getTitle(pathname: string) {
     }
 }
 
-const DEFAULT_OG_DESCRIPTION =
-    'Decentralised naming for the new internet. No more copying and pasting long addresses.';
+const DEFAULT_OG_DESCRIPTION
+    = 'Decentralised naming for the new internet. No more copying and pasting long addresses.';
 
 export const Head = ({ location }: { location?: string }) => {
     return (

@@ -13,8 +13,8 @@ const initI18next = async (lng: Language, ns: string | string[]) => {
         .use(
             resourcesToBackend(
                 (language, namespace) =>
-                    import(`../../locales/${language}/${namespace}.json`)
-            )
+                    import(`../../locales/${language}/${namespace}.json`),
+            ),
         )
         .init(getOptions(lng, ns));
 
@@ -30,7 +30,7 @@ export const useCurrentLanguage = (lang: Language = fallbackLng): Language => {
 export async function useTranslation(
     lng: Language,
     ns: string | string[],
-    options: { keyPrefix?: string } = {}
+    options: { keyPrefix?: string } = {},
 ) {
     const i18nextInstance = await initI18next(lng, ns);
 
@@ -38,7 +38,7 @@ export async function useTranslation(
         t: i18nextInstance.getFixedT(
             lng,
             Array.isArray(ns) ? ns[0] : ns,
-            options.keyPrefix
+            options.keyPrefix,
         ),
         i18n: i18nextInstance,
     };

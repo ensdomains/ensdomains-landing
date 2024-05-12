@@ -1,4 +1,3 @@
-/* eslint-disable prefer-destructuring */
 import { useEffect, useRef, useState } from 'react';
 
 type State = {
@@ -21,7 +20,7 @@ type UseIntersectionObserverOptions = {
 type IntersectionReturn = [
     (node?: Element | null) => void,
     boolean,
-    IntersectionObserverEntry | undefined
+    IntersectionObserverEntry | undefined,
 ] & {
     ref: (node?: Element | null) => void;
     isIntersecting: boolean;
@@ -43,8 +42,8 @@ export function useIntersectionObserver({
         entry: undefined,
     }));
 
-    const callbackReference =
-        useRef<UseIntersectionObserverOptions['onChange']>();
+    const callbackReference
+        = useRef<UseIntersectionObserverOptions['onChange']>();
 
     callbackReference.current = onChange;
 
@@ -69,10 +68,10 @@ export function useIntersectionObserver({
                     : [observer.thresholds];
 
                 for (const entry of entries) {
-                    const isIntersecting =
-                        entry.isIntersecting &&
-                        thresholds.some(
-                            (threshold) => entry.intersectionRatio >= threshold
+                    const isIntersecting
+                        = entry.isIntersecting
+                        && thresholds.some(
+                            threshold => entry.intersectionRatio >= threshold,
                         );
 
                     setState({ isIntersecting, entry });
@@ -87,7 +86,7 @@ export function useIntersectionObserver({
                     }
                 }
             },
-            { threshold, root, rootMargin }
+            { threshold, root, rootMargin },
         );
 
         observer.observe(reference);
@@ -109,11 +108,11 @@ export function useIntersectionObserver({
 
     useEffect(() => {
         if (
-            !reference &&
-            state.entry?.target &&
-            !freezeOnceVisible &&
-            !frozen &&
-            previousReference.current !== state.entry.target
+            !reference
+            && state.entry?.target
+            && !freezeOnceVisible
+            && !frozen
+            && previousReference.current !== state.entry.target
         ) {
             previousReference.current = state.entry.target;
             setState({

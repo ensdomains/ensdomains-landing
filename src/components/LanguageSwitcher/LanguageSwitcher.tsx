@@ -21,8 +21,8 @@ export const LanguageSwitcher: FC<{ lang: Language }> = ({ lang }) => {
                 {languages.map((language) => {
                     const languagePrefix = getLangPrefix(language);
                     const oldLanguagePrefix = getLangPrefix(lang);
-                    const url =
-                        path.replace(oldLanguagePrefix, languagePrefix) || '/';
+                    const url
+                        = path.replace(oldLanguagePrefix, languagePrefix) || '/';
 
                     return (
                         <li>
@@ -31,8 +31,11 @@ export const LanguageSwitcher: FC<{ lang: Language }> = ({ lang }) => {
                                 href={url}
                                 className={styles.language}
                             >
-                                {languageNames[language]} (
-                                {language.toUpperCase()})
+                                {languageNames[language]}
+                                {' '}
+                                (
+                                {language.toUpperCase()}
+                                )
                             </Link>
                         </li>
                     );

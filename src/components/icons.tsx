@@ -21,7 +21,7 @@ export const SearchIcon = (properties: Properties) => (
                     stroke="currentColor"
                     stroke-width="8"
                     stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                 />
                 <path
                     id="Vector 90"
@@ -29,7 +29,7 @@ export const SearchIcon = (properties: Properties) => (
                     stroke="currentColor"
                     stroke-width="8"
                     stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                 />
             </g>
         </g>
@@ -165,7 +165,7 @@ export const FarcastRecastIcon = (properties: Properties) => (
                 />
                 <path
                     id="Vector 92 (Stroke)"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     clipRule="evenodd"
                     d="M5.44983 0.213341L7.65166 1.68123L5.44983 3.14911L5.44983 0.213341Z"
                     fill="currentColor"
@@ -180,7 +180,7 @@ export const FarcastRecastIcon = (properties: Properties) => (
                 />
                 <path
                     id="Vector 92 (Stroke)_2"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     clipRule="evenodd"
                     d="M6.67236 8.18147L4.47053 6.71359L6.67236 5.2457L6.67236 8.18147Z"
                     fill="currentColor"

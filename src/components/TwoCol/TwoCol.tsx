@@ -37,15 +37,15 @@ export const TwoCol: FC<{
                             href={href}
                             className={clsx(
                                 ui.button,
-                                buttonVariant === 'secondary' &&
-                                    ui['button-secondary']
+                                buttonVariant === 'secondary'
+                                && ui['button-secondary'],
                             )}
                         >
                             {button}
                         </a>
                     </div>
                 </div>
-            )
+            ),
         )}
     </div>
 );

@@ -38,7 +38,7 @@ export function useMq() {
             if (typeof queries[media] === 'string') {
                 mediaQueryLists[media]?.addEventListener(
                     'change',
-                    handleQueryListener
+                    handleQueryListener,
                 );
             }
         }
@@ -48,7 +48,7 @@ export function useMq() {
                 if (typeof queries[media] === 'string') {
                     mediaQueryLists[media]?.removeEventListener(
                         'change',
-                        handleQueryListener
+                        handleQueryListener,
                     );
                 }
             }
