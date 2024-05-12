@@ -19,16 +19,16 @@ export const SearchIcon = (properties: Properties) => (
                     cy="25.5526"
                     r="21.0526"
                     stroke="currentColor"
-                    stroke-width="8"
-                    stroke-linecap="round"
+                    strokeWidth="8"
+                    strokeLinecap="round"
                     strokeLinejoin="round"
                 />
                 <path
                     id="Vector 90"
                     d="M41.4736 43.9736L51.9999 54.4999"
                     stroke="currentColor"
-                    stroke-width="8"
-                    stroke-linecap="round"
+                    strokeWidth="8"
+                    strokeLinecap="round"
                     strokeLinejoin="round"
                 />
             </g>
@@ -48,7 +48,7 @@ export const ArrowDownIcon = (properties: Properties) => (
         <path
             d="M1.09082 1.27692L7.38176 7.56786L13.6727 1.27692"
             stroke="currentColor"
-            stroke-width="1.39799"
+            strokeWidth="1.39799"
         />
     </svg>
 );
@@ -70,17 +70,17 @@ export const SwapIcon = (properties: Properties) => (
             rx="4.01737"
             fill="#E5E5E5"
             stroke="#F6F6F6"
-            stroke-width="2.67825"
+            strokeWidth="2.67825"
         />
         <path
             d="M22.2266 14.1278L16.2005 8.10175L10.1744 14.1278"
             stroke="#093C52"
-            stroke-width="1.33912"
+            strokeWidth="1.33912"
         />
         <path
             d="M10.1748 18.1453L16.2009 24.1713L22.2269 18.1453"
             stroke="#093C52"
-            stroke-width="1.33912"
+            strokeWidth="1.33912"
         />
     </svg>
 );
@@ -123,7 +123,7 @@ export const FarcastLikeIcon = (properties: Properties) => (
             id="Vector"
             d="M4.6357 7.54252C2.7554 6.44374 1.66679 5.33529 1.12601 4.34423C0.583596 3.347 0.593873 2.47084 0.906868 1.8384L4.6357 7.54252ZM4.6357 7.54252C6.51578 6.4436 7.60426 5.33512 8.14406 4.34421C8.68647 3.34699 8.67619 2.47084 8.3632 1.8384L4.6357 7.54252ZM2.5333 0.775335L2.5333 0.775332C1.83996 0.810815 1.21996 1.20673 0.906956 1.83823L2.5333 0.775335ZM2.5333 0.775335L2.53493 0.775247M2.5333 0.775335L2.53493 0.775247M2.53493 0.775247C3.11381 0.74369 3.74198 0.968637 4.2871 1.52138L4.6356 1.87475M2.53493 0.775247L4.6356 1.87475M4.6356 1.87475L4.98397 1.52126M4.6356 1.87475L4.98397 1.52126M4.98397 1.52126C5.52861 0.968619 6.15671 0.743696 6.73512 0.775248L6.73676 0.775332M4.98397 1.52126L6.73676 0.775332M6.73676 0.775332C7.4301 0.810815 8.05011 1.20673 8.36311 1.83823L6.73676 0.775332Z"
             stroke="currentColor"
-            stroke-width="0.978591"
+            strokeWidth="0.978591"
         />
     </svg>
 );
@@ -141,7 +141,7 @@ export const FarcastCommentIcon = (properties: Properties) => (
             id="Vector 91"
             d="M1.11353 2.99557V6.42064C1.11353 6.9611 1.55166 7.39923 2.09212 7.39923H2.49746C2.81406 7.39923 3.07071 7.65588 3.07071 7.97247C3.07071 8.48318 3.68817 8.73895 4.0493 8.37782L4.74127 7.68585C4.92479 7.50233 5.17369 7.39923 5.43323 7.39923H7.96366C9.04458 7.39923 9.92084 6.52297 9.92084 5.44205V2.99557C9.92084 1.91465 9.04458 1.03839 7.96366 1.03839H3.07071C1.98979 1.03839 1.11353 1.91465 1.11353 2.99557Z"
             stroke="currentColor"
-            stroke-width="0.978591"
+            strokeWidth="0.978591"
         />
     </svg>
 );
@@ -161,7 +161,7 @@ export const FarcastRecastIcon = (properties: Properties) => (
                     id="Vector 92"
                     d="M0.556885 4.26737V3.70817C0.556885 2.62725 1.43314 1.75099 2.51407 1.75099H5.86923"
                     stroke="currentColor"
-                    stroke-width="0.978591"
+                    strokeWidth="0.978591"
                 />
                 <path
                     id="Vector 92 (Stroke)"
@@ -176,7 +176,7 @@ export const FarcastRecastIcon = (properties: Properties) => (
                     id="Vector 92_2"
                     d="M11.5653 4.12745L11.5653 4.68664C11.5653 5.76756 10.689 6.64382 9.60813 6.64382L6.25296 6.64382"
                     stroke="currentColor"
-                    stroke-width="0.978591"
+                    strokeWidth="0.978591"
                 />
                 <path
                     id="Vector 92 (Stroke)_2"

@@ -31,17 +31,20 @@
         "typescript": "^5.4.3"
     },
     "devDependencies": {
+        "@eslint/js": "^9.2.0",
         "@next/eslint-plugin-next": "^14.2.3",
         "@stylistic/eslint-plugin": "^1.7.0",
         "@stylistic/stylelint-plugin": "^2.1.1",
         "@types/node": "^20.12.3",
         "@types/react": "^18.2.73",
         "@types/react-helmet": "^6.1.11",
-        "@typescript-eslint/parser": "^7.8.0",
         "eslint": "^9.2.0",
+        "eslint-plugin-jsx-a11y": "^6.8.0",
+        "eslint-plugin-react": "^7.34.1",
         "i18next-locales-sync": "^2.0.1",
         "postcss-custom-media": "^10.0.4",
-        "stylelint": "^16.3.1"
+        "stylelint": "^16.3.1",
+        "typescript-eslint": "^7.8.0"
     },
     "repository": {
         "type": "git",

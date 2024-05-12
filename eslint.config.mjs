@@ -1,14 +1,17 @@
-import tsParser from '@typescript-eslint/parser';
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
 import nextPlugin from '@next/eslint-plugin-next';
 import stylistic from '@stylistic/eslint-plugin';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+import react from 'eslint-plugin-react';
 
-/**
- * @type {import('eslint').Linter.FlatConfig[]}
- */
-const config = [
+const config = tseslint.config(
     {
+        files: ['src/**/*.ts', 'src/*.tsx'],
         ignores: ['node_modules', 'dist', '.next'],
     },
+    eslint.configs.recommended,
+    ...tseslint.configs.recommended,
     stylistic.configs.customize({
         indent: 4,
         quotes: 'single',
@@ -16,18 +19,12 @@ const config = [
         semi: true,
     }),
     {
-        files: ['src/**/*.ts', 'src/**/*.tsx'],
-        languageOptions: {
-            parser: tsParser,
-            ecmaVersion: 'latest',
-            sourceType: 'module',
-            parserOptions: {
-                ecmaFeatures: {
-                    jsx: true,
-                },
+        settings: {
+            react: {
+                version: 'detect',
             },
         },
-        plugins: { '@next/next': nextPlugin, stylistic },
+        plugins: { '@next/next': nextPlugin, stylistic, 'jsx-a11y': jsxA11y, react },
         rules: {
             // Next.js
             '@next/next/google-font-display': 'warn',
@@ -49,8 +46,12 @@ const config = [
             '@next/next/no-document-import-in-page': 'error',
             '@next/next/no-head-import-in-document': 'error',
             '@next/next/no-script-component-in-head': 'error',
+
+            // React
+            ...jsxA11y.configs.recommended.rules,
+            'react/no-unknown-property': 'error',
         },
     },
-];
+);
 
 export default config;

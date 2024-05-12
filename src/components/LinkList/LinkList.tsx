@@ -28,7 +28,7 @@ export const LinkList: FC<{ links: ILink[] }> = ({ links }) => {
                                     <path
                                         d="M1.07143 12.4286L12 1.5M12 1.5H0M12 1.5V13.5"
                                         stroke="currentColor"
-                                        stroke-width="2"
+                                        strokeWidth="2"
                                     />
                                 </svg>
                             </span>
