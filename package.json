@@ -14,7 +14,6 @@
     },
     "dependencies": {
         "clsx": "^2.1.0",
-        "framer-motion": "^11.0.24",
         "gh-pages": "^3.2.3",
         "i18next": "^23.10.1",
         "i18next-resources-to-backend": "^1.2.0",
@@ -25,8 +24,6 @@
         "react-external-link": "^2.3.1",
         "react-i18next": "^14.1.0",
         "react-intersection-observer": "^8.34.0",
-        "react-is": "16.12.0",
-        "react-markdown": "^8.0.7",
         "react-responsive-carousel": "^3.2.23",
         "react-transition-state": "^1.1.5",
         "typescript": "^5.4.3"
@@ -34,7 +31,7 @@
     "devDependencies": {
         "@eslint/js": "^9.2.0",
         "@next/eslint-plugin-next": "^14.2.3",
-        "@stylistic/eslint-plugin": "^1.7.0",
+        "@stylistic/eslint-plugin": "^2.1.0",
         "@stylistic/stylelint-plugin": "^2.1.1",
         "@types/node": "^20.12.3",
         "@types/react": "^18.2.73",
