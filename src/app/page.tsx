@@ -44,7 +44,7 @@ export default async function Home({
                     <h2>{t('home.features.title')}</h2>
                     <p>{t('home.features.text')}</p>
                 </div>
-                <Carousel className={ui['w-page']}>
+                <Carousel>
                     <FeaturePreview
                         title={t('home.features.farewell.title')}
                         text={t('home.features.farewell.text')}

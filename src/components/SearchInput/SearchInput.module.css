@@ -11,7 +11,6 @@
     font-family: var(--ens-semi-mono);
 
     font-size: 24px;
-    max-width: 358px;
     padding: 20px;
 }
 
@@ -24,6 +23,7 @@
 }
 
 .container {
+    width: 100%;
     gap: 20px;
     margin-top: 50px;
     padding-bottom: 50px;
@@ -50,11 +50,25 @@
     letter-spacing: -0.28px;
 }
 
+.input::after {
+    content: '.eth';
+}
+
+.searchboxContainer {
+    gap: 10px;
+    width: 100%;
+}
+
+.inputContainer {
+    color: var(--ens-blue);
+    position: relative;
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     .input {
         font-size: 52px;
         padding: 20px 24px;
-        max-width: 882px;
     }
     .icon {
         height: 34px;
@@ -81,7 +95,6 @@
 @media (min-width: 1280px) {
     .input {
         font-size: 76px;
-        max-width: 1394px;
         padding: 28px;
     }
     .icon {
@@ -104,17 +117,4 @@
         letter-spacing: -0.4px;
         font-size: 20px;
     }
-}
-
-.input::after {
-    content: '.eth';
-}
-
-.searchboxContainer {
-    gap: 10px;
-}
-
-.inputContainer {
-    color: var(--ens-blue);
-    position: relative;
 }
