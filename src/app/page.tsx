@@ -54,7 +54,7 @@ export default async function Home({
                         position={0}
                         gridSrc="blue-grid.svg"
                     >
-                        {mq => <MessageAnimation mq={mq} />}
+                        <MessageAnimation t={t} />
                     </FeaturePreview>
                     <FeaturePreview
                         title={t('home.features.consistent.title')}
@@ -65,7 +65,7 @@ export default async function Home({
                         position={1}
                         gridSrc="magenta-grid.svg"
                     >
-                        {() => <DappsAnimation t={t} />}
+                        <DappsAnimation t={t} />
                     </FeaturePreview>
                     <FeaturePreview
                         title={t('home.features.ownership.title')}
@@ -76,7 +76,7 @@ export default async function Home({
                         position={2}
                         gridSrc="green-grid.svg"
                     >
-                        {() => <OwnershipAnimation />}
+                        <OwnershipAnimation />
                     </FeaturePreview>
                 </Carousel>
                 <div

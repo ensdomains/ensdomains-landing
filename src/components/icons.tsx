@@ -1,15 +1,15 @@
 import { SVGProps } from 'react';
 
-type Properties = SVGProps<SVGSVGElement>;
+type Props = SVGProps<SVGSVGElement>;
 
-export const SearchIcon = (properties: Properties) => (
+export const SearchIcon = (props: Props) => (
     <svg
         width="56"
         height="59"
         viewBox="0 0 56 59"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        {...properties}
+        {...props}
     >
         <g opacity="0.3">
             <g id="search">
@@ -36,14 +36,14 @@ export const SearchIcon = (properties: Properties) => (
     </svg>
 );
 
-export const ArrowDownIcon = (properties: Properties) => (
+export const ArrowDownIcon = (props: Props) => (
     <svg
         width="15"
         height="9"
         viewBox="0 0 15 9"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        {...properties}
+        {...props}
     >
         <path
             d="M1.09082 1.27692L7.38176 7.56786L13.6727 1.27692"
@@ -53,14 +53,14 @@ export const ArrowDownIcon = (properties: Properties) => (
     </svg>
 );
 
-export const SwapIcon = (properties: Properties) => (
+export const SwapIcon = (props: Props) => (
     <svg
         width="33"
         height="32"
         viewBox="0 0 33 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        {...properties}
+        {...props}
     >
         <rect
             x="1.4724"
@@ -85,14 +85,14 @@ export const SwapIcon = (properties: Properties) => (
     </svg>
 );
 
-export const ArrowUpRightIcon = (properties: Properties) => (
+export const ArrowUpRightIcon = (props: Props) => (
     <svg
         width="76"
         height="44"
         viewBox="0 0 76 44"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        {...properties}
+        {...props}
     >
         <path
             d="M3.62598 43.623V22.2084C3.62598 21.1039 4.52141 20.2084 5.62598 20.2084H53.0566"
@@ -110,14 +110,14 @@ export const ArrowUpRightIcon = (properties: Properties) => (
     </svg>
 );
 
-export const FarcastLikeIcon = (properties: Properties) => (
+export const FarcastLikeIcon = (props: Props) => (
     <svg
         width="10"
         height="9"
         viewBox="0 0 10 9"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        {...properties}
+        {...props}
     >
         <path
             id="Vector"
@@ -128,14 +128,14 @@ export const FarcastLikeIcon = (properties: Properties) => (
     </svg>
 );
 
-export const FarcastCommentIcon = (properties: Properties) => (
+export const FarcastCommentIcon = (props: Props) => (
     <svg
         width="11"
         height="10"
         viewBox="0 0 11 10"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        {...properties}
+        {...props}
     >
         <path
             id="Vector 91"
@@ -146,14 +146,14 @@ export const FarcastCommentIcon = (properties: Properties) => (
     </svg>
 );
 
-export const FarcastRecastIcon = (properties: Properties) => (
+export const FarcastRecastIcon = (props: Props) => (
     <svg
         width="13"
         height="9"
         viewBox="0 0 13 9"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        {...properties}
+        {...props}
     >
         <g id="Group 2243910">
             <g id="Group 2243908">
@@ -188,4 +188,11 @@ export const FarcastRecastIcon = (properties: Properties) => (
             </g>
         </g>
     </svg>
+);
+
+export const MessageBubbleIcon = (props: Props) => (
+    <svg width="34" height="21" viewBox="0 0 34 21" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <path d="M34 0H2.34315C3.40401 0 4.42143 0.421426 5.17157 1.17157L23.1716 19.1716C25.6914 21.6914 30 19.9068 30 16.3431V4C30 1.79086 31.7909 0 34 0Z" fill="currentColor" />
+    </svg>
+
 );

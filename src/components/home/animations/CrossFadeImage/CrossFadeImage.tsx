@@ -7,7 +7,7 @@ type CrossFadeImageProperties = {
     sources: { src: string; alt: string }[];
     duration: number;
     className?: string;
-    children?: (properties: { alt: string; index: number }) => ReactNode;
+    children?: (props: { alt: string; index: number }) => ReactNode;
 };
 
 export const CrossFadeImage = ({

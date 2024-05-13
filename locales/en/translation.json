@@ -19,7 +19,13 @@
       "text": "Your ENS name is anchored in Web3, but works across the internet. It's your identity: simple, memorable, unmistakably yours.",
       "farewell": {
         "title": "Farewell to complexity.",
-        "text": "No more confusing hex addresses. Your ENS name is easy to remember, easy to share."
+        "text": "No more confusing hex addresses. Your ENS name is easy to remember, easy to share.",
+        "animation": {
+          "m1": "What's your crypto address so I can\n pay you?",
+          "m2": "0x0b08dA7068b73A579Bd5E8a8290ff8afd37bc32A",
+          "m3": "Wow. Go to ens.app",
+          "m4": "This is so much simpler! Send to\n mynewname.eth"
+        }
       },
       "consistent": {
         "title": "Consistent across the internet.",
