@@ -103,16 +103,22 @@ export default async function Home({
                             title: 'ENS DAO',
                             description:
                                 'You want to join the ENS community and contribute.',
+                            color: 'ens-blue', // TODO: update color & link
+                            link: '#',
                         },
                         {
                             title: 'Learn More',
                             description:
                                 'Absorb the wealth of knowledge in our Governance docs.',
+                            color: 'ens-blue', // TODO: update color & link
+                            link: '#',
                         },
                         {
                             title: 'Delegate Your Tokens',
                             description:
                                 'Delegate your tokens to an engaged member of the community.',
+                            color: 'ens-blue', // TODO: update color & link
+                            link: '#',
                         },
                     ]}
                 />
