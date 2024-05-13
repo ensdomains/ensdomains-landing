@@ -2,7 +2,7 @@
     width: 100%;
     gap: 2rem;
     min-height: min(80vh, 620px);
-    padding: 88px 16px 32px 16px; 
+    padding: 44px 16px 32px 16px; 
     margin-bottom: 50px;
     position: relative;
 }
@@ -34,6 +34,7 @@
 
 .h1 {
     color: var(--page-text);
+    white-space: pre;
     max-width: 16ch;
 }
 

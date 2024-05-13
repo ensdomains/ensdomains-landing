@@ -1,0 +1,32 @@
+.position-container {
+    position: absolute;
+}
+
+.position-container:nth-child(1) {
+    left: 11%;
+    bottom: 36px;
+}
+
+.position-container:nth-child(2) {
+    right: 62px;
+    top: 107px; 
+}
+
+@media (max-width: 1280px) {
+    .position-container:nth-child(1) {
+        display: none;
+    }
+    .position-container:nth-child(2) {
+        right: 36px;
+    }
+    .position-container:nth-child(2) > img {
+        height: 240px;
+        width: max-content;
+    }
+}
+
+@media (max-width: 768px) {
+    .position-container {
+        display: none;
+    }
+}
