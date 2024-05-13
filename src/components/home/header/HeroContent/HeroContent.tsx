@@ -36,7 +36,7 @@ export const HeroContent = () => (
         <div className={styles['position-container']}>
             <div className={styles['animation-container']}>
                 <img
-                    src="/assets/magenta-animation-bg.svg"
+                    src="/assets/home/magenta-animation-bg.svg"
                     alt=""
                     height={400}
                     width={400}
@@ -45,7 +45,7 @@ export const HeroContent = () => (
             </div>
         </div>
         <img
-            src="/assets/magenta-element.svg"
+            src="/assets/home/magenta-element.svg"
             width={200}
             height={200}
             alt=""
@@ -54,7 +54,7 @@ export const HeroContent = () => (
         <div className={styles['position-container']}>
             <div className={styles['animation-container']}>
                 <img
-                    src="/assets/green-animation-bg.svg"
+                    src="/assets/home/green-animation-bg.svg"
                     alt=""
                     height={222}
                     width={293}
@@ -65,7 +65,7 @@ export const HeroContent = () => (
         <div className={styles['position-container']}>
             <div className={styles['animation-container']}>
                 <img
-                    src="/assets/blue-animation-bg.svg"
+                    src="/assets/home/blue-animation-bg.svg"
                     alt=""
                     height={222}
                     width={222}
@@ -76,7 +76,7 @@ export const HeroContent = () => (
         <div className={styles['position-container']}>
             <div className={styles['animation-container']}>
                 <img
-                    src="/assets/cyan-animation-bg.svg"
+                    src="/assets/home/cyan-animation-bg.svg"
                     alt=""
                     height={400}
                     width={100}

@@ -20,7 +20,7 @@ const sources: { src: string; alt: string }[] = [
     'domico.eth',
     'luc.eth',
     'nick.eth',
-].map(name => ({ alt: name, src: `/assets/${name}.png` }));
+].map(name => ({ alt: name, src: `/assets/home/${name}.png` }));
 
 const FarcasterPost = () => (
     <div className={clsx(ui.flex, ui['flex-col'], styles.farcasterPost)}>
@@ -102,17 +102,17 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                 >
                     <img
                         className={styles.img}
-                        src="/assets/fnd-1.png"
+                        src="/assets/home/fnd-1.png"
                         alt=""
                     />
                     <img
                         className={styles.img}
-                        src="/assets/fnd-2.png"
+                        src="/assets/home/fnd-2.png"
                         alt=""
                     />
                     <img
                         className={styles.img}
-                        src="/assets/fnd-3.png"
+                        src="/assets/home/fnd-3.png"
                         alt=""
                     />
                 </div>
@@ -219,25 +219,25 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     )}
                 >
                     <img
-                        src="/assets/stories-1.png"
+                        src="/assets/home/stories-1.png"
                         alt=""
                         height={32}
                         width={32}
                     />
                     <img
-                        src="/assets/stories-2.png"
+                        src="/assets/home/stories-2.png"
                         alt=""
                         height={32}
                         width={32}
                     />
                     <img
-                        src="/assets/stories-3.png"
+                        src="/assets/home/stories-3.png"
                         alt=""
                         height={32}
                         width={32}
                     />
                     <img
-                        src="/assets/stories-4.png"
+                        src="/assets/home/stories-4.png"
                         alt=""
                         height={32}
                         width={32}
@@ -257,7 +257,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                 >
                     <button>
                         <img
-                            src="/assets/home.svg"
+                            src="/assets/home/home.svg"
                             height={16}
                             width={16}
                             alt=""
@@ -265,7 +265,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     </button>
                     <button>
                         <img
-                            src="/assets/search.svg"
+                            src="/assets/home/search.svg"
                             height={16}
                             width={16}
                             alt=""
@@ -273,7 +273,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     </button>
                     <button>
                         <img
-                            src="/assets/plus.svg"
+                            src="/assets/home/plus.svg"
                             height={16}
                             width={16}
                             alt=""
@@ -281,7 +281,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     </button>
                     <button>
                         <img
-                            src="/assets/bell.svg"
+                            src="/assets/home/bell.svg"
                             height={16}
                             width={16}
                             alt=""
@@ -289,7 +289,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                     </button>
                     <button>
                         <img
-                            src="/assets/group.svg"
+                            src="/assets/home/group.svg"
                             height={16}
                             width={16}
                             alt=""

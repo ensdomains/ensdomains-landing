@@ -10,6 +10,7 @@ import { Language } from '~/i18n/settings';
 import { useTranslation } from '~/i18n/useTranslation';
 
 import ui from '../../styles/ui.module.css';
+import { HeroContent } from '~/components/developers/header/HeroContent';
 
 export default async function Home({
     params,
@@ -41,7 +42,9 @@ export default async function Home({
                         'https://github.com/ensdomains',
                     ],
                 ]}
-            />
+            >
+                <HeroContent />
+            </Header>
 
             <div className={clsx(ui['my-100'], ui['space-y-40'])}>
                 <h2 className={clsx(ui['w-page'])}>
