@@ -81,10 +81,14 @@ export default async function Home({
                             title: 'Business Development',
                             description:
                                 'Speak with our Business Development team to chat about a partnership opportunity.',
+                            color: 'ens-blue', // TODO: update color & link
+                            link: '#',
                         },
                         {
                             title: 'Explore Opportunities',
                             description: 'Get ideas on how to work with ENS.',
+                            color: 'ens-blue', // TODO: update color & link
+                            link: '#',
                         },
                     ]}
                 />
