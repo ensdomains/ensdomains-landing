@@ -29,7 +29,7 @@ export default async function Home({
     const { t } = await useTranslation(lang, 'translation');
 
     return (
-        <main>
+        <main lang={lang}>
             <Navbar t={t} lang={lang} />
             <Header
                 title={t('home.hero.title')}

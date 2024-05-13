@@ -67,6 +67,14 @@ h1 {
     letter-spacing: -0.8px; 
 }
 
+html[lang="ru"] h1 {
+    font-weight: 600;
+}
+
+html[lang="ru"] h1 span {
+    font-weight: 500;
+}
+
 h2 {
     font-family: var(--ens-sans);
     font-weight: 500;
