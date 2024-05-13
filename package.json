@@ -23,9 +23,6 @@
         "react-dom": "^18.2.0",
         "react-external-link": "^2.3.1",
         "react-i18next": "^14.1.0",
-        "react-intersection-observer": "^8.34.0",
-        "react-responsive-carousel": "^3.2.23",
-        "react-transition-state": "^1.1.5",
         "typescript": "^5.4.3"
     },
     "devDependencies": {
