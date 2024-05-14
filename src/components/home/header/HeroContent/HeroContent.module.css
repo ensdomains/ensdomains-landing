@@ -72,7 +72,7 @@
         transform: rotate(45deg) translate(0, 0);
         animation-timing-function: ease-in-out;
     }
-    20% {
+    25% {
         transform: rotate(45deg) translate(-175px, 0);
         animation-timing-function: ease-in-out;
     }
