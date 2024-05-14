@@ -19,6 +19,42 @@ import { useTranslation } from '~/i18n/useTranslation';
 
 import ui from '../styles/ui.module.css';
 import styles from './page.module.css';
+import { PartnersList } from '~/components/home/PartnersList/PartnersList';
+import { PartnerEntry } from '~/utils/types';
+
+const partners: PartnerEntry[] = [
+    /* temporary */
+    {
+        name: 'Coinbase Wallet',
+        icon: '',
+        category: 'wallet',
+    },
+    {
+        name: 'Rainbow',
+        icon: '',
+        category: 'wallet',
+    },
+    {
+        name: 'Coinbase Wallet',
+        icon: '',
+        category: 'wallet',
+    },
+    {
+        name: 'Rainbow',
+        icon: '',
+        category: 'wallet',
+    },
+    {
+        name: 'Coinbase Wallet',
+        icon: '',
+        category: 'wallet',
+    },
+    {
+        name: 'Rainbow',
+        icon: '',
+        category: 'wallet',
+    },
+];
 
 // eslint-disable-next-line @next/next/no-async-client-component
 export default async function Home({
@@ -145,12 +181,10 @@ export default async function Home({
                     <div className={clsx(ui.flex, ui['flex-col'], styles.partnersContainer)}>
                         <div className={ui['body-sm']}>{t('home.partners.tag')}</div>
 
-                        <div>
-                            <p className={clsx(ui['max-w-text'], ui.serif)}>
-                                {t('home.partners.description')}
-                            </p>
-                            <div>{/* TODO: partners here */}</div>
-                        </div>
+                        <p className={clsx(ui['max-w-text'], ui.serif)}>
+                            {t('home.partners.description')}
+                        </p>
+                        <PartnersList partners={partners} />
 
                         <button className={ui.button}>
                             {t('home.partners.button')}

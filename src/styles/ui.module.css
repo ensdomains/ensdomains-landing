@@ -66,6 +66,7 @@
     font-weight: 500;
     border-radius: 4px;
     text-align: center;
+    width: fit-content;
 
     padding: 20px 60px; 
     font-size: 14px;
