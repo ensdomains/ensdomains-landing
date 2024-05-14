@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import ui from '../../styles/ui.module.css';
 import styles from './LinkList.module.css';
+import { ExternalLink } from 'react-external-link';
 
 export type ILink = {
     title: string;
@@ -14,8 +15,8 @@ export const LinkList: FC<{ links: ILink[] }> = ({ links }) => {
         <div className={ui['w-page']}>
             <ul className={styles.list}>
                 {links.map(({ title, href, description }) => (
-                    <li>
-                        <a href={href} target="_blank">
+                    <li key={title}>
+                        <ExternalLink href={href}>
                             <span>{title}</span>
                             <span style={{ color: 'var(--page-text)' }}>
                                 <svg
@@ -32,7 +33,7 @@ export const LinkList: FC<{ links: ILink[] }> = ({ links }) => {
                                     />
                                 </svg>
                             </span>
-                        </a>
+                        </ExternalLink>
                         <span className={ui.serif}>{description}</span>
                     </li>
                 ))}

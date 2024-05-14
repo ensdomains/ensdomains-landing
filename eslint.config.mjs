@@ -4,6 +4,7 @@ import nextPlugin from '@next/eslint-plugin-next';
 import stylistic from '@stylistic/eslint-plugin';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
+import { fixupPluginRules } from '@eslint/compat';
 
 const config = tseslint.config(
     {
@@ -24,31 +25,15 @@ const config = tseslint.config(
                 version: 'detect',
             },
         },
-        plugins: { '@next/next': nextPlugin, stylistic, 'jsx-a11y': jsxA11y, react },
+        plugins: { '@next/next': fixupPluginRules(nextPlugin), stylistic, 'jsx-a11y': jsxA11y, 'react': fixupPluginRules(react) },
         rules: {
             // Next.js
-            '@next/next/google-font-display': 'warn',
-            '@next/next/google-font-preconnect': 'warn',
-            '@next/next/next-script-for-ga': 'warn',
-            '@next/next/no-async-client-component': 'warn',
-            '@next/next/no-before-interactive-script-outside-document': 'warn',
-            '@next/next/no-css-tags': 'warn',
-            '@next/next/no-head-element': 'warn',
-            '@next/next/no-html-link-for-pages': 'warn',
-            '@next/next/no-styled-jsx-in-document': 'warn',
-            '@next/next/no-sync-scripts': 'warn',
-            '@next/next/no-title-in-document-head': 'warn',
-            '@next/next/no-typos': 'warn',
-            '@next/next/no-unwanted-polyfillio': 'warn',
-            '@next/next/inline-script-id': 'error',
-            '@next/next/no-assign-module-variable': 'error',
-            '@next/next/no-document-import-in-page': 'error',
-            '@next/next/no-head-import-in-document': 'error',
-            '@next/next/no-script-component-in-head': 'error',
-
+            ...nextPlugin.configs.recommended.rules,
             // React
             ...jsxA11y.configs.recommended.rules,
-            'react/no-unknown-property': 'error',
+            ...react.configs.recommended.rules,
+            'react/react-in-jsx-scope': 'off',
+            '@next/next/no-img-element': 'off',
         },
     },
 );

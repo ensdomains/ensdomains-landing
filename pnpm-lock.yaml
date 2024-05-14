@@ -42,6 +42,9 @@ importers:
         specifier: ^5.4.3
         version: 5.4.3
     devDependencies:
+      '@eslint/compat':
+        specifier: ^1.0.1
+        version: 1.0.1
       '@eslint/js':
         specifier: ^9.2.0
         version: 9.2.0
@@ -149,6 +152,10 @@ packages:
   '@eslint-community/regexpp@4.10.0':
     resolution: {integrity: sha512-Cu96Sd2By9mCNTx2iyKOmq10v22jUVQv0lQnlGNy16oE9589yE+QADPbrMGCkA51cKZSg3Pu/aTJVTGfL/qjUA==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
+
+  '@eslint/compat@1.0.1':
+    resolution: {integrity: sha512-jIstH3YKraEe4HRQ77ux12ZLRxPzehmcdjRSRrSePiwf6s4G9DzdYl3L5CKSXWt4JyzXxy2p7MXFU7630Gz8PA==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/eslintrc@3.0.2':
     resolution: {integrity: sha512-wV19ZEGEMAC1eHgrS7UQPqsdEiCIbTKTasEfcXAigzoXICcqZSjBZEHlZwNVvKg6UBCjSlos84XiLqsRJnIcIg==}
@@ -1895,6 +1902,8 @@ snapshots:
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.10.0': {}
+
+  '@eslint/compat@1.0.1': {}
 
   '@eslint/eslintrc@3.0.2':
     dependencies:

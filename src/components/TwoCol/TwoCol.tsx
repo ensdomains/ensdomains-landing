@@ -26,8 +26,8 @@ export const TwoCol: FC<{
                 href,
                 buttonVariant = 'primary',
             }) => (
-                <div>
-                    <span>{tag}</span>
+                <div key={title}>
+                    <span className={clsx(styles.tag, ui['body-sm'])}>{tag}</span>
                     <div className={styles.split}>
                         <div className={clsx(ui.flex, styles.content)}>
                             <h4 className={styles.title}>{title}</h4>

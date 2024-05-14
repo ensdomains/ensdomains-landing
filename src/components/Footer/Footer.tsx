@@ -4,6 +4,7 @@ import React, { FC } from 'react';
 
 import ui from '../../styles/ui.module.css';
 import styles from './Footer.module.css';
+import { ExternalLink } from 'react-external-link';
 
 export const Footer: FC<{ t: TFunction<string, string> }> = ({ t }) => {
     const footerItems = [
@@ -67,13 +68,13 @@ export const Footer: FC<{ t: TFunction<string, string> }> = ({ t }) => {
             <footer className={styles.container}>
                 <div className={styles.columns}>
                     {footerItems.map(list => (
-                        <ul className={styles.ul}>
+                        <ul className={styles.ul} key={list.title}>
                             <div className={styles.h3}>{list.title}</div>
                             {list.entries.map(entry => (
-                                <li>
-                                    <a href={entry.link} target="_blank">
+                                <li key={entry.title}>
+                                    <ExternalLink href={entry.link}>
                                         {entry.title}
-                                    </a>
+                                    </ExternalLink>
                                 </li>
                             ))}
                         </ul>

@@ -26,6 +26,7 @@
         "typescript": "^5.4.3"
     },
     "devDependencies": {
+        "@eslint/compat": "^1.0.1",
         "@eslint/js": "^9.2.0",
         "@next/eslint-plugin-next": "^14.2.3",
         "@stylistic/eslint-plugin": "^2.1.0",

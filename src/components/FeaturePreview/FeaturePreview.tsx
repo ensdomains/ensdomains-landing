@@ -73,6 +73,7 @@ export const FeaturePreview: FC<
                 <div className={clsx(ui.flex, ui['flex-row'], styles.menubar)}>
                     {[0, 1, 2].map(position => (
                         <Indicator
+                            key={position}
                             indicatorColor={indicatorColor}
                             isCurrent={currentPosition === position}
                         />

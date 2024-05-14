@@ -93,7 +93,7 @@ export default async function Home({
             <div className={clsx(ui['w-page'], ui['my-100'], ui['space-y-40'])}>
                 <h3>Join the New Internet</h3>
                 <p className={ui['max-w-text']}>
-                    Your engagement in ENS governance is more than a vote. It's
+                    Your engagement in ENS governance is more than a vote. It&apos;s
                     your stake in an internet that is democratic, resilient, and
                     truly centered around its users.
                 </p>

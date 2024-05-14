@@ -51,7 +51,13 @@
     color: var(--ens-medium-blue);
     line-height: 112%;
 
+    font-size: 20px;
+}
+
+.body-sm {
     font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.24px; 
 }
 
 .button {
@@ -116,9 +122,6 @@
     .button {
         padding: 30px 100px;
         font-size: 16px;
-    }
-    .serif {
-        font-size: 20px;
     }
     .w-page {
         max-width: calc(1374px + 5rem);

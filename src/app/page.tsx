@@ -125,6 +125,9 @@ export default async function Home({
                     className={clsx(
                         ui['w-page'],
                         ui['my-100'],
+                        ui.flex,
+                        ui['flex-col'],
+                        styles.gtwSection,
                     )}
                 >
                     <div className={clsx(
@@ -139,8 +142,8 @@ export default async function Home({
                         </p>
                     </div>
 
-                    <div>
-                        <div>{t('home.partners.tag')}</div>
+                    <div className={clsx(ui.flex, ui['flex-col'], styles.partnersContainer)}>
+                        <div className={ui['body-sm']}>{t('home.partners.tag')}</div>
 
                         <div>
                             <p className={clsx(ui['max-w-text'], ui.serif)}>

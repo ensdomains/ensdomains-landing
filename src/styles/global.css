@@ -89,7 +89,9 @@ h3 {
     font-family: var(--ens-sans);
     font-style: normal;
     font-weight: 500;
-    line-height: 96%; /* 61.44px */
+    line-height: 96%;
+
+    font-size: 24px;
     letter-spacing: -0.48px;
 }
 

@@ -56,6 +56,7 @@ export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
 
                         return (
                             <Link
+                                key={url}
                                 href={url}
                                 className={styles.link}
                                 style={

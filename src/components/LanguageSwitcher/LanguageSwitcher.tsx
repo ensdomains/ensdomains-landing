@@ -27,7 +27,7 @@ export const LanguageSwitcher: FC<{ lang: Language }> = ({ lang }) => {
                         = path.replace(oldLanguagePrefix, languagePrefix) || '/';
 
                     return (
-                        <li>
+                        <li key={language}>
                             <Link
                                 key={language}
                                 href={url}
