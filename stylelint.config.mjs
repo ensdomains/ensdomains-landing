@@ -3,5 +3,6 @@ export default {
     plugins: ['@stylistic/stylelint-plugin'],
     rules: {
         '@stylistic/indentation': 4,
+        '@stylistic/max-empty-lines': 1,
     },
 };

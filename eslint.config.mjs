@@ -25,7 +25,11 @@ const config = tseslint.config(
                 version: 'detect',
             },
         },
-        plugins: { '@next/next': fixupPluginRules(nextPlugin), stylistic, 'jsx-a11y': jsxA11y, 'react': fixupPluginRules(react) },
+        plugins: {
+            '@next/next': fixupPluginRules(nextPlugin),
+            stylistic, 'jsx-a11y': jsxA11y,
+            'react': fixupPluginRules(react),
+        },
         rules: {
             // Next.js
             ...nextPlugin.configs.recommended.rules,
@@ -34,6 +38,7 @@ const config = tseslint.config(
             ...react.configs.recommended.rules,
             'react/react-in-jsx-scope': 'off',
             '@next/next/no-img-element': 'off',
+            'stylistic/no-multiple-empty-lines': ['error', { max: 1 }],
         },
     },
 );
