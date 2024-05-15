@@ -1,0 +1,66 @@
+[
+    {
+        "title": "Phase 1",
+        "items": [
+            {
+                "title": "Upgrading name resolution",
+                "description": "Deploying a new Universal Resolver will allow us to quickly switch all clients over to the new resolution process when the new L2 infrastructure is deployed. Deploying a new name resolution process is essential to support our new registry structure that will remove artifact subdomains from ENS when names are transferred or expire",
+                "status": "research",
+                "links": [
+                    { "type": "github", "url": "https://github.com" },
+                    { "type": "docs", "url": "https://docs.ens.domains" }
+                ]
+            },
+            {
+                "title": "L2 Reverse resolution",
+                "description": "L2 reverse resolution needs to be L2 specific and this new ENSIP will standardise how this resolution will be done. Connecting the L2 reverse registrars to L1 requires a new CCIP-read gateway and contracts on each L2. The discovery process also needs to be enabled by the DAO via the root.",
+                "status": "development",
+                "links": [{ "type": "github", "url": "https://github.com" }]
+            }
+        ]
+    },
+    {
+        "title": "Phase 2",
+        "items": [
+            {
+                "title": "Write new contracts for L1 & L2",
+                "description": "A new sub registry contract will be written to rearchitect what we have learnt from the last 7 years of ENS, improving the UX of artifact subdomains",
+                "status": "testnet",
+                "links": [{ "type": "github", "url": "https://github.com" }]
+            }
+        ]
+    },
+    {
+        "title": "Phase 3",
+        "items": [
+            {
+                "title": "Deploy ENS L2",
+                "description": "This would involve setting up everything that ENS needs on an existing L2, or its own L2",
+                "status": "governance"
+            }
+        ]
+    },
+    {
+        "title": "Phase 4",
+        "items": [
+            {
+                "title": "Deploy initial contracts on L1 & L2",
+                "description": "Initial registries, resolvers, registrars will be deployed",
+                "status": "done"
+            },
+            {
+                "title": "Sync registrations and renewals to ENS L2",
+                "description": "Once contracts are deployed a sync process will initiate to sync data with the legacy contracts"
+            }
+        ]
+    },
+    {
+        "title": "Phase 5",
+        "items": [
+            {
+                "title": "Switch resolution process to new contracts",
+                "description": "Universal resolver will switch to the new registries and begin using new infrastructure"
+            }
+        ]
+    }
+]
