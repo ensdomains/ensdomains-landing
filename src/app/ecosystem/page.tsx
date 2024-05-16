@@ -10,7 +10,8 @@ import { SmallLinkList } from '~/components/SmallLinkList/SmallLinkList';
 import { Language } from '~/i18n/settings';
 import { useTranslation } from '~/i18n/useTranslation';
 
-import ui from '../../styles/ui.module.css';
+import styles from './page.module.css';
+import ui from '~/styles/ui.module.css';
 
 export default async function Home({
     params,
@@ -40,83 +41,85 @@ export default async function Home({
                     [t('ecosystem.hero.cta2'), 'https://docs.ens.domains'],
                 ]}
             />
-
-            <div className={clsx(ui['my-100'], ui['space-y-40'])}>
-                <h2 className={clsx(ui['w-page'])}>Ready for integration?</h2>
-
-                <LinkList
-                    links={[
-                        {
-                            title: 'Robust Web3 Foundation',
-                            href: '',
-                            description:
+            <section className={ui['w-page']}>
+                <div className={clsx(ui.flex, ui['flex-col'], ui['h2-section'])}>
+                    <h2>Ready for integration?</h2>
+                    <LinkList
+                        links={[
+                            {
+                                title: 'Robust Web3 Foundation',
+                                href: '',
+                                description:
                                 'Gain access to a built-in audience, establishing your brand as a key player in the new internet era.',
-                        },
-                        {
-                            title: 'Unparalleled Trust',
-                            href: '',
-                            description:
+                            },
+                            {
+                                title: 'Unparalleled Trust',
+                                href: '',
+                                description:
 
                                 'Trust isn\'t a buzzword, it\'s our foundation. As a non-profit, DAO-governed protocol, we\'re committed to security and integrity.',
-                        },
-                        {
-                            title: 'Need more resources?',
-                            href: '',
-                            description:
+                            },
+                            {
+                                title: 'Need more resources?',
+                                href: '',
+                                description:
                                 'ENS is more powerful than you think. See below for more resources on how to integrate ENS into your organization.',
-                        },
-                    ]}
-                />
-            </div>
+                            },
+                        ]}
+                    />
+                </div>
 
-            <div className={clsx(ui['w-page'], ui['my-100'], ui['space-y-40'])}>
-                <h3>Exploring a partnership?</h3>
-                <p className={ui['max-w-text']}>
-                    Want to collaborate? Our Business Development team is
-                    excited to discuss how an ENS partnership can help.
-                </p>
-                <ColorCards
-                    cards={[
-                        {
-                            title: 'Business Development',
-                            description:
+                <div className={clsx(ui.flex, ui['flex-col'], styles.partnersSection)}>
+                    <div className={clsx(ui.flex, ui['flex-col'], ui['h3-section'])}>
+                        <h3>Exploring a partnership?</h3>
+                        <p className={ui['max-w-text']}>
+                            Want to collaborate? Our Business Development team is
+                            excited to discuss how an ENS partnership can help.
+                        </p>
+                    </div>
+                    <ColorCards
+                        cards={[
+                            {
+                                title: 'Business Development',
+                                description:
                                 'Speak with our Business Development team to chat about a partnership opportunity.',
-                            color: 'ens-blue', // TODO: update color & link
-                            link: '#',
-                        },
-                        {
-                            title: 'Explore Opportunities',
-                            description: 'Get ideas on how to work with ENS.',
-                            color: 'ens-blue', // TODO: update color & link
-                            link: '#',
-                        },
-                    ]}
-                />
-            </div>
+                                color: 'ens-blue', // TODO: update color & link
+                                link: '#',
+                            },
+                            {
+                                title: 'Explore Opportunities',
+                                description: 'Get ideas on how to work with ENS.',
+                                color: 'ens-blue', // TODO: update color & link
+                                link: '#',
+                            },
+                        ]}
+                    />
+                </div>
 
-            <div className={ui['my-100']}>
-                <h4 className={clsx(ui['w-page'])}>Featured Partners</h4>
-                <SmallLinkList
-                    links={[
-                        { title: 'Coinbase', href: '' },
-                        { title: 'Base', href: '' },
-                        { title: 'Uniswap', href: '' },
-                        { title: 'Brave', href: '' },
-                        { title: 'GoDaddy', href: '' },
-                        { title: 'Optimism', href: '' },
-                        { title: 'Solana', href: '' },
-                        { title: 'Ethereum', href: '' },
-                        { title: 'Bitcoin', href: '' },
-                        { title: 'Phantom', href: '' },
-                        { title: 'Opensea', href: '' },
-                        { title: 'Farcaster', href: '' },
-                        { title: 'Etherscan', href: '' },
-                        { title: 'Metamask', href: '' },
-                        { title: 'Rainbow', href: '' },
-                        { title: 'Family', href: '' },
-                    ]}
-                />
-            </div>
+                <div>
+                    <h4>Featured Partners</h4>
+                    <SmallLinkList
+                        links={[
+                            { title: 'Coinbase', href: '' },
+                            { title: 'Base', href: '' },
+                            { title: 'Uniswap', href: '' },
+                            { title: 'Brave', href: '' },
+                            { title: 'GoDaddy', href: '' },
+                            { title: 'Optimism', href: '' },
+                            { title: 'Solana', href: '' },
+                            { title: 'Ethereum', href: '' },
+                            { title: 'Bitcoin', href: '' },
+                            { title: 'Phantom', href: '' },
+                            { title: 'Opensea', href: '' },
+                            { title: 'Farcaster', href: '' },
+                            { title: 'Etherscan', href: '' },
+                            { title: 'Metamask', href: '' },
+                            { title: 'Rainbow', href: '' },
+                            { title: 'Family', href: '' },
+                        ]}
+                    />
+                </div>
+            </section>
 
             <Footer t={t} />
         </main>

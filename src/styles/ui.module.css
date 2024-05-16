@@ -19,12 +19,6 @@
     width: 100%;
 }
 
-.w-page {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
 .my-100 {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -106,10 +100,27 @@
     max-width: 298px;
 }
 
+.h2-section {
+    gap: 40px;
+}
+
+.w-page {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    gap: 100px;
+    padding: 0 1rem;
+    padding-bottom: 100px;
+}
+
 @media (min-width: 768px) {
     .w-page {
         max-width: calc(834px + 2rem);
         padding: 0 1rem;
+        padding-bottom: 120px;
+        gap: 120px;
     }
     .h3-section {
         gap: 32px;
@@ -125,9 +136,14 @@
     .w-page {
         max-width: calc(1374px + 5rem);
         padding: 0 2.5rem;
+        padding-bottom: 200px; 
+        gap: 200px;
     }
     .h3-section {
         gap: 50px;
         max-width: 550px;
+    }
+    .h2-section {
+        gap: 80px;
     }
 }

@@ -21,7 +21,6 @@ export default async function Home({
 
     return (
         <main
-            className="page"
             style={
                 {
                     '--page-text': 'var(--ens-magenta)',
@@ -46,84 +45,82 @@ export default async function Home({
                 <HeroContent />
             </Header>
 
-            <div className={clsx(ui['my-100'], ui['space-y-40'])}>
-                <h2 className={clsx(ui['w-page'])}>
-                    {t('developers.resources.title')}
-                </h2>
-
-                <LinkList
-                    links={[
-                        {
-                            title: t(
-                                'developers.resources.documentation.title',
-                            ),
-                            href: 'https://docs.ens.domains',
-                            description: t(
-                                'developers.resources.documentation.description',
-                            ),
-                        },
-                        {
-                            title: 'ENSjs',
-                            href: 'https://github.com/ensdomains/ensjs-v3',
-                            description: t(
-                                'developers.resources.ensjs.description',
-                            ),
-                        },
-                        {
-                            title: 'CCIP Read',
-                            href: 'https://docs.ens.domains/ccip',
-                            description: t(
-                                'developers.resources.ccip-read.description',
-                            ),
-                        },
-                        {
-                            title: 'EVMGateway',
-                            href: 'https://github.com/ensdomains/evmgateway',
-                            description: t(
-                                'developers.resources.evmgateway.description',
-                            ),
-                        },
-                        {
-                            title: 'Thorin',
-                            href: 'https://thorin.ens.domains',
-                            description: t(
-                                'developers.resources.thorin.description',
-                            ),
-                        },
-                    ]}
-                />
-            </div>
-
-            <div className={clsx(ui['w-page'], ui['my-100'])}>
-                <TwoCol
-                    cols={[
-                        {
-                            tag: 'Quickstart Guide',
-                            title: 'New to Web3?',
-                            description:
+            <section className={clsx(ui['w-page'])}>
+                <div className={clsx(ui.flex, ui['flex-col'], ui['h2-section'])}>
+                    <h2>
+                        {t('developers.resources.title')}
+                    </h2>
+                    <LinkList
+                        links={[
+                            {
+                                title: t(
+                                    'developers.resources.documentation.title',
+                                ),
+                                href: 'https://docs.ens.domains',
+                                description: t(
+                                    'developers.resources.documentation.description',
+                                ),
+                            },
+                            {
+                                title: 'ENSjs',
+                                href: 'https://github.com/ensdomains/ensjs-v3',
+                                description: t(
+                                    'developers.resources.ensjs.description',
+                                ),
+                            },
+                            {
+                                title: 'CCIP Read',
+                                href: 'https://docs.ens.domains/ccip',
+                                description: t(
+                                    'developers.resources.ccip-read.description',
+                                ),
+                            },
+                            {
+                                title: 'EVMGateway',
+                                href: 'https://github.com/ensdomains/evmgateway',
+                                description: t(
+                                    'developers.resources.evmgateway.description',
+                                ),
+                            },
+                            {
+                                title: 'Thorin',
+                                href: 'https://thorin.ens.domains',
+                                description: t(
+                                    'developers.resources.thorin.description',
+                                ),
+                            },
+                        ]}
+                    />
+                </div>
+                <div>
+                    <TwoCol
+                        cols={[
+                            {
+                                tag: 'Quickstart Guide',
+                                title: 'New to Web3?',
+                                description:
                                 'Starting in web3 should be exhilarating, not intimidating. Dive into our straightforward guides to begin with ease and confidence.',
-                            href: '',
-                            button: 'Quickstart Guide',
-                        },
-                        {
-                            tag: 'ENS Contracts',
-                            title: 'For the Web3 wizards',
-                            description:
+                                href: '',
+                                button: 'Quickstart Guide',
+                            },
+                            {
+                                tag: 'ENS Contracts',
+                                title: 'For the Web3 wizards',
+                                description:
                                 'Need more depth? Our comprehensive documentation offers deep insights and expert tips for the web3 savvy.',
-                            button: 'ENS Contracts',
-                            href: '',
-                        },
-                    ]}
-                />
-            </div>
-
-            <div className={clsx(ui['w-page'], ui['my-100'])}>
-                <h3>Grants for Game-Changers</h3>
-            </div>
-
-            <div className={clsx(ui['w-page'], ui['my-100'])}>
-                <h3>Our Bug Bounty: Your Peace of Mind</h3>
-            </div>
+                                button: 'ENS Contracts',
+                                href: '',
+                            },
+                        ]}
+                    />
+                </div>
+                <div>
+                    <h3>Grants for Game-Changers</h3>
+                </div>
+                <div>
+                    <h3>Our Bug Bounty: Your Peace of Mind</h3>
+                </div>
+            </section>
 
             <Footer t={t} />
         </main>

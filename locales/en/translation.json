@@ -80,9 +80,9 @@
       }
     },
     "stats": {
-      "names": "%s names",
-      "integrations": "%s integrations",
-      "owners": "%s owners"
+      "names": "names",
+      "integrations": "integrations",
+      "owners": "owners"
     }
   },
   "developers": {

@@ -1,0 +1,31 @@
+.container {
+    gap: 4px;
+}
+
+.value {
+    color: var(--ens-magenta);
+}
+
+.stat {
+    color: var(--ens-dark-blue);
+
+    font-size: 32px;
+    line-height: 96%;
+    letter-spacing: -0.32px;
+}
+
+@media (min-width: 768px) {
+    .stat {
+        font-size: 62px;
+        line-height: 90%; 
+        letter-spacing: -1.241px; 
+    }
+}
+
+@media (min-width: 1280px) {
+    .stat {
+        font-size: 100px;
+        line-height: 90%; 
+        letter-spacing: -2px; 
+    }
+}

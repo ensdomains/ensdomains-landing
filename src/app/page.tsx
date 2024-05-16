@@ -21,6 +21,7 @@ import ui from '../styles/ui.module.css';
 import styles from './page.module.css';
 import { PartnersList } from '~/components/home/PartnersList/PartnersList';
 import { PartnerEntry } from '~/utils/types';
+import { StatsCounter } from '~/components/home/animations/StatsCounter/StatsCounter';
 
 const partners: PartnerEntry[] = [
     /* temporary */
@@ -75,52 +76,49 @@ export default async function Home({
                 <HeroContent />
             </Header>
             <SearchInput t={t} />
-            <section className={clsx(ui['my-100'], ui['w-page'])}>
-                <div className={clsx(ui.flex, ui['flex-col'], styles.title)}>
-                    <h2>{t('home.features.title')}</h2>
-                    <p>{t('home.features.text')}</p>
+            <section className={clsx(ui['w-page'])}>
+                <div>
+                    <div className={clsx(ui.flex, ui['flex-col'], styles.title)}>
+                        <h2>{t('home.features.title')}</h2>
+                        <p>{t('home.features.text')}</p>
+                    </div>
+                    <Carousel>
+                        <FeaturePreview
+                            title={t('home.features.farewell.title')}
+                            text={t('home.features.farewell.text')}
+                            textColor="ens-blue"
+                            backgroundColor="ens-light-blue"
+                            indicatorColor="ens-white"
+                            position={0}
+                            gridSrc="blue-grid.svg"
+                        >
+                            <MessageAnimation t={t} />
+                        </FeaturePreview>
+                        <FeaturePreview
+                            title={t('home.features.consistent.title')}
+                            text={t('home.features.consistent.text')}
+                            textColor="ens-magenta"
+                            backgroundColor="ens-light-magenta"
+                            indicatorColor="ens-white"
+                            position={1}
+                            gridSrc="magenta-grid.svg"
+                        >
+                            <DappsAnimation t={t} />
+                        </FeaturePreview>
+                        <FeaturePreview
+                            title={t('home.features.ownership.title')}
+                            text={t('home.features.ownership.text')}
+                            textColor="ens-green"
+                            backgroundColor="ens-light-green"
+                            indicatorColor="ens-white"
+                            position={2}
+                            gridSrc="green-grid.svg"
+                        >
+                            <OwnershipAnimation />
+                        </FeaturePreview>
+                    </Carousel>
                 </div>
-                <Carousel>
-                    <FeaturePreview
-                        title={t('home.features.farewell.title')}
-                        text={t('home.features.farewell.text')}
-                        textColor="ens-blue"
-                        backgroundColor="ens-light-blue"
-                        indicatorColor="ens-white"
-                        position={0}
-                        gridSrc="blue-grid.svg"
-                    >
-                        <MessageAnimation t={t} />
-                    </FeaturePreview>
-                    <FeaturePreview
-                        title={t('home.features.consistent.title')}
-                        text={t('home.features.consistent.text')}
-                        textColor="ens-magenta"
-                        backgroundColor="ens-light-magenta"
-                        indicatorColor="ens-white"
-                        position={1}
-                        gridSrc="magenta-grid.svg"
-                    >
-                        <DappsAnimation t={t} />
-                    </FeaturePreview>
-                    <FeaturePreview
-                        title={t('home.features.ownership.title')}
-                        text={t('home.features.ownership.text')}
-                        textColor="ens-green"
-                        backgroundColor="ens-light-green"
-                        indicatorColor="ens-white"
-                        position={2}
-                        gridSrc="green-grid.svg"
-                    >
-                        <OwnershipAnimation />
-                    </FeaturePreview>
-                </Carousel>
-                <div
-                    className={clsx(
-                        ui['w-page'],
-                        ui['my-100'],
-                    )}
-                >
+                <div>
                     <div className={clsx(
                         ui.flex,
                         ui['flex-col'],
@@ -159,8 +157,7 @@ export default async function Home({
                 </div>
                 <div
                     className={clsx(
-                        ui['w-page'],
-                        ui['my-100'],
+
                         ui.flex,
                         ui['flex-col'],
                         styles.gtwSection,
@@ -194,7 +191,7 @@ export default async function Home({
                 <div
                     className={clsx(
                         ui['w-page'],
-                        ui['my-100'],
+
                     )}
                 >
                     <TwoCol
@@ -222,23 +219,7 @@ export default async function Home({
                         ]}
                     />
                 </div>
-                <div
-                    className={clsx(
-                        ui['w-page'],
-                        ui['my-100'],
-                        ui['space-y-40'],
-                    )}
-                >
-                    <span>
-                        {t('home.stats.names').replace('%s', '2,580,000+')}
-                    </span>
-                    <span>
-                        {t('home.stats.integrations').replace('%s', '575+')}
-                    </span>
-                    <span>
-                        {t('home.stats.owners').replace('%s', '745,000+')}
-                    </span>
-                </div>
+                <StatsCounter t={t} />
             </section>
             <Footer t={t} />
         </main>

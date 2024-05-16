@@ -653,7 +653,6 @@
 
 /* ANIMATION */
 
-
 .fnd, .swap, .farcaster {
     opacity: 0;
     transition-duration: 0.75s;
