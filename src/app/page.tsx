@@ -188,37 +188,30 @@ export default async function Home({
                         </button>
                     </div>
                 </div>
-                <div
-                    className={clsx(
-                        ui['w-page'],
-
-                    )}
-                >
-                    <TwoCol
-                        cols={[
-                            {
-                                tag: t('home.extra.governance.tag'),
-                                title: t('home.extra.governance.title'),
-                                description: t(
-                                    'home.extra.governance.description',
-                                ),
-                                button: t('home.extra.governance.button'),
-                                buttonVariant: 'secondary',
-                                href: '/',
-                            },
-                            {
-                                tag: t('home.extra.community.tag'),
-                                title: t('home.extra.community.title'),
-                                description: t(
-                                    'home.extra.community.description',
-                                ),
-                                button: t('home.extra.community.button'),
-                                buttonVariant: 'secondary',
-                                href: '/',
-                            },
-                        ]}
-                    />
-                </div>
+                <TwoCol
+                    cols={[
+                        {
+                            tag: t('home.extra.governance.tag'),
+                            title: t('home.extra.governance.title'),
+                            description: t(
+                                'home.extra.governance.description',
+                            ),
+                            button: t('home.extra.governance.button'),
+                            buttonVariant: 'secondary',
+                            href: '/',
+                        },
+                        {
+                            tag: t('home.extra.community.tag'),
+                            title: t('home.extra.community.title'),
+                            description: t(
+                                'home.extra.community.description',
+                            ),
+                            button: t('home.extra.community.button'),
+                            buttonVariant: 'secondary',
+                            href: '/',
+                        },
+                    ]}
+                />
                 <StatsCounter t={t} />
             </section>
             <Footer t={t} />
