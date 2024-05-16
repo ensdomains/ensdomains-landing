@@ -1,8 +1,7 @@
 .header {
     width: 100%;
-    gap: 30px;
-    min-height: min(80vh, 620px);
-    padding: 44px 16px 32px 16px; 
+    min-height: min(100vh, 700px);
+    padding: 88px 16px 16px 16px;
     margin-bottom: 50px;
     position: relative;
 }
@@ -11,18 +10,8 @@
     z-index: 1;
 }
 
-@media (min-width: 390px) {
-    .header {
-        min-height: min(80vh, 560px);
-        margin-bottom: 60px;
-    }
-}
-
-@media (min-width: 1280px) {
-    .header {
-        min-height: min(80vh, 830px);
-        margin-bottom: 100px;
-    }
+.h1-section {
+    gap: 30px;
 }
 
 .tag {
@@ -30,6 +19,8 @@
     color: var(--page-text);
     padding: 0.4rem 1rem;
     border-radius: 0.3rem;
+
+    margin-bottom: 10px;
 }
 
 .h1 {
@@ -67,6 +58,8 @@
 .cta {
     flex-flow: wrap;
     gap: 10px;
+
+    margin-top: auto;
 }
 
 .cta a:first-child {
@@ -77,17 +70,53 @@
 .cta a {
     background: var(--page-bg);
     color: var(--page-text);
+
+    width: 100%;
+}
+
+.cta a:hover {
+    background: var(--page-text);
+    color: var(--page-bg);
+}
+.cta a:first-child:hover {
+    background: var(--page-bg);
+    color: var(--page-text);
+}
+
+@media (min-width: 768px) {
+    .header {
+        min-height: min(80vh, 560px);
+        margin-bottom: 60px;
+        padding: 88px 0px 32px 0px; 
+    }
+    .cta {
+        margin-top: unset;
+    }
 }
 
 @media (min-width: 640px) {
     .cta {
         gap: 20px;
+        margin-top: 32px;
+    }
+    .cta a {
+        width: fit-content;
     }
 }
 
-@media (max-width: 640px) {
-    .cta a {
-        width: 100%;
-        gap: 10px;
+@media (min-width: 1280px) {
+    .header {
+        min-height: min(80vh, 830px);
+        margin-bottom: 100px;
+        padding: 121px 0px 122px 0px; 
+    }
+    .h1-section {
+        gap: 40px;
+    }
+    .cta {
+        margin-top: 80px;
+    }
+    .tag {
+        margin-bottom: 20px;
     }
 }
