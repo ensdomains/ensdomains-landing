@@ -3,18 +3,18 @@ import { useEffect, useState } from 'react';
 export const queries = {
     desktop: '(min-width: 1280px)',
     tablet: '(min-width: 768px)',
-    phone: '(max-width: 768px)',
+    mobile: '(max-width: 768px)',
 } as const;
 
 export type Dimension = keyof typeof queries;
 
 export function useMq() {
-    const [queryMatch, setQueryMatch] = useState<Dimension>('phone');
+    const [queryMatch, setQueryMatch] = useState<Dimension>('mobile');
 
     useEffect(() => {
         const mediaQueryLists: Record<Dimension, MediaQueryList> = {
             tablet: undefined,
-            phone: undefined,
+            mobile: undefined,
             desktop: undefined,
         };
         const keys = Object.keys(queries) as Dimension[];

@@ -25,5 +25,5 @@ export type ButtonVariant = 'primary' | 'secondary';
 export type PartnerEntry = {
     icon: string;
     name: string;
-    category: 'wallet' | 'exchange' | 'app';
+    category: 'wallet' | 'exchange' | 'dApp' | 'browser' | 'service';
 };

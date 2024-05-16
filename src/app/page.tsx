@@ -29,7 +29,7 @@ const partners: PartnerEntry[] = [
     /* temporary */
     {
         name: 'Coinbase Wallet',
-        icon: '',
+        icon: 'coinbase.svg',
         category: 'wallet',
     },
     {
@@ -38,24 +38,24 @@ const partners: PartnerEntry[] = [
         category: 'wallet',
     },
     {
-        name: 'Coinbase Wallet',
-        icon: '',
-        category: 'wallet',
+        name: 'Brave',
+        icon: 'brave.svg',
+        category: 'browser',
     },
     {
-        name: 'Rainbow',
-        icon: 'rainbow.svg',
-        category: 'wallet',
+        name: 'GoDaddy',
+        icon: 'godaddy.svg',
+        category: 'service',
     },
     {
-        name: 'Coinbase Wallet',
-        icon: '',
-        category: 'wallet',
+        name: 'Etherscan',
+        icon: 'etherscan.svg',
+        category: 'service',
     },
     {
-        name: 'Rainbow',
-        icon: 'rainbow.svg',
-        category: 'wallet',
+        name: 'Uniswap',
+        icon: 'uniswap.svg',
+        category: 'dApp',
     },
 ];
 
