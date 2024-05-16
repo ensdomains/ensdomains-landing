@@ -106,7 +106,8 @@
   "ecosystem": {
     "hero": {
       "tag": "Ecosysteem",
-      "title": "Vertrouwd door het\nNieuwe Internet",
+      "title": "Vertrouwd door het",
+      "subtitle": "Nieuwe Internet",
       "text": "ENS is een community van pioneers, die samenwerken aan een intuitiever en betrouwbaarder internet. Het draait niet alleen om deelmaken van Web3; maar een leider te zijn.",
       "cta1": "Hoe ENS Helpt",
       "cta2": "Integratie Docs"
@@ -115,7 +116,7 @@
   "governance": {
     "hero": {
       "tag": "Bestuur",
-      "title": "Jouw platform voor verandering",
+      "title": "Jouw platform voor\nverandering",
       "text": "Our DAO is the lifeblood of our decentralized ethos. Designed for longevity, the DAO nurtures ENS's resilience and flexibility, evolving through a tapestry of community voices.",
       "cta1": "ENS DAO",
       "cta2": "Voorstellen"
