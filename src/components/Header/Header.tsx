@@ -36,7 +36,7 @@ export const Header: FC<
             {description && <p className={styles.p}>{description}</p>}
             <div className={styles.children}>{children}</div>
             {cta && (
-                <div className={styles.cta}>
+                <div className={clsx(ui.flex, ui['flex-row'], styles.cta)}>
                     {cta.map(([text, url]) => (
                         <a key={url} href={url} className={clsx(ui.button)}>
                             {text}

@@ -12,6 +12,7 @@ import { useTranslation } from '~/i18n/useTranslation';
 
 import styles from './page.module.css';
 import ui from '~/styles/ui.module.css';
+import { EcosystemList } from '~/components/ecosystem/EcosystemList';
 
 export default async function Home({
     params,
@@ -40,7 +41,9 @@ export default async function Home({
                     [t('ecosystem.hero.cta1'), 'https://blog.ens.domains'],
                     [t('ecosystem.hero.cta2'), 'https://docs.ens.domains'],
                 ]}
-            />
+            >
+                <EcosystemList />
+            </Header>
             <section className={ui['w-page']}>
                 <div className={clsx(ui.flex, ui['flex-col'], ui['h2-section'])}>
                     <h2>Ready for integration?</h2>

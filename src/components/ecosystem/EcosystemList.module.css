@@ -1,0 +1,22 @@
+.container {
+    gap: 23px;
+}
+
+.container > img {
+    width: 40px;
+    height: 40px;
+    box-sizing: content-box;
+    background-color: var(--ens-white);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.06);
+
+    padding: 10px;
+    border-radius: 50px;
+}
+@media (min-width: 1280px) {
+    .container > img {
+        width: 60px;
+        height: 60px;
+        padding: 20px;
+        border-radius: 80px;
+    }
+}

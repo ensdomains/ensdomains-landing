@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    gap: 2rem;
+    gap: 30px;
     min-height: min(80vh, 620px);
     padding: 44px 16px 32px 16px; 
     margin-bottom: 50px;
@@ -65,17 +65,8 @@
 }
 
 .cta {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 1fr 1fr;
-}
-
-/* Mobile Small only (640 and below) */
-@media (max-width: 640px) {
-    .cta {
-        grid-template-columns: 1fr;
-        width: 100%;
-    }
+    flex-flow: wrap;
+    gap: 10px;
 }
 
 .cta a:first-child {
@@ -86,4 +77,17 @@
 .cta a {
     background: var(--page-bg);
     color: var(--page-text);
+}
+
+@media (min-width: 640px) {
+    .cta {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .cta a {
+        width: 100%;
+        gap: 10px;
+    }
 }
