@@ -22,6 +22,8 @@ import styles from './page.module.css';
 import { PartnersList } from '~/components/home/PartnersList/PartnersList';
 import { PartnerEntry } from '~/utils/types';
 import { StatsCounter } from '~/components/home/animations/StatsCounter/StatsCounter';
+import Link from 'next/link';
+import { getLangPrefix } from '~/i18n/langPrefix';
 
 const partners: PartnerEntry[] = [
     /* temporary */
@@ -32,7 +34,7 @@ const partners: PartnerEntry[] = [
     },
     {
         name: 'Rainbow',
-        icon: '',
+        icon: 'rainbow.svg',
         category: 'wallet',
     },
     {
@@ -42,7 +44,7 @@ const partners: PartnerEntry[] = [
     },
     {
         name: 'Rainbow',
-        icon: '',
+        icon: 'rainbow.svg',
         category: 'wallet',
     },
     {
@@ -52,7 +54,7 @@ const partners: PartnerEntry[] = [
     },
     {
         name: 'Rainbow',
-        icon: '',
+        icon: 'rainbow.svg',
         category: 'wallet',
     },
 ];
@@ -183,9 +185,9 @@ export default async function Home({
                         </p>
                         <PartnersList partners={partners} />
 
-                        <button className={ui.button}>
+                        <Link href={`${getLangPrefix(lang)}/ecosystem`} className={ui.button}>
                             {t('home.partners.button')}
-                        </button>
+                        </Link>
                     </div>
                 </div>
                 <TwoCol

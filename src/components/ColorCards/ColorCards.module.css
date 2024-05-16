@@ -20,7 +20,6 @@
 
 .card:hover {
     background-color: var(--bg-hover);
-    color: var(--page-text);
 }
 
 @media (min-width: 768px) {

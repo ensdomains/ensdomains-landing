@@ -12,8 +12,9 @@ export const PartnersList = ({ partners }: PartnersListProps) => {
         <div className={styles.container}>
             {partners.map((item, i) => (
                 <div key={`${item.name}-${i}`} className={clsx(ui.flex, ui['flex-row'], styles.partner)}>
-                    {/* alt is not needed because entry already includes name */}
-                    <img src={item.icon} height={40} width={40} alt="" />
+                    <div className={clsx(styles.logo, ui.flex, ui['flex-center'])}>
+                        <img src={`/assets/logos/${item.icon}`} height={24} width={24} alt="" />
+                    </div>
                     <div className={clsx(ui.flex, ui['flex-col'])}>
                         <div className={styles.name}>{item.name}</div>
                         <div className={styles.category}>{item.category}</div>
