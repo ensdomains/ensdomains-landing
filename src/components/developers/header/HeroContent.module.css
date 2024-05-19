@@ -1,25 +1,13 @@
-@keyframes move-diagonal-desktop {
+@keyframes move-diagonal {
     0%, 100% {
         transform: rotate(45deg) translate(0, 0);
         animation-timing-function: ease-in-out;
     }
     50% {
-        transform: rotate(45deg) translate(170px, 0);
+        transform: rotate(45deg) translate(--shift, 0);
         animation-timing-function: ease-in-out;
     }
 }
-
-@keyframes move-diagonal-tablet {
-    0%, 100% {
-        transform: rotate(45deg) translate(0, 0);
-        animation-timing-function: ease-in-out;
-    }
-    50% {
-        transform: rotate(45deg) translate(105px, 0);
-        animation-timing-function: ease-in-out;
-    }
-}
-
 
 .position-container {
     position: absolute;
@@ -53,10 +41,9 @@
     width: 33px;
     top: 210px;
     left: 28px;
+    --shift: 170px;
     animation: move-diagonal-desktop 4s linear infinite;
 }
-
-
 
 @media (max-width: 768px) {
     .position-container {
@@ -83,6 +70,7 @@
         width: 20px;
         top: 129px;
         left: 17px;
+        --shift: 105px;
         animation: move-diagonal-tablet 4s linear infinite;
     }
 }

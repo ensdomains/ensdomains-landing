@@ -1,6 +1,7 @@
 import { clsx } from 'clsx';
 import ui from '~/styles/ui.module.css';
 import styles from './EcosystemList.module.css';
+import { AnimatedSquare } from '../AnimatedSquare/AnimatedSquare';
 
 export const EcosystemList = () => {
     return (
@@ -14,9 +15,11 @@ export const EcosystemList = () => {
             <div className={styles['position-container']}>
                 <div className={styles['animation-container']}>
                     <img src="/assets/ecosystem/left.svg" height={600} width={200} alt="" />
+                    <AnimatedSquare className={styles['animated-square']} />
                 </div>
                 <div className={styles['animation-container']}>
                     <img src="/assets/ecosystem/right.svg" height={600} width={200} alt="" />
+                    <AnimatedSquare className={styles['animated-square']} />
                 </div>
             </div>
         </>
