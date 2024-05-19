@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { TFunction } from 'i18next';
 import React, { FC } from 'react';
 
-import ui from '../../styles/ui.module.css';
+import ui from '~/styles/ui.module.css';
 import styles from './Footer.module.css';
 import { ExternalLink } from 'react-external-link';
 

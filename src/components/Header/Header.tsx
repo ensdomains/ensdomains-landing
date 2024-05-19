@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { FC, PropsWithChildren } from 'react';
 
-import ui from '../../styles/ui.module.css';
+import ui from '~/styles/ui.module.css';
 import styles from './Header.module.css';
 
 export const Header: FC<

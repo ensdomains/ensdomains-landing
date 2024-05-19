@@ -20,3 +20,18 @@
         border-radius: 80px;
     }
 }
+
+.position-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.animation-container {
+    position: relative;
+}

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { TFunction } from 'i18next';
 
-import ui from '../../styles/ui.module.css';
+import ui from '~/styles/ui.module.css';
 import { SearchIcon } from '../icons';
 import styles from './SearchInput.module.css';
 

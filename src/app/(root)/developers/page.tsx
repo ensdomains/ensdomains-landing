@@ -9,7 +9,7 @@ import { TwoCol } from '~/components/TwoCol/TwoCol';
 import { Language } from '~/i18n/settings';
 import { useTranslation } from '~/i18n/useTranslation';
 
-import ui from '../../styles/ui.module.css';
+import ui from '~/styles/ui.module.css';
 import { HeroContent } from '~/components/developers/header/HeroContent';
 
 export default async function Home({

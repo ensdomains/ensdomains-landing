@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import ui from '../../styles/ui.module.css';
+import ui from '~/styles/ui.module.css';
 import styles from './LinkList.module.css';
 import { ExternalLink } from 'react-external-link';
 

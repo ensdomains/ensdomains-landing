@@ -1,7 +1,7 @@
 import { clsx } from 'clsx';
 import { CSSProperties, FC, HTMLAttributes, ReactNode } from 'react';
 
-import ui from '../../styles/ui.module.css';
+import ui from '~/styles/ui.module.css';
 import type { Color } from '../../utils/types';
 import styles from './FeaturePreview.module.css';
 

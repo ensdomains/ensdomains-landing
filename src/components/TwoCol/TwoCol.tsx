@@ -3,7 +3,7 @@ import type { FC } from 'react';
 
 import type { ButtonVariant } from '~/utils/types';
 
-import ui from '../../styles/ui.module.css';
+import ui from '~/styles/ui.module.css';
 import styles from './TwoCol.module.css';
 
 export const TwoCol: FC<{

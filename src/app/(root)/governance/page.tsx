@@ -9,7 +9,7 @@ import { Navbar } from '~/components/Navbar/Navbar';
 import { Language } from '~/i18n/settings';
 import { useTranslation } from '~/i18n/useTranslation';
 
-import ui from '../../styles/ui.module.css';
+import ui from '~/styles/ui.module.css';
 
 export default async function Home({
     params,

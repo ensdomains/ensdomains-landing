@@ -4,6 +4,7 @@ import { ExternalLink } from 'react-external-link';
 import type { Color } from '~/utils/types';
 
 import styles from './HeroContent.module.css';
+import { AnimatedSquare } from '~/components/AnimatedSquare/AnimatedSquare';
 
 const HeroEnsLink = ({
     name,
@@ -41,7 +42,7 @@ export const HeroContent = () => (
                     height={400}
                     width={400}
                 />
-                <div className={styles['animated-square']}></div>
+                <AnimatedSquare className={styles['animated-square']} />
             </div>
         </div>
         <img
@@ -59,7 +60,7 @@ export const HeroContent = () => (
                     height={222}
                     width={293}
                 />
-                <div className={styles['animated-square']}></div>
+                <AnimatedSquare className={styles['animated-square']} />
             </div>
         </div>
         <div className={styles['position-container']}>
@@ -70,7 +71,7 @@ export const HeroContent = () => (
                     height={222}
                     width={222}
                 />
-                <div className={styles['animated-square']}></div>
+                <AnimatedSquare className={styles['animated-square']} />
             </div>
         </div>
         <div className={styles['position-container']}>
@@ -81,7 +82,7 @@ export const HeroContent = () => (
                     height={400}
                     width={100}
                 />
-                <div className={styles['animated-square']}></div>
+                <AnimatedSquare className={styles['animated-square']} />
             </div>
         </div>
         <HeroEnsLink

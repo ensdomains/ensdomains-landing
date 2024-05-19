@@ -7,7 +7,7 @@ import { ExternalLink } from 'react-external-link';
 import { getLangPrefix } from '~/i18n/langPrefix';
 import { fallbackLng, Language } from '~/i18n/settings';
 
-import ui from '../../styles/ui.module.css';
+import ui from '~/styles/ui.module.css';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import styles from './Navbar.module.css';
 

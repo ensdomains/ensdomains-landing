@@ -1,0 +1,35 @@
+
+.animated-square {
+    height: 33px;
+    width: 33px;
+    background: var(--ens-white);
+    border-radius: 2px;
+    position: absolute;
+}
+
+@media (min-width: 1280px) and (max-width: 1680px) {
+    .animated-square {
+        height: 26px;
+        width: 26px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) { 
+    .animated-square {
+        height: 21px;
+        width: 21px;
+    }
+}
+
+@media (max-width: 768px) {
+    .animated-square {
+        height: 16.8px;
+        width: 16.8px;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .animated-square {
+        animation: none;
+    }
+}
