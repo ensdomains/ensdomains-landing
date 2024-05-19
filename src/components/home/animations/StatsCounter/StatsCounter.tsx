@@ -6,21 +6,7 @@ import CountUp from 'react-countup';
 import ui from '~/styles/ui.module.css';
 import styles from './StatsCounter.module.css';
 import { useMq } from '~/utils/useMq';
-
-const stats: { key: string; count: number }[] = [
-    {
-        key: 'names',
-        count: 2_580_000,
-    },
-    {
-        key: 'integrations',
-        count: 575,
-    },
-    {
-        key: 'owners',
-        count: 745_000,
-    },
-];
+import stats from '~/stats.json';
 
 export const StatsCounter = ({ t }: { t: TFunction }) => {
     const mq = useMq();
@@ -36,17 +22,18 @@ export const StatsCounter = ({ t }: { t: TFunction }) => {
             )}
         >
             <img className={styles.bg} src={imgSrc} alt="" />
-            {stats.map((stat, i) => (
-                <div key={stat.key} className={styles.stat}>
+            {Object.entries(stats).map(([key, count], i) => (
+                <div key={key} className={styles.stat}>
                     <CountUp
-                        end={stat.count}
+                        start={count / 2}
+                        end={count}
                         enableScrollSpy
                         className={styles.value}
-                        scrollSpyDelay={500 * i}
-                        formattingFn={n => n.toLocaleString() + '+'}
+                        scrollSpyDelay={250 * i}
+                        formattingFn={n => n.toLocaleString()}
                     />
                     {' '}
-                    {t(stat.key)}
+                    {t(key)}
                 </div>
             ))}
         </div>

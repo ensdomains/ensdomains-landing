@@ -1,5 +1,4 @@
 import { Language } from '~/i18n/settings';
-
 import Home from '../../(root)/page';
 
 export default async function LocaleHome({

@@ -14,6 +14,7 @@
     },
     "dependencies": {
         "clsx": "^2.1.0",
+        "dune-api-client": "^1.0.1",
         "gh-pages": "^3.2.3",
         "i18next": "^23.10.1",
         "i18next-resources-to-backend": "^1.2.0",
