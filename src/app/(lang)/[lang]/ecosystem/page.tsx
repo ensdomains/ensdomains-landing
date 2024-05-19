@@ -1,6 +1,6 @@
 import { Language } from '~/i18n/settings';
 
-import Page from '../../ecosystem/page';
+import Page from '~/app/(root)/ecosystem/page';
 
 export default async function LocaleEcosystem({
     params,
@@ -10,4 +10,4 @@ export default async function LocaleEcosystem({
     return <Page params={params} />;
 }
 
-export { generateStaticParams } from '../../../utils/getStatic';
+export { generateStaticParams } from '~/utils/getStatic';

@@ -8,14 +8,12 @@ import { getLangPrefix } from '~/i18n/langPrefix';
 import { Language, languageNames, languages } from '~/i18n/settings';
 
 import styles from './LanguageSwitcher.module.css';
-import { MetaUpdater } from './MetaUpdater';
 
 export const LanguageSwitcher: FC<{ lang: Language }> = ({ lang }) => {
     const path = usePathname();
 
     return (
         <details className={styles.details}>
-            <MetaUpdater lang={lang} />
             <summary className={styles.summary}>
                 <span className={styles.currentLanguage}>{lang}</span>
             </summary>

@@ -17,7 +17,7 @@ import { TwoCol } from '~/components/TwoCol/TwoCol';
 import { fallbackLng, Language } from '~/i18n/settings';
 import { useTranslation } from '~/i18n/useTranslation';
 
-import ui from '../styles/ui.module.css';
+import ui from '~/styles/ui.module.css';
 import styles from './page.module.css';
 import { PartnersList } from '~/components/home/PartnersList/PartnersList';
 import { PartnerEntry } from '~/utils/types';
@@ -60,15 +60,11 @@ const partners: PartnerEntry[] = [
 ];
 
 // eslint-disable-next-line @next/next/no-async-client-component
-export default async function Home({
-    params: { lang = fallbackLng },
-}: { params: {
-    lang?: Language;
-}; }) {
+export default async function Home({ params: { lang = fallbackLng } }: { params: { lang?: Language } }) {
     const { t } = await useTranslation(lang, 'translation');
 
     return (
-        <main lang={lang}>
+        <main>
             <Navbar t={t} lang={lang} />
             <Header
                 title={t('home.hero.title')}

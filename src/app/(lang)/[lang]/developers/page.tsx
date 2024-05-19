@@ -1,6 +1,6 @@
 import { Language } from '~/i18n/settings';
 
-import Page from '../../developers/page';
+import Page from '~/app/(root)/developers/page';
 
 export default async function LocaleDevelopers({
     params,
@@ -10,4 +10,4 @@ export default async function LocaleDevelopers({
     return <Page params={params} />;
 }
 
-export { generateStaticParams } from '../../../utils/getStatic';
+export { generateStaticParams } from '~/utils/getStatic';

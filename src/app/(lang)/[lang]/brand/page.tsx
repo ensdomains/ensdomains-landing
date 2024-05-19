@@ -1,13 +1,13 @@
 import { Language } from '~/i18n/settings';
 
-import Home from '../page';
+import Page from '~/app/(root)/brand/page';
 
 export default async function LocaleHome({
     params,
 }: {
     params: { lang: Language };
 }) {
-    return <Home params={params} />;
+    return <Page params={params} />;
 }
 
-export { generateStaticParams } from '../../utils/getStatic';
+export { generateStaticParams } from '~/utils/getStatic';
