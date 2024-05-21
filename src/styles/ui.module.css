@@ -67,7 +67,7 @@
 }
 
 .button-secondary {
-    background-color: var(--page-bg);
+    background-color: var(--ens-light-blue);
     color: var(--ens-blue);
 }
 

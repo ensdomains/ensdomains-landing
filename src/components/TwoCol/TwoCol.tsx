@@ -24,7 +24,7 @@ export const TwoCol: FC<{
                 description,
                 button,
                 href,
-                buttonVariant = 'primary',
+                buttonVariant = 'secondary',
             }) => (
                 <div key={title}>
                     <span className={clsx(styles.tag, ui['body-sm'])}>{tag}</span>

@@ -53,5 +53,5 @@
 }
 
 .list li a span:nth-child(2) {
-    color: var(--page-text);
+    color: var(--ens-gray-3);
 }

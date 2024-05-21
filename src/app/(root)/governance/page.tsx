@@ -11,6 +11,7 @@ import { useTranslation } from '~/i18n/useTranslation';
 
 import ui from '~/styles/ui.module.css';
 import styles from './page.module.css';
+import { TwoCol } from '~/components/TwoCol/TwoCol';
 
 export default async function Home({
     params,
@@ -119,11 +120,30 @@ export default async function Home({
                     />
                 </div>
 
-                <div>
-                    <h4>A public good shaped by you.</h4>
-                    <h4>Join our community</h4>
-
-                </div>
+                <TwoCol
+                    cols={[
+                        {
+                            tag: t('home.extra.governance.tag'),
+                            title: t('home.extra.governance.title'),
+                            description: t(
+                                'home.extra.governance.description',
+                            ),
+                            button: t('home.extra.governance.button'),
+                            buttonVariant: 'secondary',
+                            href: '/',
+                        },
+                        {
+                            tag: t('home.extra.community.tag'),
+                            title: t('home.extra.community.title'),
+                            description: t(
+                                'home.extra.community.description',
+                            ),
+                            button: t('home.extra.community.button'),
+                            buttonVariant: 'secondary',
+                            href: '/',
+                        },
+                    ]}
+                />
             </section>
 
             <Footer t={t} />
