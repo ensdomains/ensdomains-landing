@@ -104,22 +104,22 @@ export default async function Home({
                     <h4 className={styles.h4}>Featured Partners</h4>
                     <SmallLinkList
                         links={[
-                            { title: 'Coinbase', href: '' },
-                            { title: 'Base', href: '' },
-                            { title: 'Uniswap', href: '' },
-                            { title: 'Brave', href: '' },
-                            { title: 'GoDaddy', href: '' },
-                            { title: 'Optimism', href: '' },
-                            { title: 'Solana', href: '' },
-                            { title: 'Ethereum', href: '' },
-                            { title: 'Bitcoin', href: '' },
-                            { title: 'Phantom', href: '' },
-                            { title: 'Opensea', href: '' },
-                            { title: 'Farcaster', href: '' },
-                            { title: 'Etherscan', href: '' },
-                            { title: 'Metamask', href: '' },
-                            { title: 'Rainbow', href: '' },
-                            { title: 'Family', href: '' },
+                            { title: 'Coinbase', href: 'https://www.coinbase.com' },
+                            { title: 'Base', href: 'https://www.base.org' },
+                            { title: 'Uniswap', href: 'https://uniswap.org' },
+                            { title: 'Brave', href: 'https://brave.com' },
+                            { title: 'GoDaddy', href: 'https://www.godaddy.com' },
+                            { title: 'Optimism', href: 'https://www.optimism.io' },
+                            { title: 'Solana', href: 'https://solana.com' },
+                            { title: 'Ethereum', href: 'https://ethereum.org' },
+                            { title: 'Bitcoin', href: 'https://bitcoin.org' },
+                            { title: 'Phantom', href: 'https://phantom.app' },
+                            { title: 'Opensea', href: 'https://opensea.io' },
+                            { title: 'Farcaster', href: 'https://www.farcaster.xyz' },
+                            { title: 'Etherscan', href: 'https://etherscan.io' },
+                            { title: 'Metamask', href: 'https://metamask.io' },
+                            { title: 'Rainbow', href: 'https://rainbow.me' },
+                            { title: 'Family', href: 'https://family.co' },
                         ]}
                     />
                 </div>

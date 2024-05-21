@@ -38,7 +38,7 @@ div[role='group'][tabindex] {
 
     /* Hover states */
     --ens-hover-blue: rgba(0, 128, 188, 0.8);
-    --ens-hover-light-blue: #f0f5f8;
+    --ens-hover-light-blue: #B9DAE1;
     --ens-hover-green: rgba(0, 124, 35, 0.8);
     --ens-hover-magenta: rgba(245, 50, 148, 0.8);
 
