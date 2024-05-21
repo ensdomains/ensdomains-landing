@@ -10,6 +10,7 @@ import { Language } from '~/i18n/settings';
 import { useTranslation } from '~/i18n/useTranslation';
 
 import ui from '~/styles/ui.module.css';
+import styles from './page.module.css';
 
 export default async function Home({
     params,
@@ -82,7 +83,7 @@ export default async function Home({
                     />
                 </div>
 
-                <div>
+                <div className={clsx(ui.flex, ui['flex-col'], styles['join-section'])}>
                     <div className={clsx(ui.flex, ui['flex-col'], ui['h3-section'])}>
                         <h3>Join the New Internet</h3>
                         <p className={ui['max-w-text']}>
@@ -97,21 +98,21 @@ export default async function Home({
                                 title: 'ENS DAO',
                                 description:
                                 'You want to join the ENS community and contribute.',
-                                color: 'ens-blue', // TODO: update color & link
+                                color: 'ens-blue',
                                 link: '#',
                             },
                             {
                                 title: 'Learn More',
                                 description:
                                 'Absorb the wealth of knowledge in our Governance docs.',
-                                color: 'ens-blue', // TODO: update color & link
+                                color: 'ens-green',
                                 link: '#',
                             },
                             {
                                 title: 'Delegate Your Tokens',
                                 description:
                                 'Delegate your tokens to an engaged member of the community.',
-                                color: 'ens-blue', // TODO: update color & link
+                                color: 'ens-magenta',
                                 link: '#',
                             },
                         ]}

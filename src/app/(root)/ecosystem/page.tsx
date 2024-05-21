@@ -87,13 +87,13 @@ export default async function Home({
                                 title: 'Business Development',
                                 description:
                                 'Speak with our Business Development team to chat about a partnership opportunity.',
-                                color: 'ens-blue', // TODO: update color & link
+                                color: 'ens-blue',
                                 link: '#',
                             },
                             {
                                 title: 'Explore Opportunities',
                                 description: 'Get ideas on how to work with ENS.',
-                                color: 'ens-green', // TODO: update color & link
+                                color: 'ens-green',
                                 link: '#',
                             },
                         ]}
