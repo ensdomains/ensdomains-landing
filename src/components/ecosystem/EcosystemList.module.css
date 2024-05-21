@@ -27,9 +27,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: none;
 }
 
 .animation-container {
@@ -117,20 +115,44 @@
     animation: move-u-right 12.5s linear infinite;
 }
 
+.animation-container img {
+    width: 100%;
+}
+
 @media (min-width: 768px) {
-    .animated-square {
-        --shift-up-1: -235px;
-        --shift-up-2: -255px;
-        --shift-down-1: 230px;
-        --shift-down-2: 250px;
+    .position-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     .animation-container img {
         height: 366px;
-        width: 100%;
+    }
+    .animated-square {
+        --shift-up-1: -145px;
+        --shift-up-2: -158px;
+        --shift-down-1: 140px;
+        --shift-down-2: 150px;
+    }
+    .animated-square {
+        top: calc(50% - 21px/2);
+    }
+    .animation-container:nth-child(1) .animated-square {
+        --shift-left-1: -30px;
+        --shift-left-2: -103px;
+        right: 19px;
+    }
+    .animation-container:nth-child(2) .animated-square {
+        --shift-left-1: 30px;
+        --shift-left-2: 104px;
+        left: 19px;
     }
 }
 
 @media (min-width: 1280px) {
+    .animation-container img {
+        height: 100%;
+    }
     .animated-square {
         --shift-up-1: -235px;
         --shift-up-2: -255px;
