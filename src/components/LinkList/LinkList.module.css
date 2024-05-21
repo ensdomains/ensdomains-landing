@@ -13,34 +13,38 @@
 .list li {
     padding: 2rem 0;
     min-height: 4rem;
-
     text-decoration: none;
-
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 1rem;
+
+    grid-template-columns: 1fr;
 }
 
 .list li a {
     color: var(--ens-dark-blue);
     text-decoration: none;
-    font-size: 1.4rem;
     display: flex;
     gap: 0.5rem;
-
     height: fit-content;
+
+    font-size: 20px;
 }
 
 .list li > span {
     padding-right: 4rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .list li {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
-
     .list li a {
-        font-size: 1.2rem;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .list li a {
+        font-size: 36px;
     }
 }

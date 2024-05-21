@@ -4,7 +4,7 @@
         animation-timing-function: ease-in-out;
     }
     50% {
-        transform: rotate(45deg) translate(--shift, 0);
+        transform: rotate(45deg) translate(var(--shift), 0);
         animation-timing-function: ease-in-out;
     }
 }
@@ -42,7 +42,7 @@
     top: 210px;
     left: 28px;
     --shift: 170px;
-    animation: move-diagonal-desktop 4s linear infinite;
+    animation: move-diagonal 4s linear infinite;
 }
 
 @media (max-width: 768px) {
@@ -71,6 +71,6 @@
         top: 129px;
         left: 17px;
         --shift: 105px;
-        animation: move-diagonal-tablet 4s linear infinite;
+        animation: move-diagonal 4s linear infinite;
     }
 }
