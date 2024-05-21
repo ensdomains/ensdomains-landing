@@ -101,8 +101,10 @@ h4 {
     font-family: var(--ens-sans);
     font-style: normal;
     font-weight: 500;
-    line-height: 96%; /* 34.56px */
-    letter-spacing: -0.48px;
+    line-height: 96%; 
+
+    font-size: 24px;
+    letter-spacing: -2%;
 }
 
 p {
@@ -126,9 +128,7 @@ p {
         font-size: 40px;
         letter-spacing: -0.8px;
     }
-    h4 {
-        font-size: 26px;
-    }
+   
 }
 
 /* TYPOGRAPHY/DESKTOP */
@@ -182,4 +182,9 @@ summary {
 
 summary::-webkit-details-marker {
     display: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }

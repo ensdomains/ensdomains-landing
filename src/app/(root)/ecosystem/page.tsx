@@ -93,7 +93,7 @@ export default async function Home({
                             {
                                 title: 'Explore Opportunities',
                                 description: 'Get ideas on how to work with ENS.',
-                                color: 'ens-blue', // TODO: update color & link
+                                color: 'ens-green', // TODO: update color & link
                                 link: '#',
                             },
                         ]}
@@ -101,7 +101,7 @@ export default async function Home({
                 </div>
 
                 <div>
-                    <h4>Featured Partners</h4>
+                    <h4 className={styles.h4}>Featured Partners</h4>
                     <SmallLinkList
                         links={[
                             { title: 'Coinbase', href: '' },

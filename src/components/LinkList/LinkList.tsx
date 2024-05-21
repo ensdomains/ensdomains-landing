@@ -18,7 +18,7 @@ export const LinkList: FC<{ links: ILink[] }> = ({ links }) => {
                     <li key={title}>
                         <ExternalLink href={href}>
                             <span>{title}</span>
-                            <span style={{ color: 'var(--page-text)' }}>
+                            <span>
                                 <svg
                                     width="13"
                                     height="14"

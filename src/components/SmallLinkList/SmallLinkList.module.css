@@ -1,19 +1,21 @@
 .list {
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 40px;
+
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1280px) {
     .list {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -24,13 +26,8 @@
 
     border-top: 1px solid var(--ens-dark-blue);
     width: 100%;
-}
-
-.list li {
     padding: 0.5rem 0 0 0;
-
     text-decoration: none;
-
     display: flex;
     gap: 1rem;
 }
@@ -38,7 +35,7 @@
 .list li a {
     color: var(--ens-dark-blue);
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 24px;
     display: flex;
     gap: 0.5rem;
 
@@ -47,16 +44,14 @@
     width: 100%;
 }
 
-.list li > span {
-    padding-right: 4rem;
+.list li a span:nth-child(1) {
+    padding-right: 8px;
 }
 
-@media (max-width: 768px) {
-    .list li {
-        grid-template-columns: 1fr;
-    }
+.list li a:hover span:nth-child(1) {
+    color: var(--page-text);
+}
 
-    .list li a {
-        font-size: 1.2rem;
-    }
+.list li a span:nth-child(2) {
+    color: var(--page-text);
 }
