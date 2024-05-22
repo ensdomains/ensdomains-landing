@@ -116,16 +116,16 @@ export default async function Home({
                     />
                 </div>
                 <SectionWithPreview
-                    title="Grants for Game-Changers"
-                    text="some text"
+                    title={t('developers.extra.grants.title')}
+                    text={t('developers.extra.grants.text')}
                     cta={[
                         {
-                            text: 'View Grants',
+                            text: t('developers.extra.grants.cta.view'),
                             url: '#',
                             buttonVariant: 'primary',
                         },
                         {
-                            text: 'Apply',
+                            text: t('developers.extra.grants.cta.apply'),
                             url: '#',
                             buttonVariant: 'secondary',
                         },
@@ -134,11 +134,11 @@ export default async function Home({
                     hello
                 </SectionWithPreview>
                 <SectionWithPreview
-                    title="Our Bug Bounty: Your Peace of Mind"
-                    text="some more"
+                    title={t('developers.extra.bounty.title')}
+                    text={t('developers.extra.bounty.text')}
                     cta={[
                         {
-                            text: 'Learn More',
+                            text: t('developers.extra.bounty.cta.learn'),
                             url: '#',
                             buttonVariant: 'primary',
                         },

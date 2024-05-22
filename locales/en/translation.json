@@ -111,6 +111,23 @@
       "thorin": {
         "description": "Design system for ENS built with React and styled-components."
       }
+    },
+    "extra": {
+      "grants": {
+        "title": "Grants for Game-Changers",
+        "text": "Got a groundbreaking idea? Our grants are here to power your innovative projects within the ENS ecosystem.",
+        "cta": {
+          "view": "View Grants",
+          "apply": "Apply"
+        }
+      },
+      "bounty": {
+        "title": "Our Bug Bounty: Your Peace of Mind",
+        "text": "We prioritize security above all. Explore our bug bounty program and contribute to a more secure platform with rewards up to $250,000.",
+        "cta": {
+          "learn": "Learn More"
+        }
+      }
     }
   },
   "ecosystem": {
