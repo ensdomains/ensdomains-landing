@@ -12,6 +12,7 @@ import { useTranslation } from '~/i18n/useTranslation';
 import ui from '~/styles/ui.module.css';
 import { HeroContent } from '~/components/developers/header/HeroContent';
 import { SectionWithPreview } from '~/components/SectionWithPreview/SectionWithPreview';
+import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
 
 export default async function Home({
     params,
@@ -131,7 +132,27 @@ export default async function Home({
                         },
                     ]}
                 >
-                    hello
+                    <ResponsiveImage
+                        sources={{
+                            desktop: '/assets/developers/grants.png',
+                            tablet: '/assets/developers/grants-tablet.png',
+                            mobile: '/assets/developers/grants-mobile.png',
+                        }}
+                        sourceProps={{
+                            mobile: {
+                                height: 360,
+                                width: 358,
+                            },
+                            tablet: {
+                                height: 335,
+                                width: 333,
+                            },
+                            desktop: {
+                                height: 550,
+                                width: 360,
+                            },
+                        }}
+                    />
                 </SectionWithPreview>
                 <SectionWithPreview
                     title={t('developers.extra.bounty.title')}
@@ -144,7 +165,27 @@ export default async function Home({
                         },
                     ]}
                 >
-                    hi
+                    <ResponsiveImage
+                        sources={{
+                            desktop: '/assets/developers/bounties.png',
+                            tablet: '/assets/developers/bounties-tablet.png',
+                            mobile: '/assets/developers/bounties-mobile.png',
+                        }}
+                        sourceProps={{
+                            mobile: {
+                                height: 360,
+                                width: 358,
+                            },
+                            tablet: {
+                                height: 335,
+                                width: 333,
+                            },
+                            desktop: {
+                                height: 550,
+                                width: 360,
+                            },
+                        }}
+                    />
                 </SectionWithPreview>
             </section>
 

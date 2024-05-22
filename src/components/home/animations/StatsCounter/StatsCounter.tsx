@@ -5,14 +5,10 @@ import { TFunction } from 'i18next';
 import CountUp from 'react-countup';
 import ui from '~/styles/ui.module.css';
 import styles from './StatsCounter.module.css';
-import { useMq } from '~/utils/useMq';
 import stats from '~/stats.json';
+import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
 
 export const StatsCounter = ({ t }: { t: TFunction }) => {
-    const mq = useMq();
-
-    const imgSrc = `/assets/home/stat-bg-${mq}.svg`;
-
     return (
         <div
             className={clsx(
@@ -21,7 +17,15 @@ export const StatsCounter = ({ t }: { t: TFunction }) => {
                 styles.container,
             )}
         >
-            <img className={styles.bg} src={imgSrc} alt="" />
+            <ResponsiveImage
+                className={styles.bg}
+                sources={{
+                    tablet: 'assets/home/stat-bg-tablet.svg',
+                    desktop: '/assets/home/stat-bg-desktop.svg',
+                    mobile: '/assets/home/stat-bg-mobile.svg',
+                }}
+            />
+
             {Object.entries(stats).map(([key, count], i) => (
                 <div key={key} className={styles.stat}>
                     <CountUp

@@ -14,7 +14,7 @@ export const SectionWithPreview: FC<PropsWithChildren<Props>> = ({ text, title, 
     return (
         <div className={clsx(ui['w-full'], styles.container)}>
             <div className={clsx(ui.flex, ui['flex-col'], styles.contentWithCta)}>
-                <div className={clsx(ui.flex, ui['flex-col'], styles.content)}>
+                <div className={clsx(ui.flex, ui['flex-col'], ui['w-full'], styles.content)}>
                     <h3>{title}</h3>
                     <p>{text}</p>
                 </div>
