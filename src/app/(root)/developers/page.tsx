@@ -11,6 +11,7 @@ import { useTranslation } from '~/i18n/useTranslation';
 
 import ui from '~/styles/ui.module.css';
 import { HeroContent } from '~/components/developers/header/HeroContent';
+import { SectionWithPreview } from '~/components/SectionWithPreview/SectionWithPreview';
 
 export default async function Home({
     params,
@@ -114,12 +115,37 @@ export default async function Home({
                         ]}
                     />
                 </div>
-                <div>
-                    <h3>Grants for Game-Changers</h3>
-                </div>
-                <div>
-                    <h3>Our Bug Bounty: Your Peace of Mind</h3>
-                </div>
+                <SectionWithPreview
+                    title="Grants for Game-Changers"
+                    text="some text"
+                    cta={[
+                        {
+                            text: 'View Grants',
+                            url: '#',
+                            buttonVariant: 'primary',
+                        },
+                        {
+                            text: 'Apply',
+                            url: '#',
+                            buttonVariant: 'secondary',
+                        },
+                    ]}
+                >
+                    hello
+                </SectionWithPreview>
+                <SectionWithPreview
+                    title="Our Bug Bounty: Your Peace of Mind"
+                    text="some more"
+                    cta={[
+                        {
+                            text: 'Learn More',
+                            url: '#',
+                            buttonVariant: 'primary',
+                        },
+                    ]}
+                >
+                    hi
+                </SectionWithPreview>
             </section>
 
             <Footer t={t} />

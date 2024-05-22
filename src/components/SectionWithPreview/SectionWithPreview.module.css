@@ -1,0 +1,39 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.content {
+    gap: 24px;
+}
+
+.cta {
+    flex-flow: wrap;
+    gap: 10px;
+
+    margin-top: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        gap: 0;
+        justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .content {
+        gap: 32px;
+    }
+    .cta {
+        margin-top: unset;
+    }
+}
+
+@media (min-width: 1280px) {
+    .content {
+        gap: 50px;
+    }
+    .cta {
+        margin-top: 80px;
+    }
+}
