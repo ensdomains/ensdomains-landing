@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { css } from "styled-components"
-import { Typography, CogSVG, CheckSVG, LinkSVG, PersonSVG } from "@ensdomains/thorin_next"
+import { Typography, CogSVG, CheckSVG, LinkSVG, PersonSVG, MinusCircleSVG } from "@ensdomains/thorin_next"
 
 import PencilSVG from "../../assets/roadmap/Pencil.svg"
 import primaryColorForStatus from "./utils/primaryColorForStatus"
@@ -28,6 +28,7 @@ const iconForStatus = status => {
   if (status === "testnet") return LinkSVG
   if (status === 'governance') return PersonSVG
   if (status === "done") return CheckSVG
+  if (status === "blocked") return MinusCircleSVG
   throw new Error("iconForStatus: Invalid status", status)
 }
 

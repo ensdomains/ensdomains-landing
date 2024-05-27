@@ -21,6 +21,6 @@ export default function L2RoadmapHeader() {
       <Typography fontVariant="smallBold" color="inheret">Back to Roadmap</Typography>
       </StyledLink>
     </Link>
-    <Typography fontVariant="headingOne">ENS Chain Roadmap</Typography>
+    <Typography fontVariant="headingOne">ENS v2 Roadmap</Typography>
   </div>
 }

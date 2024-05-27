@@ -4,5 +4,6 @@ export default function primaryColorForStatus(status) {
   if (status === 'testnet') return 'green'
   if (status === 'done') return 'black'
   if (status === 'governance') return 'purple'
+  if (status === 'blocked') return 'grey'
   throw new Error('primaryColorForStatus: Invalid status');
 }

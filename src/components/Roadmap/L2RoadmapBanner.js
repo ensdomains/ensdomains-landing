@@ -52,11 +52,11 @@ export default function L2RoadmapBanner(){
   return <Banner background='red' title="We're making an L2!" >
     <IconWrapper>🎉</IconWrapper>
     <Content>
-      <Typography fontVariant="largeBold">We're making an L2!</Typography>
-      <Typography fontVariant="body">We've created a plan to build and launch the ENS Chain, our very own L2</Typography>
+      <Typography fontVariant="largeBold">ENSv2</Typography>
+      <Typography fontVariant="largeBold">Expanding to an Ethereum Layer 2</Typography>
     </Content>
     <Link to="/l2-roadmap">
-      <Button suffix={<RightArrowSVG/>} colorStyle="greenPrimary">L2 Roadmap</Button>  
+      <Button suffix={<RightArrowSVG/>} colorStyle="greenPrimary">ENSv2 Roadmap</Button>  
     </Link>
   </Banner>
 }
