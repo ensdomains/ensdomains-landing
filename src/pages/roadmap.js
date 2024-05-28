@@ -7,6 +7,7 @@ import Navigation from '../components/NavigationV3/Navigation';
 import RoadmapHeader from '../components/Roadmap/RoadmapHeader';
 import RoadmapList from '../components/Roadmap/RoadmapList';
 import { BreakpointProvider } from '../utils/BreakpointProvider';
+import EnsV2Banner from '../components/Roadmap/EnsV2Banner';
 
 const Content = styled.div(({ theme }) => [
     css`
@@ -35,6 +36,7 @@ export default function Roadmap(properties) {
                     <Navigation logoStyle="blue" />
                     <Content>
                         <RoadmapHeader />
+                        <EnsV2Banner />
                         <RoadmapList />
                     </Content>
                 </ThemeProvider>
