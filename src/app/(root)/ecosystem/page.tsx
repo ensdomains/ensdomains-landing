@@ -45,7 +45,7 @@ export default async function Home({
             >
                 <EcosystemList />
             </Header>
-            <section className={ui['w-page']}>
+            <section className={ui['page']}>
                 <div className={clsx(ui.flex, ui['flex-col'], ui['h2-section'])}>
                     <h2>Ready for integration?</h2>
                     <LinkList

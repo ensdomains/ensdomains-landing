@@ -47,7 +47,7 @@ export default async function Home({
                 <HeroContent />
             </Header>
 
-            <section className={clsx(ui['w-page'])}>
+            <section className={clsx(ui['page'])}>
                 <div className={clsx(ui.flex, ui['flex-col'], ui['h2-section'])}>
                     <h2>
                         {t('developers.resources.title')}

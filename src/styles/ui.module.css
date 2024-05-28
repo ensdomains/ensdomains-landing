@@ -60,7 +60,7 @@
     font-weight: 500;
     border-radius: 4px;
     text-align: center;
-    width: fit-content;
+    width: 100%;
 
     padding: 20px 60px; 
     font-size: 14px;
@@ -104,7 +104,7 @@
     gap: 40px;
 }
 
-.w-page {
+.page {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -116,7 +116,7 @@
 }
 
 @media (min-width: 768px) {
-    .w-page {
+    .page {
         max-width: calc(834px + 2rem);
         padding: 0 1rem;
         padding-bottom: 120px;
@@ -126,6 +126,9 @@
         gap: 32px;
         max-width: 417px;
     }
+    .button {
+        width: fit-content;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -133,7 +136,7 @@
         padding: 30px 100px;
         font-size: 16px;
     }
-    .w-page {
+    .page {
         max-width: calc(1374px + 5rem);
         padding: 0 2.5rem;
         padding-bottom: 200px; 

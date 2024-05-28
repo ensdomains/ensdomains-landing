@@ -13,7 +13,7 @@ export const SearchInput = ({ t }: { t: TFunction<string, string> }) => {
                 ui['flex-col'],
                 ui['flex-center'],
                 styles.container,
-                ui['w-page'],
+                ui['page'],
             )}
         >
             <span className={styles.caption}>

@@ -44,7 +44,7 @@ export default async function Home({
                 ]}
             />
 
-            <section className={ui['w-page']}>
+            <section className={ui['page']}>
                 <div className={clsx(ui.flex, ui['flex-col'], ui['h2-section'])}>
                     <h2>
                         $ENS: Power to the People
