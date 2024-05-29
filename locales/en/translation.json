@@ -147,6 +147,21 @@
       "text": "Our DAO is the lifeblood of our decentralized ethos. Designed for longevity, the DAO nurtures ENS's resilience and flexibility, evolving through a tapestry of community voices.",
       "cta1": "ENS DAO",
       "cta2": "Proposals"
+    },
+    "extra": {
+      "title": "$ENS: Power to the People",
+      "vote": {
+        "title": "Your vote, your voice",
+        "text": "$ENS isn't just a token – it's your key to meaningful change in the ENS ecosystem. Each $ENS token you possess represents your stake in our collective journey."
+      },
+      "delegation": {
+        "title": "Empower through delegation",
+        "text": "By delegating tokens to active contributors in our community, you're not just participating – you're amplifying the impact you wish to see."
+      },
+      "grants": {
+        "title": "Grants for Game-Changers",
+        "text": "Got a groundbreaking idea? Our grants are here to power your innovative projects within the ENS ecosystem."
+      }
     }
   },
   "footer": {

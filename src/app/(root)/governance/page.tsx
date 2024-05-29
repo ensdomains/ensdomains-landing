@@ -12,6 +12,8 @@ import { useTranslation } from '~/i18n/useTranslation';
 import ui from '~/styles/ui.module.css';
 import styles from './page.module.css';
 import { TwoCol } from '~/components/TwoCol/TwoCol';
+import { SectionWithPreview } from '~/components/SectionWithPreview/SectionWithPreview';
+import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
 
 export default async function Home({
     params,
@@ -47,17 +49,42 @@ export default async function Home({
             <section className={ui['page']}>
                 <div className={clsx(ui.flex, ui['flex-col'], ui['h2-section'])}>
                     <h2>
-                        $ENS: Power to the People
+                        {t('governance.extra.title')}
                     </h2>
-                    <div>
-                        <h4>your vote your choice</h4>
-                    </div>
-                    <div>
-                        <h4>empower through delegation</h4>
-                    </div>
-                    <div>
-                        <h4>grants for game-changers</h4>
-                    </div>
+                    <SectionWithPreview
+                        title={t('governance.extra.vote.title')}
+                        text={t('governance.extra.vote.text')}
+                    >
+                        <ResponsiveImage
+                            sources={{
+                                desktop: '/assets/governance/vote.png',
+                                tablet: '/assets/governance/vote-tablet.png',
+                                mobile: '/assets/governance/vote-mobile.png',
+                            }}
+                            sourceProps={{
+                                mobile: {
+                                    height: 240,
+                                    width: 358,
+                                },
+                                tablet: {
+                                    height: 220,
+                                    width: 333,
+                                },
+                                desktop: {
+                                    height: 360,
+                                    width: 686,
+                                },
+                            }}
+                        />
+                    </SectionWithPreview>
+                    <SectionWithPreview
+                        title={t('governance.extra.delegation.title')}
+                        text={t('governance.extra.delegation.text')}
+                    />
+                    <SectionWithPreview
+                        title={t('governance.extra.grants.title')}
+                        text={t('governance.extra.grants.text')}
+                    />
                 </div>
 
                 <div>

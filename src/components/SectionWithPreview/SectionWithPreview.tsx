@@ -7,10 +7,10 @@ import { ButtonVariant } from '~/utils/types';
 type Props = {
     title: string;
     text: string;
-    cta: { text: string; buttonVariant?: ButtonVariant; url: string }[];
+    cta?: { text: string; buttonVariant?: ButtonVariant; url: string }[];
 };
 
-export const SectionWithPreview: FC<PropsWithChildren<Props>> = ({ text, title, children, cta }) => {
+export const SectionWithPreview: FC<PropsWithChildren<Props>> = ({ text, title, children, cta = [] }) => {
     return (
         <div className={clsx(ui['w-full'], styles.container)}>
             <div className={clsx(ui.flex, ui['flex-col'], styles.contentWithCta)}>
