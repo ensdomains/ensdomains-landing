@@ -148,8 +148,8 @@ export default async function Home({
                                 width: 333,
                             },
                             desktop: {
-                                height: 550,
-                                width: 360,
+                                height: 360,
+                                width: 550,
                             },
                         }}
                     />
@@ -181,8 +181,8 @@ export default async function Home({
                                 width: 333,
                             },
                             desktop: {
-                                height: 550,
-                                width: 360,
+                                height: 360,
+                                width: 550,
                             },
                         }}
                     />

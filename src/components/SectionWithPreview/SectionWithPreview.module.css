@@ -22,7 +22,8 @@
 @media (min-width: 768px) {
     .container {
         gap: 84px;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        justify-items: flex-end;
     }
     .content {
         gap: 32px;

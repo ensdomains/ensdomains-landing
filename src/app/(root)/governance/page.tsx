@@ -80,11 +80,55 @@ export default async function Home({
                     <SectionWithPreview
                         title={t('governance.extra.delegation.title')}
                         text={t('governance.extra.delegation.text')}
-                    />
+                    >
+                        <ResponsiveImage
+                            sources={{
+                                desktop: '/assets/governance/delegation.png',
+                                tablet: '/assets/governance/delegation-tablet.png',
+                                mobile: '/assets/governance/delegation-mobile.png',
+                            }}
+                            sourceProps={{
+                                mobile: {
+                                    height: 240,
+                                    width: 358,
+                                },
+                                tablet: {
+                                    height: 220,
+                                    width: 333,
+                                },
+                                desktop: {
+                                    height: 360,
+                                    width: 686,
+                                },
+                            }}
+                        />
+                    </SectionWithPreview>
                     <SectionWithPreview
                         title={t('governance.extra.grants.title')}
                         text={t('governance.extra.grants.text')}
-                    />
+                    >
+                        <ResponsiveImage
+                            sources={{
+                                desktop: '/assets/governance/grants.png',
+                                tablet: '/assets/governance/grants-tablet.png',
+                                mobile: '/assets/governance/grants-mobile.png',
+                            }}
+                            sourceProps={{
+                                mobile: {
+                                    height: 240,
+                                    width: 358,
+                                },
+                                tablet: {
+                                    height: 220,
+                                    width: 333,
+                                },
+                                desktop: {
+                                    height: 360,
+                                    width: 686,
+                                },
+                            }}
+                        />
+                    </SectionWithPreview>
                 </div>
 
                 <div>
