@@ -1,6 +1,6 @@
+import { mq } from '@ensdomains/thorin_next';
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { mq } from '@ensdomains/thorin_next';
 
 import content from './content/content.json';
 import RoadMapPhase from './RoadMapPhase';
@@ -30,12 +30,12 @@ const Container = styled.div(
 export default function RoadMapFlow() {
     return (
         <Container>
-            {content.map((item, i) => (
+            {content.map((item, index) => (
                 <RoadMapPhase
                     key={item.title}
                     {...item}
-                    color={i % 2 === 0 ? 'blue' : 'green'}
-                    last={i === content.length - 1}
+                    color={index % 2 === 0 ? 'blue' : 'green'}
+                    last={index === content.length - 1}
                 />
             ))}
         </Container>

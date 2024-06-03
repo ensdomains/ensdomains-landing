@@ -1,8 +1,9 @@
+import { mq, Typography } from '@ensdomains/thorin_next';
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Typography, mq } from '@ensdomains/thorin_next';
-import RoadMapPathway from './RoadmapPathway';
+
 import ContractCard from './ContractCard';
+import RoadMapPathway from './RoadmapPathway';
 
 const Container = styled.div(
     ({ theme }) => css`
@@ -27,7 +28,8 @@ const Content = styled.div(
         ${mq.sm.min(css`
             gap: ${theme.space['6']};
             padding-bottom: ${theme.space['6']};
-            ${$color === 'green' && css`
+            ${$color === 'green' &&
+            css`
                 align-items: flex-end;
             `}
         `)}
@@ -54,7 +56,12 @@ export default function RoadMapPhase({ title, color, items, last }) {
                         {title}
                     </Typography>
                 </Title>
-                {items.map((item) => <ContractCard key={item.title} {...{phase: title, color, ...item}} />)}
+                {items.map((item) => (
+                    <ContractCard
+                        key={item.title}
+                        {...{ phase: title, color, ...item }}
+                    />
+                ))}
             </Content>
         </Container>
     );

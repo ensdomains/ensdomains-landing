@@ -1,16 +1,19 @@
+import {
+    Card,
+    lightTheme,
+    mq,
+    OutlinkSVG,
+    ThorinGlobalStyles,
+} from '@ensdomains/thorin_next';
 import React from 'react';
+import styled, { css, ThemeProvider } from 'styled-components';
+
+import AnnouncementBanner from '../components/AnnouncementBanner';
+import L2RoadmapHeader from '../components/L2Roadmap/L2RoadmapHeader';
+import RoadMapFlow from '../components/L2Roadmap/RoadMapFlow';
 import Layout from '../components/Layout';
 import Navigation from '../components/NavigationV3/Navigation';
 import { BreakpointProvider } from '../utils/BreakpointProvider';
-import styled, { css, ThemeProvider } from 'styled-components';
-import {
-    Card,
-    ThorinGlobalStyles,
-    lightTheme,
-    mq,
-} from '@ensdomains/thorin_next';
-import L2RoadmapHeader from '../components/L2Roadmap/L2RoadmapHeader';
-import RoadMapFlow from '../components/L2Roadmap/RoadMapFlow';
 
 const Content = styled.div(({ theme }) => [
     css`
@@ -40,15 +43,28 @@ const SubContent = styled.div(({ theme }) => [
     `),
 ]);
 
-export default function Roadmap(props) {
+export default function Roadmap(properties) {
     return (
-        <Layout {...props} paddingTop={0}>
+        <Layout {...properties} paddingTop={0}>
             <BreakpointProvider>
                 <ThemeProvider theme={lightTheme}>
                     <ThorinGlobalStyles />
                     <Navigation />
                     <Content>
                         <L2RoadmapHeader />
+                        <AnnouncementBanner
+                            title="ENSv2: The Next Generation of ENS"
+                            description="Our vision for the next iteration of the ENS protocol, on L2."
+                            primaryButton={{
+                                label: 'ENSv2 Design Doc',
+                                href: 'https://docs.ens.domains/ens-v2',
+                                suffix: <OutlinkSVG />,
+                            }}
+                            secondaryButton={{
+                                label: 'Read FAQs',
+                                href: 'https://docs.ens.domains/ens-v2-faq',
+                            }}
+                        />
                         <Card>
                             <RoadMapFlow />
                         </Card>

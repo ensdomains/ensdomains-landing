@@ -1,45 +1,69 @@
+import { mq } from '@ensdomains/thorin_next';
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { mq } from '@ensdomains/thorin_next';
 
 const Container = styled.div(
     () => css`
-        flex: 0 0 48px;
-        width: 48px;
         position: relative;
+        flex: 0 0 32px;
+        width: 32px;
+
+        ${mq.sm.min(css`
+            flex: 0 0 48px;
+            width: 48px;
+        `)}
     `
 );
 
 const Pathway = styled.div(
     ({ theme, $color }) => css`
-        width: 16px;
         height: 100%;
-        background: linear-gradient(
-            to bottom,
-            ${theme.colors.blueSurface} 24px,
-            ${theme.colors.greenSurface} calc(100% - 24px)
-        );
         position: absolute;
         left: 50%;
-        top: 24px;
         transform: translateX(-50%);
+
+        width: 8px;
+        top: 16px;
+        background: linear-gradient(
+            to bottom,
+            ${theme.colors.blueSurface} 16px,
+            ${theme.colors.greenSurface} calc(100% - 16px)
+        );
+
+        ${mq.sm.min(css`
+            width: 16px;
+            top: 24px;
+            background: linear-gradient(
+                to bottom,
+                ${theme.colors.blueSurface} 24px,
+                ${theme.colors.greenSurface} calc(100% - 24px)
+            );
+        `)}
 
         ${$color === 'green' &&
         css`
             background: linear-gradient(
                 to bottom,
-                ${theme.colors.greenSurface} 24px,
-                ${theme.colors.blueSurface} calc(100% - 24px)
+                ${theme.colors.greenSurface} 16px,
+                ${theme.colors.blueSurface} calc(100% - 16px)
             );
-        `}
+
+            ${mq.sm.min(css`
+                background: linear-gradient(
+                    to bottom,
+                    ${theme.colors.greenSurface} 24px,
+                    ${theme.colors.blueSurface} calc(100% - 24px)
+                );
+            `)}
+        `};
     `
 );
 
 const Dot = styled.div(
     ({ theme, $color }) => css`
         background: ${theme.colors.blueSurface};
-        width: 48px;
-        height: 48px;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
         position: absolute;
         top: 0;
@@ -49,6 +73,11 @@ const Dot = styled.div(
         css`
             background: ${theme.colors.greenSurface};
         `}
+
+        ${mq.sm.min(css`
+            width: 48px;
+            height: 48px;
+        `)}
     `
 );
 
