@@ -75,6 +75,5 @@ yarn-error.log
 .yalc
 yalc.lock
 
-#branding-refresh
-.next/
+# next
 out/
