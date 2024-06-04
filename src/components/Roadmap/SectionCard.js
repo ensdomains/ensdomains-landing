@@ -163,7 +163,7 @@ export default function SectionCard({
                             title="ENSv2: The Next Generation of ENS"
                             description="Our vision for the next iteration of the ENS protocol, on L2"
                             primaryButton={{
-                                label: 'ENSv2 Roadmap',
+                                label: 'ENSv2 Project Plan',
                                 to: '/l2-roadmap',
                                 suffix: <RightArrowSVG />,
                             }}

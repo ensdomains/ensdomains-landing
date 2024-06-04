@@ -57,7 +57,7 @@ export default function Roadmap(properties) {
                             description="Our vision for the next iteration of the ENS protocol, on L2."
                             primaryButton={{
                                 label: 'ENSv2 Design Doc',
-                                href: 'https://docs.ens.domains/ens-v2',
+                                href: 'http://go.ens.xyz/ensv2',
                                 suffix: <OutlinkSVG />,
                             }}
                             secondaryButton={{

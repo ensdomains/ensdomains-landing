@@ -40,8 +40,6 @@ const iconForStatus = (status) => {
 
     if (status === 'blocked') return MinusCircleSVG;
 
-    // if (status === 'research') return MinusCircleSVG;
-
     if (status === 'research') return PencilSVG;
 
     throw new Error('iconForStatus: Invalid status', status);

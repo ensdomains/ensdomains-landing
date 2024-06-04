@@ -10,7 +10,7 @@ const Container = styled.div(
         display: flex;
         gap: ${theme.space['4']};
         min-height: 100px;
-        ${mq.sm.min(css`
+        ${mq.md.min(css`
             gap: ${theme.space['6']};
         `)}
     `
@@ -25,7 +25,7 @@ const Content = styled.div(
         width: ${theme.space.full};
         padding-bottom: ${theme.space['4']};
 
-        ${mq.sm.min(css`
+        ${mq.md.min(css`
             gap: ${theme.space['6']};
             padding-bottom: ${theme.space['6']};
             ${$color === 'green' &&

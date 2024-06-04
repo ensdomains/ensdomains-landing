@@ -7,7 +7,7 @@ import RoadMapPhase from './RoadMapPhase';
 
 const Container = styled.div(
     () => css`
-        ${mq.sm.min(css`
+        ${mq.md.min(css`
             display: flex;
             flex-direction: column;
 

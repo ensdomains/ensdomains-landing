@@ -8,7 +8,7 @@ const Container = styled.div(
         flex: 0 0 32px;
         width: 32px;
 
-        ${mq.sm.min(css`
+        ${mq.md.min(css`
             flex: 0 0 48px;
             width: 48px;
         `)}
@@ -30,7 +30,7 @@ const Pathway = styled.div(
             ${theme.colors.greenSurface} calc(100% - 16px)
         );
 
-        ${mq.sm.min(css`
+        ${mq.md.min(css`
             width: 16px;
             top: 24px;
             background: linear-gradient(
@@ -48,7 +48,7 @@ const Pathway = styled.div(
                 ${theme.colors.blueSurface} calc(100% - 16px)
             );
 
-            ${mq.sm.min(css`
+            ${mq.md.min(css`
                 background: linear-gradient(
                     to bottom,
                     ${theme.colors.greenSurface} 24px,
@@ -74,7 +74,7 @@ const Dot = styled.div(
             background: ${theme.colors.greenSurface};
         `}
 
-        ${mq.sm.min(css`
+        ${mq.md.min(css`
             width: 48px;
             height: 48px;
         `)}
