@@ -17,6 +17,7 @@
 
 .contentWithCta {
     gap: 20px;
+    order: 1;
 }
 
 @media (min-width: 768px) {
@@ -33,6 +34,7 @@
     }
     .contentWithCta {
         max-width: 417px;
+        order: unset;
     }
 
 }
