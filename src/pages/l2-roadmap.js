@@ -62,7 +62,7 @@ export default function Roadmap(properties) {
                             }}
                             secondaryButton={{
                                 label: 'Read FAQs',
-                                href: 'https://docs.ens.domains/ens-v2-faq',
+                                href: 'https://blog.ens.domains/post/ensv2-faq',
                             }}
                         />
                         <Card>
