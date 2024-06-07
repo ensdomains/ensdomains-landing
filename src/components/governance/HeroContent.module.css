@@ -1,0 +1,22 @@
+.position-container {
+    position: absolute;
+}
+
+.animation-container {
+    position: relative;
+}
+
+.position-container:nth-child(1) {
+    left: 11%;
+    bottom: 36px;
+}
+
+.position-container:nth-child(2) {
+    right: 62px;
+    top: 107px; 
+}
+
+.position-container:nth-child(3) {
+    left: 62px;
+    top: 107px; 
+}

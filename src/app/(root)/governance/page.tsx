@@ -14,6 +14,7 @@ import styles from './page.module.css';
 import { TwoCol } from '~/components/TwoCol/TwoCol';
 import { SectionWithPreview } from '~/components/SectionWithPreview/SectionWithPreview';
 import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
+import { HeroContent } from '~/components/governance/HeroContent';
 
 export default async function Home({
     params,
@@ -44,7 +45,9 @@ export default async function Home({
                         'https://docs.ens.domains/dao/proposals',
                     ],
                 ]}
-            />
+            >
+                <HeroContent />
+            </Header>
 
             <section className={ui['page']}>
                 <div className={clsx(ui.flex, ui['flex-col'], ui['h2-section'])}>
