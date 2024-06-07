@@ -11,8 +11,8 @@
     z-index: 10;
 
     gap: 2rem;
-    backdrop-filter: blur(8px);
-    background: linear-gradient(180deg, white 0 25%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(180deg, #fff 0 5%, hsla(0,0%,100%,0) 90%);
+    backdrop-filter: blur(4px);
 }
 
 .logo {
