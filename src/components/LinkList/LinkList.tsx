@@ -19,19 +19,10 @@ export const LinkList: FC<{ links: ILink[] }> = ({ links }) => {
                         <ExternalLink href={href}>
                             <span>{title}</span>
                             <span>
-                                <svg
-                                    width="13"
-                                    height="14"
-                                    viewBox="0 0 13 14"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M1.07143 12.4286L12 1.5M12 1.5H0M12 1.5V13.5"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                    />
+                                <svg width="77" height="76" viewBox="0 0 77 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M0.84668 0.276611H76.3245V75.7545H64.7126V20.0995L11.1728 73.6392L2.96193 65.4283L56.5017 11.8886H0.84668V0.276611Z" fill="currentColor" />
                                 </svg>
+
                             </span>
                         </ExternalLink>
                         <span className={ui.serif}>{description}</span>
