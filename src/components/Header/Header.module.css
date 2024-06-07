@@ -67,7 +67,7 @@
 
 .cta a:first-child {
     background: var(--page-text);
-    color: var(--page-bg);
+    color: var(--ens-gray-2);
 }
 
 .cta a {
