@@ -3,6 +3,11 @@
     gap: 10px;
 }
 
+.box {
+    align-self: flex-end;
+    margin-top: auto;
+}
+
 .card {
     color: var(--ens-white);
     background-color: var(--bg);
