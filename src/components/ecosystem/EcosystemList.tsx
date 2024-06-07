@@ -7,10 +7,18 @@ export const EcosystemList = () => {
     return (
         <>
             <div className={clsx(ui.flex, ui['flex-row'], styles.container)}>
-                <img src="/assets/logos/coinbase.svg" height={30} width={30} alt="Coinbase" />
-                <img src="/assets/logos/godaddy.svg" height={33} width={29} alt="GoDaddy" />
-                <img src="/assets/logos/brave.svg" height={29} width={24} alt="Brave" />
-                <img src="/assets/logos/etherscan.svg" height={30} width={30} alt="Etherscan" />
+                <div>
+                    <img src="/assets/logos/coinbase.svg" height={60} width={60} alt="Coinbase" />
+                </div>
+                <div>
+                    <img src="/assets/logos/godaddy.svg" height={33} width={29} alt="GoDaddy" />
+                </div>
+                <div>
+                    <img src="/assets/logos/brave.svg" height={29} width={24} alt="Brave" />
+                </div>
+                <div>
+                    <img src="/assets/logos/farcaster.svg" height={60} width={60} alt="Farcaster" />
+                </div>
             </div>
             <div className={styles['position-container']}>
                 <div className={styles['animation-container']}>
