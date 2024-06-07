@@ -1,7 +1,5 @@
 .currentLanguage {
     color: var(--ens-blue);
-    leading-trim: both;
-    text-edge: cap;
     font-family: var(--ens-sans);
     font-size: 12px;
     font-style: normal;
@@ -37,7 +35,7 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: max-content;
+    width: 167px;
     background-color: var(--ens-light-blue);
     color: var(--ens-blue);
     border-radius: 4px;
@@ -47,12 +45,31 @@
     padding: 10px;
     color: var(--ens-blue);
     font-family: var(--ens-sans);
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     box-sizing: border-box;
+    border-bottom: 1px solid var(--ens-white);
+    font-size: 12px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background: var(--ens-white);
+    border-radius: 1px;
+}
+
+.currentIndicator {
+    background: var(--ens-blue);
 }
 
 .language:hover {
     color: var(--ens-hover-blue);
-    background-color: #a6c3cd;
+}
+
+.language:hover .indicator {
+    background: var(--ens-hover-blue);
 }

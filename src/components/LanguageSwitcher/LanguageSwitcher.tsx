@@ -8,6 +8,7 @@ import { getLangPrefix } from '~/i18n/langPrefix';
 import { Language, languageNames, languages } from '~/i18n/settings';
 
 import styles from './LanguageSwitcher.module.css';
+import { clsx } from 'clsx';
 
 export const LanguageSwitcher: FC<{ lang: Language }> = ({ lang }) => {
     const path = usePathname();
@@ -36,6 +37,7 @@ export const LanguageSwitcher: FC<{ lang: Language }> = ({ lang }) => {
                                 (
                                 {language.toUpperCase()}
                                 )
+                                <div className={clsx(styles.indicator, language === lang && styles.currentIndicator)} />
                             </Link>
                         </li>
                     );
