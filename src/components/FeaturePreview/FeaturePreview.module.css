@@ -27,6 +27,7 @@
     width: 100%;
     max-width: 333px;
     font-weight: 350;
+    color: var(--feature-text);
 }
 
 .dot {

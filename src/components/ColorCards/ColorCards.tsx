@@ -15,7 +15,7 @@ export const ColorCards: FC<{
             {cards.map(({ title, description, color, link }) => (
                 <ExternalLink href={link} key={title} className={clsx(ui.flex, ui['flex-col'], styles.card)} style={{ '--bg': `var(--${color})`, '--bg-hover': `var(--${color.replace('ens-', 'ens-hover-')})` } as CSSProperties}>
                     <div>{title}</div>
-                    <div>{description}</div>
+                    <div className={styles.text}>{description}</div>
                 </ExternalLink>
             ))}
         </div>

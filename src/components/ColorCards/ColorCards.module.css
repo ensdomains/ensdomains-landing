@@ -24,6 +24,13 @@
     background-color: var(--bg-hover);
 }
 
+.text {
+    opacity: 80%;
+}
+.card:hover .text {
+    opacity: 100%;
+}
+
 @media (min-width: 768px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);

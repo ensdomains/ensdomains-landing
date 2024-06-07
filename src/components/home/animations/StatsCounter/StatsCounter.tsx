@@ -29,11 +29,11 @@ export const StatsCounter = ({ t }: { t: TFunction }) => {
             {Object.entries(stats).map(([key, count], i) => (
                 <div key={key} className={styles.stat}>
                     <CountUp
-                        start={count / 2}
+                        start={count * 0.8}
                         end={count}
                         enableScrollSpy
                         className={styles.value}
-                        scrollSpyDelay={250 * i}
+                        scrollSpyDelay={100 * i}
                         formattingFn={n => n.toLocaleString()}
                     />
                     {' '}
