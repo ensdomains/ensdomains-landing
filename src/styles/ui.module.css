@@ -112,15 +112,13 @@
     flex-direction: column;
 
     gap: 100px;
-    padding: 0 1rem;
-    padding-bottom: 100px;
+    padding: 100px 1rem;
 }
 
 @media (min-width: 768px) {
     .page {
         max-width: calc(834px + 2rem);
-        padding: 0 1rem;
-        padding-bottom: 120px;
+        padding: 120px 1rem;
         gap: 120px;
     }
     .h3-section {
@@ -138,8 +136,7 @@
     }
     .page {
         max-width: calc(1374px + 5rem);
-        padding: 0 2.5rem;
-        padding-bottom: 200px; 
+        padding: 200px 2.5rem;
         gap: 200px;
     }
     .h3-section {

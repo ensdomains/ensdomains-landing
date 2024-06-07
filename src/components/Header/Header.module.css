@@ -2,7 +2,6 @@
     width: 100%;
     min-height: min(100vh, 700px);
     padding: 88px 16px 16px 16px;
-    margin-bottom: 50px;
     position: relative;
 }
 
@@ -100,7 +99,6 @@
 @media (min-width: 768px) {
     .header {
         min-height: min(80vh, 560px);
-        margin-bottom: 60px;
         padding: 88px 16px 32px 16px; 
     }
     .cta {
@@ -114,7 +112,6 @@
 @media (min-width: 1280px) {
     .header {
         min-height: min(80vh, 830px);
-        margin-bottom: 100px;
         padding: 121px 0px 122px 0px; 
     }
     .h1-section {
