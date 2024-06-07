@@ -66,6 +66,7 @@ export const Footer: FC<{ t: TFunction<string, string> }> = ({ t }) => {
     return (
         <>
             <footer className={styles.container}>
+                <img className={styles.logo} src="/assets/ens_logo_white.svg" alt="ENS" width={80} height={91.285} />
                 <div className={styles.columns}>
                     {footerItems.map(list => (
                         <ul className={styles.ul} key={list.title}>
@@ -80,6 +81,7 @@ export const Footer: FC<{ t: TFunction<string, string> }> = ({ t }) => {
                         </ul>
                     ))}
                 </div>
+                <div>{t('footer.ltd')}</div>
             </footer>
             <div className={clsx(styles.extra, ui['dots-bg'])}></div>
         </>
