@@ -16,7 +16,7 @@ export const SectionWithPreview: FC<PropsWithChildren<Props>> = ({ text, title, 
             <div className={clsx(ui.flex, ui['flex-col'], styles.contentWithCta)}>
                 <div className={clsx(ui.flex, ui['flex-col'], ui['w-full'], styles.content)}>
                     <h3>{title}</h3>
-                    <p>{text}</p>
+                    <p className={ui['max-w-text']}>{text}</p>
                 </div>
                 <div className={clsx(ui.flex, ui['flex-row'], styles.cta)}>
                     {cta.map(({ text, buttonVariant = 'primary', url }) => (

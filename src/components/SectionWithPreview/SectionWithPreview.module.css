@@ -24,7 +24,6 @@
     .container {
         gap: 84px;
         grid-template-columns: 1fr 1fr;
-        justify-items: flex-end;
     }
     .content {
         gap: 32px;
