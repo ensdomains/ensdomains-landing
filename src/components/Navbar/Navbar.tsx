@@ -70,13 +70,15 @@ export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
                         );
                     })}
                 </div>
-                <LanguageSwitcher lang={lang} />
-                <ExternalLink
-                    href="https://app.ens.domains"
-                    className={(styles.launch, ui.button)}
-                >
-                    {t('nav.launch')}
-                </ExternalLink>
+                <div className={styles.langWithApp}>
+                    <LanguageSwitcher lang={lang} />
+                    <ExternalLink
+                        href="https://app.ens.domains"
+                        className={(styles.launch, ui.button)}
+                    >
+                        {t('nav.launch')}
+                    </ExternalLink>
+                </div>
             </div>
         </nav>
     );
