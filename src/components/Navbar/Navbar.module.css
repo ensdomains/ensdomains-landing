@@ -22,12 +22,6 @@
 .launch {
     background-color: var(--ens-blue);
     color: var(--ens-gray-2);
-    /* padding: 30px 0; */
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 4px;
-    /* width: 276px; */
-    text-align: center;
 }
 
 .launch:hover {
@@ -36,7 +30,8 @@
 
 .link {
     color: var(--ens-dark-blue);
-    font-size: 14px;
+    font-size: 18px;
+    font-family: var(--ens-mono);
 }
 
 .link:hover {
@@ -59,11 +54,6 @@
 }
 
 @media (max-width: 1024px) {
-    .launch {
-        /* width: 189px; */
-        /* padding: 20px 0; */
-        /* font-size: 14px; */
-    }
     .right {
         /* temp hide until we build mobile */
         display: none;

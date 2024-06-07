@@ -29,25 +29,25 @@
     padding-bottom: 50px;
 }
 
-
 .status {
     color: var(--ens-dark-blue);
-    font-size: 12px;
     font-weight: 500;
     line-height: 96%;
-    letter-spacing: 0.24px; 
     font-family: var(--ens-sans);
     text-align: center;
+
+    font-size: 16px;
+    letter-spacing: 0.24px; 
 }
 
 .caption {
     font-weight: 500;
     font-family: var(--ens-mono);
-    line-height: 96%;
     color: var(--ens-dark-blue);
 
     font-size: 14px;
     letter-spacing: -0.28px;
+    line-height: 96%;
 }
 
 .input::after {
@@ -82,7 +82,6 @@
         padding-bottom: 60px;
     }
     .status {
-        font-size: 16px;
         letter-spacing: 0.32px;
         text-align: left;
     }
@@ -109,11 +108,12 @@
         padding-bottom: 100px;
     }
     .status {
-        font-size: 14px;
+        font-size: 18px;
         letter-spacing: -0.28px;
         text-align: left;
     }
     .caption {
+        line-height: 96%;
         letter-spacing: -0.4px;
         font-size: 20px;
     }

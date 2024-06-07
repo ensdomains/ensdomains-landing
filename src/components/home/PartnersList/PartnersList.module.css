@@ -26,12 +26,12 @@
 }
 
 .name {
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: -0.28px;
 }
 
 .category {
-    font-size: 12px;
+    font-size: 16px;
     color: var(--ens-gray-4);
 }
 

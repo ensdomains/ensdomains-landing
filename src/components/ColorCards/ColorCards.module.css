@@ -10,12 +10,14 @@
     font-weight: 500;
     border-radius: 4px;
     transition: 150ms;
+    line-height: 96%;
 
     gap: 24px;
     min-height: 194px;
     height: 100%;
-    font-size: 20px;
-    letter-spacing: -0.4px;
+
+    letter-spacing: -0.36px; 
+    font-size: 18px;
 }
 
 .card:hover {
@@ -29,16 +31,18 @@
     }
     .card {
         min-height: 146px;
-        letter-spacing: -0.24px;
-        font-size: 14px;
+
+        font-size: 18px;
+        letter-spacing: -0.36px; 
     }
 }
 
 @media (min-width: 1280px) {
     .card {
         gap: 40px;
-        letter-spacing: -0.48px;
-        font-size: 24px;
         min-height: 240px;
+
+        font-size: 24px;
+        letter-spacing: -0.48px; 
     }
 }
