@@ -108,6 +108,11 @@
       "thorin": {
         "description": "Дизайн система для ENS, созданная с использованием React и styled-components."
       }
+    },
+    "extra": {
+      "bounty": {
+        "title": "Наше вознаграждение за обнаружение ошибок:\n\nВаше спокойствие"
+      }
     }
   },
   "ecosystem": {
