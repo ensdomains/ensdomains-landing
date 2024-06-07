@@ -101,9 +101,6 @@
         min-height: min(80vh, 560px);
         padding: 88px 16px 32px 16px; 
     }
-    .cta {
-        margin-top: unset;
-    }
     .p {
         max-width: 500px;
     }
