@@ -78,7 +78,7 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
                 <div>
                     <div className={clsx(ui.flex, ui['flex-col'], styles.title)}>
                         <h2>{t('home.features.title')}</h2>
-                        <p>{t('home.features.text')}</p>
+                        <p className={ui['max-w-text']}>{t('home.features.text')}</p>
                     </div>
                     <Carousel>
                         <FeaturePreview
