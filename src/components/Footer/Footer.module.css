@@ -3,7 +3,7 @@
     color: var(--ens-light-blue);
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     gap: 80px;
     padding: 40px 16px;
@@ -25,7 +25,6 @@
 .columns {
     display: flex;
     width: 100%;
-    max-width: 800px;
 
     flex-direction: column;
     gap: 34px;
@@ -43,7 +42,7 @@
 }
 
 .columns > ul li {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .columns ul li a {
@@ -56,20 +55,40 @@
     width: 100%;
 }
 
+.ltd {
+    width: 100%;
+    max-width: 198px;
+}
+
 @media (min-width: 768px) {
     .container {
         padding: 50px;
+        align-items: center;
     }
     .extra {
         height: 40px;
     }
     .columns {
         flex-direction: row;
+        gap: 24px;
+    }
+    .columns, .ltd {
+        max-width: 666px;
+    }
+}
+
+@media (min-width: 994px) {
+    .logo {
+        left: 50px;
+        top: 50px; 
     }
 }
 
 @media (min-width: 1280px) {
     .container {
         gap: 180px;
+    }
+    .columns, .ltd {
+        max-width: 824px;
     }
 }

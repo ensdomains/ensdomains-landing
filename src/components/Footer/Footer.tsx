@@ -81,7 +81,7 @@ export const Footer: FC<{ t: TFunction<string, string> }> = ({ t }) => {
                         </ul>
                     ))}
                 </div>
-                <div>{t('footer.ltd')}</div>
+                <div className={styles.ltd}>{t('footer.ltd')}</div>
             </footer>
             <div className={clsx(styles.extra, ui['dots-bg'])}></div>
         </>
