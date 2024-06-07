@@ -73,7 +73,7 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
             >
                 <HeroContent />
             </Header>
-            <section className={clsx(ui['page'])}>
+            <section className={clsx(ui['page'], styles.mainSection)}>
                 <SearchInput t={t} />
                 <div>
                     <div className={clsx(ui.flex, ui['flex-col'], styles.title)}>
