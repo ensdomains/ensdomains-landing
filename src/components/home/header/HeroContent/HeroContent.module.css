@@ -59,30 +59,22 @@
 }
 
 @keyframes move-diagonal-desktop {
-    0%, 50%, 100% {
-        transform: rotate(45deg) translate(0, 0);
-        animation-timing-function: ease-in-out;
-    }
-    25% {
+    0%, 100% {
         transform: rotate(45deg) translate(-175px, 0);
         animation-timing-function: ease-in-out;
     }
-    75% {
+    50% {
         transform: rotate(45deg) translate(175px, 0);
         animation-timing-function: ease-in-out;
     }
 }
 
 @keyframes move-left-right {
-    0%, 50%, 100% {
-        transform: translate(0, 0);
-        animation-timing-function: ease-in-out;
-    }
-    25% {
+    0%, 100% {
         transform: translate(var(--start), 0);
         animation-timing-function: ease-in-out;
     }
-    75% {
+    50% {
         transform: translate(var(--end), 0);
         animation-timing-function: ease-in-out;
     }
