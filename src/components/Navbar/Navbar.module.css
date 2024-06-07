@@ -1,8 +1,7 @@
 .nav {
-    padding: 20px 16px 20px 36px;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -75,6 +74,12 @@
     display: block;
 }
 
+@media (min-width: 768px) {
+    .nav {
+        padding: 12px 12px 12px 24px; 
+    }
+}
+
 @media (max-width: 1024px) {
     .tabletOnly {
         display: block;
@@ -87,5 +92,8 @@
 @media (min-width: 1280px) {
     .langWithApp {
         gap: 40px;
+    }
+    .nav {
+        padding: 20px 16px 20px 36px;
     }
 }

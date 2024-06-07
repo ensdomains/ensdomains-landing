@@ -1,5 +1,6 @@
 import { FC, HTMLAttributes, ImgHTMLAttributes, SourceHTMLAttributes } from 'react';
 import { Dimension } from '~/utils/useMq';
+import styles from './ResponsiveImage.module.css';
 
 type Props = HTMLAttributes<HTMLPictureElement> & {
     sources: Record<Dimension, string>;
@@ -14,6 +15,6 @@ export const ResponsiveImage: FC<Props> = (
     <picture {...props}>
         <source {...sourceProps.desktop} srcSet={sources.desktop} media="(min-width: 1280px)" />
         <source {...sourceProps.tablet} srcSet={sources.tablet} media="(min-width: 768px)" />
-        <img {...sourceProps.mobile} src={sources.mobile} {...{ alt }} />
+        <img className={styles.img} {...sourceProps.mobile} src={sources.mobile} {...{ alt }} />
     </picture>
 );

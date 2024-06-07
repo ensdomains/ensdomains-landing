@@ -87,7 +87,7 @@
     .header {
         min-height: min(80vh, 560px);
         margin-bottom: 60px;
-        padding: 88px 0px 32px 0px; 
+        padding: 88px 16px 32px 16px; 
     }
     .cta {
         margin-top: unset;
@@ -101,6 +101,9 @@
     }
     .cta a {
         width: fit-content;
+    }
+    .tag {
+        margin-top: 8px;
     }
 }
 
@@ -118,5 +121,6 @@
     }
     .tag {
         margin-bottom: 20px;
+        margin-top: 38px;
     }
 }
