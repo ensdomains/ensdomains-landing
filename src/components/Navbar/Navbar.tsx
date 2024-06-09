@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { TFunction } from 'i18next';
 import Link from 'next/link';
 import { CSSProperties, FC } from 'react';
@@ -10,6 +10,7 @@ import { fallbackLng, Language } from '~/i18n/settings';
 import ui from '~/styles/ui.module.css';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import styles from './Navbar.module.css';
+import { NavbarFade } from './NavbarFade';
 
 export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
     t,
@@ -18,7 +19,8 @@ export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
     const langPrefix = getLangPrefix((lang as Language) || fallbackLng);
 
     return (
-        <nav className={clsx(ui.flex, ui['flex-row'], styles.nav)}>
+        <nav id="nav" className={clsx(ui.flex, ui['flex-row'], styles.nav)}>
+            <NavbarFade />
             <Link href={langPrefix || '/'}>
                 <img
                     src="/assets/ens_logo_dark.svg"

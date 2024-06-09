@@ -5,11 +5,18 @@ import stylistic from '@stylistic/eslint-plugin';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
 import { fixupPluginRules } from '@eslint/compat';
+import globals from 'globals';
 
 const config = tseslint.config(
     {
         files: ['src/**/*.ts', 'src/*.tsx'],
         ignores: ['node_modules', 'dist', '.next'],
+        languageOptions: {
+            globals: {
+                ...globals.node,
+                ...globals.browser,
+            },
+        },
     },
     eslint.configs.recommended,
     ...tseslint.configs.recommended,

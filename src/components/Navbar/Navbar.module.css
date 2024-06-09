@@ -6,10 +6,13 @@
     left: 0;
     width: 100%;
     box-sizing: border-box;
-
     z-index: 10;
 
     gap: 2rem;
+   
+}
+
+.nav[data-opaque="true"] {
     background: linear-gradient(180deg, #fff 0 5%, hsla(0,0%,100%,0) 90%);
     backdrop-filter: blur(4px);
 }
