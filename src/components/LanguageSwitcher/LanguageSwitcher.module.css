@@ -1,6 +1,5 @@
 .currentLanguage {
     color: var(--ens-blue);
-    font-family: var(--ens-sans);
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -44,7 +43,6 @@
 .language {
     padding: 10px;
     color: var(--ens-blue);
-    font-family: var(--ens-sans);
     display: flex;
     flex-direction: row;
     justify-content: space-between;

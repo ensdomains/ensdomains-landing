@@ -9,6 +9,13 @@ body {
     overflow-x: hidden;
 }
 
+html:lang(ru) body {
+    --ens-sans: var(--ens-sans-fb);
+    --ens-mono: monospace;
+    --ens-semi-mono: monospace;
+    --ens-serif: var(--ens-serif-fb);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -61,7 +68,6 @@ p {
 /* TYPOGRAPHY */
 
 h1 {
-    font-family: var(--ens-sans);
     font-weight: 500;
     line-height: 96%;
     
@@ -69,16 +75,15 @@ h1 {
     letter-spacing: -0.8px; 
 }
 
-html[lang="ru"] h1 {
+html:lang(ru) h1 {
     font-weight: 600;
 }
 
-html[lang="ru"] h1 span {
+html:lang(ru) h1 span {
     font-weight: 500;
 }
 
 h2 {
-    font-family: var(--ens-sans);
     font-weight: 500;
     letter-spacing: -2px;
     line-height: 90%;
@@ -88,7 +93,6 @@ h2 {
 }
 
 h3 {
-    font-family: var(--ens-sans);
     font-style: normal;
     font-weight: 500;
     line-height: 96%;
@@ -98,7 +102,6 @@ h3 {
 }
 
 h4 {
-    font-family: var(--ens-sans);
     font-style: normal;
     font-weight: 500;
     line-height: 96%; 
