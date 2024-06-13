@@ -4,6 +4,8 @@ import { clsx } from 'clsx';
 import { inter, ebGaramond, ABCMonumentGrotesk, ABCMonumentGroteskMono, ABCMonumentGroteskSemiMono, ABCMarist } from 'fonts';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
+import { Language } from '~/i18n/settings';
+import { dir } from 'i18next';
 
 export const metadata: Metadata = {
     title: 'ENS',
@@ -19,10 +21,11 @@ export const metadata: Metadata = {
     },
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children, params: { lang = 'en' } }: { children: ReactNode ; params: { lang?: Language } }) {
     return (
         <html
-            lang="en"
+            lang={lang}
+            dir={dir(lang)}
             className={clsx(
                 inter.variable,
                 ebGaramond.variable,
