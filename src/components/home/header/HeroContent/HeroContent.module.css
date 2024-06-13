@@ -124,6 +124,7 @@
     }
 
     .animated-square[data-name="green-bg-animation"] {
+        left: -20px;
         offset-path: path("M0 47.5L242 47.5");
     }
     .animated-square[data-name="blue-bg-animation"] {
