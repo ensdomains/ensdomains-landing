@@ -17,9 +17,20 @@
     gap: 80px;
 }
 
+.mainSection {
+    padding-top: 0;
+}
+
+.ownershipVideo {
+    width: 151px;
+}
+
 @media (min-width: 768px) {
     .gtwSection {
         gap: 40px;
+    }
+    .ownershipVideo {
+        width: 515px;
     }
 }
 
@@ -27,8 +38,7 @@
     .gtwSection {
         gap: 80px;
     }
-}
-
-.mainSection {
-    padding-top: 0;
+    .ownershipVideo {
+        width: 901px;
+    }
 }

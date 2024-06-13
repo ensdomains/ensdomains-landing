@@ -9,7 +9,6 @@ import { Footer } from '~/components/Footer/Footer';
 import { Header } from '~/components/Header/Header';
 import { DappsAnimation } from '~/components/home/animations/DappsAnimation/DappsAnimation';
 import { MessageAnimation } from '~/components/home/animations/MessageAnimation/MessageAnimation';
-import { OwnershipAnimation } from '~/components/home/animations/OwnershipAnimation/OwnershipAnimation';
 import { HeroContent } from '~/components/home/header/HeroContent/HeroContent';
 import { Navbar } from '~/components/Navbar/Navbar';
 import { SearchInput } from '~/components/SearchInput/SearchInput';
@@ -24,6 +23,7 @@ import { PartnerEntry } from '~/utils/types';
 import { StatsCounter } from '~/components/home/animations/StatsCounter/StatsCounter';
 import Link from 'next/link';
 import { getLangPrefix } from '~/i18n/langPrefix';
+import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
 
 const partners: PartnerEntry[] = [
     /* temporary */
@@ -112,7 +112,18 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
                             position={2}
                             gridSrc="green-grid.svg"
                         >
-                            <OwnershipAnimation />
+                            <ResponsiveImage
+                                sources={{
+                                    desktop: '/assets/home/ownership.webp',
+                                    tablet: '/assets/home/ownership.webp',
+                                    mobile: '/assets/home/ownership-vertical.webp',
+                                }}
+                                sourceProps={{
+                                    desktop: { height: 376, width: 901 },
+                                    tablet: { width: 515, height: 215 },
+                                    mobile: { width: 151, height: 311, className: styles.ownershipVideo },
+                                }}
+                            />
                         </FeaturePreview>
                     </Carousel>
                 </div>

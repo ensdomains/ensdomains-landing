@@ -1,3 +1,12 @@
+@keyframes move {
+    25% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
+
 .position-container {
     position: absolute;
 }
@@ -7,8 +16,9 @@
 }
 
 .position-container:nth-of-type(1) .animated-square {
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
+    animation: move 2.5s infinite reverse ease-in-out;
 }
 
 .position-container:nth-of-type(2) {
@@ -16,25 +26,29 @@
 }
 
 .position-container:nth-of-type(2) .animated-square {
-    top: 30px;
-    left: calc(50% - 33px/2);
-    animation: move-left-right 5s linear infinite;
+    top: 0px;
+    animation: move 2.5s infinite ease-in-out;
+}
+
+.position-container:nth-of-type(3) {
+    z-index: 2;
 }
 
 .position-container:nth-of-type(3) .animated-square {
-    --before-curve: 120px;
-    --after-curve-right: 20px;
-    --top: 135px;
-    --end-right: 138px;
-    animation: diagonal-bottom-right 5s linear infinite;
     top: 0;
-    left: 30px;
+    left: 0;
+    z-index: 2;
+
+    animation: move 2.5s infinite reverse ease-in-out;
+    offset-path: path("M229.493 175.66L70.0049 175.66C57.3023 175.66 47.0049 165.363 47.0049 152.66L47.0049 -7.81794");
 }
 
 .position-container:nth-of-type(4) .animated-square {
-    animation: move-left-right 5s linear infinite;
-    top: calc(50% - 20px);
-    left: calc(50% - 33px/2);
+    top: 48px;
+    left: 0;
+
+    animation: move 4s infinite reverse ease-in-out;
+    offset-path: path("M0 1.20215L440 1.20214");
 }
 
 .bg-element {
@@ -58,46 +72,8 @@
     color: var(--color);
 }
 
-@keyframes move-diagonal-desktop {
-    0%, 100% {
-        transform: rotate(45deg) translate(-175px, 0);
-        animation-timing-function: ease-in-out;
-    }
-    50% {
-        transform: rotate(45deg) translate(175px, 0);
-        animation-timing-function: ease-in-out;
-    }
-}
-
-@keyframes move-left-right {
-    0%, 100% {
-        transform: translate(var(--start), 0);
-        animation-timing-function: ease-in-out;
-    }
-    50% {
-        transform: translate(var(--end), 0);
-        animation-timing-function: ease-in-out;
-    }
-}
-
-@keyframes diagonal-bottom-right {
-    0%, 100% {
-        transform: translate(0, 0);
-        animation-timing-function: ease-in-out;
-    }
-    20%, 80% {
-        transform: translate(0, var(--before-curve));
-
-        animation-timing-function: ease-in-out;
-    }
-    30%, 70% {
-        transform: translate(var(--after-curve-right), var(--top));
-        animation-timing-function: ease-in-out;
-    }
-    50% {
-        transform: translate(var(--end-right), var(--top));
-        animation-timing-function: ease-in-out;
-    }
+.header-ens-link:nth-of-type(5) {
+    z-index: 3;
 }
 
 @media (min-width: 1680px) {
@@ -125,9 +101,16 @@
         left: 86%;
         top: 421px;
     }
+    .position-container:nth-of-type(1) .animated-square {
+        offset-path: path("M320.67 320.583L1.20135 1.11394");
+    }
     .position-container:nth-of-type(2) {
         left: 68.7%;
         top: 60px;
+    }
+    .position-container:nth-of-type(2) .animated-square {
+        left: -20px;
+        offset-path: path("M0 47L242 47");
     }
     .position-container:nth-of-type(3) {
         left: 200px;
@@ -145,14 +128,6 @@
         top: 132px;
         left: 80%;
     }
-    .position-container:nth-of-type(2) .animated-square {
-        --start: -84px;
-        --end: 84px;
-    }
-    .position-container:nth-of-type(4) .animated-square {
-        --start: -185px;
-        --end: 185px;
-    }
 }
 
 @media (min-width: 1280px) and (max-width: 1680px) {
@@ -165,7 +140,6 @@
         left: -118px;
         top: 124px;
     }
-
     .header-ens-link:nth-of-type(2) {
         left: 64px;
         top: 64px;
@@ -186,9 +160,17 @@
         left: 87%;
         top: calc(100% - 221px);
     }
+    .position-container:nth-of-type(1) .animated-square {
+        offset-path: path("M204.568 205.347L0.356193 1.13451");
+    }
     .position-container:nth-of-type(2) {
         left: 75%;
         top: 50px;
+    }
+    .position-container:nth-of-type(2) .animated-square {
+        left: -15px;
+        top: 39px;
+        offset-path: path("M0.55957 30.2598L155.44 30.2598");
     }
     .position-container:nth-of-type(1) img {
         width: 320px;
@@ -211,18 +193,6 @@
         left: 82.5%;
         width: 177px;
     }
-    .position-container:nth-of-type(3) .animated-square {
-        left: 32px;
-        --before-curve: 118px;
-        --after-curve-right: 20px;
-        --top: 133px;
-        --end-right: 135px;
-    }
-    .position-container:nth-of-type(2) .animated-square {
-        top: 56px;
-        --start: -72px;
-        --end: 72px;
-    }
     .position-container:nth-of-type(4) {
         left: -6%;
         top: calc(100% - 232px);
@@ -230,12 +200,6 @@
     .position-container:nth-of-type(4) img {
         width: 320px;
         height: max-content;
-    }
-    .position-container:nth-of-type(4) .animated-square {
-        --start: -150px;
-        --end: 150px;
-        left: calc(50% - 26px/2);
-        top: calc(50% - 18px);
     }
 }
 
@@ -249,19 +213,7 @@
         width: 256px;
         height: max-content;
     }
-    .position-container:nth-of-type(4) .animated-square {
-        --start: -118px;
-        --end: 118px;
-        left: calc(50% - 21px/2);
-        top: calc(50% - 15px);
-    }
    
-}
-
-@media (min-width: 1024px) {
-    .position-container:nth-of-type(1) .animated-square {
-        animation: move-diagonal-desktop 5s linear infinite;
-    }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
@@ -311,22 +263,10 @@
         width: 153px;
         height: max-content;
     }
-    .position-container:nth-of-type(3) .animated-square {
-        left: 27px;
-        --before-curve: 90px;
-        --after-curve-right: 18px;
-        --top: 106px;
-        --end-right: 108px;
-    }
     .bg-element:nth-of-type(1) {
         top: 55px;
         left: 81.5%;
         width: 142px;
-    }
-    .position-container:nth-of-type(2) .animated-square {
-        top: 46px;
-        --start: -58px;
-        --end: 58px;
     }
     .position-container:nth-of-type(4) {
         left: -10%;
@@ -387,22 +327,9 @@
         width: 114px;
         height: 150px; 
     }
-    .position-container:nth-of-type(2) .animated-square {
-        left: calc(50% - 16.8px/2);
-        top: 35px;
-        --start: -66px;
-        --end: 66px;
-    }
-    
     .position-container:nth-of-type(4) img {
         width: 205px;
         height: max-content;
-    }
-    .position-container:nth-of-type(4) .animated-square {
-        --start: -96px;
-        --end: 96px;
-        left: calc(50% - 16.8px/2);
-        top: calc(50% - 13px);
     }
 }
 
