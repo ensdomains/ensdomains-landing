@@ -32,6 +32,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 ABCMarist.variable,
             )}
         >
+            <head>
+                <link rel="icon" type="image/png" href="/favicon.png" />
+            </head>
             <body>{children}</body>
         </html>
     );
