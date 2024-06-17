@@ -6,6 +6,17 @@
 .box {
     align-self: flex-end;
     margin-top: auto;
+    background-image: var(--img);
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+
+    height: 50px;
+    width: 50px;
+}
+
+.text {
+    opacity: 80%;
 }
 
 .card {
@@ -29,11 +40,57 @@
     background-color: var(--bg-hover);
 }
 
-.text {
-    opacity: 80%;
-}
 .card:hover .text {
     opacity: 100%;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--img);
+    background-size: cover;
+    background-position: center;
+    transition: opacity 500ms ease-in-out;
+    opacity: 1;
+    z-index: 1;
+}
+
+.card:hover .box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--img-hover);
+    background-size: cover;
+    background-position: center;
+    transition: opacity 500ms ease-in-out;
+    opacity: 1;
+    z-index: 2;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--img-hover);
+    background-size: cover;
+    background-position: center;
+    transition: opacity 500ms ease-in-out;
+    opacity: 0;
+    z-index: 2;
+}
+
+.card:hover .box::before {
+    opacity: 0;
 }
 
 @media (min-width: 768px) {
@@ -47,6 +104,10 @@
         font-size: 18px;
         letter-spacing: -0.36px; 
     }
+    .box {
+        width: 40px;
+        height: 40px; 
+    }
 }
 
 @media (min-width: 1280px) {
@@ -56,5 +117,9 @@
 
         font-size: 24px;
         letter-spacing: -0.48px; 
+    }
+    .box {
+        width: 66px;
+        height: 66px;
     }
 }
