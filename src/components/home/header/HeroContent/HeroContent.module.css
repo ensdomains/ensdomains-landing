@@ -1,5 +1,5 @@
 @keyframes move {
-    25% {
+    10% {
         offset-distance: 0%;
     }
     100% {
@@ -18,7 +18,7 @@
 .animated-square[data-name="diagonal-animation"] {
     top: 0;
     left: 0;
-    animation: move 2.5s infinite reverse ease-in-out;
+    animation: move 2s infinite linear;
 }
 
 .position-container:nth-of-type(2) {
@@ -27,7 +27,7 @@
 
 .animated-square[data-name="green-bg-animation"] {
     top: 0px;
-    animation: move 2.5s infinite ease-in-out;
+    animation: move 2s infinite linear;
 }
 
 .position-container:nth-of-type(3) {
@@ -39,13 +39,13 @@
     left: 0;
     z-index: 2;
 
-    animation: move 3s infinite reverse ease-in-out;
+    animation: move 2s infinite reverse linear;
 }
 
 .animated-square[data-name="cyan-bg-animation"] {  
     left: 0;
 
-    animation: move 4s infinite ease-in-out;
+    animation: move 2s infinite linear;
 }
 
 .bg-element {
@@ -119,23 +119,21 @@
         left: 80%;
     }
 
+    /* Animation */
     .animated-square[data-name="diagonal-animation"] {
         offset-path: path("M320.668 320.083L1.19939 0.613944");
     }
-
     .animated-square[data-name="green-bg-animation"] {
         left: -20px;
         offset-path: path("M0 47.5L242 47.5");
     }
     .animated-square[data-name="blue-bg-animation"] {
-        left: 46px;
-        top: 12px;
-        offset-path: path("M146.386 140.528L18.7951 140.528C8.63305 140.528 0.395115 132.29 0.395114 122.128L0.395118 -6.25462");
+        top: -30px;
+        offset-path: path("M229.493 182.16L70.0049 182.16C57.3023 182.16 47.0049 171.863 47.0049 159.16L47.0049 -1.31794");
     }
     .animated-square[data-name="cyan-bg-animation"] {
-        left: 80px;
         top: 48px;
-        offset-path: path("M0.621094 1.31885L352.621 1.31884");
+        offset-path: path("M0 0.702148L440 0.702141");
     }
 }
 
@@ -208,11 +206,20 @@
     /* Animation */
     .animated-square[data-name="diagonal-animation"] {
         offset-path: path("M0.505859 0.28418L256.081 255.859");
+        animation-direction: reverse;
     }
     .animated-square[data-name="green-bg-animation"] {
         top: 30.5px;
         left: -8px;
         offset-path: path("M0.515625 38.1997L194.116 38.1997");
+    }
+    .animated-square[data-name="blue-bg-animation"] {
+        left: 7.5px;
+        offset-path: path("M183.386 145.528L55.7951 145.528C45.6331 145.528 37.3951 137.29 37.3951 127.128L37.3951 -1.25462");
+    }
+    .animated-square[data-name="cyan-bg-animation"] {
+        top: 40px;
+        offset-path: path("M0.621094 1.31885L352.621 1.31884");
     }
 }
 
@@ -285,6 +292,27 @@
         left: -10%;
         top: calc(100% - 232px);
     }
+
+    /* Animation */
+    .animated-square[data-name="diagonal-animation"] {
+        top: 34px;
+        left: 34px;
+        offset-path: path("M205.189 204.847L0.977286 0.634635");
+    }
+    .animated-square[data-name="green-bg-animation"] {
+        top: 55px;
+        left: -8px;
+        offset-path: path("M0.181641 0.759888L155.062 0.759874");
+    }
+    .animated-square[data-name="blue-bg-animation"] {
+        left: 35px;
+        top: -14px;
+        offset-path: path("M133.104 130.022L15.9936 130.022C7.86396 130.022 1.27361 123.432 1.27361 115.302L1.27362 -1.70354");
+    }
+    .animated-square[data-name="cyan-bg-animation"] {
+        top: 30px;
+        offset-path: path("M0.820312 0.4552L282.42 0.455196");
+    }
 }
 
 @media (max-width: 1024px) {
@@ -325,6 +353,13 @@
         left: -1%;
         top: calc(100% - 100px);
     }
+    /* Animation */
+    .animated-square[data-name="cyan-bg-animation"] {
+        top: 30px;
+        left: -10px;
+        offset-path: path("M0.820312 0.4552L282.42 0.455196");
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -343,6 +378,16 @@
     .position-container:nth-of-type(4) img {
         width: 205px;
         height: max-content;
+    }
+    /* Animation */
+    .animated-square[data-name="green-bg-animation"] {
+        top: 45px;
+        left: -9px;
+        offset-path: path("M0.263672 0.71489L123.684 0.714879");
+    }
+    .animated-square[data-name="cyan-bg-animation"] {
+        top: 25px;
+        offset-path: path("M0.974609 0.384712L220.975 0.384709");
     }
 }
 
