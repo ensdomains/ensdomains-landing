@@ -24,6 +24,7 @@ import { StatsCounter } from '~/components/home/animations/StatsCounter/StatsCou
 import Link from 'next/link';
 import { getLangPrefix } from '~/i18n/langPrefix';
 import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
+import { AnimatedSquare } from '~/components/AnimatedSquare/AnimatedSquare';
 
 const partners: PartnerEntry[] = [
     /* temporary */
@@ -139,30 +140,38 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
                             {t('home.gyow.description')}
                         </p>
                     </div>
-                    <div className={styles.trainTrack}>{/* TODO: Train Tracks */}</div>
-                    <ColorCards
-                        cards={[
-                            {
-                                title: t('home.gyow.ens-app.title'),
-                                description: t('home.gyow.ens-app.description'),
-                                color: 'ens-blue',
-                                link: 'https://app.ens.domains',
-                            },
-                            {
-                                title: t('home.gyow.ens-dao.title'),
-                                description: t('home.gyow.ens-dao.description'),
-                                color: 'ens-green',
-                                link: 'https://discuss.ens.domains',
-                            },
-                            {
-                                title: t('home.gyow.docs.title'),
-                                description: t('home.gyow.docs.description'),
-                                color: 'ens-magenta',
-                                link: 'https://docs.ens.domains',
-                            },
-                        ]}
-                    />
-                    <div>{/* TODO: Train Tracks */}</div>
+                    <div>
+                        <div className={styles.trainTrack}>
+
+                            <AnimatedSquare />
+                        </div>
+                        <ColorCards
+                            cards={[
+                                {
+                                    title: t('home.gyow.ens-app.title'),
+                                    description: t('home.gyow.ens-app.description'),
+                                    color: 'ens-blue',
+                                    link: 'https://app.ens.domains',
+                                },
+                                {
+                                    title: t('home.gyow.ens-dao.title'),
+                                    description: t('home.gyow.ens-dao.description'),
+                                    color: 'ens-green',
+                                    link: 'https://discuss.ens.domains',
+                                },
+                                {
+                                    title: t('home.gyow.docs.title'),
+                                    description: t('home.gyow.docs.description'),
+                                    color: 'ens-magenta',
+                                    link: 'https://docs.ens.domains',
+                                },
+                            ]}
+                        />
+                        <div className={styles.trainTrack}>
+                            <img src="/assets/home/gray-path.svg" alt="" />
+                            <AnimatedSquare />
+                        </div>
+                    </div>
                 </div>
                 <div
                     className={clsx(

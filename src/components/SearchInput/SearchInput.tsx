@@ -1,11 +1,17 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { TFunction } from 'i18next';
 
 import ui from '~/styles/ui.module.css';
 import { SearchIcon } from '../icons';
 import styles from './SearchInput.module.css';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 export const SearchInput = ({ t }: { t: TFunction<string, string> }) => {
+    const router = useRouter();
+
+    const [initial, setInitial] = useState(true);
+
     return (
         <div
             className={clsx(
@@ -27,7 +33,20 @@ export const SearchInput = ({ t }: { t: TFunction<string, string> }) => {
                 )}
             >
                 <div className={styles.inputContainer}>
-                    <input className={styles.input} placeholder="name" />
+                    <input
+                        defaultValue=".eth"
+                        onFocus={(e) => {
+                            if (initial) e.currentTarget.setSelectionRange(0, 0);
+                            setInitial(false);
+                        }}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                                router.push(`https://ens.app/${e.currentTarget.value}`);
+                            }
+                        }}
+                        className={styles.input}
+                        placeholder="name"
+                    />
                     <SearchIcon className={styles.icon} />
                 </div>
                 <span className={styles.status}>Name is available.</span>
