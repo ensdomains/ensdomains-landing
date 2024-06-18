@@ -45,13 +45,6 @@ export const HeroContent = () => (
                 <AnimatedSquare data-name="diagonal-animation" className={styles['animated-square']} />
             </div>
         </div>
-        <img
-            src="/assets/home/magenta-element.svg"
-            width={200}
-            height={200}
-            alt=""
-            className={styles['bg-element']}
-        />
         <div className={styles['position-container']}>
             <div className={styles['animation-container']}>
                 <img
@@ -83,6 +76,18 @@ export const HeroContent = () => (
                     width={100}
                 />
                 <AnimatedSquare data-name="cyan-bg-animation" className={styles['animated-square']} />
+            </div>
+        </div>
+        <div className={styles['position-container']}>
+            <div className={styles['animation-container']}>
+                <img
+                    src="/assets/home/magenta-element.svg"
+                    width={200}
+                    height={200}
+                    alt=""
+                />
+
+                <AnimatedSquare data-name="magenta-bg-animation" className={styles['animated-square']} />
             </div>
         </div>
         <HeroEnsLink
