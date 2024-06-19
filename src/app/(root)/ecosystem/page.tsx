@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { CSSProperties } from 'react';
 
 import { ColorCards } from '~/components/ColorCards/ColorCards';

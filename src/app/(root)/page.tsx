@@ -24,7 +24,6 @@ import { StatsCounter } from '~/components/home/animations/StatsCounter/StatsCou
 import Link from 'next/link';
 import { getLangPrefix } from '~/i18n/langPrefix';
 import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
-import { AnimatedSquare } from '~/components/AnimatedSquare/AnimatedSquare';
 
 const partners: PartnerEntry[] = [
     /* temporary */
@@ -140,11 +139,7 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
                             {t('home.gyow.description')}
                         </p>
                     </div>
-                    <div>
-                        <div className={styles.trainTrack}>
-
-                            <AnimatedSquare />
-                        </div>
+                    <div className={styles.cardsSection}>
                         <ColorCards
                             cards={[
                                 {
@@ -167,10 +162,6 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
                                 },
                             ]}
                         />
-                        <div className={styles.trainTrack}>
-                            <img src="/assets/home/gray-path.svg" alt="" />
-                            <AnimatedSquare />
-                        </div>
                     </div>
                 </div>
                 <div

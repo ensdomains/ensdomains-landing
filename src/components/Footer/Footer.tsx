@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { TFunction } from 'i18next';
 import React, { FC } from 'react';
 

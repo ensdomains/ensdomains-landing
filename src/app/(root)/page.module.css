@@ -3,22 +3,6 @@
     margin-bottom: 80px;
 }
 
-.trainTrack {
-    position: relative;
-}
-
-.trainTrack img {
-    width: 100%;
-}
-
-.trainTrack:first-child {
-    margin-top: 80px;
-}
-
-.trainTrack:last-child {
-    transform: rotate(180deg);
-}
-
 .partnersContainer {
     padding: 16px 0;
     gap: 40px;
@@ -35,6 +19,10 @@
 
 .ownershipVideo {
     width: 151px;
+}
+
+.cardsSection {
+    margin-top: 80px;
 }
 
 @media (min-width: 768px) {
