@@ -25,14 +25,10 @@
     color: var(--ens-dark-blue);
     text-decoration: none;
     display: flex;
-    gap: 0.5rem;
+    gap: 20px;
     height: fit-content;
 
     font-size: 20px;
-}
-
-.list li a span:nth-child(1) {
-    padding-right: 8px;
 }
 
 .list li a:hover span:nth-child(1) {
@@ -43,6 +39,11 @@
     color: var(--page-text);
 }
 
+.arrow {
+    height: 12px;
+    width: 12px;
+}
+
 @media (min-width: 768px) {
     .list li {
         grid-template-columns: 1fr 1fr;
@@ -50,11 +51,7 @@
     .list li a {
         font-size: 24px;
     }
-
-    .list li a span:nth-child(1) {
-        padding-right: 20px;
-    }
-
+    
 }
 
 @media (min-width: 1280px) {
@@ -62,6 +59,10 @@
         font-size: 36px;
     }
     .list li a svg {
+        height: 24px;
+        width: 24px;
+    }
+    .arrow {
         height: 24px;
         width: 24px;
     }
