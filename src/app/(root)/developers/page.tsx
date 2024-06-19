@@ -1,10 +1,8 @@
 import { clsx } from 'clsx';
 import { CSSProperties } from 'react';
 
-import { Footer } from '~/components/Footer/Footer';
 import { Header } from '~/components/Header/Header';
 import { LinkList } from '~/components/LinkList/LinkList';
-import { Navbar } from '~/components/Navbar/Navbar';
 import { TwoCol } from '~/components/TwoCol/TwoCol';
 import { useTranslation } from '~/i18n/useTranslation';
 
@@ -29,7 +27,7 @@ export default async function Developers({
     const { t } = await useTranslation(params.lang, 'translation');
 
     return (
-        <main
+        <div
             style={
                 {
                     '--page-text': 'var(--ens-magenta)',
@@ -37,7 +35,6 @@ export default async function Developers({
                 } as CSSProperties
             }
         >
-            <Navbar t={t} lang={params.lang} />
 
             <Header
                 tag={t('developers.hero.tag')}
@@ -195,8 +192,6 @@ export default async function Developers({
                     />
                 </SectionWithPreview>
             </section>
-
-            <Footer t={t} />
-        </main>
+        </div>
     );
 }

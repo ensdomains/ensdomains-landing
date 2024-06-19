@@ -2,10 +2,8 @@ import { clsx } from 'clsx';
 import { CSSProperties } from 'react';
 
 import { ColorCards } from '~/components/ColorCards/ColorCards';
-import { Footer } from '~/components/Footer/Footer';
 import { Header } from '~/components/Header/Header';
 import { LinkList } from '~/components/LinkList/LinkList';
-import { Navbar } from '~/components/Navbar/Navbar';
 import { SmallLinkList } from '~/components/SmallLinkList/SmallLinkList';
 import { useTranslation } from '~/i18n/useTranslation';
 
@@ -29,8 +27,7 @@ export default async function Ecosystem({
     const { t } = await useTranslation(params.lang, 'translation');
 
     return (
-        <main
-            className="page"
+        <div
             style={
                 {
                     '--page-text': 'var(--ens-blue)',
@@ -38,9 +35,6 @@ export default async function Ecosystem({
                 } as CSSProperties
             }
         >
-
-            <Navbar t={t} lang={params.lang} />
-
             <Header
                 tag={t('ecosystem.hero.tag')}
                 title={t('ecosystem.hero.title')}
@@ -132,8 +126,6 @@ export default async function Ecosystem({
                     />
                 </div>
             </section>
-
-            <Footer t={t} />
-        </main>
+        </div>
     );
 }

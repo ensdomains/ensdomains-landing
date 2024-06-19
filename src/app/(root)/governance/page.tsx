@@ -2,10 +2,8 @@ import { clsx } from 'clsx';
 import { CSSProperties } from 'react';
 
 import { ColorCards } from '~/components/ColorCards/ColorCards';
-import { Footer } from '~/components/Footer/Footer';
 import { Header } from '~/components/Header/Header';
 import { LinkList } from '~/components/LinkList/LinkList';
-import { Navbar } from '~/components/Navbar/Navbar';
 import { Language } from '~/i18n/settings';
 import { useTranslation } from '~/i18n/useTranslation';
 
@@ -34,8 +32,7 @@ export default async function Governance({
     const { t } = await useTranslation(params.lang, 'translation');
 
     return (
-        <main
-            className="page"
+        <div
             style={
                 {
                     '--page-text': 'var(--ens-green)',
@@ -43,7 +40,6 @@ export default async function Governance({
                 } as CSSProperties
             }
         >
-            <Navbar t={t} lang={params.lang} />
             <Header
                 tag={t('governance.hero.tag')}
                 title={t('governance.hero.title')}
@@ -229,8 +225,6 @@ export default async function Governance({
                     ]}
                 />
             </section>
-
-            <Footer t={t} />
-        </main>
+        </div>
     );
 }

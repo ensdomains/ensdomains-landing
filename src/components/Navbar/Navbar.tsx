@@ -1,5 +1,4 @@
 import { clsx } from 'clsx';
-import { TFunction } from 'i18next';
 import Link from 'next/link';
 import { CSSProperties, FC } from 'react';
 import { ExternalLink } from 'react-external-link';
@@ -12,11 +11,22 @@ import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import styles from './Navbar.module.css';
 import { NavbarFade } from './NavbarFade';
 
-export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
-    t,
+type Links = {
+    blog: string;
+    roadmap: string;
+    developers: string;
+    ecosystem: string;
+    governance: string;
+    launch: string;
+};
+
+export const Navbar: FC<{ lang: Language; links: Links }> = ({
+    links,
     lang = fallbackLng,
 }) => {
     const langPrefix = getLangPrefix((lang as Language) || fallbackLng);
+
+    const items = Object.entries(links).filter(([k]) => !['blog', 'roadmap', 'launch'].includes(k));
 
     return (
         <nav id="nav" className={clsx(ui.flex, ui['flex-row'], styles.nav)}>
@@ -35,19 +45,9 @@ export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
             </Link>
             <div className={clsx(ui.flex, ui['flex-row'], styles.right)}>
                 <div className={clsx(ui.flex, ui['flex-row'], styles.links)}>
-                    {[
-                        'developers',
-                        'ecosystem',
-                        'governance',
-                        'blog',
-                        'roadmap',
-                    ].map((item) => {
-                        const url
-                            = item == 'blog'
-                                ? 'https://blog.ens.domains'
-                                : item == 'roadmap'
-                                    ? 'https://v3x.fyi/s1'
-                                    : `${langPrefix}/${item}`;
+
+                    {items.map(([item, link]) => {
+                        const url = `${langPrefix}/${item}`;
 
                         const color
                             = {
@@ -67,10 +67,16 @@ export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
                                     } as CSSProperties
                                 }
                             >
-                                {t(`nav.${item}`)}
+                                {link}
                             </Link>
                         );
                     })}
+                    <ExternalLink href="https://blog.ens.domains" className={styles.link}>
+                        {links.blog}
+                    </ExternalLink>
+                    <ExternalLink href="https://example.com" className={styles.link}>
+                        {links.roadmap}
+                    </ExternalLink>
                 </div>
                 <div className={styles.langWithApp}>
                     <LanguageSwitcher lang={lang} />
@@ -78,7 +84,7 @@ export const Navbar: FC<{ t: TFunction<string, string>; lang: Language }> = ({
                         href="https://app.ens.domains"
                         className={(styles.launch, ui.button)}
                     >
-                        {t('nav.launch')}
+                        {links.launch}
                     </ExternalLink>
                 </div>
             </div>

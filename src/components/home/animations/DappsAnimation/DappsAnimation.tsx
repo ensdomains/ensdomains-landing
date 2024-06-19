@@ -1,7 +1,6 @@
 'use client';
 
 import { clsx } from 'clsx';
-import { TFunction } from 'i18next';
 
 import {
     ArrowDownIcon,
@@ -67,7 +66,7 @@ const FarcasterPost = () => (
     </div>
 );
 
-export const DappsAnimation = ({ t }: { t: TFunction }) => {
+export const DappsAnimation = ({ swap, home }: { swap: string; home: string }) => {
     const { ref, isIntersecting } = useIntersectionObserver({
         threshold: 1,
     });
@@ -191,7 +190,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                         <ArrowDownIcon className={styles.swapCurrencyIcon} />
                     </div>
                     <button className={styles.swapButton}>
-                        {t('home.features.consistent.swapButton')}
+                        {swap}
                     </button>
                 </div>
             </div>
@@ -208,7 +207,7 @@ export const DappsAnimation = ({ t }: { t: TFunction }) => {
                         {...{ sources }}
                     />
                     <div className={styles.farcasterTitleText}>
-                        {t('home.features.farcaster.title')}
+                        {home}
                     </div>
                 </div>
                 <div

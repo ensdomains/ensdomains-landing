@@ -1,5 +1,6 @@
+'use client';
+
 import { clsx } from 'clsx';
-import { TFunction } from 'i18next';
 
 import ui from '~/styles/ui.module.css';
 import { SearchIcon } from '../icons';
@@ -7,7 +8,7 @@ import styles from './SearchInput.module.css';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-export const SearchInput = ({ t }: { t: TFunction<string, string> }) => {
+export const SearchInput = ({ caption }: { caption: string }) => {
     const router = useRouter();
 
     const [initial, setInitial] = useState(true);
@@ -22,7 +23,7 @@ export const SearchInput = ({ t }: { t: TFunction<string, string> }) => {
             )}
         >
             <span className={styles.caption}>
-                {t('home.hero.inputCaption')}
+                {caption}
             </span>
             <img src="/assets/arrow-down.svg" width="16" height="13" alt="" />
             <div

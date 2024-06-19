@@ -1,14 +1,13 @@
 'use client';
 
 import { clsx } from 'clsx';
-import { TFunction } from 'i18next';
 import CountUp from 'react-countup';
 import ui from '~/styles/ui.module.css';
 import styles from './StatsCounter.module.css';
 import stats from '~/stats.json';
 import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
 
-export const StatsCounter = ({ t }: { t: TFunction }) => {
+export const StatsCounter = ({ captions }: { captions: { names: string; integrations: string; owners: string } }) => {
     return (
         <div
             className={clsx(
@@ -37,7 +36,7 @@ export const StatsCounter = ({ t }: { t: TFunction }) => {
                         formattingFn={n => n.toLocaleString()}
                     />
                     {' '}
-                    {t(key)}
+                    {captions[key]}
                 </div>
             ))}
         </div>

@@ -6,7 +6,6 @@ import { useIntersectionObserver } from '~/utils/useIntersectionObserver';
 
 import styles from './MessageAnimation.module.css';
 import ui from '~/styles/ui.module.css';
-import { TFunction } from 'i18next';
 import { ReactNode } from 'react';
 import { MessageBubbleIcon } from '~/components/icons';
 
@@ -23,25 +22,18 @@ const MessageBox = ({ children, isIntersecting }: { children: ReactNode;isInters
     );
 };
 
-export const MessageAnimation = ({ t }: { t: TFunction }) => {
+export const MessageAnimation = ({ messages }: { messages: string[] }) => {
     const { ref, isIntersecting } = useIntersectionObserver({
         threshold: 0.75,
     });
 
     return (
         <div className={clsx(styles.container, ui.flex, ui['flex-col'])} ref={ref}>
-            <MessageBox {...{ isIntersecting }}>
-                { t('home.features.farewell.animation.m1')}
-            </MessageBox>
-            <MessageBox {...{ isIntersecting }}>
-                { t('home.features.farewell.animation.m2')}
-            </MessageBox>
-            <MessageBox {...{ isIntersecting }}>
-                { t('home.features.farewell.animation.m3')}
-            </MessageBox>
-            <MessageBox {...{ isIntersecting }}>
-                { t('home.features.farewell.animation.m4')}
-            </MessageBox>
+            {messages.map(message => (
+                <MessageBox key={message} {...{ isIntersecting }}>
+                    {message}
+                </MessageBox>
+            ))}
         </div>
     );
 };

@@ -1,16 +1,12 @@
-'use client';
-
 import { clsx } from 'clsx';
 
 import { Carousel } from '~/components/Carousel/Carousel';
 import { ColorCards } from '~/components/ColorCards/ColorCards';
 import { FeaturePreview } from '~/components/FeaturePreview/FeaturePreview';
-import { Footer } from '~/components/Footer/Footer';
 import { Header } from '~/components/Header/Header';
 import { DappsAnimation } from '~/components/home/animations/DappsAnimation/DappsAnimation';
 import { MessageAnimation } from '~/components/home/animations/MessageAnimation/MessageAnimation';
 import { HeroContent } from '~/components/home/header/HeroContent/HeroContent';
-import { Navbar } from '~/components/Navbar/Navbar';
 import { SearchInput } from '~/components/SearchInput/SearchInput';
 import { TwoCol } from '~/components/TwoCol/TwoCol';
 import { fallbackLng, Language } from '~/i18n/settings';
@@ -59,13 +55,12 @@ const partners: PartnerEntry[] = [
     },
 ];
 
-// eslint-disable-next-line @next/next/no-async-client-component
 export default async function Home({ params: { lang = fallbackLng } }: { params: { lang?: Language } }) {
     const { t } = await useTranslation(lang, 'translation');
 
     return (
-        <main>
-            <Navbar t={t} lang={lang} />
+        <>
+
             <Header
                 title={t('home.hero.title')}
                 subtitle={t('home.hero.subtitle')}
@@ -74,7 +69,7 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
                 <HeroContent />
             </Header>
             <section className={clsx(ui['page'], styles.mainSection)}>
-                <SearchInput t={t} />
+                <SearchInput caption={t('home.hero.inputCaption')} />
                 <div>
                     <div className={clsx(ui.flex, ui['flex-col'], styles.title)}>
                         <h2>{t('home.features.title')}</h2>
@@ -90,7 +85,13 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
                             position={0}
                             gridSrc="blue-grid.svg"
                         >
-                            <MessageAnimation t={t} />
+                            <MessageAnimation messages={[
+                                t('home.features.farewell.animation.m1'),
+                                t('home.features.farewell.animation.m2'),
+                                t('home.features.farewell.animation.m3'),
+                                t('home.features.farewell.animation.m4'),
+                            ]}
+                            />
                         </FeaturePreview>
                         <FeaturePreview
                             title={t('home.features.consistent.title')}
@@ -101,7 +102,7 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
                             position={1}
                             gridSrc="magenta-grid.svg"
                         >
-                            <DappsAnimation t={t} />
+                            <DappsAnimation swap={t('home.features.consistent.swapButton')} home={t('home.features.farcaster.title')} />
                         </FeaturePreview>
                         <FeaturePreview
                             title={t('home.features.ownership.title')}
@@ -221,9 +222,13 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
                         },
                     ]}
                 />
-                <StatsCounter t={t} />
+                <StatsCounter captions={{
+                    names: t('home.stats.names'),
+                    integrations: t('home.stats.integrations'),
+                    owners: t('home.stats.owners'),
+                }}
+                />
             </section>
-            <Footer t={t} />
-        </main>
+        </>
     );
 }

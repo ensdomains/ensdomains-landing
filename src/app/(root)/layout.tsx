@@ -8,6 +8,10 @@ import { Language } from '~/i18n/settings';
 import { dir } from 'i18next';
 import { useTranslation } from '~/i18n/useTranslation';
 import { PageProps } from '~/utils/types';
+import { Navbar } from '~/components/Navbar/Navbar';
+import { Footer } from '~/components/Footer/Footer';
+
+export { generateStaticParams } from '~/utils/getStatic';
 
 export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
     const { t } = await useTranslation(params.lang, 'translation');
@@ -27,7 +31,65 @@ export const generateMetadata = async ({ params }: PageProps): Promise<Metadata>
     };
 };
 
-export default function RootLayout({ children, params: { lang = 'en' } }: { children: ReactNode ; params: { lang?: Language } }) {
+export default async function RootLayout({ children, params: { lang = 'en' } }: { children: ReactNode ; params: { lang?: Language } }) {
+    const { t } = await useTranslation(lang, 'translation');
+
+    const footerItems = [
+        {
+            title: t('footer.community'),
+            entries: [
+                { title: t('footer.blog'), link: 'https://blog.ens.domains' },
+                { title: t('footer.feedback'), link: '' },
+                {
+                    title: t('footer.discord'),
+                    link: 'https://chat.ens.domains',
+                },
+                {
+                    title: t('footer.twitter'),
+                    link: 'https://x.com/ensdomains',
+                },
+                {
+                    title: t('footer.github'),
+                    link: 'https://github.com/ensdomains',
+                },
+                {
+                    title: t('footer.youtube'),
+                    link: 'https://youtube.com/ensdomains',
+                },
+                {
+                    title: t('footer.forums'),
+                    link: 'https://discuss.ens.domains',
+                },
+            ],
+        },
+        {
+            title: t('footer.help'),
+            entries: [
+                {
+                    title: t('footer.support'),
+                    link: 'https://support.ens.domains',
+                },
+                { title: t('footer.contact'), link: '' },
+            ],
+        },
+        {
+            title: t('footer.ens'),
+            entries: [
+                { title: t('footer.privacy-policy'), link: '' },
+                { title: t('footer.tou'), link: '' },
+                {
+                    title: t('footer.bugs'),
+                    link: 'https://docs.ens.domains/bugs',
+                },
+                {
+                    title: t('footer.brand'),
+                    link: 'https://github.com/ensdomains/media-kit',
+                },
+                { title: t('footer.jobs'), link: 'https://' },
+            ],
+        },
+    ];
+
     return (
         <html
             lang={lang}
@@ -44,7 +106,23 @@ export default function RootLayout({ children, params: { lang = 'en' } }: { chil
             <head>
                 <link rel="icon" type="image/png" href="/favicon.png" />
             </head>
-            <body>{children}</body>
+            <body>
+                <main>
+                    <Navbar
+                        links={{
+                            governance: t('nav.governance'),
+                            blog: t('nav.blog'),
+                            developers: t('nav.developers'),
+                            ecosystem: t('nav.ecosystem'),
+                            roadmap: t('nav.roadmap'),
+                            launch: t('nav.launch'),
+                        }}
+                        lang={lang}
+                    />
+                    {children}
+                    <Footer footerItems={footerItems} copyrightNotice={t('footer.ltd')} />
+                </main>
+            </body>
         </html>
     );
 }

@@ -1,19 +1,8 @@
-import { Footer } from '~/components/Footer/Footer';
 import { LinkList } from '~/components/LinkList/LinkList';
-import { Navbar } from '~/components/Navbar/Navbar';
-import { Language } from '~/i18n/settings';
-import { useTranslation } from '~/i18n/useTranslation';
 
-export default async function Brand({
-    params,
-}: {
-    params: { lang: Language };
-}) {
-    const { t } = await useTranslation(params.lang, 'translation');
-
+export default async function Brand() {
     return (
-        <main className="page">
-            <Navbar t={t} lang={params.lang} />
+        <>
             <LinkList
                 links={[
                     {
@@ -37,7 +26,6 @@ export default async function Brand({
                 ]}
             />
 
-            <Footer t={t} />
-        </main>
+        </>
     );
 }
