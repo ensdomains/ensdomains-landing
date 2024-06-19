@@ -1,11 +1,26 @@
-@keyframes move-diagonal {
-    0%, 100% {
-        transform: rotate(45deg) translate(0, 0);
-        animation-timing-function: ease-in-out;
+@keyframes move {
+    0% {
+        opacity: 0;
     }
-    50% {
-        transform: rotate(45deg) translate(var(--shift), 0);
-        animation-timing-function: ease-in-out;
+    10% {
+        opacity: 0;
+        offset-distance: 0%;
+    }
+    11% {
+        opacity: 0;
+    }
+    12% {
+        opacity: 1;
+    }
+    94% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        offset-distance: 100%;
+        opacity: 0;
     }
 }
 
@@ -39,10 +54,13 @@
 
     height: 33px;
     width: 33px;
-    top: 210px;
-    left: 28px;
-    --shift: 170px;
-    animation: move-diagonal 4s linear infinite;
+    animation: move 4s linear infinite;
+}
+
+.animated-square[data-name="magenta"] {
+    left: 138px;
+    top: 0;
+    offset-path: path("M117.422 0.355957L0.725778 424.599");
 }
 
 @media (max-width: 768px) {
@@ -64,13 +82,5 @@
     .position-container:nth-child(2) > img, .position-container:nth-child(3) img {
         height: 240px;
         width: max-content;
-    }
-    .animated-square {
-        height: 20px;
-        width: 20px;
-        top: 129px;
-        left: 17px;
-        --shift: 105px;
-        animation: move-diagonal 4s linear infinite;
     }
 }
