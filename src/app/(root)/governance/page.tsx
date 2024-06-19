@@ -70,9 +70,9 @@ export default async function Governance({
                     >
                         <ResponsiveImage
                             sources={{
-                                desktop: '/assets/governance/vote.png',
-                                tablet: '/assets/governance/vote-tablet.png',
-                                mobile: '/assets/governance/vote-mobile.png',
+                                desktop: '/assets/governance/vote.svg',
+                                tablet: '/assets/governance/vote-tablet.svg',
+                                mobile: '/assets/governance/vote-mobile.svg',
                             }}
                             sourceProps={{
                                 mobile: {
@@ -96,9 +96,9 @@ export default async function Governance({
                     >
                         <ResponsiveImage
                             sources={{
-                                desktop: '/assets/governance/delegation.png',
-                                tablet: '/assets/governance/delegation-tablet.png',
-                                mobile: '/assets/governance/delegation-mobile.png',
+                                desktop: '/assets/governance/delegation.svg',
+                                tablet: '/assets/governance/delegation-tablet.svg',
+                                mobile: '/assets/governance/delegation-mobile.svg',
                             }}
                             sourceProps={{
                                 mobile: {
