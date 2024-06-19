@@ -1,13 +1,7 @@
-import { Language } from '~/i18n/settings';
+import Page, { generateMetadata } from '~/app/(root)/developers/page';
 
-import Page from '~/app/(root)/developers/page';
+export default Page;
 
-export default async function LocaleDevelopers({
-    params,
-}: {
-    params: { lang: Language };
-}) {
-    return <Page params={params} />;
-}
+export { generateMetadata };
 
 export { generateStaticParams } from '~/utils/getStatic';

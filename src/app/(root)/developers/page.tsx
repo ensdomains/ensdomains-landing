@@ -6,19 +6,26 @@ import { Header } from '~/components/Header/Header';
 import { LinkList } from '~/components/LinkList/LinkList';
 import { Navbar } from '~/components/Navbar/Navbar';
 import { TwoCol } from '~/components/TwoCol/TwoCol';
-import { Language } from '~/i18n/settings';
 import { useTranslation } from '~/i18n/useTranslation';
 
 import ui from '~/styles/ui.module.css';
 import { HeroContent } from '~/components/developers/header/HeroContent';
 import { SectionWithPreview } from '~/components/SectionWithPreview/SectionWithPreview';
 import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
+import { PageProps } from '~/utils/types';
+import type { Metadata } from 'next';
 
-export default async function Home({
+export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
+    const { t } = await useTranslation(params.lang, 'translation');
+
+    return {
+        title: `${t('developers.hero.tag')} | ENS`,
+    };
+};
+
+export default async function Developers({
     params,
-}: {
-    params: { lang: Language };
-}) {
+}: PageProps) {
     const { t } = await useTranslation(params.lang, 'translation');
 
     return (

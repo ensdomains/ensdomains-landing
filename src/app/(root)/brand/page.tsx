@@ -4,7 +4,7 @@ import { Navbar } from '~/components/Navbar/Navbar';
 import { Language } from '~/i18n/settings';
 import { useTranslation } from '~/i18n/useTranslation';
 
-export default async function Home({
+export default async function Brand({
     params,
 }: {
     params: { lang: Language };

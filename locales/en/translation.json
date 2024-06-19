@@ -183,5 +183,8 @@
     "brand": "Brand",
     "jobs": "Jobs",
     "ltd": "ENS, Copyright, 2024. All Rights Reserved."
+  },
+  "seo": {
+    "description": "Welcome to the new internet."
   }
 }

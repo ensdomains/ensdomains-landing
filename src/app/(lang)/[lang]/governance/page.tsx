@@ -1,13 +1,7 @@
-import { Language } from '~/i18n/settings';
+import Page, { generateMetadata } from '~/app/(root)/governance/page';
 
-import Page from '~/app/(root)/governance/page';
+export default Page;
 
-export default async function LocaleGovernance({
-    params,
-}: {
-    params: { lang: Language };
-}) {
-    return <Page params={params} />;
-}
+export { generateMetadata };
 
 export { generateStaticParams } from '~/utils/getStatic';

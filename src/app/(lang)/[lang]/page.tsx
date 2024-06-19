@@ -1,12 +1,8 @@
-import { Language } from '~/i18n/settings';
-import Home from '../../(root)/page';
+import { generateMetadata } from '~/app/(root)/layout';
+import Page from '../../(root)/page';
 
-export default async function LocaleHome({
-    params,
-}: {
-    params: { lang: Language };
-}) {
-    return <Home params={params} />;
-}
+export default Page;
+
+export { generateMetadata };
 
 export { generateStaticParams } from '~/utils/getStatic';

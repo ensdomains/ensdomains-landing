@@ -1,3 +1,5 @@
+import type { Language } from '~/i18n/settings';
+
 export type Color =
     | 'ens-blue'
     | 'ens-light-blue'
@@ -26,4 +28,8 @@ export type PartnerEntry = {
     icon: string;
     name: string;
     category: 'wallet' | 'exchange' | 'dApp' | 'browser' | 'service';
+};
+
+export type PageProps = {
+    params: { lang: Language };
 };

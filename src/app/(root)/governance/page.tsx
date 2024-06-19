@@ -15,8 +15,18 @@ import { TwoCol } from '~/components/TwoCol/TwoCol';
 import { SectionWithPreview } from '~/components/SectionWithPreview/SectionWithPreview';
 import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
 import { HeroContent } from '~/components/governance/HeroContent';
+import type { PageProps } from '~/utils/types';
+import type { Metadata } from 'next';
 
-export default async function Home({
+export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
+    const { t } = await useTranslation(params.lang, 'translation');
+
+    return {
+        title: `${t('governance.hero.tag')} | ENS`,
+    };
+};
+
+export default async function Governance({
     params,
 }: {
     params: { lang: Language };

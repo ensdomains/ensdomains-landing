@@ -7,18 +7,25 @@ import { Header } from '~/components/Header/Header';
 import { LinkList } from '~/components/LinkList/LinkList';
 import { Navbar } from '~/components/Navbar/Navbar';
 import { SmallLinkList } from '~/components/SmallLinkList/SmallLinkList';
-import { Language } from '~/i18n/settings';
 import { useTranslation } from '~/i18n/useTranslation';
 
 import styles from './page.module.css';
 import ui from '~/styles/ui.module.css';
 import { EcosystemList } from '~/components/ecosystem/EcosystemList';
+import type { Metadata } from 'next';
+import type { PageProps } from '~/utils/types';
 
-export default async function Home({
+export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
+    const { t } = await useTranslation(params.lang, 'translation');
+
+    return {
+        title: `${t('ecosystem.hero.tag')} | ENS`,
+    };
+};
+
+export default async function Ecosystem({
     params,
-}: {
-    params: { lang: Language };
-}) {
+}: PageProps) {
     const { t } = await useTranslation(params.lang, 'translation');
 
     return (
@@ -31,6 +38,7 @@ export default async function Home({
                 } as CSSProperties
             }
         >
+
             <Navbar t={t} lang={params.lang} />
 
             <Header
