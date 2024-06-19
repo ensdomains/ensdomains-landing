@@ -20,8 +20,6 @@
 .langWithApp {
     display: flex;
     align-items: center;
-
-    gap: 28px;
 }
 
 .logo {
@@ -45,10 +43,6 @@
 
 .link:hover {
     color: var(--link-hover);
-}
-
-.links {
-    gap: 40px;
 }
 
 .links,
@@ -77,6 +71,10 @@
     display: block;
 }
 
+.links, .langWithApp {
+    gap: 28px;
+}
+
 @media (min-width: 768px) {
     .nav {
         padding: 12px 12px 12px 24px; 
@@ -90,10 +88,11 @@
     .desktopOnly {
         display: none;
     }
+    
 }
 
 @media (min-width: 1280px) {
-    .langWithApp {
+    .langWithApp, .links {
         gap: 40px;
     }
     .nav {
