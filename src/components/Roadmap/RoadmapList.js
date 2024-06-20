@@ -9,21 +9,13 @@ import SectionCard from './SectionCard';
 export default function RoadmapList() {
     return (
         <React.Fragment>
-            {completed.length > 0 && (
-                <SectionCard
-                    title="Completed"
-                    description="What we've done that is now live."
-                    items={completed}
-                    color="green"
-                    expandable
-                />
-            )}
             {inProgress.length > 0 && (
                 <SectionCard
                     title="In progress"
                     description="You'll see these soon because we're working on them."
                     items={inProgress}
                     color="blue"
+                    showAnnouncement
                 />
             )}
             {upNext.length > 0 && (
@@ -32,6 +24,15 @@ export default function RoadmapList() {
                     description="We're going to discuss these next. This list is in no particular order."
                     items={upNext}
                     color="blue"
+                />
+            )}
+            {completed.length > 0 && (
+                <SectionCard
+                    title="Recently completed"
+                    description="What we've done that is now live."
+                    items={completed}
+                    color="green"
+                    expandable
                 />
             )}
             {onPause.length > 0 && (

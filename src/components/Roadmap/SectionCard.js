@@ -1,8 +1,15 @@
-import { Card, DownChevronSVG, mq, Typography } from '@ensdomains/thorin_next';
+import {
+    Card,
+    DownChevronSVG,
+    mq,
+    RightArrowSVG,
+    Typography,
+} from '@ensdomains/thorin_next';
 import React from 'react';
 import useTransition from 'react-transition-state';
 import styled, { css } from 'styled-components';
 
+import AnnouncementBanner from '../AnnouncementBanner';
 import SectionItem from './SectionItem';
 
 const DISPLAY_INTERVAL = 3;
@@ -95,6 +102,7 @@ export default function SectionCard({
     color = 'blue',
     items = [],
     expandable = false,
+    showAnnouncement = false,
 }) {
     const [expanded, setExpanded] = React.useState(false);
     const displayedItems = React.useMemo(() => {
@@ -150,6 +158,22 @@ export default function SectionCard({
                             {description}
                         </Typography>
                     </div>
+                    {showAnnouncement && (
+                        <AnnouncementBanner
+                            title="ENSv2: The Next Generation of ENS"
+                            description="Our vision for the next iteration of the ENS protocol, on L2"
+                            primaryButton={{
+                                label: 'ENSv2 Project Plan',
+                                to: '/l2-roadmap',
+                                suffix: <RightArrowSVG />,
+                            }}
+                            secondaryButton={{
+                                label: 'Read the announcement',
+                                href: 'https://blog.ens.domains/post/ensv2',
+                            }}
+                            border={false}
+                        />
+                    )}
                     <ListWrapper style={{ height: height }}>
                         <List ref={contentReference}>
                             {displayedItems.map((properties) => (
