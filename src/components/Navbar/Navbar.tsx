@@ -12,6 +12,7 @@ import ui from '~/styles/ui.module.css';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import styles from './Navbar.module.css';
 import { NavbarFade } from './NavbarFade';
+import { EnsNavIcon } from '../icons';
 
 type Links = {
     blog: string;
@@ -36,10 +37,8 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
         <nav id="nav" data-open={isOpen} className={clsx(ui.flex, styles.nav)}>
             <NavbarFade />
             <div className={clsx(ui.flex, ui['flex-row'], styles.mobileMenu)}>
-                <Link href={langPrefix || '/'}>
-                    <img
-                        src="/assets/ens_logo_dark.svg"
-                        alt="ENS"
+                <Link href={langPrefix || '/'} onClick={() => setOpen(false)}>
+                    <EnsNavIcon
                         className={(styles.logo, styles.tabletOnly)}
                     />
                     <img
@@ -73,6 +72,7 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
 
                         return (
                             <Link
+                                onClick={() => setOpen(false)}
                                 key={url}
                                 href={url}
                                 className={styles.link}

@@ -16,7 +16,10 @@ export const LanguageSwitcher: FC<{ lang: Language }> = ({ lang }) => {
     return (
         <details className={styles.details}>
             <summary className={styles.summary}>
-                <span className={styles.currentLanguage}>{lang}</span>
+                <span className={styles.currentLanguage}>
+                    <span className={styles.currentLanguageName}>{languageNames[lang]}</span>
+                    <span className={styles.currentLanguageShort}>{lang}</span>
+                </span>
             </summary>
             <ul className={styles.dropdown}>
                 {languages.map((language) => {
