@@ -35,27 +35,33 @@
 }
 
 .link {
-    color: var(--ens-dark-blue);
     font-size: 18px;
-    font-family: var(--ens-mono);
+    color: var(--ens-blue);
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--ens-blue);
+    width: 100%;
 }
 
 .link:hover {
     color: var(--link-hover);
 }
 
-.links,
 .navContent {
     align-items: center;
     flex-direction: column;
 }
 
+.links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
 .navContent {
     display: flex;
     width: 100%;
-
-    top: 0;
-    left: 0;
+    
 }
 
 .tabletOnly {
@@ -67,7 +73,7 @@
 }
 
 .links, .langWithApp {
-    gap: 28px;
+    gap: 20px;
 }
 
 .menuButton {
@@ -94,6 +100,18 @@
     .nav[data-open="true"] {
         background: var(--ens-light-blue);
     }
+    .launch {
+        padding: 30px 0 !important;
+        width: 100% !important;
+        max-width: 458px;
+    }
+    .langWithApp {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .navContent {
+        gap: 20px;
+    }
 }
 
 @media (min-width: 800px) {
@@ -112,6 +130,10 @@
     }
     .link {
         font-size: 12px;
+        color: var(--ens-dark-blue);
+        font-family: var(--ens-mono), monospace;
+        padding: unset;
+        width: unset;
     }
     .links, .navContent, .nav, .langWithApp {
         flex-direction: row;
