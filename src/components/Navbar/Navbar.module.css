@@ -1,5 +1,4 @@
 .nav {
-    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
@@ -9,17 +8,17 @@
     z-index: 10;
 
     gap: 2rem;
-   
-}
-
-.nav[data-opaque="true"] {
-    background: linear-gradient(180deg, #fff 0 5%, hsla(0,0%,100%,0) 90%);
-    backdrop-filter: blur(4px);
+    padding: 16px 30px;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
 }
 
 .langWithApp {
     display: flex;
     align-items: center;
+
+    flex-direction: column;
 }
 
 .logo {
@@ -46,21 +45,17 @@
 }
 
 .links,
-.right {
+.navContent {
     align-items: center;
+    flex-direction: column;
 }
 
-.right {
+.navContent {
+    display: flex;
     width: 100%;
-    gap: 80px;
-    justify-content: end;
-}
 
-@media (max-width: 1024px) {
-    .right {
-        /* temp hide until we build mobile */
-        display: none;
-    }
+    top: 0;
+    left: 0;
 }
 
 .tabletOnly {
@@ -75,9 +70,62 @@
     gap: 28px;
 }
 
-@media (min-width: 768px) {
+.menuButton {
+    padding: 0;
+    height: 12px;
+    width: 12px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.mobileMenu {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .nav[data-open="false"] .navContent {
+        display: none;
+    }
+    .nav[data-open="false"] {
+        background: transparent;
+    }
+    .nav[data-open="true"] {
+        background: var(--ens-light-blue);
+    }
+}
+
+@media (min-width: 800px) {
     .nav {
-        padding: 12px 12px 12px 24px; 
+        padding: 12px 12px 12px 24px;
+        background-color: unset;
+        height: auto;
+        justify-content: space-between;
+    }
+    .nav[data-opaque="true"] {
+        background: linear-gradient(180deg, #fff 0 5%, hsla(0,0%,100%,0) 90%);
+        backdrop-filter: blur(4px);
+    }
+    .langWithApp, .links {
+        gap: 28px;
+    }
+    .link {
+        font-size: 12px;
+    }
+    .links, .navContent, .nav, .langWithApp {
+        flex-direction: row;
+    }
+    .navContent {
+        display: flex;
+        gap: 80px;
+        justify-content: end;
+    }
+    .menuButton {
+        display: none !important;
+    }
+    .mobileMenu {
+        width: auto;
     }
 }
 
@@ -88,7 +136,13 @@
     .desktopOnly {
         display: none;
     }
-    
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+    .launch {
+        padding: 16px !important;
+        font-size: 16px !important;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -97,5 +151,8 @@
     }
     .nav {
         padding: 20px 16px 20px 36px;
+    }
+    .link {
+        font-size: 18px;
     }
 }

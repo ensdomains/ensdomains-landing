@@ -1,6 +1,8 @@
+'use client';
+
 import { clsx } from 'clsx';
 import Link from 'next/link';
-import { CSSProperties, FC } from 'react';
+import { CSSProperties, FC, useState } from 'react';
 import { ExternalLink } from 'react-external-link';
 
 import { getLangPrefix } from '~/i18n/langPrefix';
@@ -28,24 +30,37 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
 
     const items = Object.entries(links).filter(([k]) => !['blog', 'roadmap', 'launch'].includes(k));
 
-    return (
-        <nav id="nav" className={clsx(ui.flex, ui['flex-row'], styles.nav)}>
-            <NavbarFade />
-            <Link href={langPrefix || '/'}>
-                <img
-                    src="/assets/ens_logo_dark.svg"
-                    alt="ENS"
-                    className={(styles.logo, styles.tabletOnly)}
-                />
-                <img
-                    src="/assets/ens_logo_text_dark.svg"
-                    alt="ENS"
-                    className={(styles.logo, styles.desktopOnly)}
-                />
-            </Link>
-            <div className={clsx(ui.flex, ui['flex-row'], styles.right)}>
-                <div className={clsx(ui.flex, ui['flex-row'], styles.links)}>
+    const [isOpen, setOpen] = useState(false);
 
+    return (
+        <nav id="nav" data-open={isOpen} className={clsx(ui.flex, styles.nav)}>
+            <NavbarFade />
+            <div className={clsx(ui.flex, ui['flex-row'], styles.mobileMenu)}>
+                <Link href={langPrefix || '/'}>
+                    <img
+                        src="/assets/ens_logo_dark.svg"
+                        alt="ENS"
+                        className={(styles.logo, styles.tabletOnly)}
+                    />
+                    <img
+                        src="/assets/ens_logo_text_dark.svg"
+                        alt="ENS"
+                        className={(styles.logo, styles.desktopOnly)}
+                    />
+                </Link>
+                <button onClick={() => setOpen(!isOpen)} className={styles.menuButton}>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="menu">
+                            <rect id="Rectangle 2736" y="-0.000488281" width="4" height="4" rx="1" fill="#0080BC" />
+                            <rect id="Rectangle 2736_2" y="7.99951" width="4" height="4" rx="1" fill="#0080BC" />
+                            <rect id="Rectangle 2736_3" x="8" y="-0.000488281" width="4" height="4" rx="1" fill="#0080BC" />
+                            <rect id="Rectangle 2736_4" x="8" y="7.99951" width="4" height="4" rx="1" fill="#0080BC" />
+                        </g>
+                    </svg>
+                </button>
+            </div>
+            <div className={styles.navContent}>
+                <div className={clsx(ui.flex, styles.links)}>
                     {items.map(([item, link]) => {
                         const url = `${langPrefix}/${item}`;
 
@@ -82,7 +97,7 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
                     <LanguageSwitcher lang={lang} />
                     <ExternalLink
                         href="https://app.ens.domains"
-                        className={(styles.launch, ui.button)}
+                        className={clsx(styles.launch, ui.button)}
                     >
                         {links.launch}
                     </ExternalLink>
