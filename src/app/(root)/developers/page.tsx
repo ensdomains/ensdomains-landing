@@ -12,6 +12,7 @@ import { SectionWithPreview } from '~/components/SectionWithPreview/SectionWithP
 import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
 import { PageProps } from '~/utils/types';
 import type { Metadata } from 'next';
+import { StatsCounter } from '~/components/animation/StatsCounter';
 
 export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
     const { t } = await useTranslation(params.lang, 'translation');
@@ -136,25 +137,11 @@ export default async function Developers({
                         },
                     ]}
                 >
-                    <ResponsiveImage
-                        sources={{
-                            desktop: '/assets/developers/grants.png',
-                            tablet: '/assets/developers/grants-tablet.png',
-                            mobile: '/assets/developers/grants-mobile.png',
-                        }}
-                        sourceProps={{
-                            mobile: {
-                                height: 360,
-                                width: 358,
-                            },
-                            tablet: {
-                                height: 335,
-                                width: 333,
-                            },
-                            desktop: {
-                                height: 360,
-                                width: 550,
-                            },
+                    <StatsCounter
+                        captions={{
+                            eth: t('developers.extra.grants.stat.eth'),
+                            proposals: t('developers.extra.grants.stat.proposals'),
+                            voters: t('developers.extra.grants.stat.voters'),
                         }}
                     />
                 </SectionWithPreview>

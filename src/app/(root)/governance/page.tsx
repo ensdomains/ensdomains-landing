@@ -15,6 +15,7 @@ import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
 import { HeroContent } from '~/components/governance/HeroContent';
 import type { PageProps } from '~/utils/types';
 import type { Metadata } from 'next';
+import { StatsCounter } from '~/components/animation/StatsCounter';
 
 export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
     const { t } = await useTranslation(params.lang, 'translation');
@@ -116,26 +117,11 @@ export default async function Governance({
                         title={t('governance.extra.grants.title')}
                         text={t('governance.extra.grants.text')}
                     >
-                        <ResponsiveImage
-                            sources={{
-                                desktop: '/assets/governance/grants.png',
-                                tablet: '/assets/governance/grants-tablet.png',
-                                mobile: '/assets/governance/grants-mobile.png',
-                            }}
-                            sourceProps={{
-                                mobile: {
-                                    height: 240,
-                                    width: 358,
-                                },
-                                tablet: {
-                                    height: 220,
-                                    width: 333,
-                                },
-                                desktop: {
-                                    height: 360,
-                                    width: 686,
-                                },
-                            }}
+                        <StatsCounter captions={{
+                            eth: t('developers.extra.grants.stat.eth'),
+                            proposals: t('developers.extra.grants.stat.proposals'),
+                            voters: t('developers.extra.grants.stat.voters'),
+                        }}
                         />
                     </SectionWithPreview>
                 </div>

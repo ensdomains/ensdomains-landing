@@ -119,6 +119,11 @@
         "cta": {
           "view": "View Grants",
           "apply": "Apply"
+        },
+        "stat": {
+          "eth": "ETH funded",
+          "proposals": "proposals",
+          "voters": "voters"
         }
       },
       "bounty": {

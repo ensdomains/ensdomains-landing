@@ -70,9 +70,9 @@
       "tag": "Essentiële partners"
     },
     "stats": {
-      "integrations": "%s integraties",
-      "names": "%s namen",
-      "owners": "%s eigenaren"
+      "integrations": "integraties",
+      "names": "namen",
+      "owners": "eigenaren"
     }
   },
   "developers": {

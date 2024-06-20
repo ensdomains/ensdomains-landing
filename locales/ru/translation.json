@@ -77,9 +77,9 @@
       "tag": "Ключевые партнеры"
     },
     "stats": {
-      "integrations": "%s интеграций",
-      "names": "%s имен",
-      "owners": "%s владельцев"
+      "integrations": "интеграций",
+      "names": "имен",
+      "owners": "владельцев"
     }
   },
   "developers": {
