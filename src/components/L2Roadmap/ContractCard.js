@@ -16,6 +16,7 @@ const Container = styled.div(
         background: ${theme.colors.blueSurface};
         overflow: hidden;
         border: 1px solid ${theme.colors.bluePrimary};
+        cursor: pointer;
 
         ${$color === 'green' &&
         css`
