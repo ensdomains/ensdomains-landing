@@ -3,17 +3,11 @@ import React from 'react';
 import favicon from '../assets/favicon.ico';
 
 function getTitle(pathname) {
-    const normalizedPathname = pathname.replace(/\/$/, '');
-
-    switch (normalizedPathname) {
+    switch (pathname) {
         case '/governance':
             return 'Governance';
         case '/about':
             return 'About ENS';
-        case '/roadmap':
-            return 'ENS Labs Roadmap';
-        case '/l2-roadmap':
-            return 'ENSv2 Project Plan';
         default:
             return 'Ethereum Name Service';
     }

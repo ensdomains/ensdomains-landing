@@ -38,7 +38,7 @@ const iconForStatus = (status) => {
 
     if (status === 'done') return CheckSVG;
 
-    if (status === 'pending') return MinusCircleSVG;
+    if (status === 'blocked') return MinusCircleSVG;
 
     if (status === 'research') return PencilSVG;
 

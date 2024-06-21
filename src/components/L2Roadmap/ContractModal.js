@@ -1,9 +1,9 @@
-import { CrossSVG, Modal, mq, Typography } from '@ensdomains/thorin_next';
 import React from 'react';
 import styled, { css } from 'styled-components';
+import { CrossSVG, Modal, Typography, mq } from '@ensdomains/thorin_next';
 
-import ContractLinks from './ContractLinks';
 import ContractStatus from './ContractStatus';
+import ContractLinks from './ContractLinks';
 
 const Container = styled.div(
     ({ theme, $color }) => css`
@@ -35,7 +35,6 @@ const Button = styled.button(
         padding: ${theme.space['2']};
         border-radius: ${theme.radii.full};
         transition: all 300ms ease-in-out;
-        cursor: pointer;
 
         svg {
             display: block;
@@ -68,7 +67,7 @@ const HeaderContent = styled.div(
 );
 
 const Footer = styled.div(
-    ({ theme }) => css`
+    ({ theme,}) => css`
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -105,7 +104,7 @@ export default function ContractModal({
                             </Typography>
                         )}
                     </HeaderContent>
-                    <ContractLinks links={links} color={color} size="large" />
+                    <ContractLinks links={links} color={color} size="large"/>
                 </Header>
                 <Footer>
                     <ContractStatus status={status} />

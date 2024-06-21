@@ -31,7 +31,17 @@ const Content = styled.div(({ theme }) => [
     `),
 ]);
 
-export { Head } from '../components/Head';
+const SubContent = styled.div(({ theme }) => [
+    css`
+        display: flex;
+        flex-direction: column;
+        gap: ${theme.space['6']};
+        width: 100%;
+    `,
+    mq.sm.min(css`
+        gap: ${theme.space['6']};
+    `),
+]);
 
 export default function Roadmap(properties) {
     return (
