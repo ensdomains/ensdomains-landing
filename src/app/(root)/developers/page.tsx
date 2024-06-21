@@ -1,18 +1,20 @@
 import { clsx } from 'clsx';
 import { CSSProperties } from 'react';
+import type { Metadata } from 'next';
 
 import { Header } from '~/components/Header/Header';
 import { LinkList } from '~/components/LinkList/LinkList';
 import { TwoCol } from '~/components/TwoCol/TwoCol';
 import { useTranslation } from '~/i18n/useTranslation';
-
 import ui from '~/styles/ui.module.css';
+import styles from './page.module.css';
 import { HeroContent } from '~/components/developers/header/HeroContent';
 import { SectionWithPreview } from '~/components/SectionWithPreview/SectionWithPreview';
-import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
 import { PageProps } from '~/utils/types';
-import type { Metadata } from 'next';
 import { StatsCounter } from '~/components/animation/StatsCounter';
+
+import stats from '~/stats/grants.json';
+import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage';
 
 export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
     const { t } = await useTranslation(params.lang, 'translation');
@@ -138,6 +140,7 @@ export default async function Developers({
                     ]}
                 >
                     <StatsCounter
+                        stats={stats}
                         captions={{
                             eth: t('developers.extra.grants.stat.eth'),
                             proposals: t('developers.extra.grants.stat.proposals'),
@@ -156,27 +159,23 @@ export default async function Developers({
                         },
                     ]}
                 >
-                    <ResponsiveImage
-                        sources={{
-                            desktop: '/assets/developers/bounties.png',
-                            tablet: '/assets/developers/bounties-tablet.png',
-                            mobile: '/assets/developers/bounties-mobile.png',
-                        }}
-                        sourceProps={{
-                            mobile: {
-                                height: 360,
-                                width: 358,
-                            },
-                            tablet: {
-                                height: 335,
-                                width: 333,
-                            },
-                            desktop: {
-                                height: 360,
-                                width: 550,
-                            },
-                        }}
-                    />
+                    <StatsCounter stats={{ bounty: 250_000 }} captions={{ bounty: '' }} className={styles.counter}>
+                        <ResponsiveImage
+                            className={styles.folders}
+                            sources={{
+                                desktop: '/assets/developers/folders.svg',
+                                tablet: '/assets/developers/folders-tablet.svg',
+                                mobile: '/assets/developers/folders-mobile.svg',
+                            }}
+                            sourceProps={{
+                                desktop: { width: 418, height: 233 },
+                                tablet: { width: 281, height: 156 },
+                                mobile: { width: 316, height: 176 },
+                            }}
+                            alt=""
+                        />
+                    </StatsCounter>
+
                 </SectionWithPreview>
             </section>
         </div>

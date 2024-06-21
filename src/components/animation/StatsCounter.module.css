@@ -27,6 +27,10 @@
     color: var(--page-text);
 }
 
+.statGrid {
+    z-index: 1;
+}
+
 .value {
     width: 3ch;
     font-family: var(--ens-mono), monospace;

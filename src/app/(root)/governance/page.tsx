@@ -16,6 +16,7 @@ import { HeroContent } from '~/components/governance/HeroContent';
 import type { PageProps } from '~/utils/types';
 import type { Metadata } from 'next';
 import { StatsCounter } from '~/components/animation/StatsCounter';
+import stats from '~/stats/grants.json';
 
 export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
     const { t } = await useTranslation(params.lang, 'translation');
@@ -117,11 +118,13 @@ export default async function Governance({
                         title={t('governance.extra.grants.title')}
                         text={t('governance.extra.grants.text')}
                     >
-                        <StatsCounter captions={{
-                            eth: t('developers.extra.grants.stat.eth'),
-                            proposals: t('developers.extra.grants.stat.proposals'),
-                            voters: t('developers.extra.grants.stat.voters'),
-                        }}
+                        <StatsCounter
+                            stats={stats}
+                            captions={{
+                                eth: t('developers.extra.grants.stat.eth'),
+                                proposals: t('developers.extra.grants.stat.proposals'),
+                                voters: t('developers.extra.grants.stat.voters'),
+                            }}
                         />
                     </SectionWithPreview>
                 </div>
