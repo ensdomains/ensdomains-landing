@@ -35,7 +35,7 @@
             {
                 "title": "Deploy ENS L2",
                 "description": "Set up everything that ENS needs on an existing L2, or its own L2. This includes deploying infrastructure such as sequencers, block explorer, and provers depending on the type of rollup selected.",
-                "status": "blocked"
+                "status": "pending"
             }
         ]
     },
@@ -45,12 +45,12 @@
             {
                 "title": "Deploy Initial Contracts on L1 & L2",
                 "description": "Initial registries, resolvers, registrars and migration contracts will be deployed.",
-                "status": "blocked"
+                "status": "pending"
             },
             {
                 "title": "Sync Registrations and Renewals to ENS L2",
                 "description": "Once contracts are deployed a sync process will initiate to sync data with the legacy contracts. The old registrar on L1 will need to be halted during the final stage of the sync to prevent duplicate registrations.",
-                "status": "blocked"
+                "status": "pending"
             }
         ]
     },
@@ -60,12 +60,12 @@
             {
                 "title": "Switch Resolution Process to New Contracts",
                 "description": "The Universal resolver will switch to the new registries and begin using the new infrastructure.",
-                "status": "blocked"
+                "status": "pending"
             },
             {
                 "title": "Start Registrations Again",
                 "description": "Once everything is confirmed to be synced correctly, the process of registration and renewals can start on ENS L2.",
-                "status": "blocked"
+                "status": "pending"
             }
         ]
     }

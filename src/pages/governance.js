@@ -216,6 +216,8 @@ const StandardBox = ({
     );
 };
 
+export { Head } from '../components/Head';
+
 export default function Governance(properties) {
     return (
         <Layout {...properties} paddingTop={0}>
