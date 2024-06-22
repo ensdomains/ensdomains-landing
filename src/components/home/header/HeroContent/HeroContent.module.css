@@ -34,7 +34,7 @@
     position: relative;
 }
 
-.animated-square[data-name="diagonal-animation"] {
+.animated-square[data-name='diagonal-animation'] {
     top: 0;
     left: 0;
     animation: move 2s infinite linear;
@@ -44,7 +44,7 @@
     z-index: -1;
 }
 
-.animated-square[data-name="green-bg-animation"] {
+.animated-square[data-name='green-bg-animation'] {
     top: 0px;
     animation: move 2s infinite linear;
 }
@@ -53,7 +53,7 @@
     z-index: 2;
 }
 
-.animated-square[data-name="blue-bg-animation"] {
+.animated-square[data-name='blue-bg-animation'] {
     top: 0;
     left: 0;
     z-index: 2;
@@ -61,13 +61,13 @@
     animation: move 2s infinite reverse linear;
 }
 
-.animated-square[data-name="cyan-bg-animation"] {  
+.animated-square[data-name='cyan-bg-animation'] {  
     left: 0;
 
     animation: move 2s infinite linear;
 }
 
-.animated-square[data-name="magenta-bg-animation"] {
+.animated-square[data-name='magenta-bg-animation'] {
     top: 0;
     left: 0;
 
@@ -142,25 +142,25 @@
     }
 
     /* Animation */
-    .animated-square[data-name="diagonal-animation"] {
-        offset-path: path("M320.668 320.083L1.19939 0.613944");
+    .animated-square[data-name='diagonal-animation'] {
+        offset-path: path('M320.668 320.083L1.19939 0.613944');
     }
-    .animated-square[data-name="green-bg-animation"] {
+    .animated-square[data-name='green-bg-animation'] {
         left: -20px;
-        offset-path: path("M0 47.5L242 47.5");
+        offset-path: path('M0 47.5L242 47.5');
     }
-    .animated-square[data-name="blue-bg-animation"] {
+    .animated-square[data-name='blue-bg-animation'] {
         top: -30px;
-        offset-path: path("M229.493 182.16L70.0049 182.16C57.3023 182.16 47.0049 171.863 47.0049 159.16L47.0049 -1.31794");
+        offset-path: path('M229.493 182.16L70.0049 182.16C57.3023 182.16 47.0049 171.863 47.0049 159.16L47.0049 -1.31794');
     }
-    .animated-square[data-name="cyan-bg-animation"] {
+    .animated-square[data-name='cyan-bg-animation'] {
         top: 48px;
-        offset-path: path("M0 0.702148L440 0.702141");
+        offset-path: path('M0 0.702148L440 0.702141');
     }
-    .animated-square[data-name="magenta-bg-animation"] {
+    .animated-square[data-name='magenta-bg-animation'] {
         top: 45px;
         left: -30px;
-        offset-path: path("M0.507812 0.839844L159.996 0.839844C172.699 0.839843 182.996 11.1373 182.996 23.8398V184.318");
+        offset-path: path('M0.507812 0.839844L159.996 0.839844C172.699 0.839843 182.996 11.1373 182.996 23.8398V184.318');
     }
 }
 
@@ -233,27 +233,27 @@
     }
 
     /* Animation */
-    .animated-square[data-name="diagonal-animation"] {
-        offset-path: path("M0.505859 0.28418L256.081 255.859");
+    .animated-square[data-name='diagonal-animation'] {
+        offset-path: path('M0.505859 0.28418L256.081 255.859');
         animation-direction: reverse;
     }
-    .animated-square[data-name="green-bg-animation"] {
+    .animated-square[data-name='green-bg-animation'] {
         top: 30.5px;
         left: -8px;
-        offset-path: path("M0.515625 38.1997L194.116 38.1997");
+        offset-path: path('M0.515625 38.1997L194.116 38.1997');
     }
-    .animated-square[data-name="blue-bg-animation"] {
+    .animated-square[data-name='blue-bg-animation'] {
         left: 7.5px;
-        offset-path: path("M183.386 145.528L55.7951 145.528C45.6331 145.528 37.3951 137.29 37.3951 127.128L37.3951 -1.25462");
+        offset-path: path('M183.386 145.528L55.7951 145.528C45.6331 145.528 37.3951 137.29 37.3951 127.128L37.3951 -1.25462');
     }
-    .animated-square[data-name="cyan-bg-animation"] {
+    .animated-square[data-name='cyan-bg-animation'] {
         top: 40px;
-        offset-path: path("M0.621094 1.31885L352.621 1.31884");
+        offset-path: path('M0.621094 1.31885L352.621 1.31884');
     }
-    .animated-square[data-name="magenta-bg-animation"] {
+    .animated-square[data-name='magenta-bg-animation'] {
         top: 50px;
         left: -12px;
-        offset-path: path("M0.957031 0.472168L128.548 0.472168C138.71 0.472167 146.948 8.71013 146.948 18.8722V147.255");
+        offset-path: path('M0.957031 0.472168L128.548 0.472168C138.71 0.472167 146.948 8.71013 146.948 18.8722V147.255');
     }
 }
 
@@ -330,29 +330,29 @@
     }
 
     /* Animation */
-    .animated-square[data-name="diagonal-animation"] {
+    .animated-square[data-name='diagonal-animation'] {
         top: 34px;
         left: 34px;
-        offset-path: path("M205.189 204.847L0.977286 0.634635");
+        offset-path: path('M205.189 204.847L0.977286 0.634635');
     }
-    .animated-square[data-name="green-bg-animation"] {
+    .animated-square[data-name='green-bg-animation'] {
         top: 55px;
         left: -8px;
-        offset-path: path("M0.181641 0.759888L155.062 0.759874");
+        offset-path: path('M0.181641 0.759888L155.062 0.759874');
     }
-    .animated-square[data-name="blue-bg-animation"] {
+    .animated-square[data-name='blue-bg-animation'] {
         left: 35px;
         top: -14px;
-        offset-path: path("M133.104 130.022L15.9936 130.022C7.86396 130.022 1.27361 123.432 1.27361 115.302L1.27362 -1.70354");
+        offset-path: path('M133.104 130.022L15.9936 130.022C7.86396 130.022 1.27361 123.432 1.27361 115.302L1.27362 -1.70354');
     }
-    .animated-square[data-name="cyan-bg-animation"] {
+    .animated-square[data-name='cyan-bg-animation'] {
         top: 30px;
-        offset-path: path("M0.820312 0.4552L282.42 0.455196");
+        offset-path: path('M0.820312 0.4552L282.42 0.455196');
     }
-    .animated-square[data-name="magenta-bg-animation"] {
+    .animated-square[data-name='magenta-bg-animation'] {
         top: 60px;
         left: -10px;
-        offset-path: path("M0.933594 0.977661L103.006 0.977661C111.136 0.977661 117.726 7.56803 117.726 15.6977V118.404");
+        offset-path: path('M0.933594 0.977661L103.006 0.977661C111.136 0.977661 117.726 7.56803 117.726 15.6977V118.404');
     }
 }
 
@@ -397,10 +397,10 @@
         top: calc(100% - 100px);
     }
     /* Animation */
-    .animated-square[data-name="cyan-bg-animation"] {
+    .animated-square[data-name='cyan-bg-animation'] {
         top: 30px;
         left: -10px;
-        offset-path: path("M0.820312 0.4552L282.42 0.455196");
+        offset-path: path('M0.820312 0.4552L282.42 0.455196');
     }
 
 }
@@ -423,19 +423,19 @@
         height: max-content;
     }
     /* Animation */
-    .animated-square[data-name="green-bg-animation"] {
+    .animated-square[data-name='green-bg-animation'] {
         top: 45px;
         left: -9px;
-        offset-path: path("M0.263672 0.71489L123.684 0.714879");
+        offset-path: path('M0.263672 0.71489L123.684 0.714879');
     }
-    .animated-square[data-name="cyan-bg-animation"] {
+    .animated-square[data-name='cyan-bg-animation'] {
         top: 25px;
-        offset-path: path("M0.974609 0.384712L220.975 0.384709");
+        offset-path: path('M0.974609 0.384712L220.975 0.384709');
     }
-    .animated-square[data-name="magenta-bg-animation"] {
+    .animated-square[data-name='magenta-bg-animation'] {
         top: 68px;
         left: -3px;
-        offset-path: path("M-3.04102 0.888535L78.298 0.888535C84.7763 0.888534 90.028 6.14023 90.028 12.6185V94.4624");
+        offset-path: path('M-3.04102 0.888535L78.298 0.888535C84.7763 0.888534 90.028 6.14023 90.028 12.6185V94.4624');
     }
 }
 
@@ -489,7 +489,7 @@
         left: -37%;
         top: calc(100% - 100px);
     }
-    .animated-square[data-name="magenta-bg-animation"] {
+    .animated-square[data-name='magenta-bg-animation'] {
         top: 70px;
         left: -12px;
     }

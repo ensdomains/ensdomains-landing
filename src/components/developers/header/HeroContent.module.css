@@ -34,12 +34,12 @@
 
 .position-container:nth-child(1) {
     right: 62px;
-    top: 107px;
+    top: 220px;
 }
 
 .position-container:nth-child(2) {
     left: 62px;
-    top: 107px;
+    top: 220px;
 }
 
 .animated-square {

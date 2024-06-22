@@ -45,7 +45,7 @@
 }
 
 .box::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -60,7 +60,7 @@
 }
 
 .card:hover .box::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -75,7 +75,7 @@
 }
 
 .box::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;

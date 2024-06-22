@@ -10,7 +10,7 @@
         "develop": "pnpm run dev",
         "start": "pnpm run dev",
         "lint": "eslint ./src -c eslint.config.mjs",
-        "lint:css": "stylelint -c stylelint.config.mjs ./src/**/*.css"
+        "lint:css": "stylelint -c stylelint.config.mjs './src/**/*.css'"
     },
     "dependencies": {
         "clsx": "^2.1.0",
