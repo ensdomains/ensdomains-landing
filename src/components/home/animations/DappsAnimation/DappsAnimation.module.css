@@ -5,8 +5,8 @@
     grid-template-columns: 1fr max-content; 
     grid-template-rows: repeat(2, max-content); 
     grid-template-areas: 
-        "fnd fnd"
-        ". ."; 
+        'fnd fnd'
+        '. .'; 
     gap: 6px;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .fndBg {
-    background-image: url(/assets/home/fndBg.png);
+    background-image: url('/assets/home/fndBg.png');
     width: 100%;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
@@ -422,7 +422,7 @@
         grid-template-columns: max-content 1fr 1fr;
         grid-template-rows: unset;
         grid-template-areas: 
-    "fnd . ."; 
+    'fnd . .'; 
         gap: 12px;
     }
     .swapName {

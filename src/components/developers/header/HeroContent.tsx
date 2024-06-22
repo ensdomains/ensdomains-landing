@@ -6,19 +6,38 @@ export const HeroContent = () => {
         <>
             <div className={styles['position-container']}>
                 <div className={styles['animation-container']}>
-                    <img src="/assets/developers/dark-magenta-element.svg" height={400} width={400} alt="" />
-                    <AnimatedSquare data-name="magenta" className={styles['animated-square']} />
+                    <img
+                        src="/assets/developers/magenta-element.svg"
+                        height={390}
+                        width={284}
+                        alt=""
+                    />
+                    <AnimatedSquare
+                        data-name="right-top"
+                        className={styles['animated-square']}
+                    />
+                    <AnimatedSquare
+                        data-name="right-bottom"
+                        className={styles['animated-square']}
+                    />
                 </div>
             </div>
             <div className={styles['position-container']}>
                 <div className={styles['animation-container']}>
-                    <img src="/assets/developers/magenta-element.svg" height={390} width={284} alt="" />
-                </div>
-            </div>
-            <div className={styles['position-container']}>
-                <div className={styles['animation-container']}>
-                    <img src="/assets/developers/left.svg" height={390} width={284} alt="" />
-                    <AnimatedSquare className={styles['animated-square']} />
+                    <img
+                        src="/assets/developers/left.svg"
+                        height={390}
+                        width={284}
+                        alt=""
+                    />
+                    <AnimatedSquare
+                        data-name="left-top"
+                        className={styles['animated-square']}
+                    />
+                    <AnimatedSquare
+                        data-name="left-bottom"
+                        className={styles['animated-square']}
+                    />
                 </div>
             </div>
         </>

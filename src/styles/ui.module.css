@@ -93,7 +93,7 @@
     z-index: -1;
     opacity: 0.4;
     background-color: var(--page-text); /* This color will be used by currentColor in the SVG */
-    mask-image: url("/assets/pattern.svg");
+    mask-image: url('/assets/pattern.svg');
     mask-size: 4px 4px; /* Adjust the size of the pattern */
     mask-repeat: repeat;
 }

@@ -4,5 +4,6 @@ export default {
     rules: {
         '@stylistic/indentation': 4,
         '@stylistic/max-empty-lines': 1,
+        '@stylistic/string-quotes': 'single',
     },
 };
