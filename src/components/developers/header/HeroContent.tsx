@@ -13,7 +13,6 @@ export const HeroContent = () => {
             <div className={styles['position-container']}>
                 <div className={styles['animation-container']}>
                     <img src="/assets/developers/magenta-element.svg" height={390} width={284} alt="" />
-
                 </div>
             </div>
             <div className={styles['position-container']}>
@@ -23,6 +22,5 @@ export const HeroContent = () => {
                 </div>
             </div>
         </>
-
     );
 };

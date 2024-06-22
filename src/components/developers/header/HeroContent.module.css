@@ -79,7 +79,7 @@
     .position-container:nth-child(2) {
         right: 36px;
     }
-    .position-container:nth-child(2) > img, .position-container:nth-child(3) img {
+    .position-container:nth-child(2) img, .position-container:nth-child(3) img {
         height: 240px;
         width: max-content;
     }
