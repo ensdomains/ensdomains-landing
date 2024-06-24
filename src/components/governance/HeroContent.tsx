@@ -36,6 +36,28 @@ export const HeroContent = () => {
                     <AnimatedSquare className={styles['animated-square']} />
                 </div>
             </div>
+            <div className={styles['position-container']} data-name="light-diag-top">
+                <div className={styles['animation-container']}>
+                    <img
+                        src="/assets/governance/light-diagonal.svg"
+                        height={400}
+                        width={400}
+                        alt=""
+                    />
+                    <AnimatedSquare className={styles['animated-square']} />
+                </div>
+            </div>
+            <div className={styles['position-container']} data-name="light-diag-bottom">
+                <div className={styles['animation-container']}>
+                    <img
+                        src="/assets/governance/light-diagonal.svg"
+                        height={400}
+                        width={400}
+                        alt=""
+                    />
+                    <AnimatedSquare className={styles['animated-square']} />
+                </div>
+            </div>
         </>
 
     );

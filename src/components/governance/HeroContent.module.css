@@ -41,6 +41,12 @@
     offset-path: path('M-4.12402 0.616699L103.531 0.616699C112.105 0.616699 119.056 7.56748 119.056 16.1417V124.464');
 }
 
+@media (max-width: 1280px) {
+    .position-container[data-name='light-diag-top'], .position-container[data-name='light-diag-bottom'] {
+        display: none;
+    }
+}
+
 @media (min-width: 1280px) {
     .position-container[data-name='turn-left'] .animated-square {
         top: -24px;
@@ -59,6 +65,22 @@
     .position-container[data-name='turn-right'] {
         top: 154px;
         right: 115px;
+    }
+    .position-container[data-name='light-diag-top'] {
+        left: 60px;
+        top: -154px; 
+    }
+    .position-container[data-name='light-diag-bottom'] {
+        right: -21px;
+        bottom: 3px; 
+    }
+    .position-container[data-name='light-diag-top'] .animated-square, .position-container[data-name='light-diag-bottom'] .animated-square {
+        offset-path: path('M0.657471 0.415527L311.784 311.542');
+        top: 45px;
+        left: 58px;
+    }
+    .position-container[data-name='light-diag-bottom'] .animated-square {
+        animation-direction: reverse;
     }
 }
 
