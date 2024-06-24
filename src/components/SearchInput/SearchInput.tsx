@@ -35,9 +35,9 @@ export const SearchInput = ({ caption }: { caption: string }) => {
             >
                 <div className={styles.inputContainer}>
                     <input
-                        defaultValue=".eth"
+                        defaultValue="yourname.eth"
                         onFocus={(e) => {
-                            if (initial) e.currentTarget.setSelectionRange(0, 0);
+                            if (initial) e.currentTarget.setSelectionRange(0, e.currentTarget.value.indexOf('.'));
                             setInitial(false);
                         }}
                         onKeyDown={(e) => {
