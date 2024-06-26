@@ -191,5 +191,28 @@
   },
   "seo": {
     "description": "Welcome to the new internet."
+  },
+  "brand": {
+    "header": {
+      "title": "ENS Brand",
+      "description": "You're free to use the ENS brand in the ecosystem, no permission needed! Just remember, don't use it to pretend to be ENS, ENS DAO, or ENS Labs, or to suggest a partnership that does not exist."
+    },
+    "button": "Download All",
+    "assets": {
+      "title": "Brand Assets",
+      "description": "ENS's brand can be represented using any of our colors, but we prefer Blue, Black, and White.",
+      "symbol": {
+        "title": "Symbol",
+        "description": "This is the main and preferred icon for using ENS-branded assets."
+      },
+      "lockup": {
+        "title": "Lock-up",
+        "description": "Utilize the full lock-up when you need to show the full ENS branded asset. This is also useful for more horizontally-aligned assets."
+      },
+      "guidelines": {
+        "title": "Guidelines",
+        "description": "If you're unsure of our guidelines and how your project would align, please get in touch."
+      }
+    }
   }
 }

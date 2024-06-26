@@ -1,7 +1,8 @@
 body {
     margin: 0;
-    background: #f6f6f6;
-    font-family: var(--ens-sans);
+    background: var(--ens-white);
+    color: var(--ens-dark-blue);
+    font-family: var(--ens-sans), var(--ens-sans-fb), sans-serif;
     font-feature-settings: 'ss01' on, 'ss03' on;
     font-weight: 500;
 
@@ -110,6 +111,11 @@ h4 {
     letter-spacing: -2%;
 }
 
+h5 {
+    font-weight: 600;
+    font-size: 16px;
+}
+
 p {
     font-family: var(--ens-serif);
     color: var(--ens-medium-blue);
@@ -187,4 +193,8 @@ summary::-webkit-details-marker {
 ul {
     margin: 0;
     padding: 0;
+}
+
+figure {
+    margin: 0;
 }

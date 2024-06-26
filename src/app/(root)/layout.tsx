@@ -83,7 +83,7 @@ export default async function RootLayout({ children, params: { lang = 'en' } }: 
                 },
                 {
                     title: t('footer.brand'),
-                    link: 'https://github.com/ensdomains/media-kit',
+                    link: '/brand',
                 },
                 { title: t('footer.jobs'), link: 'https://' },
             ],
