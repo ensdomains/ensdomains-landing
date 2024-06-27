@@ -212,6 +212,10 @@
       "guidelines": {
         "title": "Guidelines",
         "description": "If you're unsure of our guidelines and how your project would align, please get in touch."
+      },
+      "space": {
+        "title": "Clear Space",
+        "description": "Make sure there is enough clear space when using the logo, such that there is enough room for everything to breathe.\nA good rule of thumb is at least 1/3 of the width of the ENS symbol."
       }
     }
   }

@@ -36,12 +36,6 @@
     position: relative;
 }
 
-.assetGrid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
 .assetGrid > figure {
     background-color: #F2F2F2;
 }
@@ -71,11 +65,6 @@
     border: none;
 }
 
-.assetGrid > figure > img {
-    width: 100%; 
-    height: 100%;
-}
-
 .downloadButton {
     position: absolute;
     right: 0;
@@ -94,6 +83,17 @@
     letter-spacing: 0.24px;
 }
 
+.assetGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.assetGrid > figure > img, .blueprint img {
+    width: 100%; 
+    height: 100%;
+}
+
 @media (min-width: 768px) {
     .headerContent {
         grid-template-columns: repeat(2, 1fr);
@@ -109,6 +109,9 @@
     .assetGrid > figure {
         padding: 40px;
     }
+    .blueprint {
+        grid-template-columns: 1fr 2fr;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -121,5 +124,8 @@
     }
     .assetGrid > figure {
         padding: 120px;
+    }
+    .blueprint {
+        grid-template-columns: 1fr 2fr;
     }
 }
