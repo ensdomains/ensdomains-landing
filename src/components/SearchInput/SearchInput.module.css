@@ -28,16 +28,6 @@
     margin-top: 50px;
 }
 
-.status {
-    color: var(--ens-dark-blue);
-    font-weight: 500;
-    line-height: 96%;
-    text-align: center;
-
-    font-size: 16px;
-    letter-spacing: 0.24px; 
-}
-
 .caption {
     font-weight: 500;
     font-family: var(--ens-mono);
@@ -78,10 +68,6 @@
         gap: 28px;
         margin-top: 60px;
     }
-    .status {
-        letter-spacing: 0.32px;
-        text-align: left;
-    }
     .caption {
         letter-spacing: 0.4px;
         font-size: 20px;
@@ -101,11 +87,6 @@
     }
     .container {
         gap: 40px;
-    }
-    .status {
-        font-size: 18px;
-        letter-spacing: -0.28px;
-        text-align: left;
     }
     .caption {
         line-height: 96%;

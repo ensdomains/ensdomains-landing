@@ -6,12 +6,9 @@ import ui from '~/styles/ui.module.css';
 import { SearchIcon } from '../icons';
 import styles from './SearchInput.module.css';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
 
-export const SearchInput = ({ caption }: { caption: string }) => {
+export const SearchInput = ({ caption, placeholder }: { caption: string; placeholder: string }) => {
     const router = useRouter();
-
-    const [initial, setInitial] = useState(true);
 
     return (
         <div
@@ -35,22 +32,17 @@ export const SearchInput = ({ caption }: { caption: string }) => {
             >
                 <div className={styles.inputContainer}>
                     <input
-                        defaultValue="yourname.eth"
-                        onFocus={(e) => {
-                            if (initial) e.currentTarget.setSelectionRange(0, e.currentTarget.value.indexOf('.'));
-                            setInitial(false);
-                        }}
-                        onKeyDown={(e) => {
-                            if (e.key === 'Enter') {
-                                router.push(`https://ens.app/${e.currentTarget.value}`);
-                            }
+
+                        onSubmit={(e) => {
+                            // if (e.key === 'Enter') {
+                            router.push(`https://ens.app/${e.currentTarget.value}`);
+                            // }
                         }}
                         className={styles.input}
-                        placeholder="name"
+                        placeholder={placeholder}
                     />
                     <SearchIcon className={styles.icon} />
                 </div>
-                <span className={styles.status}>Name is available.</span>
             </div>
         </div>
     );

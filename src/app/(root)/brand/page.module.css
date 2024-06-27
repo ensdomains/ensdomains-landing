@@ -13,9 +13,13 @@
     list-style-image: url('/assets/brand/bullet.svg');
 }
 
-.linkList li {
+.linkList li a {
     font-size: 18px; 
-    color: var(--ens-medium-blue)
+    color: var(--ens-medium-blue);
+}
+
+.linkList li a:hover {
+    color: var(--ens-dark-blue);
 }
 
 .sectionDescription {
@@ -24,7 +28,6 @@
 
 .content {
     gap: 40px;
-    scroll-margin-top: 400px;
 }
 
 .contentTitle {
@@ -65,6 +68,7 @@
     bottom: 16px;
     width: max-content;
     border: none;
+    cursor: pointer;
 }
 
 .downloadButton {
