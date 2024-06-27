@@ -4,6 +4,7 @@ import { useTranslation } from '~/i18n/useTranslation';
 import ui from '~/styles/ui.module.css';
 import styles from './page.module.css';
 import { PageProps } from '~/utils/types';
+import { AssetDownloadButton } from '~/components/brand/AssetDownloadButton';
 
 const common = './public/assets/brand';
 
@@ -52,10 +53,14 @@ export default async function Brand({ params }: PageProps) {
                             <p className={ui['max-w-text']}>{t('brand.assets.symbol.description')}</p>
                         </div>
                         <div className={styles.assetGrid}>
-                            {Object.entries(markLogos).map(([name, logo]) => (
-                                <figure key={logo}>
-                                    <img src={logo} alt="" height={230} width={201} />
-                                    <a download href={logo}>Download</a>
+                            {Object.entries(markLogos).map(([name, url]) => (
+                                <figure key={url}>
+                                    <img src={url} alt="" height={230} width={201} />
+                                    <AssetDownloadButton links={[
+                                        { title: 'PNG', url: url.replace('svg', 'png') },
+                                        { title: 'SVG', url },
+                                    ]}
+                                    />
                                     <figcaption>{name}</figcaption>
                                 </figure>
                             ))}

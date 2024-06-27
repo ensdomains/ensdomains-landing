@@ -63,11 +63,12 @@
     bottom: 16px;
 }
 
-.assetGrid > figure > a {
+.assetGrid > figure > select {
     position: absolute;
     right: 16px;
     bottom: 16px;
     width: max-content;
+    border: none;
 }
 
 .assetGrid > figure > img {
@@ -83,7 +84,7 @@
     font-weight: 600;
 }
 
-.downloadButton, .assetGrid > figure > figcaption, .assetGrid > figure > a {
+.downloadButton, .assetGrid > figure > figcaption, .assetGrid > figure > select {
     padding: 6px 8px;
     border-radius: 2px;
     color: var(--ens-blue);
