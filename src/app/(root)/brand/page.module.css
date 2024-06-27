@@ -24,11 +24,13 @@
 
 .content {
     gap: 40px;
+    scroll-margin-top: 400px;
 }
 
 .contentTitle {
     padding: 16px 0;
     border-top: 1px solid var(--ens-dark-blue);
+   
 }
 
 .assetsDescription {
