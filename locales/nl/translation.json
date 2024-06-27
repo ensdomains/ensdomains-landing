@@ -17,18 +17,28 @@
     "features": {
       "consistent": {
         "text": "Neem uw identiteit gemakkelijk mee tussen services en platforms. \nVergeet het gedoe van meerdere gebruikersnamen.",
-        "title": "Consistent op het internet."
+        "title": "Consistent op het internet.",
+        "swapButton": "Ruil"
       },
       "farewell": {
         "text": "Geen verwarrende hexadecimale adressen meer. \nUw ENS-naam is gemakkelijk te onthouden en gemakkelijk te delen.",
-        "title": "Neem Afscheid van complexiteit."
+        "title": "Neem Afscheid van complexiteit.",
+        "animation": {
+          "m1": "Wat is je cryptoadres zodat ik je kan betalen?",
+          "m2": "0x0b08dA7068b73A579Bd5E8a8290ff8afd37bc32A",
+          "m3": "Wauw.\nGa naar ens.app",
+          "m4": "Dit is zoveel eenvoudiger! \nStuur maar naar\nmijnnieuwenaam.eth"
+        }
       },
       "ownership": {
         "text": "Je ENS-naam is van jou, punt uit. \nGeen tussenpersonen, geen administratieve rompslomp. \nHet is jouw eigendom, ongecensureerd en onherroepelijk.",
         "title": "Echt eigendom."
       },
       "text": "Uw ENS-naam is verankerd in Web3, maar werkt via internet.\nHet is jouw identiteit: eenvoudig, makkelijk te onthouden, en onmiskenbaar de jouwe.",
-      "title": "Uw naam"
+      "title": "Uw naam",
+      "farcaster": {
+        "title": "Thuis"
+      }
     },
     "extra": {
       "community": {
@@ -101,6 +111,28 @@
         "description": "Ontwerpsysteem voor ENS gebouwd met React en styled-components."
       },
       "title": "Content"
+    },
+    "extra": {
+      "bounty": {
+        "cta": {
+          "learn": "Leer meer"
+        },
+        "text": "Wij geven prioriteit aan veiligheid boven alles. Ontdek ons bugbountyprogramma en draag bij aan een veiliger platform met beloningen tot $250.000.",
+        "title": "Onze bugbounty:\nUw Peace of Mind"
+      },
+      "grants": {
+        "cta": {
+          "apply": "Vraag aan",
+          "view": "Bekijk Grants"
+        },
+        "stat": {
+          "eth": "ETH gesponsored",
+          "proposals": "voorstellen",
+          "voters": "kiezers"
+        },
+        "text": "Heb je een baanbrekend idee? Onze grants zijn er om uw innovatieve projecten binnen het ENS-ecosysteem een boost te geven.",
+        "title": "Grants voor Game-Changers"
+      }
     }
   },
   "ecosystem": {
@@ -120,6 +152,21 @@
       "text": "Our DAO is the lifeblood of our decentralized ethos. Designed for longevity, the DAO nurtures ENS's resilience and flexibility, evolving through a tapestry of community voices.",
       "cta1": "ENS DAO",
       "cta2": "Voorstellen"
+    },
+    "extra": {
+      "delegation": {
+        "text": "Door tokens te delegeren aan actieve bijdragers in onze community, doet u niet alleen mee, maar versterkt u ook de impact die u wilt zien.",
+        "title": "Geef kracht door te delegeren"
+      },
+      "grants": {
+        "title": "Grants for Game-Changers",
+        "text": "Heb je een baanbrekend idee? Onze grants zijn er om uw innovatieve projecten binnen het ENS-ecosysteem een boost te geven."
+      },
+      "title": "$ENS: Macht aan de Mens",
+      "vote": {
+        "text": "$ENS is niet alleen een token – het is uw sleutel tot betekenisvolle verandering in het ENS-ecosysteem. Elke $ENS-token die u bezit, vertegenwoordigt uw geloof in onze toekomst.",
+        "title": "Jouw stem, jouw stem"
+      }
     }
   },
   "footer": {
@@ -139,6 +186,37 @@
     "support": "Ondersteuning",
     "tou": "Gebruiksvoorwaarden",
     "twitter": "Twitter",
-    "youtube": "Youtube"
+    "youtube": "Youtube",
+    "ltd": "ENS, Copyright, 2024. Alle rechten voorbehouden."
+  },
+  "seo": {
+    "description": "Welkom op het nieuwe internet."
+  },
+  "brand": {
+    "assets": {
+      "description": "Het merk van ENS kan in al onze kleuren worden weergegeven, maar wij geven de voorkeur aan blauw, zwart en wit.",
+      "guidelines": {
+        "description": "Als u niet zeker bent van onze richtlijnen en hoe uw project zou aansluiten, neem dan contact met ons op.",
+        "title": "Richtlijnen"
+      },
+      "lockup": {
+        "description": "Maak gebruik van de volledige lock-up wanneer u het volledige ENS embleem moet tonen. \nDeze variant is handig voor meer horizontale layouts.",
+        "title": "Lock-up"
+      },
+      "space": {
+        "description": "Zorg ervoor dat er voldoende vrije ruimte beschikbaar is wanneer u het logo gebruikt, zodat alles voldoende ruimte heeft om te ademen.\nEen goede vuistregel is om minimaal 1/3 van de breedte van het ENS-symbool te gebruiken.",
+        "title": "Vrije ruimte"
+      },
+      "symbol": {
+        "description": "Dit is het primaire pictogram voor het gebruik van middelen van de ENS-merknaam.",
+        "title": "Symbool"
+      },
+      "title": "Brand Assets"
+    },
+    "button": "Download alles",
+    "header": {
+      "description": "Je bent vrij om het merk ENS in het ecosysteem te gebruiken, geen toestemming nodig!\nOnthoud dat u het niet moet gebruiken om u voor te doen als ENS, ENS DAO of ENS Labs, of om een partnerschap te suggereren dat niet bestaat.",
+      "title": "ENS Merk"
+    }
   }
 }
