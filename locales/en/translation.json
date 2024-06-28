@@ -24,7 +24,7 @@
         "title": "Farewell to complexity.",
         "text": "No more confusing hex addresses. Your ENS name is easy to remember, easy to share.",
         "animation": {
-          "m1": "What's your crypto address so I can\npay you?",
+          "m1": "What's your crypto address so I can pay you?",
           "m2": "0x0b08dA7068b73A579Bd5E8a8290ff8afd37bc32A",
           "m3": "Wow. Go to ens.app",
           "m4": "This is so much simpler! Send to\nmynewname.eth"
