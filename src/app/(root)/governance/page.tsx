@@ -130,24 +130,23 @@ export default async function Governance({
                 </div>
 
                 <div>
-                    <h4>Resources</h4>
+                    <h4>{t('governance.extra.resources.title')}</h4>
                     <LinkList
                         links={[
                             {
                                 title: 'Discord',
-                                href: '',
-                                description: 'Join the community on Discord.',
+                                href: 'https://chat.ens.domains',
+                                description: t('governance.extra.resources.community'),
                             },
                             {
-                                title: 'DAO Documentation',
-                                href: '',
-                                description: 'Documentation for the DAO.',
+                                title: t('governance.extra.resources.docs.title'),
+                                href: 'https://docs.ens.domains/dao',
+                                description: t('governance.extra.resources.docs.description'),
                             },
                             {
-                                title: 'Tally Voting',
-                                href: '',
-                                description:
-                                'This repository implements a generic CCIP-Read gateway for fetching state proofs of data on other EVM chains. The intended use is for contracts on L1 to be able to fetch and verify data from contracts on L2 in a read context.',
+                                title: t('governance.extra.resources.voting.title'),
+                                href: 'https://tally.xyz/gov/ens',
+                                description: t('governance.extra.resources.voting.description'),
                             },
                         ]}
                     />

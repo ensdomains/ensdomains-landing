@@ -169,6 +169,18 @@
       "grants": {
         "title": "Grants for Game-Changers",
         "text": "Got a groundbreaking idea? Our grants are here to power your innovative projects within the ENS ecosystem."
+      },
+      "resources": {
+        "title": "Resources",
+        "community": "Join the community on Discord.",
+        "docs":{
+          "title": "DAO Documentation",
+          "description": "Documentation for the DAO."
+        },
+        "voting": {
+          "title": "Tally Voting",
+          "description": "Lorem ipsum."
+        }
       }
     }
   },
