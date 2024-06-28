@@ -36,6 +36,10 @@
     font-size: 18px;
 }
 
+.title {
+    font-weight: 500;
+}
+
 .card:hover {
     background-color: var(--bg-hover);
 }

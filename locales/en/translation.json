@@ -146,6 +146,9 @@
       "text": "ENS is a community of pioneers, collectively shaping a more intuitive and trustworthy internet. It's not just about being part of Web3; it's about leading it.",
       "cta1": "How ENS Helps",
       "cta2": "Integration Docs"
+    },
+    "integration": {
+      "title": "Ready for integration?"
     }
   },
   "governance": {

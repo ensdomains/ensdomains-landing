@@ -49,7 +49,7 @@ export default async function Ecosystem({
             </Header>
             <section className={ui['page']}>
                 <div className={clsx(ui.flex, ui['flex-col'], ui['h2-section'])}>
-                    <h2>Ready for integration?</h2>
+                    <h2>{t('ecosystem.integration.title')}</h2>
                     <LinkList
                         links={[
                             {

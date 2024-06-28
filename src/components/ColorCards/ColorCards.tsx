@@ -34,7 +34,7 @@ export const ColorCards: FC<{
         <div className={styles.grid}>
             {cards.map(({ title, description, color, link }) => (
                 <ExternalLink href={link} key={title} className={clsx(ui.flex, ui['flex-col'], styles.card)} style={{ '--bg': `var(--${color})`, '--bg-hover': `var(--${color.replace('ens-', 'ens-hover-')})` } as CSSProperties}>
-                    <div>{title}</div>
+                    <div className={styles.title}>{title}</div>
                     <div className={styles.text}>{description}</div>
                     <div
                         className={styles.box}

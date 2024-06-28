@@ -21,7 +21,7 @@
     grid-template-columns: 1fr;
 }
 
-.list li a {
+.list li span {
     color: var(--ens-dark-blue);
     text-decoration: none;
     display: flex;
@@ -31,7 +31,11 @@
     font-size: 20px;
 }
 
-.list li a:hover span:nth-child(1) {
+.list li span:nth-child(2) {
+    color: var(--ens-medium-blue);
+}
+
+.list li:hover span:nth-child(1) {
     color: var(--page-text);
 }
 
