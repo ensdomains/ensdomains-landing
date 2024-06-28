@@ -8,10 +8,20 @@
     font-weight: 500;
     line-height: 96%;
     box-sizing: border-box;
-    font-family: var(--ens-semi-mono);
+    font-family: var(--ens-mono), monospace;
 
     font-size: 24px;
     padding: 20px;
+}
+
+.inputSuffix {
+    color: var(--ens-dark-blue);
+    position: absolute;
+    left: calc(var(--left) + 1.5rem);
+    font-family: var(--ens-mono), monospace;
+
+    font-size: 24px;
+    top: calc(50% - 15px);
 }
 
 .icon {
@@ -20,6 +30,12 @@
     top: calc(50% - 20px / 2);
     height: 20px;
     width: 20px;
+    background: transparent;
+    padding: 0;
+}
+.icon > svg {
+    height: 100%;
+    width: 100%;
 }
 
 .container {
@@ -55,8 +71,13 @@
 
 @media (min-width: 768px) {
     .input {
-        font-size: 52px;
         padding: 20px 24px;
+    }
+    .input, .inputSuffix {
+        font-size: 52px;
+    }
+    .inputSuffix {
+        top: 19px;
     }
     .icon {
         height: 34px;
@@ -76,8 +97,10 @@
 
 @media (min-width: 1280px) {
     .input {
-        font-size: 76px;
         padding: 28px;
+    }
+    .input, .inputSuffix {
+        font-size: 76px;
     }
     .icon {
         top: calc(50% - 56px / 2);
@@ -92,5 +115,8 @@
         line-height: 96%;
         letter-spacing: -0.4px;
         font-size: 20px;
+    }
+    .inputSuffix {
+        top: calc(56px / 2);
     }
 }

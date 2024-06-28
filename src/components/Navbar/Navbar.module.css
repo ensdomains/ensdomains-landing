@@ -10,7 +10,7 @@
     gap: 2rem;
     padding: 16px 30px;
     flex-direction: column;
-    height: 100%;
+    height: max-content;
     justify-content: flex-start;
 }
 
@@ -97,6 +97,7 @@
     }
     .nav[data-open='true'] {
         background: var(--ens-light-blue);
+        height: 100%;
     }
     .link {
         border-bottom: 1px solid var(--ens-blue);

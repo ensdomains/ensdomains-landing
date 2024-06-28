@@ -5,10 +5,10 @@ import { clsx } from 'clsx';
 import ui from '~/styles/ui.module.css';
 import { SearchIcon } from '../icons';
 import styles from './SearchInput.module.css';
-import { useRouter } from 'next/navigation';
+import { CSSProperties, useState } from 'react';
 
 export const SearchInput = ({ caption, placeholder }: { caption: string; placeholder: string }) => {
-    const router = useRouter();
+    const [value, setValue] = useState('');
 
     return (
         <div
@@ -30,19 +30,27 @@ export const SearchInput = ({ caption, placeholder }: { caption: string; placeho
                     styles.searchboxContainer,
                 )}
             >
-                <div className={styles.inputContainer}>
-                    <input
+                <form
+                    method="GET"
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                        const fd = new FormData(e.currentTarget);
 
-                        onSubmit={(e) => {
-                            // if (e.key === 'Enter') {
-                            router.push(`https://ens.app/${e.currentTarget.value}`);
-                            // }
-                        }}
+                        location.assign(`https://ens.app/${fd.get('ens')}.eth`);
+                    }}
+                    className={styles.inputContainer}
+                >
+                    <input
+                        onChange={e => setValue(e.currentTarget.value)}
+                        name="ens"
                         className={styles.input}
                         placeholder={placeholder}
                     />
-                    <SearchIcon className={styles.icon} />
-                </div>
+                    <span style={{ '--left': `${value.length}ch`, 'display': value === '' ? 'none' : 'block' } as CSSProperties} className={styles.inputSuffix}>.eth</span>
+                    <button type="submit" className={styles.icon}>
+                        <SearchIcon />
+                    </button>
+                </form>
             </div>
         </div>
     );
