@@ -58,6 +58,7 @@
     background-color: var(--ens-blue);
     color: var(--ens-gray-2); 
     font-weight: 500;
+    font-family: var(--ens-mono), monospace;
     border-radius: 4px;
     text-align: center;
     width: 100%;

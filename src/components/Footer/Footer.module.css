@@ -9,6 +9,7 @@
     padding: 40px 16px;
     flex-direction: column;
     font-size: 16px;
+    font-family: var(--ens-mono), monospace;
 }
 
 .logo {

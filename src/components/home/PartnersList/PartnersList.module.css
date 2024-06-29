@@ -32,7 +32,9 @@
 
 .category {
     font-size: 16px;
+    font-family: var(--ens-mono), monospace;
     color: var(--ens-gray-4);
+    text-transform: capitalize;
 }
 
 @media (min-width: 768px) {
