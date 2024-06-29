@@ -35,7 +35,7 @@
 }
 
 .link {
-    color: var(--ens-blue);
+    color: var(--current-link, var(--ens-blue));
     font-family: var(--ens-mono), monospace;
 
     padding-bottom: 20px;
@@ -77,6 +77,8 @@
     width: 12px;
     background: transparent;
     cursor: pointer;
+
+    color: var(--ens-dark-blue);
 }
 
 .mobileMenu {
@@ -94,6 +96,9 @@
     }
     .nav[data-open='false'] {
         background: transparent;
+    }
+    .nav[data-open='true'] .menuButton {
+        color: var(--ens-blue);
     }
     .nav[data-open='true'] {
         background: var(--ens-light-blue);
@@ -137,7 +142,7 @@
         gap: 28px;
     }
     .link {
-        color: var(--ens-dark-blue);
+        color: var(--current-link, var(--ens-dark-blue));
         padding: unset;
         width: unset;
     }

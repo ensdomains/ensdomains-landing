@@ -13,6 +13,7 @@ import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import styles from './Navbar.module.css';
 import { NavbarFade } from './NavbarFade';
 import { EnsNavIcon } from '../icons';
+import { usePathname } from 'next/navigation';
 
 type Links = {
     blog: string;
@@ -33,6 +34,8 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
 
     const [isOpen, setOpen] = useState(false);
 
+    const pathname = usePathname();
+
     return (
         <nav id="nav" data-open={isOpen} className={clsx(ui.flex, styles.nav)}>
             <NavbarFade />
@@ -50,10 +53,10 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
                 <button onClick={() => setOpen(!isOpen)} className={styles.menuButton}>
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="menu">
-                            <rect id="Rectangle 2736" y="-0.000488281" width="4" height="4" rx="1" fill="#0080BC" />
-                            <rect id="Rectangle 2736_2" y="7.99951" width="4" height="4" rx="1" fill="#0080BC" />
-                            <rect id="Rectangle 2736_3" x="8" y="-0.000488281" width="4" height="4" rx="1" fill="#0080BC" />
-                            <rect id="Rectangle 2736_4" x="8" y="7.99951" width="4" height="4" rx="1" fill="#0080BC" />
+                            <rect id="Rectangle 2736" y="-0.000488281" width="4" height="4" rx="1" fill="currentColor" />
+                            <rect id="Rectangle 2736_2" y="7.99951" width="4" height="4" rx="1" fill="currentColor" />
+                            <rect id="Rectangle 2736_3" x="8" y="-0.000488281" width="4" height="4" rx="1" fill="currentColor" />
+                            <rect id="Rectangle 2736_4" x="8" y="7.99951" width="4" height="4" rx="1" fill="currentColor" />
                         </g>
                     </svg>
                 </button>
@@ -78,7 +81,8 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
                                 className={styles.link}
                                 style={
                                     {
-                                        '--link-hover': 'var(' + color + ')',
+                                        '--current-link': url === pathname ? `var(${color})` : undefined,
+                                        '--link-hover': `var(${color})`,
                                     } as CSSProperties
                                 }
                             >
