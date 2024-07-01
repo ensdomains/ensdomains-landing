@@ -87,7 +87,7 @@ export default async function Ecosystem({
                                 description:
                                 'Speak with our Business Development team to chat about a partnership opportunity.',
                                 color: 'ens-blue',
-                                link: '#',
+                                link: 'mailto:contact@ens.domains',
                             },
                             {
                                 title: 'Explore Opportunities',

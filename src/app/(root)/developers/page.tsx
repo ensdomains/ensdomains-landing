@@ -127,12 +127,12 @@ export default async function Developers({
                     cta={[
                         {
                             text: t('developers.extra.grants.cta.view'),
-                            url: '#',
+                            url: 'https://ensgrants.xyz/rounds',
                             buttonVariant: 'primary',
                         },
                         {
                             text: t('developers.extra.grants.cta.apply'),
-                            url: '#',
+                            url: 'https://ensgrants.xyz',
                             buttonVariant: 'secondary',
                         },
                     ]}
@@ -152,7 +152,7 @@ export default async function Developers({
                     cta={[
                         {
                             text: t('developers.extra.bounty.cta.learn'),
-                            url: '#',
+                            url: 'https://immunefi.com/bug-bounty/ens',
                             buttonVariant: 'primary',
                         },
                     ]}
