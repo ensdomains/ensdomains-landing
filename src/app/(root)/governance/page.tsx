@@ -164,11 +164,10 @@ export default async function Governance({
                     <ColorCards
                         cards={[
                             {
-                                title: 'ENS DAO',
-                                description:
-                                'You want to join the ENS community and contribute.',
+                                title: t('home.gyow.ens-dao.title'),
+                                description: t('home.gyow.ens-dao.description'),
                                 color: 'ens-blue',
-                                link: '#',
+                                link: 'https://ensdao.org',
                             },
                             {
                                 title: 'Learn More',
@@ -198,7 +197,7 @@ export default async function Governance({
                             ),
                             button: t('home.extra.governance.button'),
                             buttonVariant: 'secondary',
-                            href: '/',
+                            href: 'https://docs.ens.domains/dao',
                         },
                         {
                             tag: t('home.extra.community.tag'),

@@ -75,17 +75,16 @@ export default async function RootLayout({ children, params: { lang = 'en' } }: 
         {
             title: t('footer.ens'),
             entries: [
-                { title: t('footer.privacy-policy'), link: '' },
-                { title: t('footer.tou'), link: '' },
+                { title: t('footer.privacy-policy'), link: 'https://app.ens.domains/legal/privacy-policy' },
+                { title: t('footer.tou'), link: 'https://app.ens.domains/legal/terms-of-use' },
                 {
                     title: t('footer.bugs'),
-                    link: 'https://docs.ens.domains/bugs',
+                    link: 'https://docs.ens.domains/bug-bounty-program',
                 },
                 {
                     title: t('footer.brand'),
                     link: '/brand',
                 },
-                { title: t('footer.jobs'), link: 'https://' },
             ],
         },
     ];

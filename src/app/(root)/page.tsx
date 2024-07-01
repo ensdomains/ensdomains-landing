@@ -153,7 +153,7 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
                                     title: t('home.gyow.ens-dao.title'),
                                     description: t('home.gyow.ens-dao.description'),
                                     color: 'ens-green',
-                                    link: 'https://discuss.ens.domains',
+                                    link: 'https://ensdao.org',
                                 },
                                 {
                                     title: t('home.gyow.docs.title'),
@@ -208,7 +208,7 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
                             ),
                             button: t('home.extra.governance.button'),
                             buttonVariant: 'secondary',
-                            href: '/',
+                            href: 'https://docs.ens.domains/dao',
                         },
                         {
                             tag: t('home.extra.community.tag'),
