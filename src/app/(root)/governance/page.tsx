@@ -154,11 +154,9 @@ export default async function Governance({
 
                 <div className={clsx(ui.flex, ui['flex-col'], styles['join-section'])}>
                     <div className={clsx(ui.flex, ui['flex-col'], ui['h3-section'])}>
-                        <h3>Join the New Internet</h3>
+                        <h3>{t('ecosystem.join.title')}</h3>
                         <p className={ui['max-w-text']}>
-                            Your engagement in ENS governance is more than a vote. It&apos;s
-                            your stake in an internet that is democratic, resilient, and
-                            truly centered around its users.
+                            {t('ecosystem.join.text')}
                         </p>
                     </div>
                     <ColorCards

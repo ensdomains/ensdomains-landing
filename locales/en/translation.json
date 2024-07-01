@@ -98,7 +98,7 @@
     },
     "resources": {
       "title": "Resources",
-      "documentation": {
+      "docs": {
         "title": "Documentation",
         "description": "Protocol Documentation."
       },
@@ -113,6 +113,16 @@
       },
       "thorin": {
         "description": "Design system for ENS built with React and styled-components."
+      },
+      "quickstart": {
+        "tag": "Quickstart Guide",
+        "title": "New to Web3?",
+        "description": "Starting in web3 should be exhilarating, not intimidating. Dive into our straightforward guides to begin with ease and confidence."
+      },
+      "pro": {
+        "tag": "ENS Contracts",
+        "title": "For the Web3 wizards",
+        "description": "Need more depth? Our comprehensive documentation offers deep insights and expert tips for the web3 savvy."
       }
     },
     "extra": {
@@ -158,6 +168,10 @@
       "text": "Our DAO is the lifeblood of our decentralized ethos. Designed for longevity, the DAO nurtures ENS's resilience and flexibility, evolving through a tapestry of community voices.",
       "cta1": "ENS DAO",
       "cta2": "Proposals"
+    },
+    "join": {
+      "title": "Join the New Internet",
+      "text": "Your engagement in ENS governance is more than a vote. It is your stake in an internet that is democratic, resilient, and truly centered around its users."
     },
     "extra": {
       "title": "$ENS: Power to the People",

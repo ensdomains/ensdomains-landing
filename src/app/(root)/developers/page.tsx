@@ -63,11 +63,11 @@ export default async function Developers({
                         links={[
                             {
                                 title: t(
-                                    'developers.resources.documentation.title',
+                                    'developers.resources.docs.title',
                                 ),
                                 href: 'https://docs.ens.domains',
                                 description: t(
-                                    'developers.resources.documentation.description',
+                                    'developers.resources.docs.description',
                                 ),
                             },
                             {
@@ -105,20 +105,18 @@ export default async function Developers({
                     <TwoCol
                         cols={[
                             {
-                                tag: 'Quickstart Guide',
-                                title: 'New to Web3?',
-                                description:
-                                'Starting in web3 should be exhilarating, not intimidating. Dive into our straightforward guides to begin with ease and confidence.',
-                                href: '',
-                                button: 'Quickstart Guide',
+                                tag: t('developers.resources.quickstart.tag'),
+                                title: t('developers.resources.quickstart.title'),
+                                description: t('developers.resources.quickstart.description'),
+                                href: 'https://docs.ens.domains/web/quickstart',
+                                button: t('developers.resources.quickstart.tag'),
                             },
                             {
-                                tag: 'ENS Contracts',
-                                title: 'For the Web3 wizards',
-                                description:
-                                'Need more depth? Our comprehensive documentation offers deep insights and expert tips for the web3 savvy.',
-                                button: 'ENS Contracts',
-                                href: '',
+                                tag: t('developers.resources.pro.tag'),
+                                title: t('developers.resources.pro.title'),
+                                description: t('developers.resources.pro.description'),
+                                button: t('developers.resources.pro.tag'),
+                                href: 'https://docs.ens.domains/contracts',
                             },
                         ]}
                     />
