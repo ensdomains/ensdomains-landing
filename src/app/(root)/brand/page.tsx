@@ -5,6 +5,7 @@ import ui from '~/styles/ui.module.css';
 import styles from './page.module.css';
 import { PageProps } from '~/utils/types';
 import { AssetDownloadButton } from '~/components/brand/AssetDownloadButton';
+import type { Metadata } from 'next';
 
 const common = './public/assets/brand';
 
@@ -19,6 +20,14 @@ const getStaticProps = async () => {
     const markLogos = Object.fromEntries(markLogoFiles.map(file => ([filenameToVariantName(file), file])));
 
     return { logos, markLogos };
+};
+
+export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
+    const { t } = await useTranslation(params.lang, 'translation');
+
+    return {
+        title: `${t('brand.header.title')} | ENS`,
+    };
 };
 
 export default async function Brand({ params }: PageProps) {
