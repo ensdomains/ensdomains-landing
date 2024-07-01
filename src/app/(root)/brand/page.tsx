@@ -56,7 +56,7 @@ export default async function Brand({ params }: PageProps) {
                         <p className={ui['max-w-text']}>{t('brand.assets.description')}</p>
                     </div>
                     <div className={styles.assetsDescription}>
-                        <a download href="/assets/brand/ens-logos.zip" className={styles.downloadButton}>{t('brand.button')}</a>
+                        <a download href="/assets/brand/mark.zip" className={styles.downloadButton}>{t('brand.button')}</a>
                         <h5 id="symbol" className={styles.contentTitle}>{t('brand.assets.symbol.title')}</h5>
                         <p className={ui['max-w-text']}>{t('brand.assets.symbol.description')}</p>
                     </div>
@@ -85,7 +85,7 @@ export default async function Brand({ params }: PageProps) {
                 </section>
                 <section id="lockup" className={clsx(ui.flex, ui['flex-col'], styles.content)}>
                     <div className={styles.assetsDescription}>
-                        <a download href="/assets/brand/ens-logos.zip" className={styles.downloadButton}>{t('brand.button')}</a>
+                        <a download href="/assets/brand/mark.zip" className={styles.downloadButton}>{t('brand.button')}</a>
                         <h5 className={styles.contentTitle}>{t('brand.assets.lockup.title')}</h5>
                         <p className={ui['max-w-text']}>{t('brand.assets.lockup.description')}</p>
                     </div>
