@@ -53,23 +53,20 @@ export default async function Ecosystem({
                     <LinkList
                         links={[
                             {
-                                title: 'Robust Web3 Foundation',
+                                title: t('ecosystem.integration.foundation.title'),
                                 href: '',
-                                description:
-                                'Gain access to a built-in audience, establishing your brand as a key player in the new internet era.',
+                                description: t('ecosystem.integration.foundation.description'),
                             },
                             {
-                                title: 'Unparalleled Trust',
+                                title: t('ecosystem.integration.trust.title'),
                                 href: '',
-                                description:
-
-                                'Trust isn\'t a buzzword, it\'s our foundation. As a non-profit, DAO-governed protocol, we\'re committed to security and integrity.',
+                                description: t('ecosystem.integration.trust.description'),
                             },
                             {
-                                title: 'Need more resources?',
+                                title: t('ecosystem.integration.resources.title'),
                                 href: '',
                                 description:
-                                'ENS is more powerful than you think. See below for more resources on how to integrate ENS into your organization.',
+                                t('ecosystem.integration.resources.description'),
                             },
                         ]}
                     />

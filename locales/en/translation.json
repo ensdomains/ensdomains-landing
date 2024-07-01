@@ -158,7 +158,19 @@
       "cta2": "Integration Docs"
     },
     "integration": {
-      "title": "Ready for integration?"
+      "title": "Ready for integration?",
+      "foundation": {
+        "title": "Robust Web3 Foundation",
+        "description": "Gain access to a built-in audience, establishing your brand as a key player in the new internet era."
+      },
+      "trust": {
+        "title": "Unparalleled Trust",
+        "description": "Trust isn't a buzzword, it's our foundation. As a non-profit, DAO-governed protocol, we're committed to security and integrity."
+      },
+      "resources": {
+        "title": "Need more resources?",
+        "description": "ENS is more powerful than you think. See below for more resources on how to integrate ENS into your organization."
+      }
     }
   },
   "governance": {
