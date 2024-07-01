@@ -261,6 +261,27 @@
         "title": "Clear Space",
         "description": "Make sure there is enough clear space when using the logo, such that there is enough room for everything to breathe.\nA good rule of thumb is at least 1/3 of the width of the ENS symbol."
       }
+    },
+    "extra": {
+      "partnerships": {
+        "title": "Partnerships",
+        "description": "An official partnership with us means joining forces to create impactful solutions. This might include;",
+        "list": {
+          "1": "Integration of your product into ENS or the manager app,",
+          "2": "Co-Marketing efforts with the ENS DAO or ENS Labs,",
+          "3": "R&D collaboration with the ENS DAO or ENS Labs."
+        },
+        "extra": "Partnerships may use the ENS Brand where needed, but they must not modify or change the logo."
+      },
+      "ecosystem": {
+        "title": "Ecosystem",
+        "description": "If you’re building on ENS without an official partnership, you’re an Ecosystem builder. This might include;",
+        "list": {
+          "1": "Integration of ENS into your product,",
+          "2": "A creative project designed by and for ENS users."
+        },
+        "extra": "Modification of the logo is discouraged, but not forbidden if it is for creative purposes. However the brand cannot be used to imply an official partnership with ENS DAO or ENS Labs."
+      }
     }
   }
 }

@@ -195,6 +195,12 @@ ul {
     padding: 0;
 }
 
+p ul {
+    margin: 1.25rem 0;
+    padding-left: 1rem;
+    list-style-type: disc;
+}
+
 figure {
     margin: 0;
 }

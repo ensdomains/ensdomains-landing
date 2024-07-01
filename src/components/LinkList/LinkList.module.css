@@ -3,15 +3,11 @@
     margin-top: 40px;
 }
 
-.list li {
+.list > li {
     list-style-type: none;
     padding: 0;
     margin: 0;
-
     border-top: 1px solid var(--ens-dark-blue);
-}
-
-.list li {
     padding: 2rem 0;
     min-height: 4rem;
     text-decoration: none;
@@ -21,7 +17,7 @@
     grid-template-columns: 1fr;
 }
 
-.list li span {
+.list > li span {
     color: var(--ens-dark-blue);
     text-decoration: none;
    
@@ -29,25 +25,25 @@
     font-size: 20px;
 }
 
-.list li span:nth-child(1) {
+.list > li span:nth-child(1) {
     line-height: 96%;
 }
 
-.list li a {
+.list > li a {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.list li span:nth-child(2) {
+.list > li span:nth-child(2) {
     color: var(--ens-medium-blue);
 }
 
-.list li:hover span:nth-child(1) {
+.list > li:hover span:nth-child(1) {
     color: var(--page-text);
 }
 
-.list li a svg:nth-child(2) {
+.list > li a svg:nth-child(2) {
     color: var(--page-text);
 }
 
@@ -57,20 +53,20 @@
 }
 
 @media (min-width: 768px) {
-    .list li {
+    .list > li {
         grid-template-columns: 1fr 1fr;
     }
-    .list li span:nth-child(1) {
+    .list > li span:nth-child(1) {
         font-size: 24px;
     }
     
 }
 
 @media (min-width: 1280px) {
-    .list li span:nth-child(1) {
+    .list > li span:nth-child(1) {
         font-size: 36px;
     }
-    .list li a svg {
+    .list > li a svg {
         height: 24px;
         width: 24px;
     }

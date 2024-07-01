@@ -6,6 +6,7 @@ import styles from './page.module.css';
 import { PageProps } from '~/utils/types';
 import { AssetDownloadButton } from '~/components/brand/AssetDownloadButton';
 import type { Metadata } from 'next';
+import { LinkList } from '~/components/LinkList/LinkList';
 
 const common = './public/assets/brand';
 
@@ -111,6 +112,40 @@ export default async function Brand({ params }: PageProps) {
                             <p className={ui['max-w-text']}>{t('brand.assets.space.description')}</p>
                         </div>
                     </div>
+                </section>
+                <section id="guidelines">
+                    <LinkList links={[
+                        {
+                            title: t('brand.assets.guidelines.title'),
+                            description: t('brand.assets.guidelines.description'),
+                        },
+                        {
+                            title: t('brand.extra.partnerships.title'),
+                            description: (
+                                <>
+                                    {t('brand.extra.partnerships.description')}
+                                    <ul>
+                                        <li>{t('brand.extra.partnerships.list.1')}</li>
+                                        <li>{t('brand.extra.partnerships.list.2')}</li>
+                                        <li>{t('brand.extra.partnerships.list.3')}</li>
+                                    </ul>
+                                    {t('brand.extra.partnerships.extra')}
+                                </>),
+                        },
+                        {
+                            title: t('brand.extra.ecosystem.title'),
+                            description: (
+                                <>
+                                    {t('brand.extra.ecosystem.description')}
+                                    <ul>
+                                        <li>{t('brand.extra.ecosystem.list.1')}</li>
+                                        <li>{t('brand.extra.ecosystem.list.2')}</li>
+                                    </ul>
+                                    {t('brand.extra.ecosystem.extra')}
+                                </>),
+                        },
+                    ]}
+                    />
                 </section>
             </div>
 
