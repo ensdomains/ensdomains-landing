@@ -34,9 +34,12 @@ export const SearchInput = ({ caption, placeholder }: { caption: string; placeho
                     method="GET"
                     onSubmit={(e) => {
                         e.preventDefault();
-                        const fd = new FormData(e.currentTarget);
 
-                        location.assign(`https://ens.app/${fd.get('ens')}.eth`);
+                        if (e.currentTarget.reportValidity()) {
+                            const fd = new FormData(e.currentTarget);
+
+                            location.assign(`https://ens.app/${fd.get('ens')}.eth`);
+                        }
                     }}
                     className={styles.inputContainer}
                 >
@@ -45,6 +48,8 @@ export const SearchInput = ({ caption, placeholder }: { caption: string; placeho
                         name="ens"
                         className={styles.input}
                         placeholder={placeholder}
+                        required
+                        minLength={3}
                     />
                     <span style={{ '--left': `${value.length}ch`, 'display': value === '' ? 'none' : 'block' } as CSSProperties} className={styles.inputSuffix}>.eth</span>
                     <button type="submit" className={styles.icon}>
