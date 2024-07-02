@@ -73,6 +73,5 @@ yarn-error.log
 #yalc
 .yalc
 yalc.lock
-
 .next
 out
