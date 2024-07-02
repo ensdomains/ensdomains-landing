@@ -62,6 +62,7 @@
     border-radius: 4px;
     text-align: center;
     width: 100%;
+    transition: 100ms;
 
     padding: 20px 60px; 
     font-size: 18px;

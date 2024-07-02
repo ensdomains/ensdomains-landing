@@ -46,10 +46,6 @@
     color: var(--link-hover, var(--ens-medium-blue));
 }
 
-.launch, .link {
-    transition: 100ms;
-}
-
 .navContent {
     align-items: center;
     flex-direction: column;

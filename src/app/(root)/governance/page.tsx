@@ -39,6 +39,7 @@ export default async function Governance({
                 {
                     '--page-text': 'var(--ens-green)',
                     '--page-bg': 'var(--ens-light-green)',
+                    '--page-text-hover': 'var(--ens-hover-green)',
                 } as CSSProperties
             }
         >

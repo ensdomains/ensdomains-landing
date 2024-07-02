@@ -35,6 +35,7 @@ export default async function Developers({
                 {
                     '--page-text': 'var(--ens-magenta)',
                     '--page-bg': 'var(--ens-light-magenta)',
+                    '--page-text-hover': 'var(--ens-hover-magenta)',
                 } as CSSProperties
             }
         >

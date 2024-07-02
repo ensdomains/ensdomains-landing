@@ -32,6 +32,8 @@ export default async function Ecosystem({
                 {
                     '--page-text': 'var(--ens-blue)',
                     '--page-bg': 'var(--ens-light-blue)',
+                    '--page-text-hover': 'var(--ens-hover-blue)',
+                    '--page-bg-hover': 'var(--ens-hover-light-blue)',
                 } as CSSProperties
             }
         >

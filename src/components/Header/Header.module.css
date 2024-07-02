@@ -84,12 +84,13 @@
 }
 
 .cta a:hover {
-    background: var(--page-text);
-    color: var(--page-bg);
+    color: var(--page-text-hover);
+    background: var(--page-bg-hover, var(--page-bg));
 }
+
 .cta a:first-child:hover {
-    background: var(--page-bg);
-    color: var(--page-text);
+    background: var(--page-text-hover);
+    color: var(--page-bg);
 }
 
 @media (min-width: 640px) {
