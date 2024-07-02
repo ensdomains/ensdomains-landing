@@ -21,7 +21,7 @@ const sources: { src: string; alt: string }[] = [
     'nick.eth',
 ].map(name => ({ alt: name, src: `/assets/home/${name}.png` }));
 
-const FarcasterPost = () => (
+const FarcasterPost = ({ user, text, handle, likes, reposts, comments }: { user: string; text: string; handle: string; likes: number; reposts: number; comments: number }) => (
     <div className={clsx(ui.flex, ui['flex-col'], styles.farcasterPost)}>
         <div
             className={clsx(
@@ -30,11 +30,14 @@ const FarcasterPost = () => (
                 styles.farcasterPostAuthor,
             )}
         >
-            <span>katiewav</span>
-            <span className={styles.farcasterPostAuthorHandle}>@katiewav</span>
+            <span>{user}</span>
+            <span className={styles.farcasterPostAuthorHandle}>
+                @
+                {handle}
+            </span>
         </div>
         <div className={styles.farcasterPostContent}>
-            How can we create a better ecosystem for Ethereum Name Service?
+            {text}
         </div>
         <div
             className={clsx(
@@ -48,19 +51,19 @@ const FarcasterPost = () => (
                     className={styles.farcasterPostButtonsIcon}
                 />
                 {' '}
-                12
+                {comments}
             </button>
             <button>
                 <FarcastRecastIcon
                     className={styles.farcasterPostButtonsIcon}
                 />
                 {' '}
-                44
+                {reposts}
             </button>
             <button>
                 <FarcastLikeIcon className={styles.farcasterPostButtonsIcon} />
                 {' '}
-                193
+                {likes}
             </button>
         </div>
     </div>
@@ -243,9 +246,30 @@ export const DappsAnimation = ({ swap, home }: { swap: string; home: string }) =
                     />
                 </div>
                 <div className={clsx(ui.flex, ui['flex-col'])}>
-                    <FarcasterPost />
-                    <FarcasterPost />
-                    <FarcasterPost />
+                    <FarcasterPost
+                        handle="katiewav"
+                        user="katiewav"
+                        text="How can we create a better ecosystem for Ethereum Name Service?"
+                        likes={144}
+                        reposts={24}
+                        comments={40}
+                    />
+                    <FarcasterPost
+                        handle="dwr.eth"
+                        user="Dan Romero"
+                        text="ENS usernames are now live on Farcaster!"
+                        likes={193}
+                        reposts={44}
+                        comments={22}
+                    />
+                    <FarcasterPost
+                        handle="godaddy"
+                        user="GoDaddy"
+                        text="We're bringing the world on-chain."
+                        likes={193}
+                        reposts={44}
+                        comments={22}
+                    />
                 </div>
                 <div
                     className={clsx(
