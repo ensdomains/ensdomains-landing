@@ -173,14 +173,14 @@ export default async function Governance({
                                 description:
                                 'Absorb the wealth of knowledge in our Governance docs.',
                                 color: 'ens-green',
-                                link: '#',
+                                link: 'https://basics.ensdao.org',
                             },
                             {
                                 title: 'Delegate Your Tokens',
                                 description:
                                 'Delegate your tokens to an engaged member of the community.',
                                 color: 'ens-magenta',
-                                link: '#',
+                                link: 'https://delegate.ens.domains',
                             },
                         ]}
                     />
