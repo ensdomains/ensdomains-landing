@@ -93,7 +93,7 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
                     <ExternalLink href="https://blog.ens.domains" className={styles.link}>
                         {links.blog}
                     </ExternalLink>
-                    <ExternalLink href="https://example.com" className={styles.link}>
+                    <ExternalLink href="https://l2-roadmap-ui-fixes.ensdomains-v2.pages.dev/roadmap" className={styles.link}>
                         {links.roadmap}
                     </ExternalLink>
                 </div>
