@@ -155,9 +155,9 @@ export default async function Governance({
 
                 <div className={clsx(ui.flex, ui['flex-col'], styles['join-section'])}>
                     <div className={clsx(ui.flex, ui['flex-col'], ui['h3-section'])}>
-                        <h3>{t('ecosystem.join.title')}</h3>
+                        <h3>{t('governance.join.title')}</h3>
                         <p className={ui['max-w-text']}>
-                            {t('ecosystem.join.text')}
+                            {t('governance.join.text')}
                         </p>
                     </div>
                     <ColorCards
