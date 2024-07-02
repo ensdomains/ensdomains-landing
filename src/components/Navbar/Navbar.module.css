@@ -37,13 +37,14 @@
 .link {
     color: var(--current-link, var(--ens-blue));
     font-family: var(--ens-mono), monospace;
+    transition: 100ms;
 
     padding-bottom: 20px;
     width: 100%;
 }
 
 .link:hover {
-    color: var(--link-hover);
+    color: var(--link-hover, var(--ens-medium-blue));
 }
 
 .navContent {
