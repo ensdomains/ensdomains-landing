@@ -40,7 +40,6 @@
         "eslint-plugin-react": "^7.34.3",
         "globals": "^15.6.0",
         "i18next-locales-sync": "^2.0.1",
-        "postcss-custom-media": "^10.0.6",
         "stylelint": "^16.6.1",
         "typescript-eslint": "^7.14.1"
     },
