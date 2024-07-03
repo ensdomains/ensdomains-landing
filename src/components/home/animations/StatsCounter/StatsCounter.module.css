@@ -6,10 +6,11 @@
 
 .value {
     color: var(--ens-magenta);
+    font-family: var(--ens-mono), monospace;
 }
 
 .stat:nth-of-type(1) .value {
-    width: calc(7ch);
+    width: calc(9ch);
 }
 
 .stat:nth-of-type(2) .value {
@@ -17,7 +18,7 @@
 }
 
 .stat:nth-of-type(3) .value {
-    width: calc(6ch);
+    width: calc(7ch);
 }
 
 .stat {
