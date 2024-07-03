@@ -32,19 +32,19 @@
       },
       "consistent": {
         "title": "Consistent across the internet.",
-        "text": "Carry your identity across services and platforms with ease. Forget the hassle of multiple usernames.",
+        "text": "Keep your identity consistent across all services and platforms effortlessly. Say goodbye to juggling multiple usernames.",
         "swapButton": "Swap"
       },
       "ownership": {
         "title": "True ownership.",
-        "text": "Your ENS name is yours, period. No middlemen, no red tape. It's your property, uncensored - and irrevocable."
+        "text": "Your ENS name is 100% yours. No intermediaries, no bureaucracy. It's your property—uncensored and irrevocable."
       },
       "farcaster": {
         "title": "Home"
       }
     },
     "gyow": {
-      "title": "Go your own way",
+      "title": "Blaze your own trail",
       "description": "Find your unique path in the ENS ecosystem. No matter where you start, we're all going toward a better internet.",
       "ens-app": {
         "title": "ENS App",
@@ -61,11 +61,11 @@
     },
     "gateway": {
       "title": "Your gateway to the New Internet",
-      "description": "Imagine a world where every product is interconnected between the internet and web3, creating a unified, innovative experience."
+      "description": "Envision a world where the internet and Web3 seamlessly connect, creating a unified, innovative experience."
     },
     "partners": {
       "tag": "Key Partners",
-      "description": "These collaborators are raising the bar in improving the internet, establishing themselves as key partners with ENS.",
+      "description": "These partners are revolutionizing the internet alongside ENS, creating new standards and forging strong alliances.",
       "button": "Discover the ENS Ecosystem"
     },
     "extra": {

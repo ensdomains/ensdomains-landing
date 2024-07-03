@@ -99,7 +99,7 @@
       "ccip-read": {
         "description": "Het Cross Chain Interoperability Protocol (of kortweg CCIP Read) kan informatie laden via een zogenaamde \"Gateway\"."
       },
-      "documentation": {
+      "docs": {
         "description": "Protocoldocumentatie.",
         "title": "Documentatie"
       },
