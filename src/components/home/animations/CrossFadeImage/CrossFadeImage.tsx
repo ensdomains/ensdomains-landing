@@ -64,7 +64,7 @@ export const CrossFadeImage = ({
                 {sources.map(({ src, alt }, index) => {
                     return (
                         <img
-                            key={index}
+                            key={src}
                             className={clsx(styles.img)}
                             {...{ src, alt }}
                             style={style(index)}

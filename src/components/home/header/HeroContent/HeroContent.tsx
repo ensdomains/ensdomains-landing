@@ -10,7 +10,7 @@ const HeroEnsLink = ({
     name,
     bgColor,
     color,
-    style = {},
+    style,
 }: {
     name: `${string}.eth`;
     bgColor: Color;
@@ -24,7 +24,7 @@ const HeroEnsLink = ({
             {
                 '--bg-color': `var(--${bgColor})`,
                 '--color': `var(--${color})`,
-                ...style,
+                ...(style || {}),
             } as CSSProperties
         }
     >

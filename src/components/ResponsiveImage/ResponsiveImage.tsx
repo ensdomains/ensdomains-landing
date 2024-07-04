@@ -10,8 +10,10 @@ type Props = HTMLAttributes<HTMLPictureElement> & {
     alt?: string;
 };
 
+const defaultSourceProps = { desktop: {}, mobile: {}, tablet: {} } as const;
+
 export const ResponsiveImage: FC<Props> = (
-    { sources, alt = '', sourceProps = { desktop: {}, mobile: {}, tablet: {} }, ...props },
+    { sources, alt = '', sourceProps = defaultSourceProps, ...props },
 ) => (
     <picture {...props}>
         {sources.desktop && <source {...sourceProps.desktop} srcSet={sources.desktop} media="(min-width: 1280px)" />}

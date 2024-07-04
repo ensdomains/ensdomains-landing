@@ -23,10 +23,10 @@ function useEventListener<K extends keyof WindowEventMap>(
 
 // Element Event based useEventListener interface
 function useEventListener<
-  K extends keyof HTMLElementEventMap & keyof SVGElementEventMap,
-  T extends Element = K extends keyof HTMLElementEventMap
-      ? HTMLDivElement
-      : SVGElement,
+    K extends keyof HTMLElementEventMap & keyof SVGElementEventMap,
+    T extends Element = K extends keyof HTMLElementEventMap
+        ? HTMLDivElement
+        : SVGElement,
 >(
     eventName: K,
     handler:
@@ -45,10 +45,10 @@ function useEventListener<K extends keyof DocumentEventMap>(
 ): void;
 
 function useEventListener<
-  KW extends keyof WindowEventMap,
-  KH extends keyof HTMLElementEventMap & keyof SVGElementEventMap,
-  KM extends keyof MediaQueryListEventMap,
-  T extends HTMLElement | SVGAElement | MediaQueryList = HTMLElement,
+    KW extends keyof WindowEventMap,
+    KH extends keyof HTMLElementEventMap & keyof SVGElementEventMap,
+    KM extends keyof MediaQueryListEventMap,
+    T extends HTMLElement | SVGAElement | MediaQueryList = HTMLElement,
 >(
     eventName: KW | KH | KM,
     handler: (

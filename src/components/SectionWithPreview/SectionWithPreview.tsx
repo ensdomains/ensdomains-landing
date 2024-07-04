@@ -10,7 +10,7 @@ type Props = {
     cta?: { text: string; buttonVariant?: ButtonVariant; url: string }[];
 };
 
-export const SectionWithPreview: FC<PropsWithChildren<Props>> = ({ text, title, children, cta = [] }) => {
+export const SectionWithPreview: FC<PropsWithChildren<Props>> = ({ text, title, children, cta }) => {
     return (
         <div className={clsx(ui['w-full'], styles.container)}>
             <div className={clsx(ui.flex, ui['flex-col'], styles.contentWithCta)}>
@@ -19,7 +19,7 @@ export const SectionWithPreview: FC<PropsWithChildren<Props>> = ({ text, title, 
                     <p className={ui['max-w-text']}>{text}</p>
                 </div>
                 <div className={clsx(ui.flex, ui['flex-row'], styles.cta)}>
-                    {cta.map(({ text, buttonVariant = 'primary', url }) => (
+                    {(cta || []).map(({ text, buttonVariant = 'primary', url }) => (
                         <a
                             key={url}
                             href={url}

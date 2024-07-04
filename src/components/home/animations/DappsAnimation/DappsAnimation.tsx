@@ -46,21 +46,21 @@ const FarcasterPost = ({ user, text, handle, likes, reposts, comments }: { user:
                 styles.farcasterPostButtons,
             )}
         >
-            <button>
+            <button type="button">
                 <FarcastCommentIcon
                     className={styles.farcasterPostButtonsIcon}
                 />
                 {' '}
                 {comments}
             </button>
-            <button>
+            <button type="button">
                 <FarcastRecastIcon
                     className={styles.farcasterPostButtonsIcon}
                 />
                 {' '}
                 {reposts}
             </button>
-            <button>
+            <button type="button">
                 <FarcastLikeIcon className={styles.farcasterPostButtonsIcon} />
                 {' '}
                 {likes}
@@ -192,7 +192,7 @@ export const DappsAnimation = ({ swap, home }: { swap: string; home: string }) =
                         <span className={styles.swapCurrency}>ETH</span>
                         <ArrowDownIcon className={styles.swapCurrencyIcon} />
                     </div>
-                    <button className={styles.swapButton}>
+                    <button className={styles.swapButton} type="button">
                         {swap}
                     </button>
                 </div>
@@ -278,7 +278,7 @@ export const DappsAnimation = ({ swap, home }: { swap: string; home: string }) =
                         styles.farcasterMenu,
                     )}
                 >
-                    <button>
+                    <button type="button">
                         <img
                             src="/assets/home/home.svg"
                             height={16}
@@ -286,7 +286,7 @@ export const DappsAnimation = ({ swap, home }: { swap: string; home: string }) =
                             alt=""
                         />
                     </button>
-                    <button>
+                    <button type="button">
                         <img
                             src="/assets/home/search.svg"
                             height={16}
@@ -294,7 +294,7 @@ export const DappsAnimation = ({ swap, home }: { swap: string; home: string }) =
                             alt=""
                         />
                     </button>
-                    <button>
+                    <button type="button">
                         <img
                             src="/assets/home/plus.svg"
                             height={16}
@@ -302,7 +302,7 @@ export const DappsAnimation = ({ swap, home }: { swap: string; home: string }) =
                             alt=""
                         />
                     </button>
-                    <button>
+                    <button type="button">
                         <img
                             src="/assets/home/bell.svg"
                             height={16}
@@ -310,7 +310,7 @@ export const DappsAnimation = ({ swap, home }: { swap: string; home: string }) =
                             alt=""
                         />
                     </button>
-                    <button>
+                    <button type="button">
                         <img
                             src="/assets/home/group.svg"
                             height={16}
