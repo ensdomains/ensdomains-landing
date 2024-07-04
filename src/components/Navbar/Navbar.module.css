@@ -146,6 +146,9 @@
         padding: unset;
         width: unset;
     }
+    .launch, .link {
+        font-size: 14px !important;
+    }
     .links, .navContent, .nav, .langWithApp {
         flex-direction: row;
     }
