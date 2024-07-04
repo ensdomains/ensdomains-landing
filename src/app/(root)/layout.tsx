@@ -69,7 +69,7 @@ export default async function RootLayout({ children, params: { lang = 'en' } }: 
                     title: t('footer.support'),
                     link: 'https://support.ens.domains',
                 },
-                { title: t('footer.contact'), link: 'mailto:contact@ens.domains' },
+                { title: t('footer.contact'), link: 'mailto:support@ens.domains' },
             ],
         },
         {
