@@ -24,7 +24,7 @@
         "react-dom": "^18.3.1",
         "react-external-link": "^2.3.1",
         "react-i18next": "^14.1.2",
-        "typescript": "^5.5.2"
+        "typescript": "^5.5.3"
     },
     "devDependencies": {
         "@eslint/compat": "^1.1.0",
@@ -38,10 +38,10 @@
         "eslint": "^9.6.0",
         "eslint-plugin-jsx-a11y": "^6.9.0",
         "eslint-plugin-react": "^7.34.3",
-        "globals": "^15.6.0",
-        "i18next-locales-sync": "^2.0.1",
+        "globals": "^15.8.0",
+        "i18next-locales-sync": "^2.1.0",
         "stylelint": "^16.6.1",
-        "typescript-eslint": "^7.14.1"
+        "typescript-eslint": "^7.15.0"
     },
     "repository": {
         "type": "git",
