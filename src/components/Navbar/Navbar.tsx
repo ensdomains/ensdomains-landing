@@ -9,7 +9,7 @@ import { getLangPrefix } from '~/i18n/langPrefix';
 import { fallbackLng, Language } from '~/i18n/settings';
 
 import ui from '~/styles/ui.module.css';
-import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
+// import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import styles from './Navbar.module.css';
 import { NavbarFade } from './NavbarFade';
 import { EnsNavIcon } from '../icons';
@@ -98,7 +98,7 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
                     </ExternalLink>
                 </div>
                 <div className={styles.langWithApp}>
-                    <LanguageSwitcher lang={lang} />
+                    {/* <LanguageSwitcher lang={lang} /> */}
                     <ExternalLink
                         href="https://app.ens.domains"
                         className={clsx(styles.launch, ui.button)}
