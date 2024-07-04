@@ -21,6 +21,7 @@ export const generateMetadata = async ({ params }: PageProps): Promise<Metadata>
 
     return {
         title: `${t('developers.hero.tag')} | ENS`,
+        description: t('developers.hero.text'),
     };
 };
 

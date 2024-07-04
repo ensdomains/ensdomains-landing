@@ -18,6 +18,7 @@ export const generateMetadata = async ({ params }: PageProps): Promise<Metadata>
 
     return {
         title: `${t('ecosystem.hero.tag')} | ENS`,
+        description: t('ecosystem.hero.text'),
     };
 };
 
@@ -76,10 +77,9 @@ export default async function Ecosystem({
 
                 <div className={clsx(ui.flex, ui['flex-col'], styles.partnersSection)}>
                     <div className={clsx(ui.flex, ui['flex-col'], ui['h3-section'])}>
-                        <h3>Exploring a partnership?</h3>
+                        <h3>{t('ecosystem.partner.title')}</h3>
                         <p className={ui['max-w-text']}>
-                            Want to collaborate? Our Business Development team is
-                            excited to discuss how an ENS partnership can help.
+                            {t('ecosystem.partner.description')}
                         </p>
                     </div>
                     <ColorCards
@@ -90,12 +90,6 @@ export default async function Ecosystem({
                                 'Speak with our Business Development team to chat about a partnership opportunity.',
                                 color: 'ens-blue',
                                 link: 'mailto:support@ens.domains',
-                            },
-                            {
-                                title: 'Explore Opportunities',
-                                description: 'Get ideas on how to work with ENS.',
-                                color: 'ens-green',
-                                link: '#',
                             },
                         ]}
                     />

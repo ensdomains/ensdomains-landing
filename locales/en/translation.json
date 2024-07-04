@@ -114,12 +114,12 @@
       "quickstart": {
         "tag": "Quickstart Guide",
         "title": "New to Web3?",
-        "description": "Starting in web3 should be exhilarating, not intimidating. Dive into our straightforward guides to begin with ease and confidence."
+        "description": "Our guides will get you started quickly and easily."
       },
       "pro": {
         "tag": "ENS Contracts",
         "title": "For the Web3 wizards",
-        "description": "Need more depth? Our comprehensive documentation offers deep insights and expert tips for the web3 savvy."
+        "description": "Dive into our comprehensive developer documentation."
       }
     },
     "extra": {
@@ -157,17 +157,21 @@
     "integration": {
       "title": "Ready for integration?",
       "foundation": {
-        "title": "Robust Web3 Foundation",
-        "description": "Gain access to a built-in audience, establishing your brand as a key player in the new internet era."
+        "title": "Build Your Web3 Presence",
+        "description": "Join us to position your brand at the forefront of the new internet."
       },
       "trust": {
         "title": "Unparalleled Trust",
         "description": "Trust isn't a buzzword, it's our foundation. As a non-profit, DAO-governed protocol, we're committed to security and integrity."
       },
       "resources": {
-        "title": "Need more resources?",
-        "description": "ENS is more powerful than you think. See below for more resources on how to integrate ENS into your organization."
+        "title": "Explore With Us",
+        "description": "Discover how ENS can amplify your organization with additional resources."
       }
+    },
+    "partner": {
+      "title": "Partner with us",
+      "description": "Want to collaborate? Connect with our Business Development team to explore partnership opportunities."
     }
   },
   "governance": {

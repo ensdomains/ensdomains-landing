@@ -28,6 +28,7 @@ export const generateMetadata = async ({ params }: PageProps): Promise<Metadata>
 
     return {
         title: `${t('brand.header.title')} | ENS`,
+        description: t('brand.header.description'),
     };
 };
 

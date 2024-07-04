@@ -23,6 +23,7 @@ export const generateMetadata = async ({ params }: PageProps): Promise<Metadata>
 
     return {
         title: `${t('governance.hero.tag')} | ENS`,
+        description: t('governance.hero.text'),
     };
 };
 
@@ -51,7 +52,7 @@ export default async function Governance({
                     [t('governance.hero.cta1'), 'https://docs.ens.domains/dao'],
                     [
                         t('governance.hero.cta2'),
-                        'https://docs.ens.domains/dao/proposals',
+                        'https://www.tally.xyz/gov/ens',
                     ],
                 ]}
             >
