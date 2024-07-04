@@ -136,9 +136,9 @@ export default async function Governance({
                     <LinkList
                         links={[
                             {
-                                title: 'Discord',
-                                href: 'https://chat.ens.domains',
-                                description: t('governance.extra.resources.community'),
+                                title: t('governance.extra.resources.forum.title'),
+                                href: 'https://discuss.ens.domains',
+                                description: t('governance.extra.resources.forum.description'),
                             },
                             {
                                 title: t('governance.extra.resources.docs.title'),
@@ -149,6 +149,11 @@ export default async function Governance({
                                 title: t('governance.extra.resources.voting.title'),
                                 href: 'https://tally.xyz/gov/ens',
                                 description: t('governance.extra.resources.voting.description'),
+                            },
+                            {
+                                title: 'Discord',
+                                href: 'https://chat.ens.domains',
+                                description: t('governance.extra.resources.community'),
                             },
                         ]}
                     />

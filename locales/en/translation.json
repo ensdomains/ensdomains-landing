@@ -190,7 +190,7 @@
       "title": "$ENS: Power to the People",
       "vote": {
         "title": "Your vote, your voice",
-        "text": "$ENS isn't just a token – it's your key to meaningful change in the ENS ecosystem. Each $ENS token you possess represents your stake in our collective journey."
+        "text": "$ENS isn't just a token – it's your key to making meaningful change in the ENS ecosystem. 1 token = 1 vote. $ENS tokens empower you to shape ENS's future."
       },
       "delegation": {
         "title": "Empower through delegation",
@@ -203,13 +203,17 @@
       "resources": {
         "title": "Resources",
         "community": "Join the community on Discord.",
+        "forum": {
+          "title": "DAO Forum",
+          "description": "Join the DAO Forum to discuss new ideas."
+        },
         "docs":{
           "title": "DAO Documentation",
           "description": "Documentation for the DAO."
         },
         "voting": {
           "title": "Tally Voting",
-          "description": "Lorem ipsum."
+          "description": "Participate in governance."
         }
       }
     }
