@@ -63,22 +63,6 @@ export default async function Developers({
                     <LinkList
                         links={[
                             {
-                                title: t(
-                                    'developers.resources.docs.title',
-                                ),
-                                href: 'https://docs.ens.domains',
-                                description: t(
-                                    'developers.resources.docs.description',
-                                ),
-                            },
-                            {
-                                title: 'ENSjs',
-                                href: 'https://github.com/ensdomains/ensjs-v3',
-                                description: t(
-                                    'developers.resources.ensjs.description',
-                                ),
-                            },
-                            {
                                 title: 'CCIP Read',
                                 href: 'https://docs.ens.domains/ccip',
                                 description: t(
@@ -98,6 +82,11 @@ export default async function Developers({
                                 description: t(
                                     'developers.resources.thorin.description',
                                 ),
+                            },
+                            {
+                                title: t('developers.resources.tg.title'),
+                                href: 'https://t.me/bruhhhhhhhhhhhhhhhhhhhhhhhhhhh',
+                                description: t('developers.resources.tg.description'),
                             },
                         ]}
                     />

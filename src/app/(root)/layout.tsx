@@ -39,7 +39,7 @@ export default async function RootLayout({ children, params: { lang = 'en' } }: 
             title: t('footer.community'),
             entries: [
                 { title: t('footer.blog'), link: 'https://blog.ens.domains' },
-                { title: t('footer.feedback'), link: '' },
+                { title: t('footer.feedback'), link: 'https://ens.canny.io/' },
                 {
                     title: t('footer.discord'),
                     link: 'https://chat.ens.domains',
@@ -79,7 +79,7 @@ export default async function RootLayout({ children, params: { lang = 'en' } }: 
                 { title: t('footer.tou'), link: 'https://app.ens.domains/legal/terms-of-use' },
                 {
                     title: t('footer.bugs'),
-                    link: 'https://docs.ens.domains/bug-bounty-program',
+                    link: 'https://immunefi.com/bug-bounty/ens/',
                 },
                 {
                     title: t('footer.brand'),

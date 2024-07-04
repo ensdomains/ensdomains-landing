@@ -2,11 +2,11 @@ export const languages = [
     // 'it',
     // 'vi',
     // 'pt',
-    'nl',
+    // 'nl',
     // 'pl',
     'en',
     // 'ja',
-    'ru',
+    // 'ru',
     // 'es',
     // 'ko',
     // 'tr',
@@ -17,7 +17,7 @@ export const languages = [
 
 export const languageNames: Record<Language, string> = {
     en: 'English',
-    ru: 'Русский',
+    // ru: 'Русский',
     // de: 'Deutsch',
     // cn: '简体中文',
     // ja: '日本語',
@@ -27,7 +27,7 @@ export const languageNames: Record<Language, string> = {
     // es: 'Español',
     // pl: 'Polski',
     // ko: '한국어',
-    nl: 'Nederlands',
+    // nl: 'Nederlands',
     // vi: '㗂越',
     // pt: 'Português',
 };

@@ -45,7 +45,7 @@
     },
     "gyow": {
       "title": "Blaze your own trail",
-      "description": "Find your unique path in the ENS ecosystem. No matter where you start, we're all going toward a better internet.",
+      "description": "Discover your unique path in the ENS ecosystem. Wherever you begin, we’re all moving towards a better internet.",
       "ens-app": {
         "title": "ENS App",
         "description": "Your ENS journey begins here, by registering your name."
@@ -72,7 +72,7 @@
       "governance": {
         "title": "A public good, shaped by you",
         "tag": "Governance",
-        "description": "ENS is more than a non-profit—it's a community-governed beacon of trust. Take part in shaping an internet where everyone has a voice.",
+        "description": "ENS is a community-driven non-profit. Join us in creating an internet where everyone has a voice.",
         "button": "Learn about ENS Governance"
       },
       "community": {
@@ -92,27 +92,24 @@
     "hero": {
       "tag": "Developers",
       "title": "Build in good\n company",
-      "text": "Whether you're a web3 newbie or a seasoned pro, we're inviting you to help craft a brighter web. ENS is more than just a protocol—it's a movement towards a trustless internet.",
+      "text": "Join a community of innovators and developers crafting a better internet. Whether you're new to Web3 or a seasoned pro, ENS is your gateway to a trustless web.",
       "cta1": "Developer Docs",
       "cta2": "Github"
     },
     "resources": {
       "title": "Resources",
-      "docs": {
-        "title": "Documentation",
-        "description": "Protocol Documentation."
-      },
-      "ensjs": {
-        "description": "The ultimate ENS javascript library, with viem under the hood."
-      },
       "ccip-read": {
-        "description": "The Cross Chain Interoperability Protocol (or CCIP Read for short), can load information by hitting a so called \"Gateway\"."
+        "description": "Understand CCIP Read, or EIP-3668, a cross chain interoperability protocol that provides a mechanism to allow a contract to fetch external data."
       },
       "evmgateway": {
-        "description": "This repository implements a generic CCIP-Read gateway for fetching state proofs of data on other EVM chains. The intended use is for contracts on L1 to be able to fetch and verify data from contracts on L2 in a read context."
+        "description": "The EVM Gateway is a generic CCIP-Read gateway for fetching state proofs of data on other EVM chains."
       },
       "thorin": {
         "description": "Design system for ENS built with React and styled-components."
+      },
+      "tg": {
+        "title": "Developer Telegram",
+        "description": "Join our Community Developer Telegram channel to ask questions and learn more about building on ENS."
       },
       "quickstart": {
         "tag": "Quickstart Guide",
