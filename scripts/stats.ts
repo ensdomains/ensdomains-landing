@@ -20,7 +20,7 @@ if (!res.data) {
 
 const names = res.data.result?.rows[0]._col0;
 
-await writeFile('src/stats.json', JSON.stringify({
+await writeFile('src/stats/landing.json', JSON.stringify({
     owners,
     names,
     integrations: 750,
