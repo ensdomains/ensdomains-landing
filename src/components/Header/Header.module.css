@@ -29,6 +29,7 @@
     font-size: 12px;
     line-height: 120%;
     letter-spacing: 0.24px; 
+    font-family: var(--ens-mono), monospace;
 }
 
 .h1 {
