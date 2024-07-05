@@ -91,7 +91,7 @@ export const HeroContent = () => (
             </div>
         </div>
         <HeroEnsLink
-            name="domico.eth"
+            name="jefflau.eth"
             color="ens-blue"
             bgColor="ens-light-blue"
         />
@@ -101,12 +101,12 @@ export const HeroContent = () => (
             bgColor="ens-light-magenta"
         />
         <HeroEnsLink
-            name="dion.eth"
+            name="khori.eth"
             color="ens-dark-brown"
             bgColor="ens-light-yellow"
         />
         <HeroEnsLink
-            name="eskender.eth"
+            name="validator.eth"
             bgColor="ens-magenta"
             color="ens-light-magenta"
         />
