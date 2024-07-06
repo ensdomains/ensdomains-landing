@@ -155,7 +155,7 @@
     .navContent {
         display: flex;
         gap: 80px;
-        justify-content: end;
+        justify-content: flex-end;
     }
     .menuButton {
         display: none !important;
