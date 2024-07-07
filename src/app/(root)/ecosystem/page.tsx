@@ -105,16 +105,14 @@ export default async function Ecosystem({
                             { title: 'Brave', href: 'https://brave.com' },
                             { title: 'GoDaddy', href: 'https://www.godaddy.com' },
                             { title: 'Optimism', href: 'https://www.optimism.io' },
-                            { title: 'Solana', href: 'https://solana.com' },
                             { title: 'Ethereum', href: 'https://ethereum.org' },
-                            { title: 'Bitcoin', href: 'https://bitcoin.org' },
                             { title: 'Phantom', href: 'https://phantom.app' },
                             { title: 'Opensea', href: 'https://opensea.io' },
                             { title: 'Farcaster', href: 'https://www.farcaster.xyz' },
                             { title: 'Etherscan', href: 'https://etherscan.io' },
                             { title: 'Metamask', href: 'https://metamask.io' },
                             { title: 'Rainbow', href: 'https://rainbow.me' },
-                            { title: 'Family', href: 'https://family.co' },
+                            { title: 'Arbitrum', href: 'https://arbitrum.io' },
                         ]}
                     />
                 </div>
