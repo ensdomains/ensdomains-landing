@@ -218,7 +218,7 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
                             ),
                             button: t('home.extra.community.button'),
                             buttonVariant: 'secondary',
-                            href: '/',
+                            href: 'https://discuss.ens.domains',
                         },
                     ]}
                 />
