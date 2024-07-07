@@ -44,7 +44,7 @@ export default async function Ecosystem({
                 description={t('ecosystem.hero.text')}
                 subtitle={t('ecosystem.hero.subtitle')}
                 cta={[
-                    [t('ecosystem.hero.cta1'), 'https://blog.ens.domains'],
+                    [t('ecosystem.hero.cta1'), 'https://blog.ens.domains/post/beginners-guide-to-ethereum-and-ens'],
                     [t('ecosystem.hero.cta2'), 'https://docs.ens.domains'],
                 ]}
             >
