@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
-import { ENSLogo } from '../assets/ENSLogo';
+import { ENSLogo } from '../assets/ENSLogoWithText';
 
 const LogoContainer = styled('div')`
     width: 104px;
