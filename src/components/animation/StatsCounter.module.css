@@ -1,0 +1,60 @@
+.container {
+    position: relative;
+
+    height: 360px;
+    width: 100%;
+    gap: 2px;
+}
+
+.bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bg > div {
+    height: 100%;
+}
+
+.stat {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 90%;
+    letter-spacing: -0.674px;  
+
+    color: var(--page-text);
+}
+
+.statGrid {
+    z-index: 1;
+}
+
+.value {
+    width: 3ch;
+    font-family: var(--ens-mono), monospace;
+    color: var(--ens-dark-blue);
+}
+
+.stat:nth-of-type(2) {
+    margin-left: 97px;
+}
+
+.stat:nth-of-type(3) {
+    margin-left: 34px;
+}
+
+@media (min-width: 768px) {
+    .stat {
+        font-size: 30px;
+        letter-spacing: -0.598px; 
+    }
+}
+
+@media (min-width: 1280px) {
+    .stat {
+        font-size: 50px;
+        letter-spacing: -1.014px;
+    }
+}

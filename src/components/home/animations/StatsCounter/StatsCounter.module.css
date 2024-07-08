@@ -1,0 +1,70 @@
+.container {
+    gap: 4px;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.value {
+    color: var(--ens-magenta);
+    font-family: var(--ens-mono), monospace;
+}
+
+.stat:nth-of-type(1) .value {
+    width: calc(9ch);
+}
+
+.stat:nth-of-type(2) .value {
+    width: calc(3ch);
+}
+
+.stat:nth-of-type(3) .value {
+    width: calc(7ch);
+}
+
+.stat {
+    color: var(--ens-dark-blue);
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+
+    font-size: 32px;
+    line-height: 96%;
+    letter-spacing: -0.32px;
+}
+
+.bg {
+    position: absolute;
+
+    top: -89px;
+    left: 0;
+}
+
+@media (min-width: 768px) {
+    .stat {
+        font-size: 62px;
+        line-height: 90%; 
+        letter-spacing: -1.241px; 
+        gap: 14px;
+    }
+    .bg {
+        top: -150px;
+        left: -20px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        height: 516px;
+    }
+    .stat {
+        font-size: 100px;
+        line-height: 90%; 
+        letter-spacing: -2px; 
+        gap: 24px;
+    }
+    .bg {
+        top: 0;
+        left: 40px;
+    }
+}

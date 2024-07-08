@@ -5,59 +5,49 @@
     "version": "0.2.0",
     "license": "MIT",
     "scripts": {
-        "build": "gatsby build && cp -r ./public ./out",
-        "dev": "gatsby develop",
+        "build": "next build",
+        "dev": "next",
         "develop": "pnpm run dev",
         "start": "pnpm run dev",
-        "serve": "gatsby serve",
-        "clean": "gatsby clean",
-        "i18n": "npx i18next-locales-sync -p en -s cn de es fr it ja ko nl pl pt ru vi -l ./locales/",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-        "lint": "eslint -c .eslintrc.json --ext .js ./src"
+        "lint": "eslint ./src -c eslint.config.mjs",
+        "lint:css": "stylelint -c stylelint.config.mjs './src/**/*.css'"
     },
     "dependencies": {
-        "@emotion/core": "^10.3.1",
-        "@emotion/styled": "^10.3.0",
-        "@ensdomains/thorin": "0.2.0",
-        "@ensdomains/thorin_next": "npm:@ensdomains/thorin@^0.6.44",
-        "babel-plugin-styled-components": "^2.1.4",
-        "eslint-plugin-jest": "^27.9.0",
-        "framer-motion": "^2.9.5",
-        "gatsby": "^5.13.3",
-        "gatsby-plugin-emotion": "^4.5.0",
-        "gatsby-plugin-google-fonts": "^1.0.1",
-        "gatsby-plugin-react-i18next": "^0.0.25",
-        "gatsby-plugin-react-svg": "^3.3.0",
-        "gatsby-plugin-styled-components": "^6.13.1",
-        "gh-pages": "^3.2.3",
-        "i18next": "^19.9.2",
-        "normalize.css": "^8.0.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-helmet": "^6.1.0",
-        "react-i18next": "^11.18.6",
-        "react-intersection-observer": "^8.34.0",
-        "react-is": "16.12.0",
-        "react-markdown": "^8.0.7",
-        "react-responsive-carousel": "^3.2.23",
-        "react-transition-state": "^1.1.5",
-        "styled-components": "^5.3.11"
+        "clsx": "^2.1.1",
+        "dune-api-client": "^1.0.1",
+        "i18next": "^23.11.5",
+        "i18next-resources-to-backend": "^1.2.1",
+        "next": "^14.2.4",
+        "next-i18next": "^15.3.0",
+        "react": "^18.3.1",
+        "react-countup": "^6.5.3",
+        "react-dom": "^18.3.1",
+        "react-external-link": "^2.3.1",
+        "react-i18next": "^14.1.2",
+        "typescript": "^5.5.3"
     },
     "devDependencies": {
-        "@typescript-eslint/parser": "^5.62.0",
-        "eslint": "^8.56.0",
-        "eslint-plugin-v3xlabs": "^1.6.5",
-        "gatsby-plugin-pnpm": "^1.2.10",
-        "i18next-locales-sync": "^1.2.1",
-        "prettier": "2.0.5",
-        "typescript": "^5.3.3"
+        "@eslint-react/eslint-plugin": "^1.5.22",
+        "@eslint/compat": "^1.1.0",
+        "@eslint/js": "^9.6.0",
+        "@next/eslint-plugin-next": "^14.2.4",
+        "@stylistic/eslint-plugin": "^2.3.0",
+        "@stylistic/stylelint-plugin": "^2.1.2",
+        "@types/node": "^20.14.9",
+        "@types/react": "^18.3.3",
+        "@types/react-helmet": "^6.1.11",
+        "eslint": "^9.6.0",
+        "globals": "^15.8.0",
+        "i18next-locales-sync": "^2.1.0",
+        "stylelint": "^16.6.1",
+        "typescript-eslint": "^7.15.0"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/ensdomains/ensdomains-landing-v2"
+        "url": "https://github.com/ensdomains/ensdomains-landing"
     },
     "bugs": {
-        "url": "https://github.com/ensdomains/ensdomains-landing-v2/issues"
+        "url": "https://github.com/ensdomains/ensdomains-landing/issues"
     },
-    "packageManager": "pnpm@8.7.1"
+    "packageManager": "pnpm@9.0.6"
 }

@@ -1,0 +1,44 @@
+.title {
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.partnersContainer {
+    padding: 16px 0;
+    gap: 40px;
+    border-top: 1px solid var(--ens-gray-2);
+}
+
+.gtwSection {
+    gap: 80px;
+}
+
+.mainSection {
+    padding-top: 0 !important;
+}
+
+.ownershipVideo {
+    width: 151px;
+}
+
+.cardsSection {
+    margin-top: 80px;
+}
+
+@media (min-width: 768px) {
+    .gtwSection {
+        gap: 40px;
+    }
+    .ownershipVideo {
+        width: 515px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .gtwSection {
+        gap: 80px;
+    }
+    .ownershipVideo {
+        width: 901px;
+    }
+}

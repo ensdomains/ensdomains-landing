@@ -1,0 +1,91 @@
+@keyframes move {
+    10% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+.position-container {
+    position: absolute;
+}
+
+.animation-container {
+    position: relative;
+}
+
+.animated-square {
+    animation: move 2s linear infinite;
+}
+
+.position-container[data-name='turn-left'] {
+    left: 16px;
+    bottom: 72px;
+}
+
+.position-container[data-name='turn-right'] {
+    top: 72px;
+    right: 32px;
+}
+
+.position-container[data-name='turn-left'] .animated-square {
+    offset-path: path('M124.376 119.344L16.7219 119.344C8.14764 119.344 1.19689 112.393 1.19688 103.819L1.19689 -4.50346');
+    top: -15px;
+    left: 31px;
+}
+
+.position-container[data-name='turn-right'] .animated-square {
+    top: 30px;
+    left: -15px;
+    offset-path: path('M-4.12402 0.616699L103.531 0.616699C112.105 0.616699 119.056 7.56748 119.056 16.1417V124.464');
+}
+
+@media (max-width: 1280px) {
+    .position-container[data-name='light-diag-top'], .position-container[data-name='light-diag-bottom'] {
+        display: none;
+    }
+}
+
+@media (min-width: 1280px) {
+    .position-container[data-name='turn-left'] .animated-square {
+        top: -24px;
+        left: 0;
+        offset-path: path('M229.493 176.583L70.0047 176.583C57.3022 176.583 47.0047 166.286 47.0047 153.583L47.0048 -6.89484');
+    }
+    .position-container[data-name='turn-right'] .animated-square {
+        top: 0;
+        left: -24px;
+        offset-path: path('M-6.49304 46.8398L152.995 46.8398C165.698 46.8398 175.995 57.1373 175.995 69.8398V230.318');
+    }
+    .position-container[data-name='turn-left'] {
+        left: 135px;
+        bottom: 62px;
+    }
+    .position-container[data-name='turn-right'] {
+        top: 154px;
+        right: 115px;
+    }
+    .position-container[data-name='light-diag-top'] {
+        left: 60px;
+        top: -154px; 
+    }
+    .position-container[data-name='light-diag-bottom'] {
+        right: -21px;
+        bottom: 3px; 
+    }
+    .position-container[data-name='light-diag-top'] .animated-square, .position-container[data-name='light-diag-bottom'] .animated-square {
+        offset-path: path('M0.657471 0.415527L311.784 311.542');
+        top: 45px;
+        left: 58px;
+    }
+    .position-container[data-name='light-diag-bottom'] .animated-square {
+        animation-direction: reverse;
+    }
+}
+
+@media (max-width: 768px) {
+    .position-container {
+        display: none;
+    }
+}

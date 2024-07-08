@@ -1,0 +1,154 @@
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.my-100 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.space-y-4 > * + * {
+    margin-top: 1rem;
+}
+
+.space-x-4 > * + * {
+    margin-left: 1rem;
+}
+
+.space-y-40 > * + * {
+    margin-top: 40px;
+}
+
+.max-w-text {
+    max-width: 420px;
+}
+
+.serif {
+    font-family: var(--ens-serif);
+    color: var(--ens-medium-blue);
+    line-height: 112%;
+
+    font-size: 20px;
+}
+
+.body-sm {
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.32px;
+}
+
+.button {
+    background-color: var(--ens-blue);
+    color: var(--ens-gray-2); 
+    font-weight: 500;
+    font-family: var(--ens-mono), monospace;
+    border-radius: 4px;
+    text-align: center;
+    width: 100%;
+    transition: 100ms;
+
+    padding: 20px 60px; 
+    font-size: 18px;
+    letter-spacing: -0.36px;
+    line-height: 96%;
+}
+
+.button-secondary {
+    background-color: var(--ens-light-blue);
+    color: var(--ens-blue);
+}
+
+.button:hover {
+    background-color: var(--ens-hover-blue);
+}
+
+.button-secondary:hover {
+    background-color: var(--ens-hover-light-blue);
+}
+
+.dots-bg {
+    position: relative;
+}
+
+.dots-bg::after {
+    content: '';
+    width: 100%;
+    inset: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.4;
+    background-color: var(--page-text); /* This color will be used by currentColor in the SVG */
+    mask-image: url('/assets/pattern.svg');
+    mask-size: 4px 4px; /* Adjust the size of the pattern */
+    mask-repeat: repeat;
+}
+
+.h3-section {
+    gap: 24px;
+    width: 100%;
+    max-width: 298px;
+}
+
+.h2-section {
+    gap: 40px;
+}
+
+.page {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    gap: 100px;
+    padding: 100px 1rem;
+}
+
+@media (min-width: 768px) {
+    .page {
+        max-width: calc(834px + 2rem);
+        padding: 120px 1rem;
+        gap: 120px;
+    }
+    .h3-section {
+        gap: 32px;
+        max-width: 417px;
+    }
+    .button {
+        width: fit-content;
+    }
+}
+
+@media (min-width: 1280px) {
+    .button {
+        padding: 30px 100px;
+    }
+    .page {
+        max-width: calc(1374px + 5rem);
+        padding: 200px 2.5rem;
+        gap: 200px;
+    }
+    .h3-section {
+        gap: 50px;
+        max-width: 550px;
+    }
+    .h2-section {
+        gap: 80px;
+    }
+}

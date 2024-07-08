@@ -1,0 +1,137 @@
+.headerContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.headerLayout {
+    gap: 40px;
+}
+
+.linkList {
+    list-style-position: inside;
+    list-style-image: url('/assets/brand/bullet.svg');
+}
+
+.linkList li a {
+    font-size: 18px; 
+    color: var(--ens-medium-blue);
+}
+
+.linkList li a:hover {
+    color: var(--ens-dark-blue);
+}
+
+.sectionDescription {
+    gap: 20px;
+}
+
+.content {
+    gap: 40px;
+}
+
+.contentTitle {
+    padding: 16px 0;
+    border-top: 1px solid var(--ens-dark-blue);
+   
+}
+
+.assetsDescription {
+    width: 100%;
+    position: relative;
+}
+
+.assetGrid > figure {
+    background-color: #F2F2F2;
+}
+.assetGrid > figure:nth-child(3) {
+    background-color: var(--ens-dark-blue);
+}
+
+.assetGrid > figure {
+    display: block;
+    border-radius: 2px; 
+
+    padding: 84px;
+    position: relative;
+}
+
+.assetGrid > figure > figcaption {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+}
+
+.assetGrid > figure > select {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: max-content;
+    border: none;
+    cursor: pointer;
+}
+
+.downloadButton {
+    position: absolute;
+    right: 0;
+    top: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.downloadButton, .assetGrid > figure > figcaption, .assetGrid > figure > select {
+    padding: 6px 8px;
+    border-radius: 2px;
+    color: var(--ens-blue);
+    background-color: var(--ens-light-blue);
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.24px;
+}
+
+.assetGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.assetGrid > figure > img, .blueprint img {
+    width: 100%; 
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .headerContent {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+    .headerLayout {
+        gap: 64px;
+    }
+    .assetGrid {
+        grid-template-columns: repeat(3, minmax(5vw, 267px));
+        grid-template-rows: repeat(1, minmax(5vw, 267px));
+    }
+    .assetGrid > figure {
+        padding: 40px;
+    }
+    .blueprint {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media (min-width: 1280px) {
+    .headerLayout {
+        gap: 70px;
+    }
+    .assetGrid {
+        grid-template-columns: repeat(3, minmax(10vw, 450px));
+        grid-template-rows:  repeat(1, minmax(10vw, 450px));
+    }
+    .assetGrid > figure {
+        padding: 120px;
+    }
+    .blueprint {
+        grid-template-columns: 1fr 2fr;
+    }
+}

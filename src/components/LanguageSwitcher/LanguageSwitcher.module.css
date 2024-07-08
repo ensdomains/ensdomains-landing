@@ -1,0 +1,125 @@
+.currentLanguage {
+    color: var(--ens-blue);
+    font-style: normal;
+    font-weight: 500;
+    user-select: none;
+
+    font-size: 18px; 
+    line-height: 96%;
+    letter-spacing: -0.36px;
+}
+
+.currentLanguageName {
+    margin-right: 0.5rem;
+}
+
+.currentLanguageShort::before {
+    content: '(';
+}
+.currentLanguageShort::after {
+    content: ')';
+}
+
+.currentLanguageShort {
+    text-transform: uppercase;
+}
+
+.summary {
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.summary::after {
+    color: var(--ens-blue);
+    font-size: 18px;
+    margin-left: 10px;
+    bottom: 0;
+}
+
+.details {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: var(--ens-light-blue);
+    color: var(--ens-blue);
+    border-radius: 4px;
+}
+
+.language {
+    color: var(--ens-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 12px;
+
+    padding: 10px 0;
+}
+
+.indicator {
+    background: var(--ens-white);
+    border-radius: 1px;
+
+    width: 10px;
+    height: 10px;
+}
+
+.currentIndicator {
+    background: var(--ens-blue);
+}
+
+.language:hover {
+    color: var(--ens-hover-blue);
+}
+
+.language:hover .indicator {
+    background: var(--ens-hover-blue);
+}
+
+@media (min-width: 800px) {
+    .summary {
+        padding: 6px 12px;
+        border-radius: 2px;
+        background-color: var(--ens-light-blue);
+        border-radius: 4px;
+    }
+    .summary::after {
+        font-size: 12px;
+        margin-left: 8px;
+        bottom: 8px;
+    }
+    .currentLanguage {
+        font-size: 12px;
+        line-height: 120%; 
+        letter-spacing: 0.24px;
+    }
+    .details {
+        width: 56px;
+    }
+    .dropdown {
+        width: 167px;
+        top: 40px;
+    }
+    .language {
+        padding: 10px;
+        border-bottom: 1px solid var(--ens-white);
+    }
+    .indicator {
+        width: 12px;
+        height: 12px;
+    }
+    .currentLanguageName , .currentLanguageShort::before, .currentLanguageShort::after {
+        display: none;
+    }
+}

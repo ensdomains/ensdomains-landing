@@ -1,0 +1,37 @@
+.folders {
+    position: absolute;
+    z-index: 1;
+    width: fit-content;
+
+    top: calc(50% - 176px/2 - 18px);
+    left: 10px;
+}
+
+.counter {
+    color: var(--ens-blue);
+    z-index: 2;
+}
+
+.counter::before {
+    content: '$';
+}
+
+@media (min-width: 400px) {
+    .folders {
+        left: calc(50% - 316px/2 - 40px);
+    }
+}
+
+@media (min-width: 768px) {
+    .folders {
+        top: calc(50% - 156px/2 - 18px);
+        left: calc(50% - 281px/2 - 10px);
+    }
+}
+
+@media (min-width: 1280px) {
+    .folders {
+        top: calc(50% - 233px/2 - 18px);
+        left: calc(50% - 418px/2 - 40px);
+    }
+}

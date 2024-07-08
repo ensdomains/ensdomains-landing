@@ -1,0 +1,129 @@
+.grid {
+    display: grid;
+    gap: 10px;
+}
+
+.box {
+    align-self: flex-end;
+    margin-top: auto;
+    background-image: var(--img);
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+
+    height: 50px;
+    width: 50px;
+}
+
+.text {
+    opacity: 80%;
+}
+
+.card {
+    color: var(--ens-white);
+    background-color: var(--bg);
+    padding: 10px;
+    font-weight: 400;
+    border-radius: 4px;
+    transition: 150ms;
+    line-height: 96%;
+
+    gap: 24px;
+    min-height: 194px;
+    height: 100%;
+
+    letter-spacing: -0.36px; 
+    font-size: 18px;
+}
+
+.title {
+    font-weight: 500;
+}
+
+.card:hover {
+    background-color: var(--bg-hover);
+}
+
+.card:hover .text {
+    opacity: 100%;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--img);
+    background-size: cover;
+    background-position: center;
+    transition: opacity 500ms ease-in-out;
+    opacity: 1;
+    z-index: 1;
+}
+
+.card:hover .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--img-hover);
+    background-size: cover;
+    background-position: center;
+    transition: opacity 500ms ease-in-out;
+    opacity: 1;
+    z-index: 2;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--img-hover);
+    background-size: cover;
+    background-position: center;
+    transition: opacity 500ms ease-in-out;
+    opacity: 0;
+    z-index: 2;
+}
+
+.card:hover .box::before {
+    opacity: 0;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+    .card {
+        min-height: 146px;
+
+        font-size: 18px;
+        letter-spacing: -0.36px; 
+    }
+    .box {
+        width: 40px;
+        height: 40px; 
+    }
+}
+
+@media (min-width: 1280px) {
+    .card {
+        gap: 40px;
+        min-height: 240px;
+
+        font-size: 24px;
+        letter-spacing: -0.48px; 
+    }
+    .box {
+        width: 66px;
+        height: 66px;
+    }
+}

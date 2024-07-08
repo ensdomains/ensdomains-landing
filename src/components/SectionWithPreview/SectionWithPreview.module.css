@@ -1,0 +1,55 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.content {
+    gap: 24px;
+}
+
+.cta {
+    flex-flow: wrap;
+    gap: 10px;
+
+    margin-top: auto;
+}
+
+.contentWithCta {
+    gap: 20px;
+    order: 1;
+}
+
+@media (min-width: 768px) {
+    .container {
+        gap: 84px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .content {
+        gap: 32px;
+    }
+    .cta {
+        margin-top: unset;
+    }
+    .contentWithCta {
+        max-width: 417px;
+        order: unset;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .content {
+        gap: 50px;
+    }
+    .container {
+        gap: unset;
+    }
+    .cta {
+        margin-top: 80px;
+    }
+    .contentWithCta {
+        max-width: 688px;
+    }
+
+}

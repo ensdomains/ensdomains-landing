@@ -1,0 +1,674 @@
+.grid {
+    user-select: none;
+    width: max-content;
+    display: grid;
+    grid-template-columns: 1fr max-content; 
+    grid-template-rows: repeat(2, max-content); 
+    grid-template-areas: 
+        'fnd fnd'
+        '. .'; 
+    gap: 6px;
+}
+
+.grid:hover .name, .grid:hover .farcasterPfp {
+    transform: scale(1.125);
+}
+
+.grid > * {
+    box-shadow: 0px 20px 28px 0px rgba(14, 61, 104, 0.06);
+    border-radius: 6px;
+}
+
+.name {
+    border-radius: 16px;
+    background: var(--ens-white);
+    box-shadow: 0px 24px 30px 0px rgba(14, 61, 104, 0.06);
+
+    cursor: pointer;
+    transition: opacity var(--duration) ease-in-out;
+}
+
+.pfp {
+    border-radius: 99px;
+    z-index: 1;
+}
+
+.fndBg {
+    background-image: url('/assets/home/fndBg.png');
+    width: 100%;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    filter: brightness(0.65);
+  
+    height: 62px;
+}
+
+.fnd {
+    grid-area: fnd;
+    width: 100%;
+    background: var(--ens-white);
+    position: relative;
+  
+    max-width: 270px;
+    padding-top: 42px;
+}
+
+.fndPfp {
+    border: solid var(--ens-white);
+    --height: 45px;
+    --width: 45px;
+
+    border-width: 2px;
+    top: -2px;
+}
+
+.fndName {
+    color: var(--ens-dark-blue);
+    line-height: 96%;
+    border: 1px solid var(--ens-gray-2);
+
+    font-size: 6px;
+    padding: 5px;
+}
+
+.fndLine {
+    height: 1px;
+    opacity: 0.2;
+    background: var(--ens-gray-3);
+
+    padding: 8px 0;
+}
+
+.fndGallery {
+    overflow: hidden;
+
+    gap: 2px;
+    padding-left: 9.5px;
+    padding-right: 9.5px;
+}
+
+.img {
+    object-fit: cover;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    object-position: top;
+
+    width: 82px;
+    height: 46px;
+}
+
+.swap {
+    background-color: var(--ens-white);
+    background: var(--ens-white);
+    height: 100%;
+
+    padding: 4.5px;
+    gap: 14px;
+}
+
+.swapName {
+    color: var(--ens-medium-blue);
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  
+    font-size: 4px;
+    max-width: 45px;
+    gap: 3px;
+}
+
+.swapHeader {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 0 8px;
+    width: 100%;
+}
+
+.swapTitle {
+    color: var(--ens-medium-blue);
+
+    font-size: 6px;
+}
+
+.swapIndicator {
+    background-color: var(--ens-medium-blue);
+    border-radius: 99px;
+
+    height: 8px;
+    width: 8px;
+}
+
+.swapCurrency {
+    color:  var(--ens-medium-blue);
+    font-family: var(--ens-semi-mono);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 96%; /* 8.052px */ 
+
+    font-size: 4px;
+}
+
+.swapCurrencyToggle, .swapCurrencyResultToggle {
+    align-items: center;
+    border-radius: 8px;
+    width: max-content;
+    color: var(--ens-medium-blue);
+
+    padding: 4px;
+    gap: 3px;
+}
+
+.swapCurrencyToggle {
+    background: var(--ens-gray-2);
+}
+
+.swapCurrencyResultToggle {
+    background: var(--ens-white);
+}
+
+.swapValue {
+    color: var(--ens-medium-blue);
+    font-family: var(--ens-mono);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 96%;
+
+    font-size: 16px;
+}
+
+.swapResult {
+    background: var(--ens-gray-2);
+    width: 100%;
+    border-radius: 6px;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 4px;
+
+    padding: 4px;
+    height: 85px;
+}
+
+.swapIcon {
+    position: absolute;
+
+    height: 13px;
+    width: 13px;
+    top: -6px;
+}
+
+.swapCurrencyIcon {
+    height: 3px;
+    width: 6px;
+}
+
+.swapNamePfp {
+    --height: 8px;
+    --width: 8px;
+}
+
+.swapContainer {
+    gap: 3px;
+}
+
+.swapButton {
+    background: var(--ens-medium-blue);
+    width: 100%;
+    border-radius: 4px;
+    color: var(--ens-gray-2);
+    font-family: var(--ens-semi-mono);
+    font-weight: 500;
+    cursor: pointer;
+
+    font-size: 10px;
+    padding: 6px 0;
+}
+
+.swapCurrencyToggle, .swapCurrencyResultToggle  {
+    margin-bottom: 3px;
+}
+
+.farcaster {
+    width: max-content;
+    height: 100%;
+    background-color: var(--ens-white);
+    border: 1px solid var(--ens-gray-2);
+
+    border-radius: 6px;
+}
+
+.farcasterTitle {
+    width: 100%;
+    position: relative;
+
+    padding-top: 10px;
+    padding-bottom: 4px;
+}
+
+.farcasterStories {
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(1, 26, 37, 0.1);
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.farcasterStories > img {
+    border-radius: 99px;
+}
+
+.farcasterPfp {
+    border-radius: 99px;
+    position: absolute;
+
+    --height: 8px;
+    --width: 8px;
+  
+}
+
+.farcasterTitleText {
+    text-align: center;
+    color: var(--ens-dark-blue);
+
+    font-size: 6px;
+}
+
+.farcasterPost {
+    width: 100%;
+    border-top: 1px solid rgba(1, 26, 37, 0.1);
+    color: var(--ens-dark-blue);
+
+    max-width: 132px;
+    font-size: 5px;
+    padding: 6px 0;
+    gap: 4px;
+}
+
+.farcasterStories, .farcasterTitle, .farcasterPost {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.farcasterPostAuthor {
+    gap: 4px;
+    line-height: 96%;
+}
+
+.farcasterPostAuthorHandle {
+    color: var(--ens-gray-4);
+}
+
+.farcasterPostButtons > button {
+    display: block;
+    color: var(--ens-dark-blue);
+    opacity: 0.33;
+    transition: opacity 150ms;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    font-size: 4px;
+}
+
+.farcasterPostButtons > button:hover {
+    opacity: 1;
+}
+
+.farcasterPostContent {
+    font-weight: 400;
+    line-height: 133%;
+    letter-spacing: 0.088px; 
+}
+
+.farcasterMenu {
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid rgba(1, 26, 37, 0.1);
+    background-color: var(--ens-white);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+.farcasterMenu > button {
+    width: 100%;
+    background: none;
+    padding: 0;
+}
+
+.farcasterMenu > button > img {
+    height: 8px;
+    width: 8px;
+}
+
+.farcasterStories > img {
+    height: 16px;
+    width: 16px;
+}
+
+.farcasterPostButtonsIcon {
+    height: 4px;
+    width: 5px;
+}
+
+/* RESPONSIVE STYLES */
+
+@media (min-width: 768px) {
+    .grid > * {
+        border-radius: 8px;
+    }
+    .img {
+        height: 50px;
+        width: 104px;
+    }
+    .fnd {
+        max-width: 340px;
+        padding-top: 51px;
+    }
+    .fndBg {
+        height: 79px;
+    }
+    .fndName {
+        font-size: 8px;
+        padding: 10px;
+    }
+    .fndPfp {
+        margin-bottom: 4px;
+        --width: 56px;
+        --height: 56px; 
+        border-width: 4px;
+    }
+    .swapResult {
+        padding: 4px;
+        margin-top: 0;
+        height: 100%;
+    }
+    .swapValue {
+        font-size: 18px;
+    }
+    .swap {
+        gap: 10px;
+    }
+    .swapNamePfp {
+        --width: 16px;
+        --height: 16px;
+    }
+    .swapTitle {
+        font-size: 7px;
+    }
+    .swapCurrency {
+        font-size: 5px;
+    }
+    .swapCurrencyToggle, .swapCurrencyResultToggle {
+        padding: 4px;
+        gap: 4px;
+        margin-bottom: 5px;
+        border-radius: 16px;
+    }
+    .swapIndicator {
+        height: 10px;
+        width: 10px;
+    }
+    .grid {
+        grid-template-columns: max-content 1fr 1fr;
+        grid-template-rows: unset;
+        grid-template-areas: 
+    'fnd . .'; 
+        gap: 12px;
+    }
+    .swapName {
+        font-size: 5px;
+        gap: 4px;
+        padding: 6px;
+        max-width: 64px;
+    }
+    .swap {
+        padding: 5px;
+    }
+    .swapIcon {
+        top: -8px;
+        width: 16px;
+        height: 16px;
+    }
+    .swapContainer {
+        gap: 4px;
+    }
+    .swapCurrencyIcon {
+        height: 4px;
+    }
+    .swapButton {
+        font-size: 12px;
+        padding: 7.5px 0;
+    }
+    .farcasterPost {
+        max-width: 156px;
+        font-size: 5px;
+
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    .farcasterTitle {
+        padding-bottom: 5px;
+        padding-top: 12px;
+    }
+    .farcasterTitleText {
+        font-size: 7px;
+    }
+    .farcasterStories {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    .farcasterStories > img {
+        height: 20px;
+        width: 20px;
+    }
+    .farcasterPfp {
+        --height: 10px;
+        --width: 10px;
+        top: 12px;
+        left: 9px;
+    }
+    .farcasterStories, .farcasterTitle, .farcasterPost {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .farcasterPostButtons > button {
+        font-size: 5px;
+    }  
+    .farcasterPostButtons {
+        gap: 8px;
+    }
+    .farcasterMenu {
+        padding: 0 5px;
+        gap: 3px;
+    }
+    .farcasterMenu > button > img {
+        height: 10px;
+        width: 10px;
+    }
+    .farcasterPostButtonsIcon {
+        height: 5px;
+        width: 5px;
+    }
+    .fndGallery {
+        padding-left: 12px;
+        padding-right: 12px;
+        gap: 3px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid > * {
+        border-radius: 12px;
+    }
+    .fndName {
+        font-size: 14px;
+    }
+    .fndLine {
+        padding: 16px 0;
+    }
+    .fndPfp {
+        width: 92px;
+        height: 92px;
+    }
+    .swapButton {
+        font-size: 20px;
+        padding: 12px 0;
+    }
+    .grid {
+        gap: 12px;
+    }
+    .fndBg {
+        height: 130px;
+    }
+    .fnd {
+        max-width: 580px;
+        padding-top: 83px;
+    }
+    .img {
+        height: 104px;
+        width: 170px;
+    }
+    .swapResult {
+        height: 165px;
+        padding: 6px;
+        padding-top: 30px;
+    }
+    .swapValue {
+        font-size: 30px;
+    }
+    .swap {
+        gap: 26px;
+        padding: 8px;
+    }
+    .swapTitle {
+        font-size: 12px;
+    }
+    .swapCurrency {
+        font-size: 8px;
+    }
+    .swapCurrencyToggle, .swapCurrencyResultToggle {
+        padding: 6px;
+        gap: 6px;
+    }
+    .swapIndicator {
+        height: 16px;
+        width: 16px;
+    }
+    .swapName {
+        font-size: 8px;
+        gap: 6px;
+        padding: 10px;
+        max-width: 106px;
+    }
+    .swapIcon {
+        top: -16px;
+        height: max-content;
+        width: max-content;
+    }
+    .swapCurrencyToggle {
+        margin-bottom: 10px;
+    }
+    .swapContainer {
+        gap: 6px;
+    }
+    .farcasterTitleText {
+        font-size: 12px;
+        line-height: 96%;
+    }
+    .farcasterPost {
+        max-width: 256px;
+        font-size: 9px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .farcasterPfp {
+        --height: 16px;
+        --width: 16px;
+        top: 18px;
+        left: 14px;
+    }
+    .farcasterStories, .farcasterTitle, .farcasterPost {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .farcasterPostButtons {
+        gap: 14px;
+    }
+    .farcasterPostButtons > button {
+        font-size: 8px;
+    }
+    .fndPfp {
+        margin-bottom: 6px;
+
+        --width: 92px;
+        --height: 92px; 
+    }
+    .farcasterStories > img {
+        height: 32px;
+        width: 32px;
+    }
+    .farcasterTitle {
+        padding-top: 20px;
+        padding-bottom: 8px;
+    }
+    .farcasterStories {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .swapCurrencyIcon {
+        height: 6px;
+    }
+    .farcasterMenu > button {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .farcasterMenu {
+        padding: 0 8px;
+        gap: 5px;
+    }
+    .farcasterMenu > button > img {
+        height: 16px;
+        width: 16px;
+    }
+    .farcasterPostButtonsIcon {
+        height: auto;
+        width: auto;
+    }
+    .fndGallery {
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 5px;
+    }
+}
+
+/* ANIMATION */
+
+.fnd, .swap, .farcaster {
+    opacity: 0;
+    transition-duration: 0.75s;
+    transition-property: transform, opacity;
+    transform: translateY(100px);
+}
+
+.swap.animating {
+    transition-delay: 150ms;
+}
+
+.farcaster.animating {
+    transition-delay: 300ms;
+}
+
+.animating {
+    opacity: 1;
+    transform: translateY(0);
+}

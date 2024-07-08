@@ -1,0 +1,112 @@
+@keyframes move {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+        offset-distance: 0%;
+    }
+    11% {
+        opacity: 0;
+    }
+    12% {
+        opacity: 1;
+    }
+    94% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        offset-distance: 100%;
+        opacity: 0;
+    }
+}
+
+.position-container {
+    position: absolute;
+}
+
+.animation-container {
+    position: relative;
+}
+
+.position-container:nth-child(1) {
+    right: 62px;
+    top: 220px;
+}
+
+.position-container:nth-child(2) {
+    left: 62px;
+    top: 220px;
+}
+
+.animated-square {
+    animation: move 2s linear infinite;
+}
+
+.animated-square[data-name='left-top'] {
+    left: -15px;
+    top: -15px;
+    offset-path: path('M29.3525 207.219L207.4 29.1722');
+}
+.animated-square[data-name='left-bottom'] {
+    left: 0;
+    top: 180px;
+    offset-path: path('M178.717 178.835L0.670035 0.787741');
+}
+
+.animated-square[data-name='right-top'] {
+    top: 15px;
+    left: 92px;
+    offset-path: path('M0.546875 0.854492L178.594 178.902');
+}
+
+.animated-square[data-name='right-bottom'] {
+    top: 78px;
+    left: 0;
+    offset-path: path('M282.912 104.47L104.864 282.517');
+}
+
+@media (max-width: 768px) {
+    .position-container {
+        display: none;
+    }
+    .animated-square {
+        display: none;
+    }
+}
+
+@media (max-width: 1280px) {
+    .position-container:nth-child(1) {
+        right: 36px;
+    }
+    .position-container:nth-child(1) img,
+    .position-container:nth-child(2) img {
+        height: 240px;
+        width: max-content;
+    }
+    .animated-square[data-name='left-top'] {
+        left: 16px;
+        top: 0;
+        offset-path: path('M1.05225 109.245L109.516 0.781553');
+    }
+    .animated-square[data-name='left-bottom'] {
+        left: 0;
+        top: 112px;
+        offset-path: path('M108.709 109.101L0.245655 0.637275');
+    }
+
+    .animated-square[data-name='right-top'] {
+        top: 10px;
+        left: 56px;
+        offset-path: path('M0.554688 0.588135L109.018 109.052');
+    }
+
+    .animated-square[data-name='right-bottom'] {
+        top: 122px;
+        left: 53px;
+        offset-path: path('M109.212 0.444092L0.748097 108.908');
+    }
+}

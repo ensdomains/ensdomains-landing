@@ -1,129 +1,292 @@
 {
-  "c": {
-    "learnMore": "Learn more"
-  },
   "nav": {
+    "developers": "Developers",
+    "ecosystem": "Ecosystem",
+    "governance": "Governance",
     "blog": "Blog",
-    "launch": "Go to app"
+    "roadmap": "Roadmap",
+    "launch": "Launch App"
   },
   "home": {
     "hero": {
-      "title": "Welcome to the New Internet"
+      "title": "Welcome to the",
+      "subtitle": "New Internet",
+      "text": "For every dreamer, creator, and change-maker tired of the old internet, Web3 is here. ENS is more than a protocol - it's a commitment to a better web, built for everyone.",
+      "input": {
+        "caption": "Register your .eth name today",
+        "placeholder": "Find your .eth"
+      }
     },
-    "carousel": {
-      "search": "Search",
-      "manage": "Manage",
-      "register": "Register",
-      "launch": "Go to app"
+    "features": {
+      "title": "Your name",
+      "text": "Your ENS name is anchored in Web3, but works across the internet. It's your identity: simple, memorable, unmistakably yours.",
+      "farewell": {
+        "title": "Farewell to complexity.",
+        "text": "No more confusing hex addresses. Your ENS name is easy to remember, easy to share.",
+        "animation": {
+          "m1": "What's your crypto address so I can pay you?",
+          "m2": "0x0b08dA7068b73A579Bd5E8a8290ff8afd37bc32A",
+          "m3": "Wow. Go to ens.app",
+          "m4": "This is so much simpler! Send to\nmynewname.eth"
+        }
+      },
+      "consistent": {
+        "title": "Consistent across the internet.",
+        "text": "Keep your identity consistent across all services and platforms effortlessly. Say goodbye to juggling multiple usernames.",
+        "swapButton": "Swap"
+      },
+      "ownership": {
+        "title": "True ownership.",
+        "text": "Your ENS name is 100% yours. No intermediaries, no bureaucracy. It's your property—uncensored and irrevocable."
+      },
+      "farcaster": {
+        "title": "Home"
+      }
     },
-    "portableUsername": {
-      "title": "Your web3 username",
-      "text": "No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services."
+    "gyow": {
+      "title": "Blaze your own trail",
+      "description": "Discover your unique path in the ENS ecosystem. Wherever you begin, we’re all moving towards a better internet.",
+      "ens-app": {
+        "title": "ENS App",
+        "description": "Your ENS journey begins here, by registering your name."
+      },
+      "ens-dao": {
+        "title": "ENS DAO",
+        "description": "Join the ENS community to contribute alongside a global collective."
+      },
+      "docs": {
+        "title": "Developer Docs",
+        "description": "You're a developer, and you want to build on the new internet."
+      }
     },
-    "cryptocurrencies": {
-      "title": "One Name for all of your Chains",
-      "text": "No more copying and pasting long addresses. Use your ENS name to store all of your addresses and receive any cryptocurrency, token, or NFT."
+    "gateway": {
+      "title": "Your gateway to the New Internet",
+      "description": "Envision a world where the internet and Web3 seamlessly connect, creating a unified, innovative experience."
     },
-    "statistics": {
-      "title": "ENS is the most widely integrated blockchain naming standard.",
-      "names": "Names",
-      "services": "Integrations",
-      "owners": "Owners"
+    "partners": {
+      "tag": "Key Partners",
+      "description": "These partners are revolutionizing the internet alongside ENS, creating new standards and forging strong alliances.",
+      "button": "Discover the ENS Ecosystem"
     },
-    "decentralisedWebsites": {
-      "title": "Decentralised Websites",
-      "text": "Launch censorship-resistant decentralised websites with ENS. Upload your website to IPFS and access it with your ENS name."
-    },
-    "dns": {
-      "title": "Use Traditional Domains",
-      "text1": "The native name suffix for ENS is .ETH, which has the full security benefits of being blockchain-native.",
-      "text2": "You can also use ENS with DNS names you already own. ENS supports most DNS names, including:"
-    },
-    "offchain": {
-      "title": "Names “offchain”",
-      "text": "ENS supports names that exist outside the blockchain via CCIP read. You can permissionlessly import your DNS domains, distribute subnames, store records and much more for free."
-    },
-    "ecosystem": {
-      "title": "ENS Ecosystem",
-      "wallets": "Wallets",
-      "apps": "Apps",
-      "browsers": "Browsers",
-      "seeMore": "See More",
-      "seeLess": "See Less"
-    },
-    "additionalFeatures": {
-      "title": "Additional Features",
-      "recordType": "Create your project’s own record type.",
-      "textRecord": "Attach profile information to your ENS name with text records.",
-      "subDomains": "Create ENS subdomains as usernames for your project.",
-      "dns": "Store and serve traditional DNS records with certain names.",
-      "tor": "Use ENS to more easily access Tor .onion hidden services.",
-      "erc721": ".ETH names are ERC721-compliant NFTs."
-    },
-    "getInvolved": {
-      "title": "Get Involved",
-      "supportTitle": "Get Support",
-      "subscribe": {
-        "title": "Subscribe to our mailing list",
-        "cta": "Subscribe"
+    "extra": {
+      "governance": {
+        "title": "A public good, shaped by you",
+        "tag": "Governance",
+        "description": "ENS is a community-driven non-profit. Join us in creating an internet where everyone has a voice.",
+        "button": "Learn about ENS Governance"
       },
       "community": {
-        "title": "Join our Discord community",
-        "cta": "Join Discord"
+        "tag": "Community",
+        "title": "Join our community",
+        "description": "Be part of the movement transforming the internet. Connect with like-minded individuals, share ideas, and collaborate on projects that make a difference.",
+        "button": "Join Us"
+      }
+    },
+    "stats": {
+      "names": "names",
+      "integrations": "integrations",
+      "owners": "owners"
+    }
+  },
+  "developers": {
+    "hero": {
+      "tag": "Developers",
+      "title": "Build in good\n company",
+      "text": "Join a community of innovators and developers crafting a better internet. Whether you're new to Web3 or a seasoned pro, ENS is your gateway to a trustless web.",
+      "cta1": "Developer Docs",
+      "cta2": "Github"
+    },
+    "resources": {
+      "title": "Resources",
+      "ccip-read": {
+        "description": "Learn about CCIP Read (EIP-3668), a protocol for cross-chain interoperability enabling contracts to retrieve external data via offchain lookups."
       },
-      "forums": {
-        "title": "Discuss on our forum",
-        "cta": "Discuss"
+      "evmgateway": {
+        "description": "Explore the EVM Gateway, a generic solution for fetching state proofs of data across EVM chains using CCIP-Read."
       },
-      "documentation": {
-        "title": "Read our documentation",
-        "cta": "Read docs"
+      "thorin": {
+        "description": "Discover Thorin, a design system for ENS created with React and styled-components."
       },
-      "supportEmail": {
-        "title": "Email the support team",
-        "cta": "Email"
+      "tg": {
+        "title": "Developer Telegram",
+        "description": "Join our Developer Telegram channel to ask questions and get insights on building with ENS."
       },
-      "supportDiscord": {
-        "title": "#create-a-ticket in Discord",
-        "cta": "Go to Discord"
+      "quickstart": {
+        "tag": "Quickstart Guide",
+        "title": "New to Web3?",
+        "description": "Our guides will get you started quickly and easily."
+      },
+      "pro": {
+        "tag": "ENS Contracts",
+        "title": "For the Web3 wizards",
+        "description": "Dive into our comprehensive developer documentation."
+      }
+    },
+    "extra": {
+      "grants": {
+        "title": "Grants for Game-Changers",
+        "text": "Got a groundbreaking idea? Our grants are here to power your innovative projects within the ENS ecosystem.",
+        "cta": {
+          "view": "View Grants",
+          "apply": "Apply"
+        },
+        "stat": {
+          "eth": "ETH funded",
+          "proposals": "proposals",
+          "voters": "voters"
+        }
+      },
+      "bounty": {
+        "title": "Our Bug Bounty:\nYour Peace of Mind",
+        "text": "We prioritize security above all. Explore our bug bounty program and contribute to a more secure platform with rewards up to $250,000.",
+        "cta": {
+          "learn": "Learn More"
+        }
       }
     }
   },
-  "about": {
-    "hero": "ENS is an open source blockchain-based naming protocol",
-    "aboutENS": {
-      "title": "About ENS",
-      "text": "Started at the Ethereum Foundation in early 2017, ENS is a public good, a basic piece of Internet infrastructure that belongs to the community. Anyone and everyone is free to interact with the protocol as they are permissionless contracts on the Ethereum blockchain.",
-      "support": "We have received generous financial support from:",
-      "support2": "Representatives of ENS participate in the greater Internet community:"
+  "ecosystem": {
+    "hero": {
+      "tag": "Ecosystem",
+      "title": "Trusted by the",
+      "subtitle": "New Internet",
+      "text": "ENS is a community of pioneers, collectively shaping a more intuitive and trustworthy internet. It's not just about being part of Web3; it's about leading it.",
+      "cta1": "Learn More",
+      "cta2": "Integration Docs"
     },
-    "aboutENSLabs": {
-      "title": "About ENS Labs Limited",
-      "text": "Founded in 2018, ENS Labs Limited is a Singapore-based non-profit organisation and is responsible for the core software development of ENS. This includes the ENS app, open source libraries and core smart contracts"
+    "integration": {
+      "title": "Ready for integration?",
+      "foundation": {
+        "title": "Build Your Web3 Presence",
+        "description": "Join us to position your brand at the forefront of the new internet."
+      },
+      "trust": {
+        "title": "Unparalleled Trust",
+        "description": "Trust isn't a buzzword, it's our foundation. As a non-profit, DAO-governed protocol, we're committed to security and integrity."
+      },
+      "resources": {
+        "title": "Explore With Us",
+        "description": "Discover how ENS can amplify your organization with additional resources."
+      }
     },
-    "team": {
-      "title": "Meet the ENS Labs team"
-    },
-    "benefits": {
-      "title": "Benefits of Ethereum",
-      "text": "Though it supports a wide range of non-Ethereum assets, ENS runs on the Ethereum blockchain. This brings the benefits of decentralization, security, censorship-resistance, and programmability of the Ethereum blockchain to Internet naming, enabling new features like self-custody, composability in the greater Ethereum smart-contract ecosystem, and more."
-    },
-    "root": {
-      "title": "Managing the ENS root",
-      "text": "To facilitate the possibility of upgrades and maintenance, the ENS root is controlled by a four of seven multisig, with members of related projects as keyholders. In the long term, we would like the root multisig to be replaced by some form of distributed decision making process, as such systems become available."
+    "partner": {
+      "title": "Partner with us",
+      "description": "Want to collaborate? Connect with our Business Development team to explore partnership opportunities."
     }
   },
   "governance": {
-    "claim": "Claim your $ENS",
-    "discord": "Chat on Discord",
-    "discuss": "Join the forum",
-    "governance": "Documentation",
-    "mirror": "Read on Mirror",
-    "dao": "Buy a Constitution",
-    "tally": "Vote on Proposals"
+    "hero": {
+      "tag": "Governance",
+      "title": "Your platform\nfor change",
+      "text": "Our DAO is the lifeblood of our decentralized ethos. Designed for longevity, the DAO nurtures ENS's resilience and flexibility, evolving through a tapestry of community voices.",
+      "cta1": "ENS DAO",
+      "cta2": "Proposals"
+    },
+    "join": {
+      "title": "Join the New Internet",
+      "text": "Your engagement in ENS governance is more than a vote. It is your stake in an internet that is democratic, resilient, and truly centered around its users."
+    },
+    "extra": {
+      "title": "$ENS: Power to the People",
+      "vote": {
+        "title": "Your vote, your voice",
+        "text": "$ENS isn't just a token – it's your key to making meaningful change in the ENS ecosystem. 1 token = 1 vote. $ENS tokens empower you to shape ENS's future."
+      },
+      "delegation": {
+        "title": "Empower through delegation",
+        "text": "By delegating tokens to active contributors in our community, you're not just participating – you're amplifying the impact you wish to see."
+      },
+      "grants": {
+        "title": "Grants for Game-Changers",
+        "text": "Got a groundbreaking idea? Our grants are here to power your innovative projects within the ENS ecosystem."
+      },
+      "resources": {
+        "title": "Resources",
+        "community": "Join the community on Discord.",
+        "forum": {
+          "title": "DAO Forum",
+          "description": "Join the DAO Forum to discuss new ideas."
+        },
+        "docs": {
+          "title": "DAO Documentation",
+          "description": "Documentation for the DAO."
+        },
+        "voting": {
+          "title": "Tally Voting",
+          "description": "Participate in governance."
+        }
+      }
+    }
   },
-  "constitution": {
-    "title": "ENS constitution book now available",
-    "description": "A printed copy of the ENS constitution and its signers is now available in hardcover and ultra-limited edition of 50"
+  "footer": {
+    "community": "Join the community",
+    "blog": "Blog",
+    "feedback": "Feedback",
+    "discord": "Discord",
+    "twitter": "Twitter",
+    "github": "Github",
+    "youtube": "Youtube",
+    "forums": "DAO Forums",
+    "help": "Need help?",
+    "support": "Support",
+    "contact": "Contact",
+    "ens": "ENS",
+    "privacy-policy": "Privacy Policy",
+    "tou": "Terms of Use",
+    "bugs": "Bug Bounty",
+    "brand": "Brand",
+    "jobs": "Jobs",
+    "ltd": "ENS, Copyright, 2024. All Rights Reserved."
+  },
+  "seo": {
+    "description": "Welcome to the new internet."
+  },
+  "brand": {
+    "header": {
+      "title": "ENS Brand",
+      "description": "You're free to use the ENS brand in the ecosystem, no permission needed! Just remember, don't use it to pretend to be ENS, ENS DAO, or ENS Labs, or to suggest a partnership that does not exist."
+    },
+    "button": "Download All",
+    "assets": {
+      "title": "Brand Assets",
+      "description": "ENS's brand can be represented using any of our colors, but we prefer Blue, Black, and White.",
+      "symbol": {
+        "title": "Symbol",
+        "description": "This is the main and preferred icon for using ENS-branded assets."
+      },
+      "lockup": {
+        "title": "Lock-up",
+        "description": "Utilize the full lock-up when you need to show the full ENS branded asset. This is also useful for more horizontally-aligned assets."
+      },
+      "guidelines": {
+        "title": "Guidelines",
+        "description": "If you're unsure of our guidelines and how your project would align, please get in touch."
+      },
+      "space": {
+        "title": "Clear Space",
+        "description": "Make sure there is enough clear space when using the logo, such that there is enough room for everything to breathe.\nA good rule of thumb is at least 1/3 of the width of the ENS symbol."
+      }
+    },
+    "extra": {
+      "partnerships": {
+        "title": "Partnerships",
+        "description": "An official partnership with us means joining forces to create impactful solutions. This might include;",
+        "list": {
+          "1": "Integration of your product into ENS or the manager app,",
+          "2": "Co-Marketing efforts with the ENS DAO or ENS Labs,",
+          "3": "R&D collaboration with the ENS DAO or ENS Labs."
+        },
+        "extra": "Partnerships may use the ENS Brand where needed, but they must not modify or change the logo."
+      },
+      "ecosystem": {
+        "title": "Ecosystem",
+        "description": "If you’re building on ENS without an official partnership, you’re an Ecosystem builder. This might include;",
+        "list": {
+          "1": "Integration of ENS into your product,",
+          "2": "A creative project designed by and for ENS users."
+        },
+        "extra": "Modification of the logo is discouraged, but not forbidden if it is for creative purposes. However the brand cannot be used to imply an official partnership with ENS DAO or ENS Labs."
+      }
+    }
   }
 }
