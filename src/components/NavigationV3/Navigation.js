@@ -32,6 +32,7 @@ const StyledLink = styled(Link)(
     ({ theme }) => css`
         color: ${theme.colors.greyPrimary};
         transition: color 0.2s;
+        cursor: pointer;
         &:hover {
             color: ${theme.colors.accentPrimary};
         }
@@ -41,11 +42,11 @@ const StyledLink = styled(Link)(
 export default function Navigation() {
     return (
         <Nav>
-            <Link to="https://ens.domains">
+            <a href="https://ens.domains">
                 <Logo style="blue" />
-            </Link>
+            </a>
             <NavRight>
-                <StyledLink to="/">
+                <StyledLink as="a" href="https://ens.domains">
                     <Typography fontVariant="bodyBold" color="inherit">
                         ENS Domains
                     </Typography>
