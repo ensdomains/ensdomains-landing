@@ -62,6 +62,7 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
         <>
 
             <Header
+                className={styles.header}
                 title={t('home.hero.title')}
                 subtitle={t('home.hero.subtitle')}
                 description={t('home.hero.text')}

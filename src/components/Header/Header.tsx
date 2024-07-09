@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { FC, PropsWithChildren } from 'react';
+import { FC, HTMLAttributes, PropsWithChildren } from 'react';
 
 import ui from '~/styles/ui.module.css';
 import styles from './Header.module.css';
@@ -11,16 +11,19 @@ export const Header: FC<
         description?: string;
         tag?: string;
         cta?: [string, string][];
-    }>
-> = ({ title, subtitle, tag, description, children, cta }) => {
+
+    } & HTMLAttributes<HTMLElement>>
+> = ({ title, subtitle, tag, description, children, cta, className, ...props }) => {
     return (
         <header
+            {...props}
             className={clsx(
                 ui['flex'],
                 ui['flex-center'],
                 ui['flex-col'],
                 tag && ui['dots-bg'],
                 styles.header,
+                className,
             )}
         >
             {tag && <div className={styles.tag}>{tag}</div>}

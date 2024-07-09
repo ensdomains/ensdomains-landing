@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    min-height: min(100vh, 700px);
+    min-height: min(100vh, 520px);
     padding: 88px 16px 16px 16px;
     position: relative;
 }
@@ -42,7 +42,7 @@
     color: var(--ens-medium-blue);
     width: 100%;
 
-    max-width: 238px;
+    max-width: 218px;
 }
 
 .h1,
@@ -92,6 +92,12 @@
 .cta a:first-child:hover {
     background: var(--page-text-hover);
     color: var(--page-bg);
+}
+
+@media (min-width: 412px) {
+    .p {
+        max-width: 380px;
+    }
 }
 
 @media (min-width: 640px) {

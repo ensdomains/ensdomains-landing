@@ -107,7 +107,6 @@ export default async function Ecosystem({
                             { title: 'Optimism', href: 'https://www.optimism.io' },
                             { title: 'Ethereum', href: 'https://ethereum.org' },
                             { title: 'Phantom', href: 'https://phantom.app' },
-                            { title: 'Opensea', href: 'https://opensea.io' },
                             { title: 'Farcaster', href: 'https://www.farcaster.xyz' },
                             { title: 'Etherscan', href: 'https://etherscan.io' },
                             { title: 'Metamask', href: 'https://metamask.io' },

@@ -25,6 +25,12 @@
     margin-top: 80px;
 }
 
+@media (max-width: 512px) {
+    .header {
+        padding-top: 152px;
+    }
+}
+
 @media (min-width: 768px) {
     .gtwSection {
         gap: 40px;
