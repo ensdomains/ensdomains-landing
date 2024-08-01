@@ -10,7 +10,6 @@ import { useTranslation } from '~/i18n/useTranslation';
 import { PageProps } from '~/utils/types';
 import { Navbar } from '~/components/Navbar/Navbar';
 import { Footer } from '~/components/Footer/Footer';
-
 export { generateStaticParams } from '~/utils/getStatic';
 
 export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
@@ -103,6 +102,7 @@ export default async function RootLayout({ children, params: { lang = 'en' } }: 
             )}
         >
             <head>
+                <script defer data-domain="ens.domains" src="https://plausible.io/js/script.js"></script>
                 <link rel="icon" type="image/png" href="/favicon.png" />
             </head>
             <body>
