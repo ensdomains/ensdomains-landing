@@ -109,7 +109,6 @@ export default async function RootLayout({ children, params: { lang = 'en' } }: 
                 <main>
                     <Navbar
                         links={{
-
                             developers: t('nav.developers'),
                             ecosystem: t('nav.ecosystem'),
                             governance: t('nav.governance'),

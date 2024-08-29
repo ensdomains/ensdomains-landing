@@ -87,6 +87,10 @@
     width: 100%;
 }
 
+.launchCta {
+    display: none;
+}
+
 @media (max-width: 800px) {
     .nav[data-open='false'] .navContent {
         display: none;
@@ -124,6 +128,12 @@
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
+    }
+    .launchCta {
+        display: block;
+        max-width: max-content;
+        padding: 14px !important;
+        font-size: 14px !important;
     }
 }
 

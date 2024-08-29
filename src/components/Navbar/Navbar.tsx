@@ -50,16 +50,24 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
                         className={(styles.logo, styles.desktopOnly)}
                     />
                 </Link>
-                <button onClick={() => setOpen(!isOpen)} className={styles.menuButton}>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="menu">
-                            <rect id="Rectangle 2736" y="-0.000488281" width="4" height="4" rx="1" fill="currentColor" />
-                            <rect id="Rectangle 2736_2" y="7.99951" width="4" height="4" rx="1" fill="currentColor" />
-                            <rect id="Rectangle 2736_3" x="8" y="-0.000488281" width="4" height="4" rx="1" fill="currentColor" />
-                            <rect id="Rectangle 2736_4" x="8" y="7.99951" width="4" height="4" rx="1" fill="currentColor" />
-                        </g>
-                    </svg>
-                </button>
+                <div className={clsx(ui.flex, ui['flex-row'], ui['space-x-8'], ui['flex-center'])}>
+                    <ExternalLink
+                        href="https://app.ens.domains"
+                        className={clsx(styles.launch, ui.button, styles.launchCta)}
+                    >
+                        {links.launch}
+                    </ExternalLink>
+                    <button onClick={() => setOpen(!isOpen)} className={styles.menuButton}>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="menu">
+                                <rect id="Rectangle 2736" y="-0.000488281" width="4" height="4" rx="1" fill="currentColor" />
+                                <rect id="Rectangle 2736_2" y="7.99951" width="4" height="4" rx="1" fill="currentColor" />
+                                <rect id="Rectangle 2736_3" x="8" y="-0.000488281" width="4" height="4" rx="1" fill="currentColor" />
+                                <rect id="Rectangle 2736_4" x="8" y="7.99951" width="4" height="4" rx="1" fill="currentColor" />
+                            </g>
+                        </svg>
+                    </button>
+                </div>
             </div>
             <div className={styles.navContent}>
                 <div className={clsx(ui.flex, styles.links)}>
