@@ -41,7 +41,7 @@ export const SearchInput = ({ caption, placeholder }: { caption: string; placeho
                             location.assign(`https://ens.app/${fd.get('ens')}.eth`);
                         }
                     }}
-                    className={styles.inputContainer}
+                    className={clsx(styles.inputContainer, 'plausible-event-name=search')}
                 >
                     <input
                         onChange={e => setValue(e.currentTarget.value)}
