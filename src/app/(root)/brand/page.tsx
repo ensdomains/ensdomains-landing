@@ -38,7 +38,7 @@ export default async function Brand({ params }: PageProps) {
     const { markLogos, logos } = await getStaticProps();
 
     return (
-        <div className={ui.page}>
+        <div className={clsx(ui.page)}>
             <header className={clsx(ui.flex, ui['flex-col'], styles.headerLayout)}>
                 <h1>{t('brand.header.title')}</h1>
                 <div className={styles.headerContent}>
@@ -83,36 +83,50 @@ export default async function Brand({ params }: PageProps) {
                         <p className={ui['max-w-text']}>{t('brand.assets.space.description')}</p>
                     </div>
                 </div>
-            </section>
-            <section id="lockup" className={clsx(ui.flex, ui['flex-col'], styles.content)}>
-                <div className={styles.assetsDescription}>
-                    <a download href="/assets/brand/mark.zip" className={styles.downloadButton}>{t('brand.button')}</a>
-                    <h5 className={styles.contentTitle}>{t('brand.assets.lockup.title')}</h5>
-                    <p className={ui['max-w-text']}>{t('brand.assets.lockup.description')}</p>
-                </div>
-                <div className={styles.assetGrid}>
-                    {Object.entries(logos).map(([name, url]) => (
-                        <figure key={url}>
-                            <img src={url} alt="" height={230} width={201} />
+                <div id="lockup" className={clsx(ui.flex, ui['flex-col'], styles.content)}>
+                    <div className={styles.assetsDescription}>
+                        <a download href="/assets/brand/mark.zip" className={styles.downloadButton}>{t('brand.button')}</a>
+                        <h5 className={styles.contentTitle}>{t('brand.assets.lockup.title')}</h5>
+                        <p className={ui['max-w-text']}>{t('brand.assets.lockup.description')}</p>
+                    </div>
+                    <div className={styles.assetGrid}>
+                        {Object.entries(logos).map(([name, url]) => (
+                            <figure key={url}>
+                                <img src={url} alt="" height={230} width={201} />
+                                <AssetDownloadButton links={[
+                                    { title: 'PNG', url: url.replace('svg', 'png') },
+                                    { title: 'SVG', url },
+                                ]}
+                                />
+                                <figcaption>{name}</figcaption>
+                            </figure>
+                        ))}
+                    </div>
+                    <div className={clsx(styles.assetGrid, styles.blueprint)}>
+                        <div>
+                            <img src="/assets/brand/logo-text-blueprint.svg" alt="Logo with text blueprint" width={358} height={358} />
+                        </div>
+                        <div>
+                            <h5 className={styles.contentTitle}>{t('brand.assets.space.title')}</h5>
+                            <p className={ui['max-w-text']}>{t('brand.assets.space.description')}</p>
+                        </div>
+                    </div>
+                    <div className={clsx(styles.assetGrid, styles.blueprint)}>
+                        <figure>
+                            <img src="/assets/brand/token-icon.svg" alt="Logo Blueprint" width={358} height={358} />
                             <AssetDownloadButton links={[
-                                { title: 'PNG', url: url.replace('svg', 'png') },
-                                { title: 'SVG', url },
+                                { title: 'SVG', url: '/assets/brand/token-icon.svg' },
                             ]}
                             />
-                            <figcaption>{name}</figcaption>
                         </figure>
-                    ))}
-                </div>
-                <div className={clsx(styles.assetGrid, styles.blueprint)}>
-                    <div>
-                        <img src="/assets/brand/logo-text-blueprint.svg" alt="Logo with text blueprint" width={358} height={358} />
-                    </div>
-                    <div>
-                        <h5 className={styles.contentTitle}>{t('brand.assets.space.title')}</h5>
-                        <p className={ui['max-w-text']}>{t('brand.assets.space.description')}</p>
+                        <div>
+                            <h5 className={styles.contentTitle}>{t('brand.assets.token.title')}</h5>
+                            <p className={ui['max-w-text']}>{t('brand.assets.token.description')}</p>
+                        </div>
                     </div>
                 </div>
             </section>
+
             <section id="guidelines">
                 <LinkList links={[
                     {
