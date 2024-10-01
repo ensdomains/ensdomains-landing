@@ -269,6 +269,14 @@
       "token": {
         "title": "Icon",
         "description": "The icon is used to represents ENS as an avatar and the $ENS token."
+      },
+      "palette": {
+        "title": "Brand Palette",
+        "description": "ENS's brand can be represented using any of our colors. Please keep in mind that the colors are not a “one-size-fits-all”.",
+        "primary": {
+          "title": "Primary Palette",
+          "description": "Below is the primary color palette for the ENS brand."
+        }
       }
     },
     "extra": {

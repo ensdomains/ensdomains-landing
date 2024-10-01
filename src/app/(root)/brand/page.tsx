@@ -3,12 +3,44 @@ import { readdir } from 'node:fs/promises';
 import { useTranslation } from '~/i18n/useTranslation';
 import ui from '~/styles/ui.module.css';
 import styles from './page.module.css';
-import { PageProps } from '~/utils/types';
+import { BrandColorObject, PageProps } from '~/utils/types';
 import { AssetDownloadButton } from '~/components/brand/AssetDownloadButton';
 import type { Metadata } from 'next';
 import { LinkList } from '~/components/LinkList/LinkList';
+import { BrandColor } from '~/components/brand/BrandColor';
 
 const common = './public/assets/brand';
+
+const colors: BrandColorObject[] = [
+    {
+        name: 'ENS Blue',
+        hex: '#0080BC',
+        RGB: '0, 128, 188',
+        textColor: 'white',
+        CMYK: '84%, 41%, 5%, 0%',
+    },
+    {
+        name: 'Light Blue',
+        hex: '#CEE1E8',
+        RGB: '206, 255, 232',
+        textColor: 'black',
+        CMYK: '18%, 4%, 6%, 0%',
+    },
+    {
+        name: 'Dark Blue',
+        hex: '#011A25',
+        RGB: '1, 26, 37',
+        textColor: 'white',
+        CMYK: '88%, 71%, 59%, 72%',
+    },
+    {
+        name: 'White',
+        hex: '#f6f6f6',
+        RGB: '255, 255, 255',
+        textColor: 'black',
+        CMYK: '2%, 2%, 2%, 0%',
+    },
+];
 
 const filesToPaths = (files: string[], dir: string) => files.filter(x => x.endsWith('.svg')).map(x => `${common.replace('./public', '')}/${dir}/${x}`);
 const filenameToVariantName = (file: string) => file.slice(file.lastIndexOf('-') + 1, file.indexOf('.svg')).replace('_', ' ');
@@ -124,6 +156,20 @@ export default async function Brand({ params }: PageProps) {
                             <p className={ui['max-w-text']}>{t('brand.assets.token.description')}</p>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section className={clsx(ui.flex, ui['flex-col'], styles.content)}>
+                <div className={clsx(ui.flex, ui['flex-col'], styles.sectionDescription)}>
+                    <h4>{t('brand.assets.palette.title')}</h4>
+                    <p className={ui['max-w-text']}>{t('brand.assets.palette.description')}</p>
+                </div>
+                <div className={styles.assetsDescription}>
+                    <h5 className={styles.contentTitle}>{t('brand.assets.palette.primary.title')}</h5>
+                    <p className={ui['max-w-text']}>{t('brand.assets.palette.primary.description')}</p>
+                </div>
+                <div className={styles.colorGrid}>
+                    {colors.map(color => <BrandColor {...color} key={color.name} />)}
                 </div>
             </section>
 

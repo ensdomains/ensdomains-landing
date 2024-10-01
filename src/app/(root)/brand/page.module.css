@@ -100,6 +100,21 @@
     height: 100%;
 }
 
+.colorGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    justify-content: center;
+}
+
+@media (min-width: 380px) {
+    .colorGrid {
+        justify-content: flex-start;
+    }
+}
+
 @media (min-width: 768px) {
     .headerContent {
         grid-template-columns: repeat(2, 1fr);
@@ -118,6 +133,7 @@
     .blueprint {
         grid-template-columns: 1fr 2fr;
     }
+  
 }
 
 @media (min-width: 1280px) {
