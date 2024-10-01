@@ -39,5 +39,5 @@ export type BrandColorObject = {
     RGB: `${number}, ${number}, ${number}`;
     CMYK: `${number}%, ${number}%, ${number}%, ${number}%`;
     name: string;
-    textColor: string;
+    textColor: 'black' | 'white';
 };

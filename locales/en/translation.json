@@ -276,6 +276,10 @@
         "primary": {
           "title": "Primary Palette",
           "description": "Below is the primary color palette for the ENS brand."
+        },
+        "secondary": {
+          "title": "Extended Color Palette",
+          "description": "Below are the scondary color palettes to be used for creating creative collateral for the ENS brand."
         }
       }
     },

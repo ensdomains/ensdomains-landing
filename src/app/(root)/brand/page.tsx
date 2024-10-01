@@ -11,7 +11,7 @@ import { BrandColor } from '~/components/brand/BrandColor';
 
 const common = './public/assets/brand';
 
-const colors: BrandColorObject[] = [
+const primaryPalette: BrandColorObject[] = [
     {
         name: 'ENS Blue',
         hex: '#0080BC',
@@ -39,6 +39,58 @@ const colors: BrandColorObject[] = [
         RGB: '255, 255, 255',
         textColor: 'black',
         CMYK: '2%, 2%, 2%, 0%',
+    },
+];
+
+const extendedPalette: BrandColorObject[] = [
+    {
+        name: 'Green',
+        hex: '#007C23',
+        RGB: '44, 24, 172',
+        CMYK: '88%, 26%, 100%, 15%',
+        textColor: 'white',
+    },
+    {
+        name: 'Magenta',
+        hex: '#F53293',
+        RGB: '218, 94, 204',
+        CMYK: '0%, 92%, 1%, 0%',
+        textColor: 'white',
+    },
+    {
+        name: 'Yellow',
+        hex: '#FFF72F',
+        RGB: '240, 223, 19',
+        CMYK: '4%, 0%, 87%, 0%',
+        textColor: 'black',
+    },
+    {
+        name: 'Dark Brown',
+        hex: '#674D49',
+        RGB: '103, 77,  73',
+        CMYK: '50%, 63%, 61%, 34%',
+        textColor: 'white',
+    },
+    {
+        name: 'Light Green',
+        hex: '#C5DDCC',
+        RGB: '197, 221, 204',
+        CMYK: '23%, 3%, 22%, 0%',
+        textColor: 'black',
+    },
+    {
+        name: 'Light Magenta',
+        hex: '#F2C4DA',
+        RGB: '242, 196, 218',
+        CMYK: '2%, 27%, 1%, 0%',
+        textColor: 'black',
+    },
+    {
+        name: 'Light Yellow',
+        hex: '#F8F6D6',
+        RGB: '248, 246, 214',
+        CMYK: '3%, 1%, 19%, 0%',
+        textColor: 'black',
     },
 ];
 
@@ -169,7 +221,14 @@ export default async function Brand({ params }: PageProps) {
                     <p className={ui['max-w-text']}>{t('brand.assets.palette.primary.description')}</p>
                 </div>
                 <div className={styles.colorGrid}>
-                    {colors.map(color => <BrandColor {...color} key={color.name} />)}
+                    {primaryPalette.map(color => <BrandColor {...color} key={color.name} />)}
+                </div>
+                <div className={styles.assetsDescription}>
+                    <h5 className={styles.contentTitle}>{t('brand.assets.palette.secondary.title')}</h5>
+                    <p className={ui['max-w-text']}>{t('brand.assets.palette.secondary.description')}</p>
+                </div>
+                <div className={styles.colorGrid}>
+                    {extendedPalette.map(color => <BrandColor {...color} key={color.name} />)}
                 </div>
             </section>
 
