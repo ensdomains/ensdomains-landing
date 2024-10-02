@@ -109,6 +109,15 @@
     justify-content: center;
 }
 
+.guidelines {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.guidelines img {
+    width: 100%;
+}
+
 @media (min-width: 380px) {
     .colorGrid {
         justify-content: flex-start;

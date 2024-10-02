@@ -92,6 +92,34 @@ const extendedPalette: BrandColorObject[] = [
         CMYK: '3%, 1%, 19%, 0%',
         textColor: 'black',
     },
+    {
+        name: 'Midnight Blue',
+        hex: '#093C52',
+        RGB: '9, 60, 82',
+        CMYK: '89%, 27%, 0%, 68%',
+        textColor: 'white',
+    },
+    {
+        name: 'Gray',
+        hex: '#4A5C63',
+        RGB: '74, 92, 99',
+        CMYK: '26%, 7%, 0%, 61%',
+        textColor: 'white',
+    },
+    {
+        name: 'Gray 3',
+        hex: '#C4C7C8',
+        RGB: '196, 199, 200',
+        CMYK: '2%, 0%, 0%, 22%',
+        textColor: 'black',
+    },
+    {
+        name: 'Gray 2',
+        hex: '#E5E5E5',
+        RGB: '229, 229, 229',
+        CMYK: '9%, 6%, 7%, 0%',
+        textColor: 'black',
+    },
 ];
 
 const filesToPaths = (files: string[], dir: string) => files.filter(x => x.endsWith('.svg')).map(x => `${common.replace('./public', '')}/${dir}/${x}`);
@@ -127,12 +155,11 @@ export default async function Brand({ params }: PageProps) {
                 <h1>{t('brand.header.title')}</h1>
                 <div className={styles.headerContent}>
                     <ul className={styles.linkList}>
-                        <li><a href="#symbol">{t('brand.assets.symbol.title')}</a></li>
-                        <li><a href="#lockup">{t('brand.assets.lockup.title')}</a></li>
-                        <li><a href="#guidelines">{t('brand.assets.guidelines.title')}</a></li>
+                        <li><a href="#symbol">{t('brand.links.symbols')}</a></li>
+                        <li><a href="#palettes">{t('brand.links.palettes')}</a></li>
+                        <li><a href="#guidelines">{t('brand.links.guidelines')}</a></li>
                     </ul>
                     <p className={ui['max-w-text']}>{t('brand.header.description')}</p>
-
                 </div>
             </header>
             <section className={clsx(ui.flex, ui['flex-col'], styles.content)}>
@@ -211,7 +238,7 @@ export default async function Brand({ params }: PageProps) {
                 </div>
             </section>
 
-            <section className={clsx(ui.flex, ui['flex-col'], styles.content)}>
+            <section className={clsx(ui.flex, ui['flex-col'], styles.content)} id="palettes">
                 <div className={clsx(ui.flex, ui['flex-col'], styles.sectionDescription)}>
                     <h4>{t('brand.assets.palette.title')}</h4>
                     <p className={ui['max-w-text']}>{t('brand.assets.palette.description')}</p>
@@ -236,7 +263,12 @@ export default async function Brand({ params }: PageProps) {
                 <LinkList links={[
                     {
                         title: t('brand.assets.guidelines.title'),
-                        description: t('brand.assets.guidelines.description'),
+                        description: (
+                            <div className={styles.guidelines}>
+                                <div>{t('brand.assets.guidelines.description')}</div>
+                                <img src="/assets/brand/guidelines.svg" />
+                            </div>
+                        ),
                     },
                     {
                         title: t('brand.extra.partnerships.title'),
