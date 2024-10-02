@@ -26,11 +26,16 @@
     font-size: 14px;
 }
 
-.colorList > span {
+.colorList > button {
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) { 

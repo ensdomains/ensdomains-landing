@@ -8,6 +8,7 @@ import { AssetDownloadButton } from '~/components/brand/AssetDownloadButton';
 import type { Metadata } from 'next';
 import { LinkList } from '~/components/LinkList/LinkList';
 import { BrandColor } from '~/components/brand/BrandColor';
+import { ExternalLink } from 'react-external-link';
 
 const common = './public/assets/brand';
 
@@ -266,7 +267,9 @@ export default async function Brand({ params }: PageProps) {
                         description: (
                             <div className={styles.guidelines}>
                                 <div>{t('brand.assets.guidelines.description')}</div>
-                                <img src="/assets/brand/guidelines.svg" />
+                                <ExternalLink href="/assets/brand/ENS Brand Guidelines.pdf">
+                                    <img src="/assets/brand/guidelines.svg" />
+                                </ExternalLink>
                             </div>
                         ),
                     },
