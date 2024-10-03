@@ -19,10 +19,13 @@ export const SearchInput = ({ caption, placeholder }: { caption: string; placeho
                 styles.container,
             )}
         >
-            <span className={styles.caption}>
-                {caption}
-            </span>
-            <img src="/assets/arrow-down.svg" width="16" height="13" alt="" />
+            <div className={styles.captionContainer}>
+                <img src="/assets/arrow-down.svg" width="16" height="13" alt="" />
+                <span className={styles.caption}>
+                    {caption}
+                </span>
+                <img src="/assets/arrow-down.svg" width="16" height="13" alt="" />
+            </div>
             <div
                 className={clsx(
                     ui.flex,

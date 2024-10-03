@@ -44,6 +44,13 @@
     margin-top: 50px;
 }
 
+.captionContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
 .caption {
     font-weight: 500;
     font-family: var(--ens-mono);
@@ -56,6 +63,10 @@
 
 .input::after {
     content: '.eth';
+}
+
+.input:focus-visible {
+    background-color: var(--ens-white);
 }
 
 .searchboxContainer {
