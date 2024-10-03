@@ -5,7 +5,7 @@ import { clsx } from 'clsx';
 import ui from '~/styles/ui.module.css';
 import { SearchIcon } from '../icons';
 import styles from './SearchInput.module.css';
-import { CSSProperties, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDebounce } from '~/utils/useDebounce';
 import { createPublicClient, http } from 'viem';
 import { mainnet } from 'viem/chains';
