@@ -5,10 +5,29 @@ import { clsx } from 'clsx';
 import ui from '~/styles/ui.module.css';
 import { SearchIcon } from '../icons';
 import styles from './SearchInput.module.css';
-import { CSSProperties, useState } from 'react';
+import { CSSProperties, useEffect, useState } from 'react';
+import { useDebounce } from '~/utils/useDebounce';
+import { createPublicClient, http } from 'viem';
+import { mainnet } from 'viem/chains';
+
+const publicClient = createPublicClient({
+    chain: mainnet,
+    transport: http(),
+});
 
 export const SearchInput = ({ caption, placeholder }: { caption: string; placeholder: string }) => {
     const [value, setValue] = useState('');
+    const [isEnsAvailable, setEnsAvailable] = useState(false);
+
+    const debouncedValue = useDebounce(value, 500);
+
+    useEffect(() => {
+        if (debouncedValue) {
+            publicClient.getEnsAddress({ name: `${debouncedValue}.eth` }).then((address) => {
+                setEnsAvailable(address === null);
+            });
+        }
+    }, [debouncedValue]);
 
     return (
         <div
@@ -55,9 +74,13 @@ export const SearchInput = ({ caption, placeholder }: { caption: string; placeho
                         minLength={3}
                     />
                     <span style={{ '--left': `${value.length}ch`, 'display': value === '' ? 'none' : 'block' } as CSSProperties} className={styles.inputSuffix}>.eth</span>
-                    <button type="submit" className={styles.icon}>
-                        <SearchIcon />
-                    </button>
+                    {isEnsAvailable
+                        ? <span>available</span>
+                        : (
+                                <button type="submit" className={styles.icon}>
+                                    <SearchIcon />
+                                </button>
+                            )}
                 </form>
             </div>
         </div>
