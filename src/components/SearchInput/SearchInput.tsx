@@ -18,12 +18,15 @@ const publicClient = createPublicClient({
 export const SearchInput = ({ caption, placeholder }: { caption: string; placeholder: string }) => {
     const [value, setValue] = useState('');
     const [isEnsAvailable, setEnsAvailable] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const debouncedValue = useDebounce(value, 500);
 
     useEffect(() => {
         if (debouncedValue) {
+            setIsLoading(true);
             publicClient.getEnsAddress({ name: `${debouncedValue}.eth` }).then((address) => {
+                setIsLoading(false);
                 setEnsAvailable(address === null);
             });
         }
@@ -73,13 +76,31 @@ export const SearchInput = ({ caption, placeholder }: { caption: string; placeho
                         required
                         minLength={3}
                     />
-                    <span style={{ '--left': `${value.length}ch`, 'display': value === '' ? 'none' : 'block' } as CSSProperties} className={styles.inputSuffix}>.eth</span>
-                    {isEnsAvailable
-                        ? <span>available</span>
-                        : (
-                                <button type="submit" className={styles.icon}>
-                                    <SearchIcon />
+                    {isLoading
+                        ? (
+                                <button type="button" disabled className={styles.icon}>
+                                    loading
                                 </button>
+                            )
+                        : (
+                                value === ''
+                                    ? (
+                                            <button type="submit" className={styles.icon}>
+                                                <SearchIcon />
+                                            </button>
+                                        )
+                                    : (
+                                            <div className={styles.tlds}>
+                                                <a href={`https://app.ens.domains/name/${value}.eth`}>
+                                                    <span>.eth</span>
+                                                    <span>{isEnsAvailable ? 'Register' : 'View'}</span>
+                                                </a>
+                                                <a>
+                                                    <span>.box</span>
+                                                    <span>View</span>
+                                                </a>
+                                            </div>
+                                        )
                             )}
                 </form>
             </div>
