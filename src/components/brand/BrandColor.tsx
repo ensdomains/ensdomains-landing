@@ -36,6 +36,7 @@ export const BrandColor = (color: BrandColorObject) => (
         style={{
             '--color': color.hex,
             'color': color.textColor,
+            'border': color.name === 'White' ? '1px solid var(--ens-gray-2)' : 'none',
         } as CSSProperties}
     >
         <div className={styles.colorName}>{color.name}</div>

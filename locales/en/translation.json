@@ -265,7 +265,8 @@
       },
       "guidelines": {
         "title": "Usage Guidelines",
-        "description": "You can download a PDF version of the ENS brand guidelines which include detailed documentation on how to use brand colours, assets and typography. If you’re unsure of our guidelines and how your project would align, please get in touch."
+        "description": "You can download a PDF version of the ENS brand guidelines which include detailed documentation on how to use brand colours, assets and typography. If you’re unsure of our guidelines and how your project would align, please get in touch.",
+        "button": "Download Brand PDF"
       },
       "space": {
         "title": "Clear Space",

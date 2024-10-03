@@ -5,12 +5,10 @@
     flex-direction: column;
     justify-content: space-between;
     border-radius: 2px;
-    border: 1px solid var(--ens-gray-2);
     font-family: var(--ens-mono);
     text-transform: uppercase;
-
-    width: 200px;
-    height: 200px;
+    height: 220px;
+    width: 100%;
     padding: 8px;
 }
 
@@ -40,7 +38,6 @@
 
 @media (min-width: 768px) { 
     .brandColor {
-        width: 260px;
         height: 260px;
     }
 }
@@ -48,7 +45,6 @@
 @media (min-width: 1280px) {
     .brandColor {
         padding: 20px;
-        width: 330px;
         height: 330px;
     }
 }

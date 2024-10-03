@@ -195,6 +195,20 @@ export default async function Brand({ params }: PageProps) {
                         <p className={ui['max-w-text']}>{t('brand.assets.space.description')}</p>
                     </div>
                 </div>
+                <div className={clsx(styles.assetGrid, styles.blueprint)}>
+                    <figure>
+                        <img src="/assets/brand/token-icon.svg" alt="Logo Blueprint" width={358} height={358} />
+                        <AssetDownloadButton links={[
+                            { title: 'SVG', url: '/assets/brand/token-icon.svg' },
+                            { title: 'PNG', url: '/assets/brand/token-icon.png' },
+                        ]}
+                        />
+                    </figure>
+                    <div>
+                        <h5 className={styles.contentTitle}>{t('brand.assets.token.title')}</h5>
+                        <p className={ui['max-w-text']}>{t('brand.assets.token.description')}</p>
+                    </div>
+                </div>
                 <div id="lockup" className={clsx(ui.flex, ui['flex-col'], styles.content)}>
                     <div className={styles.assetsDescription}>
                         <a download href="/assets/brand/mark.zip" className={styles.downloadButton}>{t('brand.button')}</a>
@@ -221,19 +235,6 @@ export default async function Brand({ params }: PageProps) {
                         <div>
                             <h5 className={styles.contentTitle}>{t('brand.assets.space.title')}</h5>
                             <p className={ui['max-w-text']}>{t('brand.assets.space.description')}</p>
-                        </div>
-                    </div>
-                    <div className={clsx(styles.assetGrid, styles.blueprint)}>
-                        <figure>
-                            <img src="/assets/brand/token-icon.svg" alt="Logo Blueprint" width={358} height={358} />
-                            <AssetDownloadButton links={[
-                                { title: 'SVG', url: '/assets/brand/token-icon.svg' },
-                            ]}
-                            />
-                        </figure>
-                        <div>
-                            <h5 className={styles.contentTitle}>{t('brand.assets.token.title')}</h5>
-                            <p className={ui['max-w-text']}>{t('brand.assets.token.description')}</p>
                         </div>
                     </div>
                 </div>
@@ -267,8 +268,8 @@ export default async function Brand({ params }: PageProps) {
                         description: (
                             <div className={styles.guidelines}>
                                 <div>{t('brand.assets.guidelines.description')}</div>
-                                <ExternalLink href="/assets/brand/ENS Brand Guidelines.pdf">
-                                    <img src="/assets/brand/guidelines.svg" />
+                                <ExternalLink className={ui.button} href="/assets/brand/ENS Brand Guidelines.pdf">
+                                    {t('brand.assets.guidelines.button')}
                                 </ExternalLink>
                             </div>
                         ),
