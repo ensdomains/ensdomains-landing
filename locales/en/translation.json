@@ -247,6 +247,11 @@
       "description": "You're free to use the ENS brand in the ecosystem, no permission needed! Just remember, don't use it to pretend to be ENS, ENS DAO, or ENS Labs, or to suggest a partnership that does not exist."
     },
     "button": "Download All",
+    "links": {
+      "symbols": "Symbols",
+      "palettes": "Palettes",
+      "guidelines": "Guidelines"
+    },
     "assets": {
       "title": "Brand Assets",
       "description": "ENS's brand can be represented using any of our colors, but we prefer Blue, Black, and White.",
@@ -259,12 +264,29 @@
         "description": "Utilize the full lock-up when you need to show the full ENS branded asset. This is also useful for more horizontally-aligned assets."
       },
       "guidelines": {
-        "title": "Guidelines",
-        "description": "If you're unsure of our guidelines and how your project would align, please get in touch."
+        "title": "Usage Guidelines",
+        "description": "You can download a PDF version of the ENS brand guidelines which include detailed documentation on how to use brand colours, assets and typography. If you’re unsure of our guidelines and how your project would align, please get in touch.",
+        "button": "Download Brand PDF"
       },
       "space": {
         "title": "Clear Space",
         "description": "Make sure there is enough clear space when using the logo, such that there is enough room for everything to breathe.\nA good rule of thumb is at least 1/3 of the width of the ENS symbol."
+      },
+      "token": {
+        "title": "Icon",
+        "description": "The icon is used to represents ENS as an avatar and the $ENS token."
+      },
+      "palette": {
+        "title": "Brand Palette",
+        "description": "ENS's brand can be represented using any of our colors. Please keep in mind that the colors are not a “one-size-fits-all”.",
+        "primary": {
+          "title": "Primary Palette",
+          "description": "Below is the primary color palette for the ENS brand."
+        },
+        "secondary": {
+          "title": "Extended Color Palette",
+          "description": "Below are the scondary color palettes to be used for creating creative collateral for the ENS brand."
+        }
       }
     },
     "extra": {

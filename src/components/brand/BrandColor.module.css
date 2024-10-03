@@ -1,0 +1,50 @@
+
+.brandColor {
+    background-color: var(--color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 2px;
+    font-family: var(--ens-mono);
+    text-transform: uppercase;
+    height: 220px;
+    width: 100%;
+    padding: 8px;
+}
+
+.colorName {
+    font-size: 18px;
+}
+
+.colorList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    font-size: 14px;
+}
+
+.colorList > button {
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) { 
+    .brandColor {
+        height: 260px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .brandColor {
+        padding: 20px;
+        height: 330px;
+    }
+}
