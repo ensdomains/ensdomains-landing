@@ -7,10 +7,11 @@ import { SearchIcon } from '../icons';
 import styles from './SearchInput.module.css';
 import { useEffect, useState } from 'react';
 import { useDebounce } from '~/utils/useDebounce';
-import { createPublicClient, http } from 'viem';
+import { http } from 'viem';
 import { mainnet } from 'viem/chains';
+import { createEnsPublicClient } from '@ensdomains/ensjs';
 
-const publicClient = createPublicClient({
+const publicClient = createEnsPublicClient({
     chain: mainnet,
     transport: http(),
 });
@@ -18,16 +19,27 @@ const publicClient = createPublicClient({
 export const SearchInput = ({ caption, placeholder }: { caption: string; placeholder: string }) => {
     const [value, setValue] = useState('');
     const [isEnsAvailable, setEnsAvailable] = useState(false);
+    const [isBoxAvailable, setBoxAvailable] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
     const debouncedValue = useDebounce(value, 500);
 
     useEffect(() => {
-        if (debouncedValue) {
+        if (debouncedValue.length > 2) {
             setIsLoading(true);
-            publicClient.getEnsAddress({ name: `${debouncedValue}.eth` }).then((address) => {
-                setIsLoading(false);
-                setEnsAvailable(address === null);
+
+            publicClient.getAvailable({ name: `${debouncedValue}.eth` }).then((available) => {
+                setEnsAvailable(available);
+
+                fetch(`https://dotbox-worker.ens-cf.workers.dev/search?domain=${debouncedValue}.box`)
+                    .then(res => res.json())
+                    .then((json) => {
+                        setBoxAvailable(json.data.available);
+                        setIsLoading(false);
+                    }).catch((err) => {
+                        console.error(err);
+                        setIsLoading(false);
+                    });
             });
         }
     }, [debouncedValue]);
@@ -71,6 +83,7 @@ export const SearchInput = ({ caption, placeholder }: { caption: string; placeho
                     <input
                         onChange={e => setValue(e.currentTarget.value)}
                         name="ens"
+                        value={value}
                         className={styles.input}
                         placeholder={placeholder}
                         required
@@ -78,8 +91,8 @@ export const SearchInput = ({ caption, placeholder }: { caption: string; placeho
                     />
                     {isLoading
                         ? (
-                                <button type="button" disabled className={styles.icon}>
-                                    loading
+                                <button type="button" disabled className={clsx(styles.icon, styles.spinner)}>
+                                    <img src="/assets/spinner.svg" alt="" />
                                 </button>
                             )
                         : (
@@ -97,7 +110,7 @@ export const SearchInput = ({ caption, placeholder }: { caption: string; placeho
                                                 </a>
                                                 <a>
                                                     <span>.box</span>
-                                                    <span>View</span>
+                                                    <span>{isBoxAvailable ? 'Register' : 'View'}</span>
                                                 </a>
                                             </div>
                                         )

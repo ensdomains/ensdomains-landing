@@ -13,6 +13,7 @@
         "lint:css": "stylelint -c stylelint.config.mjs './src/**/*.css'"
     },
     "dependencies": {
+        "@ensdomains/ensjs": "4.0.1-alpha.0",
         "clsx": "^2.1.1",
         "dune-api-client": "^1.0.1",
         "i18next": "^23.11.5",

@@ -19,6 +19,12 @@
     background-color: var(--ens-light-blue);
 }
 
+.input:focus-visible {
+    background-color: var(--ens-white);
+    border-color: var(--ens-blue);
+    outline: none;
+}
+
 .icon {
     position: absolute;
     right: 20px;
@@ -113,6 +119,11 @@
     color: var(--ens-green);
 }
 
+.spinner {
+    height: 20px;
+    width: 20px;
+}
+
 @media (min-width: 768px) {
     .input {
         padding: 20px 24px;
@@ -143,6 +154,10 @@
         gap: 20px;
         width: max-content;
         margin-top: unset;
+    }
+    .spinner {
+        width: 36px;
+        height: 36px;
     }
 }
 
@@ -175,5 +190,9 @@
     }
     .tlds > a > span:first-child {
         font-size: 30px;
+    }
+    .spinner {
+        width: 58px;
+        height: 58px;
     }
 }
