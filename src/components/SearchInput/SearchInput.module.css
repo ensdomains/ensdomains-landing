@@ -124,6 +124,15 @@
     width: 20px;
 }
 
+.invalid {
+    background-color: var(--ens-light-magenta);
+    color: var(--ens-dark-blue);
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
 @media (min-width: 768px) {
     .input {
         padding: 20px 24px;
@@ -188,7 +197,7 @@
     .tlds > a {
         padding: 16px 20px;
     }
-    .tlds > a > span:first-child {
+    .tlds > a > span:first-child, .invalid {
         font-size: 30px;
     }
     .spinner {
