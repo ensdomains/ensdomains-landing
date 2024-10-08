@@ -142,7 +142,7 @@ export const SearchInput = ({
                                                                     <span>.eth</span>
                                                                     <span>{isEnsAvailable ? registerText : viewText}</span>
                                                                 </a>
-                                                                <a href={isBoxAvailable ? `https://my.box/buy/configure?domain=${debouncedValue}` : `https://my.box/profile/${debouncedValue}.box`}>
+                                                                <a href={`https://app.ens.domains/name/${debouncedValue}.box`}>
                                                                     <span>.box</span>
                                                                     <span>{isBoxAvailable ? registerText : viewText}</span>
                                                                 </a>
