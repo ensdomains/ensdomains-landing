@@ -8,14 +8,17 @@ import styles from './SearchInput.module.css';
 import { useEffect, useState } from 'react';
 import { useDebounce } from '~/utils/useDebounce';
 import { http } from 'viem';
+import { validateName } from '@ensdomains/ensjs/utils';
 import { mainnet } from 'viem/chains';
 import { createEnsPublicClient } from '@ensdomains/ensjs';
 import { ExternalLink } from 'react-external-link';
 
 const publicClient = createEnsPublicClient({
     chain: mainnet,
-    transport: http(),
+    transport: http('https://lb.drpc.org/ogrpc?network=ethereum&dkey=AgBISc2US0WgjMYhz9MRMJZsJaE8hzcR76fgOpXEh2H0'),
 });
+
+const ensProfileUrl = (name: string, available: boolean) => `https://app.ens.domains/name/${name}.eth/${available ? 'register' : ''}`;
 
 export const SearchInput = ({
     caption, placeholder,
@@ -56,18 +59,21 @@ export const SearchInput = ({
                             setIsLoading(false);
                             setIsBoxInvalid(true);
                         }
-                        else {
-                            setBoxAvailable(json.data.available);
+                        setBoxAvailable(json.data.available);
+                        try {
+                            validateName(`${debouncedValue}.eth`);
+
                             publicClient.getAvailable({ name: `${debouncedValue}.eth` }).then((available) => {
                                 setEnsAvailable(available);
                                 setIsLoading(false);
-                            }).catch((err) => {
-                                console.error(err);
-                                setIsInvalid(true);
                             });
                         }
+                        catch {
+                            setIsLoading(false);
+                            setIsInvalid(true);
+                        }
                     }).catch((err) => {
-                        console.error(err);
+                        console.error('[BOX]', err);
                         setIsInvalid(true);
                         setIsLoading(false);
                     });
@@ -144,7 +150,7 @@ export const SearchInput = ({
                                                             <>
                                                                 {debouncedValue.length > 2
                                                                     ? (
-                                                                            <a className={isEnsAvailable ? styles.registered : styles.available} href={`https://app.ens.domains/name/${debouncedValue}.eth`}>
+                                                                            <a className={isEnsAvailable ? styles.registered : styles.available} href={ensProfileUrl(debouncedValue, isEnsAvailable)}>
                                                                                 <span>.eth</span>
                                                                                 <span>{isEnsAvailable ? registerText : viewText}</span>
                                                                             </a>
@@ -153,7 +159,7 @@ export const SearchInput = ({
                                                                 {isBoxInvalid
                                                                     ? null
                                                                     : (
-                                                                            <ExternalLink className={isBoxAvailable ? styles.registered : styles.available} href={`https://app.ens.domains/name/${debouncedValue}.box`}>
+                                                                            <ExternalLink className={isBoxAvailable ? styles.registered : styles.available} href={ensProfileUrl(debouncedValue, isBoxAvailable)}>
                                                                                 <span>.box</span>
                                                                                 <span>{isBoxAvailable ? registerText : viewText}</span>
                                                                             </ExternalLink>
