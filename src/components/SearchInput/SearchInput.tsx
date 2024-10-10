@@ -5,10 +5,84 @@ import { clsx } from 'clsx';
 import ui from '~/styles/ui.module.css';
 import { SearchIcon } from '../icons';
 import styles from './SearchInput.module.css';
-import { CSSProperties, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDebounce } from '~/utils/useDebounce';
+import { http } from 'viem';
+import { validateName } from '@ensdomains/ensjs/utils';
+import { mainnet } from 'viem/chains';
+import { createEnsPublicClient } from '@ensdomains/ensjs';
+import { ExternalLink } from 'react-external-link';
 
-export const SearchInput = ({ caption, placeholder }: { caption: string; placeholder: string }) => {
+const publicClient = createEnsPublicClient({
+    chain: mainnet,
+    transport: http('https://lb.drpc.org/ogrpc?network=ethereum&dkey=AgBISc2US0WgjMYhz9MRMJZsJaE8hzcR76fgOpXEh2H0'),
+});
+
+const ensProfileUrl = (name: string, available: boolean) => `https://app.ens.domains/name/${name}.eth/${available ? 'register' : ''}`;
+
+export const SearchInput = ({
+    caption, placeholder,
+    viewText,
+    registerText,
+    invalidText,
+}: {
+    caption: string;
+    placeholder: string;
+    viewText: string;
+    invalidText: string;
+    registerText: string;
+}) => {
     const [value, setValue] = useState('');
+    const [isEnsAvailable, setEnsAvailable] = useState(false);
+    const [isBoxAvailable, setBoxAvailable] = useState(false);
+    const [isBoxInvalid, setIsBoxInvalid] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [isInvalid, setIsInvalid] = useState(false);
+
+    const debouncedValue = useDebounce(value, 500);
+
+    useEffect(() => {
+        if (debouncedValue.length > 1) {
+            setIsInvalid(false);
+            setIsLoading(true);
+            setIsBoxInvalid(false);
+
+            if (debouncedValue.includes('#')) { // special case - URL hash
+                setIsInvalid(true);
+                setIsLoading(false);
+            }
+            else {
+                fetch(`https://dotbox-worker.ens-cf.workers.dev/search?domain=${encodeURI(debouncedValue)}.box`)
+                    .then(res => res.json())
+                    .then((json) => {
+                        if (json.data.status === 'INVALID_DOMAIN') {
+                            setIsLoading(false);
+                            setIsBoxInvalid(true);
+                        }
+                        setBoxAvailable(json.data.available);
+                        try {
+                            validateName(`${debouncedValue}.eth`);
+
+                            publicClient.getAvailable({ name: `${debouncedValue}.eth` }).then((available) => {
+                                setEnsAvailable(available);
+                                setIsLoading(false);
+                            });
+                        }
+                        catch {
+                            setIsLoading(false);
+                            setIsInvalid(true);
+                        }
+                    }).catch((err) => {
+                        console.error('[BOX]', err);
+                        setIsInvalid(true);
+                        setIsLoading(false);
+                    });
+            }
+        }
+        else {
+            setIsInvalid(true);
+        }
+    }, [debouncedValue]);
 
     return (
         <div
@@ -19,10 +93,13 @@ export const SearchInput = ({ caption, placeholder }: { caption: string; placeho
                 styles.container,
             )}
         >
-            <span className={styles.caption}>
-                {caption}
-            </span>
-            <img src="/assets/arrow-down.svg" width="16" height="13" alt="" />
+            <div className={styles.captionContainer}>
+                <img src="/assets/arrow-down.svg" width="16" height="13" alt="" />
+                <span className={styles.caption}>
+                    {caption}
+                </span>
+                <img src="/assets/arrow-down.svg" width="16" height="13" alt="" />
+            </div>
             <div
                 className={clsx(
                     ui.flex,
@@ -46,15 +123,52 @@ export const SearchInput = ({ caption, placeholder }: { caption: string; placeho
                     <input
                         onChange={e => setValue(e.currentTarget.value)}
                         name="ens"
-                        className={styles.input}
+                        value={value}
+                        className={clsx(styles.input, isInvalid && styles['input-invalid'])}
                         placeholder={placeholder}
                         required
-                        minLength={3}
+                        minLength={2}
                     />
-                    <span style={{ '--left': `${value.length}ch`, 'display': value === '' ? 'none' : 'block' } as CSSProperties} className={styles.inputSuffix}>.eth</span>
-                    <button type="submit" className={styles.icon}>
-                        <SearchIcon />
-                    </button>
+                    {isLoading
+                        ? (
+                                <button type="button" disabled className={clsx(styles.icon, styles.spinner)}>
+                                    <img src="/assets/spinner.svg" alt="" />
+                                </button>
+                            )
+                        : (
+                                value === ''
+                                    ? (
+                                            <button type="submit" className={styles.icon}>
+                                                <SearchIcon />
+                                            </button>
+                                        )
+                                    : (
+                                            <div className={styles.tlds}>
+                                                {isInvalid
+                                                    ? <span className={styles.invalid}>{invalidText}</span>
+                                                    : (
+                                                            <>
+                                                                {debouncedValue.length > 2
+                                                                    ? (
+                                                                            <a className={isEnsAvailable ? styles.registered : styles.available} href={ensProfileUrl(debouncedValue, isEnsAvailable)}>
+                                                                                <span>.eth</span>
+                                                                                <span>{isEnsAvailable ? registerText : viewText}</span>
+                                                                            </a>
+                                                                        )
+                                                                    : null}
+                                                                {isBoxInvalid
+                                                                    ? null
+                                                                    : (
+                                                                            <ExternalLink className={isBoxAvailable ? styles.registered : styles.available} href={ensProfileUrl(debouncedValue, isBoxAvailable)}>
+                                                                                <span>.box</span>
+                                                                                <span>{isBoxAvailable ? registerText : viewText}</span>
+                                                                            </ExternalLink>
+                                                                        )}
+                                                            </>
+                                                        )}
+                                            </div>
+                                        )
+                            )}
                 </form>
             </div>
         </div>
