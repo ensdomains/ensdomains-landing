@@ -31,6 +31,7 @@ export const SearchInput = ({
     const [value, setValue] = useState('');
     const [isEnsAvailable, setEnsAvailable] = useState(false);
     const [isBoxAvailable, setBoxAvailable] = useState(false);
+    const [isBoxInvalid, setIsBoxInvalid] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [isInvalid, setIsInvalid] = useState(false);
 
@@ -40,18 +41,19 @@ export const SearchInput = ({
         if (debouncedValue.length > 1) {
             setIsInvalid(false);
             setIsLoading(true);
+            setIsBoxInvalid(false);
 
             if (debouncedValue.includes('#')) { // special case - URL hash
                 setIsInvalid(true);
                 setIsLoading(false);
             }
             else {
-                fetch(`https://dotbox-worker.ens-cf.workers.dev/search?domain=${debouncedValue}.box`)
+                fetch(`https://dotbox-worker.ens-cf.workers.dev/search?domain=${encodeURI(debouncedValue)}.box`)
                     .then(res => res.json())
                     .then((json) => {
                         if (json.data.status === 'INVALID_DOMAIN') {
                             setIsLoading(false);
-                            setIsInvalid(true);
+                            setIsBoxInvalid(true);
                         }
                         else {
                             setBoxAvailable(json.data.available);
@@ -147,10 +149,14 @@ export const SearchInput = ({
                                                                             </a>
                                                                         )
                                                                     : null}
-                                                                <a href={`https://app.ens.domains/name/${debouncedValue}.box`}>
-                                                                    <span>.box</span>
-                                                                    <span>{isBoxAvailable ? registerText : viewText}</span>
-                                                                </a>
+                                                                {isBoxInvalid
+                                                                    ? null
+                                                                    : (
+                                                                            <a href={`https://app.ens.domains/name/${debouncedValue}.box`}>
+                                                                                <span>.box</span>
+                                                                                <span>{isBoxAvailable ? registerText : viewText}</span>
+                                                                            </a>
+                                                                        )}
                                                             </>
                                                         )}
                                             </div>
