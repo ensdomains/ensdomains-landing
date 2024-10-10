@@ -13,16 +13,22 @@
     background-color: var(--ens-white);
     font-size: 24px;
     padding: 20px;
+    outline: none;
 }
 
 .input:placeholder-shown {
     background-color: var(--ens-light-blue);
+
+    border-color: var(--ens-blue) !important;
 }
 
 .input:focus-visible {
     background-color: var(--ens-white);
     border-color: var(--ens-blue);
-    outline: none;
+}
+
+.input-invalid {
+    border-color: var(--ens-magenta) !important;
 }
 
 .icon {

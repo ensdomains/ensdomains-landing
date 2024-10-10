@@ -36,8 +36,6 @@ export const SearchInput = ({
 
     const debouncedValue = useDebounce(value, 500);
 
-    console.log({ debouncedValue });
-
     useEffect(() => {
         if (debouncedValue.length > 1) {
             setIsInvalid(false);
@@ -71,6 +69,9 @@ export const SearchInput = ({
                         setIsLoading(false);
                     });
             }
+        }
+        else {
+            setIsInvalid(true);
         }
     }, [debouncedValue]);
 
@@ -114,10 +115,10 @@ export const SearchInput = ({
                         onChange={e => setValue(e.currentTarget.value)}
                         name="ens"
                         value={value}
-                        className={styles.input}
+                        className={clsx(styles.input, isInvalid && styles['input-invalid'])}
                         placeholder={placeholder}
                         required
-                        minLength={3}
+                        minLength={2}
                     />
                     {isLoading
                         ? (
@@ -138,10 +139,14 @@ export const SearchInput = ({
                                                     ? <span className={styles.invalid}>{invalidText}</span>
                                                     : (
                                                             <>
-                                                                <a href={`https://app.ens.domains/name/${debouncedValue}.eth`}>
-                                                                    <span>.eth</span>
-                                                                    <span>{isEnsAvailable ? registerText : viewText}</span>
-                                                                </a>
+                                                                {debouncedValue.length > 2
+                                                                    ? (
+                                                                            <a href={`https://app.ens.domains/name/${debouncedValue}.eth`}>
+                                                                                <span>.eth</span>
+                                                                                <span>{isEnsAvailable ? registerText : viewText}</span>
+                                                                            </a>
+                                                                        )
+                                                                    : null}
                                                                 <a href={`https://app.ens.domains/name/${debouncedValue}.box`}>
                                                                     <span>.box</span>
                                                                     <span>{isBoxAvailable ? registerText : viewText}</span>
