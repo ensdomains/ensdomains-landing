@@ -97,11 +97,11 @@
     margin-top: 10px;
 }
 
-.tlds > a:first-child {
+.tlds > a.registered {
     background-color: var(--ens-light-blue);
 }
 
-.tlds > a:last-child {
+.tlds > a.available {
     background-color: var(--ens-light-green);
 }
 
@@ -117,11 +117,11 @@
     font-family: var(--ens-mono);
 }
 
-.tlds > a:first-child > span:last-child {
+.tlds > a.registered > span:last-child {
     color: var(--ens-blue);
 }
 
-.tlds > a:last-child > span:last-child {
+.tlds > a.available > span:last-child {
     color: var(--ens-green);
 }
 

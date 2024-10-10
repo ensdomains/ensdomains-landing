@@ -10,6 +10,7 @@ import { useDebounce } from '~/utils/useDebounce';
 import { http } from 'viem';
 import { mainnet } from 'viem/chains';
 import { createEnsPublicClient } from '@ensdomains/ensjs';
+import { ExternalLink } from 'react-external-link';
 
 const publicClient = createEnsPublicClient({
     chain: mainnet,
@@ -143,7 +144,7 @@ export const SearchInput = ({
                                                             <>
                                                                 {debouncedValue.length > 2
                                                                     ? (
-                                                                            <a href={`https://app.ens.domains/name/${debouncedValue}.eth`}>
+                                                                            <a className={isEnsAvailable ? styles.registered : styles.available} href={`https://app.ens.domains/name/${debouncedValue}.eth`}>
                                                                                 <span>.eth</span>
                                                                                 <span>{isEnsAvailable ? registerText : viewText}</span>
                                                                             </a>
@@ -152,10 +153,10 @@ export const SearchInput = ({
                                                                 {isBoxInvalid
                                                                     ? null
                                                                     : (
-                                                                            <a href={`https://app.ens.domains/name/${debouncedValue}.box`}>
+                                                                            <ExternalLink className={isBoxAvailable ? styles.registered : styles.available} href={`https://app.ens.domains/name/${debouncedValue}.box`}>
                                                                                 <span>.box</span>
                                                                                 <span>{isBoxAvailable ? registerText : viewText}</span>
-                                                                            </a>
+                                                                            </ExternalLink>
                                                                         )}
                                                             </>
                                                         )}
