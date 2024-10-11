@@ -205,5 +205,10 @@ export const EnsNavIcon = (props: Props) => (
             <path d="M18.5974 0.5467C18.3769 0.392379 18.1053 0.655555 18.253 0.880301C20.7206 4.63343 28.9232 17.121 30.0562 18.9955C31.1739 20.8445 33.372 23.9173 33.5554 26.5462C33.5737 26.8087 33.9366 26.862 34.0279 26.6152C34.1751 26.2171 34.3319 25.742 34.478 25.1993C36.3222 18.3484 33.6438 11.0786 27.8268 7.00693L18.5974 0.5467Z" fill="currentColor" />
         </g>
     </svg>
+);
 
+export const ArrowRightIcon = (props: Props) => (
+    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <path d="M0.428711 4.5H7.71443M7.71443 4.5L3.71443 0.5M7.71443 4.5L3.71443 8.5" stroke="currentColor" stroke-width="1.2" />
+    </svg>
 );

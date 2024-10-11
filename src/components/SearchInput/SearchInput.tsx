@@ -3,11 +3,11 @@
 import { clsx } from 'clsx';
 
 import ui from '~/styles/ui.module.css';
-import { SearchIcon } from '../icons';
+import { ArrowRightIcon, SearchIcon } from '../icons';
 import styles from './SearchInput.module.css';
 import { useEffect, useState } from 'react';
 import { useDebounce } from '~/utils/useDebounce';
-import { http } from 'viem';
+import { http, fallback } from 'viem';
 import { validateName } from '@ensdomains/ensjs/utils';
 import { mainnet } from 'viem/chains';
 import { createEnsPublicClient } from '@ensdomains/ensjs';
@@ -15,7 +15,10 @@ import { ExternalLink } from 'react-external-link';
 
 const publicClient = createEnsPublicClient({
     chain: mainnet,
-    transport: http('https://lb.drpc.org/ogrpc?network=ethereum&dkey=AgBISc2US0WgjMYhz9MRMJZsJaE8hzcR76fgOpXEh2H0'),
+    transport: fallback([
+        http('https://mainnet.infura.io/v3/1dc17c91a0b54faeb1547326c3ddca7e'),
+        http('https://lb.drpc.org/ogrpc?network=ethereum&dkey=AgBISc2US0WgjMYhz9MRMJZsJaE8hzcR76fgOpXEh2H0'),
+    ]),
 });
 
 const ensProfileUrl = (name: string, available: boolean) => `https://app.ens.domains/name/${name}.eth/${available ? 'register' : ''}`;
@@ -152,7 +155,12 @@ export const SearchInput = ({
                                                                     ? (
                                                                             <a className={isEnsAvailable ? styles.registered : styles.available} href={ensProfileUrl(debouncedValue, isEnsAvailable)}>
                                                                                 <span>.eth</span>
-                                                                                <span>{isEnsAvailable ? registerText : viewText}</span>
+                                                                                <span>
+                                                                                    {isEnsAvailable ? registerText : viewText}
+                                                                                    {' '}
+                                                                                    {' '}
+                                                                                    <ArrowRightIcon />
+                                                                                </span>
                                                                             </a>
                                                                         )
                                                                     : null}
@@ -161,7 +169,11 @@ export const SearchInput = ({
                                                                     : (
                                                                             <ExternalLink className={isBoxAvailable ? styles.registered : styles.available} href={ensProfileUrl(debouncedValue, isBoxAvailable)}>
                                                                                 <span>.box</span>
-                                                                                <span>{isBoxAvailable ? registerText : viewText}</span>
+                                                                                <span>
+                                                                                    {isBoxAvailable ? registerText : viewText}
+                                                                                    {' '}
+                                                                                    <ArrowRightIcon />
+                                                                                </span>
                                                                             </ExternalLink>
                                                                         )}
                                                             </>
