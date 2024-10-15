@@ -7,21 +7,87 @@ import { ArrowRightIcon, SearchIcon } from '../icons';
 import styles from './SearchInput.module.css';
 import { useEffect, useState } from 'react';
 import { useDebounce } from '~/utils/useDebounce';
-import { http, fallback } from 'viem';
-import { validateName } from '@ensdomains/ensjs/utils';
-import { mainnet } from 'viem/chains';
-import { createEnsPublicClient } from '@ensdomains/ensjs';
 import { ExternalLink } from 'react-external-link';
+import { checkBoxAvailable, checkEthAvailable } from '~/utils/available';
 
-const publicClient = createEnsPublicClient({
-    chain: mainnet,
-    transport: fallback([
-        http('https://mainnet.infura.io/v3/1dc17c91a0b54faeb1547326c3ddca7e'),
-        http('https://lb.drpc.org/ogrpc?network=ethereum&dkey=AgBISc2US0WgjMYhz9MRMJZsJaE8hzcR76fgOpXEh2H0'),
-    ]),
-});
+const ensProfileUrl = (name: string, available: boolean, tld: 'eth' | 'box') => `https://app.ens.domains/name/${name}.${tld}${available ? '/register' : ''}`;
 
-const ensProfileUrl = (name: string, available: boolean) => `https://app.ens.domains/name/${name}.eth/${available ? 'register' : ''}`;
+const showSuggestions = (name: string): boolean => (['eth', 'box'].includes(name.split('.')[1])) || name.split('.')[1] === undefined;
+
+type CommonProps = {
+    viewText: string;
+    invalidText: string;
+    registerText: string;
+};
+
+const TldList = (
+    {
+        isLoading, tld,
+        isInvalid, invalidText,
+        isEnsAvailable, isBoxInvalid,
+        name, viewText, registerText,
+        isBoxAvailable,
+    }: {
+        isLoading: boolean; tld: 'eth' | 'box' | undefined;
+        isInvalid: boolean;
+        isEnsAvailable: boolean; isBoxInvalid: boolean;
+        name: string; isBoxAvailable: boolean;
+    } & CommonProps) => {
+    if (isLoading) {
+        return (
+            <button type="button" disabled className={clsx(styles.icon, styles.spinner)}>
+                <img src="/assets/spinner.svg" alt="" />
+            </button>
+        );
+    }
+
+    if (name === '') {
+        return (
+            <button type="submit" className={styles.icon}>
+                <SearchIcon />
+            </button>
+        );
+    }
+
+    if (isInvalid) {
+        return (
+            <div className={styles.tlds}>
+                <span className={styles.invalid}>{invalidText}</span>
+            </div>
+        );
+    }
+
+    return (
+
+        <div className={styles.tlds}>
+            {name.length > 2 && tld !== 'box'
+                ? (
+                        <a className={isEnsAvailable ? styles.registered : styles.available} href={ensProfileUrl(name, isEnsAvailable, tld || 'eth')}>
+                            <span>.eth</span>
+                            <span>
+                                {isEnsAvailable ? registerText : viewText}
+                                {' '}
+                                <ArrowRightIcon />
+                            </span>
+                        </a>
+                    )
+                : null}
+            {isBoxInvalid || tld === 'eth'
+                ? null
+                : (
+                        <ExternalLink className={isBoxAvailable ? styles.registered : styles.available} href={ensProfileUrl(name, isBoxAvailable, tld || 'box')}>
+                            <span>.box</span>
+                            <span>
+                                {isBoxAvailable ? registerText : viewText}
+                                {' '}
+                                <ArrowRightIcon />
+                            </span>
+                        </ExternalLink>
+                    )}
+
+        </div>
+    );
+};
 
 export const SearchInput = ({
     caption, placeholder,
@@ -31,10 +97,7 @@ export const SearchInput = ({
 }: {
     caption: string;
     placeholder: string;
-    viewText: string;
-    invalidText: string;
-    registerText: string;
-}) => {
+} & CommonProps) => {
     const [value, setValue] = useState('');
     const [isEnsAvailable, setEnsAvailable] = useState(false);
     const [isBoxAvailable, setBoxAvailable] = useState(false);
@@ -43,6 +106,8 @@ export const SearchInput = ({
     const [isInvalid, setIsInvalid] = useState(false);
 
     const debouncedValue = useDebounce(value, 500);
+
+    const [name, tld] = debouncedValue.split('.') as [string, 'eth' | 'box'];
 
     useEffect(() => {
         if (debouncedValue.length > 1) {
@@ -54,32 +119,45 @@ export const SearchInput = ({
                 setIsInvalid(true);
                 setIsLoading(false);
             }
-            else {
-                fetch(`https://dotbox-worker.ens-cf.workers.dev/search?domain=${encodeURI(debouncedValue)}.box`)
-                    .then(res => res.json())
-                    .then((json) => {
-                        if (json.data.status === 'INVALID_DOMAIN') {
-                            setIsLoading(false);
-                            setIsBoxInvalid(true);
-                        }
-                        setBoxAvailable(json.data.available);
-                        try {
-                            validateName(`${debouncedValue}.eth`);
-
-                            publicClient.getAvailable({ name: `${debouncedValue}.eth` }).then((available) => {
-                                setEnsAvailable(available);
-                                setIsLoading(false);
-                            });
-                        }
-                        catch {
-                            setIsLoading(false);
-                            setIsInvalid(true);
-                        }
-                    }).catch((err) => {
-                        console.error('[BOX]', err);
+            else if (showSuggestions(debouncedValue)) {
+                if (tld === 'eth') {
+                    checkEthAvailable(name).then((available) => {
+                        setEnsAvailable(available);
+                    }).catch(() => {
                         setIsInvalid(true);
+                    }).finally(() => {
                         setIsLoading(false);
                     });
+                }
+                else if (tld === 'box') {
+                    checkBoxAvailable(name).then((available) => {
+                        setBoxAvailable(available);
+                    }).catch(() => {
+                        setIsBoxInvalid(true);
+                    }).finally(() => {
+                        setIsLoading(false);
+                    });
+                }
+                else {
+                    checkEthAvailable(name).then((available) => {
+                        setEnsAvailable(available);
+                    }).catch(() => {
+                        setIsInvalid(true);
+                    }).finally(() => {
+                        setIsLoading(false);
+                    }).then(() => {
+                        checkBoxAvailable(name).then((available) => {
+                            setBoxAvailable(available);
+                        }).catch(() => {
+                            setIsBoxInvalid(true);
+                        }).finally(() => {
+                            setIsLoading(false);
+                        });
+                    });
+                }
+            }
+            else {
+                setIsLoading(false);
             }
         }
         else {
@@ -132,55 +210,14 @@ export const SearchInput = ({
                         required
                         minLength={2}
                     />
-                    {isLoading
-                        ? (
-                                <button type="button" disabled className={clsx(styles.icon, styles.spinner)}>
-                                    <img src="/assets/spinner.svg" alt="" />
-                                </button>
-                            )
-                        : (
-                                value === ''
-                                    ? (
-                                            <button type="submit" className={styles.icon}>
-                                                <SearchIcon />
-                                            </button>
-                                        )
-                                    : (
-                                            <div className={styles.tlds}>
-                                                {isInvalid
-                                                    ? <span className={styles.invalid}>{invalidText}</span>
-                                                    : (
-                                                            <>
-                                                                {debouncedValue.length > 2
-                                                                    ? (
-                                                                            <a className={isEnsAvailable ? styles.registered : styles.available} href={ensProfileUrl(debouncedValue, isEnsAvailable)}>
-                                                                                <span>.eth</span>
-                                                                                <span>
-                                                                                    {isEnsAvailable ? registerText : viewText}
-                                                                                    {' '}
-                                                                                    {' '}
-                                                                                    <ArrowRightIcon />
-                                                                                </span>
-                                                                            </a>
-                                                                        )
-                                                                    : null}
-                                                                {isBoxInvalid
-                                                                    ? null
-                                                                    : (
-                                                                            <ExternalLink className={isBoxAvailable ? styles.registered : styles.available} href={ensProfileUrl(debouncedValue, isBoxAvailable)}>
-                                                                                <span>.box</span>
-                                                                                <span>
-                                                                                    {isBoxAvailable ? registerText : viewText}
-                                                                                    {' '}
-                                                                                    <ArrowRightIcon />
-                                                                                </span>
-                                                                            </ExternalLink>
-                                                                        )}
-                                                            </>
-                                                        )}
-                                            </div>
-                                        )
-                            )}
+                    {showSuggestions(debouncedValue) && (
+                        <TldList {
+                            ...{
+                                isBoxInvalid, isEnsAvailable, isInvalid, invalidText, isLoading, registerText,
+                                tld, name, viewText, isBoxAvailable,
+                            }}
+                        />
+                    )}
                 </form>
             </div>
         </div>
