@@ -10,7 +10,7 @@ import { useDebounce } from '~/utils/useDebounce'
 import { ExternalLink } from 'react-external-link'
 import { checkBoxAvailable, checkEthAvailable } from '~/utils/available'
 
-const ensProfileUrl = (name: string, available: boolean, tld: 'eth' | 'box') => `https://app.ens.domains/name/${name}.${tld}${available ? '/register' : ''}`
+const ensProfileUrl = (name: string, available: boolean, tld: 'eth' | 'box') => `https://app.ens.domains/name/${name}.${tld}${available ? tld === 'box' ? '/dotbox' : '/register' : ''}`
 
 const showSuggestions = (name: string): boolean => (['eth', 'box'].includes(name.split('.')[1])) || name.split('.')[1] === undefined
 
