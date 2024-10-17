@@ -1,8 +1,8 @@
-import { useParams } from 'next/navigation';
-import { Language, fallbackLng } from './settings';
+import { useParams } from 'next/navigation'
+import { Language, fallbackLng } from './settings'
 
 export const useCurrentLanguage = (lang: Language = fallbackLng): Language => {
-    const parameters = useParams();
+  const parameters = useParams()
 
-    return (parameters['lang'] as Language) || lang;
-};
+  return (parameters['lang'] as Language) || lang
+}
