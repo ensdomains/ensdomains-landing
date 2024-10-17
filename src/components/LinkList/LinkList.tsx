@@ -3,6 +3,7 @@ import type { FC, ReactNode } from 'react'
 import ui from '~/styles/ui.module.css'
 import styles from './LinkList.module.css'
 import { ExternalLink } from 'react-external-link'
+import { clsx } from 'clsx'
 
 export type ILink = {
   title: string
@@ -27,7 +28,7 @@ export const LinkList: FC<{ links: ILink[] }> = ({ links }) => {
             : (
                 <span>{title}</span>
               )}
-          <p className={ui.serif}>{description}</p>
+          <p className={clsx(ui.serif, styles.paragraph)}>{description}</p>
         </li>
       ))}
     </ul>

@@ -33,3 +33,11 @@ export type PartnerEntry = {
 export type PageProps = {
   params: { lang: Language }
 }
+
+export type BrandColorObject = {
+  hex: `#${string}`
+  RGB: `${number}, ${number}, ${number}`
+  CMYK: `${number}%, ${number}%, ${number}%, ${number}%`
+  name: string
+  textColor: 'black' | 'white'
+}

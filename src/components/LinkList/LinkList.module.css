@@ -52,6 +52,11 @@
     width: 12px;
 }
 
+.paragraph {
+    max-width: 550px;
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     .list > li {
         grid-template-columns: 1fr 1fr;
