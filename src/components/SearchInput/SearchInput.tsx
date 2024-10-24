@@ -113,11 +113,11 @@ export const SearchInput = ({
   const [name, tld] = debouncedValue.split('.') as [string, 'eth' | 'box']
 
   useEffect(() => {
-    if (debouncedValue.length === 0 || debouncedValue.includes('#')) { // special case - URL hash
+    if (debouncedValue.includes('#')) { // special case - URL hash
       setIsInvalid(true)
       setIsLoading(false)
     }
-    else if (showSuggestions(debouncedValue)) {
+    else if (debouncedValue.length !== 0 && showSuggestions(debouncedValue)) {
       setIsInvalid(false)
       setIsLoading(true)
       if (tld === 'eth') {
