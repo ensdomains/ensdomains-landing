@@ -39,7 +39,7 @@ const TldList = (
   if (isLoading) {
     return (
       <button type="button" disabled className={clsx(styles.icon, styles.spinner)}>
-        <img src="/assets/spinner.svg" alt="" />
+        <img src="/assets/spinner.svg" alt="loading" />
       </button>
     )
   }
@@ -113,58 +113,51 @@ export const SearchInput = ({
   const [name, tld] = debouncedValue.split('.') as [string, 'eth' | 'box']
 
   useEffect(() => {
-    if (debouncedValue.length > 1) {
+    if (debouncedValue.length === 0 || debouncedValue.includes('#')) { // special case - URL hash
+      setIsInvalid(true)
+      setIsLoading(false)
+    }
+    else if (showSuggestions(debouncedValue)) {
       setIsInvalid(false)
       setIsLoading(true)
-      setIsBoxInvalid(false)
-
-      if (debouncedValue.includes('#')) { // special case - URL hash
-        setIsInvalid(true)
-        setIsLoading(false)
+      if (tld === 'eth') {
+        checkEthAvailable(name).then((available) => {
+          setEnsAvailable(available)
+        }).catch(() => {
+          setIsInvalid(true)
+        }).finally(() => {
+          setIsLoading(false)
+        })
       }
-      else if (showSuggestions(debouncedValue)) {
-        if (tld === 'eth') {
-          checkEthAvailable(name).then((available) => {
-            setEnsAvailable(available)
-          }).catch(() => {
-            setIsInvalid(true)
-          }).finally(() => {
-            setIsLoading(false)
-          })
-        }
-        else if (tld === 'box') {
-          checkBoxAvailable(name).then((available) => {
-            setBoxAvailable(available)
-          }).catch(() => {
-            setIsBoxInvalid(true)
-          }).finally(() => {
-            setIsLoading(false)
-          })
-        }
-        else {
-          checkEthAvailable(name).then((available) => {
-            setEnsAvailable(available)
-          }).catch(() => {
-            setIsInvalid(true)
-          }).finally(() => {
-            setIsLoading(false)
-          }).then(() => {
-            checkBoxAvailable(name).then((available) => {
-              setBoxAvailable(available)
-            }).catch(() => {
-              setIsBoxInvalid(true)
-            }).finally(() => {
-              setIsLoading(false)
-            })
-          })
-        }
+      else if (tld === 'box') {
+        checkBoxAvailable(name).then((available) => {
+          setBoxAvailable(available)
+        }).catch(() => {
+          setIsBoxInvalid(true)
+        }).finally(() => {
+          setIsLoading(false)
+        })
       }
       else {
-        setIsLoading(false)
+        checkBoxAvailable(name).then((available) => {
+          setBoxAvailable(available)
+        }).catch(() => {
+          setIsBoxInvalid(true)
+        }).finally(() => {
+          setIsLoading(false)
+        }).then(() => {
+          checkEthAvailable(name).then((available) => {
+            if (name.length < 2) {
+              setEnsAvailable(false)
+            }
+            else setEnsAvailable(available)
+          }).catch(() => {
+            setIsInvalid(true)
+          }).finally(() => {
+            setIsLoading(false)
+          })
+        })
       }
-    }
-    else {
-      setIsInvalid(true)
     }
   }, [debouncedValue])
 
