@@ -13,34 +13,34 @@
         "lint:css": "stylelint -c stylelint.config.mjs './src/**/*.css'"
     },
     "dependencies": {
+        "@ensdomains/ensjs": "4.0.1-alpha.0",
         "clsx": "^2.1.1",
         "dune-api-client": "^1.0.1",
-        "i18next": "^23.11.5",
+        "i18next": "^23.16.0",
         "i18next-resources-to-backend": "^1.2.1",
-        "next": "^14.2.4",
-        "next-i18next": "^15.3.0",
+        "next": "^14.2.15",
         "react": "^18.3.1",
         "react-countup": "^6.5.3",
         "react-dom": "^18.3.1",
         "react-external-link": "^2.3.1",
-        "react-i18next": "^14.1.2",
-        "typescript": "^5.5.3"
+        "react-i18next": "^15.0.3",
+        "typescript": "^5.6.3",
+        "viem": "^2.21.28"
     },
     "devDependencies": {
-        "@eslint-react/eslint-plugin": "^1.5.22",
-        "@eslint/compat": "^1.1.0",
-        "@eslint/js": "^9.6.0",
-        "@next/eslint-plugin-next": "^14.2.4",
-        "@stylistic/eslint-plugin": "^2.3.0",
-        "@stylistic/stylelint-plugin": "^2.1.2",
-        "@types/node": "^20.14.9",
-        "@types/react": "^18.3.3",
-        "@types/react-helmet": "^6.1.11",
-        "eslint": "^9.6.0",
-        "globals": "^15.8.0",
+        "@eslint-react/eslint-plugin": "^1.15.0",
+        "@eslint/compat": "^1.2.0",
+        "@eslint/js": "^9.12.0",
+        "@next/eslint-plugin-next": "^14.2.15",
+        "@stylistic/eslint-plugin": "^2.9.0",
+        "@stylistic/stylelint-plugin": "^3.1.1",
+        "@types/node": "^22.7.6",
+        "@types/react": "^18.3.11",
+        "eslint": "^9.12.0",
+        "globals": "^15.11.0",
         "i18next-locales-sync": "^2.1.0",
-        "stylelint": "^16.6.1",
-        "typescript-eslint": "^7.15.0"
+        "stylelint": "^16.10.0",
+        "typescript-eslint": "^8.9.0"
     },
     "repository": {
         "type": "git",
@@ -49,5 +49,5 @@
     "bugs": {
         "url": "https://github.com/ensdomains/ensdomains-landing/issues"
     },
-    "packageManager": "pnpm@9.0.6"
+    "packageManager": "pnpm@9.3.0"
 }
