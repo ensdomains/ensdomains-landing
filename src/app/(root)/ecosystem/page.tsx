@@ -112,6 +112,7 @@ export default async function Ecosystem({
                             { title: 'Metamask', href: 'https://metamask.io' },
                             { title: 'Rainbow', href: 'https://rainbow.me' },
                             { title: 'Arbitrum', href: 'https://arbitrum.io' },
+                            { title: '3DNS', href: 'https://3dns.box' },
                         ]}
                     />
                 </div>
