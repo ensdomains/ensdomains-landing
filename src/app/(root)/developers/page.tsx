@@ -71,10 +71,10 @@ export default async function Developers({
                                 ),
                             },
                             {
-                                title: 'EVMGateway',
-                                href: 'https://github.com/ensdomains/evmgateway',
+                                title: 'Unruggable Gateway',
+                                href: 'https://gateway-docs.unruggable.com',
                                 description: t(
-                                    'developers.resources.evmgateway.description',
+                                    'developers.resources.unruggable-gateway.description',
                                 ),
                             },
                             {
