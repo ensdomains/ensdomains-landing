@@ -10,14 +10,9 @@ import { useDebounce } from '~/utils/useDebounce'
 import { ExternalLink } from 'react-external-link'
 import { checkBoxAvailable, checkEthAvailable } from '~/utils/available'
 
-const ensProfileUrl = (name: string, available: boolean, tld: 'eth' | 'box') =>
-  `https://app.ens.domains/${tld === 'eth' ? 'name/' : ''}${name}.${tld}${
-    available ? (tld === 'box' ? '/dotbox' : '/register') : ''
-  }`
+const ensProfileUrl = (name: string, available: boolean, tld: 'eth' | 'box') => `https://app.ens.domains/${tld === 'eth' ? 'name/' : ''}${name}.${tld}${available ? tld === 'box' ? '/dotbox' : '/register' : ''}`
 
-const showSuggestions = (name: string): boolean =>
-  ['eth', 'box'].includes(name.split('.')[1])
-  || name.split('.')[1] === undefined
+const showSuggestions = (name: string): boolean => (['eth', 'box'].includes(name.split('.')[1])) || name.split('.')[1] === undefined
 
 type CommonProps = {
   viewText: string
@@ -25,33 +20,25 @@ type CommonProps = {
   registerText: string
 }
 
-const TldList = ({
-  isLoading,
-  tld,
-  isInvalid,
-  invalidText,
-  isEnsAvailable,
-  isBoxInvalid,
-  name,
-  viewText,
-  registerText,
-  isBoxAvailable,
-}: {
-  isLoading: boolean
-  tld: 'eth' | 'box' | undefined
-  isInvalid: boolean
-  isEnsAvailable: boolean
-  isBoxInvalid: boolean
-  name: string
-  isBoxAvailable: boolean
-} & CommonProps) => {
+const TldList = (
+  {
+    isLoading, tld,
+    isInvalid, invalidText,
+    isEnsAvailable, isBoxInvalid,
+    name, viewText, registerText,
+    isBoxAvailable,
+  }: {
+    isLoading: boolean
+    tld: 'eth' | 'box' | undefined
+    isInvalid: boolean
+    isEnsAvailable: boolean
+    isBoxInvalid: boolean
+    name: string
+    isBoxAvailable: boolean
+  } & CommonProps) => {
   if (isLoading) {
     return (
-      <button
-        type="button"
-        disabled
-        className={clsx(styles.icon, styles.spinner)}
-      >
+      <button type="button" disabled className={clsx(styles.icon, styles.spinner)}>
         <img src="/assets/spinner.svg" alt="loading" />
       </button>
     )
@@ -74,33 +61,24 @@ const TldList = ({
   }
 
   return (
+
     <div className={styles.tlds}>
       {name.length > 2 && tld !== 'box'
         ? (
-            <ExternalLink
-              className={
-                isEnsAvailable ? styles.registered : styles.available
-              }
-              href={ensProfileUrl(name, isEnsAvailable, tld || 'eth')}
-            >
+            <a className={isEnsAvailable ? styles.registered : styles.available} href={ensProfileUrl(name, isEnsAvailable, tld || 'eth')}>
               <span>.eth</span>
               <span>
                 {isEnsAvailable ? registerText : viewText}
                 {' '}
                 <ArrowRightIcon />
               </span>
-            </ExternalLink>
+            </a>
           )
         : null}
       {isBoxInvalid || tld === 'eth'
         ? null
         : (
-            <ExternalLink
-              className={
-                isBoxAvailable ? styles.registered : styles.available
-              }
-              href={ensProfileUrl(name, isBoxAvailable, tld || 'box')}
-            >
+            <ExternalLink className={isBoxAvailable ? styles.registered : styles.available} href={ensProfileUrl(name, isBoxAvailable, tld || 'box')}>
               <span>.box</span>
               <span>
                 {isBoxAvailable ? registerText : viewText}
@@ -109,13 +87,13 @@ const TldList = ({
               </span>
             </ExternalLink>
           )}
+
     </div>
   )
 }
 
 export const SearchInput = ({
-  caption,
-  placeholder,
+  caption, placeholder,
   viewText,
   registerText,
   invalidText,
@@ -135,67 +113,50 @@ export const SearchInput = ({
   const [name, tld] = debouncedValue.split('.') as [string, 'eth' | 'box']
 
   useEffect(() => {
-    if (debouncedValue.includes('#')) {
-      // special case - URL hash
+    if (debouncedValue.includes('#')) { // special case - URL hash
       setIsInvalid(true)
       setIsLoading(false)
     }
-    else if (
-      debouncedValue.length !== 0
-      && showSuggestions(debouncedValue)
-    ) {
+    else if (debouncedValue.length !== 0 && showSuggestions(debouncedValue)) {
       setIsInvalid(false)
       setIsLoading(true)
       if (tld === 'eth') {
-        checkEthAvailable(name)
-          .then((available) => {
-            setEnsAvailable(available)
-          })
-          .catch(() => {
-            setIsInvalid(true)
-          })
-          .finally(() => {
-            setIsLoading(false)
-          })
+        checkEthAvailable(name).then((available) => {
+          setEnsAvailable(available)
+        }).catch(() => {
+          setIsInvalid(true)
+        }).finally(() => {
+          setIsLoading(false)
+        })
       }
       else if (tld === 'box') {
-        checkBoxAvailable(name)
-          .then((available) => {
-            setBoxAvailable(available)
-          })
-          .catch(() => {
-            setIsBoxInvalid(true)
-          })
-          .finally(() => {
-            setIsLoading(false)
-          })
+        checkBoxAvailable(name).then((available) => {
+          setBoxAvailable(available)
+        }).catch(() => {
+          setIsBoxInvalid(true)
+        }).finally(() => {
+          setIsLoading(false)
+        })
       }
       else {
-        checkBoxAvailable(name)
-          .then((available) => {
-            setBoxAvailable(available)
-          })
-          .catch(() => {
-            setIsBoxInvalid(true)
-          })
-          .finally(() => {
+        checkBoxAvailable(name).then((available) => {
+          setBoxAvailable(available)
+        }).catch(() => {
+          setIsBoxInvalid(true)
+        }).finally(() => {
+          setIsLoading(false)
+        }).then(() => {
+          checkEthAvailable(name).then((available) => {
+            if (name.length < 2) {
+              setEnsAvailable(false)
+            }
+            else setEnsAvailable(available)
+          }).catch(() => {
+            setIsInvalid(true)
+          }).finally(() => {
             setIsLoading(false)
           })
-          .then(() => {
-            checkEthAvailable(name)
-              .then((available) => {
-                if (name.length < 2) {
-                  setEnsAvailable(false)
-                }
-                else setEnsAvailable(available)
-              })
-              .catch(() => {
-                setIsInvalid(true)
-              })
-              .finally(() => {
-                setIsLoading(false)
-              })
-          })
+        })
       }
     }
   }, [debouncedValue])
@@ -210,19 +171,11 @@ export const SearchInput = ({
       )}
     >
       <div className={styles.captionContainer}>
-        <img
-          src="/assets/arrow-down.svg"
-          width="16"
-          height="13"
-          alt=""
-        />
-        <span className={styles.caption}>{caption}</span>
-        <img
-          src="/assets/arrow-down.svg"
-          width="16"
-          height="13"
-          alt=""
-        />
+        <img src="/assets/arrow-down.svg" width="16" height="13" alt="" />
+        <span className={styles.caption}>
+          {caption}
+        </span>
+        <img src="/assets/arrow-down.svg" width="16" height="13" alt="" />
       </div>
       <div
         className={clsx(
@@ -239,41 +192,25 @@ export const SearchInput = ({
             if (e.currentTarget.reportValidity()) {
               const fd = new FormData(e.currentTarget)
 
-              location.assign(
-                `https://ens.app/${fd.get('ens')}.eth`,
-              )
+              location.assign(`https://ens.app/${fd.get('ens')}.eth`)
             }
           }}
-          className={clsx(
-            styles.inputContainer,
-            'plausible-event-name=search',
-          )}
+          className={clsx(styles.inputContainer, 'plausible-event-name=search')}
         >
           <input
             onChange={e => setValue(e.currentTarget.value)}
             name="ens"
             value={value}
-            className={clsx(
-              styles.input,
-              isInvalid && styles['input-invalid'],
-            )}
+            className={clsx(styles.input, isInvalid && styles['input-invalid'])}
             placeholder={placeholder}
             required
             minLength={2}
           />
           {showSuggestions(debouncedValue) && (
-            <TldList
-              {...{
-                isBoxInvalid,
-                isEnsAvailable,
-                isInvalid,
-                invalidText,
-                isLoading,
-                registerText,
-                tld,
-                name,
-                viewText,
-                isBoxAvailable,
+            <TldList {
+              ...{
+                isBoxInvalid, isEnsAvailable, isInvalid, invalidText, isLoading, registerText,
+                tld, name, viewText, isBoxAvailable,
               }}
             />
           )}
