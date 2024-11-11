@@ -104,8 +104,8 @@
       "ccip-read": {
         "description": "Learn about CCIP Read (EIP-3668), a protocol for cross-chain interoperability enabling contracts to retrieve external data via offchain lookups."
       },
-      "evmgateway": {
-        "description": "Explore the EVM Gateway, a generic solution for fetching state proofs of data across EVM chains using CCIP-Read."
+      "unruggable-gateway": {
+        "description": "Explore the Unruggable Gateway, a generic solution for fetching state proofs of data across EVM chains using CCIP-Read."
       },
       "thorin": {
         "description": "Discover Thorin, a design system for ENS created with React and styled-components."
