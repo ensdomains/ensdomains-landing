@@ -1,7 +1,6 @@
 .input {
     display: block;
     width: 100%;
-    background-color: var(--ens-light-blue);
     color: var(--ens-dark-blue);
     border-style: none;
     border-radius: 4px;
@@ -9,19 +8,27 @@
     line-height: 96%;
     box-sizing: border-box;
     font-family: var(--ens-mono), monospace;
+    border: 2px solid var(--ens-light-blue);
 
+    background-color: var(--ens-white);
     font-size: 24px;
     padding: 20px;
+    outline: none;
 }
 
-.inputSuffix {
-    color: var(--ens-dark-blue);
-    position: absolute;
-    left: calc(var(--left) + 1.5rem);
-    font-family: var(--ens-mono), monospace;
+.input:placeholder-shown {
+    background-color: var(--ens-light-blue);
 
-    font-size: 24px;
-    top: calc(50% - 15px);
+    border-color: var(--ens-blue) !important;
+}
+
+.input:focus-visible {
+    background-color: var(--ens-white);
+    border-color: var(--ens-blue);
+}
+
+.input-invalid {
+    border-color: var(--ens-magenta) !important;
 }
 
 .icon {
@@ -44,6 +51,13 @@
     margin-top: 50px;
 }
 
+.captionContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
 .caption {
     font-weight: 500;
     font-family: var(--ens-mono);
@@ -52,10 +66,6 @@
     font-size: 14px;
     letter-spacing: -0.28px;
     line-height: 96%;
-}
-
-.input::after {
-    content: '.eth';
 }
 
 .searchboxContainer {
@@ -69,15 +79,74 @@
     width: 100%;
 }
 
+.tlds {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.tlds > a {
+    padding: 12px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100%;
+    margin-top: 10px;
+}
+
+.tlds > a.registered {
+    background-color: var(--ens-light-blue);
+}
+
+.tlds > a.available {
+    background-color: var(--ens-light-green);
+}
+
+.tlds > a > span:first-child {
+    font-weight: 500;
+    color: var(--ens-dark-blue);
+    line-height: 96%;
+    font-size: 18px;
+}
+
+.tlds > a > span:last-child {
+    font-size: 12px;
+    font-family: var(--ens-mono);
+}
+
+.tlds > a.registered > span:last-child {
+    color: var(--ens-blue);
+}
+
+.tlds > a.available > span:last-child {
+    color: var(--ens-green);
+}
+
+.spinner {
+    height: 20px;
+    width: 20px;
+}
+
+.invalid {
+    background-color: var(--ens-light-magenta);
+    color: var(--ens-dark-blue);
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: center;
+
+    width: 100%;
+    margin-top: 10px;
+}
+
 @media (min-width: 768px) {
     .input {
         padding: 20px 24px;
-    }
-    .input, .inputSuffix {
         font-size: 52px;
-    }
-    .inputSuffix {
-        top: 19px;
     }
     .icon {
         height: 34px;
@@ -93,13 +162,32 @@
         letter-spacing: 0.4px;
         font-size: 20px;
     }
+    .tlds {
+        position: absolute;
+        gap: 20px;
+        right: 20px;
+        top: calc(50% - 41.2px / 2);
+    }
+    .invalid {
+        top: calc(50% - 49.5px / 2);
+    }
+    .tlds > a {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    .invalid, .tlds > a {
+        width: max-content;
+        margin-top: unset;
+    }
+    .spinner {
+        width: 36px;
+        height: 36px;
+    }
 }
 
 @media (min-width: 1280px) {
     .input {
         padding: 28px;
-    }
-    .input, .inputSuffix {
         font-size: 76px;
     }
     .icon {
@@ -116,7 +204,20 @@
         letter-spacing: -0.4px;
         font-size: 20px;
     }
-    .inputSuffix {
-        top: calc(56px / 2);
+    .tlds {
+        gap: 28px;
+        right: 28px;
+        top: calc(50% - 66px / 2);
     }
+    .tlds > a {
+        padding: 16px 20px;
+    }
+    .tlds > a > span:first-child, .invalid {
+        font-size: 30px;
+    }
+    .spinner {
+        width: 58px;
+        height: 58px;
+    }
+ 
 }
