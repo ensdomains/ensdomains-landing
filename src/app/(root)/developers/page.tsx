@@ -86,7 +86,7 @@ export default async function Developers({
               },
               {
                 title: t('developers.resources.tg.title'),
-                href: 'https://t.me/+TJ_M02FbKwcyNjgx',
+                href: 'https://t.me/+z1hIGCrQZ0czYTkx',
                 description: t('developers.resources.tg.description'),
               },
             ]}
