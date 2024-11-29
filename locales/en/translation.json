@@ -247,7 +247,7 @@
   "brand": {
     "header": {
       "title": "ENS Brand",
-      "description": "You're free to use the ENS brand in the ecosystem, but we must grant you a license before you do. Reach out to our General Counsel, Alexander Urbelis, at alex@ens[.]domains, to request a trademark license agreement. Just remember, don't use it to pretend to be ENS, ENS DAO, or ENS Labs, or to suggest a partnership that does not exist because those sorts of things will violate the license."
+      "description": "You're free to use the ENS brand in the ecosystem, but we must grant you a license before you do. Reach out to our General Counsel, Alexander Urbelis, at alex@ens[.]domains, to request a trademark license agreement.\n\nJust remember, don't use it to pretend to be ENS, ENS DAO, or ENS Labs, or to suggest a partnership that does not exist because those sorts of things will violate the license."
     },
     "button": "Download All",
     "links": {
