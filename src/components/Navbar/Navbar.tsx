@@ -42,12 +42,12 @@ export const Navbar: FC<{ lang: Language, links: Links }> = ({
       <div className={clsx(ui.flex, ui['flex-row'], styles.mobileMenu)}>
         <Link href={langPrefix || '/'} onClick={() => setOpen(false)}>
           <EnsNavIcon
-            className={(styles.logo, styles.tabletOnly)}
+            className={clsx(styles.logo, styles.tabletOnly)}
           />
           <img
             src="/assets/ens_logo_text_dark.svg"
             alt="ENS"
-            className={(styles.logo, styles.desktopOnly)}
+            className={clsx(styles.logo, styles.desktopOnly)}
           />
         </Link>
         <div className={clsx(ui.flex, ui['flex-row'], ui['space-x-8'], ui['flex-center'])}>
