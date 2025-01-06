@@ -38,7 +38,7 @@ export default async function RootLayout({ children, params: { lang = 'en' } }: 
       title: t('footer.community'),
       entries: [
         { title: t('footer.blog'), link: 'https://blog.ens.domains' },
-        { title: t('footer.feedback'), link: 'https://ens.canny.io/' },
+        { title: t('footer.feedback'), link: 'https://docs.google.com/forms/d/e/1FAIpQLSfDzIszteoaqiayxUCpFLK1AgigoASHIPcsxFg8PZoS6R6Uzw/viewform?usp=sf_link' },
         {
           title: t('footer.discord'),
           link: 'https://chat.ens.domains',
