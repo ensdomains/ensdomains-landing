@@ -5,7 +5,9 @@
     "version": "0.2.0",
     "license": "MIT",
     "scripts": {
-        "build": "next build",
+        "build:next": "next build",
+        "build:assets": "tsx scripts/build-assets/index.ts",
+        "build": "pnpm run build:assets && pnpm run build:next",
         "dev": "next",
         "develop": "pnpm run dev",
         "start": "pnpm run dev",
@@ -39,7 +41,9 @@
         "eslint": "^9.12.0",
         "globals": "^15.11.0",
         "i18next-locales-sync": "^2.1.0",
+        "sharp": "^0.33.5",
         "stylelint": "^16.10.0",
+        "tsx": "^4.19.2",
         "typescript-eslint": "^8.9.0"
     },
     "repository": {
