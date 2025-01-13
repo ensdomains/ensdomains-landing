@@ -1,0 +1,86 @@
+Hello frENS,
+
+The Ethereum Name Service (ENS) has always been focused on improving the user experience of Ethereum (Layer 1, L1, or mainnet), and our committment now extends beyond mainnet. Today, I'm thrilled to share our roadmap for enabling ENS names on Layer 2s (L2), a pivotal move that promises to improve access and utility for crypto users.
+
+## Why Layer 2?
+
+As the ecosystem evolves, the need for faster and more efficient solutions becomes paramount. L2s offer a way to process transactions at a much cheaper discount to mainnet, while still ensuring the security and decentralization benefits of the Ethereum. Our journey to L2 is structured around four pivotal phases, each designed to enhance the ENS experience on the L2s. Please bear in mind that our solutions are L2-agnostic, meaning that even though we will deploy to1-2 specific networks to start, eventually all L2s can be supported.
+
+Additionally, you can review the full [L2 architecture propsal](https://gist.github.com/jefflau/7e9d303078891a969bfe70011e347bc0) on Github.
+
+## Phase 1: Bringing Your L1 Names to L2
+
+The initial phase is all about developing a proof of concept where we'll enable you to "delegate" your names to L2, which in this phase will be restricted to the Optimism L2 network. By "delegate" we mean that the ownership of your names remain anchored on L1, but you'll be able to set and update your records and subnames from the Optimism network.
+
+**Here's How We'll Do That:**
+
+-   **Optimism Resolver:** Our friends at [dm3](https://dm3.network/) are currently developing an Optimism Resolver which we'll leverage in our first step into L2.
+-   **CCIP Metadata:** We'll need to finalize and integrate our [CCIP metadata specification](https://github.com/ensdomains/docs/pull/142). These changes will allow a standard way to determine the owner of an offchain resolved name.
+    -   `metadata` function returns name, coinType, graphqlUrl, storageType, context
+    -   `Offchain` schema is moved from L2 scheme to L1 scheme
+    -   `Offchain.id` is the address of the L1 resolver (no chain specific info so that non chain solutions can also put their info without having chain id / cointype
+    -   Add `expiryDate` on L2 Domain schema
+-   **Testnet Demo:** We'll provide everyone with a testnet demo of a frontend that enables the following features.
+    -   List on L2 subnames
+    -   List of Custom Text Records
+    -   Switch Network between Mainnet and Optimism
+    -   Update Records from Optimism
+
+Keep in mind that your names are not tokenized or transferable, only accessible to use the above features as the owner of a name on mainnet.
+
+Target rollout: Mid-Q4.
+
+## Phase 2: The Reverse Registrar Replicates
+
+In this phase we'll be focused on deploying our new [L2 Reverse Registrar](https://github.com/ensdomains/docs/pull/132/files#r1199191577) to both Optimism and Base. The new L2 reverse registrar, along with CCIP Read will allow for L1 to read specific reverse registrar data.
+
+**Here's How We'll Do That:**
+
+-   **L2 Replication:** We'll create a copy of the L1 registry and deploy it to the L2 networks.
+-   **Registrar Update:** Then, we'll modify the L1 reverse registrar to require all names to use a specified resolver. Additionally, we'll Add CCIP Read to resolver L2 reverse registrar on L1.
+-   **Platform Expansion:** Initial deployment to Optimism, with plans to expand across all L2 platforms.
+
+Once this completes, you'll be able to set a primary name on an L2! We're super excited to roll this out for everyone [flex emoji]
+
+Target Rollout: End of Q1, 2024.
+
+## Phase 3: Names Can Tokens Too
+
+In Phase 3, we introduce tokenized and transferable names on L2 ntworks via "trusted issuers of domains". ~~Trusted Issuers of Domains are TLD owners (for example Nick.eth) who wish to issue subnames on an L2.~~ Users will have to select their own trusted issuer and trust that they won't mess with their delegation on L1. So long as the L1 owner isn't malicious, then the tokns are sovereign on the L2 they've been delegated to.
+
+In simpler terms, each issuer (TLD owner) has their own token contract and each issues token (subname) is an NFT.
+
+_It's important to note that the registry we'll have deployed in Phase 2 won't be used in Phase 3 as we wont have way for a name to be on L1, and also be claimable on L2 until Phase 4 is complete._ \*
+
+**_Here's How We'll Do That:_**
+
+-   **Tokenization:** The development of a new tokenization contract the controls the L2 resolver.
+-   **L2 Resolver Update:** We'll need to make modifications to the new L2 resolver so that it can be controlled by the new tokenization contract.
+
+Anticipated launch: Late Q2, 2024.
+
+## Bonus Phase! Phase 3.5: We go to mainnet
+
+In this bonus phase we'll deploy phases 1-3 from testnet to mainnet, so that ENS users get as much functionality as front as we can provide.
+
+Once Phases 1-3 have been deployed, we'll begin the 4th and final phase...
+
+## 4. The Ultimate Connection: Bridging L1 and L2
+
+The final phase of work is monumental in scope, so please keep that in mind when assesing our suggest timeline for the target rollout. In this phase we'll be delivering full portabillity of an ENS name between L1 and L2, a bridge that effectively tokenizes and enables the transfer of any ENS name by locking it on mainnet Ethereum to any transfering it to any L2 network [eyes emoji].
+
+**_Here's How We'll Do That:_**
+
+-   **Deployments:** We'll need to deploy the following
+    -   Canonical Registry
+    -   Canonical Registrar
+    -   L1 {'<->'} L2 Bridgeing Mechanism
+-   **Data Migration:** Finally, we'll migrate all the data from phase 2 into the new canonical registry.
+
+Then, your ENS name can be ported to and from any L2 network at your disgression, with the added ability to edit records and subnames, all onchain!
+
+Completion target: End of 2024.
+
+## In Closing
+
+Our transition to L2 is a major milestone for ENS Labs, as well as the broader ENS community. We welcome your thoughts and feedback and together we can shape the future of ENS!
