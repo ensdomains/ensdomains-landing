@@ -148,6 +148,31 @@
       }
     }
   },
+  "blog": {
+    "hero": {
+      "tag": "Blog",
+      "title": "Newest articles"
+    },
+    "meta": {
+      "description": "Newest articles"
+    },
+    "tag": {
+      "hero": {
+        "tag": "Blog Tag"
+      },
+      "meta": {
+        "description": "View all {{tag}} posts"
+      }
+    },
+    "author": {
+      "hero": {
+        "tag": "Blog Author"
+      },
+      "meta": {
+        "description": "View all posts by {{author}}"
+      }
+    }
+  },
   "ecosystem": {
     "hero": {
       "tag": "Ecosystem",
