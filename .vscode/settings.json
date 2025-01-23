@@ -22,5 +22,11 @@
         "out/": true,
     },
     "typescript.tsdk": "node_modules/typescript/lib",
-    "stylelint.validate": ["css"]
+    "stylelint.validate": ["css"],
+    "json.schemas": [
+        {
+            "fileMatch": [ "posts/**/meta.json" ],
+            "url": "./src/utils/blog/schema.json"
+        }
+    ]
 }
