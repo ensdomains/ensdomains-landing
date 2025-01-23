@@ -1,0 +1,14 @@
+.link {
+  color: inherit;
+  text-decoration-line: underline;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.link:hover {
+  color: inherit;
+}
+
+.link:active {
+  color: inherit;
+}

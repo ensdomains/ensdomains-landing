@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.75rem; /* rounded-xl */
+}
+
+.iframe {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+.link {
+  float: right;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  color: var(--ens-blue);
+  margin-top: 0.5rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+} 
