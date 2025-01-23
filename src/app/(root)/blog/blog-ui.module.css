@@ -1,0 +1,18 @@
+
+
+.page {
+    composes: page from '~/styles/ui.module.css';
+    padding-block: 80px;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding-block: 100px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .page {
+        padding-block: 100px;
+    }
+}

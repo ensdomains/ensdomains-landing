@@ -10,24 +10,40 @@ import { useTranslation } from '~/i18n/useTranslation'
 import { PageProps } from '~/utils/types'
 import { Navbar } from '~/components/Navbar/Navbar'
 import { Footer } from '~/components/Footer/Footer'
-export { generateStaticParams } from '~/utils/getStatic'
+import { BASE_URL, createMetadata } from '~/utils/metadata'
+import ogImage from 'public/og-image.png'
+// export { generateStaticParams } from '~/utils/getStatic'
 
 export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
   const { t } = await useTranslation(params.lang, 'translation')
+  console.log('ogImage', ogImage)
 
-  return {
-    title: 'ENS',
-    description: t('seo.description'),
-    applicationName: 'ENS',
-    openGraph: {
-      url: 'https://ens.domains',
-      type: 'website',
-      title: 'ENS',
-      siteName: 'ENS',
-      description: t('seo.description'),
-      images: 'http://ens.domains/og-image.png',
+  return createMetadata({
+    title: {
+      template: '%s | ENS',
+      default: 'ENS',
     },
-  }
+    description: t('seo.description'),
+    path: '/',
+  }, undefined, {
+    openGraph: {
+      images: [
+        {
+          url: new URL(ogImage.src, BASE_URL).toString(),
+          width: ogImage.width,
+          height: ogImage.height,
+        },
+      ],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+    },
+  })
+}
+
+export const viewport = {
+  themeColor: '#0080bc',
 }
 
 export default async function RootLayout({ children, params: { lang = 'en' } }: { children: ReactNode, params: { lang?: Language } }) {
@@ -37,7 +53,6 @@ export default async function RootLayout({ children, params: { lang = 'en' } }: 
     {
       title: t('footer.community'),
       entries: [
-        { title: t('footer.blog'), link: 'https://blog.ens.domains' },
         { title: t('footer.feedback'), link: 'https://docs.google.com/forms/d/e/1FAIpQLSfDzIszteoaqiayxUCpFLK1AgigoASHIPcsxFg8PZoS6R6Uzw/viewform?usp=sf_link' },
         {
           title: t('footer.discord'),
