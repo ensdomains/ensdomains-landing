@@ -1,0 +1,106 @@
+import { clsx } from 'clsx'
+import { CSSProperties } from 'react'
+import type { Metadata, ResolvingMetadata } from 'next'
+import { useTranslation } from '~/i18n/useTranslation'
+import styles from './page.module.css'
+import { PageProps as BasePageProps } from '~/utils/types'
+
+// import { BlogPostMetadata } from '~/utils/blog/metadata'
+import { getAuthors } from '~/utils/blog/posts'
+import { splitArray, splitArrayBiasFirst } from '~/utils/array/split'
+import { PageButtons } from '~/components/PageButtons/PageButtons'
+import { BlogPostPreview } from '~/components/Blog/PostPreview'
+import { getAuthorAssets } from '~/utils/blog/utils'
+import { BlogHeader } from '~/components/Blog/BlogHeader'
+import blogUi from '~/app/(root)/blog/blog-ui.module.css'
+import { createMetadata } from '~/utils/metadata'
+
+const MAX_PER_PAGE = 6
+
+type PageProps = BasePageProps & {
+  params: { author: string, page: string[] }
+}
+
+export async function generateStaticParams() {
+  const authors = await getAuthors()
+
+  return Object.entries(authors).flatMap(([author, posts]) => {
+    const pages = splitArray(posts, MAX_PER_PAGE)
+
+    return pages.map((_, index) => ({
+      author,
+      page: [index === 0 ? '' : (index + 1).toString()],
+      lang: 'en',
+    }))
+  })
+}
+
+export const generateMetadata = async (
+  { params }: PageProps,
+  parentMetadata: ResolvingMetadata,
+): Promise<Metadata> => {
+  const { t } = await useTranslation(params.lang, 'translation')
+
+  return createMetadata(
+    {
+      title: params.author,
+      description: t('blog.author.meta.description', { author: params.author }),
+      path: `/blog/author/${params.author}`,
+    },
+    await parentMetadata,
+  )
+}
+
+export default async function Blog({ params }: PageProps) {
+  const { t } = await useTranslation(params.lang, 'translation')
+
+  const authors = await getAuthors()
+
+  const author = getAuthorAssets(params.author)
+
+  const postsUnlimited = authors[params.author]
+
+  const pages = splitArrayBiasFirst(postsUnlimited, MAX_PER_PAGE)
+
+  const currentPage = params.page ? Number.parseInt(params.page[0], 10) : 1
+  const isHomePage = currentPage === 1
+
+  const posts = pages[currentPage - 1]
+
+  if (!posts) {
+    throw new Error('Page not found')
+  }
+
+  return (
+    <div
+      style={
+        {
+          '--page-text': 'var(--ens-magenta)',
+          '--page-bg': 'var(--ens-light-magenta)',
+          '--page-text-hover': 'var(--ens-hover-magenta)',
+        } as CSSProperties
+      }
+    >
+      <BlogHeader tag={t('blog.author.hero.tag')} title={params.author} description={author?.records?.description} style={{}}>
+        {/* TODO: Add social links with icons from records */}
+      </BlogHeader>
+
+      <section className={clsx(blogUi['page'])}>
+        <div className={clsx(styles['blog-grid'])}>
+          {posts.map((post, i) => (
+            <BlogPostPreview
+              key={post.slug}
+              post={post}
+              highlighted={isHomePage && i === 0}
+            />
+          ))}
+        </div>
+        <PageButtons
+          hrefPrefix="/blog"
+          total={pages.length}
+          current={currentPage}
+        />
+      </section>
+    </div>
+  )
+}
