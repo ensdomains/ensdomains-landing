@@ -1,7 +1,7 @@
 import { writeFile } from 'node:fs/promises'
 import { ASSETS_FOLDER, AUTHORS_ASSETS_FOLDER, makeDirectoryIfNotExists, POSTS_ASSETS_FOLDER, writeOutput } from './utils'
-import { handleCoverImages } from './covers'
-import { handleAvatarImages } from './avatars'
+import { handlePosts } from './posts'
+import { handleAuthors } from './authors'
 import { logger } from './logger'
 
 async function main() {
@@ -15,14 +15,14 @@ async function main() {
   // Run cover and avatar processing in parallel
   logger.info('Processing covers and avatars in parallel')
   const [coverOutput, avatarOutput] = await Promise.all([
-    handleCoverImages(),
-    handleAvatarImages(),
+    handlePosts(),
+    handleAuthors(),
   ])
 
   // Write the final output
   logger.info('Writing final output')
   const output = await writeOutput([coverOutput, avatarOutput])
-  await writeFile(`${ASSETS_FOLDER.pathname}/assets.ts`, output, 'utf8')
+  await writeFile(`${ASSETS_FOLDER.pathname}/assets.gen.ts`, output, 'utf8')
 
   logger.success('Asset build process completed successfully')
 }

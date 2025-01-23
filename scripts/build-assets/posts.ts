@@ -4,7 +4,7 @@ import { ImageFormats, ImageSettings } from './types'
 import { POSTS_ASSETS_FOLDER, POSTS_FOLDER, getPostDirectories, makeDirectoryIfNotExists } from './utils'
 import { logger } from './logger'
 
-const coverLogger = logger.scope('Covers')
+const postLogger = logger.scope('Posts')
 
 const COVER_IMG_SETTINGS: ImageSettings[] = [
   {
@@ -32,7 +32,7 @@ async function getCoverImages(): Promise<Cover[]> {
       const cover = new URL(`${post}/cover.${format}`, POSTS_FOLDER).pathname
       try {
         const data = await readFile(cover)
-        coverLogger.debug(`Found cover image for post ${post} in format ${format}`)
+        postLogger.debug(`Found cover image for post ${post} in format ${format}`)
         return { post, format, data }
       }
       catch {
@@ -47,15 +47,15 @@ async function getCoverImages(): Promise<Cover[]> {
         try {
           const url = new URL(meta.cover)
           if (url.protocol === 'http:' || url.protocol === 'https:') {
-            coverLogger.debug(`Fetching remote cover for post ${post} from ${url}`)
+            postLogger.debug(`Fetching remote cover for post ${post} from ${url}`)
             const response = await fetch(meta.cover)
             if (!response.ok) {
-              coverLogger.error(`Failed to fetch cover image for ${post}:`, meta.cover)
+              postLogger.error(`Failed to fetch cover image for ${post}:`, meta.cover)
               return null
             }
             const data = Buffer.from(await response.arrayBuffer())
             const format = url.pathname.split('.').pop() || 'webp'
-            coverLogger.success(`Successfully fetched remote cover for post ${post}`)
+            postLogger.success(`Successfully fetched remote cover for post ${post}`)
             return { post, format, data }
           }
         }
@@ -85,27 +85,27 @@ async function processImage(
     .toFile(outputPath)
 }
 
-export async function handleCoverImages(): Promise<string> {
-  coverLogger.info('Starting cover image processing')
+export async function handlePosts(): Promise<string> {
+  postLogger.info('Starting cover image processing')
   const covers = await getCoverImages()
-  let result = 'export const covers = {\n'
+  let result = 'export const posts: Record<string, Post> = {\n'
 
   // Process all covers in parallel
   await Promise.all(
     covers.map(async (cover) => {
-      const COVER_FOLDER = new URL(`${cover.post}/`, POSTS_ASSETS_FOLDER)
-      await makeDirectoryIfNotExists(COVER_FOLDER.pathname)
+      const POST_FOLDER = new URL(`${cover.post}/`, POSTS_ASSETS_FOLDER)
+      await makeDirectoryIfNotExists(POST_FOLDER.pathname)
 
       // Process all sizes for each cover in parallel
       await Promise.all(
         COVER_IMG_SETTINGS.map(async (settings) => {
           const { prefix, suffix, format } = settings
           const key = `${prefix || ''}cover${suffix ? `-${suffix}` : ''}`
-          const output = new URL(`${key}.${format || 'webp'}`, COVER_FOLDER).pathname
+          const output = new URL(`${key}.${format || 'webp'}`, POST_FOLDER).pathname
 
-          coverLogger.info(`Converting image to ${output}`)
+          postLogger.info(`Converting image to ${output}`)
           await processImage(cover.data, settings, output)
-          coverLogger.success(`Successfully converted image to ${output}`)
+          postLogger.success(`Successfully converted image to ${output}`)
         }),
       )
     }),
@@ -117,14 +117,17 @@ export async function handleCoverImages(): Promise<string> {
     for (const settings of COVER_IMG_SETTINGS) {
       const { prefix, suffix, format } = settings
       const key = `${prefix || ''}cover${suffix ? `-${suffix}` : ''}`
-      result += `    '${key}': import('./posts/${cover.post}/${key}.${format || 'webp'}') as Promise<{ default: StaticImageData }>,\n`
+      result += `    '${key}': import('./posts/${cover.post}/${key}.${format || 'webp'}').then(asset => asset.default),\n`
     }
     result += '  },\n'
   }
 
   result += '}\n\n'
-  result += 'export type Cover = keyof typeof covers[keyof typeof covers]'
+  result += `export type Post = {
+  cover?: Promise<StaticImageData>
+  'cover-thumb'?: Promise<StaticImageData>
+}`
 
-  coverLogger.success('Finished processing cover images')
+  postLogger.success('Finished processing cover images')
   return result
 }
