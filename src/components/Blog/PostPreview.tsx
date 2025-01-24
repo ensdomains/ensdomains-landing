@@ -54,7 +54,6 @@ export const BlogPostPreview = async ({ post, highlighted = false }: { post: Blo
           {post.authors.map(async author => (
             <BlogPostAuthor key={author} author={author} avatar={await getAuthorAssets(author)?.avatar} />
           ))}
-          {/* Date */}
           <span>
             {date}
           </span>

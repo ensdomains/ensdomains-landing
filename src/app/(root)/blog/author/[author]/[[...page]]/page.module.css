@@ -27,6 +27,14 @@
     grid-template-columns: repeat(1, 1fr);
 }
 
+.author-social-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    color: var(--ens-magenta);
+}
+
 @media (min-width: 640px) {
     .blog-grid {
         grid-template-columns: repeat(2, 1fr);

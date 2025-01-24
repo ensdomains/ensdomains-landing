@@ -14,6 +14,10 @@ import { getAuthorAssets } from '~/utils/blog/utils'
 import { BlogHeader } from '~/components/Blog/BlogHeader'
 import blogUi from '~/app/(root)/blog/blog-ui.module.css'
 import { createMetadata } from '~/utils/metadata'
+import { ENSRecord } from 'build-assets/assets.gen'
+import { match } from 'ts-pattern'
+import { Link } from '~/components/MDX/Link'
+import { BrowserIcon, EnsNavIcon, GithubIcon, TwitterIcon } from '~/components/icons'
 
 const MAX_PER_PAGE = 6
 
@@ -51,6 +55,31 @@ export const generateMetadata = async (
   )
 }
 
+const AuthorSocialLink = ({
+  record,
+  value,
+}: {
+  record: ENSRecord | string & {}
+  value: string
+}) =>
+  match(record)
+    .with('com.github', () => (
+      <Link href={`https://github.com/${value}`} target="_blank">
+        <GithubIcon />
+      </Link>
+    ))
+    .with('com.twitter', () => (
+      <Link href={`https://x.com/${value}`} target="_blank">
+        <TwitterIcon />
+      </Link>
+    ))
+    .with('url', () => (
+      <Link href={value} target="_blank">
+        <BrowserIcon />
+      </Link>
+    ))
+    .otherwise(() => null)
+
 export default async function Blog({ params }: PageProps) {
   const { t } = await useTranslation(params.lang, 'translation')
 
@@ -81,8 +110,20 @@ export default async function Blog({ params }: PageProps) {
         } as CSSProperties
       }
     >
-      <BlogHeader tag={t('blog.author.hero.tag')} title={params.author} description={author?.records?.description} style={{}}>
-        {/* TODO: Add social links with icons from records */}
+      <BlogHeader
+        tag={t('blog.author.hero.tag')}
+        title={params.author}
+        description={author?.records?.description}
+        style={{}}
+      >
+        <div className={clsx(styles['author-social-links'])}>
+          <Link href={`https://app.ens.domains/${params.author}`} target="_blank">
+            <EnsNavIcon width="24" height="24" />
+          </Link>
+          {Object.entries(author?.records || {}).map(([record, value]) => (
+            <AuthorSocialLink key={record} record={record} value={value} />
+          ))}
+        </div>
       </BlogHeader>
 
       <section className={clsx(blogUi['page'])}>
