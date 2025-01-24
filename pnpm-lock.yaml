@@ -138,6 +138,9 @@ importers:
       stylelint:
         specifier: ^16.10.0
         version: 16.10.0(typescript@5.6.3)
+      ts-pattern:
+        specifier: ^5.6.2
+        version: 5.6.2
       tsx:
         specifier: ^4.19.2
         version: 4.19.2
@@ -2209,8 +2212,8 @@ packages:
     peerDependencies:
       typescript: '>=4.0.0'
 
-  ts-pattern@5.5.0:
-    resolution: {integrity: sha512-jqbIpTsa/KKTJYWgPNsFNbLVpwCgzXfFJ1ukNn4I8hMwyQzHMJnk/BqWzggB0xpkILuKzaO/aMYhS0SkaJyKXg==}
+  ts-pattern@5.6.2:
+    resolution: {integrity: sha512-d4IxJUXROL5NCa3amvMg6VQW2HVtZYmUTPfvVtO7zJWGYLJ+mry9v2OmYm+z67aniQoQ8/yFNadiEwtNS9qQiw==}
 
   tslib@2.8.0:
     resolution: {integrity: sha512-jWVzBLplnCmoaTr13V9dYbiQ99wvZRd0vNWaDRg+aVYRcjDF3nDksxFDE/+fkXnKhpnUUkmx5pK/v8mCtLVqZA==}
@@ -2549,7 +2552,7 @@ snapshots:
       '@typescript-eslint/utils': 8.9.0(eslint@9.12.0)(typescript@5.6.3)
       birecord: 0.1.1
       string-ts: 2.2.0
-      ts-pattern: 5.5.0
+      ts-pattern: 5.6.2
     transitivePeerDependencies:
       - eslint
       - supports-color
@@ -2569,7 +2572,7 @@ snapshots:
       '@typescript-eslint/utils': 8.9.0(eslint@9.12.0)(typescript@5.6.3)
       birecord: 0.1.1
       short-unique-id: 5.2.0
-      ts-pattern: 5.5.0
+      ts-pattern: 5.6.2
     transitivePeerDependencies:
       - eslint
       - supports-color
@@ -2605,7 +2608,7 @@ snapshots:
       '@typescript-eslint/scope-manager': 8.9.0
       '@typescript-eslint/types': 8.9.0
       '@typescript-eslint/utils': 8.9.0(eslint@9.12.0)(typescript@5.6.3)
-      ts-pattern: 5.5.0
+      ts-pattern: 5.6.2
     transitivePeerDependencies:
       - eslint
       - supports-color
@@ -2641,7 +2644,7 @@ snapshots:
       '@typescript-eslint/scope-manager': 8.9.0
       '@typescript-eslint/types': 8.9.0
       '@typescript-eslint/utils': 8.9.0(eslint@9.12.0)(typescript@5.6.3)
-      ts-pattern: 5.5.0
+      ts-pattern: 5.6.2
     transitivePeerDependencies:
       - eslint
       - supports-color
@@ -3401,7 +3404,7 @@ snapshots:
       '@typescript-eslint/utils': 8.9.0(eslint@9.12.0)(typescript@5.6.3)
       eslint: 9.12.0
       string-ts: 2.2.0
-      ts-pattern: 5.5.0
+      ts-pattern: 5.6.2
     optionalDependencies:
       typescript: 5.6.3
     transitivePeerDependencies:
@@ -3420,7 +3423,7 @@ snapshots:
       '@typescript-eslint/types': 8.9.0
       '@typescript-eslint/utils': 8.9.0(eslint@9.12.0)(typescript@5.6.3)
       eslint: 9.12.0
-      ts-pattern: 5.5.0
+      ts-pattern: 5.6.2
     optionalDependencies:
       typescript: 5.6.3
     transitivePeerDependencies:
@@ -3440,7 +3443,7 @@ snapshots:
       '@typescript-eslint/types': 8.9.0
       '@typescript-eslint/utils': 8.9.0(eslint@9.12.0)(typescript@5.6.3)
       eslint: 9.12.0
-      ts-pattern: 5.5.0
+      ts-pattern: 5.6.2
     optionalDependencies:
       typescript: 5.6.3
     transitivePeerDependencies:
@@ -3459,7 +3462,7 @@ snapshots:
       '@typescript-eslint/types': 8.9.0
       '@typescript-eslint/utils': 8.9.0(eslint@9.12.0)(typescript@5.6.3)
       eslint: 9.12.0
-      ts-pattern: 5.5.0
+      ts-pattern: 5.6.2
     optionalDependencies:
       typescript: 5.6.3
     transitivePeerDependencies:
@@ -3479,7 +3482,7 @@ snapshots:
       '@typescript-eslint/utils': 8.9.0(eslint@9.12.0)(typescript@5.6.3)
       birecord: 0.1.1
       eslint: 9.12.0
-      ts-pattern: 5.5.0
+      ts-pattern: 5.6.2
     optionalDependencies:
       typescript: 5.6.3
     transitivePeerDependencies:
@@ -3500,7 +3503,7 @@ snapshots:
       '@typescript-eslint/utils': 8.9.0(eslint@9.12.0)(typescript@5.6.3)
       eslint: 9.12.0
       is-immutable-type: 5.0.0(eslint@9.12.0)(typescript@5.6.3)
-      ts-pattern: 5.5.0
+      ts-pattern: 5.6.2
     optionalDependencies:
       typescript: 5.6.3
     transitivePeerDependencies:
@@ -4930,7 +4933,7 @@ snapshots:
       minimatch: 10.0.1
       typescript: 5.6.3
 
-  ts-pattern@5.5.0: {}
+  ts-pattern@5.6.2: {}
 
   tslib@2.8.0: {}
 
