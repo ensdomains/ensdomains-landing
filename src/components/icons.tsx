@@ -2,7 +2,7 @@ import { SVGProps } from 'react'
 
 type Props = SVGProps<SVGSVGElement>
 
-export const SearchIcon = (props: Props) => (
+export const SearchIcon = ({ opacity = 0.3, ...props }: Props & { opacity?: number }) => (
   <svg
     width="56"
     height="59"
@@ -11,7 +11,7 @@ export const SearchIcon = (props: Props) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <g opacity="0.3">
+    <g opacity={opacity}>
       <g id="search">
         <circle
           id="Ellipse 14"

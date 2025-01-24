@@ -27,3 +27,13 @@
     max-width: 500px;
     width: 100%;
 }
+
+.searchIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 30px;
+
+    color: var(--ens-magenta);
+}
