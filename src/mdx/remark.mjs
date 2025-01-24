@@ -121,8 +121,6 @@ export const remarkImportAsNextImages = () => {
           },
         }
 
-        // console.log(JSON.stringify(newImageNode));
-
         if (keyValuePairs) {
           nextNode.value = nextNode.value.replace(/^\[(.*)]\s?/, '')
 

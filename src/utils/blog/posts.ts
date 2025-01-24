@@ -37,8 +37,6 @@ export const getPostsMetadata = async () => {
 }
 
 export const _getPostsMetadata = async () => {
-  console.log('Loading posts metadata...')
-
   // Load all posts from the content directory
   const files = await getPostDirectories()
 

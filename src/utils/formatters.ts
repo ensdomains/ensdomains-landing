@@ -3,7 +3,6 @@ export const formatDate = (date: Date | string) => {
     date = new Date(date)
   }
 
-  // Format a date like May 28th 2024 using vanilla JS
   return date.toLocaleDateString('en-US', {
     month: 'long',
     day: 'numeric',

@@ -5,7 +5,6 @@ import { useTranslation } from '~/i18n/useTranslation'
 import styles from './page.module.css'
 import { PageProps as BasePageProps } from '~/utils/types'
 
-// import { BlogPostMetadata } from '~/utils/blog/metadata'
 import { getAuthors } from '~/utils/blog/posts'
 import { splitArray, splitArrayBiasFirst } from '~/utils/array/split'
 import { PageButtons } from '~/components/PageButtons/PageButtons'

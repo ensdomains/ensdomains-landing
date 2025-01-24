@@ -15,7 +15,7 @@ export const BlogPostMetadataSchema = z.object({
   tags: z.array(z.string()).default([]),
   // ENS Name of the author
   authors: z.array(z.string()),
-  // ENS Name of the author
+  // Youtube video ID
   youtube: z.string().optional(),
   // Draft status of post
   draft: z.boolean().default(false),

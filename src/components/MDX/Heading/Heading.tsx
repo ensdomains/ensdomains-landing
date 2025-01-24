@@ -18,11 +18,6 @@ export const Heading: FC<
     <>
       <Component
         id={anchor ? id : undefined}
-        // className={cx(
-        //   properties.className,
-        //   'mt-8 scroll-mt-16',
-        //   'flex justify-between items-center w-full',
-        // )}
         className={clsx(styles.heading, styles[`h${level}`], properties.className)}
         children={
           (

@@ -6,7 +6,6 @@ import blogUi from '~/app/(root)/blog/blog-ui.module.css'
 import styles from './page.module.css'
 import { PageProps as BasePageProps } from '~/utils/types'
 
-// import { BlogPostMetadata } from '~/utils/blog/metadata'
 import { getTags } from '~/utils/blog/posts'
 import { splitArray, splitArrayBiasFirst } from '~/utils/array/split'
 import { PageButtons } from '~/components/PageButtons/PageButtons'

@@ -12,11 +12,9 @@ import { Navbar } from '~/components/Navbar/Navbar'
 import { Footer } from '~/components/Footer/Footer'
 import { BASE_URL, createMetadata } from '~/utils/metadata'
 import ogImage from 'public/og-image.png'
-// export { generateStaticParams } from '~/utils/getStatic'
 
 export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
   const { t } = await useTranslation(params.lang, 'translation')
-  console.log('ogImage', ogImage)
 
   return createMetadata({
     title: {

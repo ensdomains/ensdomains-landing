@@ -27,7 +27,6 @@ export const generateMetadata = async (
   }
 
   const postCover = await postAssets.cover
-  console.log('parentMetadata', await parentMetadata)
 
   const meta = createMetadata(
     {
@@ -35,7 +34,7 @@ export const generateMetadata = async (
       description: post.description,
       path: '/blog/post/' + params.slug,
     },
-    await parentMetadata,
+    parentMetadata,
     {
       openGraph: {
         type: 'article',
@@ -59,8 +58,6 @@ export const generateMetadata = async (
       })),
     },
   )
-
-  console.log('meta', meta)
 
   return meta
 }

@@ -31,9 +31,6 @@ export async function generateStaticParams() {
 
   parameters[0] = { page: [''], lang: 'en' }
 
-  console.log('parameters', parameters)
-  console.log('GENERATE STATIC PARAMS')
-
   return parameters
 }
 
