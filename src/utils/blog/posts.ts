@@ -3,7 +3,7 @@ import { POSTS_DIR } from './utils'
 import { unstable_cache } from 'next/cache'
 import { BlogPostMetadata, BlogPostMetadataSchema } from './metadata'
 import fs from 'node:fs/promises'
-import { cache } from 'react'
+import { cache, type JSX } from 'react';
 import { MDXProps } from 'mdx/types'
 
 export type BlogPostMetadataPlus = BlogPostMetadata & {

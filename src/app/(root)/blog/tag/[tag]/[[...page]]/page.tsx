@@ -34,10 +34,8 @@ export async function generateStaticParams() {
   })
 }
 
-export const generateMetadata = async (
-  { params }: PageProps,
-  parentMetadata: ResolvingMetadata,
-): Promise<Metadata> => {
+export const generateMetadata = async (props: PageProps, parentMetadata: ResolvingMetadata): Promise<Metadata> => {
+  const params = await props.params;
   const { t } = await useTranslation(params.lang, 'translation')
 
   return createMetadata(
@@ -52,7 +50,8 @@ export const generateMetadata = async (
   )
 }
 
-export default async function Blog({ params }: PageProps) {
+export default async function Blog(props: PageProps) {
+  const params = await props.params;
   const { t } = await useTranslation(params.lang, 'translation')
 
   const tags = await getTags()

@@ -43,7 +43,7 @@ export function useIntersectionObserver({
   }))
 
   const callbackReference
-        = useRef<UseIntersectionObserverOptions['onChange']>()
+        = useRef<UseIntersectionObserverOptions['onChange']>(undefined)
 
   callbackReference.current = onChange
 
