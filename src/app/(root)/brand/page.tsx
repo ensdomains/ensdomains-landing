@@ -136,7 +136,8 @@ const getStaticProps = async () => {
   return { logos, markLogos }
 }
 
-export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
+export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
+  const params = await props.params;
   const { t } = await useTranslation(params.lang, 'translation')
 
   return {
@@ -145,7 +146,8 @@ export const generateMetadata = async ({ params }: PageProps): Promise<Metadata>
   }
 }
 
-export default async function Brand({ params }: PageProps) {
+export default async function Brand(props: PageProps) {
+  const params = await props.params;
   const { t } = await useTranslation(params.lang, 'translation')
 
   const { markLogos, logos } = await getStaticProps()

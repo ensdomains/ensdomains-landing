@@ -13,7 +13,8 @@ import { EcosystemList } from '~/components/ecosystem/EcosystemList'
 import type { Metadata } from 'next'
 import type { PageProps } from '~/utils/types'
 
-export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
+export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
+  const params = await props.params;
   const { t } = await useTranslation(params.lang, 'translation')
 
   return {
@@ -22,9 +23,8 @@ export const generateMetadata = async ({ params }: PageProps): Promise<Metadata>
   }
 }
 
-export default async function Ecosystem({
-  params,
-}: PageProps) {
+export default async function Ecosystem(props: PageProps) {
+  const params = await props.params;
   const { t } = await useTranslation(params.lang, 'translation')
 
   return (

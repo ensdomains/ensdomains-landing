@@ -10,13 +10,11 @@ import { ResolvingMetadata } from 'next'
 import { Article, WithContext } from 'schema-dts'
 
 type PageProperties = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
-export const generateMetadata = async (
-  { params }: PageProperties,
-  parent: ResolvingMetadata,
-) => {
+export const generateMetadata = async (props: PageProperties, parent: ResolvingMetadata) => {
+  const params = await props.params;
   const post = await getPostBySlug(params.slug)
   const parentMetadata = await parent
 
@@ -71,7 +69,8 @@ export async function generateStaticParams() {
   }))
 }
 
-const page = async ({ params }: PageProperties) => {
+const page = async (props: PageProperties) => {
+  const params = await props.params;
   const post = await getPostBySlug(params.slug)
 
   const { PostContent, readingTime } = await importPost(post.file)
