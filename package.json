@@ -4,11 +4,12 @@
   "description": "ENS Domains homepage v2",
   "version": "0.2.0",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "build:next": "next build",
     "build:assets": "tsx scripts/build-assets/index.ts",
     "build": "pnpm run build:assets && pnpm run build:next",
-    "dev": "next",
+    "dev": "next dev --turbopack",
     "develop": "pnpm run dev",
     "start": "pnpm run dev",
     "lint": "eslint ./src -c eslint.config.mjs",
@@ -25,9 +26,9 @@
     "i18next": "^23.16.0",
     "i18next-resources-to-backend": "^1.2.1",
     "next": "15.1.6",
-    "react": "19.0.0",
+    "react": "^19.0.0",
     "react-countup": "^6.5.3",
-    "react-dom": "19.0.0",
+    "react-dom": "^19.0.0",
     "react-external-link": "^2.3.1",
     "react-i18next": "^15.0.3",
     "typescript": "^5.6.3",
@@ -45,7 +46,7 @@
     "@stylistic/stylelint-plugin": "^3.1.1",
     "@types/mdx": "^2.0.13",
     "@types/node": "^22.7.6",
-    "@types/react": "19.0.8",
+    "@types/react": "^19",
     "acorn": "^8.14.0",
     "acorn-jsx": "^5.3.2",
     "deepmerge-ts": "^7.1.3",
@@ -72,10 +73,5 @@
   "bugs": {
     "url": "https://github.com/ensdomains/ensdomains-landing/issues"
   },
-  "packageManager": "pnpm@9.3.0",
-  "pnpm": {
-    "overrides": {
-      "@types/react": "19.0.8"
-    }
-  }
+  "packageManager": "pnpm@9.3.0"
 }
