@@ -1,10 +1,6 @@
+import { visit } from 'unist-util-visit'
 import * as acorn from 'acorn'
 import jsx from 'acorn-jsx'
-import { toString } from 'mdast-util-to-string'
-import { mdxAnnotations } from 'mdx-annotations'
-import getReadingTime from 'reading-time'
-import gfm from 'remark-gfm'
-import { visit } from 'unist-util-visit'
 
 /**
  * Extracts key-value pairs from a string surrounded by square brackets [].
@@ -29,7 +25,7 @@ const extractKeyValuePairs = (input) => {
   while ((pairMatch = keyValuePairsRegex.exec(keyValuePairsString)) !== null) {
     const [, key, valueString, numericValueString] = pairMatch
     const value
-      = valueString !== undefined ? valueString : Number(numericValueString)
+        = valueString !== undefined ? valueString : Number(numericValueString)
 
     keyValuePairs[key] = value
   }
@@ -40,22 +36,22 @@ const extractKeyValuePairs = (input) => {
 /**
  * @type {import('unified').Plugin}
  */
-export const remarkImportAsNextImages = () => {
+export default function remarkImportAsNextImages() {
   /**
-   * @param {import('unist').Parent} tree
-   */
+     * @param {import('unist').Parent} tree
+     */
   return async (tree) => {
     visit(
       tree,
       /**
-       * @param {import('unist').Parent} node
-       */
+         * @param {import('unist').Parent} node
+         */
       async (node, index, parent) => {
         if (node.type !== 'paragraph') return
 
         /**
-         * @type {import('unist').Node | undefined}
-         */
+           * @type {import('unist').Node | undefined}
+           */
         const imageNode = node.children.at(0)
 
         if (!imageNode) return
@@ -73,14 +69,14 @@ export const remarkImportAsNextImages = () => {
         if (imageNode.title) attributes.push(`title="${imageNode.title}"`)
 
         /**
-         * @type {import('unist').Node | undefined}
-         */
+           * @type {import('unist').Node | undefined}
+           */
         const nextNode = node.children.at(1)
 
         const keyValuePairs
-          = nextNode && nextNode.type === 'text'
-            ? extractKeyValuePairs(nextNode.value)
-            : undefined
+            = nextNode && nextNode.type === 'text'
+              ? extractKeyValuePairs(nextNode.value)
+              : undefined
 
         for (const [key, value] of Object.entries(keyValuePairs || {})) {
           attributes.push(`${key}="${value}"`)
@@ -140,46 +136,3 @@ export const remarkImportAsNextImages = () => {
     )
   }
 }
-
-function remarkReadingTime() {
-  return function (tree) {
-    const textOnPage = toString(tree, {
-      includeHtml: false,
-      includeImageAltText: false,
-    })
-
-    const readingTime = getReadingTime(textOnPage)
-
-    if (!readingTime) return
-    // readingTime.text will give us minutes read as a friendly string,
-    // i.e. "3 min read"
-
-    const exportString = `export const readingTime = "${readingTime.text}"`
-
-    tree.children.push({
-      type: 'mdxjsEsm',
-      value: exportString,
-      data: {
-        estree: acorn.parse(exportString, {
-          sourceType: 'module',
-          ecmaVersion: 'latest',
-        }),
-      },
-    })
-  }
-}
-
-export const remarkPlugins = [
-  /**
-   * Add support for annotations to MDX.
-   * An annotation is a JavaScript object associated with an MDX node. The object properties are passed to the resulting JSX element as props.
-   * @see https://www.npmjs.com/package/mdx-annotations
-   */
-  mdxAnnotations.remark,
-  /**
-   * Add support for GitHub Flavored Markdown.
-   */
-  gfm,
-  remarkImportAsNextImages,
-  remarkReadingTime,
-]
