@@ -75,3 +75,7 @@ yarn-error.log
 yalc.lock
 .next
 out
+
+# Ignore build-assets folder except for scripts/build-assets/
+build-assets
+!scripts/build-assets/
