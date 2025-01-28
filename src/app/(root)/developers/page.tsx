@@ -17,7 +17,7 @@ import stats from '~/stats/grants.json'
 import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage'
 
 export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
-  const params = await props.params;
+  const params = await props.params
   const { t } = await useTranslation(params.lang, 'translation')
 
   return {
@@ -27,7 +27,7 @@ export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
 }
 
 export default async function Developers(props: PageProps) {
-  const params = await props.params;
+  const params = await props.params
   const { t } = await useTranslation(params.lang, 'translation')
 
   return (

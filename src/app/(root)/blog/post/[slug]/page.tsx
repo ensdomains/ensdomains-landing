@@ -14,7 +14,7 @@ type PageProperties = {
 }
 
 export const generateMetadata = async (props: PageProperties, parent: ResolvingMetadata) => {
-  const params = await props.params;
+  const params = await props.params
   const post = await getPostBySlug(params.slug)
   const parentMetadata = await parent
 
@@ -70,7 +70,7 @@ export async function generateStaticParams() {
 }
 
 const page = async (props: PageProperties) => {
-  const params = await props.params;
+  const params = await props.params
   const post = await getPostBySlug(params.slug)
 
   const { PostContent, readingTime } = await importPost(post.file)

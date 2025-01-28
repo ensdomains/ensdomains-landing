@@ -56,11 +56,11 @@ const partners: PartnerEntry[] = [
 ]
 
 export default async function Home(props: { params: Promise<{ lang?: Language }> }) {
-  const params = await props.params;
+  const params = await props.params
 
   const {
-    lang = fallbackLng
-  } = params;
+    lang = fallbackLng,
+  } = params
 
   const { t } = await useTranslation(lang, 'translation')
 

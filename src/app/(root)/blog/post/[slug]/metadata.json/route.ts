@@ -31,7 +31,7 @@ export async function generateStaticParams() {
 }
 
 export async function GET(_request: NextRequest, props: PageProperties) {
-  const params = await props.params;
+  const params = await props.params
   const postData = await getPostBySlug(params.slug)
   const postAssets = getPostAssets(postData.file)
 

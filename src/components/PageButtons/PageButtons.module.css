@@ -7,19 +7,19 @@
 }
 
 .dots {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
   
-    height: 57px;
-    min-width: 57px;
-    border-radius: 4px;
-    font-size: 18px;
-    font-weight: 500;
+  height: 57px;
+  min-width: 57px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 500;
   
-    color: var(--ens-magenta);
-    background-color: var(--ens-gray-2);
+  color: var(--ens-magenta);
+  background-color: var(--ens-gray-2);
 }
 
 .button {
