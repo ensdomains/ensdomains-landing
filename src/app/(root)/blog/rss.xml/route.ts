@@ -4,6 +4,8 @@ import { getPostAssets } from '~/utils/blog/utils'
 import { BASE_URL } from '~/utils/metadata'
 import ogImage from 'public/og-image.png'
 
+export const dynamic = 'force-static'
+
 export const GET = async () => {
   const feed = new Feed({
     title: 'ENS Blog',
