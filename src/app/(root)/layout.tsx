@@ -14,7 +14,7 @@ import { BASE_URL, createMetadata } from '~/utils/metadata'
 import ogImage from 'public/og-image.png'
 
 export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
-  const params = await props.params;
+  const params = await props.params
   const { t } = await useTranslation(params.lang, 'translation')
 
   return createMetadata({
@@ -46,15 +46,15 @@ export const viewport = {
 }
 
 export default async function RootLayout(props: { children: ReactNode, params: Promise<{ lang?: Language }> }) {
-  const params = await props.params;
+  const params = await props.params
 
   const {
-    lang = 'en'
-  } = params;
+    lang = 'en',
+  } = params
 
   const {
-    children
-  } = props;
+    children,
+  } = props
 
   const { t } = await useTranslation(lang, 'translation')
 
