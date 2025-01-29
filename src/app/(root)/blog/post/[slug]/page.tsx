@@ -37,13 +37,14 @@ export const generateMetadata = async (props: PageProperties, parent: ResolvingM
       openGraph: {
         type: 'article',
         authors: post.authors,
-        images: [
-          {
-            url: new URL(postCover.src, BASE_URL),
-            width: postCover.width,
-            height: postCover.height,
-          },
-        ],
+        images:
+          postCover
+            ? [{
+                url: new URL(postCover.src, BASE_URL),
+                width: postCover.width,
+                height: postCover.height,
+              }]
+            : undefined,
         tags: post.tags,
         url: '/blog/post/' + params.slug,
       },

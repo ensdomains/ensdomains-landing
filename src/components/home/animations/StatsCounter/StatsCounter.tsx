@@ -35,7 +35,7 @@ export const StatsCounter = ({ captions }: { captions: { names: string, integrat
             formattingFn={n => n.toLocaleString()}
           />
           {' '}
-          {captions[key]}
+          {captions[key as keyof typeof captions]}
         </div>
       ))}
     </div>

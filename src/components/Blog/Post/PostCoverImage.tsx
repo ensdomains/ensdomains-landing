@@ -15,7 +15,7 @@ export const PostCoverImage: FC<{ post: BlogPostMetadataPlus }> = async ({
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        {isYoutube && <YoutubeEmbed src={post.youtube} />}
+        {isYoutube && <YoutubeEmbed src={post.youtube!} />}
         {!isYoutube
         && (cover || post.cover
           ? (
@@ -23,7 +23,7 @@ export const PostCoverImage: FC<{ post: BlogPostMetadataPlus }> = async ({
                 alt={post.title}
                 className={styles.image}
                 priority
-                src={cover || post.cover}
+                src={cover || post.cover!}
                 style={{
                   height: 'auto',
                   width: '100%',

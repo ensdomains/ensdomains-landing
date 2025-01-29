@@ -138,7 +138,7 @@ async function getAuthorData(): Promise<Record<string, AuthorData>> {
           }
 
           authorData[author] = {
-            avatar,
+            avatar: avatar || undefined,
             records,
           }
 
