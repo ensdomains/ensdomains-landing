@@ -1,0 +1,29 @@
+.heading {
+  scroll-margin-top: 120px;
+}
+
+.h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .h2 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .h2 {
+    font-size: 64px;
+  }
+
+  .h3 {
+    font-size: 36px;
+  }
+}

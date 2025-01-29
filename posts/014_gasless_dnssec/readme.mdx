@@ -1,0 +1,28 @@
+Starting today, ENS can connect with any DNS domain<sup>1</sup> for free.
+
+## History
+
+ENS has always been complementary to existing internet infrastructure. For years, DNS names could be imported into ENS without a protocol fee, but incurred hefty Ethereum gas fees, in some cases reaching 0.5 ETH.
+
+The reason behind the high fee is that a large amount of data (DNSSEC proof) needed to be saved to the Ethereum blockchain to prove ownership of a domain. While this remains an option, interacting with the blockchain is no longer a required step in crypto-enabling a DNS name.
+
+## How It Works
+
+Gasless DNSSEC is powered by [CCIP Read (EIP-3668)](https://eips.ethereum.org/EIPS/eip-3668), an application-level standard for Ethereum smart contracts to fetch and verify offchain data. It was authored by Nick Johnson, the Founder and Lead Developer of ENS Labs.
+
+In [EP5.1](https://www.tally.xyz/gov/ens/proposal/4208408830555077285685632645423534041634535116286721240943655761928631543220), ENS DAO approved the activation of a new smart contract that implements CCIP Read at the DNS TLD level. Having CCIP Read at the TLD level means that DNS records can be verified on-demand via an offchain gateway. The result is a free way to use DNS domains in the ENS ecosystem.
+
+## How To Use It
+
+Configuring your DNS name to work with ENS can be accomplished in a few simple steps:
+
+- Enable DNSSEC
+- Add a TXT record in the format `ENS1 <ens-resolver-address>`
+- Done! Now your DNS name can be resolved according to whichever ENS resolver you specified. [Try it here](https://ens-resolution.vercel.app/).
+
+For the easiest experience, we've created a special resolver that can read an Ethereum address from the same TXT record. The format is `ENS1 dnsname.ens.eth <eth-address>`. [Learn more on our support docs](https://support.ens.domains/en/articles/8834820-offchain-gasless-dnssec-names-in-ens#h_94b4356040).
+
+---
+
+<sup>1</sup> Any DNS name where the TLD supports [DNSSEC](https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en)
+and uses the official ENS DNSRegistrar smart contract.

@@ -8,7 +8,7 @@ import globals from 'globals'
 
 const config = tseslint.config(
   {
-    files: ['src/**/*.ts', 'src/*.tsx'],
+    files: ['src/**/*.ts', 'src/*.tsx', 'scripts/**/*.ts'],
     ignores: ['node_modules', 'dist', '.next'],
     languageOptions: {
       globals: {

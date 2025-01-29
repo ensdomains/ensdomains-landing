@@ -2,7 +2,7 @@ import { SVGProps } from 'react'
 
 type Props = SVGProps<SVGSVGElement>
 
-export const SearchIcon = (props: Props) => (
+export const SearchIcon = ({ opacity = 0.3, ...props }: Props & { opacity?: number }) => (
   <svg
     width="56"
     height="59"
@@ -11,7 +11,7 @@ export const SearchIcon = (props: Props) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <g opacity="0.3">
+    <g opacity={opacity}>
       <g id="search">
         <circle
           id="Ellipse 14"
@@ -209,6 +209,25 @@ export const EnsNavIcon = (props: Props) => (
 
 export const ArrowRightIcon = (props: Props) => (
   <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <path d="M0.428711 4.5H7.71443M7.71443 4.5L3.71443 0.5M7.71443 4.5L3.71443 8.5" stroke="currentColor" stroke-width="1.2" />
+    <path d="M0.428711 4.5H7.71443M7.71443 4.5L3.71443 0.5M7.71443 4.5L3.71443 8.5" stroke="currentColor" strokeWidth="1.2" />
+  </svg>
+)
+
+export const BrowserIcon = (props: Props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 96 96" width="24" height="24" {...props}>
+    <path fill="currentColor" d="M22 36a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm16 0a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm22-6a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z" />
+    <path fill="currentColor" fillRule="evenodd" d="M18 8C8.059 8 0 16.059 0 26v44c0 9.941 8.059 18 18 18h60c9.941 0 18-8.059 18-18V26c0-9.941-8.059-18-18-18H18Zm-6 18a6 6 0 0 1 6-6h60a6 6 0 0 1 6 6v44a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6V26Z" clipRule="evenodd" />
+  </svg>
+)
+
+export const GithubIcon = (props: Props) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M12 0.296875C5.37 0.296875 0 5.66988 0 12.2969C0 17.5999 3.438 22.0969 8.205 23.6819C8.805 23.7949 9.025 23.4239 9.025 23.1049C9.025 22.8199 9.015 22.0649 9.01 21.0649C5.672 21.7889 4.968 19.4549 4.968 19.4549C4.422 18.0699 3.633 17.6999 3.633 17.6999C2.546 16.9559 3.717 16.9709 3.717 16.9709C4.922 17.0549 5.555 18.2069 5.555 18.2069C6.625 20.0419 8.364 19.5119 9.05 19.2049C9.158 18.4289 9.467 17.8999 9.81 17.5999C7.145 17.2999 4.344 16.2679 4.344 11.6699C4.344 10.3599 4.809 9.28988 5.579 8.44988C5.444 8.14688 5.039 6.92688 5.684 5.27388C5.684 5.27388 6.689 4.95188 8.984 6.50388C9.944 6.23688 10.964 6.10488 11.984 6.09888C13.004 6.10488 14.024 6.23688 14.984 6.50388C17.264 4.95188 18.269 5.27388 18.269 5.27388C18.914 6.92688 18.509 8.14688 18.389 8.44988C19.154 9.28988 19.619 10.3599 19.619 11.6699C19.619 16.2799 16.814 17.2949 14.144 17.5899C14.564 17.9499 14.954 18.6859 14.954 19.8099C14.954 21.4159 14.939 22.7059 14.939 23.0959C14.939 23.4109 15.149 23.7859 15.764 23.6659C20.565 22.0919 24 17.5919 24 12.2969C24 5.66988 18.627 0.296875 12 0.296875Z" fill="currentColor" />
+  </svg>
+)
+
+export const TwitterIcon = (props: Props) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M0.0583996 1L9.32452 13.3895L0 23.4627H2.09874L10.2625 14.6432L16.8584 23.4627H24L14.2123 10.3765L22.8916 1H20.7929L13.2747 9.1223L7.2 1H0.0583996ZM3.14469 2.54576H6.42551L20.9133 21.9169H17.6325L3.14469 2.54576Z" fill="currentColor" />
   </svg>
 )

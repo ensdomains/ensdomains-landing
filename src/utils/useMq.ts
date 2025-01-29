@@ -12,7 +12,7 @@ export function useMq() {
   const [queryMatch, setQueryMatch] = useState<Dimension>('mobile')
 
   useEffect(() => {
-    const mediaQueryLists: Record<Dimension, MediaQueryList> = {
+    const mediaQueryLists: Record<Dimension, MediaQueryList | undefined> = {
       tablet: undefined,
       mobile: undefined,
       desktop: undefined,
