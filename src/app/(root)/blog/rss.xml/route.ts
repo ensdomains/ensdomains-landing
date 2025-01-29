@@ -39,7 +39,7 @@ export const GET = async () => {
           link: new URL('/blog/author/' + author, BASE_URL).toString(),
         }
       }),
-      image: postCoverThumb.src,
+      image: postCoverThumb?.src,
     })
   }
 

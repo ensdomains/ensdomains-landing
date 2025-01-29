@@ -13,7 +13,8 @@
     "develop": "pnpm run dev",
     "start": "pnpm run dev",
     "lint": "eslint ./src ./scripts -c eslint.config.mjs",
-    "lint:css": "stylelint -c stylelint.config.mjs './src/**/*.css'"
+    "lint:css": "stylelint -c stylelint.config.mjs './src/**/*.css'",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@ensdomains/ensjs": "4.0.1-alpha.0",
