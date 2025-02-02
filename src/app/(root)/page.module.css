@@ -1,3 +1,7 @@
+.header {
+  margin-top: 72px;
+}
+
 .title {
   gap: 50px;
   margin-bottom: 80px;
@@ -25,9 +29,10 @@
   margin-top: 80px;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 520px) {
   .header {
-    padding-top: 152px;
+    padding-top: 16px;
+    margin-top: 72px;
   }
 }
 
@@ -41,6 +46,11 @@
 }
 
 @media (min-width: 1280px) {
+  .header {
+    margin-top: 88px;
+    min-height: min(80vh, 700px);
+  }
+  
   .gtwSection {
     gap: 80px;
   }
