@@ -12,7 +12,7 @@ export type ImageSettings = {
   suffix?: string
   width: number
   height: number
-  format?: string
+  format?: ImageFormat
 }
 
 export type ENStateResponse = {
@@ -23,3 +23,4 @@ export type ENStateResponse = {
 }
 
 export const ImageFormats = ['webp', 'png', 'jpg', 'jpeg'] as const
+export type ImageFormat = (typeof ImageFormats)[number]
