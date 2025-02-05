@@ -29,6 +29,10 @@
   margin-top: 80px;
 }
 
+.cardsSection > * + * {
+  margin-top: 10px;
+}
+
 @media (max-width: 520px) {
   .header {
     padding-top: 16px;
