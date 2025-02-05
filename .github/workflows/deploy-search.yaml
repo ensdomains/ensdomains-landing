@@ -6,8 +6,9 @@ on:
 
 env:
   NODE_OPTIONS: '--max_old_space_size=8192'
-  MEILISEARCH_URL: 'https://search.v3x.systems'
-  MEILISEARCH_INDEX: 'ens-blog'
+  # Temporary dev url
+  MEILISEARCH_URL: 'https://search-ens-dev.srv.ax'
+  MEILISEARCH_INDEX: 'ens-landing-posts'
   MEILISEARCH_IMPORTER_VERSION: 'v0.2.2'
 
 jobs:

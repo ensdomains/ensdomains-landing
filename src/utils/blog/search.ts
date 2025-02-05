@@ -28,8 +28,9 @@ export type SearchResult = {
   processingTimeMs: number
 }
 
-const SEARCH_URL = 'https://search.v3x.systems/indexes/ens-blog/search'
-const SEARCH_API_KEY = 'b77dacb494c3272351784097847e34c59b22510b30aa0ed662f1e79e1df658a0'
+// Temporary dev url
+const SEARCH_URL = 'https://search-ens-dev.srv.ax/indexes/ens-landing-posts/search'
+const SEARCH_API_KEY = '7464a61301612803bdb73b27dc8113ff96f70a45ccc13a8e6749b5ea918ea30f'
 
 export const getSearchResults = async (query: string): Promise<SearchResult> => {
   if (!query || query.length < 3) return { hits: [], estimatedTotalHits: 0, limit: 0, offset: 0, processingTimeMs: 0 }
