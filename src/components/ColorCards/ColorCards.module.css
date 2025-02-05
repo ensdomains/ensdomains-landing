@@ -3,6 +3,11 @@
   gap: 10px;
 }
 
+.bgGraphic {
+  display: block;
+  width: 100%;
+}
+
 .box {
   align-self: flex-end;
   margin-top: auto;
