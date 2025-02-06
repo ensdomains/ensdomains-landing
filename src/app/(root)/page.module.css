@@ -41,6 +41,11 @@
 }
 
 @media (min-width: 768px) {
+  .header {
+    margin-top: 90px;
+    min-height: min(64vh, 700px);
+  }
+
   .gtwSection {
     gap: 40px;
   }
@@ -51,8 +56,9 @@
 
 @media (min-width: 1280px) {
   .header {
-    margin-top: 88px;
-    min-height: min(80vh, 700px);
+    margin-top: 100px;
+    min-height: min(64vh, 700px);
+    padding-block: 100px;
   }
   
   .gtwSection {

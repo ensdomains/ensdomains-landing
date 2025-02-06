@@ -120,7 +120,7 @@ export const SearchInput = ({
   registerText,
   invalidText,
 }: {
-  caption: string
+  caption?: string
   placeholder: string
 } & CommonProps) => {
   const [value, setValue] = useState('')
@@ -209,21 +209,23 @@ export const SearchInput = ({
         styles.container,
       )}
     >
-      <div className={styles.captionContainer}>
-        <img
-          src="/assets/arrow-down.svg"
-          width="16"
-          height="13"
-          alt=""
-        />
-        <span className={styles.caption}>{caption}</span>
-        <img
-          src="/assets/arrow-down.svg"
-          width="16"
-          height="13"
-          alt=""
-        />
-      </div>
+      {caption && (
+        <div className={styles.captionContainer}>
+          <img
+            src="/assets/arrow-down.svg"
+            width="16"
+            height="13"
+            alt=""
+          />
+          <span className={styles.caption}>{caption}</span>
+          <img
+            src="/assets/arrow-down.svg"
+            width="16"
+            height="13"
+            alt=""
+          />
+        </div>
+      )}
       <div
         className={clsx(
           ui.flex,

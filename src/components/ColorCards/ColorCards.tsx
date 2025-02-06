@@ -34,10 +34,11 @@ const CurvedPathAnimation: FC<{
   flip?: boolean
 }> = ({ width, anim = undefined, flip = false }) => {
   const isSmallScreen = width <= 834
+
   // Extract constants to make the component more maintainable
   const DIMENSIONS = {
     bottomBuffer: 14,
-    curveRadius: isSmallScreen ? 30 : 70,
+    curveRadius: isSmallScreen ? 30 : 40,
     cubeSize: isSmallScreen ? 25 : 33,
   }
 

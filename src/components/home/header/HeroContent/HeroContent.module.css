@@ -90,7 +90,7 @@
   .header-ens-link:nth-of-type(1) { left: 35px; top: -5px; }
   .header-ens-link:nth-of-type(2) { left: -10px; top: 35px; }
   .header-ens-link:nth-of-type(4) { right: -10px; top: 30px; }
-  .header-ens-link:nth-of-type(5) { left: 15px; bottom: 0; z-index: 1; }
+  .header-ens-link:nth-of-type(5) { left: 15px; bottom: 0; z-index: 1 }
   .header-ens-link:nth-of-type(6) { right: -20px; bottom: 45px; }
 
   /* Position Containers */
@@ -186,14 +186,14 @@
 
   .header-ens-link:nth-of-type(1) { left: 169px; top: 10px; }
   .header-ens-link:nth-of-type(2) { left: 0; top: 70px; }
-  .header-ens-link:nth-of-type(3) { right: 295px; top: 20px; }
-  .header-ens-link:nth-of-type(4) { right: -20px; top: 160px; }
+  .header-ens-link:nth-of-type(3) { right: 295px; top: 50px; }
+  .header-ens-link:nth-of-type(4) { right: -20px; top: 195px; }
   .header-ens-link:nth-of-type(5) { left: 40px; bottom: 0; }
   .header-ens-link:nth-of-type(6) { right: -22px; bottom: 90px; }
 
   /* Position Containers */
-  .anim-position:nth-of-type(1) { right: 155px; top: -35px; width: 180px; }
-  .anim-position:nth-of-type(2) { right: 35px; top: 25px; width: 180px; }
+  .anim-position:nth-of-type(1) { right: 155px; top: 0px; width: 180px; }
+  .anim-position:nth-of-type(2) { right: 35px; top: 60px; width: 180px; }
   .anim-position:nth-of-type(3) { left: -142px; bottom: 162px; width: 324px; }
   .anim-position:nth-of-type(4) { left: 147px; bottom: 42px; width: 162px; }
   .anim-position:nth-of-type(5) { right: -18px; bottom: 70px; width: 200px; }
@@ -201,10 +201,6 @@
 
 /* Desktop L (1280px+) */
 @media (min-width: 1280px) {
-  .hero-wrapper {
-    /* padding-top: 88px; */
-  }
-
   .hero-content {
     max-width: 1520px;
   }
@@ -215,9 +211,9 @@
     padding: 18px 22px;
   }
 
-  .header-ens-link:nth-of-type(1) { left: 169px; top: 8px; }
-  .header-ens-link:nth-of-type(2) { left: 0; top: 75px; }
-  .header-ens-link:nth-of-type(3) { right: 320px; top: 40px; }
+  .header-ens-link:nth-of-type(1) { left: 169px; top: 0px; }
+  .header-ens-link:nth-of-type(2) { left: 0; top: 67px; }
+  .header-ens-link:nth-of-type(3) { right: 320px; top: 20px; }
   .header-ens-link:nth-of-type(4) { right: -20px; top: 200px; }
   .header-ens-link:nth-of-type(5) { left: 80px; bottom: 0; }
   .header-ens-link:nth-of-type(6) { right: 15px; bottom:90px; }
@@ -225,8 +221,8 @@
   /* Position Containers */
   .anim-position:nth-of-type(1) { right: 155px; top: 0; width: 180px; }
   .anim-position:nth-of-type(2) { right: 38px; top: 64px; width: 180px; }
-  .anim-position:nth-of-type(3) { left: -126px; bottom: 180px; width: 360px; }
-  .anim-position:nth-of-type(4) { left: 192px; bottom: 46px; width: 180px; }
+  .anim-position:nth-of-type(3) { left: -126px; bottom: 100px; width: 360px; }
+  .anim-position:nth-of-type(4) { left: 192px; bottom: -30px; width: 180px; }
   .anim-position:nth-of-type(5) { right: 20px; bottom: 70px; width: 200px; }
 }
 

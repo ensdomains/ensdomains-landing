@@ -56,11 +56,11 @@ const SquareAnimation = ({ bgColor, color, ...props }: SVGProps<SVGSVGElement> &
         <BGPattern fill={`var(--${bgColor})`} id={`${id}-bg-pattern`} />
       </defs>
 
-      <g clip-path={`url(#${id}-clip-overflow)`}>
+      <g clipPath={`url(#${id}-clip-overflow)`}>
         <rect width="200" height="200" fill="#F6F6F6" />
         <rect width="200" height="200" fill={`url(#${id}-bg-pattern)`} />
-        <path d="M0 46H200" stroke={`var(--${color})`} stroke-width="58" />
-        <path d="M0 46H200" stroke="#F6F6F6" stroke-width="2" />
+        <path d="M0 46H200" stroke={`var(--${color})`} strokeWidth="58" />
+        <path d="M0 46H200" stroke="#F6F6F6" strokeWidth="2" />
         <rect x="200" y="29" width="33" height="33" rx="2" fill="#F6F6F6">
           <animateMotion
             begin={`${Math.random() * 3}s`}
@@ -97,11 +97,11 @@ const RectangleAnimation = ({ bgColor, color, width = 400, ...props }: SVGProps<
         <BGPattern fill={`var(--${bgColor})`} id={`${id}-bg-pattern`} />
       </defs>
 
-      <g clip-path={`url(#${id}-clip-overflow)`}>
+      <g clipPath={`url(#${id}-clip-overflow)`}>
         <rect width={width} height="100" fill="#F6F6F6" />
         <rect width={width} height="100" fill={`url(#${id}-bg-pattern)`} />
-        <path d={`M0 46H${width}`} stroke={`var(--${color})`} stroke-width="58" />
-        <path d={`M0 46H${width}`} stroke="#F6F6F6" stroke-width="2" />
+        <path d={`M0 46H${width}`} stroke={`var(--${color})`} strokeWidth="58" />
+        <path d={`M0 46H${width}`} stroke="#F6F6F6" strokeWidth="2" />
         <rect x={width} y={cubeSize - 4} width={cubeSize} height={cubeSize} rx="2" fill="#F6F6F6">
           <animateMotion
             begin={`${Math.random() * 3}s`}
@@ -137,11 +137,11 @@ const CornerAnimation = ({ bgColor, color, ...props }: SVGProps<SVGSVGElement> &
         <BGPattern fill={`var(--${bgColor})`} id={`${id}-bg-pattern`} />
       </defs>
 
-      <g clip-path={`url(#${id}-clip-overflow)`}>
+      <g clipPath={`url(#${id}-clip-overflow)`}>
         <rect width="200" height="200" fill="#F6F6F6" />
         <rect width="200" height="200" fill={`url(#${id}-bg-pattern)`} />
-        <path d="M0 46H133C144.598 46 154 55.402 154 67V200" stroke={`var(--${color})`} stroke-width="58" />
-        <path d="M0 46H133C144.598 46 154 55.402 154 67V200" stroke="#F6F6F6" stroke-width="2" />
+        <path d="M0 46H133C144.598 46 154 55.402 154 67V200" stroke={`var(--${color})`} strokeWidth="58" />
+        <path d="M0 46H133C144.598 46 154 55.402 154 67V200" stroke="#F6F6F6" strokeWidth="2" />
         <rect
           width="33"
           height="33"
