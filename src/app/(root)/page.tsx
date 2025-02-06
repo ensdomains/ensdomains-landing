@@ -78,7 +78,6 @@ export default async function Home(props: { params: Promise<{ lang?: Language }>
       <section className={clsx(ui['page'], styles.mainSection)}>
         <SearchInput
           placeholder={t('home.hero.input.placeholder')}
-          caption={t('home.hero.input.caption')}
           viewText={t('home.hero.input.view')}
           registerText={t('home.hero.input.register')}
           invalidText={t('home.hero.input.invalid')}
