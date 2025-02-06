@@ -145,6 +145,7 @@ export const SearchInput = ({
       && showSuggestions(debouncedValue)
     ) {
       setIsInvalid(false)
+      setIsBoxInvalid(false)
       setIsLoading(true)
       if (tld === 'eth') {
         checkEthAvailable(name)
