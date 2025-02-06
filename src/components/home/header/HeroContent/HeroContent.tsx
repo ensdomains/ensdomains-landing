@@ -188,7 +188,7 @@ export const HeroContent = () => (
         bgColor="ens-green"
       />
       <HeroEnsLink
-        name="ens.eth"
+        name="nba.eth"
         color="ens-blue"
         bgColor="ens-light-blue"
       />
