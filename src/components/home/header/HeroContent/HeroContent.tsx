@@ -42,7 +42,7 @@ const SquareAnimation = ({ bgColor, color, ...props }: SVGProps<SVGSVGElement> &
     maxDuration: 16,
     pausePoints: {
       amount: 5,
-      duration: 0.2,
+      duration: 0.3,
     },
   })
   const id = useId()
@@ -68,7 +68,7 @@ const SquareAnimation = ({ bgColor, color, ...props }: SVGProps<SVGSVGElement> &
             repeatCount="indefinite"
             keyPoints={timing.keyPoints}
             keyTimes={timing.keyTimes}
-            path={Array.from({ length: 5 }, () => Math.random() > 0.5 ? `M0,0 H-233` : `M-233,0 H0`).join(' ')}
+            path={Array.from({ length: 5 }, () => `M-233,0 H0`).join(' ')}
           />
         </rect>
       </g>
@@ -82,7 +82,7 @@ const RectangleAnimation = ({ bgColor, color, width = 400, ...props }: SVGProps<
     maxDuration: 15 + (width / 400) * 6,
     pausePoints: {
       amount: 5,
-      duration: 0.2,
+      duration: 0.3,
     },
   })
   const cubeSize = 33
@@ -109,7 +109,7 @@ const RectangleAnimation = ({ bgColor, color, width = 400, ...props }: SVGProps<
             repeatCount="indefinite"
             keyPoints={timing.keyPoints}
             keyTimes={timing.keyTimes}
-            path={Array.from({ length: 5 }, () => Math.random() > 0.5 ? `M0,0 H-${width + cubeSize}` : `M-${width + cubeSize},0 H0`).join(' ')}
+            path={Array.from({ length: 5 }, () => `M0,0 H-${width + cubeSize}`).join(' ')}
           />
         </rect>
       </g>
@@ -123,7 +123,7 @@ const CornerAnimation = ({ bgColor, color, ...props }: SVGProps<SVGSVGElement> &
     maxDuration: 18,
     pausePoints: {
       amount: 5,
-      duration: 0.2,
+      duration: 0.3,
     },
   })
   const id = useId()
@@ -155,7 +155,7 @@ const CornerAnimation = ({ bgColor, color, ...props }: SVGProps<SVGSVGElement> &
             repeatCount="indefinite"
             keyPoints={timing.keyPoints}
             keyTimes={timing.keyTimes}
-            path={Array.from({ length: 5 }, () => Math.random() > 0.5 ? `M-17 46 H133 C145 46 154 55 154 67 V217` : `M154 217 V67 C154 55 145 46 133 46 H-17`).join(' ')}
+            path={Array.from({ length: 5 }, () => `M154 217 V67 C154 55 145 46 133 46 H-17`).join(' ')}
             rotate="auto"
           />
         </rect>
