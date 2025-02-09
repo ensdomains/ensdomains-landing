@@ -1,45 +1,15 @@
-import { AnimatedSquare } from '~/components/AnimatedSquare/AnimatedSquare'
 import styles from './HeroContent.module.css'
+import { RectangleAnimation } from '~/components/animation/AnimatedShapes'
 
 export const HeroContent = () => {
   return (
-    <>
-      <div className={styles['position-container']}>
-        <div className={styles['animation-container']}>
-          <img
-            src="/assets/developers/magenta-element.svg"
-            height={390}
-            width={284}
-            alt=""
-          />
-          <AnimatedSquare
-            data-name="right-top"
-            className={styles['animated-square']}
-          />
-          <AnimatedSquare
-            data-name="right-bottom"
-            className={styles['animated-square']}
-          />
-        </div>
+    <div className={styles['hero-wrapper']}>
+      <div className={styles['hero-content']}>
+        <RectangleAnimation className={styles['anim-position']} bgColor="ens-magenta" color="ens-light-magenta" width={200} noBackground />
+        <RectangleAnimation className={styles['anim-position']} bgColor="ens-magenta" color="ens-light-magenta" width={200} noBackground />
+        <RectangleAnimation className={styles['anim-position']} bgColor="ens-magenta" color="ens-light-magenta" width={200} noBackground />
+        <RectangleAnimation className={styles['anim-position']} bgColor="ens-magenta" color="ens-light-magenta" width={200} noBackground />
       </div>
-      <div className={styles['position-container']}>
-        <div className={styles['animation-container']}>
-          <img
-            src="/assets/developers/left.svg"
-            height={390}
-            width={284}
-            alt=""
-          />
-          <AnimatedSquare
-            data-name="left-top"
-            className={styles['animated-square']}
-          />
-          <AnimatedSquare
-            data-name="left-bottom"
-            className={styles['animated-square']}
-          />
-        </div>
-      </div>
-    </>
+    </div>
   )
 }
