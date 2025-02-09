@@ -1,5 +1,5 @@
 'use client'
-import { CSSProperties, FC, useRef, useEffect, useState, SVGProps, useId, useMemo } from 'react'
+import { CSSProperties, FC, useRef, useEffect, useState, SVGProps, useId, useMemo, Ref } from 'react'
 
 import styles from './ColorCards.module.css'
 import ui from '~/styles/ui.module.css'
@@ -95,9 +95,36 @@ const CurvedPathAnimation: FC<{
   )
 }
 
-export const ColorCards: FC<{
+type ColorCardsProps = {
   cards: { title: string, description: string, color: Color, link: string }[]
-}> = ({ cards }) => {
+}
+
+export const ColorCards = ({ cards, ref }: ColorCardsProps & { ref?: Ref<HTMLDivElement> }) => {
+  return (
+    <div className={styles.grid} ref={ref}>
+      {cards.map(({ title, description, color, link }) => (
+        <ExternalLink
+          href={link}
+          key={title}
+          className={clsx(ui.flex, ui['flex-col'], styles.card)}
+          style={{
+            '--bg': `var(--${color})`,
+            '--bg-hover': `var(--${color.replace('ens-', 'ens-hover-')})`,
+          } as CSSProperties}
+        >
+          <div className={styles.title}>{title}</div>
+          <div className={styles.text}>{description}</div>
+          <div
+            className={styles.box}
+            style={getSquareVars(color)}
+          />
+        </ExternalLink>
+      ))}
+    </div>
+  )
+}
+
+export const ColorCardsWithPath = (props: ColorCardsProps) => {
   const gridRef = useRef<HTMLDivElement>(null)
   const [dimensions, setDimensions] = useState({ width: 1000, height: 488 })
 
@@ -127,7 +154,7 @@ export const ColorCards: FC<{
   const id = useId()
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <CurvedPathAnimation
         width={dimensions.width}
         anim={{
@@ -136,26 +163,7 @@ export const ColorCards: FC<{
           begin: `0s;${id}-top.end+6.75s`,
         }}
       />
-      <div className={styles.grid} ref={gridRef}>
-        {cards.map(({ title, description, color, link }) => (
-          <ExternalLink
-            href={link}
-            key={title}
-            className={clsx(ui.flex, ui['flex-col'], styles.card)}
-            style={{
-              '--bg': `var(--${color})`,
-              '--bg-hover': `var(--${color.replace('ens-', 'ens-hover-')})`,
-            } as CSSProperties}
-          >
-            <div className={styles.title}>{title}</div>
-            <div className={styles.text}>{description}</div>
-            <div
-              className={styles.box}
-              style={getSquareVars(color)}
-            />
-          </ExternalLink>
-        ))}
-      </div>
+      <ColorCards {...props} ref={gridRef} />
       <CurvedPathAnimation
         width={dimensions.width}
         anim={{
@@ -164,6 +172,6 @@ export const ColorCards: FC<{
         }}
         flip
       />
-    </>
+    </div>
   )
 }
