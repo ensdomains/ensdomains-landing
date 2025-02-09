@@ -1,32 +1,3 @@
-/* Keyframe Animations */
-@keyframes move {
-  10% {
-    offset-distance: 0%;
-  }
-  100% {
-    offset-distance: 100%;
-  }
-}
-
-@keyframes opacity-and-move {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    offset-distance: 0%;
-    opacity: 0;
-  }
-  15% {
-    opacity: 0;
-  }
-  16% {
-    opacity: 1;
-  }
-  100% {
-    offset-distance: 100%;
-  }
-}
-
 /* Base Styles */
 .hero-wrapper {
   position: absolute;
@@ -42,15 +13,10 @@
   max-width: 1680px;
   margin-inline: auto;
   z-index: -999;
-  /* background: #ababab21; */
 }
 
 .anim-position {
   position: absolute;
-}
-
-.animation-container {
-  position: relative;
 }
 
 .header-ens-link {
@@ -170,10 +136,6 @@
 
 /* Tablet (1024px+) */
 @media (min-width: 1024px) {
-  .hero-wrapper {
-    /* padding-top: 72px; */
-  }
-
   .hero-content {
     max-width: 1128px;
   }
