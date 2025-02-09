@@ -1,5 +1,5 @@
 import { CSSProperties, Fragment } from 'react'
-import { PostCoverImage } from '~/components/Blog/Post/PostCoverImage'
+import { PostCoverContent } from '~/components/Blog/Post/PostCoverContent'
 import { PostFooter } from '~/components/Blog/Post/PostFooter'
 import { PostHeader } from '~/components/Blog/Post/PostHeader'
 import { getPostBySlug, getPostsMetadata, importPost } from '~/utils/blog/posts'
@@ -39,13 +39,14 @@ export const generateMetadata = async (
       openGraph: {
         type: 'article',
         authors: post.authors,
-        images: [
-          {
-            url: new URL(postCover.src, BASE_URL),
-            width: postCover.width,
-            height: postCover.height,
-          },
-        ],
+        images:
+          postCover
+            ? [{
+                url: new URL(postCover.src, BASE_URL),
+                width: postCover.width,
+                height: postCover.height,
+              }]
+            : undefined,
         tags: post.tags,
         url: '/blog/post/' + params.slug,
       },
@@ -99,15 +100,15 @@ const page = async ({ params }: PageProperties) => {
         } as CSSProperties
       }
     >
-      {/* eslint-disable-next-line @eslint-react/dom/no-dangerously-set-innerhtml */}
       <script
         type="application/ld+json"
+        // eslint-disable-next-line @eslint-react/dom/no-dangerously-set-innerhtml
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
       <PostHeader post={post} readingTime={readingTime} />
       <article className={styles.article}>
-        <PostCoverImage post={post} />
+        <PostCoverContent post={post} />
         <div className={styles.content}>
           <PostContent />
           {/* Hydration errors occur when PostContent is the only child in the parent div. */}
