@@ -18,6 +18,7 @@ const languages = [
 module.exports = {
     plugins: [
         'gatsby-plugin-pnpm',
+        'gatsby-plugin-meta-redirect',
         {
             // including a plugin from outside the plugins folder needs the path to it
             resolve: 'gatsby-plugin-react-i18next',

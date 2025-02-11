@@ -26,6 +26,7 @@
         "gatsby": "^5.13.3",
         "gatsby-plugin-emotion": "^4.5.0",
         "gatsby-plugin-google-fonts": "^1.0.1",
+        "gatsby-plugin-meta-redirect": "^1.1.1",
         "gatsby-plugin-react-i18next": "^0.0.25",
         "gatsby-plugin-react-svg": "^3.3.0",
         "gatsby-plugin-styled-components": "^6.13.1",
