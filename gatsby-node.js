@@ -1,6 +1,11 @@
-const { languages } = require('./gatsby-config');
+let languages = require('./gatsby-config').languages;
 
 exports.createPages = ({ actions }) => {
+  if (!Array.isArray(languages)) {
+    console.warn('No languages found in gatsby-config.js, defaulting to empty array');
+    languages = [];
+  }
+  
   const { createRedirect } = actions;
 
   // Get all languages from gatsby-config.js
