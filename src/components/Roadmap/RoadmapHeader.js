@@ -1,4 +1,4 @@
-import { Button, mq, OutlinkSVG, Typography } from '@ensdomains/thorin_next';
+import { mq, Typography } from '@ensdomains/thorin_next';
 import React from 'react';
 import styled, { css } from 'styled-components';
 
@@ -33,16 +33,7 @@ export default function RoadmapHeader() {
                     ENS Labs roadmap
                 </Typography>
             }
-            trailing={
-                <Button
-                    suffix={<OutlinkSVG />}
-                    as="a"
-                    href="https://ens.canny.io"
-                    target="_blank"
-                >
-                    Feature requests
-                </Button>
-            }
+            trailing={null}
         />
     );
 }
