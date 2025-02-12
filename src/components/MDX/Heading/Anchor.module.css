@@ -1,0 +1,39 @@
+.anchor {
+  position: relative;
+}
+
+.iconContainer {
+  --size: 25px;
+  display: hidden;
+  position: absolute;
+  margin-left: calc(-1 * var(--size) * 1.5);
+  margin-top: 0.25rem;
+
+  opacity: 0;
+  transition: opacity 0.2s, box-shadow 0.2s;
+
+  background-color: var(--ens-light-blue);
+  border-radius: 4px;
+}
+
+.anchor:hover .iconContainer {
+  opacity: 1;
+}
+
+.iconContainer:hover {
+  box-shadow: 0 0 0 2px var(--ens-blue);
+}
+
+.icon {
+  width: var(--size);
+  height: var(--size);
+  stroke: var(--ens-blue);
+
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .iconContainer {
+    display: block;
+  }
+}
