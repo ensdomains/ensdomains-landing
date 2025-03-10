@@ -1,0 +1,10 @@
+{
+    "slug": "template",
+    "cover": "https://mirror-media.imgix.net/publication-images/ixUWm-C6FTIi4Tg6IQ3Z8.jpeg?height=600&width=1200&h=600&w=1200&auto=compress",
+    "title": "Template Blog Post",
+    "description": "This is a template blog post.",
+    "date": "2023-08-28",
+    "tags": ["template"],
+    "authors": ["luc.eth"],
+    "draft": true
+}

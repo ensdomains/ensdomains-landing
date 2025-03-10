@@ -1,7 +1,7 @@
 import { clsx } from 'clsx'
 
 import { Carousel } from '~/components/Carousel/Carousel'
-import { ColorCards } from '~/components/ColorCards/ColorCards'
+import { ColorCardsWithPath } from '~/components/ColorCards/ColorCards'
 import { FeaturePreview } from '~/components/FeaturePreview/FeaturePreview'
 import { Header } from '~/components/Header/Header'
 import { DappsAnimation } from '~/components/home/animations/DappsAnimation/DappsAnimation'
@@ -55,7 +55,13 @@ const partners: PartnerEntry[] = [
   },
 ]
 
-export default async function Home({ params: { lang = fallbackLng } }: { params: { lang?: Language } }) {
+export default async function Home(props: { params: Promise<{ lang?: Language }> }) {
+  const params = await props.params
+
+  const {
+    lang = fallbackLng,
+  } = params
+
   const { t } = await useTranslation(lang, 'translation')
 
   return (
@@ -72,7 +78,6 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
       <section className={clsx(ui['page'], styles.mainSection)}>
         <SearchInput
           placeholder={t('home.hero.input.placeholder')}
-          caption={t('home.hero.input.caption')}
           viewText={t('home.hero.input.view')}
           registerText={t('home.hero.input.register')}
           invalidText={t('home.hero.input.invalid')}
@@ -148,7 +153,7 @@ export default async function Home({ params: { lang = fallbackLng } }: { params:
             </p>
           </div>
           <div className={styles.cardsSection}>
-            <ColorCards
+            <ColorCardsWithPath
               cards={[
                 {
                   title: t('home.gyow.ens-app.title'),

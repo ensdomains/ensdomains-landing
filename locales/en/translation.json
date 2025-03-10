@@ -14,7 +14,7 @@
       "text": "For every dreamer, creator, and change-maker tired of the old internet, Web3 is here. ENS is more than a protocol - it's a commitment to a better web, built for everyone.",
       "input": {
         "caption": "Register your name today",
-        "placeholder": "Find your name",
+        "placeholder": "Register your name",
         "register": "Register",
         "view": "View",
         "invalid": "Invalid"
@@ -145,6 +145,31 @@
         "cta": {
           "learn": "Learn More"
         }
+      }
+    }
+  },
+  "blog": {
+    "hero": {
+      "tag": "Blog",
+      "title": "Newest articles"
+    },
+    "meta": {
+      "description": "Newest articles"
+    },
+    "tag": {
+      "hero": {
+        "tag": "Blog Tag"
+      },
+      "meta": {
+        "description": "View all {{tag}} posts"
+      }
+    },
+    "author": {
+      "hero": {
+        "tag": "Blog Author"
+      },
+      "meta": {
+        "description": "View all posts by {{author}}"
       }
     }
   },

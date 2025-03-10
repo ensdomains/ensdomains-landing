@@ -10,34 +10,58 @@ import { useTranslation } from '~/i18n/useTranslation'
 import { PageProps } from '~/utils/types'
 import { Navbar } from '~/components/Navbar/Navbar'
 import { Footer } from '~/components/Footer/Footer'
-export { generateStaticParams } from '~/utils/getStatic'
+import { BASE_URL, createMetadata } from '~/utils/metadata'
+import ogImage from 'public/og-image.png'
 
-export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
+export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
+  const params = await props.params
   const { t } = await useTranslation(params.lang, 'translation')
 
-  return {
-    title: 'ENS',
-    description: t('seo.description'),
-    applicationName: 'ENS',
-    openGraph: {
-      url: 'https://ens.domains',
-      type: 'website',
-      title: 'ENS',
-      siteName: 'ENS',
-      description: t('seo.description'),
-      images: 'http://ens.domains/og-image.png',
+  return createMetadata({
+    title: {
+      template: '%s | ENS',
+      default: 'ENS',
     },
-  }
+    description: t('seo.description'),
+    path: '/',
+  }, undefined, {
+    openGraph: {
+      images: [
+        {
+          url: new URL(ogImage.src, BASE_URL).toString(),
+          width: ogImage.width,
+          height: ogImage.height,
+        },
+      ],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+    },
+  })
 }
 
-export default async function RootLayout({ children, params: { lang = 'en' } }: { children: ReactNode, params: { lang?: Language } }) {
+export const viewport = {
+  themeColor: '#0080bc',
+}
+
+export default async function RootLayout(props: { children: ReactNode, params: Promise<{ lang?: Language }> }) {
+  const params = await props.params
+
+  const {
+    lang = 'en',
+  } = params
+
+  const {
+    children,
+  } = props
+
   const { t } = await useTranslation(lang, 'translation')
 
   const footerItems = [
     {
       title: t('footer.community'),
       entries: [
-        { title: t('footer.blog'), link: 'https://blog.ens.domains' },
         { title: t('footer.feedback'), link: 'https://docs.google.com/forms/d/e/1FAIpQLSfDzIszteoaqiayxUCpFLK1AgigoASHIPcsxFg8PZoS6R6Uzw/viewform?usp=sf_link' },
         {
           title: t('footer.discord'),

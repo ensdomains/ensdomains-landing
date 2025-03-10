@@ -1,8 +1,24 @@
-/**
- * @type {import('next').NextConfig}
- */
-const config = {
-    output: 'export',
-};
+import nextMDX from '@next/mdx'
+import { remarkPlugins, rehypePlugins, recmaPlugins } from './src/mdx/index.mjs'
 
-export default config;
+/** @type {import('@next/mdx').NextMDXOptions} */
+const mdxOptions = {
+  options: {
+    remarkPlugins,
+    rehypePlugins,
+    recmaPlugins,
+  },
+}
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  images: {
+    unoptimized: true,
+  },
+}
+
+const withMDX = nextMDX(mdxOptions)
+
+export default withMDX(nextConfig)
