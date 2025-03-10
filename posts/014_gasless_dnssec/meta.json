@@ -1,0 +1,8 @@
+{
+  "slug": "gasless-dnssec",
+  "title": "Gasless DNSSEC on Mainnet",
+  "description": "DNS names can now be ENS-enabled for free, without any onchain transactions.",
+  "date": "2024-01-29",
+  "tags": [],
+  "authors": ["gregskril.eth"]
+}

@@ -1,0 +1,49 @@
+gm to the ENS community,
+
+Esk3nder.eth here, Head of Product at ENS Labs. I'm excited to update you on our ENSv2 initiative, which we [announced](https://blog.ens.domains/post/ensv2) back in May 2024. As a quick refresher, ENSv2 is our ambitious plan to extend ENS to Layer 2 while reimagining the protocol from the ground up. Since 2017, ENS has become a cornerstone of crypto infrastructure, boasting millions of .eth names and thousands of ecosystem integrations. But ENSv2 isn't just about L2 expansion; it's about leveraging seven years of experience and technological advancements to make ENS more accessible, decentralized, and powerful.
+
+We hope this update can provide you with an understanding of our research process to date, and where we currently stand in the ENSv2 L2 expansion journey. As always, we are here to answer any questions and feedback– thank you for your patience and support!
+
+## Our Research Journey
+
+The ENSv2 project began with a fundamental question: "What would ENS become if we reimagined it from the ground up today?" Feeling constrained by mainnet's limitations on user experience, we embarked on a survey of the ecosystem. We engaged with builders across the space and, after a productive team offsite and internal discussions, aligned on extending ENS to a Layer 2.
+
+Over the past few months, we've immersed ourselves in the L2 ecosystem, consulting with a diverse range of stakeholders - from L2 teams and RaaS providers to infrastructure companies and early-stage startups. We invited many of them to an "ENS Unconference" during EthCC to discuss the technical hurdles and opportunities of ENSv2. We've also uploaded the talks to [Youtube](https://www.youtube.com/@ENSdomains/videos) for those who wish to follow along at home! Throughout this process, we've maintained a focus on six key criteria (listed below in no particular order) that act as our North Star, helping us formalize our process as we navigate the Layer 2 landscape.
+
+1. EVM Compatibility
+2. CCIP-read support
+3. Open Source
+4. Exit to L1
+5. Sequencer Decentralisation
+6. Finality
+
+## Where We Stand: Three Promising Paths
+
+Ok so cut to the chase! Alright alright, so we've narrowed our focus to three main options, which are in no particular order:
+
+1. A Public ZK Chain
+   - This option involves extending ENS directly onto existing public ZK chains, like [Scroll](https://scroll.io/) and [Taiko](https://taiko.xyz/). Alternatively, we could leverage an Optimistic L2 with ZK proving capabilities, similar to what Succinct [recently demonstrated](https://youtu.be/J7tjDoWv6es?si=MZCadA_kDgjJQ5xY) (OP+SP1) at [Frontiers](https://frontiers.paradigm.xyz/). This approach would require the least amount of chain development and long-term maintenance costs, but to some degree sacrifices the independence of ENS governance to the public chain.
+2. Our Own Instance of a ZK Chain:
+   - This approach involves deploying our own instance of an existing ZK chain stack. A recent example of this approach was Status' recent [announcement](https://our.status.im/linea-partnership-status-network/) that they were partnering with [Linea](https://linea.build/) to launch their own instance of the Linea stack. This option affords the team greater flexibility while still benefiting from proven technology. The flipside is the effort to develop, launch and maintain the separate L2 instance.
+3. zkVM (Special Purpose Rollup):
+   - This approach involves developing a custom zkVM (zero-knowledge Virtual Machine) specifically optimized for ENS operations. We're exploring this option in collaboration with [Axiom](https://www.axiom.xyz/), who are helping us develop a zkVM prototype. By optimizing the VM, you can make ZK integrations much more efficient. This decreases the proving costs and lets you generate proofs more often, drastically lowering the finality times. However, it represents the most substantial departure from our current architecture and would require the most extensive development and migration effort.
+
+## The Roads Not Taken
+
+You might have noticed the absence of purely optimistic chains from our list of options. While chains like [Arbitrum](https://arbitrum.io/) and [Base](https://www.base.org/) currently [dominate](https://l2beat.com/scaling/summary) Layer 2 economic activity, proving their product-market fit and battle-tested technical stacks, this omission is deliberate and ties back to our sixth criterion: Finality. Finality, in this context, refers to an agreed-upon checkpoint where all previous blocks are considered irreversible.
+
+In an Optimistic Rollup, state is published to mainnet without immediate proof of validity. This initiates a "challenge window" - typically 7 days - during which the proposed state can be contested before being considered final. ZK rollups, in contrast, utilize "ZK proofs" to immediately attest to the validity of every single transaction that has been executed, batched and then sent to the L1 for final settlement. ZK finality tends to be in a range from 2-24 hours, compared to the time of the "challenge window", which again is typically set to 7 days. This rapid finality is crucial for ENS to prevent rolling back name ownership, a principle enshrined in the [ENS DAO constitution](https://docs.ens.domains/dao/constitution). For a deeper dive into the differences between Optimistic and ZK rollups, [StarkWare](https://starkware.co/) has published an [excellent explainer](https://starkware.co/blog/zk-rollups-explained/zk-rollups-vs-optimistic-rollups/#:~:text=ZK%2Drollups%3A%20Unlike%20optimistic%20rollups,been%20executed%20and%20batched%20together.).
+
+However, we're not dismissing optimistic technology entirely. As seen in our first option, hybrid solutions that combine optimistic chains with ZK proving remain on the table. As we continue our research and development, we remain open to innovations across the L2 ecosystem that align with our core criteria and values.
+
+## Next Steps
+
+We've learned a lot these past several months, and want to thank all the teams and individuals who have contributed to this process. Thanks to all their help, we're starting to move from theory to practice, and here's what's next:
+
+1. Benchmarking and Testing: We know our three primary paths and are going to test their performance, cost-efficiency, and scalability so we can use concrete data to inform our decision.
+2. Technical Refinement: Our team is hard at work refining the ENSv2 architecture, including the hierarchical registry system and updated Universal Resolver.
+3. Funding Proposal: To support this crucial work, we're preparing a funding proposal for the ENS DAO that will broadly outline the resources required to bring ENSv2 to fruition.
+4. Community Engagement: Your input is invaluable as we navigate this journey, we're continuing to host community calls and AMA sessions to dive deeper and hear your thoughts.
+5. Final Recommendation: Our goal is to present a final recommendation for ENSv2's L2 strategy in the coming months.
+
+Thank you for reading to the end, I hope you found this informative and exciting!

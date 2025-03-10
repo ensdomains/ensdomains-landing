@@ -1,0 +1,38 @@
+.author {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--ens-medium-blue);
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+.author-small.author {
+    font-size: 16px;
+    gap: 0.25rem;
+}
+
+.author:hover {
+    color: var(--ens-blue);
+}
+
+.author-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    background-color: var(--ens-dark-blue);
+}
+
+.author-small .author-avatar {
+    width: 14px;
+    height: 14px;
+}
+
+.separator {
+    color: var(--ens-medium-blue);
+    font-size: 18px;
+}
+
+.separator-small {
+    font-size: 16px;
+}

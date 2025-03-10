@@ -1,0 +1,45 @@
+name: 🔍 Deploy Search
+
+on:
+  push:
+    branches: [master]
+
+env:
+  NODE_OPTIONS: '--max_old_space_size=8192'
+  MEILISEARCH_URL: 'https://search.ens.dev'
+  MEILISEARCH_INDEX: 'ens-landing-posts'
+  MEILISEARCH_IMPORTER_VERSION: 'v0.2.2'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Tools & Dependencies
+        uses: ./.github/actions/install
+
+      - name: Build
+        run: NODE_ENV=production pnpm run build
+
+      - name: Download meilisearch-importer
+        run: |
+          wget https://github.com/meilisearch/meilisearch-importer/releases/download/${{ env.MEILISEARCH_IMPORTER_VERSION }}/meilisearch-importer-x86_64-unknown-linux-gnu.tar.xz
+          tar xf meilisearch-importer-x86_64-unknown-linux-gnu.tar.xz
+          chmod +x meilisearch-importer
+
+      - name: Import search data
+        run: |
+          ./meilisearch-importer \
+            --url ${{ env.MEILISEARCH_URL }} \
+            --index ${{ env.MEILISEARCH_INDEX }} \
+            --primary-key slug \
+            --api-key ${{ secrets.SEARCH_TOKEN }} \
+            --files out/blog/search.json

@@ -144,9 +144,25 @@
         height: auto;
         justify-content: space-between;
     }
-    .nav[data-opaque='true'] {
+    .nav::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        bottom: -20px;
+        z-index: -1;
+        transition: all 0.2s ease-in-out;
         background: linear-gradient(180deg, #fff 0 5%, hsla(0,0%,100%,0) 90%);
         backdrop-filter: blur(4px);
+        mask: linear-gradient(
+            to top, 
+            transparent 0%,
+            black 35% 100%,
+            transparent 100%
+        );
+        opacity: 0;
+    }
+    .nav[data-opaque='true']::before {
+        opacity: 1;
     }
     .langWithApp, .links {
         gap: 28px;

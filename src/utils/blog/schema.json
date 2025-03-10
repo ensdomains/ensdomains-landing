@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "slug": {
+      "type": "string",
+      "description": "Slug of the post"
+    },
+    "cover": {
+      "type": "string",
+      "description": "Cover Image of the post"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the post"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the post"
+    },
+    "date": {
+      "type": "string",
+      "description": "Date of the post",
+      "default": ""
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags for the post",
+      "default": []
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "ENS Names of the authors"
+    },
+    "youtube": {
+      "type": "string",
+      "description": "YouTube video ID"
+    },
+    "draft": {
+      "type": "boolean",
+      "description": "Draft status of post",
+      "default": false
+    }
+  },
+  "required": ["slug", "title", "description", "authors"],
+  "additionalProperties": false
+}

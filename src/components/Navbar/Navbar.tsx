@@ -2,7 +2,7 @@
 
 import { clsx } from 'clsx'
 import Link from 'next/link'
-import { CSSProperties, FC, useState } from 'react'
+import { CSSProperties, FC, useRef, useState } from 'react'
 import { ExternalLink } from 'react-external-link'
 
 import { getLangPrefix } from '~/i18n/langPrefix'
@@ -11,9 +11,9 @@ import { fallbackLng, Language } from '~/i18n/settings'
 import ui from '~/styles/ui.module.css'
 // import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import styles from './Navbar.module.css'
-import { NavbarFade } from './NavbarFade'
 import { EnsNavIcon } from '../icons'
 import { usePathname } from 'next/navigation'
+import { useScrollAttr } from '~/hooks/useScrollAttr'
 
 type Links = {
   blog: string
@@ -28,17 +28,19 @@ export const Navbar: FC<{ lang: Language, links: Links }> = ({
   links,
   lang = fallbackLng,
 }) => {
+  const navRef = useRef<HTMLDivElement>(null)
+  useScrollAttr(navRef, 'data-opaque', 10)
+
   const langPrefix = getLangPrefix((lang as Language) || fallbackLng)
 
-  const items = Object.entries(links).filter(([k]) => !['blog', 'roadmap', 'launch'].includes(k))
+  const items = Object.entries(links).filter(([k]) => !['roadmap', 'launch'].includes(k))
 
   const [isOpen, setOpen] = useState(false)
 
   const pathname = usePathname()
 
   return (
-    <nav id="nav" data-open={isOpen} className={clsx(ui.flex, styles.nav)}>
-      <NavbarFade />
+    <nav id="nav" data-open={isOpen} className={clsx(ui.flex, styles.nav)} ref={navRef}>
       <div className={clsx(ui.flex, ui['flex-row'], styles.mobileMenu)}>
         <Link href={langPrefix || '/'} onClick={() => setOpen(false)}>
           <EnsNavIcon
@@ -98,9 +100,6 @@ export const Navbar: FC<{ lang: Language, links: Links }> = ({
               </Link>
             )
           })}
-          <ExternalLink href="https://blog.ens.domains" className={styles.link}>
-            {links.blog}
-          </ExternalLink>
           <ExternalLink href="https://roadmap.ens.domains/roadmap" className={styles.link}>
             {links.roadmap}
           </ExternalLink>
