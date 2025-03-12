@@ -9,7 +9,6 @@ runs:
       with:
         run_install: false
         standalone: true
-        version: 9
 
     - name: Setup Node
       uses: actions/setup-node@v4
