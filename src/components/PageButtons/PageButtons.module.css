@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .dots {
@@ -11,13 +11,13 @@
   align-items: center;
   justify-content: center;
   aspect-ratio: 1;
-  
+
   height: 57px;
   min-width: 57px;
   border-radius: 4px;
   font-size: 18px;
   font-weight: 500;
-  
+
   color: var(--ens-magenta);
   background-color: var(--ens-gray-2);
 }
@@ -41,7 +41,7 @@
 }
 
 .button:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
 
 .buttonCurrent {
@@ -51,7 +51,17 @@
   background-color: var(--ens-magenta);
 }
 
+@media (min-width: 360px) {
+  .container {
+    gap: 30px;
+  }
+}
+
 @media (min-width: 640px) {
+  .container {
+    gap: 40px;
+  }
+
   .dots {
     height: 77px;
     min-width: 77px;

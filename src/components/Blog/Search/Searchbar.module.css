@@ -11,8 +11,8 @@
   border: 1px solid var(--ens-magenta);
 
   background-color: var(--ens-white);
-  font-size: 30px;
-  padding: 20px;
+  font-size: 20px;
+  padding: 16px;
   outline: none;
 }
 
@@ -23,17 +23,36 @@
 
 .searchbar {
   position: relative;
-    
+
   max-width: 500px;
   width: 100%;
 }
 
 .searchIcon {
   position: absolute;
-  right: 10px;
+  right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  height: 30px;
+  width: fit-content;
+  height: 20px;
 
   color: var(--ens-magenta);
+}
+
+@media (min-width: 360px) {
+  .input {
+    font-size: 23px;
+    padding: 16px;
+  }
+}
+
+@media (min-width: 512px) {
+  .input {
+    font-size: 30px;
+    padding: 20px;
+  }
+  .searchIcon {
+    right: 28px;
+    height: 30px;
+  }
 }
