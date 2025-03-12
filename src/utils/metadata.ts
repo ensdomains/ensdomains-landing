@@ -12,7 +12,7 @@ export const BASE_URL = new URL('https://ens.domains')
 const deepmerge = deepmergeCustom({
   enableImplicitDefaultMerging: true,
   mergeArrays(values, utils, meta) {
-    if (meta.key === 'images') {
+    if (meta?.key === 'images') {
       return values.at(-1)
     }
   },
@@ -38,12 +38,12 @@ export const createMetadata = (
       canonical: path,
     },
     openGraph: {
-      title,
+      title: title ?? undefined,
       description,
       url: path,
     },
     twitter: {
-      title,
+      title: title ?? undefined,
       description,
     },
   }
