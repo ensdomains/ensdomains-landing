@@ -33,11 +33,11 @@ jobs:
         run: |
           wget https://github.com/meilisearch/meilisearch-importer/releases/download/${{ env.MEILISEARCH_IMPORTER_VERSION }}/meilisearch-importer-x86_64-unknown-linux-gnu.tar.xz
           tar xf meilisearch-importer-x86_64-unknown-linux-gnu.tar.xz
-          chmod +x meilisearch-importer
+          chmod +x ./meilisearch-importer-x86_64-unknown-linux-gnu/meilisearch-importer
 
       - name: Import search data
         run: |
-          ./meilisearch-importer \
+          ./meilisearch-importer-x86_64-unknown-linux-gnu/meilisearch-importer \
             --url ${{ env.MEILISEARCH_URL }} \
             --index ${{ env.MEILISEARCH_INDEX }} \
             --primary-key slug \
