@@ -8,7 +8,7 @@ import { BlogPostAuthor } from './PostAuthor'
 import { getAuthorAssets, getPostAssets } from '~/utils/blog/utils'
 
 export const BlogPostPreview = async ({ post, highlighted = false }: { post: BlogPostMetadataPlus, highlighted?: boolean }) => {
-  const cover = await getPostAssets(post.file)?.['cover-thumb']
+  const cover = await getPostAssets(post.file)?.[highlighted ? 'cover' : 'cover-thumb']
 
   const date = new Date(post.date).toLocaleDateString('en-US', {
     month: 'short',

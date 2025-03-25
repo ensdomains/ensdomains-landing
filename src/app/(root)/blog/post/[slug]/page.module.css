@@ -55,6 +55,11 @@
   border-radius: 4px;
 }
 
+.content video {
+  max-width: 100%;
+  height: auto;
+}
+
 @media (min-width: 768px) {
   .article {
     padding-inline: 95px;
