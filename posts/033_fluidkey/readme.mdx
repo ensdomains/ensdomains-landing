@@ -1,0 +1,27 @@
+We’ve been told that one of the expectations for using ENS on public blockchains is that you can’t be afforded transaction privacy. Right? If you type in an ENS name into a block explorer like Etherscan, click on the resolved address, you can then see all the transactions that address has made and their token balance. We know why this is important: public addresses mean that anyone can verify transactions independently, reducing the need to trust intermediaries, and making fraud and corruption much harder to conceal. But what if you didn’t want to publicly link your digital identity with your public spending habits?
+
+It’s now 2025\. Check your assumptions, anon. With standards like [**stealth addresses**](https://eips.ethereum.org/EIPS/eip-5564) people can tie a public address to a human-readable ENS name _and_ maintain anonymity.
+
+[Fluidkey](https://www.fluidkey.com/), a project focused on privacy-enhanced smart wallets integrates seamlessly with ENS and is a great option if you want to send or receive funds – or even onboard or offboard to a bank account – without leaking an account’s transaction history.
+
+## How Fluidkey Works
+
+A few years ago if you wanted to maintain privacy on Ethereum, you could create a new address for every transaction. Your doctor might get you checked for obsessive compulsive disorder if you were actually able to do this and maintain your sanity. But for the rest of us, we need an easier solution. With Fluidkey, a new smart account is created automatically for each incoming transaction. Stealth addresses mean that external observers cannot link a receiver to a specific payment. Every time someone sends you funds, they generate a new address that only you can access, preventing blockchain explorers from associating payments with your ENS name.
+
+It’s perhaps easiest just to see what this looks like in practice. In the below recording, you can see the controller address for my Fluidkey ENS name changes everytime I refresh the page.
+
+<video src="/assets/blog/etherscan.mp4" controls />
+
+Also, unlike other privacy-focused protocols, stealth addresses with Fluidkey do not pool funds with other users. This eliminates the risk of unknowingly mixing legitimate funds with illicit ones, keeping transactions transparent but unlinkable.
+
+## Create a subname and DNS with Fluidkey
+
+One of the major benefits of Fluidkey is that even though each transaction goes to a different stealth address, Fluidkey consolidates all these smart accounts into a single dashboard with an ENS subname. Users get the convenience of managing one wallet while receiving the benefits of unlinkable transactions. Fluidkey is fully self-custodial, which means that only you can access your funds with your private keys. If you need to export the private keys, you can even do so without the Fluidkey interface at recovery.fluidkey.com.
+
+To get started, visit app.fluidkey.com and create a new account using your email, phone number, Farcaster profile, or by connecting a wallet. As soon as you create an account, you can rename your address so that people have a convenient way to send you funds in the future.
+
+Fluidkey also implemented DNS records with ENS, which means you can share a browser link for someone to send you money. Here’s what that looks like in action.
+
+<video src="/assets/blog/fluidkey.mp4" controls />
+
+Next time someone says to you that they don’t use ENS because of privacy concerns, you can share your Fluidkey ENS subname and show the power of stealth addresses in action.
