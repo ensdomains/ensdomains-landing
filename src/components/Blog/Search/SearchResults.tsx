@@ -13,23 +13,25 @@ import clsx from 'clsx'
 import { useDebounce } from '~/utils/useDebounce'
 
 const SearchHit = ({ entry }: { entry: SearchEntry }) => {
-  const { data, isLoading, error } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ['post', entry.slug, 'metadata'],
     queryFn: () => fetchPostMetadata(entry.slug),
   })
 
   if (isLoading) return <SearchHitSkeleton />
-  if (error) return <></>
+  if (isError || !data) return <></>
 
   return (
     <Link href={`/blog/post/${entry.slug}`} className={styles.hit}>
-      <Image
-        src={data.assets.post['cover-thumb']}
-        alt={entry.title}
-        height={67.5}
-        width={120}
-        className={styles['hit-image']}
-      />
+      {data.assets.post['cover-thumb'] && (
+        <Image
+          src={data.assets.post['cover-thumb']}
+          alt={entry.title}
+          height={67.5}
+          width={120}
+          className={styles['hit-image']}
+        />
+      )}
       <div className={styles['hit-data']}>
         <div className={styles['hit-title']}>{entry.title}</div>
         <div className={styles['hit-authors']}>
@@ -66,7 +68,7 @@ const SearchHitSkeleton = () => {
 export const SearchResults = ({ search }: { search: string }) => {
   const debouncedSearch = useDebounce(search, 500)
 
-  const { data, isLoading, error } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ['search', debouncedSearch],
     queryFn: () => getSearchResults(debouncedSearch),
   })
@@ -84,7 +86,7 @@ export const SearchResults = ({ search }: { search: string }) => {
       </div>
     )
 
-  if (error) return <></>
+  if (isError || !data) return <></>
 
   if (!data.hits.length)
     return (

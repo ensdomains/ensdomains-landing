@@ -23,6 +23,7 @@
     },
     "typescript.tsdk": "node_modules/typescript/lib",
     "stylelint.validate": ["css"],
+    "eslint.format.enable": true,
     "json.schemas": [
         {
             "fileMatch": [ "posts/**/meta.json" ],

@@ -148,7 +148,7 @@ async function processAuthorData(author: string): Promise<AuthorData> {
   const avatar = await attemptAvatarFetch(author, ensData)
 
   return {
-    avatar,
+    avatar: avatar ?? undefined,
     records,
   }
 }

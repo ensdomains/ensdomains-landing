@@ -13,7 +13,8 @@ import { Footer } from '~/components/Footer/Footer'
 import { BASE_URL, createMetadata } from '~/utils/metadata'
 import ogImage from 'public/og-image.png'
 
-export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
+export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
+  const params = await props.params
   const { t } = await useTranslation(params.lang, 'translation')
 
   return createMetadata({
@@ -44,7 +45,17 @@ export const viewport = {
   themeColor: '#0080bc',
 }
 
-export default async function RootLayout({ children, params: { lang = 'en' } }: { children: ReactNode, params: { lang?: Language } }) {
+export default async function RootLayout(props: { children: ReactNode, params: Promise<{ lang?: Language }> }) {
+  const params = await props.params
+
+  const {
+    lang = 'en',
+  } = params
+
+  const {
+    children,
+  } = props
+
   const { t } = await useTranslation(lang, 'translation')
 
   const footerItems = [

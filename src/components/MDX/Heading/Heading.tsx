@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { FC, PropsWithChildren, ReactHTML } from 'react'
+import { ComponentType, FC, PropsWithChildren } from 'react'
 
 import { Anchor } from './Anchor'
 import clsx from 'clsx'
@@ -12,7 +12,7 @@ export const Heading: FC<
     className?: string
   }
 > = ({ level = 2, children, id, anchor = true, ...properties }) => {
-  const Component = `h${level}` as any as ReactHTML['h2']
+  const Component = `h${level}` as any as ComponentType<React.HTMLAttributes<HTMLHeadingElement>>
 
   return (
     <>
