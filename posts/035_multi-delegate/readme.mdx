@@ -1,0 +1,29 @@
+-   Today, DAO vote delegation is not dynamic, and users rarely update their delegations.
+-   Multi-Delegate Manager (MDM) simplifies and streamlines the delegation process for token voters as well as the governance operations for the operators of web3 brands.
+-   With MDM, ENS token holders can easily delegate their voting power to multiple delegates without splitting up their tokens.
+
+Since 2017, the DAO landscape has transformed dramatically: from “The DAO” to the present day where most of the leading crypto protocols and teams use DAOs to manage treasuries and make collective decisions.
+
+One of the key unlocks in DAO governance is [delegation](https://medium.com/compound-finance/compound-governance-5531f524cf68), which allows token holders to delegate their voting power to an individual or group to vote on their behalf. While the option to delegate has certainly been transformative in increasing voting participation, it is typically limited to only one address at a time.
+
+To solve this problem, ENS Labs developed the **Multi-Delegate Manager (MDM)**, a smart contract for ENS token holders to delegate their voting power across multiple delegates with as little friction as possible. The MDM is built on Ethereum and leverages proxy contracts to hold and delegate voting power on behalf of the token holder.
+
+With the MDM, any ENS token holder can now:
+
+-   Easily delegate their voting power to multiple delegates without splitting up their tokens.
+-   Dynamically change their list of delegates or reallocate their voting power.
+-   Retrieve their tokens (fully or partially) when needed with a single call.
+
+<video src="/assets/blog/multi-delegate-manager.mp4" controls />
+
+We believe the MDM to be the next unlock in democratizing DAO governance. With more flexibility in delegation, more voices and perspectives can participate in governance.
+
+While various decentralized voting systems exist within Ethereum and the broader web3 ecosystem, the ENS Multi-Delegate Manager uniquely focuses on maximizing delegation flexibility and efficiency for token holders. The system's [proxy contract mechanism](https://github.com/ensdomains/governance-contracts/blob/master/contracts/ERC20MultiDelegate.sol) differentiates it from traditional delegation models in the market today. It is the maximally efficient use of gas on Ethereum (one tx\! 🤯) and natively integrates ENS for improved useability.
+
+The MDM is open source, so any DAO can add multi-delegation to their token voting and delegation strategies. Here are the core components that make this all possible:
+
+-   **ERC20Votes Extension**: This is a specific extension for ERC20 tokens that allows them to be used in governance and voting, enabling the tracking of each token's voting power.
+-   **ERC1155 Standard**: A flexible token standard from OpenZeppelin that supports both fungible and non-fungible tokens, enabling efficient batch transfers and interactions.
+-   **Proxy Contracts for Delegation**: For each delegate, a specialized proxy contract is created. These proxy contracts act as managers for the delegated tokens, handling the specific details of each delegation. This setup allows for flexible and dynamic management of delegates without the need for direct interaction with the actual tokens.
+
+If you have ENS tokens and want to delegate to more ENS holders, or reallocate voting power, visit delegate.ens.domains.
