@@ -7,7 +7,7 @@ import type { Color } from '~/utils/types'
 import { clsx } from 'clsx'
 import { ExternalLink } from 'react-external-link'
 
-const getSquareVars = (color: Color): CSSProperties => {
+const getSquareVars = (color: Color): CSSProperties | undefined => {
   switch (color) {
     case 'ens-green':
       return {

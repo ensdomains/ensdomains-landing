@@ -6,7 +6,7 @@ import { YoutubeEmbed } from './components/YoutubeEmbed/YoutubeEmbed'
 import { Link } from './components/MDX/Link'
 
 // This file is required to use MDX in `app` directory.
-// eslint-disable-next-line @eslint-react/hooks-extra/no-redundant-custom-hook
+// eslint-disable-next-line @eslint-react/hooks-extra/no-useless-custom-hooks
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     a: Link,
