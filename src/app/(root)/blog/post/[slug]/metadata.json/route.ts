@@ -4,7 +4,7 @@ import { BlogPostMetadataPlus, getPostBySlug, getPostsMetadata } from '~/utils/b
 import { getAuthorAssets, getPostAssets } from '~/utils/blog/utils'
 
 type PageProperties = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export type PostMetadata = BlogPostMetadataPlus & {
@@ -30,7 +30,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function GET(_request: NextRequest, { params }: PageProperties) {
+export async function GET(_request: NextRequest, props: PageProperties) {
+  const params = await props.params
   const postData = await getPostBySlug(params.slug)
   const postAssets = getPostAssets(postData.file)
 

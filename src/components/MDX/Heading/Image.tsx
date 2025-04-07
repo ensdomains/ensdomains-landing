@@ -8,8 +8,6 @@ type ImageProperties = NextImageProperties & {
   size?: ImageVariant
 }
 
-export const Image = ({ size = 'full', ...properties }: ImageProperties) => {
-  return (
-    <NextImage {...properties} className={clsx(styles.image)} />
-  )
+export const Image = (properties: ImageProperties) => {
+  return <NextImage {...properties} className={clsx(styles.image)} />
 }

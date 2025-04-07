@@ -2,7 +2,7 @@ import { useEventListener } from '~/utils/useEventListener'
 import { useEffect, useCallback } from 'react'
 
 export const useScrollAttr = (
-  ref: React.RefObject<HTMLElement>,
+  ref: React.RefObject<HTMLElement | null>,
   attribute: string,
   scrollThreshold: number,
 ) => {

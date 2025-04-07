@@ -4,6 +4,8 @@ import { getPostAssets } from '~/utils/blog/utils'
 import { BASE_URL } from '~/utils/metadata'
 import ogImage from 'public/og-image.png'
 
+export const dynamic = 'force-static'
+
 export const GET = async () => {
   const feed = new Feed({
     title: 'ENS Blog',
@@ -37,7 +39,7 @@ export const GET = async () => {
           link: new URL('/blog/author/' + author, BASE_URL).toString(),
         }
       }),
-      image: postCoverThumb.src,
+      image: postCoverThumb?.src,
     })
   }
 

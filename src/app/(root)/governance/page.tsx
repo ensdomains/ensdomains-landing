@@ -18,7 +18,8 @@ import type { Metadata } from 'next'
 import { StatsCounter } from '~/components/animation/StatsCounter'
 import stats from '~/stats/grants.json'
 
-export const generateMetadata = async ({ params }: PageProps): Promise<Metadata> => {
+export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
+  const params = await props.params
   const { t } = await useTranslation(params.lang, 'translation')
 
   return {
@@ -27,11 +28,12 @@ export const generateMetadata = async ({ params }: PageProps): Promise<Metadata>
   }
 }
 
-export default async function Governance({
-  params,
-}: {
-  params: { lang: Language }
-}) {
+export default async function Governance(
+  props: {
+    params: Promise<{ lang: Language }>
+  },
+) {
+  const params = await props.params
   const { t } = await useTranslation(params.lang, 'translation')
 
   return (

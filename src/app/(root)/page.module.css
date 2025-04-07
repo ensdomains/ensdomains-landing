@@ -1,50 +1,50 @@
 .title {
-    gap: 50px;
-    margin-bottom: 80px;
+  gap: 50px;
+  margin-bottom: 80px;
 }
 
 .partnersContainer {
-    padding: 16px 0;
-    gap: 40px;
-    border-top: 1px solid var(--ens-gray-2);
+  padding: 16px 0;
+  gap: 40px;
+  border-top: 1px solid var(--ens-gray-2);
 }
 
 .gtwSection {
-    gap: 80px;
+  gap: 80px;
 }
 
 .mainSection {
-    padding-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 .ownershipVideo {
-    width: 151px;
+  width: 151px;
 }
 
 .cardsSection {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 
 @media (max-width: 512px) {
-    .header {
-        padding-top: 152px;
-    }
+  .header {
+    padding-top: 152px;
+  }
 }
 
 @media (min-width: 768px) {
-    .gtwSection {
-        gap: 40px;
-    }
-    .ownershipVideo {
-        width: 515px;
-    }
+  .gtwSection {
+    gap: 40px;
+  }
+  .ownershipVideo {
+    width: 515px;
+  }
 }
 
 @media (min-width: 1280px) {
-    .gtwSection {
-        gap: 80px;
-    }
-    .ownershipVideo {
-        width: 901px;
-    }
+  .gtwSection {
+    gap: 80px;
+  }
+  .ownershipVideo {
+    width: 901px;
+  }
 }

@@ -74,9 +74,9 @@ export const CrossFadeImage = ({
       </div>
       {typeof children === 'function'
         ? children({
-          alt: sources[currentImageIndex].alt,
-          index: currentImageIndex,
-        })
+            alt: sources[currentImageIndex].alt,
+            index: currentImageIndex,
+          })
         : undefined}
     </>
   )

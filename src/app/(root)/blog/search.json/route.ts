@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { getPostsMetadata, importPost } from '~/utils/blog/posts'
 
+export const dynamic = 'force-static'
+
 export async function GET() {
   const postMetadata = await getPostsMetadata()
 
