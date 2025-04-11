@@ -1,6 +1,15 @@
+.wrapper > * + * {
+  margin-top: 10px;
+}
+
 .grid {
   display: grid;
   gap: 10px;
+}
+
+.bgGraphic {
+  display: block;
+  width: 100%;
 }
 
 .box {

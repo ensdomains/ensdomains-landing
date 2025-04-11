@@ -1,3 +1,7 @@
+.header {
+  margin-top: 72px;
+}
+
 .title {
   gap: 50px;
   margin-bottom: 80px;
@@ -25,13 +29,23 @@
   margin-top: 80px;
 }
 
-@media (max-width: 512px) {
+.cardsSection > * + * {
+  margin-top: 10px;
+}
+
+@media (max-width: 520px) {
   .header {
-    padding-top: 152px;
+    padding-top: 16px;
+    margin-top: 72px;
   }
 }
 
 @media (min-width: 768px) {
+  .header {
+    margin-top: 90px;
+    min-height: min(64vh, 700px);
+  }
+
   .gtwSection {
     gap: 40px;
   }
@@ -41,6 +55,12 @@
 }
 
 @media (min-width: 1280px) {
+  .header {
+    margin-top: 100px;
+    min-height: min(64vh, 700px);
+    padding-block: 100px;
+  }
+  
   .gtwSection {
     gap: 80px;
   }

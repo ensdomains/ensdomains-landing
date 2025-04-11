@@ -1,7 +1,7 @@
 import { clsx } from 'clsx'
 
 import { Carousel } from '~/components/Carousel/Carousel'
-import { ColorCards } from '~/components/ColorCards/ColorCards'
+import { ColorCardsWithPath } from '~/components/ColorCards/ColorCards'
 import { FeaturePreview } from '~/components/FeaturePreview/FeaturePreview'
 import { Header } from '~/components/Header/Header'
 import { DappsAnimation } from '~/components/home/animations/DappsAnimation/DappsAnimation'
@@ -78,7 +78,6 @@ export default async function Home(props: { params: Promise<{ lang?: Language }>
       <section className={clsx(ui['page'], styles.mainSection)}>
         <SearchInput
           placeholder={t('home.hero.input.placeholder')}
-          caption={t('home.hero.input.caption')}
           viewText={t('home.hero.input.view')}
           registerText={t('home.hero.input.register')}
           invalidText={t('home.hero.input.invalid')}
@@ -154,7 +153,7 @@ export default async function Home(props: { params: Promise<{ lang?: Language }>
             </p>
           </div>
           <div className={styles.cardsSection}>
-            <ColorCards
+            <ColorCardsWithPath
               cards={[
                 {
                   title: t('home.gyow.ens-app.title'),
