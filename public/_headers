@@ -1,2 +1,2 @@
 /*
-    Content-Security-Policy: script-src 'self' plausible.io jakob.ens.domains https://static.cloudflareinsights.com https://app.intercom.io https://widget.intercom.io https://js.intercomcdn.com;
+    Content-Security-Policy: script-src 'self' ens.domains ensdomains-v2.pages.dev plausible.io jakob.ens.domains https://static.cloudflareinsights.com https://app.intercom.io https://widget.intercom.io https://js.intercomcdn.com;
