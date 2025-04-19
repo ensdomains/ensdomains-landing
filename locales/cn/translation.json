@@ -1,0 +1,314 @@
+{
+  "brand": {
+    "assets": {
+      "description": "ENS的品牌可以使用我们的任何颜色，但我们更喜欢蓝色、黑色和白色。",
+      "guidelines": {
+        "button": "下载品牌PDF",
+        "description": "您可以下载ENS品牌指南的PDF版本，其中包含有关如何使用品牌颜色、资产和排版的详细文档。如果您对我们的指南和您的项目如何对齐有疑问，请随时联系我们。",
+        "title": "使用指南"
+      },
+      "lockup": {
+        "description": "在需要展示完整ENS品牌资产时，请使用完整的锁定标识。这在更横向对齐的资产中也很有用。",
+        "title": "锁定标识"
+      },
+      "palette": {
+        "description": "ENS的品牌可以使用我们的任何颜色。请记住，这些颜色并不是“适用于所有”的。",
+        "primary": {
+          "description": "以下是ENS品牌的主要色彩调色板。",
+          "title": "主要调色板"
+        },
+        "secondary": {
+          "description": "以下是用于创建ENS品牌创意宣传材料的辅助调色板。",
+          "title": "扩展色彩调色板"
+        },
+        "title": "品牌调色板"
+      },
+      "space": {
+        "description": "使用logo时，请确保有足够的清晰空间，以便一切都能呼吸。一个好的经验法则是至少留出ENS符号宽度的1/3。",
+        "title": "清晰空间"
+      },
+      "symbol": {
+        "description": "这是使用ENS品牌资产的主要和首选图标。",
+        "title": "符号"
+      },
+      "title": "品牌资产",
+      "token": {
+        "description": "该图标用于代表ENS作为头像以及$ENS代币。",
+        "title": "图标"
+      }
+    },
+    "button": "下载所有",
+    "extra": {
+      "ecosystem": {
+        "description": "如果您在没有正式合作的情况下构建ENS，您就是生态系统建设者。这可能包括；",
+        "extra": "不鼓励修改logo，但如果是出于创意目的并不禁止。然而，品牌不能用于暗示与ENS DAO或ENS Labs的官方合作关系。",
+        "list": {
+          "1": "将ENS集成到您的产品中，",
+          "2": "为ENS用户设计的创意项目。"
+        },
+        "title": "生态系统"
+      },
+      "partnerships": {
+        "description": "与我们建立正式合作关系意味着联手创造有影响力的解决方案。这可能包括；",
+        "extra": "合作伙伴可以在需要时使用ENS品牌，但不得修改或更改logo。",
+        "list": {
+          "1": "将您的产品集成到ENS或管理应用程序中，",
+          "2": "与ENS DAO或ENS Labs的共同营销活动，",
+          "3": "与ENS DAO或ENS Labs的研发合作。"
+        },
+        "title": "合作伙伴关系"
+      }
+    },
+    "header": {
+      "description": "您可以在生态系统中自由使用ENS品牌，无需许可！但请记住，不要用它来假装自己是ENS、ENS DAO或ENS Labs，或暗示不存在的合作关系。",
+      "title": "ENS品牌"
+    },
+    "links": {
+      "guidelines": "指南",
+      "palettes": "调色板",
+      "symbols": "符号"
+    }
+  },
+  "developers": {
+    "extra": {
+      "bounty": {
+        "cta": {
+          "learn": "了解更多"
+        },
+        "text": "我们将安全放在首位。探索我们的漏洞悬赏计划，为更安全的平台贡献力量，奖励高达250,000美元。",
+        "title": "我们的漏洞悬赏：\n您的安心"
+      },
+      "grants": {
+        "cta": {
+          "apply": "申请",
+          "view": "查看资助"
+        },
+        "stat": {
+          "eth": "以ETH资助",
+          "proposals": "提案",
+          "voters": "投票者"
+        },
+        "text": "有突破性的想法吗？我们的资助旨在支持您在ENS生态系统内的创新项目。",
+        "title": "为游戏规则改变者提供资助"
+      }
+    },
+    "hero": {
+      "cta1": "开发者文档",
+      "cta2": "Github",
+      "tag": "开发者",
+      "text": "加入创新者和开发者的社区，共同打造更好的互联网。无论您是Web3的新手还是经验丰富的专家，ENS都是您通往无信任网络的入口。",
+      "title": "与优秀的团队共同构建"
+    },
+    "resources": {
+      "ccip-read": {
+        "description": "了解CCIP Read（EIP-3668），这是一个跨链互操作性协议，使合约能够通过链下查找检索外部数据。"
+      },
+      "evmgateway": {
+        "description": "探索EVM网关，这是一个使用CCIP-Read跨EVM链获取数据状态证明的通用解决方案。"
+      },
+      "pro": {
+        "description": "深入了解我们全面的开发者文档。",
+        "tag": "ENS合约",
+        "title": "为Web3的巫师们"
+      },
+      "quickstart": {
+        "description": "我们的指南将帮助您快速轻松入门。",
+        "tag": "快速入门指南",
+        "title": "新手在Web3？"
+      },
+      "tg": {
+        "description": "加入我们的开发者Telegram频道，提问并获得有关使用ENS的见解。",
+        "title": "开发者Telegram"
+      },
+      "thorin": {
+        "description": "发现Thorin，这是一个为ENS创建的设计系统，使用React和样式组件。"
+      },
+      "title": "资源"
+    }
+  },
+  "ecosystem": {
+    "hero": {
+      "cta1": "了解更多",
+      "cta2": "集成文档",
+      "subtitle": "新互联网",
+      "tag": "生态系统",
+      "text": "ENS是一个先锋社区，共同塑造更直观和可靠的互联网。它不仅仅是成为Web3的一部分；而是领导Web3。",
+      "title": "受信任的"
+    },
+    "integration": {
+      "foundation": {
+        "description": "加入我们，将您的品牌置于新互联网的前沿。",
+        "title": "构建您的Web3形象"
+      },
+      "resources": {
+        "description": "了解ENS如何通过额外资源来增强您的组织。",
+        "title": "与我们探索"
+      },
+      "title": "准备好集成吗？",
+      "trust": {
+        "description": "信任不是流行词，它是我们的基础。作为一个非营利、DAO治理的协议，我们致力于安全和诚信。",
+        "title": "无与伦比的信任"
+      }
+    },
+    "partner": {
+      "description": "想要合作？与我们的商业发展团队联系，探索合作机会。",
+      "title": "与我们合作"
+    }
+  },
+  "footer": {
+    "blog": "博客",
+    "brand": "品牌",
+    "bugs": "漏洞悬赏",
+    "community": "加入社区",
+    "contact": "联系方式",
+    "discord": "Discord",
+    "ens": "ENS",
+    "feedback": "反馈",
+    "forums": "DAO论坛",
+    "github": "Github",
+    "help": "需要帮助吗？",
+    "jobs": "职位",
+    "ltd": "ENS，版权，2024。保留所有权利。",
+    "privacy-policy": "隐私政策",
+    "support": "支持",
+    "tou": "使用条款",
+    "twitter": "Twitter",
+    "youtube": "YouTube"
+  },
+  "governance": {
+    "extra": {
+      "delegation": {
+        "text": "通过将代币委托给我们社区中的活跃贡献者，您不仅是在参与——您正在放大您希望看到的影响。",
+        "title": "通过委托赋能"
+      },
+      "grants": {
+        "text": "有突破性的想法吗？我们的资助旨在支持您在ENS生态系统中的创新项目。",
+        "title": "为游戏规则改变者提供资助"
+      },
+      "resources": {
+        "community": "加入Discord社区。",
+        "docs": {
+          "description": "DAO文档。",
+          "title": "DAO文档"
+        },
+        "forum": {
+          "description": "加入DAO论坛讨论新想法。",
+          "title": "DAO论坛"
+        },
+        "title": "资源",
+        "voting": {
+          "description": "参与治理。",
+          "title": "投票统计"
+        }
+      },
+      "title": "$ENS：赋权于人民",
+      "vote": {
+        "text": "$ENS不仅仅是一个代币——它是您在ENS生态系统中实现有意义变革的钥匙。1个代币 = 1票。$ENS代币使您能够塑造ENS的未来。",
+        "title": "您的投票，您的声音"
+      }
+    },
+    "hero": {
+      "cta1": "ENS DAO",
+      "cta2": "提案",
+      "tag": "治理",
+      "text": "我们的DAO是去中心化理念的生命线。为了持久性而设计，DAO滋养ENS的韧性和灵活性，通过社区声音的织锦不断演变。",
+      "title": "您变革的平台"
+    },
+    "join": {
+      "text": "您在ENS治理中的参与不仅仅是一票。这是您在一个民主、韧性且真正以用户为中心的互联网中的权益。",
+      "title": "加入新互联网"
+    }
+  },
+  "home": {
+    "extra": {
+      "community": {
+        "button": "加入我们",
+        "description": "成为改变互联网的运动的一部分。与志同道合的人联系，分享想法，并合作开展有意义的项目。",
+        "tag": "社区",
+        "title": "加入我们的社区"
+      },
+      "governance": {
+        "button": "了解ENS治理",
+        "description": "ENS是一个社区驱动的非营利组织。加入我们，创造一个每个人都有发言权的互联网。",
+        "tag": "治理",
+        "title": "由您塑造的公共利益"
+      }
+    },
+    "features": {
+      "consistent": {
+        "swapButton": "交换",
+        "text": "在所有服务和平台上保持身份一致，轻松自如。告别多个用户名的烦恼。",
+        "title": "互联网的一致性。"
+      },
+      "farcaster": {
+        "title": "首页"
+      },
+      "farewell": {
+        "animation": {
+          "m1": "你的加密地址是什么，我可以支付给你？",
+          "m2": "0x0b08dA7068b73A579Bd5E8a8290ff8afd37bc32A",
+          "m3": "哇。去ens.app",
+          "m4": "这简单多了！发送到\nmynewname.eth"
+        },
+        "text": "告别复杂的十六进制地址。您的ENS名称易于记忆，易于分享。",
+        "title": "告别复杂性。"
+      },
+      "ownership": {
+        "text": "您的ENS名称100%属于您。没有中介，没有官僚主义。它是您的财产——不受审查和不可撤销。",
+        "title": "真正的所有权。"
+      },
+      "text": "您的ENS名称扎根于Web3，但在整个互联网中有效。它是您的身份：简单、易记、毫无疑问属于您。",
+      "title": "您的名称"
+    },
+    "gateway": {
+      "description": "设想一个互联网与Web3无缝连接的世界，创造统一、创新的体验。",
+      "title": "通往新互联网的门户"
+    },
+    "gyow": {
+      "description": "发现您在ENS生态系统中的独特路径。无论您从何开始，我们都在朝着更好的互联网前进。",
+      "docs": {
+        "description": "您是一名开发者，想要在新互联网构建。",
+        "title": "开发者文档"
+      },
+      "ens-app": {
+        "description": "您的ENS之旅从这里开始，注册您的名称。",
+        "title": "ENS应用"
+      },
+      "ens-dao": {
+        "description": "加入ENS社区，与全球集体共同贡献。",
+        "title": "ENS DAO"
+      },
+      "title": "开辟自己的道路"
+    },
+    "hero": {
+      "input": {
+        "caption": "今天注册您的.eth名称",
+        "placeholder": "查找您的.eth"
+      },
+      "subtitle": "新互联网",
+      "text": "对于每一个梦想家、创造者和改变者，厌倦了旧互联网，Web3来了。ENS不仅仅是一个协议——它是对更好网络的承诺，旨在为每个人服务。",
+      "title": "欢迎来到"
+    },
+    "partners": {
+      "button": "发现ENS生态系统",
+      "description": "这些合作伙伴与ENS共同革命互联网，创造新标准并建立强大联盟。",
+      "tag": "主要合作伙伴"
+    },
+    "stats": {
+      "integrations": "集成",
+      "names": "名称",
+      "owners": "拥有者"
+    }
+  },
+  "nav": {
+    "blog": "博客",
+    "developers": "开发者",
+    "ecosystem": "生态系统",
+    "governance": "治理",
+    "launch": "启动应用",
+    "roadmap": "路线图"
+  },
+  "seo": {
+    "description": "欢迎来到新互联网。"
+  }
+}
