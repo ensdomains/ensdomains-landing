@@ -1,0 +1,2 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://ens.domains https://plausible.io; style-src 'self' https://ens.domains; img-src 'self' https://ens.domains; font-src 'self' https://ens.domains; frame-src 'self'; connect-src 'self' https://ens.domains;
