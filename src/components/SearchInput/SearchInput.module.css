@@ -14,12 +14,19 @@
   font-size: 24px;
   padding: 20px;
   outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.input::placeholder {
+  color: var(--ens-blue);
+  opacity: 0.3;
 }
 
 .input:placeholder-shown {
   background-color: var(--ens-light-blue);
 
-  border-color: var(--ens-blue) !important;
+  border-color: transparent;
 }
 
 .input:focus-visible {
@@ -39,6 +46,7 @@
   width: 20px;
   background: transparent;
   padding: 0;
+  color: var(--ens-blue);
 }
 .icon > svg {
   height: 100%;
