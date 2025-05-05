@@ -79,3 +79,16 @@ out
 # Ignore build-assets folder except for scripts/build-assets/
 build-assets
 !scripts/build-assets/
+
+# Playwright
+playwright-report/
+playwright/.auth/
+playwright/.cache/
+
+# Ignore Playwright test results and traces
+*.log
+*.trace
+
+# Ignore Playwright browser binaries (if any)
+.playwright/
+test-results/*
