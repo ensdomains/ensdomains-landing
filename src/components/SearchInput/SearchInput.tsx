@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react'
 import { useDebounce } from '~/utils/useDebounce'
 import { ExternalLink } from 'react-external-link'
 import { checkBoxAvailable, checkEthAvailable } from '~/utils/available'
+import { normalise } from '@ensdomains/ensjs/utils'
 
 const ensProfileUrl = (name: string, available: boolean, tld: 'eth' | 'box') =>
   `https://app.ens.domains/${tld === 'eth' ? 'name/' : ''}${name}.${tld}${
@@ -237,14 +238,25 @@ export const SearchInput = ({
         <form
           method="GET"
           onSubmit={(e) => {
-            e.preventDefault()
+            try {
+              e.preventDefault()
+              if (!e.currentTarget.reportValidity()) return
 
-            if (e.currentTarget.reportValidity()) {
               const fd = new FormData(e.currentTarget)
+              const rawName = fd.get('ens')?.toString().trim()
+              if (!rawName) return
+
+              const normalisedName = normalise(rawName)
+
+              const name = normalisedName.endsWith('.eth') ? rawName.slice(0, -4) : rawName
+              if (name.length < 3) return
 
               location.assign(
-                `https://ens.app/${fd.get('ens')}.eth`,
+              `https://ens.app/${name}.eth`,
               )
+            }
+            catch (error) {
+              console.error(error)
             }
           }}
           className={clsx(
