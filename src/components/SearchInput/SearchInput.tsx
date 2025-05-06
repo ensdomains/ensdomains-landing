@@ -241,9 +241,11 @@ export const SearchInput = ({
 
             if (e.currentTarget.reportValidity()) {
               const fd = new FormData(e.currentTarget)
-
+              const name = fd.get('ens') as string
+              const dot = name.lastIndexOf('.')
+              const properName = dot !== -1 ? name.slice(0, dot) : name
               location.assign(
-                `https://ens.app/${fd.get('ens')}.eth`,
+                `https://ens.app/${properName}.eth`,
               )
             }
           }}
