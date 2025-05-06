@@ -11,6 +11,7 @@ export const PartnersList = ({ partners }: PartnersListProps) => {
   return (
     <div className={styles.container}>
       {partners.map((item, i) => (
+        // eslint-disable-next-line @eslint-react/no-array-index-key
         <div key={`${item.name}-${i}`} className={clsx(ui.flex, ui['flex-row'], styles.partner)}>
           <div className={clsx(styles.logo, ui.flex, ui['flex-center'])}>
             <img src={`/assets/logos/${item.icon}`} height={24} width={24} alt="" />

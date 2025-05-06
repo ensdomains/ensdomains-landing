@@ -92,3 +92,6 @@ playwright/.cache/
 # Ignore Playwright browser binaries (if any)
 .playwright/
 test-results/*
+
+.vercel/
+.wrangler/

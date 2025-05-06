@@ -1,3 +1,5 @@
+/* eslint-disable @eslint-react/hooks-extra/no-direct-set-state-in-use-effect */
+
 'use client'
 
 import { clsx } from 'clsx'
@@ -252,7 +254,7 @@ export const SearchInput = ({
               if (name.length < 3) return
 
               location.assign(
-              `https://ens.app/${name}.eth`,
+                `https://ens.app/${name}.eth`,
               )
             }
             catch (error) {

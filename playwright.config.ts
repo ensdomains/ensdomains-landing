@@ -14,11 +14,11 @@ export default defineConfig({
   use: {
     trace: 'on-first-retry',
     // storageState: 'playwright/.auth/storage.json',
-    baseURL: 'http://localhost:3000',
+    baseURL: process.env.CI ? 'http://127.0.0.1:8788' : 'http://localhost:3000',
   },
   webServer: {
-    command: 'yarn dev',
-    port: 3000,
+    command: process.env.CI ? 'pnpm build:local' : 'pnpm dev',
+    port: process.env.CI ? 8788 : 3000,
     timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,
   },

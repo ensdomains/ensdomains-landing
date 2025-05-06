@@ -9,12 +9,15 @@
     "build:next": "next build",
     "build:assets": "tsx scripts/build-assets/index.ts",
     "build": "pnpm run build:assets && pnpm run build:next",
+    "build:local": "pnpx wrangler pages dev .vercel/output/static --compatibility-date=2023-11-21 --compatibility-flag=nodejs_compat",
     "dev": "next dev --turbopack",
     "develop": "pnpm run dev",
     "start": "pnpm run dev",
     "lint": "eslint ./src ./scripts -c eslint.config.mjs",
     "lint:css": "stylelint -c stylelint.config.mjs './src/**/*.css'",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "e2e": "npx playwright test",
+    "e2e:ci": "CI=true npx playwright test"
   },
   "dependencies": {
     "@ensdomains/ensjs": "4.0.1-alpha.0",
@@ -37,6 +40,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.12",
     "@eslint-react/eslint-plugin": "^1.25.0",
     "@eslint/compat": "^1.2.5",
     "@eslint/js": "^9.19.0",
@@ -66,7 +70,7 @@
     "ts-pattern": "^5.6.2",
     "tsx": "^4.19.2",
     "typescript-eslint": "^8.22.0",
-    "unist-util-visit": "^5.0.0"
+    "wrangler": "^4.14.1"
   },
   "repository": {
     "type": "git",
