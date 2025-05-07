@@ -250,11 +250,10 @@ export const SearchInput = ({
 
               const normalisedName = normalise(rawName)
 
-              const name = normalisedName.endsWith('.eth') ? rawName.slice(0, -4) : rawName
-              if (name.length < 3) return
+              const name = normalisedName.lastIndexOf('.') !== -1 ? normalisedName : `${normalisedName}.eth`
 
               location.assign(
-                `https://ens.app/${name}.eth`,
+                `https://ens.app/${name}`,
               )
             }
             catch (error) {
