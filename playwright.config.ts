@@ -20,7 +20,7 @@ export default defineConfig({
     command: process.env.CI ? 'pnpm run:wrangler' : 'pnpm dev',
     url: process.env.CI ? 'http://127.0.0.1:8788' : 'http://localhost:3000',
     // port: process.env.CI ? 8788 : 3000,
-    timeout: 240 * 1000,
+    timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,
     stderr: 'pipe',
     stdout: 'pipe',
