@@ -29,7 +29,10 @@ jobs:
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
-        
+
+      - name: Build for nextjs on pages
+        run: pnpm build:local
+
       - name: Run Playwright tests
         run: pnpm e2e:ci
 
