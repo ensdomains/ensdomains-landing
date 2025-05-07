@@ -14,7 +14,7 @@ export default defineConfig({
   use: {
     trace: 'on-first-retry',
     // storageState: 'playwright/.auth/storage.json',
-    baseURL: process.env.CI ? 'http://127.0.0.1:8788' : 'http://localhost:3000',
+    baseURL: process.env.CI ? 'http://localhost:8788' : 'http://localhost:3000',
   },
   webServer: {
     command: process.env.CI ? 'pnpm build:local' : 'pnpm dev',
