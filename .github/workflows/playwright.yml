@@ -30,7 +30,7 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
-        run: pnpm playwright e2e:ci
+        run: pnpm e2e:ci
 
       - name: Upload test results
         if: always()
