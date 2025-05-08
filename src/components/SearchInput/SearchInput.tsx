@@ -1,3 +1,5 @@
+/* eslint-disable @eslint-react/hooks-extra/no-direct-set-state-in-use-effect */
+
 'use client'
 
 import { clsx } from 'clsx'
@@ -9,6 +11,7 @@ import { useEffect, useState } from 'react'
 import { useDebounce } from '~/utils/useDebounce'
 import { ExternalLink } from 'react-external-link'
 import { checkBoxAvailable, checkEthAvailable } from '~/utils/available'
+import { normalise } from '@ensdomains/ensjs/utils'
 
 const ensProfileUrl = (name: string, available: boolean, tld: 'eth' | 'box') =>
   `https://app.ens.domains/${tld === 'eth' ? 'name/' : ''}${name}.${tld}${
@@ -237,16 +240,24 @@ export const SearchInput = ({
         <form
           method="GET"
           onSubmit={(e) => {
-            e.preventDefault()
+            try {
+              e.preventDefault()
+              if (!e.currentTarget.reportValidity()) return
 
-            if (e.currentTarget.reportValidity()) {
               const fd = new FormData(e.currentTarget)
-              const name = fd.get('ens') as string
-              const dot = name.lastIndexOf('.')
-              const properName = dot !== -1 ? name.slice(0, dot) : name
+              const rawName = fd.get('ens')?.toString().trim()
+              if (!rawName) return
+
+              const normalisedName = normalise(rawName)
+
+              const name = normalisedName.lastIndexOf('.') !== -1 ? normalisedName : `${normalisedName}.eth`
+
               location.assign(
-                `https://ens.app/${properName}.eth`,
+                `https://ens.app/${name}`,
               )
+            }
+            catch (error) {
+              console.error(error)
             }
           }}
           className={clsx(

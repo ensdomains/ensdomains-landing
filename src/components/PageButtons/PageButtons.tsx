@@ -76,6 +76,7 @@ export const PageButtons = ({
           ? (
               <p
                 data-testid="pagebutton-dots"
+                // eslint-disable-next-line @eslint-react/no-array-index-key
                 key={`${value}-${index}`}
                 className={styles.dots}
               >
