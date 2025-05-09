@@ -1,0 +1,314 @@
+{
+  "brand": {
+    "assets": {
+      "description": "La marque ENS peut être représentée avec n'importe laquelle de nos couleurs, mais nous préférons le bleu, le noir et le blanc.",
+      "guidelines": {
+        "button": "Télécharger le PDF de la marque",
+        "description": "Vous pouvez télécharger une version PDF des directives de la marque ENS, qui inclut une documentation détaillée sur l'utilisation des couleurs, des actifs et de la typographie de la marque. Si vous n'êtes pas sûr de nos directives et de la façon dont votre projet s'alignerait, veuillez nous contacter.",
+        "title": "Directives d'utilisation"
+      },
+      "lockup": {
+        "description": "Utilisez l'ensemble complet lorsque vous devez montrer l'ensemble de l'actif de marque ENS. Cela est également utile pour des actifs plus alignés horizontalement.",
+        "title": "Lock-up"
+      },
+      "palette": {
+        "description": "La marque ENS peut être représentée avec n'importe laquelle de nos couleurs. Veuillez garder à l'esprit que les couleurs ne sont pas une \"taille unique\".",
+        "primary": {
+          "description": "Ci-dessous se trouve la palette de couleurs primaires de la marque ENS.",
+          "title": "Palette Principale"
+        },
+        "secondary": {
+          "description": "Ci-dessous se trouvent les palettes de couleurs secondaires à utiliser pour créer des supports créatifs pour la marque ENS.",
+          "title": "Palette de Couleurs Élargie"
+        },
+        "title": "Palette de Marque"
+      },
+      "space": {
+        "description": "Assurez-vous qu'il y a suffisamment d'espace libre lors de l'utilisation du logo, de manière à ce qu'il y ait suffisamment de place pour que tout respire. Une bonne règle de base est d'au moins 1/3 de la largeur du symbole ENS.",
+        "title": "Espace Libre"
+      },
+      "symbol": {
+        "description": "Ceci est l'icône principale et préférée pour utiliser les actifs de marque ENS.",
+        "title": "Symbole"
+      },
+      "title": "Actifs de Marque",
+      "token": {
+        "description": "L'icône est utilisée pour représenter ENS en tant qu'avatar et le token $ENS.",
+        "title": "Icône"
+      }
+    },
+    "button": "Télécharger Tout",
+    "extra": {
+      "ecosystem": {
+        "description": "Si vous construisez sur ENS sans partenariat officiel, vous êtes un constructeur de l'écosystème. Cela peut inclure ;",
+        "extra": "La modification du logo est découragée, mais pas interdite si c'est à des fins créatives. Cependant, la marque ne peut pas être utilisée pour impliquer un partenariat officiel avec ENS DAO ou ENS Labs.",
+        "list": {
+          "1": "Intégration d'ENS dans votre produit,",
+          "2": "Un projet créatif conçu par et pour les utilisateurs d'ENS."
+        },
+        "title": "Écosystème"
+      },
+      "partnerships": {
+        "description": "Un partenariat officiel avec nous signifie unir nos forces pour créer des solutions percutantes. Cela peut inclure ;",
+        "extra": "Les partenariats peuvent utiliser la marque ENS lorsque nécessaire, mais ils ne doivent pas modifier ou changer le logo.",
+        "list": {
+          "1": "Intégration de votre produit dans ENS ou l'application de gestion,",
+          "2": "Efforts de co-marketing avec ENS DAO ou ENS Labs,",
+          "3": "Collaboration en R&D avec ENS DAO ou ENS Labs."
+        },
+        "title": "Partenariats"
+      }
+    },
+    "header": {
+      "description": "Vous êtes libre d'utiliser la marque ENS dans l'écosystème, aucune permission n'est nécessaire ! Juste, n'utilisez pas cela pour prétendre être ENS, ENS DAO ou ENS Labs, ou pour suggérer un partenariat qui n'existe pas.",
+      "title": "Marque ENS"
+    },
+    "links": {
+      "guidelines": "Directives",
+      "palettes": "Palettes",
+      "symbols": "Symboles"
+    }
+  },
+  "developers": {
+    "extra": {
+      "bounty": {
+        "cta": {
+          "learn": "En savoir plus"
+        },
+        "text": "Nous privilégions la sécurité avant tout. Explorez notre programme de bug bounty et contribuez à une plateforme plus sécurisée avec des récompenses allant jusqu'à 250 000 $.",
+        "title": "Notre Bug Bounty :\nVotre Tranquillité d'Esprit"
+      },
+      "grants": {
+        "cta": {
+          "apply": "Postuler",
+          "view": "Voir les Subventions"
+        },
+        "stat": {
+          "eth": "ETH financé",
+          "proposals": "propositions",
+          "voters": "votants"
+        },
+        "text": "Vous avez une idée révolutionnaire ? Nos subventions sont là pour alimenter vos projets innovants au sein de l'écosystème ENS.",
+        "title": "Subventions pour Innovateurs"
+      }
+    },
+    "hero": {
+      "cta1": "Docs Développeur",
+      "cta2": "Github",
+      "tag": "Développeurs",
+      "text": "Rejoignez une communauté d'innovateurs et de développeurs qui façonnent un meilleur internet. Que vous soyez novice en Web3 ou un professionnel expérimenté, ENS est votre passerelle vers un web sans confiance.",
+      "title": "Construire en bonne\n compagnie"
+    },
+    "resources": {
+      "ccip-read": {
+        "description": "Découvrez CCIP Read (EIP-3668), un protocole pour l'interopérabilité inter-chaînes permettant aux contrats de récupérer des données externes via des recherches hors chaîne."
+      },
+      "evmgateway": {
+        "description": "Explorez la passerelle EVM, une solution générique pour récupérer les preuves d'état des données à travers les chaînes EVM en utilisant CCIP-Read."
+      },
+      "pro": {
+        "description": "Plongez dans notre documentation complète pour développeurs.",
+        "tag": "Contrats ENS",
+        "title": "Pour les magiciens du Web3"
+      },
+      "quickstart": {
+        "description": "Nos guides vous permettront de commencer rapidement et facilement.",
+        "tag": "Guide de Démarrage Rapide",
+        "title": "Nouveau sur Web3 ?"
+      },
+      "tg": {
+        "description": "Rejoignez notre canal Telegram pour développeurs pour poser des questions et obtenir des conseils sur le développement avec ENS.",
+        "title": "Telegram Développeurs"
+      },
+      "thorin": {
+        "description": "Découvrez Thorin, un système de design pour ENS créé avec React et styled-components."
+      },
+      "title": "Ressources"
+    }
+  },
+  "ecosystem": {
+    "hero": {
+      "cta1": "En savoir plus",
+      "cta2": "Docs d'Intégration",
+      "subtitle": "Nouvel Internet",
+      "tag": "Écosystème",
+      "text": "ENS est une communauté de pionniers, façonnant collectivement un internet plus intuitif et fiable. Il ne s'agit pas seulement de faire partie du Web3 ; il s'agit de le diriger.",
+      "title": "Fiable par le"
+    },
+    "integration": {
+      "foundation": {
+        "description": "Rejoignez-nous pour positionner votre marque à l'avant-garde du nouvel internet.",
+        "title": "Construisez Votre Présence Web3"
+      },
+      "resources": {
+        "description": "Découvrez comment ENS peut amplifier votre organisation avec des ressources supplémentaires.",
+        "title": "Explorez avec Nous"
+      },
+      "title": "Prêt pour l'intégration ?",
+      "trust": {
+        "description": "La confiance n'est pas un mot à la mode, c'est notre fondation. En tant que protocole à but non lucratif gouverné par un DAO, nous nous engageons à la sécurité et à l'intégrité.",
+        "title": "Confiance Inégalée"
+      }
+    },
+    "partner": {
+      "description": "Vous souhaitez collaborer ? Connectez-vous avec notre équipe de développement commercial pour explorer des opportunités de partenariat.",
+      "title": "Partenariat avec nous"
+    }
+  },
+  "footer": {
+    "blog": "Blog",
+    "brand": "Marque",
+    "bugs": "Bug Bounty",
+    "community": "Rejoignez la communauté",
+    "contact": "Contact",
+    "discord": "Discord",
+    "ens": "ENS",
+    "feedback": "Retour d'Information",
+    "forums": "Forums DAO",
+    "github": "Github",
+    "help": "Besoin d'aide ?",
+    "jobs": "Emplois",
+    "ltd": "ENS, Copyright, 2024. Tous droits réservés.",
+    "privacy-policy": "Politique de Confidentialité",
+    "support": "Soutien",
+    "tou": "Conditions d'Utilisation",
+    "twitter": "Twitter",
+    "youtube": "Youtube"
+  },
+  "governance": {
+    "extra": {
+      "delegation": {
+        "text": "En déléguant des tokens à des contributeurs actifs de notre communauté, vous ne faites pas que participer – vous amplifiez l'impact que vous souhaitez voir.",
+        "title": "Autonomisez par la délégation"
+      },
+      "grants": {
+        "text": "Vous avez une idée révolutionnaire ? Nos subventions sont là pour soutenir vos projets innovants au sein de l'écosystème ENS.",
+        "title": "Subventions pour Innovateurs"
+      },
+      "resources": {
+        "community": "Rejoignez la communauté sur Discord.",
+        "docs": {
+          "description": "Documentation pour le DAO.",
+          "title": "Documentation DAO"
+        },
+        "forum": {
+          "description": "Rejoignez le Forum DAO pour discuter de nouvelles idées.",
+          "title": "Forum DAO"
+        },
+        "title": "Ressources",
+        "voting": {
+          "description": "Participez à la gouvernance.",
+          "title": "Vote de Comptage"
+        }
+      },
+      "title": "$ENS : Le Pouvoir au Peuple",
+      "vote": {
+        "text": "$ENS n'est pas qu'un token – c'est votre clé pour apporter un changement significatif dans l'écosystème ENS. 1 token = 1 vote. Les tokens $ENS vous permettent de façonner l'avenir d'ENS.",
+        "title": "Votre vote, votre voix"
+      }
+    },
+    "hero": {
+      "cta1": "ENS DAO",
+      "cta2": "Propositions",
+      "tag": "Gouvernance",
+      "text": "Notre DAO est le cœur de notre ethos décentralisé. Conçu pour la durabilité, le DAO nourrit la résilience et la flexibilité d'ENS, évoluant à travers un tissu de voix communautaires.",
+      "title": "Votre plateforme\npour le changement"
+    },
+    "join": {
+      "text": "Votre engagement dans la gouvernance d'ENS est plus qu'un vote. C'est votre part dans un internet démocratique, résilient et réellement centré sur ses utilisateurs.",
+      "title": "Rejoignez le Nouvel Internet"
+    }
+  },
+  "home": {
+    "extra": {
+      "community": {
+        "button": "Rejoignez-nous",
+        "description": "Faites partie du mouvement qui transforme l'internet. Connectez-vous avec des personnes partageant les mêmes idées, échangez des idées et collaborez sur des projets qui font la différence.",
+        "tag": "Communauté",
+        "title": "Rejoignez notre communauté"
+      },
+      "governance": {
+        "button": "En savoir plus sur la Gouvernance ENS",
+        "description": "ENS est une organisation à but non lucratif dirigée par la communauté. Rejoignez-nous pour créer un internet où chacun a une voix.",
+        "tag": "Gouvernance",
+        "title": "Un bien public, façonné par vous"
+      }
+    },
+    "features": {
+      "consistent": {
+        "swapButton": "Échanger",
+        "text": "Gardez votre identité cohérente sur tous les services et plateformes sans effort. Dites adieu à la jonglerie entre plusieurs noms d'utilisateur.",
+        "title": "Cohérent sur Internet."
+      },
+      "farcaster": {
+        "title": "Accueil"
+      },
+      "farewell": {
+        "animation": {
+          "m1": "Quel est votre adresse crypto pour que je puisse vous payer ?",
+          "m2": "0x0b08dA7068b73A579Bd5E8a8290ff8afd37bc32A",
+          "m3": "Wow. Allez sur ens.app",
+          "m4": "C'est tellement plus simple ! Envoyer à\nmonnouveaunom.eth"
+        },
+        "text": "Fini les adresses hexadécimales confuses. Votre nom ENS est facile à retenir, facile à partager.",
+        "title": "Adieu à la complexité."
+      },
+      "ownership": {
+        "text": "Votre nom ENS vous appartient à 100 %. Pas d'intermédiaires, pas de bureaucratie. C'est votre propriété—non censurée et irrévocable.",
+        "title": "Véritable propriété."
+      },
+      "text": "Votre nom ENS est ancré dans le Web3, mais fonctionne à travers l'internet. C'est votre identité : simple, mémorable, incontestablement la vôtre.",
+      "title": "Votre nom"
+    },
+    "gateway": {
+      "description": "Imaginez un monde où l'internet et le Web3 se connectent harmonieusement, créant une expérience unifiée et innovante.",
+      "title": "Votre passerelle vers le Nouvel Internet"
+    },
+    "gyow": {
+      "description": "Découvrez votre chemin unique dans l'écosystème ENS. Peu importe où vous commencez, nous avançons tous vers un meilleur internet.",
+      "docs": {
+        "description": "Vous êtes développeur et vous souhaitez construire sur le nouvel internet.",
+        "title": "Documentation pour Développeurs"
+      },
+      "ens-app": {
+        "description": "Votre parcours ENS commence ici, en enregistrant votre nom.",
+        "title": "Application ENS"
+      },
+      "ens-dao": {
+        "description": "Rejoignez la communauté ENS pour contribuer aux côtés d'un collectif mondial.",
+        "title": "ENS DAO"
+      },
+      "title": "Tracez votre propre chemin"
+    },
+    "hero": {
+      "input": {
+        "caption": "Enregistrez votre nom .eth aujourd'hui",
+        "placeholder": "Trouvez votre .eth"
+      },
+      "subtitle": "Nouvel Internet",
+      "text": "Pour chaque rêveur, créateur et agent de changement fatigué de l'ancien internet, le Web3 est là. ENS est plus qu'un protocole - c'est un engagement envers un meilleur web, construit pour tous.",
+      "title": "Bienvenue dans le"
+    },
+    "partners": {
+      "button": "Découvrez l'Écosystème ENS",
+      "description": "Ces partenaires révolutionnent l'internet aux côtés d'ENS, créant de nouvelles normes et forgeant des alliances solides.",
+      "tag": "Partenaires Clés"
+    },
+    "stats": {
+      "integrations": "intégrations",
+      "names": "noms",
+      "owners": "propriétaires"
+    }
+  },
+  "nav": {
+    "blog": "Blog",
+    "developers": "Développeurs",
+    "ecosystem": "Écosystème",
+    "governance": "Gouvernance",
+    "launch": "Lancer l'Application",
+    "roadmap": "Feuille de Route"
+  },
+  "seo": {
+    "description": "Bienvenue dans le nouvel internet."
+  }
+}
