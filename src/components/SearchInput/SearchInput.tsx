@@ -8,7 +8,6 @@ import styles from './SearchInput.module.css'
 import { useEffect, useState } from 'react'
 import { useDebounce } from '~/utils/useDebounce'
 import { ExternalLink } from 'react-external-link'
-import { checkBoxAvailable, checkEthAvailable } from '~/utils/available'
 
 const ensProfileUrl = (name: string, available: boolean, tld: 'eth' | 'box') =>
   `https://app.ens.domains/${tld === 'eth' ? 'name/' : ''}${name}.${tld}${
@@ -131,73 +130,51 @@ export const SearchInput = ({
   const [isInvalid, setIsInvalid] = useState(false)
 
   const debouncedValue = useDebounce(value, 500)
-
   const [name, tld] = debouncedValue.split('.') as [string, 'eth' | 'box']
 
   useEffect(() => {
     if (debouncedValue.includes('#')) {
-      // special case - URL hash
       setIsInvalid(true)
       setIsLoading(false)
     }
-    else if (
-      debouncedValue.length !== 0
-      && showSuggestions(debouncedValue)
-    ) {
+    else if (debouncedValue.length !== 0 && showSuggestions(debouncedValue)) {
       setIsInvalid(false)
       setIsBoxInvalid(false)
       setIsLoading(true)
-      if (tld === 'eth') {
-        checkEthAvailable(name)
-          .then((available) => {
-            setEnsAvailable(available)
-          })
-          .catch(() => {
+      const queryWorker = async () => {
+        try {
+          const res = await fetch(`/search?domain=${debouncedValue}`)
+          const data = await res.json()
+
+          if (data.isInvalid) {
             setIsInvalid(true)
-          })
-          .finally(() => {
             setIsLoading(false)
-          })
+            return
+          }
+
+          if (data.isBoxAvailable !== undefined) {
+            setBoxAvailable(data.isBoxAvailable)
+          }
+
+          if (data.isBoxInvalid !== undefined) {
+            setIsBoxInvalid(data.isBoxInvalid)
+          }
+
+          if (data.isEnsAvailable !== undefined) {
+            setEnsAvailable(data.isEnsAvailable)
+          }
+        }
+        catch (error) {
+          // Handle error fetching from the worker
+          console.error('Error fetching domain availability:', error)
+          setIsInvalid(true)
+        }
+        finally {
+          setIsLoading(false)
+        }
       }
-      else if (tld === 'box') {
-        checkBoxAvailable(name)
-          .then((available) => {
-            setBoxAvailable(available)
-          })
-          .catch(() => {
-            setIsBoxInvalid(true)
-          })
-          .finally(() => {
-            setIsLoading(false)
-          })
-      }
-      else {
-        checkBoxAvailable(name)
-          .then((available) => {
-            setBoxAvailable(available)
-          })
-          .catch(() => {
-            setIsBoxInvalid(true)
-          })
-          .finally(() => {
-            setIsLoading(false)
-          })
-          .then(() => {
-            checkEthAvailable(name)
-              .then((available) => {
-                if (name.length < 2) {
-                  setEnsAvailable(false)
-                }
-                else setEnsAvailable(available)
-              })
-              .catch(() => {
-                setIsInvalid(true)
-              })
-              .finally(() => {
-                setIsLoading(false)
-              })
-          })
-      }
+
+      queryWorker()
     }
   }, [debouncedValue])
 
