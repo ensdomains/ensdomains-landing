@@ -9,15 +9,15 @@
   font-family: var(--ens-mono), monospace;
 }
 
-.stat:nth-of-type(1) .value {
+.stat[data-counter-type='names'] .value {
   width: calc(9ch);
 }
 
-.stat:nth-of-type(2) .value {
+.stat[data-counter-type='integrations'] .value {
   width: calc(3ch);
 }
 
-.stat:nth-of-type(3) .value {
+.stat[data-counter-type='owners'] .value {
   width: calc(7ch);
 }
 

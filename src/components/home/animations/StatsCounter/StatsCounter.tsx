@@ -4,7 +4,7 @@ import { clsx } from 'clsx'
 import CountUp from 'react-countup'
 import ui from '~/styles/ui.module.css'
 import styles from './StatsCounter.module.css'
-import stats from '~/stats/landing.json'
+import stats from '~/stats/landing.json' with { type: 'json'}
 import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage'
 
 export const StatsCounter = ({ captions }: { captions: { names: string, integrations: string, owners: string } }) => {
@@ -25,7 +25,7 @@ export const StatsCounter = ({ captions }: { captions: { names: string, integrat
         }}
       />
       {Object.entries(stats).map(([key, count], i) => (
-        <div key={key} className={styles.stat}>
+        <div key={key} data-counter-type={key} className={styles.stat}>
           <CountUp
             start={count * 0.8}
             end={count}
