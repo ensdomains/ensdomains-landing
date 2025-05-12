@@ -1,8 +1,8 @@
-import getReadingTime from 'reading-time'
 import * as acorn from 'acorn'
+import getReadingTime from 'reading-time'
 
 export default function remarkReadingTime() {
-  return function (tree) {
+  return (tree) => {
     const textOnPage = toString(tree, {
       includeHtml: false,
       includeImageAltText: false,

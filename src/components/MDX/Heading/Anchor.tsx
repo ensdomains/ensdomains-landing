@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
-import styles from './Anchor.module.css'
 import type { PropsWithChildren, SVGProps } from 'react'
+import styles from './Anchor.module.css'
 
 export const AnchorIcon = (properties: SVGProps<SVGSVGElement>) => {
   return (

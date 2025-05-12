@@ -22,7 +22,7 @@
   font-size: 32px;
   font-weight: 500;
   line-height: 90%;
-  letter-spacing: -0.674px;  
+  letter-spacing: -0.674px;
 
   color: var(--page-text);
 }
@@ -48,7 +48,7 @@
 @media (min-width: 768px) {
   .stat {
     font-size: 30px;
-    letter-spacing: -0.598px; 
+    letter-spacing: -0.598px;
   }
 }
 

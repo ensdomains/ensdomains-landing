@@ -1,19 +1,22 @@
-import { CSSProperties, Fragment } from 'react'
+import type { ResolvingMetadata } from 'next'
+import { type CSSProperties, Fragment } from 'react'
+import type { Article, WithContext } from 'schema-dts'
 import { PostCoverContent } from '~/components/Blog/Post/PostCoverContent'
 import { PostFooter } from '~/components/Blog/Post/PostFooter'
 import { PostHeader } from '~/components/Blog/Post/PostHeader'
 import { getPostBySlug, getPostsMetadata, importPost } from '~/utils/blog/posts'
-import styles from './page.module.css'
 import { AssetNotFoundError, getPostAssets } from '~/utils/blog/utils'
 import { BASE_URL, createMetadata } from '~/utils/metadata'
-import { ResolvingMetadata } from 'next'
-import { Article, WithContext } from 'schema-dts'
+import styles from './page.module.css'
 
 type PageProperties = {
   params: Promise<{ slug: string }>
 }
 
-export const generateMetadata = async (props: PageProperties, parent: ResolvingMetadata) => {
+export const generateMetadata = async (
+  props: PageProperties,
+  parent: ResolvingMetadata,
+) => {
   const params = await props.params
   const post = await getPostBySlug(params.slug)
   const parentMetadata = await parent
@@ -37,21 +40,22 @@ export const generateMetadata = async (props: PageProperties, parent: ResolvingM
       openGraph: {
         type: 'article',
         authors: post.authors,
-        images:
-          postCover
-            ? [{
+        images: postCover
+          ? [
+              {
                 url: new URL(postCover.src, BASE_URL),
                 width: postCover.width,
                 height: postCover.height,
-              }]
-            : undefined,
+              },
+            ]
+          : undefined,
         tags: post.tags,
         url: '/blog/post/' + params.slug,
       },
       twitter: {
         card: 'summary_large_image',
       },
-      authors: post.authors?.map(author => ({
+      authors: post.authors?.map((author) => ({
         name: author,
         url: `/blog/author/${author}`,
       })),
@@ -64,7 +68,7 @@ export const generateMetadata = async (props: PageProperties, parent: ResolvingM
 export async function generateStaticParams() {
   const pages = await getPostsMetadata()
 
-  return pages.map(post => ({
+  return pages.map((post) => ({
     slug: post.slug,
   }))
 }
@@ -79,13 +83,13 @@ const page = async (props: PageProperties) => {
   const schema: WithContext<Article> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    'headline': post.title,
-    'image': postCover?.src,
-    'datePublished': new Date(post.date).toISOString(),
-    'author': post.authors?.map(author => ({
+    headline: post.title,
+    image: postCover?.src,
+    datePublished: new Date(post.date).toISOString(),
+    author: post.authors?.map((author) => ({
       '@type': 'Person',
-      'name': author,
-      'url': 'https://ens.app/' + author,
+      name: author,
+      url: 'https://ens.app/' + author,
     })),
   }
 

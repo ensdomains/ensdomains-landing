@@ -1,5 +1,5 @@
-import { Dune } from 'dune-api-client'
 import { writeFile } from 'node:fs/promises'
+import { Dune } from 'dune-api-client'
 
 const dune = new Dune(process.env.DUNE_KEY)
 
@@ -20,8 +20,12 @@ if (!res.data) {
 
 const names = res.data.result?.rows[0]._col0
 
-await writeFile('src/stats/landing.json', JSON.stringify({
-  owners,
-  names,
-  integrations: 750,
-}), 'utf-8')
+await writeFile(
+  'src/stats/landing.json',
+  JSON.stringify({
+    owners,
+    names,
+    integrations: 750,
+  }),
+  'utf-8',
+)

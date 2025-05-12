@@ -1,8 +1,8 @@
 import { Feed } from 'feed'
+import ogImage from 'public/og-image.png'
 import { getPostsMetadata } from '~/utils/blog/posts'
 import { getPostAssets } from '~/utils/blog/utils'
 import { BASE_URL } from '~/utils/metadata'
-import ogImage from 'public/og-image.png'
 
 export const dynamic = 'force-static'
 

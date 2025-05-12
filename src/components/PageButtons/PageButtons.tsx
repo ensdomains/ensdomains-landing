@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import Link from 'next/link'
-import { HTMLAttributes } from 'react'
+import type { HTMLAttributes } from 'react'
 import styles from './PageButtons.module.css'
 
 type NativeDivProperties = HTMLAttributes<HTMLDivElement>
@@ -67,37 +67,32 @@ export const PageButtons = ({
   }
 
   return (
-    <div
-      className={styles.container}
-      {...properties}
-    >
+    <div className={styles.container} {...properties}>
       {pageNumbers.map((value, index) =>
-        value === Marker.ellipsis
-          ? (
-              <p
-                data-testid="pagebutton-dots"
-                key={`${value}-${index}`}
-                className={styles.dots}
-              >
-                ...
-              </p>
-            )
-          : (
-              <Link
-                className={clsx(
-                  styles.button,
-                  value === current && styles.buttonCurrent,
-                )}
-                data-testid="pagebutton"
-                key={value}
-                type="button"
-                href={`${hrefPrefix}${
-                  value === 1 ? (hrefPrefix ? '' : '/') : '/' + value
-                }`}
-              >
-                {value}
-              </Link>
-            ),
+        value === Marker.ellipsis ? (
+          <p
+            data-testid="pagebutton-dots"
+            key={`${value}-${index}`}
+            className={styles.dots}
+          >
+            ...
+          </p>
+        ) : (
+          <Link
+            className={clsx(
+              styles.button,
+              value === current && styles.buttonCurrent,
+            )}
+            data-testid="pagebutton"
+            key={value}
+            type="button"
+            href={`${hrefPrefix}${
+              value === 1 ? (hrefPrefix ? '' : '/') : '/' + value
+            }`}
+          >
+            {value}
+          </Link>
+        ),
       )}
     </div>
   )

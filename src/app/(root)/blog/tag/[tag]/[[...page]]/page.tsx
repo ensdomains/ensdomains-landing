@@ -1,23 +1,22 @@
 import { clsx } from 'clsx'
-import { CSSProperties } from 'react'
 import type { Metadata, ResolvingMetadata } from 'next'
-import { useTranslation } from '~/i18n/useTranslation'
+import type { CSSProperties } from 'react'
 import blogUi from '~/app/(root)/blog/blog-ui.module.css'
-import styles from './page.module.css'
-import { PageProps as BasePageProps } from '~/utils/types'
-
-import { getTags } from '~/utils/blog/posts'
-import { splitArray, splitArrayBiasFirst } from '~/utils/array/split'
-import { PageButtons } from '~/components/PageButtons/PageButtons'
-import { BlogPostPreview } from '~/components/Blog/PostPreview'
-import { titleCase } from '~/utils/formatters'
 import { BlogHeader } from '~/components/Blog/BlogHeader'
+import { BlogPostPreview } from '~/components/Blog/PostPreview'
+import { PageButtons } from '~/components/PageButtons/PageButtons'
+import { useTranslation } from '~/i18n/useTranslation'
+import { splitArray, splitArrayBiasFirst } from '~/utils/array/split'
+import { getTags } from '~/utils/blog/posts'
+import { titleCase } from '~/utils/formatters'
 import { createMetadata } from '~/utils/metadata'
+import type { PageProps as BasePageProps } from '~/utils/types'
+import styles from './page.module.css'
 
 const MAX_PER_PAGE = 6
 
 type PageProps = BasePageProps & {
-  params: { tag: string, page: string[] }
+  params: { tag: string; page: string[] }
 }
 
 export async function generateStaticParams() {
@@ -34,7 +33,10 @@ export async function generateStaticParams() {
   })
 }
 
-export const generateMetadata = async (props: PageProps, parentMetadata: ResolvingMetadata): Promise<Metadata> => {
+export const generateMetadata = async (
+  props: PageProps,
+  parentMetadata: ResolvingMetadata,
+): Promise<Metadata> => {
   const params = await props.params
   const { t } = await useTranslation(params.lang, 'translation')
 
@@ -79,8 +81,11 @@ export default async function Blog(props: PageProps) {
         } as CSSProperties
       }
     >
-      <BlogHeader tag={t('blog.tag.hero.tag')} title={titleCase(params.tag)} style={{}}>
-      </BlogHeader>
+      <BlogHeader
+        tag={t('blog.tag.hero.tag')}
+        title={titleCase(params.tag)}
+        style={{}}
+      ></BlogHeader>
 
       <section className={clsx(blogUi['page'])}>
         <div className={clsx(styles['blog-grid'])}>

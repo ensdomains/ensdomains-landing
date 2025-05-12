@@ -1,7 +1,6 @@
-import { FC } from 'react'
-
-import styles from './SmallLinkList.module.css'
+import type { FC } from 'react'
 import { ExternalLink } from 'react-external-link'
+import styles from './SmallLinkList.module.css'
 
 export type ILink = {
   title: string
@@ -34,6 +33,5 @@ export const SmallLinkList: FC<{ links: ILink[] }> = ({ links }) => {
         </li>
       ))}
     </ul>
-
   )
 }

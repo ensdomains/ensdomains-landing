@@ -1,11 +1,11 @@
-import { BlogPostMetadata } from '~/utils/blog/metadata'
-import ui from '~/styles/ui.module.css'
-import styles from './PostHeader.module.css'
 import clsx from 'clsx'
+import Link from 'next/link'
+import ui from '~/styles/ui.module.css'
+import type { BlogPostMetadata } from '~/utils/blog/metadata'
+import { getAuthorAssets } from '~/utils/blog/utils'
 import { titleCase } from '~/utils/formatters'
 import { BlogPostAuthor } from '../PostAuthor'
-import Link from 'next/link'
-import { getAuthorAssets } from '~/utils/blog/utils'
+import styles from './PostHeader.module.css'
 
 export const PostHeader = ({
   post,
@@ -32,7 +32,7 @@ export const PostHeader = ({
     >
       <div className={styles.content}>
         <div className={styles['tag-container']}>
-          {post.tags.map(tag => (
+          {post.tags.map((tag) => (
             <Link href={`/blog/tag/${tag}`} className={styles.tag} key={tag}>
               {titleCase(tag)}
             </Link>
@@ -40,8 +40,12 @@ export const PostHeader = ({
         </div>
         <h1 className={styles.title}>{post.title}</h1>
         <div className={styles['authors-container']}>
-          {post.authors.map(async author => (
-            <BlogPostAuthor key={author} author={author} avatar={await getAuthorAssets(author)?.avatar} />
+          {post.authors.map(async (author) => (
+            <BlogPostAuthor
+              key={author}
+              author={author}
+              avatar={await getAuthorAssets(author)?.avatar}
+            />
           ))}
           <span className={styles.date}>{date}</span>
           <span>•</span>

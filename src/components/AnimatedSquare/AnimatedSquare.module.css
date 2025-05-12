@@ -1,4 +1,3 @@
-
 .animated-square {
   height: 33px;
   width: 33px;
@@ -14,7 +13,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1280px) { 
+@media (min-width: 768px) and (max-width: 1280px) {
   .animated-square {
     height: 21px;
     width: 21px;

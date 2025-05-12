@@ -1,4 +1,4 @@
-import { Inter, EB_Garamond } from 'next/font/google'
+import { EB_Garamond, Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 
 const inter = Inter({
@@ -89,4 +89,11 @@ const ABCMarist = localFont({
   fallback: ['var(--ens-serif-fb)', 'serif'],
 })
 
-export { inter, ebGaramond, ABCMarist, ABCMonumentGrotesk, ABCMonumentGroteskSemiMono, ABCMonumentGroteskMono }
+export {
+  inter,
+  ebGaramond,
+  ABCMarist,
+  ABCMonumentGrotesk,
+  ABCMonumentGroteskSemiMono,
+  ABCMonumentGroteskMono,
+}

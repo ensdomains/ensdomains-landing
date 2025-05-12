@@ -1,5 +1,5 @@
 import nextMDX from '@next/mdx'
-import { remarkPlugins, rehypePlugins, recmaPlugins } from './src/mdx/index.mjs'
+import { recmaPlugins, rehypePlugins, remarkPlugins } from './src/mdx/index.mjs'
 
 /** @type {import('@next/mdx').NextMDXOptions} */
 const mdxOptions = {

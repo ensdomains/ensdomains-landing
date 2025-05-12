@@ -1,5 +1,5 @@
 import { useParams } from 'next/navigation'
-import { Language, fallbackLng } from './settings'
+import { fallbackLng, type Language } from './settings'
 
 export const useCurrentLanguage = (lang: Language = fallbackLng): Language => {
   const parameters = useParams()

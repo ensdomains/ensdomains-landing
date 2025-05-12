@@ -1,17 +1,15 @@
 import { clsx } from 'clsx'
-import { CSSProperties } from 'react'
-
+import type { Metadata } from 'next'
+import type { CSSProperties } from 'react'
 import { ColorCards } from '~/components/ColorCards/ColorCards'
+import { EcosystemList } from '~/components/ecosystem/EcosystemList'
 import { Header } from '~/components/Header/Header'
 import { LinkList } from '~/components/LinkList/LinkList'
 import { SmallLinkList } from '~/components/SmallLinkList/SmallLinkList'
 import { useTranslation } from '~/i18n/useTranslation'
-
-import styles from './page.module.css'
 import ui from '~/styles/ui.module.css'
-import { EcosystemList } from '~/components/ecosystem/EcosystemList'
-import type { Metadata } from 'next'
 import type { PageProps } from '~/utils/types'
+import styles from './page.module.css'
 
 export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
   const params = await props.params
@@ -44,7 +42,10 @@ export default async function Ecosystem(props: PageProps) {
         description={t('ecosystem.hero.text')}
         subtitle={t('ecosystem.hero.subtitle')}
         cta={[
-          [t('ecosystem.hero.cta1'), 'https://blog.ens.domains/post/beginners-guide-to-ethereum-and-ens'],
+          [
+            t('ecosystem.hero.cta1'),
+            'https://blog.ens.domains/post/beginners-guide-to-ethereum-and-ens',
+          ],
           [t('ecosystem.hero.cta2'), 'https://docs.ens.domains'],
         ]}
       >
@@ -68,8 +69,7 @@ export default async function Ecosystem(props: PageProps) {
               {
                 title: t('ecosystem.integration.resources.title'),
                 href: '',
-                description:
-                                t('ecosystem.integration.resources.description'),
+                description: t('ecosystem.integration.resources.description'),
               },
             ]}
           />
@@ -87,7 +87,7 @@ export default async function Ecosystem(props: PageProps) {
               {
                 title: 'Business Development',
                 description:
-                                'Speak with our Business Development team to chat about a partnership opportunity.',
+                  'Speak with our Business Development team to chat about a partnership opportunity.',
                 color: 'ens-blue',
                 link: 'mailto:support@ens.domains',
               },

@@ -1,27 +1,31 @@
+import type { ENSRecord } from 'build-assets/assets.gen'
 import { clsx } from 'clsx'
-import { CSSProperties } from 'react'
 import type { Metadata, ResolvingMetadata } from 'next'
-import { useTranslation } from '~/i18n/useTranslation'
-import styles from './page.module.css'
-import { PageProps as BasePageProps } from '~/utils/types'
-
-import { getAuthors } from '~/utils/blog/posts'
-import { splitArray, splitArrayBiasFirst } from '~/utils/array/split'
-import { PageButtons } from '~/components/PageButtons/PageButtons'
-import { BlogPostPreview } from '~/components/Blog/PostPreview'
-import { getAuthorAssets } from '~/utils/blog/utils'
-import { BlogHeader } from '~/components/Blog/BlogHeader'
-import blogUi from '~/app/(root)/blog/blog-ui.module.css'
-import { createMetadata } from '~/utils/metadata'
-import { ENSRecord } from 'build-assets/assets.gen'
+import type { CSSProperties } from 'react'
 import { match } from 'ts-pattern'
+import blogUi from '~/app/(root)/blog/blog-ui.module.css'
+import { BlogHeader } from '~/components/Blog/BlogHeader'
+import { BlogPostPreview } from '~/components/Blog/PostPreview'
+import {
+  BrowserIcon,
+  EnsNavIcon,
+  GithubIcon,
+  TwitterIcon,
+} from '~/components/icons'
 import { Link } from '~/components/MDX/Link'
-import { BrowserIcon, EnsNavIcon, GithubIcon, TwitterIcon } from '~/components/icons'
+import { PageButtons } from '~/components/PageButtons/PageButtons'
+import { useTranslation } from '~/i18n/useTranslation'
+import { splitArray, splitArrayBiasFirst } from '~/utils/array/split'
+import { getAuthors } from '~/utils/blog/posts'
+import { getAuthorAssets } from '~/utils/blog/utils'
+import { createMetadata } from '~/utils/metadata'
+import type { PageProps as BasePageProps } from '~/utils/types'
+import styles from './page.module.css'
 
 const MAX_PER_PAGE = 6
 
 type PageProps = BasePageProps & {
-  params: { author: string, page: string[] }
+  params: { author: string; page: string[] }
 }
 
 export async function generateStaticParams() {
@@ -38,7 +42,10 @@ export async function generateStaticParams() {
   })
 }
 
-export const generateMetadata = async (props: PageProps, parentMetadata: ResolvingMetadata): Promise<Metadata> => {
+export const generateMetadata = async (
+  props: PageProps,
+  parentMetadata: ResolvingMetadata,
+): Promise<Metadata> => {
   const params = await props.params
   const { t } = await useTranslation(params.lang, 'translation')
 
@@ -56,7 +63,7 @@ const AuthorSocialLink = ({
   record,
   value,
 }: {
-  record: ENSRecord | string & {}
+  record: ENSRecord | (string & {})
   value: string
 }) =>
   match(record)
@@ -115,7 +122,10 @@ export default async function Blog(props: PageProps) {
         style={{}}
       >
         <div className={clsx(styles['author-social-links'])}>
-          <Link href={`https://app.ens.domains/${params.author}`} target="_blank">
+          <Link
+            href={`https://app.ens.domains/${params.author}`}
+            target="_blank"
+          >
             <EnsNavIcon width="24" height="24" />
           </Link>
           {Object.entries(author?.records || {}).map(([record, value]) => (

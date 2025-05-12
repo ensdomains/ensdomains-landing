@@ -1,14 +1,13 @@
 'use client'
 
 import { clsx } from 'clsx'
-
+import { useEffect, useState } from 'react'
+import { ExternalLink } from 'react-external-link'
 import ui from '~/styles/ui.module.css'
+import { checkBoxAvailable, checkEthAvailable } from '~/utils/available'
+import { useDebounce } from '~/utils/useDebounce'
 import { ArrowRightIcon, SearchIcon } from '../icons'
 import styles from './SearchInput.module.css'
-import { useEffect, useState } from 'react'
-import { useDebounce } from '~/utils/useDebounce'
-import { ExternalLink } from 'react-external-link'
-import { checkBoxAvailable, checkEthAvailable } from '~/utils/available'
 
 const ensProfileUrl = (name: string, available: boolean, tld: 'eth' | 'box') =>
   `https://app.ens.domains/${tld === 'eth' ? 'name/' : ''}${name}.${tld}${
@@ -16,8 +15,8 @@ const ensProfileUrl = (name: string, available: boolean, tld: 'eth' | 'box') =>
   }`
 
 const showSuggestions = (name: string): boolean =>
-  ['eth', 'box'].includes(name.split('.')[1])
-  || name.split('.')[1] === undefined
+  ['eth', 'box'].includes(name.split('.')[1]) ||
+  name.split('.')[1] === undefined
 
 type CommonProps = {
   viewText: string
@@ -75,40 +74,28 @@ const TldList = ({
 
   return (
     <div className={styles.tlds}>
-      {name.length > 2 && tld !== 'box'
-        ? (
-            <ExternalLink
-              className={
-                isEnsAvailable ? styles.registered : styles.available
-              }
-              href={ensProfileUrl(name, isEnsAvailable, tld || 'eth')}
-            >
-              <span>.eth</span>
-              <span>
-                {isEnsAvailable ? registerText : viewText}
-                {' '}
-                <ArrowRightIcon />
-              </span>
-            </ExternalLink>
-          )
-        : null}
-      {isBoxInvalid || tld === 'eth'
-        ? null
-        : (
-            <ExternalLink
-              className={
-                isBoxAvailable ? styles.registered : styles.available
-              }
-              href={ensProfileUrl(name, isBoxAvailable, tld || 'box')}
-            >
-              <span>.box</span>
-              <span>
-                {isBoxAvailable ? registerText : viewText}
-                {' '}
-                <ArrowRightIcon />
-              </span>
-            </ExternalLink>
-          )}
+      {name.length > 2 && tld !== 'box' ? (
+        <ExternalLink
+          className={isEnsAvailable ? styles.registered : styles.available}
+          href={ensProfileUrl(name, isEnsAvailable, tld || 'eth')}
+        >
+          <span>.eth</span>
+          <span>
+            {isEnsAvailable ? registerText : viewText} <ArrowRightIcon />
+          </span>
+        </ExternalLink>
+      ) : null}
+      {isBoxInvalid || tld === 'eth' ? null : (
+        <ExternalLink
+          className={isBoxAvailable ? styles.registered : styles.available}
+          href={ensProfileUrl(name, isBoxAvailable, tld || 'box')}
+        >
+          <span>.box</span>
+          <span>
+            {isBoxAvailable ? registerText : viewText} <ArrowRightIcon />
+          </span>
+        </ExternalLink>
+      )}
     </div>
   )
 }
@@ -139,11 +126,7 @@ export const SearchInput = ({
       // special case - URL hash
       setIsInvalid(true)
       setIsLoading(false)
-    }
-    else if (
-      debouncedValue.length !== 0
-      && showSuggestions(debouncedValue)
-    ) {
+    } else if (debouncedValue.length !== 0 && showSuggestions(debouncedValue)) {
       setIsInvalid(false)
       setIsBoxInvalid(false)
       setIsLoading(true)
@@ -158,8 +141,7 @@ export const SearchInput = ({
           .finally(() => {
             setIsLoading(false)
           })
-      }
-      else if (tld === 'box') {
+      } else if (tld === 'box') {
         checkBoxAvailable(name)
           .then((available) => {
             setBoxAvailable(available)
@@ -170,8 +152,7 @@ export const SearchInput = ({
           .finally(() => {
             setIsLoading(false)
           })
-      }
-      else {
+      } else {
         checkBoxAvailable(name)
           .then((available) => {
             setBoxAvailable(available)
@@ -187,8 +168,7 @@ export const SearchInput = ({
               .then((available) => {
                 if (name.length < 2) {
                   setEnsAvailable(false)
-                }
-                else setEnsAvailable(available)
+                } else setEnsAvailable(available)
               })
               .catch(() => {
                 setIsInvalid(true)
@@ -212,28 +192,12 @@ export const SearchInput = ({
     >
       {caption && (
         <div className={styles.captionContainer}>
-          <img
-            src="/assets/arrow-down.svg"
-            width="16"
-            height="13"
-            alt=""
-          />
+          <img src="/assets/arrow-down.svg" width="16" height="13" alt="" />
           <span className={styles.caption}>{caption}</span>
-          <img
-            src="/assets/arrow-down.svg"
-            width="16"
-            height="13"
-            alt=""
-          />
+          <img src="/assets/arrow-down.svg" width="16" height="13" alt="" />
         </div>
       )}
-      <div
-        className={clsx(
-          ui.flex,
-          ui['flex-col'],
-          styles.searchboxContainer,
-        )}
-      >
+      <div className={clsx(ui.flex, ui['flex-col'], styles.searchboxContainer)}>
         <form
           method="GET"
           onSubmit={(e) => {
@@ -244,24 +208,16 @@ export const SearchInput = ({
               const name = fd.get('ens') as string
               const dot = name.lastIndexOf('.')
               const properName = dot !== -1 ? name.slice(0, dot) : name
-              location.assign(
-                `https://ens.app/${properName}.eth`,
-              )
+              location.assign(`https://ens.app/${properName}.eth`)
             }
           }}
-          className={clsx(
-            styles.inputContainer,
-            'plausible-event-name=search',
-          )}
+          className={clsx(styles.inputContainer, 'plausible-event-name=search')}
         >
           <input
-            onChange={e => setValue(e.currentTarget.value)}
+            onChange={(e) => setValue(e.currentTarget.value)}
             name="ens"
             value={value}
-            className={clsx(
-              styles.input,
-              isInvalid && styles['input-invalid'],
-            )}
+            className={clsx(styles.input, isInvalid && styles['input-invalid'])}
             placeholder={placeholder}
             required
             minLength={2}

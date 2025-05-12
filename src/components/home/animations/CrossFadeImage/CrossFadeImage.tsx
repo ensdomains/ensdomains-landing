@@ -1,13 +1,19 @@
 import { clsx } from 'clsx'
-import { CSSProperties, ReactNode, useEffect, useRef, useState } from 'react'
+import {
+  type CSSProperties,
+  type ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 
 import styles from './CrossFadeImage.module.css'
 
 type CrossFadeImageProperties = {
-  sources: { src: string, alt: string }[]
+  sources: { src: string; alt: string }[]
   duration: number
   className?: string
-  children?: (props: { alt: string, index: number }) => ReactNode
+  children?: (props: { alt: string; index: number }) => ReactNode
 }
 
 export const CrossFadeImage = ({
@@ -26,9 +32,7 @@ export const CrossFadeImage = ({
       setIsTransitioning(true)
       transitionTimeoutReference.current = window.setTimeout(() => {
         setCurrentImageIndex(nextImageIndex)
-        setNextImageIndex(
-          nextIndex => (nextIndex + 1) % sources.length,
-        )
+        setNextImageIndex((nextIndex) => (nextIndex + 1) % sources.length)
         setIsTransitioning(false)
       }, duration)
     }
@@ -48,15 +52,14 @@ export const CrossFadeImage = ({
     if (currentImageIndex === index) return 1
     else if (nextImageIndex === index && isTransitioning) {
       return 1 - duration / 1000 / 2
-    }
-    else return 0
+    } else return 0
   }
 
   const style = (index: number) =>
     ({
-      'opacity': opacity(index),
+      opacity: opacity(index),
       '--duration': `${duration}ms`,
-    } as CSSProperties)
+    }) as CSSProperties
 
   return (
     <>

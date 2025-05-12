@@ -37,7 +37,7 @@
 
 .hit-image {
   height: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
 
   border-radius: 4px;

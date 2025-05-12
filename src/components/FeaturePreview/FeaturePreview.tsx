@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import { CSSProperties, FC, HTMLAttributes, ReactNode } from 'react'
+import type { CSSProperties, FC, HTMLAttributes, ReactNode } from 'react'
 
 import ui from '~/styles/ui.module.css'
 import type { Color } from '../../utils/types'
@@ -22,8 +22,7 @@ const Indicator = ({
             : `var(--${indicatorColor})`,
         } as CSSProperties
       }
-    >
-    </div>
+    ></div>
   )
 }
 
@@ -56,22 +55,17 @@ export const FeaturePreview: FC<
       {...props}
       style={
         {
-          'backgroundImage': `url(/assets/${gridSrc})`,
+          backgroundImage: `url(/assets/${gridSrc})`,
           ...style,
           '--feature-bg': `var(--${backgroundColor})`,
           '--feature-text': `var(--${textColor})`,
         } as CSSProperties
       }
-      className={clsx(
-        className,
-        styles.container,
-        ui.flex,
-        ui['flex-col'],
-      )}
+      className={clsx(className, styles.container, ui.flex, ui['flex-col'])}
     >
       <div className={styles.top}>
         <div className={clsx(ui.flex, ui['flex-row'], styles.menubar)}>
-          {[0, 1, 2].map(position => (
+          {[0, 1, 2].map((position) => (
             <Indicator
               key={position}
               indicatorColor={indicatorColor}

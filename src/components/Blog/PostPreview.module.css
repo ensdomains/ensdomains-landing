@@ -7,13 +7,13 @@
 
 .preview-cover-container {
   background-color: var(--ens-grey1);
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
   border-radius: 4px;
   overflow: hidden;
 }
 
 .preview-cover {
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
   height: 100%;
   width: 100%;
   object-fit: cover;

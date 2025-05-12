@@ -1,9 +1,7 @@
 import { clsx } from 'clsx'
 import type { FC } from 'react'
-
-import type { ButtonVariant } from '~/utils/types'
-
 import ui from '~/styles/ui.module.css'
+import type { ButtonVariant } from '~/utils/types'
 import styles from './TwoCol.module.css'
 
 export const TwoCol: FC<{
@@ -37,8 +35,7 @@ export const TwoCol: FC<{
               href={href}
               className={clsx(
                 ui.button,
-                buttonVariant === 'secondary'
-                && ui['button-secondary'],
+                buttonVariant === 'secondary' && ui['button-secondary'],
               )}
             >
               {button}

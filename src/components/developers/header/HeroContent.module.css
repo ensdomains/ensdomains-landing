@@ -16,7 +16,8 @@
 
 .anim-position {
   position: absolute;
-  transform: translateY(var(--translateY, 0)) rotate(var(--rotate, 0deg)) scaleX(var(--scaleX, 1));
+  transform: translateY(var(--translateY, 0)) rotate(var(--rotate, 0deg))
+    scaleX(var(--scaleX, 1));
   display: none;
 }
 

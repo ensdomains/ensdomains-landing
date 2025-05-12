@@ -1,9 +1,8 @@
 import { clsx } from 'clsx'
-import React, { FC } from 'react'
-
+import type { FC } from 'react'
+import { ExternalLink } from 'react-external-link'
 import ui from '~/styles/ui.module.css'
 import styles from './Footer.module.css'
-import { ExternalLink } from 'react-external-link'
 
 export const Footer: FC<{
   footerItems: {
@@ -18,16 +17,20 @@ export const Footer: FC<{
   return (
     <>
       <footer className={styles.container}>
-        <img className={styles.logo} src="/assets/ens_logo_white.svg" alt="ENS" width={80} height={91.285} />
+        <img
+          className={styles.logo}
+          src="/assets/ens_logo_white.svg"
+          alt="ENS"
+          width={80}
+          height={91.285}
+        />
         <div className={styles.columns}>
-          {footerItems.map(list => (
+          {footerItems.map((list) => (
             <ul className={styles.ul} key={list.title}>
               <div className={styles.h3}>{list.title}</div>
-              {list.entries.map(entry => (
+              {list.entries.map((entry) => (
                 <li key={entry.title}>
-                  <ExternalLink href={entry.link}>
-                    {entry.title}
-                  </ExternalLink>
+                  <ExternalLink href={entry.link}>{entry.title}</ExternalLink>
                 </li>
               ))}
             </ul>

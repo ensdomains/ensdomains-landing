@@ -7,8 +7,8 @@ export default function rehypeSlugify() {
 
     visit(tree, 'element', (node) => {
       if (
-        (node.tagName === 'h2' || node.tagName === 'h3')
-        && !node.properties.id
+        (node.tagName === 'h2' || node.tagName === 'h3') &&
+        !node.properties.id
       ) {
         node.properties.id = slugify(toString(node))
       }

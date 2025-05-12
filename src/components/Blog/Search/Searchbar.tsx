@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import { SearchIcon } from '~/components/icons'
 import styles from './Searchbar.module.css'
 import { SearchResults } from './SearchResults'
-import { SearchIcon } from '~/components/icons'
 
 export const Searchbar = () => {
   const [search, setSearch] = useState('')
@@ -15,10 +15,13 @@ export const Searchbar = () => {
         placeholder="Search for a post"
         className={styles.input}
         value={search}
-        onChange={e => setSearch(e.target.value)}
+        onChange={(e) => setSearch(e.target.value)}
         minLength={3}
       />
-      <SearchIcon className={styles.searchIcon} opacity={search.length > 0 ? 1 : 0.3} />
+      <SearchIcon
+        className={styles.searchIcon}
+        opacity={search.length > 0 ? 1 : 0.3}
+      />
       <SearchResults search={search} />
     </div>
   )

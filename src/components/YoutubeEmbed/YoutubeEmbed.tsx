@@ -13,8 +13,7 @@ export const YoutubeEmbed = ({ src }: { src: string }) => {
           sandbox="allow-scripts allow-same-origin"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-        >
-        </iframe>
+        ></iframe>
       </div>
       <a
         href={`https://youtu.be/${src}`}
@@ -22,9 +21,7 @@ export const YoutubeEmbed = ({ src }: { src: string }) => {
         className={styles.link}
       >
         {/* <FiYoutube /> */}
-        {/* TODO: Add icon */}
-        {' '}
-        View on Youtube
+        {/* TODO: Add icon */} View on Youtube
       </a>
     </div>
   )

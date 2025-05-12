@@ -1,25 +1,23 @@
 import { clsx } from 'clsx'
-
+import Link from 'next/link'
 import { Carousel } from '~/components/Carousel/Carousel'
 import { ColorCardsWithPath } from '~/components/ColorCards/ColorCards'
 import { FeaturePreview } from '~/components/FeaturePreview/FeaturePreview'
 import { Header } from '~/components/Header/Header'
 import { DappsAnimation } from '~/components/home/animations/DappsAnimation/DappsAnimation'
 import { MessageAnimation } from '~/components/home/animations/MessageAnimation/MessageAnimation'
+import { StatsCounter } from '~/components/home/animations/StatsCounter/StatsCounter'
 import { HeroContent } from '~/components/home/header/HeroContent/HeroContent'
+import { PartnersList } from '~/components/home/PartnersList/PartnersList'
+import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage'
 import { SearchInput } from '~/components/SearchInput/SearchInput'
 import { TwoCol } from '~/components/TwoCol/TwoCol'
-import { fallbackLng, Language } from '~/i18n/settings'
-import { useTranslation } from '~/i18n/useTranslation'
-
-import ui from '~/styles/ui.module.css'
-import styles from './page.module.css'
-import { PartnersList } from '~/components/home/PartnersList/PartnersList'
-import { PartnerEntry } from '~/utils/types'
-import { StatsCounter } from '~/components/home/animations/StatsCounter/StatsCounter'
-import Link from 'next/link'
 import { getLangPrefix } from '~/i18n/langPrefix'
-import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage'
+import { fallbackLng, type Language } from '~/i18n/settings'
+import { useTranslation } from '~/i18n/useTranslation'
+import ui from '~/styles/ui.module.css'
+import type { PartnerEntry } from '~/utils/types'
+import styles from './page.module.css'
 
 const partners: PartnerEntry[] = [
   /* temporary */
@@ -55,18 +53,17 @@ const partners: PartnerEntry[] = [
   },
 ]
 
-export default async function Home(props: { params: Promise<{ lang?: Language }> }) {
+export default async function Home(props: {
+  params: Promise<{ lang?: Language }>
+}) {
   const params = await props.params
 
-  const {
-    lang = fallbackLng,
-  } = params
+  const { lang = fallbackLng } = params
 
   const { t } = await useTranslation(lang, 'translation')
 
   return (
     <>
-
       <Header
         className={styles.header}
         title={t('home.hero.title')}
@@ -97,12 +94,13 @@ export default async function Home(props: { params: Promise<{ lang?: Language }>
               position={0}
               gridSrc="blue-grid.svg"
             >
-              <MessageAnimation messages={[
-                t('home.features.farewell.animation.m1'),
-                t('home.features.farewell.animation.m2'),
-                t('home.features.farewell.animation.m3'),
-                t('home.features.farewell.animation.m4'),
-              ]}
+              <MessageAnimation
+                messages={[
+                  t('home.features.farewell.animation.m1'),
+                  t('home.features.farewell.animation.m2'),
+                  t('home.features.farewell.animation.m3'),
+                  t('home.features.farewell.animation.m4'),
+                ]}
               />
             </FeaturePreview>
             <FeaturePreview
@@ -114,7 +112,10 @@ export default async function Home(props: { params: Promise<{ lang?: Language }>
               position={1}
               gridSrc="magenta-grid.svg"
             >
-              <DappsAnimation swap={t('home.features.consistent.swapButton')} home={t('home.features.farcaster.title')} />
+              <DappsAnimation
+                swap={t('home.features.consistent.swapButton')}
+                home={t('home.features.farcaster.title')}
+              />
             </FeaturePreview>
             <FeaturePreview
               title={t('home.features.ownership.title')}
@@ -134,19 +135,18 @@ export default async function Home(props: { params: Promise<{ lang?: Language }>
                 sourceProps={{
                   desktop: { height: 376, width: 901 },
                   tablet: { width: 515, height: 215 },
-                  mobile: { width: 151, height: 311, className: styles.ownershipVideo },
+                  mobile: {
+                    width: 151,
+                    height: 311,
+                    className: styles.ownershipVideo,
+                  },
                 }}
               />
             </FeaturePreview>
           </Carousel>
         </div>
         <div>
-          <div className={clsx(
-            ui.flex,
-            ui['flex-col'],
-            ui['h3-section'],
-          )}
-          >
+          <div className={clsx(ui.flex, ui['flex-col'], ui['h3-section'])}>
             <h3>{t('home.gyow.title')}</h3>
             <p className={clsx(ui['max-w-text'], ui.serif)}>
               {t('home.gyow.description')}
@@ -177,27 +177,17 @@ export default async function Home(props: { params: Promise<{ lang?: Language }>
             />
           </div>
         </div>
-        <div
-          className={clsx(
-
-            ui.flex,
-            ui['flex-col'],
-            styles.gtwSection,
-          )}
-        >
-          <div className={clsx(
-            ui.flex,
-            ui['flex-col'],
-            ui['h3-section'],
-          )}
-          >
+        <div className={clsx(ui.flex, ui['flex-col'], styles.gtwSection)}>
+          <div className={clsx(ui.flex, ui['flex-col'], ui['h3-section'])}>
             <h3>{t('home.gateway.title')}</h3>
             <p className={clsx(ui['max-w-text'], ui.serif)}>
               {t('home.gateway.description')}
             </p>
           </div>
 
-          <div className={clsx(ui.flex, ui['flex-col'], styles.partnersContainer)}>
+          <div
+            className={clsx(ui.flex, ui['flex-col'], styles.partnersContainer)}
+          >
             <div className={ui['body-sm']}>{t('home.partners.tag')}</div>
 
             <p className={clsx(ui['max-w-text'], ui.serif)}>
@@ -205,7 +195,10 @@ export default async function Home(props: { params: Promise<{ lang?: Language }>
             </p>
             <PartnersList partners={partners} />
 
-            <Link href={`${getLangPrefix(lang)}/ecosystem`} className={ui.button}>
+            <Link
+              href={`${getLangPrefix(lang)}/ecosystem`}
+              className={ui.button}
+            >
               {t('home.partners.button')}
             </Link>
           </div>
@@ -215,9 +208,7 @@ export default async function Home(props: { params: Promise<{ lang?: Language }>
             {
               tag: t('home.extra.governance.tag'),
               title: t('home.extra.governance.title'),
-              description: t(
-                'home.extra.governance.description',
-              ),
+              description: t('home.extra.governance.description'),
               button: t('home.extra.governance.button'),
               buttonVariant: 'secondary',
               href: 'https://docs.ens.domains/dao',
@@ -225,20 +216,19 @@ export default async function Home(props: { params: Promise<{ lang?: Language }>
             {
               tag: t('home.extra.community.tag'),
               title: t('home.extra.community.title'),
-              description: t(
-                'home.extra.community.description',
-              ),
+              description: t('home.extra.community.description'),
               button: t('home.extra.community.button'),
               buttonVariant: 'secondary',
               href: 'https://discuss.ens.domains',
             },
           ]}
         />
-        <StatsCounter captions={{
-          names: t('home.stats.names'),
-          integrations: t('home.stats.integrations'),
-          owners: t('home.stats.owners'),
-        }}
+        <StatsCounter
+          captions={{
+            names: t('home.stats.names'),
+            integrations: t('home.stats.integrations'),
+            owners: t('home.stats.owners'),
+          }}
         />
       </section>
     </>

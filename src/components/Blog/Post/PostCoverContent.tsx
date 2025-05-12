@@ -1,6 +1,6 @@
-import { FC } from 'react'
-import { BlogPostMetadataPlus } from '~/utils/blog/posts'
+import type { FC } from 'react'
 import { YoutubeEmbed } from '~/components/YoutubeEmbed/YoutubeEmbed'
+import type { BlogPostMetadataPlus } from '~/utils/blog/posts'
 import styles from './PostCoverContent.module.css'
 
 export const PostCoverContent: FC<{ post: BlogPostMetadataPlus }> = async ({

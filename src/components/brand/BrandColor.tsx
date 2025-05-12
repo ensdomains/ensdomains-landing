@@ -1,10 +1,16 @@
 'use client'
 
-import { CSSProperties, useEffect, useState } from 'react'
-import { BrandColorObject } from '~/utils/types'
+import { type CSSProperties, useEffect, useState } from 'react'
+import type { BrandColorObject } from '~/utils/types'
 import styles from './BrandColor.module.css'
 
-const ColorButton = ({ color, colorName }: { color: string, colorName: string }) => {
+const ColorButton = ({
+  color,
+  colorName,
+}: {
+  color: string
+  colorName: string
+}) => {
   const [isCopied, setIsCopied] = useState(false)
 
   useEffect(() => {
@@ -35,11 +41,13 @@ const ColorButton = ({ color, colorName }: { color: string, colorName: string })
 export const BrandColor = (color: BrandColorObject) => (
   <div
     className={styles.brandColor}
-    style={{
-      '--color': color.hex,
-      'color': color.textColor,
-      'border': color.name === 'White' ? '1px solid var(--ens-gray-2)' : 'none',
-    } as CSSProperties}
+    style={
+      {
+        '--color': color.hex,
+        color: color.textColor,
+        border: color.name === 'White' ? '1px solid var(--ens-gray-2)' : 'none',
+      } as CSSProperties
+    }
   >
     <div className={styles.colorName}>{color.name}</div>
     <div className={styles.colorList}>

@@ -11,8 +11,7 @@ export const AUTHORS_ASSETS_FOLDER = new URL('./authors/', ASSETS_FOLDER)
 export const makeDirectoryIfNotExists = async (path: string) => {
   try {
     await access(path, constants.F_OK | constants.W_OK | constants.R_OK)
-  }
-  catch {
+  } catch {
     logger.debug(`Creating directory: ${path}`)
     await mkdir(path)
   }
@@ -21,7 +20,7 @@ export const makeDirectoryIfNotExists = async (path: string) => {
 export const getPostDirectories = async () => {
   const files = await readdir(POSTS_FOLDER.pathname)
   logger.debug('Found posts:', files)
-  return files.filter(file => file !== '.DS_Store')
+  return files.filter((file) => file !== '.DS_Store')
 }
 
 export const writeOutput = async (items: string[]): Promise<string> => {

@@ -2,8 +2,8 @@
 import type { MDXComponents } from 'mdx/types'
 import { Heading } from './components/MDX/Heading/Heading'
 import { Image } from './components/MDX/Heading/Image'
-import { YoutubeEmbed } from './components/YoutubeEmbed/YoutubeEmbed'
 import { Link } from './components/MDX/Link'
+import { YoutubeEmbed } from './components/YoutubeEmbed/YoutubeEmbed'
 
 // This file is required to use MDX in `app` directory.
 // eslint-disable-next-line @eslint-react/hooks-extra/no-useless-custom-hooks

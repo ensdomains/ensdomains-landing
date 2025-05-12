@@ -35,7 +35,6 @@
     max-width: 417px;
     order: unset;
   }
-
 }
 
 @media (min-width: 1280px) {
@@ -51,5 +50,4 @@
   .contentWithCta {
     max-width: 688px;
   }
-
 }

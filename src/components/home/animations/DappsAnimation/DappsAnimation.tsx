@@ -15,61 +15,56 @@ import { useIntersectionObserver } from '~/utils/useIntersectionObserver'
 import { CrossFadeImage } from '../CrossFadeImage/CrossFadeImage'
 import styles from './DappsAnimation.module.css'
 
-const sources: { src: string, alt: string }[] = [
+const sources: { src: string; alt: string }[] = [
   'domico.eth',
   'luc.eth',
   'nick.eth',
-].map(name => ({ alt: name, src: `/assets/home/${name}.png` }))
+].map((name) => ({ alt: name, src: `/assets/home/${name}.png` }))
 
-const FarcasterPost = ({ user, text, handle, likes, reposts, comments }: { user: string, text: string, handle: string, likes: number, reposts: number, comments: number }) => (
+const FarcasterPost = ({
+  user,
+  text,
+  handle,
+  likes,
+  reposts,
+  comments,
+}: {
+  user: string
+  text: string
+  handle: string
+  likes: number
+  reposts: number
+  comments: number
+}) => (
   <div className={clsx(ui.flex, ui['flex-col'], styles.farcasterPost)}>
-    <div
-      className={clsx(
-        ui.flex,
-        ui['flex-row'],
-        styles.farcasterPostAuthor,
-      )}
-    >
+    <div className={clsx(ui.flex, ui['flex-row'], styles.farcasterPostAuthor)}>
       <span>{user}</span>
-      <span className={styles.farcasterPostAuthorHandle}>
-        @
-        {handle}
-      </span>
+      <span className={styles.farcasterPostAuthorHandle}>@{handle}</span>
     </div>
-    <div className={styles.farcasterPostContent}>
-      {text}
-    </div>
-    <div
-      className={clsx(
-        ui.flex,
-        ui['flex-row'],
-        styles.farcasterPostButtons,
-      )}
-    >
+    <div className={styles.farcasterPostContent}>{text}</div>
+    <div className={clsx(ui.flex, ui['flex-row'], styles.farcasterPostButtons)}>
       <button type="button">
-        <FarcastCommentIcon
-          className={styles.farcasterPostButtonsIcon}
-        />
-        {' '}
+        <FarcastCommentIcon className={styles.farcasterPostButtonsIcon} />{' '}
         {comments}
       </button>
       <button type="button">
-        <FarcastRecastIcon
-          className={styles.farcasterPostButtonsIcon}
-        />
-        {' '}
+        <FarcastRecastIcon className={styles.farcasterPostButtonsIcon} />{' '}
         {reposts}
       </button>
       <button type="button">
-        <FarcastLikeIcon className={styles.farcasterPostButtonsIcon} />
-        {' '}
-        {likes}
+        <FarcastLikeIcon className={styles.farcasterPostButtonsIcon} /> {likes}
       </button>
     </div>
   </div>
 )
 
-export const DappsAnimation = ({ swap, home }: { swap: string, home: string }) => {
+export const DappsAnimation = ({
+  swap,
+  home,
+}: {
+  swap: string
+  home: string
+}) => {
   const { ref, isIntersecting } = useIntersectionObserver({
     threshold: 1,
   })
@@ -92,31 +87,15 @@ export const DappsAnimation = ({ swap, home }: { swap: string, home: string }) =
           {...{ sources }}
         >
           {({ alt }) => (
-            <div className={clsx(styles.name, styles.fndName)}>
-              {alt}
-            </div>
+            <div className={clsx(styles.name, styles.fndName)}>{alt}</div>
           )}
         </CrossFadeImage>
 
         <div className={styles.fndLine}></div>
-        <div
-          className={clsx(ui.flex, ui['flex-row'], styles.fndGallery)}
-        >
-          <img
-            className={styles.img}
-            src="/assets/home/fnd-1.png"
-            alt=""
-          />
-          <img
-            className={styles.img}
-            src="/assets/home/fnd-2.png"
-            alt=""
-          />
-          <img
-            className={styles.img}
-            src="/assets/home/fnd-3.png"
-            alt=""
-          />
+        <div className={clsx(ui.flex, ui['flex-row'], styles.fndGallery)}>
+          <img className={styles.img} src="/assets/home/fnd-1.png" alt="" />
+          <img className={styles.img} src="/assets/home/fnd-2.png" alt="" />
+          <img className={styles.img} src="/assets/home/fnd-3.png" alt="" />
         </div>
       </div>
       <div
@@ -128,9 +107,7 @@ export const DappsAnimation = ({ swap, home }: { swap: string, home: string }) =
           isIntersecting && styles.animating,
         )}
       >
-        <div
-          className={clsx(ui.flex, ui['flex-row'], styles.swapHeader)}
-        >
+        <div className={clsx(ui.flex, ui['flex-row'], styles.swapHeader)}>
           <span className={styles.swapTitle}>Swap</span>
           <div
             className={clsx(
@@ -159,11 +136,7 @@ export const DappsAnimation = ({ swap, home }: { swap: string, home: string }) =
         >
           <span className={styles.swapValue}>3,333.50</span>
           <div
-            className={clsx(
-              ui.flex,
-              ui['flex-row'],
-              styles.swapCurrencyToggle,
-            )}
+            className={clsx(ui.flex, ui['flex-row'], styles.swapCurrencyToggle)}
           >
             <div className={styles.swapIndicator}></div>
             <span className={styles.swapCurrency}>USDC</span>
@@ -198,10 +171,7 @@ export const DappsAnimation = ({ swap, home }: { swap: string, home: string }) =
         </div>
       </div>
       <div
-        className={clsx(
-          styles.farcaster,
-          isIntersecting && styles.animating,
-        )}
+        className={clsx(styles.farcaster, isIntersecting && styles.animating)}
       >
         <div className={clsx(styles.farcasterTitle)}>
           <CrossFadeImage
@@ -209,41 +179,13 @@ export const DappsAnimation = ({ swap, home }: { swap: string, home: string }) =
             className={styles.farcasterPfp}
             {...{ sources }}
           />
-          <div className={styles.farcasterTitleText}>
-            {home}
-          </div>
+          <div className={styles.farcasterTitleText}>{home}</div>
         </div>
-        <div
-          className={clsx(
-            ui.flex,
-            ui['flex-row'],
-            styles.farcasterStories,
-          )}
-        >
-          <img
-            src="/assets/home/stories-1.png"
-            alt=""
-            height={32}
-            width={32}
-          />
-          <img
-            src="/assets/home/stories-2.png"
-            alt=""
-            height={32}
-            width={32}
-          />
-          <img
-            src="/assets/home/stories-3.png"
-            alt=""
-            height={32}
-            width={32}
-          />
-          <img
-            src="/assets/home/stories-4.png"
-            alt=""
-            height={32}
-            width={32}
-          />
+        <div className={clsx(ui.flex, ui['flex-row'], styles.farcasterStories)}>
+          <img src="/assets/home/stories-1.png" alt="" height={32} width={32} />
+          <img src="/assets/home/stories-2.png" alt="" height={32} width={32} />
+          <img src="/assets/home/stories-3.png" alt="" height={32} width={32} />
+          <img src="/assets/home/stories-4.png" alt="" height={32} width={32} />
         </div>
         <div className={clsx(ui.flex, ui['flex-col'])}>
           <FarcasterPost
@@ -271,52 +213,21 @@ export const DappsAnimation = ({ swap, home }: { swap: string, home: string }) =
             comments={22}
           />
         </div>
-        <div
-          className={clsx(
-            ui.flex,
-            ui['flex-row'],
-            styles.farcasterMenu,
-          )}
-        >
+        <div className={clsx(ui.flex, ui['flex-row'], styles.farcasterMenu)}>
           <button type="button">
-            <img
-              src="/assets/home/home.svg"
-              height={16}
-              width={16}
-              alt=""
-            />
+            <img src="/assets/home/home.svg" height={16} width={16} alt="" />
           </button>
           <button type="button">
-            <img
-              src="/assets/home/search.svg"
-              height={16}
-              width={16}
-              alt=""
-            />
+            <img src="/assets/home/search.svg" height={16} width={16} alt="" />
           </button>
           <button type="button">
-            <img
-              src="/assets/home/plus.svg"
-              height={16}
-              width={16}
-              alt=""
-            />
+            <img src="/assets/home/plus.svg" height={16} width={16} alt="" />
           </button>
           <button type="button">
-            <img
-              src="/assets/home/bell.svg"
-              height={16}
-              width={16}
-              alt=""
-            />
+            <img src="/assets/home/bell.svg" height={16} width={16} alt="" />
           </button>
           <button type="button">
-            <img
-              src="/assets/home/group.svg"
-              height={16}
-              width={16}
-              alt=""
-            />
+            <img src="/assets/home/group.svg" height={16} width={16} alt="" />
           </button>
         </div>
       </div>

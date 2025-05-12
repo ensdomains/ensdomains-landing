@@ -1,18 +1,17 @@
 import { clsx } from 'clsx'
-import { CSSProperties } from 'react'
 import type { Metadata, ResolvingMetadata } from 'next'
-import { useTranslation } from '~/i18n/useTranslation'
+import type { CSSProperties } from 'react'
 import blogUi from '~/app/(root)/blog/blog-ui.module.css'
-import styles from './page.module.css'
-import { PageProps as BasePageProps } from '~/utils/types'
-
-import { getPostsMetadata } from '~/utils/blog/posts'
-import { splitArrayBiasFirst } from '~/utils/array/split'
-import { PageButtons } from '~/components/PageButtons/PageButtons'
-import { BlogPostPreview } from '~/components/Blog/PostPreview'
 import { BlogHeader } from '~/components/Blog/BlogHeader'
-import { createMetadata } from '~/utils/metadata'
+import { BlogPostPreview } from '~/components/Blog/PostPreview'
 import { Searchbar } from '~/components/Blog/Search/Searchbar'
+import { PageButtons } from '~/components/PageButtons/PageButtons'
+import { useTranslation } from '~/i18n/useTranslation'
+import { splitArrayBiasFirst } from '~/utils/array/split'
+import { getPostsMetadata } from '~/utils/blog/posts'
+import { createMetadata } from '~/utils/metadata'
+import type { PageProps as BasePageProps } from '~/utils/types'
+import styles from './page.module.css'
 
 const MAX_PER_PAGE = 6
 
@@ -34,7 +33,10 @@ export async function generateStaticParams() {
   return parameters
 }
 
-export const generateMetadata = async (props: PageProps, parentMetadata: ResolvingMetadata): Promise<Metadata> => {
+export const generateMetadata = async (
+  props: PageProps,
+  parentMetadata: ResolvingMetadata,
+): Promise<Metadata> => {
   const params = await props.params
   const { t } = await useTranslation(params.lang, 'translation')
 

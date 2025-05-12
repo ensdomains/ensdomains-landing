@@ -1,8 +1,14 @@
 import { writeFile } from 'node:fs/promises'
-import { ASSETS_FOLDER, AUTHORS_ASSETS_FOLDER, makeDirectoryIfNotExists, POSTS_ASSETS_FOLDER, writeOutput } from './utils'
-import { handlePosts } from './posts'
 import { handleAuthors } from './authors'
 import { logger } from './logger'
+import { handlePosts } from './posts'
+import {
+  ASSETS_FOLDER,
+  AUTHORS_ASSETS_FOLDER,
+  makeDirectoryIfNotExists,
+  POSTS_ASSETS_FOLDER,
+  writeOutput,
+} from './utils'
 
 async function main() {
   logger.info('Starting asset build process')

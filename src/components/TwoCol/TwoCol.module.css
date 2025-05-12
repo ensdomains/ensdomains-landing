@@ -50,13 +50,12 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
-
 }
 
 @media (min-width: 1280px) {
   .split {
     gap: 70px 50px;
-    padding-right: 50px; 
+    padding-right: 50px;
   }
   .content {
     flex-direction: row;

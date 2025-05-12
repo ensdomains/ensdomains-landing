@@ -11,8 +11,7 @@ function getSections(node) {
           id: ${JSON.stringify(child.properties.id)},
           ...${child.properties.annotation}
         }`)
-    }
-    else if (child.children) {
+    } else if (child.children) {
       sections.push(...getSections(child))
     }
   }
@@ -29,8 +28,8 @@ export default function rehypeAddMDXExports() {
     for (const [name, value] of exports) {
       for (const node of tree.children) {
         if (
-          node.type === 'mdxjsEsm'
-          && new RegExp(`export\\s+const\\s+${name}\\s*=`).test(node.value)
+          node.type === 'mdxjsEsm' &&
+          new RegExp(`export\\s+const\\s+${name}\\s*=`).test(node.value)
         ) {
           return
         }

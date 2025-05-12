@@ -1,4 +1,4 @@
-.img { 
+.img {
   transition: opacity var(--duration) ease-in-out;
   border-radius: inherit;
   position: absolute;

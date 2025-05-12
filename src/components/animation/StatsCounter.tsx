@@ -1,11 +1,10 @@
 'use client'
 
+import { clsx } from 'clsx'
+import type { ReactNode } from 'react'
 import CountUp, { type CountUpProps } from 'react-countup'
-
 import ui from '~/styles/ui.module.css'
 import styles from './StatsCounter.module.css'
-import { clsx } from 'clsx'
-import { ReactNode } from 'react'
 
 export const StatsCounter = ({
   captions,
@@ -32,10 +31,9 @@ export const StatsCounter = ({
               enableScrollSpy
               className={styles.value}
               scrollSpyDelay={100 * i}
-              formattingFn={n => n.toLocaleString()}
+              formattingFn={(n) => n.toLocaleString()}
               {...props}
-            />
-            {' '}
+            />{' '}
             {captions[key]}
           </div>
         ))}

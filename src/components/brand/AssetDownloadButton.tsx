@@ -1,10 +1,15 @@
 'use client'
 
-import { HTMLAttributes } from 'react'
+import type { HTMLAttributes } from 'react'
 
 type Value = 'Download' | 'PNG' | 'SVG'
 
-export const AssetDownloadButton = ({ links, ...props }: { links: { url: string, title: string }[] } & HTMLAttributes<HTMLSelectElement>) => {
+export const AssetDownloadButton = ({
+  links,
+  ...props
+}: {
+  links: { url: string; title: string }[]
+} & HTMLAttributes<HTMLSelectElement>) => {
   return (
     <select
       value="Download"
@@ -19,8 +24,10 @@ export const AssetDownloadButton = ({ links, ...props }: { links: { url: string,
       }}
     >
       <option disabled>Download</option>
-      {links.map(link => (
-        <option value={link.url} key={link.url}>{link.title}</option>
+      {links.map((link) => (
+        <option value={link.url} key={link.url}>
+          {link.title}
+        </option>
       ))}
     </select>
   )
