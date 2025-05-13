@@ -1,6 +1,6 @@
-import { visit } from 'unist-util-visit'
 import * as acorn from 'acorn'
 import jsx from 'acorn-jsx'
+import { visit } from 'unist-util-visit'
 
 /**
  * Extracts key-value pairs from a string surrounded by square brackets [].
@@ -24,8 +24,8 @@ const extractKeyValuePairs = (input) => {
 
   while ((pairMatch = keyValuePairsRegex.exec(keyValuePairsString)) !== null) {
     const [, key, valueString, numericValueString] = pairMatch
-    const value
-        = valueString !== undefined ? valueString : Number(numericValueString)
+    const value =
+      valueString !== undefined ? valueString : Number(numericValueString)
 
     keyValuePairs[key] = value
   }
@@ -38,20 +38,20 @@ const extractKeyValuePairs = (input) => {
  */
 export default function remarkImportAsNextImages() {
   /**
-     * @param {import('unist').Parent} tree
-     */
+   * @param {import('unist').Parent} tree
+   */
   return async (tree) => {
     visit(
       tree,
       /**
-         * @param {import('unist').Parent} node
-         */
+       * @param {import('unist').Parent} node
+       */
       async (node, index, parent) => {
         if (node.type !== 'paragraph') return
 
         /**
-           * @type {import('unist').Node | undefined}
-           */
+         * @type {import('unist').Node | undefined}
+         */
         const imageNode = node.children.at(0)
 
         if (!imageNode) return
@@ -69,14 +69,14 @@ export default function remarkImportAsNextImages() {
         if (imageNode.title) attributes.push(`title="${imageNode.title}"`)
 
         /**
-           * @type {import('unist').Node | undefined}
-           */
+         * @type {import('unist').Node | undefined}
+         */
         const nextNode = node.children.at(1)
 
-        const keyValuePairs
-            = nextNode && nextNode.type === 'text'
-              ? extractKeyValuePairs(nextNode.value)
-              : undefined
+        const keyValuePairs =
+          nextNode && nextNode.type === 'text'
+            ? extractKeyValuePairs(nextNode.value)
+            : undefined
 
         for (const [key, value] of Object.entries(keyValuePairs || {})) {
           attributes.push(`${key}="${value}"`)
@@ -93,8 +93,7 @@ export default function remarkImportAsNextImages() {
             sourceType: 'module',
             ecmaVersion: 'latest',
           })
-        }
-        catch {
+        } catch {
           estree = {
             type: 'Program',
             body: [
@@ -127,8 +126,7 @@ export default function remarkImportAsNextImages() {
 
         if (node.children.length === 1) {
           parent.children.splice(index, 1, newImageNode)
-        }
-        else {
+        } else {
           node.children.splice(0, 1)
           parent.children.splice(index, 0, newImageNode)
         }

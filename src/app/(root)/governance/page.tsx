@@ -1,22 +1,20 @@
 import { clsx } from 'clsx'
-import { CSSProperties } from 'react'
-
+import type { Metadata } from 'next'
+import type { CSSProperties } from 'react'
+import { StatsCounter } from '~/components/animation/StatsCounter'
 import { ColorCards } from '~/components/ColorCards/ColorCards'
+import { HeroContent } from '~/components/governance/HeroContent'
 import { Header } from '~/components/Header/Header'
 import { LinkList } from '~/components/LinkList/LinkList'
-import { Language } from '~/i18n/settings'
-import { useTranslation } from '~/i18n/useTranslation'
-
-import ui from '~/styles/ui.module.css'
-import styles from './page.module.css'
-import { TwoCol } from '~/components/TwoCol/TwoCol'
-import { SectionWithPreview } from '~/components/SectionWithPreview/SectionWithPreview'
 import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage'
-import { HeroContent } from '~/components/governance/HeroContent'
-import type { PageProps } from '~/utils/types'
-import type { Metadata } from 'next'
-import { StatsCounter } from '~/components/animation/StatsCounter'
+import { SectionWithPreview } from '~/components/SectionWithPreview/SectionWithPreview'
+import { TwoCol } from '~/components/TwoCol/TwoCol'
+import type { Language } from '~/i18n/settings'
+import { useTranslation } from '~/i18n/useTranslation'
 import stats from '~/stats/grants.json'
+import ui from '~/styles/ui.module.css'
+import type { PageProps } from '~/utils/types'
+import styles from './page.module.css'
 
 export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
   const params = await props.params
@@ -28,11 +26,9 @@ export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
   }
 }
 
-export default async function Governance(
-  props: {
-    params: Promise<{ lang: Language }>
-  },
-) {
+export default async function Governance(props: {
+  params: Promise<{ lang: Language }>
+}) {
   const params = await props.params
   const { t } = await useTranslation(params.lang, 'translation')
 
@@ -52,10 +48,7 @@ export default async function Governance(
         description={t('governance.hero.text')}
         cta={[
           [t('governance.hero.cta1'), 'https://docs.ens.domains/dao'],
-          [
-            t('governance.hero.cta2'),
-            'https://www.tally.xyz/gov/ens',
-          ],
+          [t('governance.hero.cta2'), 'https://www.tally.xyz/gov/ens'],
         ]}
       >
         <HeroContent />
@@ -63,9 +56,7 @@ export default async function Governance(
 
       <section className={ui['page']}>
         <div className={clsx(ui.flex, ui['flex-col'], ui['h2-section'])}>
-          <h2>
-            {t('governance.extra.title')}
-          </h2>
+          <h2>{t('governance.extra.title')}</h2>
           <SectionWithPreview
             title={t('governance.extra.vote.title')}
             text={t('governance.extra.vote.text')}
@@ -164,9 +155,7 @@ export default async function Governance(
         <div className={clsx(ui.flex, ui['flex-col'], styles['join-section'])}>
           <div className={clsx(ui.flex, ui['flex-col'], ui['h3-section'])}>
             <h3>{t('governance.join.title')}</h3>
-            <p className={ui['max-w-text']}>
-              {t('governance.join.text')}
-            </p>
+            <p className={ui['max-w-text']}>{t('governance.join.text')}</p>
           </div>
           <ColorCards
             cards={[
@@ -179,14 +168,14 @@ export default async function Governance(
               {
                 title: 'Learn More',
                 description:
-                                'Absorb the wealth of knowledge in our Governance docs.',
+                  'Absorb the wealth of knowledge in our Governance docs.',
                 color: 'ens-green',
                 link: 'https://basics.ensdao.org',
               },
               {
                 title: 'Delegate Your Tokens',
                 description:
-                                'Delegate your tokens to an engaged member of the community.',
+                  'Delegate your tokens to an engaged member of the community.',
                 color: 'ens-magenta',
                 link: 'https://delegate.ens.domains',
               },
@@ -199,9 +188,7 @@ export default async function Governance(
             {
               tag: t('home.extra.governance.tag'),
               title: t('home.extra.governance.title'),
-              description: t(
-                'home.extra.governance.description',
-              ),
+              description: t('home.extra.governance.description'),
               button: t('home.extra.governance.button'),
               buttonVariant: 'secondary',
               href: 'https://docs.ens.domains/dao',
@@ -209,9 +196,7 @@ export default async function Governance(
             {
               tag: t('home.extra.community.tag'),
               title: t('home.extra.community.title'),
-              description: t(
-                'home.extra.community.description',
-              ),
+              description: t('home.extra.community.description'),
               button: t('home.extra.community.button'),
               buttonVariant: 'secondary',
               href: '/',

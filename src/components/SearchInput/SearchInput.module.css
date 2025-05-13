@@ -100,7 +100,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-    
+
   width: 100%;
   margin-top: 10px;
 }
@@ -183,7 +183,8 @@
     justify-content: flex-start;
     gap: 20px;
   }
-  .invalid, .tlds > a {
+  .invalid,
+  .tlds > a {
     width: max-content;
     margin-top: unset;
   }
@@ -220,12 +221,12 @@
   .tlds > a {
     padding: 16px 20px;
   }
-  .tlds > a > span:first-child, .invalid {
+  .tlds > a > span:first-child,
+  .invalid {
     font-size: 30px;
   }
   .spinner {
     width: 58px;
     height: 58px;
   }
- 
 }

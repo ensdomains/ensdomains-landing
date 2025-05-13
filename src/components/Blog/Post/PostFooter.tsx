@@ -1,9 +1,9 @@
-import { BlogPostMetadata } from '~/utils/blog/metadata'
-import styles from './PostFooter.module.css'
 import clsx from 'clsx'
-import Link from 'next/link'
-import { getAuthorAssets } from '~/utils/blog/utils'
 import Image from 'next/image'
+import Link from 'next/link'
+import type { BlogPostMetadata } from '~/utils/blog/metadata'
+import { getAuthorAssets } from '~/utils/blog/utils'
+import styles from './PostFooter.module.css'
 
 export const FooterAuthor = async ({ author }: { author: string }) => {
   const authorData = getAuthorAssets(author)
@@ -27,7 +27,11 @@ export const FooterAuthor = async ({ author }: { author: string }) => {
             {authorData.records.description}
           </div>
         )}
-        {avatar ? <Image src={avatar} alt={author} className={styles.authorAvatar} /> : <div className={styles.authorAvatar} />}
+        {avatar ? (
+          <Image src={avatar} alt={author} className={styles.authorAvatar} />
+        ) : (
+          <div className={styles.authorAvatar} />
+        )}
       </div>
       {authorData?.records.description && (
         <div className={clsx(styles.authorDescription, styles.authorMobile)}>
@@ -41,7 +45,7 @@ export const FooterAuthor = async ({ author }: { author: string }) => {
 export const PostFooter = ({ post }: { post: BlogPostMetadata }) => {
   return (
     <div className={clsx(styles.footer)}>
-      {post.authors?.map(author => (
+      {post.authors?.map((author) => (
         <FooterAuthor key={author} author={author} />
       ))}
     </div>

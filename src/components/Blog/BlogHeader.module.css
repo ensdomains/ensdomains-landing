@@ -60,12 +60,12 @@
 }
 
 .feelBetter::before {
-  content: '[';
+  content: "[";
   color: var(--page-bg);
 }
 
 .feelBetter::after {
-  content: ']';
+  content: "]";
   color: var(--page-bg);
 }
 

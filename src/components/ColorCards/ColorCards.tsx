@@ -1,12 +1,20 @@
 'use client'
-import { CSSProperties, FC, useRef, useEffect, useState, SVGProps, useId, useMemo, Ref } from 'react'
-
-import styles from './ColorCards.module.css'
-import ui from '~/styles/ui.module.css'
-
-import type { Color } from '~/utils/types'
 import { clsx } from 'clsx'
+import {
+  type CSSProperties,
+  type FC,
+  type Ref,
+  type SVGProps,
+  useEffect,
+  useId,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 import { ExternalLink } from 'react-external-link'
+import ui from '~/styles/ui.module.css'
+import type { Color } from '~/utils/types'
+import styles from './ColorCards.module.css'
 
 const getSquareVars = (color: Color): CSSProperties | undefined => {
   switch (color) {
@@ -72,11 +80,7 @@ const CurvedPathAnimation: FC<{
         stroke="#E5E5E5"
         strokeWidth={DIMENSIONS.curveRadius * 2}
       />
-      <path
-        d={path}
-        stroke="#F6F6F6"
-        strokeWidth={2}
-      />
+      <path d={path} stroke="#F6F6F6" strokeWidth={2} />
       <rect
         x={-DIMENSIONS.cubeSize / 2}
         y={-DIMENSIONS.cubeSize / 2}
@@ -84,22 +88,20 @@ const CurvedPathAnimation: FC<{
         height={DIMENSIONS.cubeSize}
         fill="#F6F6F6"
       >
-        <animateMotion
-          path={path}
-          dur="6s"
-          rotate="auto"
-          {...anim}
-        />
+        <animateMotion path={path} dur="6s" rotate="auto" {...anim} />
       </rect>
     </svg>
   )
 }
 
 type ColorCardsProps = {
-  cards: { title: string, description: string, color: Color, link: string }[]
+  cards: { title: string; description: string; color: Color; link: string }[]
 }
 
-export const ColorCards = ({ cards, ref }: ColorCardsProps & { ref?: Ref<HTMLDivElement> }) => {
+export const ColorCards = ({
+  cards,
+  ref,
+}: ColorCardsProps & { ref?: Ref<HTMLDivElement> }) => {
   return (
     <div className={styles.grid} ref={ref}>
       {cards.map(({ title, description, color, link }) => (
@@ -107,17 +109,16 @@ export const ColorCards = ({ cards, ref }: ColorCardsProps & { ref?: Ref<HTMLDiv
           href={link}
           key={title}
           className={clsx(ui.flex, ui['flex-col'], styles.card)}
-          style={{
-            '--bg': `var(--${color})`,
-            '--bg-hover': `var(--${color.replace('ens-', 'ens-hover-')})`,
-          } as CSSProperties}
+          style={
+            {
+              '--bg': `var(--${color})`,
+              '--bg-hover': `var(--${color.replace('ens-', 'ens-hover-')})`,
+            } as CSSProperties
+          }
         >
           <div className={styles.title}>{title}</div>
           <div className={styles.text}>{description}</div>
-          <div
-            className={styles.box}
-            style={getSquareVars(color)}
-          />
+          <div className={styles.box} style={getSquareVars(color)} />
         </ExternalLink>
       ))}
     </div>

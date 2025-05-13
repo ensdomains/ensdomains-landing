@@ -2,15 +2,16 @@
   user-select: none;
   width: max-content;
   display: grid;
-  grid-template-columns: 1fr max-content; 
-  grid-template-rows: repeat(2, max-content); 
-  grid-template-areas: 
-    'fnd fnd'
-    '. .'; 
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: repeat(2, max-content);
+  grid-template-areas:
+    "fnd fnd"
+    ". .";
   gap: 6px;
 }
 
-.grid:hover .name, .grid:hover .farcasterPfp {
+.grid:hover .name,
+.grid:hover .farcasterPfp {
   transform: scale(1.125);
 }
 
@@ -34,7 +35,7 @@
 }
 
 .fndBg {
-  background-image: url('/assets/home/fndBg.png');
+  background-image: url("/assets/home/fndBg.png");
   width: 100%;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
@@ -42,7 +43,7 @@
   top: 0;
   z-index: 0;
   filter: brightness(0.65);
-  
+
   height: 62px;
 }
 
@@ -51,7 +52,7 @@
   width: 100%;
   background: var(--ens-white);
   position: relative;
-  
+
   max-width: 270px;
   padding-top: 42px;
 }
@@ -114,7 +115,7 @@
   width: 100%;
   align-items: center;
   justify-content: flex-start;
-  
+
   font-size: 4px;
   max-width: 45px;
   gap: 3px;
@@ -143,16 +144,17 @@
 }
 
 .swapCurrency {
-  color:  var(--ens-medium-blue);
+  color: var(--ens-medium-blue);
   font-family: var(--ens-semi-mono);
   font-style: normal;
   font-weight: 500;
-  line-height: 96%; /* 8.052px */ 
+  line-height: 96%; /* 8.052px */
 
   font-size: 4px;
 }
 
-.swapCurrencyToggle, .swapCurrencyResultToggle {
+.swapCurrencyToggle,
+.swapCurrencyResultToggle {
   align-items: center;
   border-radius: 8px;
   width: max-content;
@@ -228,7 +230,8 @@
   padding: 6px 0;
 }
 
-.swapCurrencyToggle, .swapCurrencyResultToggle  {
+.swapCurrencyToggle,
+.swapCurrencyResultToggle {
   margin-bottom: 3px;
 }
 
@@ -267,7 +270,6 @@
 
   --height: 8px;
   --width: 8px;
-  
 }
 
 .farcasterTitleText {
@@ -288,7 +290,9 @@
   gap: 4px;
 }
 
-.farcasterStories, .farcasterTitle, .farcasterPost {
+.farcasterStories,
+.farcasterTitle,
+.farcasterPost {
   padding-left: 6px;
   padding-right: 6px;
 }
@@ -324,7 +328,7 @@
 .farcasterPostContent {
   font-weight: 400;
   line-height: 133%;
-  letter-spacing: 0.088px; 
+  letter-spacing: 0.088px;
 }
 
 .farcasterMenu {
@@ -384,7 +388,7 @@
   .fndPfp {
     margin-bottom: 4px;
     --width: 56px;
-    --height: 56px; 
+    --height: 56px;
     border-width: 4px;
   }
   .swapResult {
@@ -408,7 +412,8 @@
   .swapCurrency {
     font-size: 5px;
   }
-  .swapCurrencyToggle, .swapCurrencyResultToggle {
+  .swapCurrencyToggle,
+  .swapCurrencyResultToggle {
     padding: 4px;
     gap: 4px;
     margin-bottom: 5px;
@@ -421,8 +426,7 @@
   .grid {
     grid-template-columns: max-content 1fr 1fr;
     grid-template-rows: unset;
-    grid-template-areas: 
-    'fnd . .'; 
+    grid-template-areas: "fnd . .";
     gap: 12px;
   }
   .swapName {
@@ -477,13 +481,15 @@
     top: 12px;
     left: 9px;
   }
-  .farcasterStories, .farcasterTitle, .farcasterPost {
+  .farcasterStories,
+  .farcasterTitle,
+  .farcasterPost {
     padding-left: 8px;
     padding-right: 8px;
   }
   .farcasterPostButtons > button {
     font-size: 5px;
-  }  
+  }
   .farcasterPostButtons {
     gap: 8px;
   }
@@ -556,7 +562,8 @@
   .swapCurrency {
     font-size: 8px;
   }
-  .swapCurrencyToggle, .swapCurrencyResultToggle {
+  .swapCurrencyToggle,
+  .swapCurrencyResultToggle {
     padding: 6px;
     gap: 6px;
   }
@@ -597,7 +604,9 @@
     top: 18px;
     left: 14px;
   }
-  .farcasterStories, .farcasterTitle, .farcasterPost {
+  .farcasterStories,
+  .farcasterTitle,
+  .farcasterPost {
     padding-left: 14px;
     padding-right: 14px;
   }
@@ -611,7 +620,7 @@
     margin-bottom: 6px;
 
     --width: 92px;
-    --height: 92px; 
+    --height: 92px;
   }
   .farcasterStories > img {
     height: 32px;
@@ -653,7 +662,9 @@
 
 /* ANIMATION */
 
-.fnd, .swap, .farcaster {
+.fnd,
+.swap,
+.farcaster {
   opacity: 0;
   transition-duration: 0.75s;
   transition-property: transform, opacity;

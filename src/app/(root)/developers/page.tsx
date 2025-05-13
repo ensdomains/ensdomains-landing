@@ -1,20 +1,18 @@
 import { clsx } from 'clsx'
-import { CSSProperties } from 'react'
 import type { Metadata } from 'next'
-
+import type { CSSProperties } from 'react'
+import { StatsCounter } from '~/components/animation/StatsCounter'
+import { HeroContent } from '~/components/developers/header/HeroContent'
 import { Header } from '~/components/Header/Header'
 import { LinkList } from '~/components/LinkList/LinkList'
+import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage'
+import { SectionWithPreview } from '~/components/SectionWithPreview/SectionWithPreview'
 import { TwoCol } from '~/components/TwoCol/TwoCol'
 import { useTranslation } from '~/i18n/useTranslation'
-import ui from '~/styles/ui.module.css'
-import styles from './page.module.css'
-import { HeroContent } from '~/components/developers/header/HeroContent'
-import { SectionWithPreview } from '~/components/SectionWithPreview/SectionWithPreview'
-import { PageProps } from '~/utils/types'
-import { StatsCounter } from '~/components/animation/StatsCounter'
-
 import stats from '~/stats/grants.json'
-import { ResponsiveImage } from '~/components/ResponsiveImage/ResponsiveImage'
+import ui from '~/styles/ui.module.css'
+import type { PageProps } from '~/utils/types'
+import styles from './page.module.css'
 
 export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
   const params = await props.params
@@ -40,17 +38,13 @@ export default async function Developers(props: PageProps) {
         } as CSSProperties
       }
     >
-
       <Header
         tag={t('developers.hero.tag')}
         title={t('developers.hero.title')}
         description={t('developers.hero.text')}
         cta={[
           [t('developers.hero.cta1'), 'https://docs.ens.domains'],
-          [
-            t('developers.hero.cta2'),
-            'https://github.com/ensdomains',
-          ],
+          [t('developers.hero.cta2'), 'https://github.com/ensdomains'],
         ]}
       >
         <HeroContent />
@@ -58,17 +52,13 @@ export default async function Developers(props: PageProps) {
 
       <section className={clsx(ui['page'])}>
         <div className={clsx(ui.flex, ui['flex-col'], ui['h2-section'])}>
-          <h2>
-            {t('developers.resources.title')}
-          </h2>
+          <h2>{t('developers.resources.title')}</h2>
           <LinkList
             links={[
               {
                 title: 'CCIP Read',
                 href: 'https://docs.ens.domains/ccip',
-                description: t(
-                  'developers.resources.ccip-read.description',
-                ),
+                description: t('developers.resources.ccip-read.description'),
               },
               {
                 title: 'Unruggable Gateway',
@@ -80,9 +70,7 @@ export default async function Developers(props: PageProps) {
               {
                 title: 'Thorin',
                 href: 'https://thorin.ens.domains',
-                description: t(
-                  'developers.resources.thorin.description',
-                ),
+                description: t('developers.resources.thorin.description'),
               },
               {
                 title: t('developers.resources.tg.title'),
@@ -148,7 +136,11 @@ export default async function Developers(props: PageProps) {
             },
           ]}
         >
-          <StatsCounter stats={{ bounty: 250_000 }} captions={{ bounty: '' }} className={styles.counter}>
+          <StatsCounter
+            stats={{ bounty: 250_000 }}
+            captions={{ bounty: '' }}
+            className={styles.counter}
+          >
             <ResponsiveImage
               className={styles.folders}
               sources={{
@@ -164,7 +156,6 @@ export default async function Developers(props: PageProps) {
               alt=""
             />
           </StatsCounter>
-
         </SectionWithPreview>
       </section>
     </div>

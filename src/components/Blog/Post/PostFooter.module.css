@@ -15,7 +15,7 @@
 
 .authorTitle {
   font-size: 14px;
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
 }
 
 .authorName {

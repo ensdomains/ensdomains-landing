@@ -1,9 +1,8 @@
+import type { RefObject } from 'react'
 import { useEffect, useLayoutEffect, useRef } from 'react'
 
-import type { RefObject } from 'react'
-
-export const useIsomorphicLayoutEffect
-  = typeof window !== 'undefined' ? useLayoutEffect : useEffect
+export const useIsomorphicLayoutEffect =
+  typeof window !== 'undefined' ? useLayoutEffect : useEffect
 
 // MediaQueryList Event based useEventListener interface
 function useEventListener<K extends keyof MediaQueryListEventMap>(

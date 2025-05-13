@@ -1,5 +1,5 @@
 import { deepmergeCustom } from 'deepmerge-ts'
-import { Metadata, ResolvedMetadata } from 'next'
+import type { Metadata, ResolvedMetadata } from 'next'
 
 type CreateMetadataOptions = {
   title: Metadata['title']
@@ -24,8 +24,8 @@ export const createMetadata = (
   extras?: Metadata,
 ): Metadata => {
   const { title, path } = options
-  const description
-        = options.description ?? parentMetadata?.description ?? undefined
+  const description =
+    options.description ?? parentMetadata?.description ?? undefined
 
   const base: Metadata = {
     // For some reason Next.js is returning a very weird object for `metadataBase`

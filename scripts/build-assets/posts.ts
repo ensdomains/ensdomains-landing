@@ -1,8 +1,13 @@
 import { readFile } from 'node:fs/promises'
 import sharp from 'sharp'
-import { ImageFormats, ImageSettings } from './types'
-import { POSTS_ASSETS_FOLDER, POSTS_FOLDER, getPostDirectories, makeDirectoryIfNotExists } from './utils'
 import { logger } from './logger'
+import { ImageFormats, type ImageSettings } from './types'
+import {
+  getPostDirectories,
+  makeDirectoryIfNotExists,
+  POSTS_ASSETS_FOLDER,
+  POSTS_FOLDER,
+} from './utils'
 
 const postLogger = logger.scope('Posts')
 
@@ -36,8 +41,7 @@ async function findLocalCover(post: string): Promise<Cover | null> {
       const data = await readFile(cover)
       postLogger.debug(`Found cover image for post ${post} in format ${format}`)
       return { post, format, data }
-    }
-    catch {
+    } catch {
       continue
     }
   }
@@ -73,8 +77,7 @@ async function fetchRemoteCover(post: string, url: URL): Promise<Cover | null> {
     const format = url.pathname.split('.').pop() || 'webp'
     postLogger.success(`Successfully fetched remote cover for post ${post}`)
     return { post, format, data }
-  }
-  catch (error) {
+  } catch (error) {
     postLogger.error(`Error fetching remote cover for ${post}:`, error)
     return null
   }
@@ -87,19 +90,22 @@ async function fetchRemoteCover(post: string, url: URL): Promise<Cover | null> {
  */
 async function getCoverFromMeta(post: string): Promise<Cover | null> {
   try {
-    const meta = await import(new URL(`${post}/meta.json`, POSTS_FOLDER).pathname)
+    const meta = await import(
+      new URL(`${post}/meta.json`, POSTS_FOLDER).pathname
+    )
     if (!meta?.cover) return null
 
     try {
       const url = new URL(meta.cover)
       return await fetchRemoteCover(post, url)
-    }
-    catch {
-      postLogger.error(`Invalid cover URL in meta.json for ${post}:`, meta.cover)
+    } catch {
+      postLogger.error(
+        `Invalid cover URL in meta.json for ${post}:`,
+        meta.cover,
+      )
       return null
     }
-  }
-  catch {
+  } catch {
     postLogger.error(`Failed to read meta.json for ${post}`)
     return null
   }
@@ -158,8 +164,7 @@ async function processImage(
       .toFile(outputPath)
 
     postLogger.success(`Successfully processed image: ${outputPath}`)
-  }
-  catch (error) {
+  } catch (error) {
     postLogger.error(`Failed to process image ${outputPath}:`, error)
     throw error
   }
@@ -221,8 +226,7 @@ export async function handlePosts(): Promise<string> {
         )
 
         processedPosts.add(cover.post)
-      }
-      catch (error) {
+      } catch (error) {
         postLogger.error(`Failed to process post ${cover.post}:`, error)
         // Continue processing other posts
       }

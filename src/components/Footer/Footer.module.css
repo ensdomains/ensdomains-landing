@@ -73,7 +73,8 @@
     flex-direction: row;
     gap: 24px;
   }
-  .columns, .ltd {
+  .columns,
+  .ltd {
     max-width: 666px;
   }
 }
@@ -81,7 +82,7 @@
 @media (min-width: 994px) {
   .logo {
     left: 50px;
-    top: 50px; 
+    top: 50px;
   }
 }
 
@@ -89,7 +90,8 @@
   .container {
     gap: 180px;
   }
-  .columns, .ltd {
+  .columns,
+  .ltd {
     max-width: 824px;
   }
 }

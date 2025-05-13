@@ -9,15 +9,15 @@
   font-family: var(--ens-mono), monospace;
 }
 
-.stat:nth-of-type(1) .value {
+.stat[data-counter-type="names"] .value {
   width: calc(9ch);
 }
 
-.stat:nth-of-type(2) .value {
+.stat[data-counter-type="integrations"] .value {
   width: calc(3ch);
 }
 
-.stat:nth-of-type(3) .value {
+.stat[data-counter-type="owners"] .value {
   width: calc(7ch);
 }
 
@@ -42,8 +42,8 @@
 @media (min-width: 768px) {
   .stat {
     font-size: 62px;
-    line-height: 90%; 
-    letter-spacing: -1.241px; 
+    line-height: 90%;
+    letter-spacing: -1.241px;
     gap: 14px;
   }
   .bg {
@@ -59,8 +59,8 @@
   }
   .stat {
     font-size: 100px;
-    line-height: 90%; 
-    letter-spacing: -2px; 
+    line-height: 90%;
+    letter-spacing: -2px;
     gap: 24px;
   }
   .bg {

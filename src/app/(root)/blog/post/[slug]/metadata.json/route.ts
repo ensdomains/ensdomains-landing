@@ -1,6 +1,10 @@
-import { Author, Post } from 'build-assets/assets.gen'
-import { NextRequest, NextResponse } from 'next/server'
-import { BlogPostMetadataPlus, getPostBySlug, getPostsMetadata } from '~/utils/blog/posts'
+import type { Author, Post } from 'build-assets/assets.gen'
+import { type NextRequest, NextResponse } from 'next/server'
+import {
+  type BlogPostMetadataPlus,
+  getPostBySlug,
+  getPostsMetadata,
+} from '~/utils/blog/posts'
 import { getAuthorAssets, getPostAssets } from '~/utils/blog/utils'
 
 type PageProperties = {
@@ -25,7 +29,7 @@ export type PostMetadata = BlogPostMetadataPlus & {
 export async function generateStaticParams() {
   const pages = await getPostsMetadata()
 
-  return pages.map(post => ({
+  return pages.map((post) => ({
     slug: post.slug,
   }))
 }
@@ -39,7 +43,7 @@ export async function GET(_request: NextRequest, props: PageProperties) {
     ...postData,
     assets: {
       post: {
-        'cover': await postAssets?.cover,
+        cover: await postAssets?.cover,
         'cover-thumb': await postAssets?.['cover-thumb'],
       },
       authors: {},

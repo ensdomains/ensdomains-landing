@@ -1,5 +1,4 @@
 .list {
-    
   margin-top: 40px;
 }
 
@@ -20,7 +19,7 @@
 .list > li span {
   color: var(--ens-dark-blue);
   text-decoration: none;
-   
+
   height: fit-content;
   font-size: 20px;
 }
@@ -64,7 +63,6 @@
   .list > li span:nth-child(1) {
     font-size: 24px;
   }
-    
 }
 
 @media (min-width: 1280px) {

@@ -1,4 +1,3 @@
-
 .brandColor {
   background-color: var(--color);
   display: flex;
@@ -36,7 +35,7 @@
   cursor: pointer;
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
   .brandColor {
     height: 260px;
   }

@@ -54,7 +54,6 @@
 .navContent {
   display: flex;
   width: 100%;
-    
 }
 
 .tabletOnly {
@@ -92,19 +91,19 @@
 }
 
 @media (max-width: 800px) {
-  .nav[data-open='false'] .navContent {
+  .nav[data-open="false"] .navContent {
     display: none;
   }
-  .nav[data-open='true'] .tabletOnly {
+  .nav[data-open="true"] .tabletOnly {
     color: var(--ens-blue);
   }
-  .nav[data-open='false'] {
+  .nav[data-open="false"] {
     background: transparent;
   }
-  .nav[data-open='true'] .menuButton {
+  .nav[data-open="true"] .menuButton {
     color: var(--ens-blue);
   }
-  .nav[data-open='true'] {
+  .nav[data-open="true"] {
     background: var(--ens-light-blue);
     height: 100%;
   }
@@ -145,26 +144,27 @@
     justify-content: space-between;
   }
   .nav::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     bottom: -20px;
     z-index: -1;
     transition: all 0.2s ease-in-out;
-    background: linear-gradient(180deg, #fff 0 5%, hsla(0,0%,100%,0) 90%);
+    background: linear-gradient(180deg, #fff 0 5%, hsla(0, 0%, 100%, 0) 90%);
     backdrop-filter: blur(4px);
     mask: linear-gradient(
-      to top, 
+      to top,
       transparent 0%,
       black 35% 100%,
       transparent 100%
     );
     opacity: 0;
   }
-  .nav[data-opaque='true']::before {
+  .nav[data-opaque="true"]::before {
     opacity: 1;
   }
-  .langWithApp, .links {
+  .langWithApp,
+  .links {
     gap: 28px;
   }
   .link {
@@ -172,10 +172,14 @@
     padding: unset;
     width: unset;
   }
-  .launch, .link {
+  .launch,
+  .link {
     font-size: 14px !important;
   }
-  .links, .navContent, .nav, .langWithApp {
+  .links,
+  .navContent,
+  .nav,
+  .langWithApp {
     flex-direction: row;
   }
   .navContent {
@@ -211,7 +215,8 @@
 }
 
 @media (min-width: 1280px) {
-  .langWithApp, .links {
+  .langWithApp,
+  .links {
     gap: 40px;
   }
   .nav {

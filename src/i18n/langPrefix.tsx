@@ -1,4 +1,4 @@
-import { fallbackLng, Language, languages } from './settings'
+import { fallbackLng, type Language, languages } from './settings'
 
 export const getLangPrefix = (lang: Language) => {
   return lang === fallbackLng ? '' : `/${lang}`

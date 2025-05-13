@@ -7,7 +7,7 @@
 .partner {
   align-items: center;
   border-top: 1px solid var(--ens-gray-2);
-    
+
   gap: 20px;
   padding-top: 8px;
 }
@@ -18,7 +18,7 @@
 
   border-radius: 2px;
   border: 4px solid var(--ens-gray-2);
-  background: var(--ens-white); 
+  background: var(--ens-white);
 }
 
 .logo img {

@@ -1,14 +1,14 @@
-import { clsx } from 'clsx'
 import { readdir } from 'node:fs/promises'
+import { clsx } from 'clsx'
+import type { Metadata } from 'next'
+import { ExternalLink } from 'react-external-link'
+import { AssetDownloadButton } from '~/components/brand/AssetDownloadButton'
+import { BrandColor } from '~/components/brand/BrandColor'
+import { LinkList } from '~/components/LinkList/LinkList'
 import { useTranslation } from '~/i18n/useTranslation'
 import ui from '~/styles/ui.module.css'
+import type { BrandColorObject, PageProps } from '~/utils/types'
 import styles from './page.module.css'
-import { BrandColorObject, PageProps } from '~/utils/types'
-import { AssetDownloadButton } from '~/components/brand/AssetDownloadButton'
-import type { Metadata } from 'next'
-import { LinkList } from '~/components/LinkList/LinkList'
-import { BrandColor } from '~/components/brand/BrandColor'
-import { ExternalLink } from 'react-external-link'
 
 const common = './public/assets/brand'
 
@@ -123,15 +123,23 @@ const extendedPalette: BrandColorObject[] = [
   },
 ]
 
-const filesToPaths = (files: string[], dir: string) => files.filter(x => x.endsWith('.svg')).map(x => `${common.replace('./public', '')}/${dir}/${x}`)
-const filenameToVariantName = (file: string) => file.slice(file.lastIndexOf('-') + 1, file.indexOf('.svg')).replace('_', ' ')
+const filesToPaths = (files: string[], dir: string) =>
+  files
+    .filter((x) => x.endsWith('.svg'))
+    .map((x) => `${common.replace('./public', '')}/${dir}/${x}`)
+const filenameToVariantName = (file: string) =>
+  file.slice(file.lastIndexOf('-') + 1, file.indexOf('.svg')).replace('_', ' ')
 
 const getStaticProps = async () => {
   const logoFiles = filesToPaths(await readdir(`${common}/logo`), 'logo')
   const markLogoFiles = filesToPaths(await readdir(`${common}/mark`), 'mark')
 
-  const logos = Object.fromEntries(logoFiles.map(file => ([filenameToVariantName(file), file])))
-  const markLogos = Object.fromEntries(markLogoFiles.map(file => ([filenameToVariantName(file), file])))
+  const logos = Object.fromEntries(
+    logoFiles.map((file) => [filenameToVariantName(file), file]),
+  )
+  const markLogos = Object.fromEntries(
+    markLogoFiles.map((file) => [filenameToVariantName(file), file]),
+  )
 
   return { logos, markLogos }
 }
@@ -158,31 +166,50 @@ export default async function Brand(props: PageProps) {
         <h1>{t('brand.header.title')}</h1>
         <div className={styles.headerContent}>
           <ul className={styles.linkList}>
-            <li><a href="#symbol">{t('brand.links.symbols')}</a></li>
-            <li><a href="#palettes">{t('brand.links.palettes')}</a></li>
-            <li><a href="#guidelines">{t('brand.links.guidelines')}</a></li>
+            <li>
+              <a href="#symbol">{t('brand.links.symbols')}</a>
+            </li>
+            <li>
+              <a href="#palettes">{t('brand.links.palettes')}</a>
+            </li>
+            <li>
+              <a href="#guidelines">{t('brand.links.guidelines')}</a>
+            </li>
           </ul>
           <p className={ui['max-w-text']}>{t('brand.header.description')}</p>
         </div>
       </header>
       <section className={clsx(ui.flex, ui['flex-col'], styles.content)}>
-        <div className={clsx(ui.flex, ui['flex-col'], styles.sectionDescription)}>
+        <div
+          className={clsx(ui.flex, ui['flex-col'], styles.sectionDescription)}
+        >
           <h4>{t('brand.assets.title')}</h4>
           <p className={ui['max-w-text']}>{t('brand.assets.description')}</p>
         </div>
         <div className={styles.assetsDescription}>
-          <a download href="/assets/brand/mark.zip" className={styles.downloadButton}>{t('brand.button')}</a>
-          <h5 id="symbol" className={styles.contentTitle}>{t('brand.assets.symbol.title')}</h5>
-          <p className={ui['max-w-text']}>{t('brand.assets.symbol.description')}</p>
+          <a
+            download
+            href="/assets/brand/mark.zip"
+            className={styles.downloadButton}
+          >
+            {t('brand.button')}
+          </a>
+          <h5 id="symbol" className={styles.contentTitle}>
+            {t('brand.assets.symbol.title')}
+          </h5>
+          <p className={ui['max-w-text']}>
+            {t('brand.assets.symbol.description')}
+          </p>
         </div>
         <div className={styles.assetGrid}>
           {Object.entries(markLogos).map(([name, url]) => (
             <figure key={url}>
               <img src={url} alt="" height={230} width={201} />
-              <AssetDownloadButton links={[
-                { title: 'PNG', url: url.replace('svg', 'png') },
-                { title: 'SVG', url },
-              ]}
+              <AssetDownloadButton
+                links={[
+                  { title: 'PNG', url: url.replace('svg', 'png') },
+                  { title: 'SVG', url },
+                ]}
               />
               <figcaption>{name}</figcaption>
             </figure>
@@ -190,41 +217,74 @@ export default async function Brand(props: PageProps) {
         </div>
         <div className={clsx(styles.assetGrid, styles.blueprint)}>
           <div>
-            <img src="/assets/brand/logo-blueprint.svg" alt="Logo Blueprint" width={358} height={358} />
+            <img
+              src="/assets/brand/logo-blueprint.svg"
+              alt="Logo Blueprint"
+              width={358}
+              height={358}
+            />
           </div>
           <div>
-            <h5 className={styles.contentTitle}>{t('brand.assets.space.title')}</h5>
-            <p className={ui['max-w-text']}>{t('brand.assets.space.description')}</p>
+            <h5 className={styles.contentTitle}>
+              {t('brand.assets.space.title')}
+            </h5>
+            <p className={ui['max-w-text']}>
+              {t('brand.assets.space.description')}
+            </p>
           </div>
         </div>
         <div className={clsx(styles.assetGrid, styles.blueprint)}>
           <figure>
-            <img src="/assets/brand/token-icon.svg" alt="Logo Blueprint" width={358} height={358} />
-            <AssetDownloadButton links={[
-              { title: 'SVG', url: '/assets/brand/token-icon.svg' },
-              { title: 'PNG', url: '/assets/brand/token-icon.png' },
-            ]}
+            <img
+              src="/assets/brand/token-icon.svg"
+              alt="Logo Blueprint"
+              width={358}
+              height={358}
+            />
+            <AssetDownloadButton
+              links={[
+                { title: 'SVG', url: '/assets/brand/token-icon.svg' },
+                { title: 'PNG', url: '/assets/brand/token-icon.png' },
+              ]}
             />
           </figure>
           <div>
-            <h5 className={styles.contentTitle}>{t('brand.assets.token.title')}</h5>
-            <p className={ui['max-w-text']}>{t('brand.assets.token.description')}</p>
+            <h5 className={styles.contentTitle}>
+              {t('brand.assets.token.title')}
+            </h5>
+            <p className={ui['max-w-text']}>
+              {t('brand.assets.token.description')}
+            </p>
           </div>
         </div>
-        <div id="lockup" className={clsx(ui.flex, ui['flex-col'], styles.content)}>
+        <div
+          id="lockup"
+          className={clsx(ui.flex, ui['flex-col'], styles.content)}
+        >
           <div className={styles.assetsDescription}>
-            <a download href="/assets/brand/mark.zip" className={styles.downloadButton}>{t('brand.button')}</a>
-            <h5 className={styles.contentTitle}>{t('brand.assets.lockup.title')}</h5>
-            <p className={ui['max-w-text']}>{t('brand.assets.lockup.description')}</p>
+            <a
+              download
+              href="/assets/brand/mark.zip"
+              className={styles.downloadButton}
+            >
+              {t('brand.button')}
+            </a>
+            <h5 className={styles.contentTitle}>
+              {t('brand.assets.lockup.title')}
+            </h5>
+            <p className={ui['max-w-text']}>
+              {t('brand.assets.lockup.description')}
+            </p>
           </div>
           <div className={styles.assetGrid}>
             {Object.entries(logos).map(([name, url]) => (
               <figure key={url}>
                 <img src={url} alt="" height={230} width={201} />
-                <AssetDownloadButton links={[
-                  { title: 'PNG', url: url.replace('svg', 'png') },
-                  { title: 'SVG', url },
-                ]}
+                <AssetDownloadButton
+                  links={[
+                    { title: 'PNG', url: url.replace('svg', 'png') },
+                    { title: 'SVG', url },
+                  ]}
                 />
                 <figcaption>{name}</figcaption>
               </figure>
@@ -232,76 +292,110 @@ export default async function Brand(props: PageProps) {
           </div>
           <div className={clsx(styles.assetGrid, styles.blueprint)}>
             <div>
-              <img src="/assets/brand/logo-text-blueprint.svg" alt="Logo with text blueprint" width={358} height={358} />
+              <img
+                src="/assets/brand/logo-text-blueprint.svg"
+                alt="Logo with text blueprint"
+                width={358}
+                height={358}
+              />
             </div>
             <div>
-              <h5 className={styles.contentTitle}>{t('brand.assets.space.title')}</h5>
-              <p className={ui['max-w-text']}>{t('brand.assets.space.description')}</p>
+              <h5 className={styles.contentTitle}>
+                {t('brand.assets.space.title')}
+              </h5>
+              <p className={ui['max-w-text']}>
+                {t('brand.assets.space.description')}
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className={clsx(ui.flex, ui['flex-col'], styles.content)} id="palettes">
-        <div className={clsx(ui.flex, ui['flex-col'], styles.sectionDescription)}>
+      <section
+        className={clsx(ui.flex, ui['flex-col'], styles.content)}
+        id="palettes"
+      >
+        <div
+          className={clsx(ui.flex, ui['flex-col'], styles.sectionDescription)}
+        >
           <h4>{t('brand.assets.palette.title')}</h4>
-          <p className={ui['max-w-text']}>{t('brand.assets.palette.description')}</p>
+          <p className={ui['max-w-text']}>
+            {t('brand.assets.palette.description')}
+          </p>
         </div>
         <div className={styles.assetsDescription}>
-          <h5 className={styles.contentTitle}>{t('brand.assets.palette.primary.title')}</h5>
-          <p className={ui['max-w-text']}>{t('brand.assets.palette.primary.description')}</p>
+          <h5 className={styles.contentTitle}>
+            {t('brand.assets.palette.primary.title')}
+          </h5>
+          <p className={ui['max-w-text']}>
+            {t('brand.assets.palette.primary.description')}
+          </p>
         </div>
         <div className={styles.colorGrid}>
-          {primaryPalette.map(color => <BrandColor {...color} key={color.name} />)}
+          {primaryPalette.map((color) => (
+            <BrandColor {...color} key={color.name} />
+          ))}
         </div>
         <div className={styles.assetsDescription}>
-          <h5 className={styles.contentTitle}>{t('brand.assets.palette.secondary.title')}</h5>
-          <p className={ui['max-w-text']}>{t('brand.assets.palette.secondary.description')}</p>
+          <h5 className={styles.contentTitle}>
+            {t('brand.assets.palette.secondary.title')}
+          </h5>
+          <p className={ui['max-w-text']}>
+            {t('brand.assets.palette.secondary.description')}
+          </p>
         </div>
         <div className={styles.colorGrid}>
-          {extendedPalette.map(color => <BrandColor {...color} key={color.name} />)}
+          {extendedPalette.map((color) => (
+            <BrandColor {...color} key={color.name} />
+          ))}
         </div>
       </section>
 
       <section id="guidelines">
-        <LinkList links={[
-          {
-            title: t('brand.assets.guidelines.title'),
-            description: (
-              <div className={styles.guidelines}>
-                <div>{t('brand.assets.guidelines.description')}</div>
-                <ExternalLink className={ui.button} href="/assets/brand/ENS Brand Guidelines.pdf">
-                  {t('brand.assets.guidelines.button')}
-                </ExternalLink>
-              </div>
-            ),
-          },
-          {
-            title: t('brand.extra.partnerships.title'),
-            description: (
-              <>
-                {t('brand.extra.partnerships.description')}
-                <ul>
-                  <li>{t('brand.extra.partnerships.list.1')}</li>
-                  <li>{t('brand.extra.partnerships.list.2')}</li>
-                  <li>{t('brand.extra.partnerships.list.3')}</li>
-                </ul>
-                {t('brand.extra.partnerships.extra')}
-              </>),
-          },
-          {
-            title: t('brand.extra.ecosystem.title'),
-            description: (
-              <>
-                {t('brand.extra.ecosystem.description')}
-                <ul>
-                  <li>{t('brand.extra.ecosystem.list.1')}</li>
-                  <li>{t('brand.extra.ecosystem.list.2')}</li>
-                </ul>
-                {t('brand.extra.ecosystem.extra')}
-              </>),
-          },
-        ]}
+        <LinkList
+          links={[
+            {
+              title: t('brand.assets.guidelines.title'),
+              description: (
+                <div className={styles.guidelines}>
+                  <div>{t('brand.assets.guidelines.description')}</div>
+                  <ExternalLink
+                    className={ui.button}
+                    href="/assets/brand/ENS Brand Guidelines.pdf"
+                  >
+                    {t('brand.assets.guidelines.button')}
+                  </ExternalLink>
+                </div>
+              ),
+            },
+            {
+              title: t('brand.extra.partnerships.title'),
+              description: (
+                <>
+                  {t('brand.extra.partnerships.description')}
+                  <ul>
+                    <li>{t('brand.extra.partnerships.list.1')}</li>
+                    <li>{t('brand.extra.partnerships.list.2')}</li>
+                    <li>{t('brand.extra.partnerships.list.3')}</li>
+                  </ul>
+                  {t('brand.extra.partnerships.extra')}
+                </>
+              ),
+            },
+            {
+              title: t('brand.extra.ecosystem.title'),
+              description: (
+                <>
+                  {t('brand.extra.ecosystem.description')}
+                  <ul>
+                    <li>{t('brand.extra.ecosystem.list.1')}</li>
+                    <li>{t('brand.extra.ecosystem.list.2')}</li>
+                  </ul>
+                  {t('brand.extra.ecosystem.extra')}
+                </>
+              ),
+            },
+          ]}
         />
       </section>
     </div>

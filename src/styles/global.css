@@ -7,7 +7,9 @@ body {
   background: var(--ens-white);
   color: var(--ens-dark-blue);
   font-family: var(--ens-sans), var(--ens-sans-fb), sans-serif;
-  font-feature-settings: 'ss01' on, 'ss03' on;
+  font-feature-settings:
+    "ss01" on,
+    "ss03" on;
   font-weight: 500;
 
   max-width: 100vw;
@@ -25,7 +27,7 @@ html:lang(ru) body {
   box-sizing: border-box;
 }
 
-div[role='group'][tabindex] {
+div[role="group"][tabindex] {
   height: 100%;
 }
 
@@ -50,7 +52,7 @@ div[role='group'][tabindex] {
 
   /* Hover states */
   --ens-hover-blue: rgba(0, 128, 188, 0.8);
-  --ens-hover-light-blue: #B9DAE1;
+  --ens-hover-light-blue: #b9dae1;
   --ens-hover-green: rgba(0, 124, 35, 0.8);
   --ens-hover-magenta: rgba(245, 50, 148, 0.8);
 
@@ -75,9 +77,9 @@ p {
 h1 {
   font-weight: 500;
   line-height: 96%;
-    
+
   font-size: 40px;
-  letter-spacing: -0.8px; 
+  letter-spacing: -0.8px;
 }
 
 html:lang(ru) h1 {
@@ -109,7 +111,7 @@ h3 {
 h4 {
   font-style: normal;
   font-weight: 500;
-  line-height: 96%; 
+  line-height: 96%;
 
   font-size: 24px;
   letter-spacing: -2%;
@@ -141,7 +143,6 @@ p {
     font-size: 40px;
     letter-spacing: -0.8px;
   }
-   
 }
 
 /* TYPOGRAPHY/DESKTOP */
@@ -160,7 +161,7 @@ p {
   }
   h4 {
     font-size: 36px;
-    letter-spacing: -0.72px; 
+    letter-spacing: -0.72px;
   }
 }
 
@@ -178,12 +179,12 @@ details summary {
 }
 
 details summary::after {
-  content: '▶';
+  content: "▶";
   position: absolute;
 }
 
 details[open] summary::after {
-  content: '▼';
+  content: "▼";
 }
 
 summary {

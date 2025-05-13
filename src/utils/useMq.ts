@@ -36,10 +36,7 @@ export function useMq() {
 
     for (const media of keys) {
       if (typeof queries[media] === 'string') {
-        mediaQueryLists[media]?.addEventListener(
-          'change',
-          handleQueryListener,
-        )
+        mediaQueryLists[media]?.addEventListener('change', handleQueryListener)
       }
     }
 

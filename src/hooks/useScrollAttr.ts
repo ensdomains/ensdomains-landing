@@ -1,5 +1,5 @@
+import { useCallback, useEffect } from 'react'
 import { useEventListener } from '~/utils/useEventListener'
-import { useEffect, useCallback } from 'react'
 
 export const useScrollAttr = (
   ref: React.RefObject<HTMLElement | null>,
@@ -14,8 +14,7 @@ export const useScrollAttr = (
 
     if (window.scrollY > scrollThreshold && !currentValue) {
       element.setAttribute(attribute, 'true')
-    }
-    else if (window.scrollY < scrollThreshold && currentValue) {
+    } else if (window.scrollY < scrollThreshold && currentValue) {
       element.removeAttribute(attribute)
     }
   }, [ref, attribute, scrollThreshold])

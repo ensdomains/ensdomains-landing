@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import NextImage, { ImageProps as NextImageProperties } from 'next/image'
+import NextImage, { type ImageProps as NextImageProperties } from 'next/image'
 import styles from './Image.module.css'
 
 type ImageVariant = 'full' | 'wide' | 'normal' | 'small'

@@ -7,13 +7,13 @@ export async function GET() {
   const postMetadata = await getPostsMetadata()
 
   const posts = await Promise.all(
-    postMetadata.map(async post => ({
+    postMetadata.map(async (post) => ({
       meta: post,
       content: await importPost(post.file),
     })),
   )
 
-  const data = posts.map(post => ({
+  const data = posts.map((post) => ({
     ...post.meta,
     content: post.content.plainContent,
     readingTime: post.content.readingTime,

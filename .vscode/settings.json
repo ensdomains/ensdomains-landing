@@ -1,33 +1,16 @@
 {
-    "recommendations": [
-        "clinyong.vscode-css-modules",
-        "csstools.postcss",
-        "dbaeumer.vscode-eslint",
-        "lokalise.i18n-ally"
-    ],
-    "i18n-ally.localesPaths": [
-        "locales"
-    ],
-    "i18n-ally.keystyle": "nested",
-    "eslint.useFlatConfig": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll": "explicit"
-    },
-    "emmet.includeLanguages": {
-        "postcss": "css"
-    },
-    "files.exclude": {
-        "node_modules/": true,
-        ".next/": true,
-        "out/": true,
-    },
+    "npm.packageManager": "pnpm",
+    "editor.formatOnSave": true,
+    "biome.enabled": true,
+    "eslint.enable": false,
+    "prettier.enable": false,
     "typescript.tsdk": "node_modules/typescript/lib",
-    "stylelint.validate": ["css"],
-    "eslint.format.enable": true,
-    "json.schemas": [
-        {
-            "fileMatch": [ "posts/**/meta.json" ],
-            "url": "./src/utils/blog/schema.json"
-        }
+    "editor.codeActionsOnSave": {
+      "source.organizeImports.biome": "explicit",
+      "quickfix.biome": "explicit"
+    },
+    "i18n-ally.localesPaths": [
+        "locales",
+        "src/i18n"
     ]
-}
+  }

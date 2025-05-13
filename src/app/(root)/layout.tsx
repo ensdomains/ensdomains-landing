@@ -1,60 +1,70 @@
 import '~/styles/global.css'
 
 import { clsx } from 'clsx'
-import { inter, ebGaramond, ABCMonumentGrotesk, ABCMonumentGroteskMono, ABCMonumentGroteskSemiMono, ABCMarist } from 'fonts'
-import { Metadata } from 'next'
-import { ReactNode } from 'react'
-import { Language } from '~/i18n/settings'
+import {
+  ABCMarist,
+  ABCMonumentGrotesk,
+  ABCMonumentGroteskMono,
+  ABCMonumentGroteskSemiMono,
+  ebGaramond,
+  inter,
+} from 'fonts'
 import { dir } from 'i18next'
-import { useTranslation } from '~/i18n/useTranslation'
-import { PageProps } from '~/utils/types'
-import { Navbar } from '~/components/Navbar/Navbar'
-import { Footer } from '~/components/Footer/Footer'
-import { BASE_URL, createMetadata } from '~/utils/metadata'
+import type { Metadata } from 'next'
 import ogImage from 'public/og-image.png'
+import type { ReactNode } from 'react'
+import { Footer } from '~/components/Footer/Footer'
+import { Navbar } from '~/components/Navbar/Navbar'
+import type { Language } from '~/i18n/settings'
+import { useTranslation } from '~/i18n/useTranslation'
+import { BASE_URL, createMetadata } from '~/utils/metadata'
+import type { PageProps } from '~/utils/types'
 
 export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
   const params = await props.params
   const { t } = await useTranslation(params.lang, 'translation')
 
-  return createMetadata({
-    title: {
-      template: '%s | ENS',
-      default: 'ENS',
+  return createMetadata(
+    {
+      title: {
+        template: '%s | ENS',
+        default: 'ENS',
+      },
+      description: t('seo.description'),
+      path: '/',
     },
-    description: t('seo.description'),
-    path: '/',
-  }, undefined, {
-    openGraph: {
-      images: [
-        {
-          url: new URL(ogImage.src, BASE_URL).toString(),
-          width: ogImage.width,
-          height: ogImage.height,
-        },
-      ],
-      type: 'website',
+    undefined,
+    {
+      openGraph: {
+        images: [
+          {
+            url: new URL(ogImage.src, BASE_URL).toString(),
+            width: ogImage.width,
+            height: ogImage.height,
+          },
+        ],
+        type: 'website',
+      },
+      twitter: {
+        card: 'summary_large_image',
+      },
     },
-    twitter: {
-      card: 'summary_large_image',
-    },
-  })
+  )
 }
 
 export const viewport = {
   themeColor: '#0080bc',
 }
 
-export default async function RootLayout(props: { children: ReactNode, params: Promise<{ lang?: Language }> }) {
+export default async function RootLayout(props: {
+  children: ReactNode
+  params: Promise<{ lang?: Language }>
+}) {
   const params = await props.params
 
-  const {
-    lang = 'en',
-  } = params
+  const { lang = 'en' } = params
 
-  const {
-    children,
-  } = props
+  const { children } = props
 
   const { t } = await useTranslation(lang, 'translation')
 
@@ -62,7 +72,10 @@ export default async function RootLayout(props: { children: ReactNode, params: P
     {
       title: t('footer.community'),
       entries: [
-        { title: t('footer.feedback'), link: 'https://docs.google.com/forms/d/e/1FAIpQLSfDzIszteoaqiayxUCpFLK1AgigoASHIPcsxFg8PZoS6R6Uzw/viewform?usp=sf_link' },
+        {
+          title: t('footer.feedback'),
+          link: 'https://docs.google.com/forms/d/e/1FAIpQLSfDzIszteoaqiayxUCpFLK1AgigoASHIPcsxFg8PZoS6R6Uzw/viewform?usp=sf_link',
+        },
         {
           title: t('footer.discord'),
           link: 'https://chat.ens.domains',
@@ -98,8 +111,14 @@ export default async function RootLayout(props: { children: ReactNode, params: P
     {
       title: t('footer.ens'),
       entries: [
-        { title: t('footer.privacy-policy'), link: 'https://app.ens.domains/legal/privacy-policy' },
-        { title: t('footer.tou'), link: 'https://app.ens.domains/legal/terms-of-use' },
+        {
+          title: t('footer.privacy-policy'),
+          link: 'https://app.ens.domains/legal/privacy-policy',
+        },
+        {
+          title: t('footer.tou'),
+          link: 'https://app.ens.domains/legal/terms-of-use',
+        },
         {
           title: t('footer.bugs'),
           link: 'https://immunefi.com/bug-bounty/ens/',
@@ -126,7 +145,11 @@ export default async function RootLayout(props: { children: ReactNode, params: P
       )}
     >
       <head>
-        <script defer data-domain="ens.domains" src="https://plausible.io/js/script.js"></script>
+        <script
+          defer
+          data-domain="ens.domains"
+          src="https://plausible.io/js/script.js"
+        ></script>
         <link rel="icon" type="image/png" href="/favicon.png" />
       </head>
       <body>

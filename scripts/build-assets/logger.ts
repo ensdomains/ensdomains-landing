@@ -89,24 +89,32 @@ const formatTimestamp = (date: Date): string => {
   const seconds = pad(date.getSeconds())
   const milliseconds = date.getMilliseconds().toString().padStart(3, '0')
   return config.useColors
-    ? Colors.dim + `[${hours}:${minutes}:${seconds}.${milliseconds}]` + Colors.reset
+    ? Colors.dim +
+        `[${hours}:${minutes}:${seconds}.${milliseconds}]` +
+        Colors.reset
     : `[${hours}:${minutes}:${seconds}.${milliseconds}]`
 }
 
 // Utility to format objects and errors
 const formatValue = (value: unknown): string => {
   if (value instanceof Error) {
-    const errorString = inspect(value, { showHidden: true, depth: 2, colors: true })
+    const errorString = inspect(value, {
+      showHidden: true,
+      depth: 2,
+      colors: true,
+    })
     return config.useColors
       ? Colors.red + Colors.dim + errorString + Colors.reset
       : errorString
   }
 
   if (typeof value === 'object') {
-    const objString = inspect(value, { showHidden: true, depth: 2, colors: true })
-    return config.useColors
-      ? Colors.dim + objString + Colors.reset
-      : objString
+    const objString = inspect(value, {
+      showHidden: true,
+      depth: 2,
+      colors: true,
+    })
+    return config.useColors ? Colors.dim + objString + Colors.reset : objString
   }
   return String(value)
 }
@@ -133,7 +141,11 @@ class Logger {
     return LogLevels[level].priority >= LogLevels[config.minLevel].priority
   }
 
-  private formatMessage(level: LogLevel, message: unknown, ...args: unknown[]): string {
+  private formatMessage(
+    level: LogLevel,
+    message: unknown,
+    ...args: unknown[]
+  ): string {
     const timestamp = config.showTimestamp ? formatTimestamp(new Date()) : ''
     const levelInfo = LogLevels[level]
     const label = config.showLabels
@@ -142,14 +154,15 @@ class Logger {
         : `[${levelInfo.label}] `
       : ''
 
-    const scope = this.scopeName && config.useColors
-      ? `${this.scopeColor}[${this.scopeName}]${Colors.reset} `
-      : this.scopeName
-        ? `[${this.scopeName}] `
-        : ''
+    const scope =
+      this.scopeName && config.useColors
+        ? `${this.scopeColor}[${this.scopeName}]${Colors.reset} `
+        : this.scopeName
+          ? `[${this.scopeName}] `
+          : ''
 
     const formattedMessage = formatValue(message)
-    const formattedArgs = args.map(arg => formatValue(arg)).join(' ')
+    const formattedArgs = args.map((arg) => formatValue(arg)).join(' ')
 
     const parts = [
       timestamp,
@@ -166,7 +179,10 @@ class Logger {
     if (!this.shouldLog(level)) return
 
     const formattedMessage = this.formatMessage(level, message, ...args)
-    const stream = LogLevels[level].priority >= LogLevels.ERROR.priority ? process.stderr : process.stdout
+    const stream =
+      LogLevels[level].priority >= LogLevels.ERROR.priority
+        ? process.stderr
+        : process.stdout
 
     stream.write(formattedMessage + '\n')
   }
@@ -208,8 +224,17 @@ class Logger {
   // Create a scoped logger with a prefix
   scope(prefix: string): Logger {
     // Rotate through colors for different scopes
-    const scopeColors = [Colors.cyan, Colors.magenta, Colors.yellow, Colors.green, Colors.blue]
-    const colorIndex = Math.abs(prefix.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)) % scopeColors.length
+    const scopeColors = [
+      Colors.cyan,
+      Colors.magenta,
+      Colors.yellow,
+      Colors.green,
+      Colors.blue,
+    ]
+    const colorIndex =
+      Math.abs(
+        prefix.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0),
+      ) % scopeColors.length
     const scopeColor = Colors.bold + scopeColors[colorIndex]
 
     return new Logger(prefix, scopeColor)

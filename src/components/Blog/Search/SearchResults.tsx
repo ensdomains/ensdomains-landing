@@ -1,16 +1,16 @@
 import { useQuery } from '@tanstack/react-query'
-import styles from './SearchResults.module.css'
+import clsx from 'clsx'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Fragment } from 'react'
 import {
   fetchPostMetadata,
   getSearchResults,
-  SearchEntry,
+  type SearchEntry,
 } from '~/utils/blog/search'
-import Image from 'next/image'
-import { BlogPostAuthor, BlogPostAuthorSeparator } from '../PostAuthor'
-import { Fragment } from 'react'
-import Link from 'next/link'
-import clsx from 'clsx'
 import { useDebounce } from '~/utils/useDebounce'
+import { BlogPostAuthor, BlogPostAuthorSeparator } from '../PostAuthor'
+import styles from './SearchResults.module.css'
 
 const SearchHit = ({ entry }: { entry: SearchEntry }) => {
   const { data, isLoading, isError } = useQuery({
@@ -97,7 +97,7 @@ export const SearchResults = ({ search }: { search: string }) => {
 
   return (
     <div className={styles.results}>
-      {data.hits.map(hit => (
+      {data.hits.map((hit) => (
         <SearchHit key={hit.slug} entry={hit} />
       ))}
     </div>

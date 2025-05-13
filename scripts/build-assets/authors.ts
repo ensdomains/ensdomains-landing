@@ -1,13 +1,13 @@
-import { BlogPostMetadata } from '~/utils/blog/metadata'
 import sharp from 'sharp'
-import { ImageSettings } from './types'
+import type { BlogPostMetadata } from '~/utils/blog/metadata'
+import { logger } from './logger'
+import type { ImageSettings } from './types'
 import {
   AUTHORS_ASSETS_FOLDER,
-  POSTS_FOLDER,
   getPostDirectories,
   makeDirectoryIfNotExists,
+  POSTS_FOLDER,
 } from './utils'
-import { logger } from './logger'
 
 const authorLogger = logger.scope('Authors')
 
@@ -34,7 +34,7 @@ type ENSData = {
     lg: string
   }
   texts: Record<string, string>
-  coins: Record<string, { name: string, address: string }>
+  coins: Record<string, { name: string; address: string }>
 }
 
 const AVATAR_IMG_SETTINGS: ImageSettings[] = [
@@ -54,9 +54,9 @@ function isValidENSData(data: unknown): data is ENSData {
 
   const ensData = data as ENSData
   return (
-    typeof ensData.name === 'string'
-    && typeof ensData.texts === 'object'
-    && typeof ensData.coins === 'object'
+    typeof ensData.name === 'string' &&
+    typeof ensData.texts === 'object' &&
+    typeof ensData.coins === 'object'
   )
 }
 
@@ -76,8 +76,7 @@ async function fetchAvatar(url: string): Promise<Buffer | null> {
       status: response.status,
       statusText: response.statusText,
     })
-  }
-  catch (error) {
+  } catch (error) {
     authorLogger.warn(`Failed to fetch avatar from ${url}:`, error)
   }
   return null
@@ -94,7 +93,10 @@ interface AuthorData {
  * @param ensData - The resolved ENS data
  * @returns Promise containing the avatar buffer or null
  */
-async function attemptAvatarFetch(author: string, ensData: ENSData | null): Promise<Buffer | null> {
+async function attemptAvatarFetch(
+  author: string,
+  ensData: ENSData | null,
+): Promise<Buffer | null> {
   const rawAvatarRecord = ensData?.texts?.avatar
   let avatar: Buffer | null = null
 
@@ -106,20 +108,30 @@ async function attemptAvatarFetch(author: string, ensData: ENSData | null): Prom
 
   // Try IPFS if available
   if (!avatar && rawAvatarRecord?.startsWith('ipfs://')) {
-    authorLogger.debug(`Attempting to fetch avatar from ipfs.euc.li for ${author}`)
-    avatar = await fetchAvatar(`https://ipfs.euc.li/${rawAvatarRecord.slice(7)}`)
+    authorLogger.debug(
+      `Attempting to fetch avatar from ipfs.euc.li for ${author}`,
+    )
+    avatar = await fetchAvatar(
+      `https://ipfs.euc.li/${rawAvatarRecord.slice(7)}`,
+    )
     if (avatar) return avatar
   }
 
   // Try ENS metadata as last resort
   if (!avatar && rawAvatarRecord) {
     authorLogger.debug(`Falling back to ENS metadata for ${author}`)
-    avatar = await fetchAvatar(`https://metadata.ens.domains/mainnet/avatar/${author}`)
+    avatar = await fetchAvatar(
+      `https://metadata.ens.domains/mainnet/avatar/${author}`,
+    )
     if (avatar) return avatar
   }
 
   if (rawAvatarRecord) {
-    authorLogger.error(`Author has an avatar record but no avatar could be fetched`, author, rawAvatarRecord)
+    authorLogger.error(
+      `Author has an avatar record but no avatar could be fetched`,
+      author,
+      rawAvatarRecord,
+    )
   }
 
   return null
@@ -165,11 +177,10 @@ async function extractUniqueAuthors(posts: string[]): Promise<Set<string>> {
     const path = new URL(`${post}/meta.json`, POSTS_FOLDER).pathname
     try {
       const meta: BlogPostMetadata = await import(
-        new URL(`${post}/meta.json`, POSTS_FOLDER).pathname,
+        new URL(`${post}/meta.json`, POSTS_FOLDER).pathname
       )
-      meta.authors.forEach(author => foundAuthors.add(author))
-    }
-    catch (error) {
+      meta.authors.forEach((author) => foundAuthors.add(author))
+    } catch (error) {
       authorLogger.error(
         `Failed to process meta.json for post ${post}:`,
         error,
@@ -204,11 +215,15 @@ async function getAuthorData(): Promise<Record<string, AuthorData>> {
  * @param settings - The image settings to validate
  * @returns Validated and normalized image settings
  */
-function validateImageSettings(settings: ImageSettings): Required<ImageSettings> {
+function validateImageSettings(
+  settings: ImageSettings,
+): Required<ImageSettings> {
   const { width, height, format = 'webp', prefix = '', suffix = '' } = settings
 
   if (!width || !height || width <= 0 || height <= 0) {
-    throw new Error(`Invalid image dimensions: width=${width}, height=${height}`)
+    throw new Error(
+      `Invalid image dimensions: width=${width}, height=${height}`,
+    )
   }
 
   return {
@@ -235,10 +250,8 @@ async function processAvatar(
     const validatedSettings = validateImageSettings(settings)
     const { prefix, suffix, width, height, format } = validatedSettings
     const key = `${prefix}avatar${suffix ? `-${suffix}` : ''}`
-    const output = new URL(
-      `${author}/${key}.${format}`,
-      AUTHORS_ASSETS_FOLDER,
-    ).pathname
+    const output = new URL(`${author}/${key}.${format}`, AUTHORS_ASSETS_FOLDER)
+      .pathname
 
     authorLogger.info(`Converting avatar for ${author} to ${output}`)
 
@@ -267,8 +280,7 @@ async function processAvatar(
       .toFile(output)
 
     authorLogger.success(`Successfully converted avatar for ${author}`)
-  }
-  catch (error) {
+  } catch (error) {
     authorLogger.error(`Failed to process avatar for ${author}:`, error)
     throw error // Re-throw to handle in the calling function
   }
@@ -290,9 +302,7 @@ function generateTypeScriptExports(
     if (data.avatar) {
       for (const settings of AVATAR_IMG_SETTINGS) {
         const { prefix, suffix, format } = settings
-        const key = `${prefix || ''}avatar${
-          suffix ? `-${suffix}` : ''
-        }`
+        const key = `${prefix || ''}avatar${suffix ? `-${suffix}` : ''}`
         result += `    '${key}': import('./authors/${author}/${key}.${
           format || 'webp'
         }').then(asset => asset.default),\n`
@@ -309,7 +319,7 @@ function generateTypeScriptExports(
   records: Partial<Record<ENSRecord, string>>
 }\n`
   result += `export type ENSRecord = ${ENS_RECORDS_TO_STORE.map(
-    r => `'${r}'`,
+    (r) => `'${r}'`,
   ).join(' | ')}\n`
 
   return result
@@ -341,8 +351,7 @@ async function resolveENSData(name: string): Promise<ENSData | null> {
     }
 
     return data
-  }
-  catch (error) {
+  } catch (error) {
     authorLogger.warn(`Failed to resolve ENS data for ${name}:`, error)
     return null
   }
@@ -368,14 +377,13 @@ export async function handleAuthors(): Promise<string> {
         // Process avatar if available
         if (data.avatar) {
           await Promise.all(
-            AVATAR_IMG_SETTINGS.map(settings =>
+            AVATAR_IMG_SETTINGS.map((settings) =>
               processAvatar(author, data.avatar!, settings),
             ),
           )
           processedAuthors.add(author)
         }
-      }
-      catch (error) {
+      } catch (error) {
         authorLogger.error(`Failed to process author ${author}:`, error)
         // Continue processing other authors
       }

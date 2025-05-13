@@ -30,19 +30,21 @@ interface AnimationConfig {
    * }
    * ```
    */
-  pausePoints?: Array<{
-    /** Position along the path (0-1) where to pause */
-    at: number
-    /** Duration of the pause in seconds */
-    duration?: number
-    /** Whether to slow down slightly before the pause for more natural motion */
-    anticipation?: boolean
-  }> | {
-    /** Number of evenly distributed pause points to create */
-    amount: number
-    /** Total duration to distribute across all pause points */
-    duration: number
-  }
+  pausePoints?:
+    | Array<{
+        /** Position along the path (0-1) where to pause */
+        at: number
+        /** Duration of the pause in seconds */
+        duration?: number
+        /** Whether to slow down slightly before the pause for more natural motion */
+        anticipation?: boolean
+      }>
+    | {
+        /** Number of evenly distributed pause points to create */
+        amount: number
+        /** Total duration to distribute across all pause points */
+        duration: number
+      }
 }
 
 /**
@@ -121,15 +123,22 @@ export function generateMotionTiming({
 
   // Generate base duration with some variance
   const durationVariance = (maxDuration - minDuration) * 0.2 // 20% variance
-  const baseDuration = minDuration + seededRandom() * (maxDuration - minDuration)
-  const duration = round(baseDuration + seededRandom(-durationVariance, durationVariance))
+  const baseDuration =
+    minDuration + seededRandom() * (maxDuration - minDuration)
+  const duration = round(
+    baseDuration + seededRandom(-durationVariance, durationVariance),
+  )
 
   const keyTimesList: number[] = []
   const keyPointsList: number[] = []
 
   // Normalize delays to be within bounds with some randomness
-  const normalizedStartDelay = round(Math.min(startDelay, 0.2) * seededRandom(0.8, 1.2))
-  const normalizedEndDelay = round(Math.min(endDelay, 0.2) * seededRandom(0.8, 1.2))
+  const normalizedStartDelay = round(
+    Math.min(startDelay, 0.2) * seededRandom(0.8, 1.2),
+  )
+  const normalizedEndDelay = round(
+    Math.min(endDelay, 0.2) * seededRandom(0.8, 1.2),
+  )
 
   // Add initial state
   keyTimesList.push(0)
@@ -143,12 +152,15 @@ export function generateMotionTiming({
 
   if (!Array.isArray(pausePoints)) {
     const { amount, duration } = pausePoints
-    pausePoints = Array.from({ length: amount }, (_, i) => ({ at: (i + 1) / (amount), duration: duration / (amount + 1) }))
+    pausePoints = Array.from({ length: amount }, (_, i) => ({
+      at: (i + 1) / amount,
+      duration: duration / (amount + 1),
+    }))
   }
 
   // Sort and normalize pause points with randomized durations
   const sortedPausePoints = pausePoints
-    .map(point => ({
+    .map((point) => ({
       ...point,
       at: round(Math.max(0, Math.min(1, point.at))), // Clamp 'at' between 0 and 1
       duration: round((point.duration ?? 0.3) * seededRandom(0.8, 1.2)), // Randomize duration within ±20%
@@ -157,12 +169,19 @@ export function generateMotionTiming({
 
   // Calculate available time for motion
   const availableTime = 1 - normalizedStartDelay - normalizedEndDelay
-  const totalPauseDuration = sortedPausePoints.reduce((sum, point) => sum + point.duration, 0)
-  const remainingTimeForMotion = Math.max(0.2, availableTime - totalPauseDuration)
+  const totalPauseDuration = sortedPausePoints.reduce(
+    (sum, point) => sum + point.duration,
+    0,
+  )
+  const remainingTimeForMotion = Math.max(
+    0.2,
+    availableTime - totalPauseDuration,
+  )
 
   // Process each pause point with slightly randomized timing
   let currentTime = normalizedStartDelay
-  const baseTimePerSegment = remainingTimeForMotion / (sortedPausePoints.length + 1)
+  const baseTimePerSegment =
+    remainingTimeForMotion / (sortedPausePoints.length + 1)
 
   sortedPausePoints.forEach((point) => {
     // Randomize the motion time for this segment
@@ -170,7 +189,12 @@ export function generateMotionTiming({
 
     // Add anticipation point if requested
     if (point.anticipation) {
-      const anticipationOffset = round(Math.min(0.05, (point.at - (keyPointsList[keyPointsList.length - 1] || 0)) / 2))
+      const anticipationOffset = round(
+        Math.min(
+          0.05,
+          (point.at - (keyPointsList[keyPointsList.length - 1] || 0)) / 2,
+        ),
+      )
       keyTimesList.push(round(currentTime + segmentTime * 0.8))
       keyPointsList.push(round(point.at - anticipationOffset))
     }
@@ -203,7 +227,7 @@ export function generateMotionTiming({
 
   // Normalize all time values to ensure they're between 0 and 1
   const maxTime = Math.max(...keyTimesList)
-  const normalizedKeyTimes = keyTimesList.map(time => round(time / maxTime))
+  const normalizedKeyTimes = keyTimesList.map((time) => round(time / maxTime))
 
   return {
     duration,
