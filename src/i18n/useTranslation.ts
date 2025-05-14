@@ -19,6 +19,7 @@ const initI18next = async (lng: Language, ns: string | string[]) => {
   return i18nInstance
 }
 
+// eslint-disable-next-line  @eslint-react/hooks-extra/no-useless-custom-hooks
 export async function useTranslation(
   lng: Language,
   ns: string | string[],

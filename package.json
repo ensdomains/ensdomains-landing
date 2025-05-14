@@ -9,9 +9,13 @@
     "build:next": "next build",
     "build:assets": "tsx scripts/build-assets/index.ts",
     "build": "pnpm run build:assets && pnpm run build:next",
+    "build:local": "pnpx @cloudflare/next-on-pages",
+    "run:wrangler": "pnpx wrangler pages dev .vercel/output/static --compatibility-date=2023-11-21 --compatibility-flag=nodejs_compat",
     "dev": "next dev --turbopack",
     "develop": "pnpm run dev",
     "start": "pnpm run dev",
+    "e2e": "npx playwright test",
+    "e2e:ci": "CI=true npx playwright test",
     "check": "biome check",
     "check:fix": "biome check --fix",
     "typecheck": "tsc --noEmit"
@@ -37,7 +41,9 @@
     "zod": "^3.24.4"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.12",
     "@biomejs/biome": "2.0.0-beta.3",
+    "@playwright/test": "^1.52.0",
     "@shikijs/rehype": "^3.4.0",
     "@sindresorhus/slugify": "^2.2.1",
     "@types/mdx": "^2.0.13",
@@ -57,7 +63,8 @@
     "sharp": "^0.34.1",
     "ts-pattern": "^5.7.0",
     "tsx": "^4.19.4",
-    "unist-util-visit": "^5.0.0"
+    "unist-util-visit": "^5.0.0",
+    "wrangler": "^4.14.1"
   },
   "repository": {
     "type": "git",
