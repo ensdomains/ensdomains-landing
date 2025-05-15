@@ -6,10 +6,11 @@ import { mainnet } from 'viem/chains'
 const publicClient = createEnsPublicClient({
   chain: mainnet,
   transport: fallback([
-    http('https://mainnet.infura.io/v3/1dc17c91a0b54faeb1547326c3ddca7e'),
     http(
       'https://lb.drpc.org/ogrpc?network=ethereum&dkey=AgBISc2US0WgjMYhz9MRMJZsJaE8hzcR76fgOpXEh2H0',
     ),
+    http('https://lb.drpc.org/ogrpc?network=ethereum&dkey=AnmpasF2C0JBqeAEzxVO8aR5N_OwLy8R8JyZPkfoZsMe'),
+    http('https://mainnet.gateway.tenderly.co/4imxc4hQfRjxrVB2kWKvTo')
   ]),
 })
 
