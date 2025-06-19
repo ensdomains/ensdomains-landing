@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.0.0-beta.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["src", "scripts"]
+    "includes": ["src/**", "scripts/**"]
   },
   "formatter": {
     "enabled": true,
@@ -26,6 +26,11 @@
       "semicolons": "asNeeded"
     }
   },
+  "css": {
+    "parser": {
+      "cssModules": true
+    }
+  },
   "assist": {
     "enabled": true,
     "actions": {
@@ -33,5 +38,18 @@
         "organizeImports": "on"
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      // Page files are likely to have unique element ids on headers for anchor links
+      "includes": ["src/app/**/page.tsx"],
+      "linter": {
+        "rules": {
+          "nursery": {
+            "useUniqueElementIds": "info"
+          }
+        }
+      }
+    }
+  ]
 }
