@@ -40,6 +40,7 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
   const pathname = usePathname()
 
   return (
+    // biome-ignore lint/nursery/useUniqueElementIds: nav
     <nav
       id="nav"
       data-open={isOpen}
@@ -74,12 +75,14 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
             onClick={() => setOpen(!isOpen)}
             className={styles.menuButton}
           >
+            {/** biome-ignore-start lint/nursery/useUniqueElementIds: svg */}
             <svg
               width="12"
               height="12"
               viewBox="0 0 12 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              role="presentation"
             >
               <g id="menu">
                 <rect
@@ -118,6 +121,7 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
                 />
               </g>
             </svg>
+            {/** biome-ignore-end lint/nursery/useUniqueElementIds: svg */}
           </button>
         </div>
       </div>

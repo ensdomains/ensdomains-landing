@@ -12,26 +12,21 @@ export const Heading: FC<
     className?: string
   }
 > = ({ level = 2, children, id, anchor = true, ...properties }) => {
-  const Component = `h${level}` as any as ComponentType<
+  const Component = `h${level}` as unknown as ComponentType<
     React.HTMLAttributes<HTMLHeadingElement>
   >
 
   return (
-    <>
-      <Component
-        id={anchor ? id : undefined}
-        className={clsx(
-          styles.heading,
-          styles[`h${level}`],
-          properties.className,
-        )}
-        children={
-          (
-            <>{anchor ? <Anchor id={id}>{children}</Anchor> : children}</>
-          ) as any
-        }
-        {...properties}
-      />
-    </>
+    <Component
+      id={anchor ? id : undefined}
+      className={clsx(
+        styles.heading,
+        styles[`h${level}`],
+        properties.className,
+      )}
+      {...properties}
+    >
+      {anchor ? <Anchor id={id}>{children}</Anchor> : children}
+    </Component>
   )
 }

@@ -1,6 +1,5 @@
-
 .page {
-  composes: page from '~/styles/ui.module.css';
+  composes: page from "~/styles/ui.module.css";
   padding-block: 80px;
 }
 

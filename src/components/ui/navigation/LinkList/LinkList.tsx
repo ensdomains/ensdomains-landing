@@ -25,6 +25,7 @@ export const LinkList: FC<{ links: ILink[] }> = ({ links }) => {
                 viewBox="0 0 77 76"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                role="presentation"
               >
                 <path
                   fillRule="evenodd"

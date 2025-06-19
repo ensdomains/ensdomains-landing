@@ -5,7 +5,7 @@ export const getLangPrefix = (lang: Language) => {
 }
 
 export const decodeLangPrefix = (path: string) => {
-  if (path == '') return fallbackLng
+  if (path === '') return fallbackLng
 
   if (languages.includes(path as Language)) return path as Language
 

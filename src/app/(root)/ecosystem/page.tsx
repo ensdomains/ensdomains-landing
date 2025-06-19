@@ -1,9 +1,9 @@
 import { clsx } from 'clsx'
 import type { Metadata } from 'next'
 import type { CSSProperties } from 'react'
-import { ColorCards } from '~/components/ui/cards/ColorCards/ColorCards'
 import { EcosystemList } from '~/components/features/ecosystem/EcosystemList'
 import { Header } from '~/components/layout/Header/Header'
+import { ColorCards } from '~/components/ui/cards/ColorCards/ColorCards'
 import { LinkList } from '~/components/ui/navigation/LinkList/LinkList'
 import { SmallLinkList } from '~/components/ui/navigation/SmallLinkList/SmallLinkList'
 import { useTranslation } from '~/i18n/useTranslation'
@@ -51,7 +51,7 @@ export default async function Ecosystem(props: PageProps) {
       >
         <EcosystemList />
       </Header>
-      <section className={ui['page']}>
+      <section className={ui.page}>
         <div className={clsx(ui.flex, ui['flex-col'], ui['h2-section'])}>
           <h2>{t('ecosystem.integration.title')}</h2>
           <LinkList

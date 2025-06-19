@@ -4,7 +4,6 @@
 
 .list > li {
   list-style-type: none;
-  padding: 0;
   margin: 0;
   border-top: 1px solid var(--ens-dark-blue);
   padding: 2rem 0;

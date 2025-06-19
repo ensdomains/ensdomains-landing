@@ -69,7 +69,8 @@ export const CrossFadeImage = ({
             <img
               key={src}
               className={clsx(styles.img)}
-              {...{ src, alt }}
+              src={src}
+              alt={alt}
               style={style(index)}
             />
           )
