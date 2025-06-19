@@ -4,16 +4,16 @@ import type { Metadata, ResolvingMetadata } from 'next'
 import type { CSSProperties } from 'react'
 import { match } from 'ts-pattern'
 import blogUi from '~/app/(root)/blog/blog-ui.module.css'
-import { BlogHeader } from '~/components/Blog/BlogHeader'
-import { BlogPostPreview } from '~/components/Blog/PostPreview'
+import { BlogHeader } from '~/components/features/blog/BlogHeader'
+import { BlogPostPreview } from '~/components/features/blog/PostPreview'
 import {
   BrowserIcon,
   EnsNavIcon,
   GithubIcon,
   TwitterIcon,
-} from '~/components/icons'
-import { Link } from '~/components/MDX/Link'
-import { PageButtons } from '~/components/PageButtons/PageButtons'
+} from '~/components/shared/icons/index'
+import { Link } from '~/components/features/MDX/Link'
+import { PageButtons } from '~/components/ui/navigation/PageButtons/PageButtons'
 import { useTranslation } from '~/i18n/useTranslation'
 import { splitArray, splitArrayBiasFirst } from '~/utils/array/split'
 import { getAuthors } from '~/utils/blog/posts'
