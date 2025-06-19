@@ -46,6 +46,7 @@ export function useIntersectionObserver({
 
   const frozen = state.entry?.isIntersecting && freezeOnceVisible
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: threshold is covered by the JSON.stringify
   useEffect(() => {
     // Ensure we have a ref to observe
     if (!reference) return

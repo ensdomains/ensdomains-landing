@@ -44,7 +44,7 @@ export const ResponsiveImage: FC<Props> = ({
       className={styles.img}
       {...sourceProps.mobile}
       src={sources.mobile}
-      {...{ alt }}
+      alt={alt}
     />
   </picture>
 )

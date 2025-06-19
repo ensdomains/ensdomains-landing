@@ -378,6 +378,7 @@ export async function handleAuthors(): Promise<string> {
         if (data.avatar) {
           await Promise.all(
             AVATAR_IMG_SETTINGS.map((settings) =>
+              // biome-ignore lint/style/noNonNullAssertion: non-null assertion is covered by the if statement
               processAvatar(author, data.avatar!, settings),
             ),
           )

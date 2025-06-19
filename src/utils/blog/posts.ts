@@ -1,10 +1,9 @@
-import { readdir } from 'node:fs/promises'
-import { POSTS_DIR } from './utils'
+import fs, { readdir } from 'node:fs/promises'
+import type { MDXProps } from 'mdx/types'
 import { unstable_cache } from 'next/cache'
-import { BlogPostMetadata, BlogPostMetadataSchema } from './metadata'
-import fs from 'node:fs/promises'
 import { cache, type JSX } from 'react'
-import { MDXProps } from 'mdx/types'
+import { type BlogPostMetadata, BlogPostMetadataSchema } from './metadata'
+import { POSTS_DIR } from './utils'
 
 export type BlogPostMetadataPlus = BlogPostMetadata & {
   file: string
@@ -23,8 +22,7 @@ const getPost = async (slug: string) => {
     const pageMetadata = await BlogPostMetadataSchema.parseAsync(meta)
 
     return { ...pageMetadata, file: slug }
-  }
-  catch (error) {
+  } catch (error) {
     console.error(`Error reading meta.json for slug ${slug}:`, error)
     throw error
   }
@@ -40,17 +38,19 @@ export const _getPostsMetadata = async () => {
   // Load all posts from the content directory
   const files = await getPostDirectories()
 
-  const posts = await Promise.all(files.map(getPost)).then(posts => posts.filter((post) => {
-    if (post.draft && process.env.NODE_ENV == 'production') return false
+  const posts = await Promise.all(files.map(getPost)).then((posts) =>
+    posts.filter((post) => {
+      if (post.draft && process.env.NODE_ENV === 'production') return false
 
-    return true
-  }))
+      return true
+    }),
+  )
 
   return posts.sort((a, b) => {
     const aDate = new Date(a.date)
     const bDate = new Date(b.date)
 
-    if (aDate.getTime() == bDate.getTime()) return 0
+    if (aDate.getTime() === bDate.getTime()) return 0
 
     return aDate.getTime() > bDate.getTime() ? -1 : 1
   })
@@ -59,7 +59,7 @@ export const _getPostsMetadata = async () => {
 export const getPostBySlug = cache(async (slug: string) => {
   const allPosts = await getPostsMetadata()
 
-  const post = allPosts.find(post => post.slug === slug)
+  const post = allPosts.find((post) => post.slug === slug)
 
   if (!post) {
     throw new Error(`No post found with slug ${slug}`)
@@ -69,7 +69,11 @@ export const getPostBySlug = cache(async (slug: string) => {
 })
 
 export const importPost = async (post: string) => {
-  const { default: PostContent, readingTime, plainContent } = (await import(`posts/${post}/readme.mdx`)) as {
+  const {
+    default: PostContent,
+    readingTime,
+    plainContent,
+  } = (await import(`posts/${post}/readme.mdx`)) as {
     default: (_properties: MDXProps) => JSX.Element
     readingTime: string
     plainContent: string
@@ -90,8 +94,7 @@ export const getTags = async () => {
 
       if (tags[tag]) {
         tags[tag].push(page)
-      }
-      else {
+      } else {
         tags[tag] = [page]
       }
     }
@@ -112,8 +115,7 @@ export const getAuthors = async () => {
 
       if (authors[author]) {
         authors[author].push(page)
-      }
-      else {
+      } else {
         authors[author] = [page]
       }
     }

@@ -41,9 +41,7 @@ async function findLocalCover(post: string): Promise<Cover | null> {
       const data = await readFile(cover)
       postLogger.debug(`Found cover image for post ${post} in format ${format}`)
       return { post, format, data }
-    } catch {
-      continue
-    }
+    } catch {}
   }
   return null
 }

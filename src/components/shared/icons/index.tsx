@@ -1,3 +1,5 @@
+/** biome-ignore-all lint/nursery/useUniqueElementIds: icons */
+/** biome-ignore-all lint/a11y/noSvgWithoutTitle: icons */
 import type { SVGProps } from 'react'
 
 type Props = SVGProps<SVGSVGElement>
