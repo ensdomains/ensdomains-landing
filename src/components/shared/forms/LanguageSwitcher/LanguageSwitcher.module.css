@@ -90,7 +90,6 @@
 @media (min-width: 800px) {
   .summary {
     padding: 6px 12px;
-    border-radius: 2px;
     background-color: var(--ens-light-blue);
     border-radius: 4px;
   }

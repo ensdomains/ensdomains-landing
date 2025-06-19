@@ -22,6 +22,7 @@ const extractKeyValuePairs = (input) => {
 
   let pairMatch
 
+  // biome-ignore lint/suspicious/noAssignInExpressions: If it works, it works
   while ((pairMatch = keyValuePairsRegex.exec(keyValuePairsString)) !== null) {
     const [, key, valueString, numericValueString] = pairMatch
     const value =

@@ -87,7 +87,7 @@ export default async function Blog(props: PageProps) {
         style={{}}
       ></BlogHeader>
 
-      <section className={clsx(blogUi['page'])}>
+      <section className={clsx(blogUi.page)}>
         <div className={clsx(styles['blog-grid'])}>
           {posts.map((post, i) => (
             <BlogPostPreview

@@ -105,7 +105,7 @@ const page = async (props: PageProperties) => {
     >
       <script
         type="application/ld+json"
-        // eslint-disable-next-line @eslint-react/dom/no-dangerously-set-innerhtml
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for LD+JSON
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 

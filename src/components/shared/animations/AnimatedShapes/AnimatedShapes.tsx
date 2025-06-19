@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/nursery/useUniqueElementIds: Used for svg patterns */
 import type { SVGProps } from 'react'
 import { generateMotionTiming } from '~/utils/svgAnimationUtils'
 import type { Color } from '~/utils/types'
@@ -50,6 +51,7 @@ export const SquareAnimation = ({
       viewBox="0 0 200 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="presentation"
       {...props}
     >
       <defs>
@@ -120,6 +122,7 @@ export const RectangleAnimation = ({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       width={width}
+      role="presentation"
       {...props}
     >
       <defs>
@@ -203,6 +206,7 @@ export const CornerAnimation = ({
       viewBox="0 0 200 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      role="presentation"
       {...props}
     >
       <defs>

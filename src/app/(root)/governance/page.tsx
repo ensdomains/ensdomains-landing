@@ -1,14 +1,14 @@
 import { clsx } from 'clsx'
 import type { Metadata } from 'next'
 import type { CSSProperties } from 'react'
-import { StatsCounter } from '~/components/shared/animations/StatsCounter/StatsCounter'
-import { ColorCards } from '~/components/ui/cards/ColorCards/ColorCards'
 import { HeroContent } from '~/components/features/governance/HeroContent'
 import { Header } from '~/components/layout/Header/Header'
-import { LinkList } from '~/components/ui/navigation/LinkList/LinkList'
-import { ResponsiveImage } from '~/components/ui/media/ResponsiveImage/ResponsiveImage'
+import { StatsCounter } from '~/components/shared/animations/StatsCounter/StatsCounter'
+import { ColorCards } from '~/components/ui/cards/ColorCards/ColorCards'
 import { SectionWithPreview } from '~/components/ui/layout/SectionWithPreview/SectionWithPreview'
 import { TwoCol } from '~/components/ui/layout/TwoCol/TwoCol'
+import { ResponsiveImage } from '~/components/ui/media/ResponsiveImage/ResponsiveImage'
+import { LinkList } from '~/components/ui/navigation/LinkList/LinkList'
 import type { Language } from '~/i18n/settings'
 import { useTranslation } from '~/i18n/useTranslation'
 import stats from '~/stats/grants.json'
@@ -54,7 +54,7 @@ export default async function Governance(props: {
         <HeroContent />
       </Header>
 
-      <section className={ui['page']}>
+      <section className={ui.page}>
         <div className={clsx(ui.flex, ui['flex-col'], ui['h2-section'])}>
           <h2>{t('governance.extra.title')}</h2>
           <SectionWithPreview
