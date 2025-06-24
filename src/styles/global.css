@@ -2,7 +2,9 @@
 
 @theme {
   --color-ens-blue: #0080bc;
+  --color-ens-blue-hover: #0070a4;
   --color-ens-blue-light: #cee1e8;
+  --color-ens-blue-light-hover: #d8e7ed;
   --color-ens-blue-midnight: #093c52;
   --color-ens-blue-dark: #011a25;
   --color-ens-magenta: #f53293;
