@@ -1,6 +1,6 @@
 import { clsx } from 'clsx'
 import type { Metadata } from 'next'
-import { type CSSProperties, Fragment } from 'react'
+import { type CSSProperties, Fragment, Suspense } from 'react'
 import announcementCover from '~/assets/pages/ensv2/announcement-cover.png'
 import blue1 from '~/assets/pathways/patterns/blue-1.svg'
 import green1 from '~/assets/pathways/patterns/green-1.svg'
@@ -257,7 +257,9 @@ export default async function EnsV2(props: {
           <h1 className="font-serif text-[250px]" id="faq">
             FAQ
           </h1>
-          <FAQ />
+          <Suspense>
+            <FAQ />
+          </Suspense>
         </div>
       </div>
     </div>
