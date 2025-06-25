@@ -1,3 +1,9 @@
+.content figure > figcaption > p {
+  margin-top: 0;
+  text-align: center;
+  font-size: 18px;
+}
+
 .subtitle {
   font-size: 32px;
   margin-block: 40px;
