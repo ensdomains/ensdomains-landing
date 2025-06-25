@@ -74,7 +74,7 @@ export async function generateStaticParams() {
 
 const CaseStudyFrontmatterSchema = z.object({
   company: z.string(),
-  subtitle: z.string(),
+  subtitle: z.string().optional(),
 })
 
 async function getPostBySlug(post: string) {
@@ -110,7 +110,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
       <article className={articleStyles.article}>
         <div className={clsx(articleStyles.content, styles.content)}>
-          <h2 className={styles.subtitle}>{meta.subtitle}</h2>
+          {meta.subtitle && <h2 className={styles.subtitle}>{meta.subtitle}</h2>}
           <PostContent />
         </div>
       </article>
