@@ -57,7 +57,7 @@ export const FAQ = () => {
 
   return (
     <div className="space-y-4">
-      <div className="font-serif text-4xl text-ens-blue-midnight">
+      <div className="font-serif text-ens-blue-midnight text-xl md:text-4xl">
         All the ENSv2 and Namechain questions you were not afraid to ask.
       </div>
       {/* collapsible faqs */}
@@ -66,12 +66,30 @@ export const FAQ = () => {
         className="w-full rounded border border-ens-gray px-7 py-2 placeholder:text-ens-gray-three"
         placeholder="Search for a question"
       />
-      <div className="flex gap-4 font-mono text-xs leading-none">
-        {Object.entries(tags).map(([tag, { label, style }]) => (
-          <div key={tag} className={clsx('rounded px-3 py-2', style)}>
-            {label}
-          </div>
-        ))}
+      <div className="relative overflow-x-auto">
+        <div
+          className="flex size-full gap-4 font-mono text-xs leading-none"
+          // onScroll={(e) => {
+          //   const element = e.currentTarget
+          //   const isAtEnd =
+          //     element.scrollLeft + element.clientWidth >=
+          //     element.scrollWidth - 1
+          //   const gradient = element.nextElementSibling as HTMLElement
+          //   if (gradient) {
+          //     gradient.style.opacity = isAtEnd ? '0' : '1'
+          //   }
+          // }}
+        >
+          {Object.entries(tags).map(([tag, { label, style }]) => (
+            <div
+              key={tag}
+              className={clsx('whitespace-nowrap rounded px-3 py-2', style)}
+            >
+              {label}
+            </div>
+          ))}
+        </div>
+        {/* <div className="pointer-events-none absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-ens-white to-transparent transition-opacity" /> */}
       </div>
       <div className="space-y-6">
         {faqs.map((faq) => (
@@ -85,7 +103,7 @@ export const FAQ = () => {
           >
             <summary
               className={clsx(
-                'relative cursor-pointer font-medium font-sans text-xl leading-none transition-colors after:content-[unset]',
+                'relative flex cursor-pointer gap-2 font-medium font-sans text-xl leading-none transition-colors after:content-[unset]',
                 hash === faq.id && 'group-open:text-ens-blue',
               )}
             >
@@ -99,7 +117,7 @@ export const FAQ = () => {
               </Link>
               <ChevronIcon
                 direction="down"
-                className="-right-6 absolute top-0 size-3 rotate-90 text-ens-blue-dark hover:text-ens-blue group-open:rotate-270"
+                className="ml-auto size-3 shrink-0 rotate-90 text-ens-blue-dark hover:text-ens-blue group-open:rotate-270"
               />
             </summary>
             <div className="mt-4 font-normal font-semi-mono text-base leading-normal">

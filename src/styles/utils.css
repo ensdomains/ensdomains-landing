@@ -1,0 +1,3 @@
+@utility w-full-* {
+  width: calc(100% - --value([length]));
+}

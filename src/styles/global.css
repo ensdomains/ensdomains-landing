@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./utils.css";
 
 @theme {
   --color-ens-blue: #0080bc;
@@ -32,9 +33,6 @@
   --font-semi-mono: var(--ens-semi-mono);
 }
 
-@utility w-full-* {
-  width: calc(100% - --value([length]));
-}
 
 @layer base {
   * {

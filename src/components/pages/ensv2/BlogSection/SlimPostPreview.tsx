@@ -40,11 +40,11 @@ export const SlimBlogPostPreview = ({ post }: { post: BlogPostWithAssets }) => {
         </div>
       </div>
 
-      <span className="flex flex-wrap gap-2">
+      <span className="flex flex-wrap items-center gap-2">
         {post.authors.map(([author, avatar]) => (
           <BlogPostAuthor key={author} author={author} avatar={avatar} />
         ))}
-        <div className="align-middle">{date}</div>
+        <div className="leading-none">{date}</div>
       </span>
     </Link>
   )

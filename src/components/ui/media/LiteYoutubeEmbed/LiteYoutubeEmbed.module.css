@@ -72,6 +72,15 @@
   opacity: 1;
 }
 
+@media (max-width: 768px) {
+  .yt-lite > .lty-playbtn {
+    gap: 16px;
+  }
+  .lty-playbtn svg {
+    height: 36px;
+  }
+}
+
 .lty-playbtn-text {
   font-size: 14px;
   font-weight: 500;

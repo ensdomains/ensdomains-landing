@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import { type ComponentProps, useState } from 'react'
 import { splitArray } from '~/utils/array/split'
 import type { BlogPostMetadataPlus } from '~/utils/blog/posts'
+import { type Dimension, useMq } from '~/utils/useMq'
 import type { BlogPostWithAssets } from './BlogSection'
 import { SlimBlogPostPreview } from './SlimPostPreview'
 
@@ -37,12 +38,19 @@ const Chevron = ({
   </button>
 )
 
+const pagesCount: Record<Dimension, number> = {
+  mobile: 1,
+  tablet: 2,
+  desktop: 3,
+}
+
 export const BlogSectionCarousel = ({
   posts,
 }: {
   posts: BlogPostWithAssets[]
 }) => {
-  const pages = splitArray(posts, 3)
+  const deviceSize = useMq()
+  const pages = splitArray(posts, pagesCount[deviceSize] ?? 1)
   const [currentPage, setCurrentPage] = useState(0)
 
   const handleNext = () => {
@@ -54,21 +62,28 @@ export const BlogSectionCarousel = ({
   }
   return (
     <div className="space-y-7">
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-6 max-md:justify-center">
         <p>Go Deeper: Learn more about ENSv2</p>
-        <div className="h-px flex-grow bg-ens-gray" />
-        {pages.length > 1 && (
-          <div className="flex gap-3">
-            <Chevron onClick={handlePrevious} disabled={currentPage === 0} />
-            <Chevron
-              direction="right"
-              onClick={handleNext}
-              disabled={currentPage >= pages.length - 1}
-            />
-          </div>
+        {deviceSize !== 'mobile' && (
+          <>
+            <div className="h-px flex-grow bg-ens-gray" />
+            {pages.length > 1 && (
+              <div className="flex gap-3">
+                <Chevron
+                  onClick={handlePrevious}
+                  disabled={currentPage === 0}
+                />
+                <Chevron
+                  direction="right"
+                  onClick={handleNext}
+                  disabled={currentPage >= pages.length - 1}
+                />
+              </div>
+            )}
+          </>
         )}
       </div>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {pages[currentPage].map((post) => (
           <div key={post.slug}>
             <SlimBlogPostPreview key={post.slug} post={post} />
@@ -77,14 +92,14 @@ export const BlogSectionCarousel = ({
       </div>
       {/* Add indicator squares for the pages with the current being ens-blue color and the rest ens-gray-three */}
       {pages.length > 1 && (
-        <div className="flex justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-3">
           {pages.map((_, index) => (
             <button
               // biome-ignore lint/suspicious/noArrayIndexKey: we need to use the index as the key
               key={index}
               type="button"
               className={clsx(
-                'size-3 rounded-xs',
+                'size-5 rounded-sm md:size-3 md:rounded-xs',
                 index === currentPage ? 'bg-ens-blue' : 'bg-ens-gray-three',
               )}
               onClick={() => setCurrentPage(index)}

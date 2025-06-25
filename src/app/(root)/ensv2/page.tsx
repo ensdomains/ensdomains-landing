@@ -1,7 +1,12 @@
 import { clsx } from 'clsx'
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { type CSSProperties, Fragment, Suspense } from 'react'
+import {
+  type ComponentProps,
+  type CSSProperties,
+  Fragment,
+  Suspense,
+} from 'react'
 import announcementCover from '~/assets/pages/ensv2/announcement-cover.png'
 import headerGraphics from '~/assets/pages/ensv2/header-graphics.svg'
 import blue1 from '~/assets/pathways/patterns/blue-1.svg'
@@ -26,8 +31,8 @@ export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
   }
 }
 
-const HeaderLogo = () => (
-  <div className="">
+const HeaderLogo = (props: ComponentProps<'div'>) => (
+  <div {...props}>
     <svg
       width="118"
       height="66"
@@ -77,7 +82,7 @@ const HeaderLogo = () => (
         fill="#011A25"
       />
     </svg>
-    <div className="mt-2 font-semi-mono text-[10px] text-ens-gray-two leading-ens-none">
+    <div className="mt-2 font-semi-mono text-[10px] text-black leading-ens-none">
       NAMECHAIN, AN
       <br />
       ETHEREUM L2
@@ -158,26 +163,20 @@ export default async function EnsV2(props: {
   return (
     <div>
       <header
-        className="mb-16 grid min-h-[1015px] grid-cols-2 gap-32 bg-size-[20px] pt-22"
+        className="mb-16 flex grid-cols-2 flex-col bg-size-[20px] pt-20 md:grid md:min-h-[1015px] md:gap-32 md:pt-22"
         style={{
           backgroundImage: 'url(/assets/pathways/bg-white.svg)',
         }}
       >
-        <div className="relative">
-          <HeaderGraphics />
+        <div className="max-md:-my-8 relative max-md:mr-6 max-md:h-80">
+          <HeaderGraphics className="absolute top-0 right-0 h-full object-cover object-right" />
         </div>
-        <div className="flex max-w-[412px] flex-col gap-10">
-          <HeaderLogo />
+        <div className="mx-auto flex w-full-[2rem] flex-col pb-4 max-md:items-center md:max-w-[412px]">
+          <HeaderLogo className="max-md:mx-auto" />
 
-          <div className="flex flex-col gap-4">
-            <h1 className="font-bold text-8xl text-ens-blue-dark leading-[80%]">
-              The
-              <br />
-              naming
-              <br />
-              layer,
-              <br />
-              extended
+          <div className="mt-12 flex w-full flex-col gap-4">
+            <h1 className="text-[40px] text-ens-blue-dark leading-[80%] md:font-bold md:text-8xl">
+              The naming layer, extended
             </h1>
             <p className="font-sans text-base text-ens-gray">
               ENSv2 will make it easier to register names, further connect DNS
@@ -186,7 +185,7 @@ export default async function EnsV2(props: {
             </p>
           </div>
 
-          <div className="flex flex-col gap-3">
+          <div className="mt-4 flex w-full flex-col gap-3">
             <Button href="#faq">FAQ</Button>
             <Button variant="blueDashed" disabled>
               Explore Docs
@@ -196,7 +195,7 @@ export default async function EnsV2(props: {
           </div>
         </div>
       </header>
-      <div className="mx-auto mb-32 w-full-[4rem] max-w-[1374px] space-y-32">
+      <div className="mx-auto mb-32 w-full-[2rem] max-w-[1374px] space-y-32 md:w-full-[4rem]">
         {/* Announcement video */}
         <div>
           {/** biome-ignore lint/nursery/useUniqueElementIds: ID is the video id */}
@@ -210,13 +209,18 @@ export default async function EnsV2(props: {
         </div>
 
         {/* Section A */}
-        <div className="space-y-12">
+        <div className="space-y-6 md:space-y-12">
           {sectionsA.map(
             ({ textClass, bgClass, bgStyle, title, description }) => (
               <Fragment key={title}>
-                <div className={clsx('flex gap-12', textClass)}>
+                <div
+                  className={clsx(
+                    'flex flex-col gap-6 md:flex-row md:gap-12',
+                    textClass,
+                  )}
+                >
                   <div
-                    className={clsx('size-36 rounded', bgClass)}
+                    className={clsx('h-36 rounded-sm md:w-36', bgClass)}
                     style={bgStyle}
                   />
                   <h2 className="flex-grow whitespace-pre-line text-4xl leading-ens-none">
@@ -240,17 +244,17 @@ export default async function EnsV2(props: {
             instance of Linea's zkEVM. Namechain lets users and developers
             create onchain identities through the power of names, not numbers.
           </p>
-          <div className="mt-11 flex w-full gap-6">
+          <div className="mt-11 flex w-full flex-col gap-6 md:flex-row">
             {sectionsB.map(({ sectionClass, title, description }) => (
               <div
                 key={title}
                 className={clsx(
-                  'flex h-72 flex-1 flex-col justify-between rounded p-5 text-xl',
+                  'flex h-40 flex-col justify-between rounded p-5 text-xl md:h-72',
                   sectionClass,
                 )}
               >
                 <div className="flex-grow">{title}</div>
-                <div className="max-w-3/5 text-[#191919]/60 leading-ens-tight">
+                <div className="text-[#191919]/60 leading-ens-none md:max-w-3/5">
                   {description}
                 </div>
               </div>
@@ -262,9 +266,9 @@ export default async function EnsV2(props: {
         <BlogSection />
 
         {/* FAQ */}
-        <div className="grid grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:gap-12 md:grid-cols-2">
           {/** biome-ignore lint/nursery/useUniqueElementIds: ID is the anchor */}
-          <h1 className="font-serif text-[250px]" id="faq">
+          <h1 className="font-serif text-[186px] md:text-[250px]" id="faq">
             FAQ
           </h1>
           <Suspense>
