@@ -1,3 +1,4 @@
+import type { ResolvingMetadata } from 'next'
 import { readdir } from 'node:fs/promises'
 import { z } from 'zod'
 import articleStyles from '../../blog/post/[slug]/page.module.css'
@@ -7,9 +8,60 @@ import styles from './page.module.css'
 import ui from '~/styles/ui.module.css'
 import { MDXProps } from 'mdx/types'
 import type { JSX } from 'react'
+import { createMetadata } from '~/utils/metadata'
 
 const CURRENT_DIR = new URL(import.meta.url)
 const CONTENT_DIR = new URL('../../../../../case-studies', CURRENT_DIR)
+
+type PageProps = {
+  params: Promise<{ slug: string }>
+}
+
+export const generateMetadata = async (
+  props: PageProps,
+  parent: ResolvingMetadata,
+) => {
+  const params = await props.params
+  const {meta} = await getPostBySlug(params.slug)
+  const parentMetadata = await parent
+
+  // const postAssets = getPostAssets(post.file)
+
+  // if (!postAssets) {
+  //   throw new AssetNotFoundError(post.file)
+  // }
+
+  // const postCover = await postAssets.cover
+
+  return createMetadata(
+    {
+      title: `${meta.company} Case Study`,
+      description: meta.subtitle,
+      path: '/ecosystem/' + params.slug,
+    },
+    parentMetadata,
+    {
+      openGraph: {
+        type: 'article',
+        title: `How ${meta.company} uses ENS`,
+        // images: postCover
+        //   ? [
+        //       {
+        //         url: new URL(postCover.src, BASE_URL),
+        //         width: postCover.width,
+        //         height: postCover.height,
+        //       },
+        //     ]
+        //   : undefined,
+        url: '/ecosystem/' + params.slug,
+      },
+      twitter: {
+        card: 'summary_large_image',
+      },
+    },
+  )
+
+}
 
 export async function generateStaticParams() {
   const pages = await readdir(CONTENT_DIR)
@@ -21,12 +73,12 @@ export async function generateStaticParams() {
 }
 
 const CaseStudyFrontmatterSchema = z.object({
-  title: z.string(),
+  company: z.string(),
   subtitle: z.string(),
 })
 
 async function getPostBySlug(post: string) {
-  const { default: PostContent, meta: _meta } = await import(`case-studies/${post}.mdx`) as {
+  const { default: PostContent, meta: _meta } = await import(`case-studies/${post}/readme.mdx`) as {
     default: (_properties: MDXProps) => JSX.Element
     meta: Record<string, unknown>
   }
@@ -34,10 +86,6 @@ async function getPostBySlug(post: string) {
   const meta = await CaseStudyFrontmatterSchema.parseAsync(_meta)
 
   return { meta, PostContent }
-}
-
-type PageProps = {
-  params: Promise<{ slug: string; path: string }>
 }
 
 export default async function CaseStudyPage({ params }: PageProps) {
@@ -56,7 +104,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         )}
       >
         <div className={headerStyles.content}>
-          <h1 className={headerStyles.title}>{meta.title}</h1>
+          <h1 className={headerStyles.title}>Case Study: {meta.company}</h1>
         </div>
       </header>
 
