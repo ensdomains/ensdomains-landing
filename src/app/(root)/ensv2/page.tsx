@@ -163,15 +163,15 @@ export default async function EnsV2(props: {
   return (
     <div>
       <header
-        className="mb-16 flex grid-cols-2 flex-col bg-size-[20px] pt-20 md:grid md:min-h-[1015px] md:gap-32 md:pt-22"
+        className="mb-16 flex grid-cols-[1fr_2fr] flex-col bg-size-[20px] pt-20 md:grid lg:min-h-[1015px] lg:grid-cols-2 lg:gap-32 lg:pt-22"
         style={{
           backgroundImage: 'url(/assets/pathways/bg-white.svg)',
         }}
       >
-        <div className="max-md:-my-8 relative max-md:mr-6 max-md:h-80">
+        <div className="max-lg:-my-8 relative max-md:mr-6 max-lg:h-80">
           <HeaderGraphics className="absolute top-0 right-0 h-full object-cover object-right" />
         </div>
-        <div className="mx-auto flex w-full-[2rem] flex-col pb-4 max-md:items-center md:max-w-[412px]">
+        <div className="flex w-full-[2rem] flex-col pb-4 max-md:items-center max-lg:mx-auto sm:max-w-[412px]">
           <HeaderLogo className="max-md:mx-auto" />
 
           <div className="mt-12 flex w-full flex-col gap-4">
@@ -209,24 +209,24 @@ export default async function EnsV2(props: {
         </div>
 
         {/* Section A */}
-        <div className="space-y-6 md:space-y-12">
+        <div className="space-y-6 lg:space-y-12">
           {sectionsA.map(
             ({ textClass, bgClass, bgStyle, title, description }) => (
               <Fragment key={title}>
                 <div
                   className={clsx(
-                    'flex flex-col gap-6 md:flex-row md:gap-12',
+                    'flex flex-col gap-6 lg:flex-row lg:gap-12',
                     textClass,
                   )}
                 >
                   <div
-                    className={clsx('h-36 rounded-sm md:w-36', bgClass)}
+                    className={clsx('h-36 rounded-sm lg:w-36', bgClass)}
                     style={bgStyle}
                   />
                   <h2 className="flex-grow whitespace-pre-line text-4xl leading-ens-none">
                     {title}
                   </h2>
-                  <span className="max-w-sm font-light font-serif text-xl leading-ens-tight">
+                  <span className="max-w-md font-light font-serif text-xl leading-ens-tight">
                     {description}
                   </span>
                 </div>
@@ -244,17 +244,17 @@ export default async function EnsV2(props: {
             instance of Linea's zkEVM. Namechain lets users and developers
             create onchain identities through the power of names, not numbers.
           </p>
-          <div className="mt-11 flex w-full flex-col gap-6 md:flex-row">
+          <div className="mt-11 flex w-full gap-6 max-lg:flex-wrap">
             {sectionsB.map(({ sectionClass, title, description }) => (
               <div
                 key={title}
                 className={clsx(
-                  'flex h-40 flex-col justify-between rounded p-5 text-xl md:h-72',
+                  'flex h-40 min-w-xs flex-1 flex-col justify-between rounded p-5 text-xl md:h-72',
                   sectionClass,
                 )}
               >
                 <div className="flex-grow">{title}</div>
-                <div className="text-[#191919]/60 leading-ens-none md:max-w-3/5">
+                <div className="text-[#191919]/60 leading-ens-none md:max-w-2xs">
                   {description}
                 </div>
               </div>
@@ -266,9 +266,9 @@ export default async function EnsV2(props: {
         <BlogSection />
 
         {/* FAQ */}
-        <div className="grid grid-cols-1 md:gap-12 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-12">
           {/** biome-ignore lint/nursery/useUniqueElementIds: ID is the anchor */}
-          <h1 className="font-serif text-[186px] md:text-[250px]" id="faq">
+          <h1 className="font-serif text-[186px] xl:text-[250px]" id="faq">
             FAQ
           </h1>
           <Suspense>
