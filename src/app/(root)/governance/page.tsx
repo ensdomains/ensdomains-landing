@@ -199,7 +199,7 @@ export default async function Governance(props: {
               description: t('home.extra.community.description'),
               button: t('home.extra.community.button'),
               buttonVariant: 'secondary',
-              href: '/',
+              href: 'https://discuss.ens.domains',
             },
           ]}
         />
