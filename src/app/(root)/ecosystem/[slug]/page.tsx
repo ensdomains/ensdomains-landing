@@ -30,7 +30,7 @@ const CaseStudyFrontmatterSchema = z.object({
 
 async function getPostBySlug(post: string) {
   const contentDirPath = fileURLToPath(CONTENT_DIR)
-  const path = join(contentDirPath, `${post}.md`)
+  const path = join(contentDirPath, `${post}.mdx`)
   const file = await readFile(path, 'utf8')
   const { content, data } = matter(file)
   const meta = await CaseStudyFrontmatterSchema.parseAsync(data)
