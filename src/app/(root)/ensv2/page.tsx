@@ -1,12 +1,15 @@
 import { clsx } from 'clsx'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { type CSSProperties, Fragment, Suspense } from 'react'
 import announcementCover from '~/assets/pages/ensv2/announcement-cover.png'
+import headerGraphics from '~/assets/pages/ensv2/header-graphics.svg'
 import blue1 from '~/assets/pathways/patterns/blue-1.svg'
 import green1 from '~/assets/pathways/patterns/green-1.svg'
 import magenta1 from '~/assets/pathways/patterns/magenta-1.svg'
 import { BlogSection } from '~/components/pages/ensv2/BlogSection/BlogSection'
 import { FAQ } from '~/components/pages/ensv2/FAQ/FAQ'
+import { HeaderGraphics } from '~/components/pages/ensv2/HeaderGraphics'
 import LiteYouTubeEmbed from '~/components/ui/media/LiteYoutubeEmbed/LiteYoutubeEmbed'
 import { Button } from '~/components/ui/primitives/Button/Button'
 import type { Language } from '~/i18n/settings'
@@ -154,8 +157,15 @@ export default async function EnsV2(props: {
 }) {
   return (
     <div>
-      <header className="mb-16 grid min-h-[1015px] grid-cols-2 bg-[url('/assets/pathways/bg-white.svg')] bg-size-[20px] pt-22">
-        <div />
+      <header
+        className="mb-16 grid min-h-[1015px] grid-cols-2 gap-32 bg-size-[20px] pt-22"
+        style={{
+          backgroundImage: 'url(/assets/pathways/bg-white.svg)',
+        }}
+      >
+        <div className="relative">
+          <HeaderGraphics />
+        </div>
         <div className="flex max-w-[412px] flex-col gap-10">
           <HeaderLogo />
 

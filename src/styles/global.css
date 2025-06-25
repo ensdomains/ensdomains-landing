@@ -30,7 +30,6 @@
   --font-serif: var(--ens-serif);
   --font-mono: var(--ens-mono);
   --font-semi-mono: var(--ens-semi-mono);
-  --color-test: var(--ens-blue-dark);
 }
 
 @utility w-full-* {
