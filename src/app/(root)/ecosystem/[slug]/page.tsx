@@ -1,15 +1,12 @@
-import { fileURLToPath } from 'node:url'
-import { join } from 'node:path'
-import { readdir, readFile } from 'node:fs/promises'
+import { readdir } from 'node:fs/promises'
 import { z } from 'zod'
 import articleStyles from '../../blog/post/[slug]/page.module.css'
 import clsx from 'clsx'
 import headerStyles from '~/components/Blog/Post/PostHeader.module.css'
-import matter from 'gray-matter'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
 import styles from './page.module.css'
 import ui from '~/styles/ui.module.css'
+import { MDXProps } from 'mdx/types'
+import type { JSX } from 'react'
 
 const CURRENT_DIR = new URL(import.meta.url)
 const CONTENT_DIR = new URL('../../../../../case-studies', CURRENT_DIR)
@@ -29,16 +26,14 @@ const CaseStudyFrontmatterSchema = z.object({
 })
 
 async function getPostBySlug(post: string) {
-  const contentDirPath = fileURLToPath(CONTENT_DIR)
-  const path = join(contentDirPath, `${post}.mdx`)
-  const file = await readFile(path, 'utf8')
-  const { content, data } = matter(file)
-  const meta = await CaseStudyFrontmatterSchema.parseAsync(data)
+  const { default: PostContent, meta: _meta } = await import(`case-studies/${post}.mdx`) as {
+    default: (_properties: MDXProps) => JSX.Element
+    meta: Record<string, unknown>
+  }
 
-  // This throws
-  const importedMdx = await import(`case-studies/${post}.mdx`)
+  const meta = await CaseStudyFrontmatterSchema.parseAsync(_meta)
 
-  return { meta, content }
+  return { meta, PostContent }
 }
 
 type PageProps = {
@@ -47,7 +42,7 @@ type PageProps = {
 
 export default async function CaseStudyPage({ params }: PageProps) {
   const { slug } = await params
-  const { content, meta } = await getPostBySlug(slug)
+  const { PostContent, meta } = await getPostBySlug(slug)
 
   return (
     <section>
@@ -68,7 +63,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       <article className={articleStyles.article}>
         <div className={clsx(articleStyles.content, styles.content)}>
           <h2 className={styles.subtitle}>{meta.subtitle}</h2>
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+          <PostContent />
         </div>
       </article>
     </section>
