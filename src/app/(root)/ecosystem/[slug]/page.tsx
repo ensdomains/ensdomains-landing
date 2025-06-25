@@ -35,6 +35,9 @@ async function getPostBySlug(post: string) {
   const { content, data } = matter(file)
   const meta = await CaseStudyFrontmatterSchema.parseAsync(data)
 
+  // This throws
+  const importedMdx = await import(`case-studies/${post}.mdx`)
+
   return { meta, content }
 }
 
