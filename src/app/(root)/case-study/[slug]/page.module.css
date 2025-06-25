@@ -1,0 +1,16 @@
+.subtitle {
+  font-size: 32px;
+  margin-block: 40px;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .subtitle {
+    font-size: 64px;
+  }
+}
