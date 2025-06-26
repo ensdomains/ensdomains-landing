@@ -1,0 +1,38 @@
+@keyframes pathAnimation {
+  0% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+  2% {
+    offset-distance: 100%;
+    opacity: 1;
+  }
+  95% {
+    offset-distance: 0%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animatedRect {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--color-ens-white);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /* transform: translate(-20px, -20px); */
+  offset-path: var(--path);
+  animation: pathAnimation var(--duration) linear infinite;
+  animation-delay: var(--delay);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .animatedRect {
+    animation-duration: 20s;
+  }
+}

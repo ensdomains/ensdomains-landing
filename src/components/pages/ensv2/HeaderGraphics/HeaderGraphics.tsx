@@ -1,7 +1,6 @@
-/** biome-ignore-all lint/nursery/useUniqueElementIds: <explanation> */
-
-import { type ComponentProps, Fragment, useId } from 'react'
-import { generateMotionTiming, randomMaxMin } from '~/utils/svgAnimationUtils'
+import { type ComponentProps, useMemo } from 'react'
+import { randomMaxMin } from '~/utils/svgAnimationUtils'
+import styles from './HeaderGraphics.module.css'
 
 type Path = {
   path: string
@@ -35,19 +34,33 @@ const PATHS: Path[] = [
   },
 ]
 
-const HeaderGraphicsPath = ({ path, color }: Path) => {
-  const id = useId()
-
-  const timing = generateMotionTiming({
-    minDuration: 6 * 1,
-    maxDuration: 7 * 1,
-    reverse: true,
-  })
+const HeaderGraphicsPath = ({
+  path,
+  color,
+  index,
+}: Path & { index: number }) => {
+  // Generate random delays for each path
+  // biome-ignore lint/correctness/useExhaustiveDependencies: new index should have new random value
+  const cubes = useMemo(
+    () =>
+      Array.from({ length: 2 }).map((_, i) => {
+        const duration = randomMaxMin(8, 6)
+        const delay = randomMaxMin(duration, -duration / 2) + i * 0.5
+        return {
+          duration,
+          delay,
+        }
+      }),
+    [index],
+  )
 
   return (
     <>
       <g style={{ mixBlendMode: 'darken' }} opacity="0.8">
-        <mask id={`${id}-mask`} maskUnits="userSpaceOnUse">
+        <mask
+          id={`ens-v2-header-graphics-${index}-mask`}
+          maskUnits="userSpaceOnUse"
+        >
           <rect x="0" y="0" width="100%" height="100%" fill="white" />
           <path d={path} stroke="black" strokeWidth="2" strokeLinecap="round" />
         </mask>
@@ -56,44 +69,29 @@ const HeaderGraphicsPath = ({ path, color }: Path) => {
           stroke={`var(--color-${color})`}
           strokeWidth="90"
           strokeLinecap="round"
-          mask={`url(#${id}-mask)`}
+          mask={`url(#ens-v2-header-graphics-${index}-mask)`}
         />
       </g>
-      <rect
-        y="-20"
-        x="-20"
-        width="40"
-        height="40"
-        fill="var(--color-ens-white)"
-      >
-        <animateMotion
-          begin={`${randomMaxMin(2)}s`}
-          dur={`${timing.duration}s`}
-          repeatCount="indefinite"
-          keyPoints={timing.keyPoints}
-          keyTimes={timing.keyTimes}
-          path={Array.from({ length: 1 }, () => path).join(' ')}
-          rotate="auto"
+      {cubes.map((cube, index) => (
+        <rect
+          // biome-ignore lint/suspicious/noArrayIndexKey: It's fine
+          key={index}
+          y="-20"
+          x="-20"
+          width="40"
+          height="40"
+          fill="var(--color-ens-white)"
+          rx="4"
+          className={styles.animatedRect}
+          style={
+            {
+              '--path': `path("${path}")`,
+              '--delay': `${cube.delay}s`,
+              '--duration': `${cube.duration}s`,
+            } as React.CSSProperties
+          }
         />
-      </rect>
-      <rect
-        y="-20"
-        x="-20"
-        width="40"
-        height="40"
-        fill="var(--color-ens-white)"
-        rx="4"
-      >
-        <animateMotion
-          begin={`${randomMaxMin(4, 1.5)}s`}
-          dur={`${timing.duration}s`}
-          repeatCount="indefinite"
-          keyPoints={timing.keyPoints}
-          keyTimes={timing.keyTimes}
-          path={Array.from({ length: 1 }, () => path).join(' ')}
-          rotate="auto"
-        />
-      </rect>
+      ))}
     </>
   )
 }
@@ -101,20 +99,16 @@ const HeaderGraphicsPath = ({ path, color }: Path) => {
 export const HeaderGraphics = (props: ComponentProps<'svg'>) => {
   return (
     <svg
-      // width="2109"
-      // height="953"
       viewBox="0 0 2109 953"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       role="presentation"
+      className={styles.svg}
       {...props}
     >
       {PATHS.map((path, index) => (
-        <HeaderGraphicsPath
-          // biome-ignore lint/suspicious/noArrayIndexKey: PATHS is a constant making index stable
-          key={index}
-          {...path}
-        />
+        // biome-ignore lint/suspicious/noArrayIndexKey: PATHS is a constant making index stable
+        <HeaderGraphicsPath key={index} index={index} {...path} />
       ))}
     </svg>
   )

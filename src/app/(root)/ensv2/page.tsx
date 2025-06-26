@@ -14,7 +14,7 @@ import green1 from '~/assets/pathways/patterns/green-1.svg'
 import magenta1 from '~/assets/pathways/patterns/magenta-1.svg'
 import { BlogSection } from '~/components/pages/ensv2/BlogSection/BlogSection'
 import { FAQ } from '~/components/pages/ensv2/FAQ/FAQ'
-import { HeaderGraphics } from '~/components/pages/ensv2/HeaderGraphics'
+import { HeaderGraphics } from '~/components/pages/ensv2/HeaderGraphics/HeaderGraphics'
 import LiteYouTubeEmbed from '~/components/ui/media/LiteYoutubeEmbed/LiteYoutubeEmbed'
 import { Button } from '~/components/ui/primitives/Button/Button'
 import type { Language } from '~/i18n/settings'
@@ -163,7 +163,7 @@ export default async function EnsV2(props: {
   return (
     <div>
       <header
-        className="mb-16 flex grid-cols-[1fr_2fr] flex-col bg-size-[20px] pt-20 md:grid lg:min-h-[1015px] lg:grid-cols-2 lg:gap-32 lg:pt-22"
+        className="mb-16 flex grid-cols-[1fr_2fr] flex-col bg-size-[20px] pt-20 md:grid lg:min-h-[1015px] lg:grid-cols-2 lg:gap-32 lg:pt-24"
         style={{
           backgroundImage: 'url(/assets/pathways/bg-white.svg)',
         }}
@@ -178,7 +178,7 @@ export default async function EnsV2(props: {
             <h1 className="text-[40px] text-ens-blue-dark leading-[80%] md:font-bold md:text-8xl">
               The naming layer, extended
             </h1>
-            <p className="font-sans text-base text-ens-gray">
+            <p className="font-sans text-ens-gray text-lg leading-ens-none">
               ENSv2 will make it easier to register names, further connect DNS
               with blockchain-based identities, and bring more interoperability
               to onchain experiences. Global networks deserve global names.
@@ -187,7 +187,7 @@ export default async function EnsV2(props: {
 
           <div className="mt-4 flex w-full flex-col gap-3">
             <Button href="#faq">FAQ</Button>
-            <Button variant="blueDashed" disabled>
+            <Button variant="blueDashed" disabled className="uppercase">
               Explore Docs
               <br />
               [Launching may]
@@ -268,7 +268,10 @@ export default async function EnsV2(props: {
         {/* FAQ */}
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-12">
           {/** biome-ignore lint/nursery/useUniqueElementIds: ID is the anchor */}
-          <h1 className="font-serif text-[186px] xl:text-[250px]" id="faq">
+          <h1
+            className="top-24 h-fit font-serif text-[186px] md:sticky xl:text-[250px]"
+            id="faq"
+          >
             FAQ
           </h1>
           <Suspense>
