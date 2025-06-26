@@ -8,7 +8,8 @@ import styles from './page.module.css'
 import ui from '~/styles/ui.module.css'
 import { MDXProps } from 'mdx/types'
 import type { JSX } from 'react'
-import { createMetadata } from '~/utils/metadata'
+import { BASE_URL, createMetadata } from '~/utils/metadata'
+import { StaticImageData } from 'next/image'
 
 const CURRENT_DIR = new URL(import.meta.url)
 const CONTENT_DIR = new URL('../../../../../case-studies', CURRENT_DIR)
@@ -25,13 +26,10 @@ export const generateMetadata = async (
   const {meta} = await getPostBySlug(params.slug)
   const parentMetadata = await parent
 
-  // const postAssets = getPostAssets(post.file)
-
-  // if (!postAssets) {
-  //   throw new AssetNotFoundError(post.file)
-  // }
-
-  // const postCover = await postAssets.cover
+  // Use 'og.png' as the opengraph image if it exists
+  const ogImage = await import(`case-studies/${params.slug}/og.png`)
+    .then((asset: { default: StaticImageData }) => asset.default)
+    .catch(() => undefined)
 
   return createMetadata(
     {
@@ -44,15 +42,15 @@ export const generateMetadata = async (
       openGraph: {
         type: 'article',
         title: `How ${meta.company} uses ENS`,
-        // images: postCover
-        //   ? [
-        //       {
-        //         url: new URL(postCover.src, BASE_URL),
-        //         width: postCover.width,
-        //         height: postCover.height,
-        //       },
-        //     ]
-        //   : undefined,
+        images: ogImage
+          ? [
+              {
+                url: new URL(ogImage.src, BASE_URL),
+                width: ogImage.width,
+                height: ogImage.height,
+              },
+            ]
+          : parentMetadata.openGraph?.images,
         url: '/ecosystem/' + params.slug,
       },
       twitter: {
