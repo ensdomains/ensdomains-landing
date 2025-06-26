@@ -269,7 +269,7 @@ export default async function EnsV2(props: {
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-12">
           {/** biome-ignore lint/nursery/useUniqueElementIds: ID is the anchor */}
           <h1
-            className="top-24 h-fit font-serif text-[186px] md:sticky xl:text-[250px]"
+            className="top-24 h-fit font-serif text-[186px] md:sticky md:scroll-mt-24 xl:text-[250px]"
             id="faq"
           >
             FAQ
