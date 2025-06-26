@@ -10,6 +10,7 @@ import { MDXProps } from 'mdx/types'
 import type { JSX } from 'react'
 import { BASE_URL, createMetadata } from '~/utils/metadata'
 import { StaticImageData } from 'next/image'
+import { ImageFormats } from 'scripts/build-assets/types'
 
 const CURRENT_DIR = new URL(import.meta.url)
 const CONTENT_DIR = new URL('../../../../../case-studies', CURRENT_DIR)
@@ -26,10 +27,18 @@ export const generateMetadata = async (
   const {meta} = await getPostBySlug(params.slug)
   const parentMetadata = await parent
 
-  // Use 'og.png' as the opengraph image if it exists
-  const ogImage = await import(`case-studies/${params.slug}/og.png`)
-    .then((asset: { default: StaticImageData }) => asset.default)
-    .catch(() => undefined)
+  let ogImage: StaticImageData | undefined
+  
+  // Use 'cover.{webp,png,jpg,jpeg}' as the opengraph image if it exists
+  for (const format of ImageFormats) {
+    try {
+      ogImage = await import(`case-studies/${params.slug}/cover.${format}`)
+        .then((asset) => asset.default)
+      break
+    } catch {
+      continue
+    }
+  }
 
   return createMetadata(
     {
