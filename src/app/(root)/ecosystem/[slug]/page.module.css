@@ -1,7 +1,13 @@
+.content figure > figcaption {
+  display: flex;
+  justify-content: center;
+}
+
 .content figure > figcaption > p {
   margin-top: 0;
-  text-align: center;
-  font-size: 18px;
+  font-size: 14px;
+  font-family: var(--ens-sans);
+  line-height: 1.2;
 }
 
 .subtitle {
