@@ -1,6 +1,5 @@
 import { clsx } from 'clsx'
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import {
   type ComponentProps,
   type CSSProperties,
@@ -8,7 +7,6 @@ import {
   Suspense,
 } from 'react'
 import announcementCover from '~/assets/pages/ensv2/announcement-cover.png'
-import headerGraphics from '~/assets/pages/ensv2/header-graphics.svg'
 import blue1 from '~/assets/pathways/patterns/blue-1.svg'
 import green1 from '~/assets/pathways/patterns/green-1.svg'
 import magenta1 from '~/assets/pathways/patterns/magenta-1.svg'
@@ -274,9 +272,7 @@ export default async function EnsV2(props: {
           >
             FAQ
           </h1>
-          <Suspense>
-            <FAQ />
-          </Suspense>
+          <FAQ />
         </div>
       </div>
     </div>
