@@ -11,18 +11,18 @@
 }
 
 .subtitle {
-  font-size: 32px;
-  margin-block: 40px;
+  font-size: 24px;
+  margin-bottom: 40px;
 }
 
 @media (min-width: 768px) {
   .subtitle {
-    font-size: 40px;
+    font-size: 32px;
   }
 }
 
 @media (min-width: 1280px) {
   .subtitle {
-    font-size: 64px;
+    font-size: 40px;
   }
 }
