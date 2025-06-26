@@ -23,16 +23,14 @@ export const tags: Record<
 }
 
 export type Faq = {
-  id: string
   question: string
   answer: string | ReactNode
   tags?: (keyof typeof tags)[]
 }
 
-export const faqs: Faq[] = [
+export const faqs: Record<string, Faq> = {
   // General Migration Questions
-  {
-    id: 'will-i-still-own-my-ens-name-after-the-upgrade',
+  ['will-i-still-own-my-ens-name-after-the-upgrade']: {
     question: 'Will I still own my ENS name after the upgrade?',
     answer: (
       <>
@@ -44,22 +42,19 @@ export const faqs: Faq[] = [
     ),
     tags: ['apps-access'],
   },
-  {
-    id: 'do-i-have-to-migrate-my-ens-name',
+  ['do-i-have-to-migrate-my-ens-name']: {
     question: 'Do I have to migrate my ENS name?',
     answer:
       "Yes. To access the full features of ENSv2 (like renewing your name), you'll eventually need to migrate to the new system.",
     tags: ['apps-access'],
   },
-  {
-    id: 'will-there-be-an-easy-migration-tool',
+  ['will-there-be-an-easy-migration-tool']: {
     question: 'Will there be an easy migration tool?',
     answer:
       "Yes. ENS will provide a simple migration tool with clear instructions when it's time to upgrade.",
     tags: ['apps-access'],
   },
-  {
-    id: 'does-it-cost-more-to-migrate-if-i-have-more-records',
+  ['does-it-cost-more-to-migrate-if-i-have-more-records']: {
     question:
       'Does it cost more to migrate if I have more records added to my name?',
     answer:
@@ -68,8 +63,7 @@ export const faqs: Faq[] = [
   },
 
   // Migration Paths & Behaviors
-  {
-    id: 'what-are-my-options-for-migration',
+  ['what-are-my-options-for-migration']: {
     question: 'What are my options for migration?',
     answer: (
       <>
@@ -90,15 +84,13 @@ export const faqs: Faq[] = [
     ),
     tags: ['apps-access'],
   },
-  {
-    id: 'can-i-keep-my-name-on-l1-and-still-renew',
+  ['can-i-keep-my-name-on-l1-and-still-renew']: {
     question: 'Can I keep my name on Ethereum L1 and still renew it?',
     answer:
       "You can keep your name on L1, but renewals will be processed through Namechain. You don't need to move the name itself to Namechain to renew it.",
     tags: ['bridge-payments'],
   },
-  {
-    id: 'can-i-keep-my-name-on-l1-and-still-use-ensv2',
+  ['can-i-keep-my-name-on-l1-and-still-use-ensv2']: {
     question: 'Can I keep my name on Ethereum L1 and still use ENSv2?',
     answer:
       'Yes. You can choose not to migrate and still use your name as normal, but certain ENSv2 features will require migration.',
@@ -106,39 +98,34 @@ export const faqs: Faq[] = [
   },
 
   // Subnames & Cross-Chain Compatibility
-  {
-    id: 'what-about-my-subnames',
+  ['what-about-my-subnames']: {
     question: 'What about my subnames (like .base, .uni, etc.)?',
     answer:
       "Subnames will continue working. ENSv2 enhances subname management but you don't need to migrate them separately.",
     tags: ['upgrades-architecture'],
   },
-  {
-    id: 'whats-changing-about-subnames-and-permissions',
+  ['whats-changing-about-subnames-and-permissions']: {
     question:
       "What's changing about how subnames and permissions work in ENSv2?",
     answer:
       'ENSv2 gives each name its own registry with fine-grained access controls. You can control who can create subnames, set permissions, or delegate authority in a more trustless way — perfect for communities and apps that issue subnames.',
     tags: ['upgrades-architecture'],
   },
-  {
-    id: 'do-i-need-to-migrate-cross-chain-subnames',
+  ['do-i-need-to-migrate-cross-chain-subnames']: {
     question:
       'Do I need to migrate subnames like yourname.base.eth, yourname.linea.eth, or yourname.uni.eth?',
     answer:
       "No, you don't need to migrate subnames. With ENSv2 and the Universal Resolver, everything works better cross-chain.",
     tags: ['upgrades-architecture'],
   },
-  {
-    id: 'will-ccip-read-names-still-work',
+  ['will-ccip-read-names-still-work']: {
     question:
       "Will my existing CCIP-Read names (e.g., cb.id, uni.eth) still work if I don't migrate?",
     answer:
       'Yes, names that resolve via CCIP-Read will continue to function without migration.',
     tags: ['upgrades-architecture'],
   },
-  {
-    id: 'do-i-need-to-migrate-dns-name',
+  ['do-i-need-to-migrate-dns-name']: {
     question:
       'Do I need to migrate a DNS name that was previously imported to ENSv1?',
     answer:
@@ -147,15 +134,13 @@ export const faqs: Faq[] = [
   },
 
   // Namechain Basics & Purpose
-  {
-    id: 'what-is-namechain',
+  ['what-is-namechain']: {
     question: 'What is Namechain?',
     answer:
       "Namechain is a new L2 (Layer 2) blockchain purpose-built for ENS. It runs on Linea, a zkEVM rollup that inherits Ethereum's security.",
     tags: ['upgrades-architecture'],
   },
-  {
-    id: 'why-did-ens-build-its-own-chain',
+  ['why-did-ens-build-its-own-chain']: {
     question: 'Why did ENS build its own chain?',
     answer:
       'By creating Namechain, ENS can avoid competing for blockspace on general-purpose L2s and optimize performance specifically for name resolution — fast, affordable, and decentralized.',
@@ -163,8 +148,7 @@ export const faqs: Faq[] = [
   },
 
   // Namechain Technical Foundation
-  {
-    id: 'why-was-linea-chosen',
+  ['why-was-linea-chosen']: {
     question: 'Why was Linea chosen?',
     answer: (
       <>
@@ -205,8 +189,7 @@ export const faqs: Faq[] = [
     ),
     tags: ['upgrades-architecture'],
   },
-  {
-    id: 'is-namechain-decentralized',
+  ['is-namechain-decentralized']: {
     question: 'Is Namechain decentralized?',
     answer:
       'Yes. Namechain inherits Ethereum\'s security model and uses zero-knowledge proofs for trust minimization. ENS is also exploring deeper decentralization via "based" and "native" rollups in collaboration with the Ethereum Foundation and others.',
@@ -214,8 +197,7 @@ export const faqs: Faq[] = [
   },
 
   // Namechain Functionality & Compatibility
-  {
-    id: 'will-my-ens-name-still-resolve-on-ethereum',
+  ['will-my-ens-name-still-resolve-on-ethereum']: {
     question: 'Will my ENS name still resolve on Ethereum?',
     answer:
       'Yes, your ENS name will continue to resolve on Ethereum regardless of migration status, ensuring backward compatibility.',
@@ -223,15 +205,13 @@ export const faqs: Faq[] = [
   },
 
   // ENSv2 Apps & Access
-  {
-    id: 'is-there-a-new-ens-app',
+  ['is-there-a-new-ens-app']: {
     question: 'Is there a new ENS app?',
     answer:
       "Yes. A new ENS app will be released for ENSv2. It's designed for managing names on Namechain and Ethereum (if migrated).",
     tags: ['apps-access'],
   },
-  {
-    id: 'can-i-still-use-the-old-ens-app',
+  ['can-i-still-use-the-old-ens-app']: {
     question: 'Can I still use the old ENS app?',
     answer:
       "Yes. We'll keep the older app online for users who haven't migrated yet. However, for upgraded functionality, the new ENS app can be used with any migrated name.",
@@ -239,22 +219,19 @@ export const faqs: Faq[] = [
   },
 
   // ENSv2 Bridge & Payments
-  {
-    id: 'will-i-need-to-bridge-eth-to-namechain',
+  ['will-i-need-to-bridge-eth-to-namechain']: {
     question: 'Will I need to bridge ETH to Namechain?',
     answer:
       "No. Thanks to bridging tools like Across, you'll be able to use ENS on Namechain without worrying about manual bridging.",
     tags: ['bridge-payments'],
   },
-  {
-    id: 'can-i-buy-ens-names-with-stablecoins',
+  ['can-i-buy-ens-names-with-stablecoins']: {
     question: 'Can I buy ENS names with stablecoins?',
     answer:
       'Yes. ENSv2 will support buying names with USD-denominated stablecoins (like USDC), not just ETH.',
     tags: ['bridge-payments'],
   },
-  {
-    id: 'will-ens-names-still-be-priced-in-eth',
+  ['will-ens-names-still-be-priced-in-eth']: {
     question: 'Will ENS names still be priced in ETH?',
     answer:
       'No. With ENSv2, names will be priced and paid in USD stablecoins for more predictable pricing.',
@@ -262,25 +239,22 @@ export const faqs: Faq[] = [
   },
 
   // ENSv2 Upgrades & Architecture
-  {
-    id: 'whats-new-in-ensv2-contracts',
+  ['whats-new-in-ensv2-contracts']: {
     question: "What's new in the ENSv2 contracts?",
     answer:
       'Registries, resolvers, and permissions have all been rewritten for clarity, modularity, and better UX for developers.',
     tags: ['upgrades-architecture'],
   },
-  {
-    id: 'is-the-resolver-changing',
+  ['is-the-resolver-changing']: {
     question: 'Is the Resolver changing?',
     answer:
       'Yes. ENSv2 introduces a Universal Resolver — one contract that supports resolving any name (ENSv1, ENSv2, L2s, and offchain) via CCIP Read.',
     tags: ['upgrades-architecture'],
   },
-  {
-    id: 'whats-the-benefit-of-each-name-having-its-own-registry',
+  ['whats-the-benefit-of-each-name-having-its-own-registry']: {
     question: "What's the benefit of giving each name its own registry?",
     answer:
       "This design allows greater flexibility, permission controls, and fewer trust assumptions. It's especially useful for DAOs, communities, and dapps issuing subnames.",
     tags: ['upgrades-architecture'],
   },
-]
+}
