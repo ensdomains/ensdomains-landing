@@ -190,7 +190,7 @@ export default async function EnsV2(props: {
             <Button variant="blueDashed" disabled className="uppercase">
               Explore Docs
               <br />
-              [Launching may]
+              [Coming soon]
             </Button>
           </div>
         </div>
