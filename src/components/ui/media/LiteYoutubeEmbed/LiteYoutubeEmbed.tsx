@@ -36,6 +36,7 @@ export interface LiteYouTubeProps {
   onIframeAdded?: () => void
   muted?: boolean
   thumbnail?: string
+  blurThumbnail?: boolean
   rel?: string
   containerElement?: keyof React.JSX.IntrinsicElements
   style?: React.CSSProperties
@@ -151,7 +152,7 @@ function LiteYouTubeEmbedComponent(
       <ContainerElement
         onPointerOver={warmConnections}
         onClick={addIframe}
-        className={`${wrapperClassImp} ${iframe ? activatedClassImp : ''}`}
+        className={`${wrapperClassImp} ${iframe ? activatedClassImp : ''} ${props.blurThumbnail ? styles.blur : ''}`}
         data-title={videoTitle}
         style={{
           ...({

@@ -11,8 +11,6 @@
   cursor: pointer;
 
   border-radius: 8px;
-  outline: 2px solid var(--ens-gray-2);
-  outline-offset: 4px;
 }
 
 .yt-lite.lyt-activated::before {
@@ -35,7 +33,7 @@
   padding-bottom: var(--aspect-ratio);
 }
 
-.yt-lite:not(.lyt-activated)::after {
+.yt-lite:not(.lyt-activated).blur::after {
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(7.5px);
 }

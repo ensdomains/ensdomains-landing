@@ -6,7 +6,7 @@ import {
   Fragment,
   Suspense,
 } from 'react'
-import announcementCover from '~/assets/pages/ensv2/announcement-cover.png'
+import announcementCover from '~/assets/pages/ensv2/namechain-keynote-cover.webp'
 import blue1 from '~/assets/pathways/patterns/blue-1.svg'
 import green1 from '~/assets/pathways/patterns/green-1.svg'
 import magenta1 from '~/assets/pathways/patterns/magenta-1.svg'
