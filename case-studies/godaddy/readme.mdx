@@ -3,67 +3,87 @@ export const meta = {
   subtitle: 'ENS expands the traditional domain space and adds crypto friendly functionalities to DNS domains',
 }
 
-GoDaddy has partnered with ENS (Ethereum Name Service) to make DNS domains like **.com, .org, .ai,** and **.xyz** function as crypto wallet addresses.
+### Summary
 
-With ENS’s Gasless DNSSEC upgrade (ENSIP-17), GoDaddy offers a one-click “Crypto Wallet” record that transforms a customer’s existing DNS domain into a fully functional **ENS name**.
+Here you will learn how GoDaddy partnered with ENS to bring crypto wallet functionality to traditional DNS domains.
 
-This integration combines legacy DNS infrastructure and decentralized naming, onboarding millions of users to Web3 with minimal friction.
+GoDaddy has integrated with ENS (Ethereum Name Service) to make DNS domains like **.com**, **.org**, **.ai**, and **.xyz** function as crypto wallet addresses. With ENS's Gasless DNSSEC upgrade ([ENSIP-17](https://docs.ens.domains/ensip/ensip-17)), GoDaddy offers a one-click "Crypto Wallet" record that transforms a customer's existing DNS domain into a fully functional ENS name.
+
+This integration combines legacy DNS infrastructure with decentralized naming, enabling millions of users to participate in Web3 using their existing domains. Users can send and receive cryptocurrency directly to their DNS domains like `coolexample.com`, instead of using complex hexadecimal addresses like `0xabc…123`.
+
+The partnership demonstrates how traditional Web2 infrastructure can seamlessly integrate with Web3 technologies, preserving existing functionality while adding blockchain capabilities.
 
 ![](./1.webp)
 
-ENS has expanded the domain ecosystem by adding crypto-friendly functionalities to traditional DNS domains (com, .io, .finance, and more) while supporting both forward and reverse resolution with DNSSEC delegation to the ENS Public Resolver.
+### Why GoDaddy Integrated with ENS
 
-GoDaddy’s integration is based on ENS’s DNS namespace support to allow customers to send and receive cryptocurrency directly to their DNS domains, instead of using complex hexadecimal addresses (0xabc…123).
+Crypto wallet addresses are inherently complex and difficult to share. ENS solved this back in 2017 by turning these complicated addresses into human-readable names with the `.eth` suffix.
 
-<figure>
-  ![](./2.png)
-  <figcaption>
-    [coolexample.com](http://coolexample.com), integrated with ENS
-  </figcaption>
-</figure>
+ENS has expanded the domain ecosystem by adding crypto-friendly functionalities to traditional DNS domains (`.com`, `.io`, `.finance`, and more) while supporting both forward and reverse resolution.
 
-Crypto wallet addresses are inherently complex and difficult to share. ENS solved this back in 2017 by turning these complicated addresses into human‐readable names with the .eth suffix.
+During the rise of various Web3 naming services, legacy DNS domains remained siloed and excluded from this development. ENS's gasless DNSSEC upgrade presents an opportunity for the traditional domain space to join this evolution.
 
-Not only does ENS introduce decentralized blockchain names like lucas.eth, it also expands the global domain space with its crypto-friendly functionalities. During the rise of various Web3 naming services, legacy DNS domains remained siloed and excluded from this development. ENS’s gasless DNSSEC upgrade presents an opportunity for the traditional domain space to join this evolution. Domains retain full DNS functionality (hosting, email) while gaining onchain resolution.
+GoDaddy's integration serves several key purposes:
 
-<figure>
-  ![](./3.png)
-  <figcaption>
-    Ethereum address translated into alex.eth or [alex.com](http://alex.com) 
-  </figcaption>
-</figure>
+1. **Simplified Crypto Transactions:** Customers can use their existing domains as wallet addresses instead of complex hexadecimal strings.
+2. **Preserved Brand Identity:** Organizations maintain their established domain names while gaining Web3 capabilities.
+3. **Reduced Friction:** One-click integration removes technical barriers for mainstream adoption.
+4. **Dual Functionality:** Domains retain full DNS functionality (hosting, email) while gaining onchain resolution.
 
-It is important to clarify that when a user imports a traditional DNS domain such as [coolexample.com](http://coolexample.com/) with ENS via DNSSEC, they are not granted a corresponding .eth name. DNSSEC integration simply extends the existing domain functionalities of your DNS domain with blockchain resolution capabilities. The DNS domain itself continues to function under its original top-level domain (e.g., .com, .org, .ai).
+![](./2.png "[coolexample.com](http://coolexample.com), integrated with ENS")
 
-The same domain name is used both on the legacy DNS system and within the ENS namespace. There is no separate **.eth** record created, nor is the user required to register or manage an additional **.eth** name.
+### How It Works
 
-After enabling DNSSEC and linking the domain, **coolexample.com** resolves not only to its traditional web or email endpoints, but also directly to an Ethereum address. This dual functionality coexists seamlessly without altering the domain’s primary DNS identity.
+**Important:** When a user imports a traditional DNS domain such as `coolexample.com` with ENS via DNSSEC, they are **not** granted a corresponding `.eth` name. The integration simply extends the existing domain with blockchain resolution capabilities.
 
-Because the integration uses DNSSEC proofs to delegate resolution to the ENS Public Resolver, there is no conflict or duplication with any **.eth** name. The domain retains its original namespace and gains onchain wallet and identity features as a first-class citizen in the ENS ecosystem.
+The same domain name functions in both the legacy DNS system and the ENS namespace:
+- **DNS functionality:** Traditional web hosting, email, and other DNS services continue unchanged
+- **ENS functionality:** The domain can now resolve to Ethereum addresses and other blockchain records
 
-By preserving the original domain and simply layering on ENS’s blockchain resolution, GoDaddy’s approach allows organizations and individuals to leverage their existing brand identity while participating fully in crypto.
+After enabling DNSSEC and linking the domain, `coolexample.com` resolves not only to its traditional web endpoints but also directly to an Ethereum address. This dual functionality coexists seamlessly without altering the domain's primary DNS identity.
 
-Godaddy's integration with ENS is built on three pieces of core infrastructure:
+Because the integration uses DNSSEC proofs to delegate resolution to the ENS Public Resolver, there is no conflict or duplication with any `.eth` name. The domain retains its original namespace and gains onchain wallet and identity features as a first-class citizen in the ENS ecosystem.
+![](./3.png "Ethereum address translated to alex.eth or [alex.com](http://alex.com)")
 
-### DNSSEC (GoDaddy)
+### Architecture & Implementation
 
-At the heart of it lies the DNS Security Extension (DNSSEC). 
+GoDaddy's integration with ENS is built on three core infrastructure components:
 
-DNSSEC creates a cryptographic chain-of-trust for all DNS records. GoDaddy automates both the generation and rollover of DNSSEC key pairs and the data remains signed and verifiable without creating manual operational burdens on the end user.
+#### DNSSEC (GoDaddy)
+At the heart of the integration lies the DNS Security Extension (DNSSEC). DNSSEC creates a cryptographic chain-of-trust for all DNS records. GoDaddy automates both the generation and rollover of DNSSEC key pairs, ensuring the data remains signed and verifiable without creating operational burdens for users.
 
-### Resolver (ENS)
-When DNSSEC is enabled, the domain’s TXT records that contain the mapping from the DNS name to its Ethereum address are stored onchain within the ENS registry. The ENS resolver is then responsible for fetching and interpreting the onchain records. This makes both forward (name→address) and reverse (address→name) resolution possible.
+#### ENS Resolver
+When DNSSEC is enabled, the domain's TXT records containing the mapping from the DNS name to its Ethereum address are stored onchain within the ENS registry. The ENS resolver fetches and interprets these onchain records, enabling both forward (name → address) and reverse (address → name) resolution.
 
-### Gasless DNSSEC (ENSIP-17)
+#### Gasless DNSSEC (ENSIP-17)
+In February 2024, ENS introduced ENSIP-17: Gasless DNS Resolution. This upgrade allows the ENS resolver to read offchain DNSSEC proofs at lookup time without requiring gas fees, making the integration cost-effective for users.
 
-In February 2024, ENS introduced ENSIP-17: Gasless DNS Resolution.
-This means the ENS resolver can read offchain DNSSEC proofs at lookup time and without requiring a gas fee.
+### User Experience
+
+GoDaddy customers can enable crypto wallet functionality for their domains through a simple one-click process in their domain management dashboard. The "Crypto Wallet" record transforms their existing DNS domain into a fully functional ENS name without requiring:
+
+- Additional domain registration
+- Gas fees for setup
+- Technical knowledge of blockchain infrastructure
+- Changes to existing DNS functionality
+
+This seamless integration allows organizations and individuals to leverage their existing brand identity while participating fully in the crypto ecosystem.
+
+### Key Benefits
+
+- **No Separate Registration:** Users don't need to register additional `.eth` names
+- **Cost-Effective:** Gasless DNSSEC eliminates transaction fees
+- **Brand Preservation:** Existing domain identity remains intact
+- **Dual Functionality:** Traditional DNS and blockchain resolution coexist
+- **Mainstream Adoption:** Simplified onboarding for Web2 users
+
+By preserving the original domain and layering on ENS's blockchain resolution capabilities, GoDaddy's approach enables millions of domain owners to enter the Web3 space without abandoning their established digital identities.
 
 ---
 
 ### About GoDaddy
 
-GoDaddy is the world’s largest domain registrar, powering over 84 million domains with reliable hosting, email and DNS services. Known for its user-friendly tools and top infrastructure, GoDaddy now leads the industry again by bringing blockchain naming to its customers and seamlessly merging traditional domains with Ethereum Name Service (ENS).
+GoDaddy is the world's largest domain registrar, powering over 84 million domains with reliable hosting, email and DNS services. Known for its user-friendly tools and robust infrastructure, GoDaddy leads the industry in bringing blockchain naming to its customers, seamlessly merging traditional domains with Ethereum Name Service (ENS).
 
 ### About ENS
 
