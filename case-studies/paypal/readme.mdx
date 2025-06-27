@@ -4,87 +4,98 @@ export const meta = {
 
 ### Summary
 
-In September 2024, PayPal and Venmo [announced their integration with the Ethereum Name Service (ENS)](https://developer.paypal.com/community/blog/ens-names-easy-pyusd-payments/). This integration makes it possible for users to send and receive cryptocurrencies, including PayPal USD (PYUSD), with simple “.eth” domain names instead of raw 0x123abc… addresses.
+Here you will learn how PayPal and Venmo integrated ENS to simplify cryptocurrency transactions for mainstream users.
 
-By embedding ENS resolution directly into both PayPal’s web and mobile applications, the team reduced crypto-address errors and improved transaction times and overall user confidence when engaging with onchain assets.
+In September 2024, PayPal and Venmo [announced their integration with the Ethereum Name Service (ENS)](https://developer.paypal.com/community/blog/ens-names-easy-pyusd-payments/). This integration enables users to send and receive cryptocurrencies, including PayPal USD (PYUSD), using simple `.eth` domain names instead of complex hexadecimal addresses like `0x123abc…`.
+
+By embedding ENS resolution directly into both PayPal's web and mobile applications, the team reduced crypto-address errors, improved transaction confidence, and created a more intuitive experience for both crypto beginners and experts.
+
+As the first traditional fintech platforms to integrate ENS, PayPal and Venmo differentiated themselves from competitors while making cryptocurrency accessible to their combined user base of over 480 million accounts worldwide.
 
 ![](./1.webp)
 
-### Intro
+### Why PayPal Integrated with ENS
 
-Cryptocurrency traditionally requires users to enter long alphanumeric wallet addresses, for example, 0xab5801a7d398351b8be11c439e05c5b3259aec9b, to send or receive onchain assets.
+Cryptocurrency traditionally requires users to enter long alphanumeric wallet addresses like `0xab5801a7d398351b8be11c439e05c5b3259aec9b` to send or receive onchain assets. These addresses are difficult to memorize, prone to human error, and often result in misdirected payments, a major barrier to mainstream adoption.
 
-These addresses are difficult to memorize, prone to human error, and often result in misdirected payments.
+PayPal launched its cryptocurrency offerings in 2020, allowing users to buy, hold, and sell digital assets. In August 2023, PayPal introduced PayPal USD (PYUSD), a stablecoin backed 1:1 to the US dollar. Despite these advances, the friction associated with manually copying and pasting wallet addresses persisted as a significant user experience challenge.
 
-PayPal launched its cryptocurrency offerings in 2020, which means users could buy, hold, and sell a limited suite of onchain assets in the app. In August 2023, PayPal introduced its own stablecoin, PayPal USD (PYUSD), backed 1:1 to the US dollar.
+ENS integration served several key objectives:
 
-Despite these advances, the friction associated with manually copy and pasting 0x wallet addresses persists as a major barrier to mainstream adoption.
+1. **Mainstream Onboarding:** Removing the need to handle complex wallet addresses, which often discourages new users from using cryptocurrencies.
+2. **Enhanced User Experience:** Providing an intuitive interface that works for both crypto beginners and experts.
+3. **Market Leadership:** Establishing PayPal and Venmo as pioneers in traditional fintech-to-crypto integration.
+4. **PYUSD Adoption:** Making PYUSD accessible to over 2 million existing ENS users across Ethereum and Solana networks.
 
 ![](./2.webp)
 
-Ethereum Name Service (ENS) is a fully decentralized naming protocol built on the Ethereum blockchain that translates the complex crypto wallet addresses into simple, easy-to-remember domain names (e.g., james.eth).
+### How ENS Works with PayPal
 
-Since its launch in 2017 ENS has introduced support for various chains like Bitcoin, Solana, XRP, and many more. By resolving “.eth” domains to wallet addresses, ENS functions similarly to DNS for web servers. Introducing ENS in a consumer payment platform removes the need to manually enter or verify the mostly unfamiliar hexadecimal addresses. This integration of ENS into PayPal and Venmo provides a user flow that protects the user against address-related errors and increases confidence in cryptocurrency transfers.
+ENS is a decentralized naming protocol built on Ethereum that translates complex crypto wallet addresses into simple, memorable domain names like `james.eth`. Since its 2017 launch, ENS has expanded to support various chains including Bitcoin, Solana, and XRP.
 
-Ultimately, ENS adds an intuitive app experience for crypto beginners and experts alike.
-
-### Reasoning
-
-A key objective of PayPal’s crypto strategy has been to onboard mainstream users into cryptocurrency services. The easiest way to do this is by removing the need to copy or paste complex wallet addresses, which is a known pain point that often discourages new users from using cryptocurrencies.
-
-As the first traditional fintech apps that integrated ENS, PayPal and Venmo differentiated themselves from competitors and solidified their roles as payment platform leaders.
-
-PYUSD is an ERC-20 stablecoin and PYUSD transfers can be easily done via ENS domain names on Ethereum or Solana. This made PYUSD accessible and easy to use for over 2 million  existing ENS users, and further, PYUSD as an attractive payment option. 
+By resolving `.eth` domains to wallet addresses, ENS functions similarly to how DNS works for web servers. This integration removes the need to manually enter or verify unfamiliar hexadecimal addresses, protecting users against address-related errors and increasing confidence in cryptocurrency transfers.
 
 ![](./3.webp)
 
-### Architecture
+### Architecture & Implementation
 
-- PayPal’s “Send Crypto” and Venmo’s “Transfer Crypto” features were updated to accept ENS names in addition to raw wallet addresses. When a user types an input ending in “.eth” the client application triggers an ENS lookup routine rather than waiting for a hexadecimal string.
-- ENS resolution: To make it possible for PayPal and Venmo users to send and receive crypto to an ENS name requires forward resolution:
+PayPal's integration involves two main technical components:
+
+#### ENS Resolution Integration
+PayPal's "Send Crypto" and Venmo's "Transfer Crypto" features were updated to accept ENS names alongside traditional wallet addresses. When users type an input ending in `.eth`, the application triggers an ENS lookup routine instead of expecting a hexadecimal string.
+
+#### Forward Resolution Process
+The system performs forward resolution to translate ENS names to wallet addresses, enabling seamless PYUSD and other cryptocurrency transfers to `.eth` domains.
 
 ![](./4.webp)
 
-### UX
+### User Experience
 
-#### Address Book
-PayPal and Venmo introduced a new address book feature that coexists with traditional email, phone, or PayPal usernames. When a user transacts with an ENS name, the platform prompts them “Save this ENS name to your Address Book”.
+#### Address Book Integration
+PayPal and Venmo introduced an address book feature that integrates ENS names with traditional contact methods (email, phone, PayPal usernames). When users transact with an ENS name, the platform prompts them to "Save this ENS name to your Address Book."
 
-Saved ENS names appear alongside the user’s existing PayPal contacts and sorts them by transaction frequency.
+Saved ENS names appear alongside existing PayPal contacts, sorted by transaction frequency for easy access.
 
-First-time users who navigate to the “Send Crypto” flow are shown a short note outlining what ENS is and why they can use it to send PYUSD.
+#### User Education and Confirmation
+First-time users navigating the "Send Crypto" flow see educational content explaining what ENS is and how to use it for PYUSD transfers.
 
-After typing in an active .eth name, the UI displays both the “.eth” domain name and the resolved “0x…” address. This confirmation allows users to compare visually and be confident they are sending to the intended recipient.
+After entering an active `.eth` name, the interface displays both the `.eth` domain and the resolved `0x…` address. This dual display allows users to visually confirm they're sending to the intended recipient.
 
 ![](./5.webp)
 
-Using an ENS name on PayPal or Venmo doesn’t change anything about name ownership. The user’s ENS name remains a decentralized onchain asset independent of their PayPal or Venmo account.
+**Important:** Using an ENS name on PayPal or Venmo doesn't affect name ownership. Users' ENS names remain decentralized onchain assets independent of their PayPal or Venmo accounts.
 
-### Owning brand name
+### Strategic Brand Investment
 
-A huge indicator of PayPal’s long-term commitment to blockchain innovation is its proactive acquisition of ENS names that reflect the core brand and product identities. By securing paypal.eth and pyusd.eth, PayPal signaled to the broader industry that it intends to operate not merely as a passive participant but as a leader in onchain applications.
+PayPal demonstrated long-term commitment to blockchain innovation through proactive acquisition of brand-relevant ENS names:
 
-To underscore this strategic direction, the PayPal team created a dedicated subdomain, alex.paypal.eth, for their Chief Executive Officer. Extending ENS ownership to an executive subname signals confidence in PayPal's onchain presence and the ENS protocol as a new standard of naming and identity. 
+- **`paypal.eth`** - Securing the core brand identity
+- **`pyusd.eth`** - Protecting the stablecoin brand
+- **`alex.paypal.eth`** - Creating a subdomain for their Chief Executive Officer
+
+This strategic ENS portfolio signals PayPal's intention to operate as a leader in onchain applications rather than a passive participant. The executive subdomain particularly demonstrates confidence in both PayPal's onchain presence and ENS as a standard for digital identity.
 
 ![](./6.webp)
 
-### What’s next?
+### Future Outlook
 
-Over the years, ENS has established itself as important infrastructure for crypto apps. Naturally, this integration serves as the golden standard for any other financial or non-financial platform seeking to enter the blockchain industry, by building a strong foundation and active user-base for themselves. 
+PayPal's ENS integration establishes a foundation for future blockchain innovations:
 
-As ENS expands onto Layer 2 networks and introduces ENSv2, PayPal’s architecture is already prepared to incorporate these updates seamlessly.
+- **Layer 2 Expansion:** Architecture is prepared for ENS expansion onto Layer 2 networks
+- **ENSv2 Compatibility:** System can seamlessly incorporate upcoming ENS protocol updates  
+- **Global Scalability:** ENS's universal, permissionless nature supports PYUSD's international expansion plans
 
-PYUSD is determined to expand into different markets around the world, and thanks to the universal, permissionless character of the ENS protocol, .eth domain names will work anywhere and everywhere PayPal and Venmo decide to go.
+This integration serves as a blueprint for other financial platforms seeking to enter the blockchain space with user-friendly, mainstream-accessible solutions.
 
 ---
 
 ### About PayPal
 
-Founded in 1998, PayPal is a leading global online payments platform for individuals and businesses. With more than 400 million active accounts in over 200 markets, PayPal supports a wide range of payment methods including credit and debit cards, bank transfers, and digital wallets serving multiple currencies. In 2020, PayPal entered the cryptocurrency space, allowing users to buy, hold, and sell select digital assets. In 2023, PayPal launched its own US dollar–backed stablecoin, PayPal USD (PYUSD), further strengthening its commitment to bridging traditional finance and blockchain technologies. 
+Founded in 1998, PayPal is a leading global online payments platform serving individuals and businesses. With more than 400 million active accounts across 200+ markets, PayPal supports diverse payment methods including credit cards, bank transfers, and digital wallets. PayPal entered cryptocurrency in 2020 and launched PYUSD stablecoin in 2023, demonstrating its commitment to bridging traditional finance and blockchain technologies.
 
 ### About Venmo
 
-Launched in 2009 and acquired by PayPal in 2013, Venmo has become one of the most widely used peer-to-peer payment apps in the United States. Known for its social feed and user-friendly interface, Venmo allows individuals to send money to friends, split bills, and pay for goods and services using linked bank accounts or credit cards. More than 80 million people use Venmo to transfer funds quickly and share payment activity with their social network. In 2021, Venmo introduced cryptocurrency buying, selling, and holding directly within its app. Venmo’s support for the stablecoin PayPal USD (PYUSD) demonstrates ongoing efforts to simplify digital payments and reduce friction for users engaging with both fiat and crypto assets.
+Launched in 2009 and acquired by PayPal in 2013, Venmo is one of the most popular peer-to-peer payment apps in the United States. Known for its social features and user-friendly interface, Venmo serves over 80 million users for money transfers, bill splitting, and merchant payments. Venmo added cryptocurrency features in 2021 and supports PYUSD, continuing efforts to simplify digital payments and reduce friction for users engaging with both fiat and crypto assets.
 
 ### About ENS
 

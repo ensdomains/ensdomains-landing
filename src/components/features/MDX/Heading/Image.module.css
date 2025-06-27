@@ -3,3 +3,28 @@
   height: auto;
   border-radius: 4px;
 }
+
+.figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.caption {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--ens-gray-4);
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.caption a {
+  color: var(--ens-blue);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.caption a:hover {
+  color: var(--ens-hover-blue);
+}

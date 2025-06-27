@@ -7,18 +7,18 @@ export const meta = {
 
 Here you will learn how Uniswap leveraged the Ethereum Name Service (ENS) to introduce Uniswap Usernames.
 
-Until February 22, 2024, Uniswap accounts were identified by  hexadecimal wallet addresses (like 0xeda6a6fFE2a92A88D7E9FBb60170E784a174cf3F) to send and receive cryptocurrency. Long hexadecimal addresses are more prone to user error, can be spoofed, and keep new users from easily sending and receiving crypto. 
+Until February 22, 2024, Uniswap accounts were identified by hexadecimal wallet addresses (like `0xeda6a6fFE2a92A88D7E9FBb60170E784a174cf3F`) to send and receive cryptocurrency. Long hexadecimal addresses are more prone to user error, can be spoofed, and keep new users from easily sending and receiving crypto. 
 
 The Uniswap mobile app and browser extension uses ENS to provide users with human-readable names, replacing long 0x addresses.
 
-Over approximately 6 months of combined prototyping and implementation, a small in-house engineering team designed an offchain resolver model that allows users to claim up to 5 unique subnames under “uni.eth" for free. By November 2024, more than one million uni.eth usernames had been claimed. 
+Over approximately 6 months of combined prototyping and implementation, a small in-house engineering team designed an offchain resolver model that allows users to claim up to 5 unique subnames under "uni.eth" for free. By November 2024, more than one million uni.eth usernames had been claimed. 
 
 This initiative improved the user experience by reducing address errors and demonstrated a replicable approach for decentralized identity adoption with ENS.
 
 ![](./1.webp)
 
 ### Intro
-Uniswap is a leading decentralized exchange on Ethereum and recognized that traditional hexadecimal wallet addresses create friction for new and existing users. To address this, the Uniswap team introduced usernames built on ENS’s infrastructure. These usernames are human-readable identifiers that function as subdomains of the parent domain “uni.eth”.
+Uniswap is a leading decentralized exchange on Ethereum and recognized that traditional hexadecimal wallet addresses create friction for new and existing users. To address this, the Uniswap team introduced usernames built on ENS's infrastructure. These usernames are human-readable identifiers that function as subdomains of the parent domain "uni.eth".
 
 The goal was to simplify the process of sending and receiving cryptocurrency by replacing raw addresses with extensible, user-friendly names. 
 
@@ -26,47 +26,40 @@ The integration launched on February 22, 2024, and was initially available throu
 
 ### Why Uniswap Used ENS
 
-ENS provides a decentralized naming system that maps names like james.eth to crypto wallet addresses. Subnames can be created under any ENS name owner’s control. By using its existing name “uni.eth”, Uniswap users can now claim subnames like “james.uni.eth”. This approach requires only offchain operations for creating and managing usernames which prevents users from incurring gas fees.
+ENS provides a decentralized naming system that maps names like james.eth to crypto wallet addresses. Subnames can be created under any ENS name owner's control. By using its existing name "uni.eth", Uniswap users can now claim subnames like "james.uni.eth". This approach requires only offchain operations for creating and managing usernames which prevents users from incurring gas fees.
 
-The uni.eth integration served 4 main purposes:
+The **uni.eth** integration served four main purposes:
 
-1. Improving UX: Replacing 0x wallet addresses with names
-2. Brand related names: The association of every username with the Uniswap brand thanks to the user.uni.eth structure
-3. Global Namespace: Building a global namespace on top of uni.eth that is expandable and can be upgraded with additional features. 
-4. Interoperable Naming: ENS names are multichain and interoperable.
+1.  **Improved User Experience:** Replaced long, error-prone wallet addresses with memorable names.
+2.  **Strengthened Brand Identity:** Reinforced the Uniswap brand with every ***.uni.eth** username.
+3.  **Future-Proof Namespace:** Established a global, expandable, and upgradable namespace on **uni.eth**.
+4.  **Interoperability:** Leveraged ENS's native multichain and cross-platform capabilities.
 
-Uniswap’s decision to focus on offchain resolution aligns with their goal of minimizing overall user friction. Onchain minting of uni.eth subnames was considered but ultimately deferred due to increased complexity and gas costs. Uniswap usernames are not transferrable or reclaimable and each user is limited to naming up to 5 wallets with 2 allowed changes to prevent username squatting. 
+Uniswap's decision to focus on offchain resolution aligns with their goal of minimizing overall user friction. Onchain minting of uni.eth subnames was considered but ultimately deferred due to increased complexity and gas costs. Uniswap usernames are not transferrable or reclaimable and each user is limited to naming up to 5 wallets with 2 allowed changes to prevent username squatting. 
 
 ![](./2.webp)
 
 ### Architecture & Implementation
 
-- ENS Parent Domain (uni.eth)
-    - Managed by Uniswap Labs, this domain serves as the root for all Uniswap subnames.
-- Offchain Resolver Contract
-    - A custom offchain resolver handles subname issuance, name updates, and name-to-address connections without requiring onchain transactions or gas fees.
-- Backend
-    - ENS protocol
-- Front End (mobile and browser)
-    - In-app flow, within the Uniswap mobile app and browser extenstion to allow users to claim and customize their uni.eth usernames
+The system consists of three main components working together to deliver a seamless user experience:
+
+- **ENS Parent Domain (**uni.eth**):** Managed by Uniswap Labs, this domain serves as the root for all Uniswap usernames.
+- **Off-chain Resolver:** A custom backend service that handles subname issuance and resolution. It connects names to addresses without requiring on-chain transactions, making the process gas-free for users.
+- **Frontend Integration:** A user flow built directly into the Uniswap mobile app and browser extension, allowing users to claim and manage their **uni.eth** usernames.
 
 ![](./3.webp)
 
 ### Timeline
 
-February 2024 - Mobile launch
-
-June 2024 - Over 600,000 Usernames registered
-
-July 6, 2024 - Uniswap granted 100,000 early adopters of Uniswap names access to a waitlisted browser extension
+-   **February 2024:** Mobile launch.
+-   **June 2024:** Over 600,000 usernames registered.
+-   **July 6, 2024:** Uniswap grants access to a waitlisted browser extension for 100,000 early adopters.
+-   **July 9, 2024:** An additional 250,000 usernames are whitelisted for the extension.
+-   **November 2024:** The 1 million registered username milestone is reached.
 
 ![](./4.webp)
 
-July 9, 2024 - Additional 250,000 whitelisted usernames
-
-November 2024 - 1M registered Uniswap names
-
-These phased releases allowed for performance optimization and generated major community momentum. By November 2024, total username claims surpassed the one million mark, highlighting the viral network effects of ENS’s interoperability.
+These phased releases allowed for performance optimization and generated major community momentum. By November 2024, total username claims surpassed the one million mark, highlighting the viral network effects of ENS's interoperability.
 
 <video src="/assets/case-studies/uniswap-1m-usernames.mp4" controls />
 
@@ -74,21 +67,17 @@ These phased releases allowed for performance optimization and generated major c
 
 User onboarding happens entirely within the Uniswap mobile app or web extension. Upon downloading the app or browser extension, it prompts the user to select a unique name and optionally customize their Uniswap profile. This cohesive integration masks the complexity of ENS interactions behind a polished, mobile-native UI, and supports immediate adoption without external tooling.
 
-![](./5.webp)
+![](./5.webp "Uniswap mobile app")
 
-Uniswap mobile app
-
-![](./6.webp)
-
-Uniswap Web Extension: Account creation flow, Step 1 and Step 2
+![](./6.webp "Uniswap Web Extension: Account creation flow, Step 1 and Step 2")
 
 ### UI
 
-Uniswap decided to display uni.eth subnames as the bare handle (e.g. "lucas" instead of "lucas.uni.eth") accompanied by a subtle “U” badge. Stripping off the “.uni.eth” suffix creates a cleaner, more familiar interface that mirrors social media conventions and reduces visual clutter on small screens. The magenta “U” badge still signals the uniqueness of the name and brand affiliation to uni.eth without overwhelming the username itself.
+Uniswap decided to display uni.eth subnames as the bare handle (e.g. "lucas" instead of "lucas.uni.eth") accompanied by a subtle "U" badge. Stripping off the ".uni.eth" suffix creates a cleaner, more familiar interface that mirrors social media conventions and reduces visual clutter on small screens. The magenta "U" badge still signals the uniqueness of the name and brand affiliation to uni.eth without overwhelming the username itself.
 
 However, omitting the full subdomain runs the slight risk of confusing the ENS subname with a .eth name. Since Uniswap leverages ENS for their usernames, these names can be portable and used within other wallets as well. Within other ecosystems, names will continue to show up with the uni.eth suffix.
 
-At the same time, displaying the bare handle by removing the uni.eth suffix provides a chain agnostic name UI that is aligned with the multichain functionalities of the ENS protocol.
+At the same time, displaying the bare handle creates a cleaner, chain-agnostic UI. This aligns with the multi-chain functionalities of the ENS protocol, where a single name can point to addresses on various blockchains.
 
 ![](./7.webp)
 
@@ -125,11 +114,11 @@ At the same time, displaying the bare handle by removing the uni.eth suffix prov
 
 Moving forward, there are several ways to expand uni.eth profiles with additional features such as verifiable badges and attestations, L2 onchain migration, and additional crosschain support.
 
-For platforms seeking to simplify their overall onchain experience, Uniswap’s uni.eth case offers a clear blueprint:
+For platforms seeking to simplify their overall onchain experience, Uniswap's **uni.eth** case offers a clear blueprint:
 
-1. Claim a branded ENS domain, such as uni.eth
-2. Deploy a lightweight, in-app subname registry
-3. Deliver seamless UI for name issuance and profile management
+1.  **Claim a branded `.eth` domain:** Secure a name that reflects your brand (e.g., `yourbrand.eth`).<br/>This becomes the root for all user subdomains.
+2.  **Deploy a subname registry:** Implement a service (typically off-chain for speed and cost-effectiveness) to manage subname creation and resolution.
+3.  **Deliver a seamless UI:** Build a user-friendly interface within your application for name issuance and profile management, abstracting away the underlying complexity.
 
 By using the ENS protocol as the decentralized naming infrastructure, projects can achieve immediate gains in usability, brand relatability and interoperability and support the mission of a more accessible, user-friendly web. Apps with global communities should offer their users universal usernames and uphold the ENS standard.
 
