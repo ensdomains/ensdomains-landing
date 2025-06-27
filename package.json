@@ -11,7 +11,7 @@
     "build": "pnpm run build:assets && pnpm run build:next",
     "build:local": "pnpx @cloudflare/next-on-pages",
     "run:wrangler": "pnpx wrangler pages dev .vercel/output/static --compatibility-date=2023-11-21 --compatibility-flag=nodejs_compat",
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "develop": "pnpm run dev",
     "start": "pnpm run dev",
     "e2e": "npx playwright test",

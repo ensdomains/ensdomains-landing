@@ -1,4 +1,5 @@
 import { clsx } from 'clsx'
+import Link from 'next/link'
 import ui from '~/styles/ui.module.css'
 import { AnimatedSquare } from '../../ui/primitives/AnimatedSquare/AnimatedSquare'
 import styles from './EcosystemList.module.css'
@@ -7,38 +8,30 @@ export const EcosystemList = () => {
   return (
     <>
       <div className={clsx(ui.flex, ui['flex-row'], styles.container)}>
-        <div>
+        <Link href="/ecosystem/uniswap">
           <img
-            src="/assets/logos/coinbase.svg"
+            src="/assets/logos/uniswap.svg"
             height={60}
             width={60}
-            alt="Coinbase"
+            alt="Uniswap"
           />
-        </div>
-        <div>
+        </Link>
+        <Link href="/ecosystem/godaddy">
           <img
             src="/assets/logos/godaddy.svg"
             height={33}
             width={29}
             alt="GoDaddy"
           />
-        </div>
-        <div>
+        </Link>
+        <Link href="/ecosystem/paypal">
           <img
-            src="/assets/logos/brave.svg"
+            src="/assets/logos/paypal.svg"
             height={29}
             width={24}
-            alt="Brave"
+            alt="PayPal"
           />
-        </div>
-        <div>
-          <img
-            src="/assets/logos/farcaster.svg"
-            height={60}
-            width={60}
-            alt="Farcaster"
-          />
-        </div>
+        </Link>
       </div>
       <div className={styles['position-container']}>
         <div className={styles['animation-container']}>

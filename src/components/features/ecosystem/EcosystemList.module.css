@@ -9,9 +9,10 @@
 
 .container {
   gap: 23px;
+  z-index: 2;
 }
 
-.container > div {
+.container > a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +22,7 @@
   padding: 10px;
 }
 
-.container > div > img {
+.container > a > img {
   width: 30px;
   height: 30px;
 }
@@ -65,11 +66,11 @@
   .animation-container img {
     height: 366px;
   }
-  .container > div {
+  .container > a {
     box-shadow: 0px 12.134px 16.178px rgba(0, 0, 0, 0.06);
     padding: 20px;
   }
-  .container > div > img {
+  .container > a > img {
     height: 50px;
     width: 50px;
   }
@@ -94,11 +95,11 @@
   .animation-container img {
     height: 100%;
   }
-  .container > div {
+  .container > a {
     padding: 20px;
     box-shadow: 0px 24px 32px 0px rgba(0, 0, 0, 0.06);
   }
-  .container > div > img {
+  .container > a > img {
     height: 50px;
     width: 50px;
   }
@@ -120,10 +121,10 @@
 }
 
 @media (min-width: 1680px) {
-  .container > div {
+  .container > a {
     padding: 20px;
   }
-  .container > div > img {
+  .container > a > img {
     height: 60px;
     width: 60px;
   }
