@@ -177,7 +177,7 @@ export default async function EnsV2(props: {
   return (
     <div>
       <header
-        className="mb-16 flex grid-cols-[1fr_2fr] flex-col bg-size-[20px] pt-20 md:grid lg:min-h-[1015px] lg:grid-cols-2 lg:gap-32 lg:pt-24"
+        className="mb-16 flex grid-cols-[1fr_2fr] flex-col bg-size-[20px] pt-20 md:grid lg:min-h-[1015px] lg:grid-cols-2 lg:gap-32 lg:pt-28"
         style={{
           backgroundImage: 'url(/assets/pathways/bg-white.svg)',
         }}
@@ -280,10 +280,10 @@ export default async function EnsV2(props: {
         <BlogSection />
 
         {/* FAQ */}
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] lg:gap-12 xl:grid-cols-2">
           {/** biome-ignore lint/nursery/useUniqueElementIds: ID is the anchor */}
           <h1
-            className="top-24 h-fit font-serif text-[186px] md:sticky md:scroll-mt-24 xl:text-[250px]"
+            className="top-24 h-fit font-serif text-[186px] lg:sticky lg:scroll-mt-24 xl:text-[250px]"
             id="faq"
           >
             FAQ
