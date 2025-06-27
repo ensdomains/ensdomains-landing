@@ -1,12 +1,8 @@
 import { clsx } from 'clsx'
-import type { Metadata } from 'next'
-import {
-  type ComponentProps,
-  type CSSProperties,
-  Fragment,
-  Suspense,
-} from 'react'
+import type { Metadata, ResolvingMetadata } from 'next'
+import { type ComponentProps, type CSSProperties, Fragment } from 'react'
 import announcementCover from '~/assets/pages/ensv2/namechain-keynote-cover.webp'
+import ogImage from '~/assets/pages/ensv2/og-image.png'
 import blue1 from '~/assets/pathways/patterns/blue-1.svg'
 import green1 from '~/assets/pathways/patterns/green-1.svg'
 import magenta1 from '~/assets/pathways/patterns/magenta-1.svg'
@@ -17,16 +13,36 @@ import LiteYouTubeEmbed from '~/components/ui/media/LiteYoutubeEmbed/LiteYoutube
 import { Button } from '~/components/ui/primitives/Button/Button'
 import type { Language } from '~/i18n/settings'
 import { useTranslation } from '~/i18n/useTranslation'
+import { BASE_URL, createMetadata } from '~/utils/metadata'
 import type { PageProps } from '~/utils/types'
 
-export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
+export const generateMetadata = async (
+  props: PageProps,
+  parent: ResolvingMetadata,
+): Promise<Metadata> => {
   const params = await props.params
   const { t } = await useTranslation(params.lang, 'translation')
-  return {
-    // TODO: Add translation
-    title: `V2 | ENS`,
-    description: 'The naming layer, extended',
-  }
+
+  return createMetadata(
+    {
+      title: 'V2',
+      description: 'The naming layer, extended',
+      path: '/ensv2',
+    },
+    await parent,
+    {
+      openGraph: {
+        type: 'website',
+        images: [
+          {
+            url: new URL(ogImage.src, BASE_URL).toString(),
+            width: ogImage.width,
+            height: ogImage.height,
+          },
+        ],
+      },
+    },
+  )
 }
 
 const HeaderLogo = (props: ComponentProps<'div'>) => (

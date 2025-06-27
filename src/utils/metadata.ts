@@ -7,7 +7,9 @@ type CreateMetadataOptions = {
   path: string
 }
 
-export const BASE_URL = new URL('https://ens.domains')
+export const BASE_URL = new URL(
+  process.env.NEXT_PUBLIC_BASE_URL || 'https://ens.domains',
+)
 
 const deepmerge = deepmergeCustom({
   enableImplicitDefaultMerging: true,
