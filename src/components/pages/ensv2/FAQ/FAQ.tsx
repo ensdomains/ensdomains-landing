@@ -16,14 +16,31 @@ export const FAQ = () => {
   const searchIndex = useSearchIndex()
 
   const [search, setSearch] = useState('')
+  const [selectedTag, setSelectedTag] = useState<string | undefined>(undefined)
 
   const results = useMemo<[string, Faq][]>(() => {
-    if (!searchIndex || !search) return Object.entries(faqs)
+    let filteredFaqs = Object.entries(faqs)
 
-    const results = searchIndex.search(search)
+    // Filter by tags first
+    if (selectedTag) {
+      filteredFaqs = filteredFaqs.filter(([_, faq]) =>
+        faq.tags?.some((tag) => tag === selectedTag),
+      )
+    }
 
-    return results.map((result) => [result.id, faqs[result.id]])
-  }, [searchIndex, search])
+    // Then filter by search if there's a search term
+    if (searchIndex && search) {
+      const searchResults = searchIndex.search(search)
+      const searchIds = new Set(searchResults.map((result) => result.id))
+      filteredFaqs = filteredFaqs.filter(([id]) => searchIds.has(id))
+    }
+
+    return filteredFaqs
+  }, [searchIndex, search, selectedTag])
+
+  const toggleTag = (tag: string) => {
+    setSelectedTag((prev) => (prev === tag ? undefined : tag))
+  }
 
   return (
     <div className="space-y-4">
@@ -41,12 +58,20 @@ export const FAQ = () => {
       <div className="scrollbar relative overflow-x-auto pb-0.5">
         <div className="flex size-full gap-4 font-mono text-xs leading-none">
           {Object.entries(tags).map(([tag, { label, style }]) => (
-            <div
+            <button
               key={tag}
-              className={clsx('whitespace-nowrap rounded px-3 py-2', style)}
+              type="button"
+              onClick={() => toggleTag(tag)}
+              className={clsx(
+                'cursor-pointer whitespace-nowrap rounded px-3 py-2 transition-all duration-200',
+                style,
+                selectedTag === tag || !selectedTag
+                  ? 'opacity-100'
+                  : 'opacity-60 hover:opacity-80',
+              )}
             >
               {label}
-            </div>
+            </button>
           ))}
         </div>
       </div>
