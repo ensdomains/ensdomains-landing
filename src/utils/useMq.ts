@@ -50,7 +50,7 @@ export function useMq() {
         }
       }
     }
-  }, [queries])
+  }, [])
 
   return queryMatch
 }

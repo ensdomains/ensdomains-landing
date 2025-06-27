@@ -6,13 +6,13 @@ import { match } from 'ts-pattern'
 import blogUi from '~/app/(root)/blog/blog-ui.module.css'
 import { BlogHeader } from '~/components/features/blog/BlogHeader'
 import { BlogPostPreview } from '~/components/features/blog/PostPreview'
+import { Link } from '~/components/features/MDX/Link'
 import {
   BrowserIcon,
   EnsNavIcon,
   GithubIcon,
   TwitterIcon,
 } from '~/components/shared/icons/index'
-import { Link } from '~/components/features/MDX/Link'
 import { PageButtons } from '~/components/ui/navigation/PageButtons/PageButtons'
 import { useTranslation } from '~/i18n/useTranslation'
 import { splitArray, splitArrayBiasFirst } from '~/utils/array/split'

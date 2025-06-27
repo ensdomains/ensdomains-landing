@@ -96,8 +96,8 @@
   gap: 1rem;
 }
 
-.assetGrid > figure > img,
-.blueprint img {
+.blueprint img,
+.assetGrid > figure > img {
   width: 100%;
   height: 100%;
 }

@@ -72,6 +72,7 @@ export const PageButtons = ({
         value === Marker.ellipsis ? (
           <p
             data-testid="pagebutton-dots"
+            // biome-ignore lint/suspicious/noArrayIndexKey: Page buttons
             key={`${value}-${index}`}
             className={styles.dots}
           >

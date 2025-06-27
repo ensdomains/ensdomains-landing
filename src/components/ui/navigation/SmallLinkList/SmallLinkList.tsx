@@ -21,6 +21,7 @@ export const SmallLinkList: FC<{ links: ILink[] }> = ({ links }) => {
                 viewBox="0 0 13 14"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                role="presentation"
               >
                 <path
                   d="M1.07143 12.4286L12 1.5M12 1.5H0M12 1.5V13.5"

@@ -9,8 +9,10 @@ const publicClient = createEnsPublicClient({
     http(
       'https://lb.drpc.org/ogrpc?network=ethereum&dkey=AgBISc2US0WgjMYhz9MRMJZsJaE8hzcR76fgOpXEh2H0',
     ),
-    http('https://lb.drpc.org/ogrpc?network=ethereum&dkey=AnmpasF2C0JBqeAEzxVO8aR5N_OwLy8R8JyZPkfoZsMe'),
-    http('https://mainnet.gateway.tenderly.co/4imxc4hQfRjxrVB2kWKvTo')
+    http(
+      'https://lb.drpc.org/ogrpc?network=ethereum&dkey=AnmpasF2C0JBqeAEzxVO8aR5N_OwLy8R8JyZPkfoZsMe',
+    ),
+    http('https://mainnet.gateway.tenderly.co/4imxc4hQfRjxrVB2kWKvTo'),
   ]),
 })
 

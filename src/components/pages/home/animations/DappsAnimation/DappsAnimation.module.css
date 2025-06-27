@@ -102,7 +102,6 @@
 }
 
 .swap {
-  background-color: var(--ens-white);
   background: var(--ens-white);
   height: 100%;
 
@@ -307,7 +306,6 @@
 }
 
 .farcasterPostButtons > button {
-  display: block;
   color: var(--ens-dark-blue);
   opacity: 0.33;
   transition: opacity 150ms;
