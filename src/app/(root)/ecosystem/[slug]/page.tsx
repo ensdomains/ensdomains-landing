@@ -1,16 +1,16 @@
-import type { ResolvingMetadata } from 'next'
 import { readdir } from 'node:fs/promises'
-import { z } from 'zod'
-import articleStyles from '../../blog/post/[slug]/page.module.css'
 import clsx from 'clsx'
-import headerStyles from '~/components/Blog/Post/PostHeader.module.css'
-import styles from './page.module.css'
-import ui from '~/styles/ui.module.css'
-import { MDXProps } from 'mdx/types'
+import type { MDXProps } from 'mdx/types'
+import type { ResolvingMetadata } from 'next'
+import type { StaticImageData } from 'next/image'
 import type { JSX } from 'react'
-import { BASE_URL, createMetadata } from '~/utils/metadata'
-import { StaticImageData } from 'next/image'
 import { ImageFormats } from 'scripts/build-assets/types'
+import { z } from 'zod'
+import headerStyles from '~/components/features/blog/Post/PostHeader.module.css'
+import ui from '~/styles/ui.module.css'
+import { BASE_URL, createMetadata } from '~/utils/metadata'
+import articleStyles from '../../blog/post/[slug]/page.module.css'
+import styles from './page.module.css'
 
 const CURRENT_DIR = new URL(import.meta.url)
 const CONTENT_DIR = new URL('../../../../../case-studies', CURRENT_DIR)
@@ -24,20 +24,19 @@ export const generateMetadata = async (
   parent: ResolvingMetadata,
 ) => {
   const params = await props.params
-  const {meta} = await getPostBySlug(params.slug)
+  const { meta } = await getPostBySlug(params.slug)
   const parentMetadata = await parent
 
   let ogImage: StaticImageData | undefined
-  
+
   // Use 'cover.{webp,png,jpg,jpeg}' as the opengraph image if it exists
   for (const format of ImageFormats) {
     try {
-      ogImage = await import(`case-studies/${params.slug}/cover.${format}`)
-        .then((asset) => asset.default)
+      ogImage = await import(
+        `case-studies/${params.slug}/cover.${format}`
+      ).then((asset) => asset.default)
       break
-    } catch {
-      continue
-    }
+    } catch {}
   }
 
   return createMetadata(
@@ -67,7 +66,6 @@ export const generateMetadata = async (
       },
     },
   )
-
 }
 
 export async function generateStaticParams() {
@@ -85,7 +83,9 @@ const CaseStudyFrontmatterSchema = z.object({
 })
 
 async function getPostBySlug(post: string) {
-  const { default: PostContent, meta: _meta } = await import(`case-studies/${post}/readme.mdx`) as {
+  const { default: PostContent, meta: _meta } = (await import(
+    `case-studies/${post}/readme.mdx`
+  )) as {
     default: (_properties: MDXProps) => JSX.Element
     meta: Record<string, unknown>
   }
@@ -117,7 +117,9 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
       <article className={articleStyles.article}>
         <div className={clsx(articleStyles.content, styles.content)}>
-          {meta.subtitle && <h2 className={styles.subtitle}>{meta.subtitle}</h2>}
+          {meta.subtitle && (
+            <h2 className={styles.subtitle}>{meta.subtitle}</h2>
+          )}
           <PostContent />
         </div>
       </article>
