@@ -15,7 +15,7 @@ Over approximately 6 months of combined prototyping and implementation, a small 
 
 This initiative improved the user experience by reducing address errors and demonstrated a replicable approach for decentralized identity adoption with ENS.
 
-![](./1.png)
+![](./1.webp)
 
 ### Intro
 Uniswap is a leading decentralized exchange on Ethereum and recognized that traditional hexadecimal wallet addresses create friction for new and existing users. To address this, the Uniswap team introduced usernames built on ENS’s infrastructure. These usernames are human-readable identifiers that function as subdomains of the parent domain “uni.eth”.
@@ -37,9 +37,7 @@ The uni.eth integration served 4 main purposes:
 
 Uniswap’s decision to focus on offchain resolution aligns with their goal of minimizing overall user friction. Onchain minting of uni.eth subnames was considered but ultimately deferred due to increased complexity and gas costs. Uniswap usernames are not transferrable or reclaimable and each user is limited to naming up to 5 wallets with 2 allowed changes to prevent username squatting. 
 
-![](./2.png)
-
-![](./3.jpg)
+![](./2.webp)
 
 ### Architecture & Implementation
 
@@ -52,7 +50,7 @@ Uniswap’s decision to focus on offchain resolution aligns with their goal of m
 - Front End (mobile and browser)
     - In-app flow, within the Uniswap mobile app and browser extenstion to allow users to claim and customize their uni.eth usernames
 
-![](./4.png)
+![](./3.webp)
 
 ### Timeline
 
@@ -62,7 +60,7 @@ June 2024 - Over 600,000 Usernames registered
 
 July 6, 2024 - Uniswap granted 100,000 early adopters of Uniswap names access to a waitlisted browser extension
 
-![](./5.png)
+![](./4.webp)
 
 July 9, 2024 - Additional 250,000 whitelisted usernames
 
@@ -70,17 +68,17 @@ November 2024 - 1M registered Uniswap names
 
 These phased releases allowed for performance optimization and generated major community momentum. By November 2024, total username claims surpassed the one million mark, highlighting the viral network effects of ENS’s interoperability.
 
-![](./6.png)
+<video src="/assets/case-studies/uniswap-1m-usernames.mp4" controls />
 
 ### User Flow
 
 User onboarding happens entirely within the Uniswap mobile app or web extension. Upon downloading the app or browser extension, it prompts the user to select a unique name and optionally customize their Uniswap profile. This cohesive integration masks the complexity of ENS interactions behind a polished, mobile-native UI, and supports immediate adoption without external tooling.
 
-![](./7.jpeg)
+![](./5.webp)
 
 Uniswap mobile app
 
-![](./8.jpeg)
+![](./6.webp)
 
 Uniswap Web Extension: Account creation flow, Step 1 and Step 2
 
@@ -92,9 +90,7 @@ However, omitting the full subdomain runs the slight risk of confusing the ENS s
 
 At the same time, displaying the bare handle by removing the uni.eth suffix provides a chain agnostic name UI that is aligned with the multichain functionalities of the ENS protocol.
 
-![](./9.jpg)
-
-![](./10.jpg)
+![](./7.webp)
 
 ### Uniswap Usernames 101
 
