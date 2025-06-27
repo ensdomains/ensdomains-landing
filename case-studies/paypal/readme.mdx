@@ -8,7 +8,7 @@ In September 2024, PayPal and Venmo [announced their integration with the Ethere
 
 By embedding ENS resolution directly into both PayPal’s web and mobile applications, the team reduced crypto-address errors and improved transaction times and overall user confidence when engaging with onchain assets.
 
-![](./1.jpg)
+![](./1.webp)
 
 ### Intro
 
@@ -20,7 +20,7 @@ PayPal launched its cryptocurrency offerings in 2020, which means users could bu
 
 Despite these advances, the friction associated with manually copy and pasting 0x wallet addresses persists as a major barrier to mainstream adoption.
 
-![](./2.png)
+![](./2.webp)
 
 Ethereum Name Service (ENS) is a fully decentralized naming protocol built on the Ethereum blockchain that translates the complex crypto wallet addresses into simple, easy-to-remember domain names (e.g., james.eth).
 
@@ -36,14 +36,14 @@ As the first traditional fintech apps that integrated ENS, PayPal and Venmo diff
 
 PYUSD is an ERC-20 stablecoin and PYUSD transfers can be easily done via ENS domain names on Ethereum or Solana. This made PYUSD accessible and easy to use for over 2 million  existing ENS users, and further, PYUSD as an attractive payment option. 
 
-![](./3.png)
+![](./3.webp)
 
 ### Architecture
 
 - PayPal’s “Send Crypto” and Venmo’s “Transfer Crypto” features were updated to accept ENS names in addition to raw wallet addresses. When a user types an input ending in “.eth” the client application triggers an ENS lookup routine rather than waiting for a hexadecimal string.
 - ENS resolution: To make it possible for PayPal and Venmo users to send and receive crypto to an ENS name requires forward resolution:
 
-![](./4.png)
+![](./4.webp)
 
 ### UX
 
@@ -56,7 +56,7 @@ First-time users who navigate to the “Send Crypto” flow are shown a short no
 
 After typing in an active .eth name, the UI displays both the “.eth” domain name and the resolved “0x…” address. This confirmation allows users to compare visually and be confident they are sending to the intended recipient.
 
-![](./5.png)
+![](./5.webp)
 
 Using an ENS name on PayPal or Venmo doesn’t change anything about name ownership. The user’s ENS name remains a decentralized onchain asset independent of their PayPal or Venmo account.
 
@@ -66,7 +66,7 @@ A huge indicator of PayPal’s long-term commitment to blockchain innovation is 
 
 To underscore this strategic direction, the PayPal team created a dedicated subdomain, alex.paypal.eth, for their Chief Executive Officer. Extending ENS ownership to an executive subname signals confidence in PayPal's onchain presence and the ENS protocol as a new standard of naming and identity. 
 
-![](./6.png)
+![](./6.webp)
 
 ### What’s next?
 
