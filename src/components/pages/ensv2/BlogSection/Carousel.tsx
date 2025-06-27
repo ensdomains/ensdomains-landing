@@ -91,22 +91,20 @@ export const BlogSectionCarousel = ({
         ))}
       </div>
       {/* Add indicator squares for the pages with the current being ens-blue color and the rest ens-gray-three */}
-      {pages.length > 1 && (
-        <div className="flex flex-wrap justify-center gap-3">
-          {pages.map((_, index) => (
-            <button
-              // biome-ignore lint/suspicious/noArrayIndexKey: we need to use the index as the key
-              key={index}
-              type="button"
-              className={clsx(
-                'size-5 rounded-sm md:size-3 md:rounded-xs',
-                index === currentPage ? 'bg-ens-blue' : 'bg-ens-gray-three',
-              )}
-              onClick={() => setCurrentPage(index)}
-            />
-          ))}
-        </div>
-      )}
+      <div className="flex flex-wrap justify-center gap-3">
+        {pages.map((_, index) => (
+          <button
+            // biome-ignore lint/suspicious/noArrayIndexKey: we need to use the index as the key
+            key={index}
+            type="button"
+            className={clsx(
+              'size-5 rounded-sm md:size-3 md:rounded-xs',
+              index === currentPage ? 'bg-ens-blue' : 'bg-ens-gray-three',
+            )}
+            onClick={() => setCurrentPage(index)}
+          />
+        ))}
+      </div>
     </div>
   )
 }

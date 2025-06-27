@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '~/components/ui/primitives/Accordion/Accordion'
-import { type Faq, faqs, tags } from './entries'
+import { faqs, tags } from './entries'
 import { useSearchIndex } from './useSearchIndex'
 
 export const FAQ = () => {
@@ -18,24 +18,23 @@ export const FAQ = () => {
   const [search, setSearch] = useState('')
   const [selectedTag, setSelectedTag] = useState<string | undefined>(undefined)
 
-  const results = useMemo<[string, Faq][]>(() => {
-    let filteredFaqs = Object.entries(faqs)
+  const results = useMemo<string[]>(() => {
+    let filteredFaqs = Object.keys(faqs)
 
-    // Filter by tags first
     if (selectedTag) {
-      filteredFaqs = filteredFaqs.filter(([_, faq]) =>
-        faq.tags?.some((tag) => tag === selectedTag),
+      filteredFaqs = filteredFaqs.filter((id) =>
+        faqs[id].tags?.some((tag) => tag === selectedTag),
       )
     }
 
-    // Then filter by search if there's a search term
-    if (searchIndex && search) {
-      const searchResults = searchIndex.search(search)
-      const searchIds = new Set(searchResults.map((result) => result.id))
-      filteredFaqs = filteredFaqs.filter(([id]) => searchIds.has(id))
+    if (!searchIndex || !search) {
+      return filteredFaqs
     }
 
-    return filteredFaqs
+    const searchResults = searchIndex.search(search, {
+      filter: selectedTag ? ({ id }) => filteredFaqs.includes(id) : undefined,
+    })
+    return searchResults.map((result) => result.id)
   }, [searchIndex, search, selectedTag])
 
   const toggleTag = (tag: string) => {
@@ -83,27 +82,33 @@ export const FAQ = () => {
             typeof window !== 'undefined' ? window.location.hash.slice(1) : ''
           }
         >
-          {results.map(([id, faq]) => (
+          {results.map((id) => (
             <AccordionItem key={id} value={id} className="relative">
               <AccordionTrigger
                 className={clsx('relative scroll-m-28')}
                 id={id}
               >
-                {faq.question}
+                {faqs[id].question}
                 <Link
                   href={`#${id}`}
                   onNavigate={(e) => {
                     console.log('onNavigate', e)
                     window.location.hash = `#${id}`
                   }}
-                  className="-left-6 absolute top-4 size-3 translate-y-1/2 text-ens-blue opacity-0 transition-opacity hover:opacity-100 focus-visible:opacity-100"
+                  className="-left-6 absolute top-4 size-3 translate-y-1/2 text-ens-blue opacity-0 transition-opacity hover:opacity-100 focus-visible:opacity-100 max-md:hidden"
                 >
                   <LinkSVG />
                 </Link>
               </AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
+              <AccordionContent>{faqs[id].answer}</AccordionContent>
             </AccordionItem>
           ))}
+
+          {results.length === 0 && (
+            <div className="py-6 text-ens-blue-midnight text-xl">
+              No results found. Try a different search or filter.
+            </div>
+          )}
         </Accordion>
       </div>
     </div>
