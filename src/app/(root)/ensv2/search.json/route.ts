@@ -2,7 +2,6 @@ import MiniSearch from 'minisearch'
 import { NextResponse } from 'next/server'
 import type { ReactNode } from 'react'
 import { faqs } from '~/components/pages/ensv2/FAQ/entries'
-// import type { FaqSearchType } from '~/components/pages/ensv2/FAQ/useSearchIndex'
 
 export const dynamic = 'force-static'
 

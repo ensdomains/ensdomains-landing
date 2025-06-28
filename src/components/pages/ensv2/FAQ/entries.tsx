@@ -32,14 +32,8 @@ export const faqs: Record<string, Faq> = {
   // General Migration Questions
   ['will-i-still-own-my-ens-name-after-the-upgrade']: {
     question: 'Will I still own my ENS name after the upgrade?',
-    answer: (
-      <>
-        Yes — your ENS name remains yours. Whether you migrate it or not, you
-        retain full ownership as long as it is still registered and has time
-        remaining on its registration. Be sure to keep your name renewed to
-        maintain control.
-      </>
-    ),
+    answer:
+      'Yes — your ENS name remains yours. Whether you migrate it or not, you retain full ownership as long as it is still registered and has time remaining on its registration. Be sure to keep your name renewed to maintain control.',
     tags: ['apps-access'],
   },
   ['do-i-have-to-migrate-my-ens-name']: {

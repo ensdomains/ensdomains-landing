@@ -85,12 +85,6 @@
   line-height: 120%;
   color: var(--ens-dark-blue);
 }
-/* .yt-lite > .lty-playbtn::before {
-  content: "";
-  border-color: transparent transparent transparent #fff;
-  border-style: solid;
-  border-width: 11px 0 11px 19px;
-} */
 .yt-lite > .lty-playbtn,
 .yt-lite > .lty-playbtn::before {
   position: absolute;

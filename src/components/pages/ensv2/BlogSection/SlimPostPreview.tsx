@@ -4,8 +4,6 @@ import { BlogPostAuthor } from '~/components/features/blog/PostAuthor'
 import type { BlogPostWithAssets } from './BlogSection'
 
 export const SlimBlogPostPreview = ({ post }: { post: BlogPostWithAssets }) => {
-  // const cover = getPostAssets(post.file)?.['cover-thumb']
-
   const date = new Date(post.date).toLocaleDateString('en-US', {
     month: 'short',
     day: 'numeric',
@@ -32,7 +30,8 @@ export const SlimBlogPostPreview = ({ post }: { post: BlogPostWithAssets }) => {
         </div>
         {/* Blog post title, max two lines then ellipsis */}
         <div className="min-h-32 space-y-3">
-          <div className="line-clamp-2 text-2xl text-ens-blue-dark leading-ens-none">
+          {/* Requires a line height bigger than 1 to not cut off descenders like 'g' */}
+          <div className="line-clamp-2 text-2xl text-ens-blue-dark leading-ens-tight">
             {post.title}
           </div>
 
