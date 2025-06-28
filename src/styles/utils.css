@@ -1,0 +1,18 @@
+@utility w-full-* {
+  width: calc(100% - --value([length]));
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    padding-top: 10px;
+  }
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-ens-gray-three);
+    border-radius: 10px;
+  }
+}

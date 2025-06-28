@@ -20,6 +20,7 @@ type Links = {
   ecosystem: string
   governance: string
   launch: string
+  ensv2: string
 }
 
 export const Navbar: FC<{ lang: Language; links: Links }> = ({

@@ -7,7 +7,13 @@ type CreateMetadataOptions = {
   path: string
 }
 
-export const BASE_URL = new URL('https://ens.domains')
+// Cloudflare doesn't expose NODE_ENV, so checking the source branch is our easiest workaround
+const isProd = process.env.CF_PAGES_BRANCH === 'master'
+// On production builds, CF_PAGES_URL points to a Cloudflare preview URL rather than the production domain.
+// We default to ens.domains when CF_PAGES_BRANCH is 'master' OR when CF_PAGES_URL is unset.
+export const BASE_URL = new URL(
+  (!isProd && process.env.CF_PAGES_URL) || 'https://ens.domains',
+)
 
 const deepmerge = deepmergeCustom({
   enableImplicitDefaultMerging: true,
