@@ -2,7 +2,7 @@
 import clsx from 'clsx'
 import Link from 'next/link'
 import { useMemo, useState } from 'react'
-import { LinkSVG } from '~/components/shared/icons'
+import { LinkSVG, SearchIcon } from '~/components/shared/icons'
 import {
   Accordion,
   AccordionContent,
@@ -47,13 +47,16 @@ export const FAQ = () => {
         All the ENSv2 and Namechain questions you were not afraid to ask.
       </div>
       {/* collapsible faqs */}
-      <input
-        type="text"
-        className="w-full rounded border border-ens-gray px-7 py-2 placeholder:text-ens-gray-three"
-        placeholder="Search for a question"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+      <div className="relative">
+        <input
+          type="text"
+          className="w-full rounded border border-ens-gray py-2 pr-12 pl-7 placeholder:font-mono placeholder:font-normal placeholder:text-ens-gray-three placeholder:text-sm"
+          placeholder="Search for a question"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <SearchIcon className="-translate-y-1/2 pointer-events-none absolute top-1/2 right-7 size-4" />
+      </div>
       <div className="scrollbar relative overflow-x-auto pb-0.5">
         <div className="flex size-full gap-4 font-mono text-xs leading-none">
           {Object.entries(tags).map(([tag, { label, style }]) => (
@@ -84,23 +87,21 @@ export const FAQ = () => {
         >
           {results.map((id) => (
             <AccordionItem key={id} value={id} className="relative">
-              <AccordionTrigger
-                className={clsx('relative scroll-m-28')}
-                id={id}
-              >
+              <AccordionTrigger className="scroll-m-28" id={id}>
                 {faqs[id].question}
-                <Link
-                  href={`#${id}`}
-                  onNavigate={(e) => {
-                    console.log('onNavigate', e)
-                    window.location.hash = `#${id}`
-                  }}
-                  className="-left-6 absolute top-4 size-3 translate-y-1/2 text-ens-blue opacity-0 transition-opacity hover:opacity-100 focus-visible:opacity-100 max-md:hidden"
-                >
-                  <LinkSVG />
-                </Link>
               </AccordionTrigger>
               <AccordionContent>{faqs[id].answer}</AccordionContent>
+
+              <Link
+                href={`#${id}`}
+                onNavigate={(e) => {
+                  console.log('onNavigate', e)
+                  window.location.hash = `#${id}`
+                }}
+                className="-left-6 absolute top-4 size-3 translate-y-full text-ens-blue opacity-0 transition-opacity hover:opacity-100 focus-visible:opacity-100 max-md:hidden"
+              >
+                <LinkSVG />
+              </Link>
             </AccordionItem>
           ))}
 
