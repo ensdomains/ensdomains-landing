@@ -8,7 +8,7 @@ import { PageButtons } from '~/components/ui/navigation/PageButtons/PageButtons'
 import { useTranslation } from '~/i18n/useTranslation'
 import { splitArray, splitArrayBiasFirst } from '~/utils/array/split'
 import { getTags } from '~/utils/blog/posts'
-import { titleCase } from '~/utils/formatters'
+import { formatTag } from '~/utils/blog/utils'
 import { createMetadata } from '~/utils/metadata'
 import type { PageProps as BasePageProps } from '~/utils/types'
 import styles from './page.module.css'
@@ -42,9 +42,9 @@ export const generateMetadata = async (
 
   return createMetadata(
     {
-      title: titleCase(params.tag),
+      title: formatTag(params.tag),
       description: t('blog.tag.meta.description', {
-        tag: titleCase(params.tag),
+        tag: formatTag(params.tag),
       }),
       path: `/blog/tag/${params.tag}`,
     },
@@ -83,7 +83,7 @@ export default async function Blog(props: PageProps) {
     >
       <BlogHeader
         tag={t('blog.tag.hero.tag')}
-        title={titleCase(params.tag)}
+        title={formatTag(params.tag)}
         style={{}}
       ></BlogHeader>
 
