@@ -2,8 +2,7 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import ui from '~/styles/ui.module.css'
 import type { BlogPostMetadata } from '~/utils/blog/metadata'
-import { getAuthorAssets } from '~/utils/blog/utils'
-import { titleCase } from '~/utils/formatters'
+import { formatTag, getAuthorAssets } from '~/utils/blog/utils'
 import { BlogPostAuthor } from '../PostAuthor'
 import styles from './PostHeader.module.css'
 
@@ -34,7 +33,7 @@ export const PostHeader = ({
         <div className={styles['tag-container']}>
           {post.tags.map((tag) => (
             <Link href={`/blog/tag/${tag}`} className={styles.tag} key={tag}>
-              {titleCase(tag)}
+              {formatTag(tag)}
             </Link>
           ))}
         </div>

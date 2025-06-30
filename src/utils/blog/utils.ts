@@ -1,4 +1,5 @@
 import { type Author, authors, type Post, posts } from 'build-assets/assets.gen'
+import { titleCase } from '../formatters'
 
 const CURRENT_DIR = new URL(import.meta.url)
 
@@ -16,4 +17,12 @@ export class AssetNotFoundError extends Error {
   constructor(asset: string) {
     super(`Asset ${asset} not found. Try doing pnpm build:assets`)
   }
+}
+
+const tagMap: Record<string, string> = {
+  'ens-v2': 'ENSv2',
+}
+
+export const formatTag = (tag: string) => {
+  return tagMap[tag] || titleCase(tag)
 }

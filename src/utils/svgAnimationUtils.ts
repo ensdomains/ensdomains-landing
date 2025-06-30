@@ -45,6 +45,7 @@ interface AnimationConfig {
         /** Total duration to distribute across all pause points */
         duration: number
       }
+  reverse?: boolean
 }
 
 /**
@@ -110,6 +111,7 @@ export function generateMotionTiming({
   startDelay = 0,
   endDelay = 0,
   pausePoints = [],
+  reverse = false,
 }: AnimationConfig = {}): AnimationTiming {
   // Generate a seeded random number for consistent timing
   let seedValue = Math.floor(Math.random() * 10000)
@@ -229,9 +231,17 @@ export function generateMotionTiming({
   const maxTime = Math.max(...keyTimesList)
   const normalizedKeyTimes = keyTimesList.map((time) => round(time / maxTime))
 
+  if (reverse) {
+    keyPointsList.reverse()
+  }
+
   return {
     duration,
     keyTimes: normalizedKeyTimes.join(';'),
     keyPoints: keyPointsList.join(';'),
   }
+}
+
+export function randomMaxMin(max: number, min = 0) {
+  return min + Math.random() * (max - min)
 }

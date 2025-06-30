@@ -13,7 +13,7 @@ const getPostDirectories = async () => {
   return readdir(POSTS_DIR)
 }
 
-const getPost = async (slug: string) => {
+const getPost = async (slug: string): Promise<BlogPostMetadataPlus> => {
   try {
     const metaPath = `${POSTS_DIR.pathname}/${slug}/meta.json`
     const metaContent = await fs.readFile(metaPath, 'utf-8')
@@ -28,7 +28,7 @@ const getPost = async (slug: string) => {
   }
 }
 
-export const getPostsMetadata = async () => {
+export const getPostsMetadata = async (): Promise<BlogPostMetadataPlus[]> => {
   const folderNames = await getPostDirectories()
 
   return unstable_cache(_getPostsMetadata, [folderNames.join(',')], {})()

@@ -14,7 +14,7 @@ const ebGaramond = EB_Garamond({
 })
 
 const ABCMonumentGrotesk = localFont({
-  src: './fonts/variable.woff2',
+  src: './fonts/ABCMonumentGroteskVariableVF.woff2',
   variable: '--ens-sans',
   fallback: ['var(--ens-sans-fb)', 'sans-serif'],
 })
