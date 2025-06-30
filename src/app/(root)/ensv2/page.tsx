@@ -258,12 +258,12 @@ export default async function EnsV2(props: {
             instance of Linea's zkEVM. Namechain lets users and developers
             create onchain identities through the power of names, not numbers.
           </p>
-          <div className="mt-11 flex w-full gap-6 max-lg:flex-wrap">
+          <div className="mt-11 flex w-full gap-6 max-lg:flex-wrap max-xs:flex-col">
             {sectionsB.map(({ sectionClass, title, description }) => (
               <div
                 key={title}
                 className={clsx(
-                  'flex h-40 min-w-xs flex-1 flex-col justify-between rounded p-5 text-xl md:h-72',
+                  'flex h-40 xs:min-w-xs flex-1 flex-col justify-between rounded p-5 text-xl md:h-72',
                   sectionClass,
                 )}
               >
@@ -283,7 +283,7 @@ export default async function EnsV2(props: {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] lg:gap-12 xl:grid-cols-2">
           {/** biome-ignore lint/nursery/useUniqueElementIds: ID is the anchor */}
           <h1
-            className="top-24 h-fit font-serif text-[186px] lg:sticky lg:scroll-mt-24 xl:text-[250px]"
+            className="top-24 h-fit font-serif text-[132px] xs:text-[186px] lg:sticky lg:scroll-mt-24 xl:text-[250px]"
             id="faq"
           >
             FAQ

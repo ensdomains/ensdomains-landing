@@ -25,6 +25,8 @@
 
   --leading-ens-none: 96%;
   --leading-ens-tight: 112%;
+
+  --breakpoint-xs: 30rem;
 }
 
 @theme inline {
