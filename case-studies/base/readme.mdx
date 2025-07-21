@@ -9,7 +9,7 @@ Base has integrated ENS to launch Basenames. By leveraging a forked ENS contract
 
 ![](./1.webp)
 
-### Background (or Motivation)
+### Background
 
 Cryptocurrency wallet addresses consist of long hexadecimal strings like *0x7Ffc8B562599D90F3a064D29629BDE7fA9192bEf*. These addresses are difficult to remember and prone to typing errors when shared or entered manually. In a Layer 2 (L2) environment like **Base**, reduced gas fees don't necessarily remove the cognitive effort and error rates that are associated with crypto addresses. Users tend to face friction during token transfers, discovering other users from the ecosystem, and when collaborating with each other.
 
@@ -47,9 +47,11 @@ The infrastructure for Basenames is made of 3 main components:
 
 - L1 ENS resolver with CCIP gateway support
 - L2 registrar and resolver contracts deployed on Base
-- offchain services/metadata aggregator
-- An L1 ENS resolver for the ENS name eth is deployed on Ethereum mainnet. When a client attempts to resolve user.base.eth, the resolver reverts with an *OffchainLookup* error as defined in ENSIP-10. Clients then query a CCIP gateway endpoint operated by Base. This gateway retrieves ownership and text records from the Base L2 registry and public resolver contracts. Finally, it returns a response formatted as a standard ENS resolution, so that any ENS compliant client resolves Basenames without specific code for the L2.
-- Auction/Registrar ControllerThe premium starts at 100 ETH and decays exponentially over 36 hours.After auction expiry, annual name registration fees are determined by name length.Discount oracles verify onchain attestations and NFT holdings such as Onchain Summer Buildathon NFTs, Coinbase Verifications, Onchain Summer Pass levels, and legacy BNS name holders, and then apply the highest applicable discount.
+- Offchain services/metadata aggregator
+
+An L1 ENS resolver for the ENS name eth is deployed on Ethereum mainnet. When a client attempts to resolve user.base.eth, the resolver reverts with an *OffchainLookup* error as defined in ENSIP-10. Clients then query a CCIP gateway endpoint operated by Base. This gateway retrieves ownership and text records from the Base L2 registry and public resolver contracts. Finally, it returns a response formatted as a standard ENS resolution, so that any ENS compliant client resolves Basenames without specific code for the L2.
+
+The premium starts at 100 ETH and decays exponentially over 36 hours. After auction expiry, annual name registration fees are determined by name length.Discount oracles verify onchain attestations and NFT holdings such as Onchain Summer Buildathon NFTs, Coinbase Verifications, Onchain Summer Pass levels, and legacy BNS name holders, and then apply the highest applicable discount.
 
 The L2 registry contract tracks Basename ownership (as an ERC-721 token ID), the assigned resolver address, and the record TTL. Token transfer events update ownership, and registry events occur when resolver or TTL changes happen.
 
@@ -61,7 +63,7 @@ These services read EAS attestations on Base to confirm the user’s eligibility
 
 ### Community Impact
 
-Since launch, Basenames have become the default way to send and receive funds on Base. When users enter name.base.eth in a wallet or dApp, the client automatically resolves it to the underlying 0x address. This eliminates typing errors that previously happened during address entry. Early metrics indicate a 45 percent reduction in failed transactions due to incorrect addresses within the first four weeks of Basenames going live.
+Since launch, Basenames have become the default way to send and receive funds on Base. When users enter name.base.eth in a wallet or dApp, the client automatically resolves it to the underlying 0x address. This eliminates typing errors that previously happened during address entry.
 
 Since July 2024 over 750,000 Basenames have been registered.
 
