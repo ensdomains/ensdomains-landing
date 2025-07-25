@@ -16,6 +16,9 @@ export const EcosystemList = () => {
             alt="Uniswap"
           />
         </Link>
+        <Link href="/ecosystem/base">
+          <img src="/assets/logos/base.svg" height={60} width={60} alt="Base" />
+        </Link>
         <Link href="/ecosystem/godaddy">
           <img
             src="/assets/logos/godaddy.svg"
