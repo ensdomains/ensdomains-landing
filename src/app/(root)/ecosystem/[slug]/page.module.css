@@ -10,6 +10,10 @@
   line-height: 1.2;
 }
 
+.content ul {
+  list-style-type: disc;
+}
+
 .subtitle {
   font-size: 24px;
   margin-bottom: 40px;
