@@ -1,9 +1,9 @@
 {
-    "slug": "web-update-august-2023",
-    "title": "ENS Web Update August 2023",
-    "description": "A brief overview of the changes in August 2023",
-    "date": "2023-09-07",
-    "tags": ["web_update"],
-    "authors": ["leontalbert.eth", "taytems.eth"],
-    "draft": true
+  "slug": "web-update-august-2023",
+  "title": "ENS Web Update August 2023",
+  "description": "A brief overview of the changes in August 2023",
+  "date": "2023-09-07",
+  "tags": ["web_update"],
+  "authors": ["leontalbert.eth", "taytems.eth"],
+  "draft": true
 }
