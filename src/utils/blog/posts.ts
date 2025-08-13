@@ -37,8 +37,10 @@ export const getPostsMetadata = async (): Promise<BlogPostMetadataPlus[]> => {
 }
 
 export const _getPostsMetadata = async () => {
-  // Load all posts from the content directory
-  const files = await getPostDirectories()
+  // Load all posts from the content directory, minus dotfiles (like .DS_Store on Mac)
+  const files = await getPostDirectories().then((files) =>
+    files.filter((file) => !file.startsWith('.')),
+  )
 
   const posts = await Promise.all(files.map(getPost)).then((posts) =>
     posts.filter((post) => {
