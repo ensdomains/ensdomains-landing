@@ -31,7 +31,9 @@ const getPost = async (slug: string): Promise<BlogPostMetadataPlus> => {
 export const getPostsMetadata = async (): Promise<BlogPostMetadataPlus[]> => {
   const folderNames = await getPostDirectories()
 
-  return unstable_cache(_getPostsMetadata, [folderNames.join(',')], {})()
+  return unstable_cache(_getPostsMetadata, [folderNames.join(',')], {
+    revalidate: 60, // 1 minute
+  })()
 }
 
 export const _getPostsMetadata = async () => {
