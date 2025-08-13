@@ -98,7 +98,7 @@ export default async function Blog(props: PageProps) {
           ))}
         </div>
         <PageButtons
-          hrefPrefix="/blog"
+          hrefPrefix={`/blog/tag/${params.tag}`}
           total={pages.length}
           current={currentPage}
         />
