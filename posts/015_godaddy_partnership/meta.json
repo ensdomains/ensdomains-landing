@@ -3,6 +3,6 @@
   "title": "Announcing Free DNS Domain Usage in ENS with GoDaddy",
   "description": "We're partnering with GoDaddy to make it easier for people to use their exisitng domains in web3.",
   "date": "2024-02-05",
-  "tags": [],
+  "tags": ["dns", "integrations"],
   "authors": ["gregskril.eth"]
 }

@@ -1,9 +1,9 @@
 {
-    "slug": "cards-devcon-6",
-    "cover": "https://mirror-media.imgix.net/publication-images/ixUWm-C6FTIi4Tg6IQ3Z8.jpeg?height=600&width=1200&h=600&w=1200&auto=compress",
-    "title": "POAP x ENS x IYK swag at Devcon 6 by the numbers",
-    "description": "If you attended this year's Devcon, you may have noticed the long queue coming out of the ENS booth.",
-    "date": "2022-10-20",
-    "tags": ["events", "cards", "integrations"],
-    "authors": ["matoken.eth", "ens.eth"]
+  "slug": "cards-devcon-6",
+  "cover": "https://mirror-media.imgix.net/publication-images/ixUWm-C6FTIi4Tg6IQ3Z8.jpeg?height=600&width=1200&h=600&w=1200&auto=compress",
+  "title": "POAP x ENS x IYK swag at Devcon 6 by the numbers",
+  "description": "If you attended this year's Devcon, you may have noticed the long queue coming out of the ENS booth.",
+  "date": "2022-10-20",
+  "tags": ["events", "integrations"],
+  "authors": ["matoken.eth", "ens.eth"]
 }

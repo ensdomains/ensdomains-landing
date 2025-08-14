@@ -3,6 +3,6 @@
   "title": "ENSv2: The Next Generation of ENS",
   "description": "ENS Labs is proposing that the Ethereum Name Service expand to Layer 2!",
   "date": "2024-05-28",
-  "tags": ["ens-v2"],
+  "tags": ["ens-v2", "roadmap"],
   "authors": ["enslabs.eth"]
 }

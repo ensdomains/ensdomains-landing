@@ -1,8 +1,8 @@
 {
-    "slug": "joining-project-liberty-alliance",
-    "title": "ENS Joins Project Liberty Alliance",
-    "description": "Ethereum Name Service becomes one of the first crypto-native projects to back The People’s Bid for TikTok.",
-    "date": "2025-04-03",
-    "tags": [],
-    "authors": ["enslabs.eth"]
+  "slug": "joining-project-liberty-alliance",
+  "title": "ENS Joins Project Liberty Alliance",
+  "description": "Ethereum Name Service becomes one of the first crypto-native projects to back The People’s Bid for TikTok.",
+  "date": "2025-04-03",
+  "tags": ["identity", "integrations"],
+  "authors": ["enslabs.eth"]
 }

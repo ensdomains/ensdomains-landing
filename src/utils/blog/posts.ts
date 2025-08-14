@@ -31,12 +31,16 @@ const getPost = async (slug: string): Promise<BlogPostMetadataPlus> => {
 export const getPostsMetadata = async (): Promise<BlogPostMetadataPlus[]> => {
   const folderNames = await getPostDirectories()
 
-  return unstable_cache(_getPostsMetadata, [folderNames.join(',')], {})()
+  return unstable_cache(_getPostsMetadata, [folderNames.join(',')], {
+    revalidate: 60, // 1 minute
+  })()
 }
 
 export const _getPostsMetadata = async () => {
-  // Load all posts from the content directory
-  const files = await getPostDirectories()
+  // Load all posts from the content directory, minus dotfiles (like .DS_Store on Mac)
+  const files = await getPostDirectories().then((files) =>
+    files.filter((file) => !file.startsWith('.')),
+  )
 
   const posts = await Promise.all(files.map(getPost)).then((posts) =>
     posts.filter((post) => {

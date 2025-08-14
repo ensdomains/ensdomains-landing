@@ -1,9 +1,9 @@
 {
-    "slug": "reprogram-ens-cards",
-    "title": "Reprogramming Your ENS Card",
-    "description": "A guide on setting up and issuing POAPS with an IYK NFC card associated with an ENS name",
-    "date": "2023-08-11",
-    "tags": ["ENS Cards", "Guide"],
-    "authors": ["luc.eth", "zadok7.eth"],
-    "draft": true
+  "slug": "reprogram-ens-cards",
+  "title": "Reprogramming Your ENS Card",
+  "description": "A guide on setting up and issuing POAPS with an IYK NFC card associated with an ENS name",
+  "date": "2023-08-11",
+  "tags": ["ENS Cards", "Guide"],
+  "authors": ["luc.eth", "zadok7.eth"],
+  "draft": true
 }
