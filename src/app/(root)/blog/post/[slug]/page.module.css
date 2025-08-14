@@ -61,6 +61,20 @@
   border-radius: 4px;
 }
 
+.content figure > figcaption {
+  display: flex;
+  justify-content: center;
+}
+
+.content figure > figcaption > p {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-family: var(--ens-sans);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
 @media (min-width: 768px) {
   .article {
     padding-inline: 95px;
