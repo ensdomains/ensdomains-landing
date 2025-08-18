@@ -1,8 +1,8 @@
 {
-    "slug": "web-update-june-2023",
-    "title": "ENS Web Update June 2023",
-    "description": "A brief overview of the changes in June 2023",
-    "date": "2023-06-14",
-    "tags": ["web_update"],
-    "authors": ["leontalbert.eth", "taytems.eth"]
+  "slug": "web-update-june-2023",
+  "title": "ENS Web Update June 2023",
+  "description": "A brief overview of the changes in June 2023",
+  "date": "2023-06-14",
+  "tags": ["update"],
+  "authors": ["leontalbert.eth", "taytems.eth"]
 }

@@ -6,7 +6,7 @@ import { BlogHeader } from '~/components/features/blog/BlogHeader'
 import { BlogPostPreview } from '~/components/features/blog/PostPreview'
 import { PageButtons } from '~/components/ui/navigation/PageButtons/PageButtons'
 import { useTranslation } from '~/i18n/useTranslation'
-import { splitArray, splitArrayBiasFirst } from '~/utils/array/split'
+import { splitArrayBiasFirst } from '~/utils/array/split'
 import { getTags } from '~/utils/blog/posts'
 import { formatTag } from '~/utils/blog/utils'
 import { createMetadata } from '~/utils/metadata'
@@ -23,7 +23,7 @@ export async function generateStaticParams() {
   const tags = await getTags()
 
   return Object.entries(tags).flatMap(([tag, posts]) => {
-    const pages = splitArray(posts, MAX_PER_PAGE)
+    const pages = splitArrayBiasFirst(posts, MAX_PER_PAGE)
 
     return pages.map((_, index) => ({
       tag,
@@ -98,7 +98,7 @@ export default async function Blog(props: PageProps) {
           ))}
         </div>
         <PageButtons
-          hrefPrefix="/blog"
+          hrefPrefix={`/blog/tag/${params.tag}`}
           total={pages.length}
           current={currentPage}
         />

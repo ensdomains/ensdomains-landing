@@ -1,10 +1,10 @@
 {
-    "slug": "town-hall-2023-Q1",
-    "cover": "https://img.youtube.com/vi/yCIbN6xVQ5s/0.jpg",
-    "title": "ENS Town Hall Q1 2023",
-    "description": "Join us for the ENS Town Hall for Q1 2023! Streamed on Thursday, March 30, 2023.",
-    "date": "2023-03-30",
-    "tags": ["youtube", "town_hall"],
-    "authors": ["alisha.eth"],
-    "youtube": "yCIbN6xVQ5s"
+  "slug": "town-hall-2023-Q1",
+  "cover": "https://img.youtube.com/vi/yCIbN6xVQ5s/0.jpg",
+  "title": "ENS Town Hall Q1 2023",
+  "description": "Join us for the ENS Town Hall for Q1 2023! Streamed on Thursday, March 30, 2023.",
+  "date": "2023-03-30",
+  "tags": ["update"],
+  "authors": ["alisha.eth"],
+  "youtube": "yCIbN6xVQ5s"
 }
