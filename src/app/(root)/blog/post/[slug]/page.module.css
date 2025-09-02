@@ -16,6 +16,7 @@
 
 .content p,
 .content ul,
+.content ol,
 .content li {
   font-family: var(--ens-serif);
   color: var(--ens-medium-blue);
@@ -27,6 +28,12 @@
 
 .content ul {
   padding-inline-start: 28px;
+  list-style-type: disc;
+}
+
+.content ol {
+  padding-inline-start: 28px;
+  list-style-type: decimal;
 }
 
 .content > * + * {
