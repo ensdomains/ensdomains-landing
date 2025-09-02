@@ -1,0 +1,75 @@
+ENS exists to make crypto simple by mapping unreadable hex addresses to human-readable names. One of the most important parts of that experience in daily use is your [**Primary Name**](https://docs.ens.domains/web/reverse), the name apps show for you instead of your address. On Ethereum mainnet today, setting a Primary Name ensures your chosen name appears anywhere your address is displayed, giving you a consistent, recognizable identity.
+
+
+### First, Two Ways People Use ENS
+
+**1. Sending and receiving crypto**  
+You can add wallet addresses to an ENS name so others can send assets to you without pasting hex. This is forward resolution: yourname.eth → 0x1234…abcd. It has long worked across L1 and L2 because ENS records are chain-agnostic. You can store addresses for multiple networks on the same name and payments continue to work.
+
+**2. Showing your name in apps**  
+A Primary Name is about the reverse direction. Apps look up your address and display the name you chose. That is called reverse resolution. This is the part users notice when they connect a wallet and expect to see a name rather than a hex string.
+
+### What's a Primary Name?
+
+Think of your Primary Name as the caller ID of Web3. Normally, ENS connects your chosen name to your wallet address (for example, `yourname.eth` → `0x1234…abcd`). The technical term for this is [forward resolution](https://docs.ens.domains/resolution/). With a Primary Name, it works in reverse: your wallet address points back to your chosen name (see [Reverse Registrar](https://docs.ens.domains/registry/reverse)).
+
+That's why when you log into an app, you'll see `yourname.eth` instead of `0x1234…abcd`.
+
+![](./1.jpeg)
+
+### How Do I Set a Primary Name?
+
+In the video below I open [app.ens.domains](https://app.ens.domains), connect my wallet (MetaMask in this example), visit my names, and open the ENS name I want to set as my Primary Name. I click ‘Set as Primary Name’ and approve it in my wallet. That updates my reverse record so apps can now show my name instead of my address. 
+
+To confirm it worked you can also open [primary.ens.domains](https://primary.ens.domains/), connect your wallet, and check which networks show your Primary Name. 
+
+
+<Youtube src="9bDpeepcd2k" />
+
+### The Problem Users Ran Into on L2s
+
+As L2s grew, addresses could differ from mainnet and not every app read reverse records on those networks. Even if you had a Primary Name set on mainnet, your name might not appear when you connected to some L2s. People ended up with inconsistent display names and more hex addresses in everyday flows. This is an Ethereum-wide interoperability challenge that came as more L2s introduced more complexity. 
+
+### What L2 Primary Names fix
+
+L2 Primary Names let you set a Primary Name that shows up on supported L2s using reverse resolution. Forward resolution stays the same. The goal is simple: when you connect to a supported L2, apps that read reverse records there can display your name, not your address.
+
+Today it works on Arbitrum, Base, Linea, OP Mainnet, and Scroll, with more on the way.
+
+### Sounds Great! How Do I Set My L2 Primary Name?
+
+Right now, the process for setting an L2 Primary Name depends on the tools and integrations you use. For example, Basenames currently demonstrate how an L2 Primary Name can appear when you connect to Arbitrum, Base, Linea, OP Mainnet, or Scroll. In general:
+
+1. Ensure your reverse record uses the [latest Public Resolver](https://docs.ens.domains/resolvers/public/).  
+2. Set your Primary Name using [primary.ens.domains](https://primary.ens.domains/), this will let you see where your Primary Name is active, and which chains you want to reflect that Primary Name. Each address can have a different Primary Name for all supported chains, or a default address for apps to fall back on if there isn't a separate Primary Name.  
+3. Connect to a supported L2.  
+4. Use apps that read [reverse records](https://docs.ens.domains/registry/reverse) on that network.
+
+
+<Youtube src="3Uvkqb2bl1Y" />
+
+### Current Limitations
+
+Your name will display only in apps that read reverse records on the L2 you are using. Support is growing, but not every app has implemented this yet.
+
+### Why It Matters
+
+Your Primary Name is the foundation of a consistent, human-readable identity in Web3. L2 Primary Names extend that experience beyond mainnet so you don’t lose your name when switching to an L2.
+
+For users, this means fewer hex addresses, clearer UX, and a smoother experience across networks. For developers, it offers a simple, standardized way to surface recognizable names instead of addresses — improving onboarding, trust, and usability.
+
+If you’re building on a supported L2, check out the Primary Names documentation for details on implementing L2 Primary Names in your app.
+
+### TL;DR
+
+- **Payments:** Adding wallet addresses to an ENS name already works across L1 and L2. That never changed.
+
+- **Display:** L2 Primary Names make your chosen name show up on supported L2s through reverse resolution.
+
+- **Today:** Works on Arbitrum, Base, Linea, OP Mainnet, and Scroll. Your name will display only in apps that read reverse records on the L2 you are using. Support is growing, but not every app has implemented this yet.
+
+- **Outcome:** A more consistent identity across networks without new workflows from you.
+
+- **Check your status**: [primary.ens.domains](https://primary.ens.domains/) will let you check if your Primary Name is set.
+
+For developers: start with [Public Resolver](https://docs.ens.domains/resolvers/public) and [Reverse Registrar](https://docs.ens.domains/registry/reverse); standards discussion lives in [ENSIP-19: Multichain Primary Names](https://docs.ens.domains/ensip/19). 
