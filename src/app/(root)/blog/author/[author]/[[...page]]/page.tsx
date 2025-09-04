@@ -32,7 +32,7 @@ export async function generateStaticParams() {
   const authors = await getAuthors()
 
   return Object.entries(authors).flatMap(([author, posts]) => {
-    const pages = splitArray(posts, MAX_PER_PAGE)
+    const pages = splitArrayBiasFirst(posts, MAX_PER_PAGE)
 
     return pages.map((_, index) => ({
       author,
