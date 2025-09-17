@@ -1,7 +1,7 @@
 import { clsx } from 'clsx'
 import type { FC, ReactNode } from 'react'
-import { ExternalLink } from 'react-external-link'
 import ui from '~/styles/ui.module.css'
+import { Link } from '../Link/Link'
 import styles from './LinkList.module.css'
 
 export type ILink = {
@@ -16,7 +16,7 @@ export const LinkList: FC<{ links: ILink[] }> = ({ links }) => {
       {links.map(({ title, href, description }) => (
         <li key={title}>
           {href ? (
-            <ExternalLink href={href}>
+            <Link href={href}>
               <span>{title}</span>
               <svg
                 className={styles.arrow}
@@ -34,7 +34,7 @@ export const LinkList: FC<{ links: ILink[] }> = ({ links }) => {
                   fill="currentColor"
                 />
               </svg>
-            </ExternalLink>
+            </Link>
           ) : (
             <span>{title}</span>
           )}

@@ -1,10 +1,10 @@
 import type { CSSProperties } from 'react'
-import { ExternalLink } from 'react-external-link'
 import {
   CornerAnimation,
   RectangleAnimation,
   SquareAnimation,
 } from '~/components/shared/animations/AnimatedShapes/AnimatedShapes'
+import { Link } from '~/components/ui/navigation/Link/Link'
 import type { Color } from '~/utils/types'
 import styles from './HeroContent.module.css'
 
@@ -19,7 +19,7 @@ const HeroEnsLink = ({
   color: Color
   style?: CSSProperties
 }) => (
-  <ExternalLink
+  <Link
     href={`https://app.ens.domains/${name}`}
     className={styles['header-ens-link']}
     style={
@@ -31,7 +31,7 @@ const HeroEnsLink = ({
     }
   >
     {name}
-  </ExternalLink>
+  </Link>
 )
 
 export const HeroContent = () => (

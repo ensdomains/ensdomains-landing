@@ -1,10 +1,9 @@
 'use client'
 
 import { clsx } from 'clsx'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { type CSSProperties, type FC, useRef, useState } from 'react'
-import { ExternalLink } from 'react-external-link'
+import { Link } from '~/components/ui/navigation/Link/Link'
 import { useScrollAttr } from '~/hooks/useScrollAttr'
 import { getLangPrefix } from '~/i18n/langPrefix'
 import { fallbackLng, type Language } from '~/i18n/settings'
@@ -65,12 +64,12 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
             ui['flex-center'],
           )}
         >
-          <ExternalLink
+          <Link
             href="https://app.ens.domains"
             className={clsx(styles.launch, ui.button, styles.launchCta)}
           >
             {links.launch}
-          </ExternalLink>
+          </Link>
           <button
             type="button"
             onClick={() => setOpen(!isOpen)}
@@ -156,21 +155,21 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
               </Link>
             )
           })}
-          <ExternalLink
+          <Link
             href="https://roadmap.ens.domains/roadmap"
             className={styles.link}
           >
             {links.roadmap}
-          </ExternalLink>
+          </Link>
         </div>
         <div className={styles.langWithApp}>
           {/* <LanguageSwitcher lang={lang} /> */}
-          <ExternalLink
+          <Link
             href="https://app.ens.domains"
             className={clsx(styles.launch, ui.button)}
           >
             {links.launch}
-          </ExternalLink>
+          </Link>
         </div>
       </div>
     </nav>

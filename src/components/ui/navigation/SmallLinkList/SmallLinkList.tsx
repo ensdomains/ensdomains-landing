@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { ExternalLink } from 'react-external-link'
+import { Link } from '../Link/Link'
 import styles from './SmallLinkList.module.css'
 
 export type ILink = {
@@ -12,7 +12,7 @@ export const SmallLinkList: FC<{ links: ILink[] }> = ({ links }) => {
     <ul className={styles.list}>
       {links.map(({ title, href }) => (
         <li key={title}>
-          <ExternalLink href={href}>
+          <Link href={href}>
             <span>{title}</span>
             <span>
               <svg
@@ -30,7 +30,7 @@ export const SmallLinkList: FC<{ links: ILink[] }> = ({ links }) => {
                 />
               </svg>
             </span>
-          </ExternalLink>
+          </Link>
         </li>
       ))}
     </ul>

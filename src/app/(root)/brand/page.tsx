@@ -1,9 +1,9 @@
 import { readdir } from 'node:fs/promises'
 import { clsx } from 'clsx'
 import type { Metadata } from 'next'
-import { ExternalLink } from 'react-external-link'
 import { AssetDownloadButton } from '~/components/features/brand/AssetDownloadButton'
 import { BrandColor } from '~/components/features/brand/BrandColor'
+import { Link } from '~/components/ui/navigation/Link/Link'
 import { LinkList } from '~/components/ui/navigation/LinkList/LinkList'
 import { useTranslation } from '~/i18n/useTranslation'
 import ui from '~/styles/ui.module.css'
@@ -359,12 +359,13 @@ export default async function Brand(props: PageProps) {
               description: (
                 <div className={styles.guidelines}>
                   <div>{t('brand.assets.guidelines.description')}</div>
-                  <ExternalLink
+                  <Link
                     className={ui.button}
                     href="/assets/brand/ENS Brand Guidelines.pdf"
+                    target="_blank"
                   >
                     {t('brand.assets.guidelines.button')}
-                  </ExternalLink>
+                  </Link>
                 </div>
               ),
             },
