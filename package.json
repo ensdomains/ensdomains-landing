@@ -51,6 +51,7 @@
     "@playwright/test": "^1.52.0",
     "@shikijs/rehype": "^3.4.0",
     "@sindresorhus/slugify": "^2.2.1",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/mdx": "^2.0.13",
     "@types/node": "^22.15.17",
     "@types/react": "^19.1.3",
