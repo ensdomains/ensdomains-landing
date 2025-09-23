@@ -11,9 +11,9 @@ import {
   useRef,
   useState,
 } from 'react'
-import { ExternalLink } from 'react-external-link'
 import ui from '~/styles/ui.module.css'
 import type { Color } from '~/utils/types'
+import { Link } from '../../navigation/Link/Link'
 import styles from './ColorCards.module.css'
 
 const getSquareVars = (color: Color): CSSProperties | undefined => {
@@ -106,7 +106,7 @@ export const ColorCards = ({
   return (
     <div className={styles.grid} ref={ref}>
       {cards.map(({ title, description, color, link }) => (
-        <ExternalLink
+        <Link
           href={link}
           key={title}
           className={clsx(ui.flex, ui['flex-col'], styles.card)}
@@ -120,7 +120,7 @@ export const ColorCards = ({
           <div className={styles.title}>{title}</div>
           <div className={styles.text}>{description}</div>
           <div className={styles.box} style={getSquareVars(color)} />
-        </ExternalLink>
+        </Link>
       ))}
     </div>
   )

@@ -1,6 +1,6 @@
 import { clsx } from 'clsx'
 import type { FC } from 'react'
-import { ExternalLink } from 'react-external-link'
+import { Link } from '~/components/ui/navigation/Link/Link'
 import ui from '~/styles/ui.module.css'
 import styles from './Footer.module.css'
 
@@ -30,7 +30,7 @@ export const Footer: FC<{
               <div className={styles.h3}>{list.title}</div>
               {list.entries.map((entry) => (
                 <li key={entry.title}>
-                  <ExternalLink href={entry.link}>{entry.title}</ExternalLink>
+                  <Link href={entry.link}>{entry.title}</Link>
                 </li>
               ))}
             </ul>

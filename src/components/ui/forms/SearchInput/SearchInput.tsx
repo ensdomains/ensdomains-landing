@@ -5,11 +5,11 @@
 import { normalise } from '@ensdomains/ensjs/utils'
 import { clsx } from 'clsx'
 import { useEffect, useState } from 'react'
-import { ExternalLink } from 'react-external-link'
 import ui from '~/styles/ui.module.css'
 import { checkBoxAvailable, checkEthAvailable } from '~/utils/available'
 import { useDebounce } from '~/utils/useDebounce'
 import { ArrowRightIcon, SearchIcon } from '../../../shared/icons/index'
+import { Link } from '../../navigation/Link/Link'
 import styles from './SearchInput.module.css'
 
 const ensProfileUrl = (name: string, available: boolean, tld: 'eth' | 'box') =>
@@ -78,7 +78,7 @@ const TldList = ({
   return (
     <div className={styles.tlds}>
       {name.length > 2 && tld !== 'box' ? (
-        <ExternalLink
+        <Link
           className={isEnsAvailable ? styles.registered : styles.available}
           href={ensProfileUrl(name, isEnsAvailable, tld || 'eth')}
         >
@@ -86,10 +86,10 @@ const TldList = ({
           <span>
             {isEnsAvailable ? registerText : viewText} <ArrowRightIcon />
           </span>
-        </ExternalLink>
+        </Link>
       ) : null}
       {isBoxInvalid || tld === 'eth' ? null : (
-        <ExternalLink
+        <Link
           className={isBoxAvailable ? styles.registered : styles.available}
           href={ensProfileUrl(name, isBoxAvailable, tld || 'box')}
         >
@@ -97,7 +97,7 @@ const TldList = ({
           <span>
             {isBoxAvailable ? registerText : viewText} <ArrowRightIcon />
           </span>
-        </ExternalLink>
+        </Link>
       )}
     </div>
   )

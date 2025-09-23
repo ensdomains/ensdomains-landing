@@ -2,6 +2,8 @@
 @import "tw-animate-css";
 @import "./utils.css";
 
+@plugin "@tailwindcss/typography";
+
 @theme {
   --color-ens-blue: #0080bc;
   --color-ens-blue-hover: #0070a4;

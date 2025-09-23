@@ -113,11 +113,15 @@ export default async function RootLayout(props: {
       entries: [
         {
           title: t('footer.privacy-policy'),
-          link: 'https://app.ens.domains/legal/privacy-policy',
+          link: '/legal/privacy-policy',
         },
         {
           title: t('footer.tou'),
-          link: 'https://app.ens.domains/legal/terms-of-use',
+          link: '/legal/terms-of-use',
+        },
+        {
+          title: t('footer.trademark-guidelines'),
+          link: '/legal/trademark-guidelines',
         },
         {
           title: t('footer.bugs'),
