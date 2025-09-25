@@ -1,5 +1,5 @@
 import { slugifyWithCounter } from '@sindresorhus/slugify'
-import { toString as toStringUtil } from 'mdast-util-to-string';
+import { toString as toStringUtil } from 'mdast-util-to-string'
 import { visit } from 'unist-util-visit'
 
 export default function rehypeSlugify() {
