@@ -22,17 +22,25 @@ export const EcosystemList = () => {
         <Link href="/ecosystem/godaddy">
           <img
             src="/assets/logos/godaddy.svg"
-            height={33}
-            width={29}
+            height={60}
+            width={60}
             alt="GoDaddy"
           />
         </Link>
         <Link href="/ecosystem/paypal">
           <img
             src="/assets/logos/paypal.svg"
-            height={29}
-            width={24}
+            height={60}
+            width={60}
             alt="PayPal"
+          />
+        </Link>
+        <Link href="/ecosystem/world">
+          <img
+            src="/assets/logos/world.svg"
+            height={60}
+            width={60}
+            alt="World"
           />
         </Link>
       </div>
