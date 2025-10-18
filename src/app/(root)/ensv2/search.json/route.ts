@@ -3,6 +3,12 @@ import { NextResponse } from 'next/server'
 import type { ReactNode } from 'react'
 import { faqs } from '~/components/pages/ensv2/FAQ/entries'
 
+export type FaqSearchType = {
+  question: string
+  answer: string
+  tags?: string[]
+}
+
 export const dynamic = 'force-static'
 
 function isIterable(node: unknown): node is Iterable<ReactNode> {
@@ -49,7 +55,7 @@ function renderReactNodeToPlainText(node: ReactNode): string {
 }
 
 export async function GET() {
-  const miniSearch = new MiniSearch({
+  const miniSearch = new MiniSearch<FaqSearchType>({
     fields: ['question', 'answer', 'tags'],
   })
 

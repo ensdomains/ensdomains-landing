@@ -3,26 +3,24 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Fragment } from 'react'
-import {
-  fetchPostMetadata,
-  getSearchResults,
-  type SearchEntry,
-} from '~/utils/blog/search'
+import type { BlogSearchResult } from '~/app/(root)/blog/search.json/route'
+import { useBlogSearch } from '~/components/features/blog/Search/useBlogSearch'
+import { fetchPostMetadata } from '~/utils/blog/search'
 import { useDebounce } from '~/utils/useDebounce'
 import { BlogPostAuthor, BlogPostAuthorSeparator } from '../PostAuthor'
 import styles from './SearchResults.module.css'
 
-const SearchHit = ({ entry }: { entry: SearchEntry }) => {
+const SearchHit = ({ entry }: { entry: BlogSearchResult }) => {
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['post', entry.slug, 'metadata'],
-    queryFn: () => fetchPostMetadata(entry.slug),
+    queryKey: ['post', entry.id, 'metadata'],
+    queryFn: () => fetchPostMetadata(entry.id),
   })
 
   if (isLoading) return <SearchHitSkeleton />
   if (isError || !data) return <></>
 
   return (
-    <Link href={`/blog/post/${entry.slug}`} className={styles.hit}>
+    <Link href={`/blog/post/${entry.id}`} className={styles.hit}>
       {data.assets.post['cover-thumb'] && (
         <Image
           src={data.assets.post['cover-thumb']}
@@ -35,7 +33,7 @@ const SearchHit = ({ entry }: { entry: SearchEntry }) => {
       <div className={styles['hit-data']}>
         <div className={styles['hit-title']}>{entry.title}</div>
         <div className={styles['hit-authors']}>
-          {data.authors?.slice(0, 2).map((author, index) => (
+          {entry.authors?.slice(0, 2).map((author, index) => (
             <Fragment key={author}>
               {!!index && <BlogPostAuthorSeparator size="small" />}
               <BlogPostAuthor
@@ -67,15 +65,12 @@ const SearchHitSkeleton = () => {
 
 export const SearchResults = ({ search }: { search: string }) => {
   const debouncedSearch = useDebounce(search, 500)
-
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ['search', debouncedSearch],
-    queryFn: () => getSearchResults(debouncedSearch),
-  })
+  const { search: performSearch, isLoading } = useBlogSearch()
 
   if (search.length < 3) return <></>
 
   const isDebouncing = debouncedSearch !== search
+  const results = performSearch(debouncedSearch)
 
   if (isLoading || isDebouncing)
     return (
@@ -86,9 +81,7 @@ export const SearchResults = ({ search }: { search: string }) => {
       </div>
     )
 
-  if (isError || !data) return <></>
-
-  if (!data.hits.length)
+  if (!results.length)
     return (
       <div className={styles.results}>
         <div className={styles.noResults}>No results</div>
@@ -97,8 +90,8 @@ export const SearchResults = ({ search }: { search: string }) => {
 
   return (
     <div className={styles.results}>
-      {data.hits.map((hit) => (
-        <SearchHit key={hit.slug} entry={hit} />
+      {results.map((hit) => (
+        <SearchHit key={hit.id} entry={hit} />
       ))}
     </div>
   )

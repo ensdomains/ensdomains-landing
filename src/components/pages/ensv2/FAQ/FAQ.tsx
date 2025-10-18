@@ -10,10 +10,10 @@ import {
   AccordionTrigger,
 } from '~/components/ui/primitives/Accordion/Accordion'
 import { faqs, tags } from './entries'
-import { useSearchIndex } from './useSearchIndex'
+import { useFaqIndex } from './useFaqIndex'
 
 export const FAQ = () => {
-  const searchIndex = useSearchIndex()
+  const searchIndex = useFaqIndex()
 
   const [search, setSearch] = useState('')
   const [selectedTag, setSelectedTag] = useState<string | undefined>(undefined)
