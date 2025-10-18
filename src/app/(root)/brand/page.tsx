@@ -177,9 +177,20 @@ export default async function Brand(props: PageProps) {
             </li>
           </ul>
           <p className={ui['max-w-text']}>
-            You're free to use the ENS brand in the ecosystem, but you must obtain a license first. Reach out to our General Counsel, Alexander Urbelis, at alex@ens[.]domains to request a trademark license agreement.
-            <br /><br />
-            By using any ENS trademarks, you agree to follow our <Link href="/legal/trademark-guidelines">guidelines and instructions</Link>. Do not use the marks to impersonate ENS, ENS DAO, or ENS Labs, or to imply sponsorship, endorsement, or a partnership that doesn't exist. ENS reserves the right to take action to protect its trademarks and the ENS community.
+            You're free to use the ENS brand in the ecosystem, but you must
+            obtain a license first. Reach out to our General Counsel, Alexander
+            Urbelis, at alex@ens[.]domains to request a trademark license
+            agreement.
+            <br />
+            <br />
+            By using any ENS trademarks, you agree to follow our{' '}
+            <Link className="underline" href="/legal/trademark-guidelines">
+              guidelines and instructions
+            </Link>
+            . Do not use the marks to impersonate ENS, ENS DAO, or ENS Labs, or
+            to imply sponsorship, endorsement, or a partnership that doesn't
+            exist. ENS reserves the right to take action to protect its
+            trademarks and the ENS community.
           </p>
         </div>
       </header>
