@@ -1,0 +1,8 @@
+{
+  "slug": "d3-doma",
+  "title": "Tokenized DNS Domains with Doma and ENS",
+  "description": "ENS now supports tokenized DNS domains through Doma Protocol, allowing domain owners to use their existing domains as ENS names without DNSSEC setup",
+  "date": "2025-10-21",
+  "tags": [],
+  "authors": ["enslabs.eth"]
+}
