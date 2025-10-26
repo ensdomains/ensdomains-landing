@@ -46,7 +46,7 @@
     "zod": "^3.24.4"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.4",
+    "@biomejs/biome": "2.2.7",
     "@cloudflare/next-on-pages": "^1.13.16",
     "@playwright/test": "^1.52.0",
     "@shikijs/rehype": "^3.13.0",

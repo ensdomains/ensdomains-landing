@@ -212,7 +212,7 @@ export default async function EnsV2(props: {
       <div className="mx-auto mb-32 w-full-[2rem] max-w-[1374px] space-y-32 md:w-full-[4rem]">
         {/* Announcement video */}
         <div>
-          {/** biome-ignore lint/nursery/useUniqueElementIds: ID is the video id */}
+          {/** biome-ignore lint/correctness/useUniqueElementIds: ID is the video id */}
           <LiteYouTubeEmbed
             id="Tp0r5t8BGt8"
             title="ENS V2"
@@ -281,7 +281,7 @@ export default async function EnsV2(props: {
 
         {/* FAQ */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] lg:gap-12 xl:grid-cols-2">
-          {/** biome-ignore lint/nursery/useUniqueElementIds: ID is the anchor */}
+          {/** biome-ignore lint/correctness/useUniqueElementIds: ID is the anchor */}
           <h1
             className="top-24 h-fit font-serif text-[132px] xs:text-[186px] lg:sticky lg:scroll-mt-24 xl:text-[250px]"
             id="faq"
