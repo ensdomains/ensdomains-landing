@@ -12,7 +12,7 @@ export const PostCoverContent: FC<{ post: BlogPostMetadataPlus }> = async ({
     return (
       <div className={styles.container}>
         <div className={styles.content}>
-          <YoutubeEmbed src={post.youtube!} />
+          <YoutubeEmbed src={post.youtube!} breakout={false} />
         </div>
       </div>
     )

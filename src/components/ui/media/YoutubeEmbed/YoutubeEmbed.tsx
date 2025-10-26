@@ -1,7 +1,14 @@
+import { Breakout } from '~/components/features/MDX/Heading/Breakout'
 import styles from './YoutubeEmbed.module.css'
 
-export const YoutubeEmbed = ({ src }: { src: string }) => {
-  return (
+export const YoutubeEmbed = ({
+  src,
+  breakout = true,
+}: {
+  src: string
+  breakout?: boolean
+}) => {
+  const content = (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <iframe
@@ -25,4 +32,5 @@ export const YoutubeEmbed = ({ src }: { src: string }) => {
       </a>
     </div>
   )
+  return breakout ? <Breakout>{content}</Breakout> : content
 }

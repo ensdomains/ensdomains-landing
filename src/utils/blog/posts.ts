@@ -77,13 +77,17 @@ export const importPost = async (post: string) => {
     default: PostContent,
     readingTime,
     plainContent,
+    HeaderContent,
+    PreContent,
   } = (await import(`posts/${post}/readme.mdx`)) as {
     default: (_properties: MDXProps) => JSX.Element
     readingTime: string
     plainContent: string
+    HeaderContent?: () => JSX.Element
+    PreContent?: () => JSX.Element
   }
 
-  return { PostContent, readingTime, plainContent }
+  return { PostContent, readingTime, plainContent, HeaderContent, PreContent }
 }
 
 export const getTags = async () => {
