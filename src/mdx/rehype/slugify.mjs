@@ -2,13 +2,15 @@ import { slugifyWithCounter } from '@sindresorhus/slugify'
 import { toString as toStringUtil } from 'mdast-util-to-string'
 import { visit } from 'unist-util-visit'
 
+const TAGS = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+
 export default function rehypeSlugify() {
   return (tree) => {
     const slugify = slugifyWithCounter()
 
     visit(tree, 'element', (node) => {
       if (
-        (node.tagName === 'h2' || node.tagName === 'h3') &&
+        TAGS.includes(node.tagName) &&
         !node.properties.id
       ) {
         node.properties.id = slugify(toStringUtil(node))

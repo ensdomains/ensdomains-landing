@@ -1,4 +1,5 @@
 import * as acorn from 'acorn'
+import { toString as mdastToString } from 'mdast-util-to-string'
 
 function getSections(node) {
   const sections = []
@@ -6,7 +7,7 @@ function getSections(node) {
   for (const child of node.children ?? []) {
     if (child.type === 'element' && child.tagName === 'h2') {
       sections.push(`{
-          title: ${JSON.stringify(toString(child))},
+          title: ${JSON.stringify(mdastToString(child))},
           navtitle: ${JSON.stringify(child.properties.navtitle ?? '')},
           id: ${JSON.stringify(child.properties.id)},
           ...${child.properties.annotation}

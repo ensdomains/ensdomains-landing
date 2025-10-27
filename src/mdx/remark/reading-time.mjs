@@ -1,9 +1,10 @@
 import * as acorn from 'acorn'
+import { toString as mdastToString } from 'mdast-util-to-string'
 import getReadingTime from 'reading-time'
 
 export default function remarkReadingTime() {
   return (tree) => {
-    const textOnPage = toString(tree, {
+    const textOnPage = mdastToString(tree, {
       includeHtml: false,
       includeImageAltText: false,
     })
