@@ -2,11 +2,13 @@
 import type { MDXComponents } from 'mdx/types'
 import { Heading } from './components/features/MDX/Heading/Heading'
 import { Image } from './components/features/MDX/Heading/Image'
+import { LoopingVideo } from './components/features/MDX/Heading/LoopingVideo'
 import { Link } from './components/features/MDX/Link'
 import { YoutubeEmbed } from './components/ui/media/YoutubeEmbed/YoutubeEmbed'
 
 const CustomMDXComponents = {
   Image,
+  LoopingVideo,
   Youtube: YoutubeEmbed,
 }
 
