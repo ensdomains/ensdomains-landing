@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import type { ResolvingMetadata } from 'next'
-import { type CSSProperties, Fragment } from 'react'
+import type { CSSProperties } from 'react'
 import type { Article, WithContext } from 'schema-dts'
 import { PostCoverContent } from '~/components/features/blog/Post/PostCoverContent'
 import { PostFooter } from '~/components/features/blog/Post/PostFooter'
@@ -8,7 +8,6 @@ import { PostHeader } from '~/components/features/blog/Post/PostHeader'
 import { getPostBySlug, getPostsMetadata, importPost } from '~/utils/blog/posts'
 import { AssetNotFoundError, getPostAssets } from '~/utils/blog/utils'
 import { BASE_URL, createMetadata } from '~/utils/metadata'
-import styles from './page.module.css'
 
 type PageProperties = {
   params: Promise<{ slug: string }>

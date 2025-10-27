@@ -6,11 +6,8 @@ import type { StaticImageData } from 'next/image'
 import type { JSX } from 'react'
 import { ImageFormats } from 'scripts/build-assets/types'
 import { z } from 'zod'
-import headerStyles from '~/components/features/blog/Post/PostHeader.module.css'
 import ui from '~/styles/ui.module.css'
 import { BASE_URL, createMetadata } from '~/utils/metadata'
-import articleStyles from '../../blog/post/[slug]/page.module.css'
-import styles from './page.module.css'
 
 const CURRENT_DIR = new URL(import.meta.url)
 const CONTENT_DIR = new URL('../../../../../case-studies', CURRENT_DIR)
@@ -103,25 +100,26 @@ export default async function CaseStudyPage({ params }: PageProps) {
     <section>
       <header
         className={clsx(
-          ui['flex'],
-          ui['flex-center'],
-          ui['flex-col'],
           ui['dots-bg'],
-          headerStyles.header,
+          'relative flex w-full flex-col items-center justify-center px-4 pt-[120px] pb-8 md:px-24 md:pt-[140px] lg:pt-[230px] lg:pb-[80px]',
         )}
       >
-        <div className={headerStyles.content}>
-          <h1 className={headerStyles.title}>Case Study: {meta.company}</h1>
-        </div>
+        <h1 className="font-medium text-[40px] text-ens-blue-dark leading-[96%] tracking-[-0.015em] md:text-[80px] lg:text-[124px]">
+          Case Study: {meta.company}
+        </h1>
       </header>
 
-      <article className={articleStyles.article}>
-        <div className={clsx(articleStyles.content, styles.content)}>
-          {meta.subtitle && (
-            <h2 className={styles.subtitle}>{meta.subtitle}</h2>
-          )}
-          <PostContent />
-        </div>
+      <article
+        className={clsx(
+          'prose prose-ens md:prose-lg mx-auto mt-10 mb-12 max-md:px-4',
+        )}
+      >
+        {meta.subtitle && (
+          <h3 className="mx-auto max-w-4xl text-2xl md:text-[32px] lg:text-[40px]">
+            {meta.subtitle}
+          </h3>
+        )}
+        <PostContent />
       </article>
     </section>
   )

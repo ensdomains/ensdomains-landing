@@ -252,6 +252,7 @@
   @apply max-w-[60ch] md:text-xl text-[15px];
 
   @apply prose-p:leading-normal prose-p:font-[350] prose-p:text-[15px] md:prose-p:text-xl;
+  @apply prose-li:font-serif prose-li:font-[350];
 
   /* Heading styles */
   @apply prose-headings:mt-8 prose-headings:mb-4 prose-headings:font-medium;

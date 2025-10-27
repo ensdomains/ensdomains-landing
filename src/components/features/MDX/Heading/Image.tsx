@@ -69,7 +69,7 @@ const ExpandableImage = (properties: ImageProperties) => {
   const { aspectRatio } = getImageDimensions(properties)
 
   return (
-    <Breakout>
+    <Breakout className="my-[30px] md:my-[36px]">
       {fullScreen && (
         <>
           {/** biome-ignore lint/a11y/useKeyWithClickEvents: click event is handled by the keyboard event */}
@@ -85,9 +85,10 @@ const ExpandableImage = (properties: ImageProperties) => {
         <NextImage
           {...properties}
           className={cn(
-            'h-auto w-full cursor-pointer rounded',
-            fullScreen &&
-              '-translate-x-1/2 -translate-y-1/2 fixed top-1/2 left-1/2 z-20 w-[80%]',
+            'cursor-pointer rounded',
+            fullScreen
+              ? '-translate-x-1/2 -translate-y-1/2 fixed top-1/2 left-1/2 z-20 max-h-screen w-[80%] object-contain'
+              : 'h-auto w-full',
             properties.className,
           )}
           onClick={fullScreen ? closeModal : openModal}
