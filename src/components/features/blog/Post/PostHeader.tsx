@@ -4,6 +4,7 @@ import type { PropsWithChildren } from 'react'
 import lightBlue from '~/assets/pathways/patterns/light-blue-1.svg'
 import type { BlogPostMetadata } from '~/utils/blog/metadata'
 import { formatTag, getAuthorAssets } from '~/utils/blog/utils'
+import { formatDateHumanly } from '~/utils/formatters'
 import { BlogPostAuthor, BlogPostAuthorSeparator } from '../PostAuthor'
 
 export const PostHeader = ({
@@ -14,11 +15,7 @@ export const PostHeader = ({
   post: BlogPostMetadata
   readingTime: string
 }>) => {
-  const date = new Date(post.date).toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-  })
+  const date = formatDateHumanly(post.date)
 
   return (
     <header
@@ -54,7 +51,7 @@ export const PostHeader = ({
 
         {/* Right Side: Date/Reading Time and Tags */}
         <div className="flex flex-col items-end justify-between">
-          <div className="flex flex-col items-end font-mono">
+          <div className="flex flex-col items-end font-mono uppercase">
             <span>{date}</span>
             <span>{readingTime}</span>
           </div>
