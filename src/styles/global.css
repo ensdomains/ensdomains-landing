@@ -29,6 +29,7 @@
   --leading-ens-tight: 112%;
 
   --breakpoint-xs: 30rem;
+
 }
 
 @theme inline {
@@ -120,7 +121,7 @@
     line-height: 96%;
 
     font-size: 40px;
-    letter-spacing: -0.8px;
+    letter-spacing: -0.035em;
   }
 
   html:lang(ru) h1 {
@@ -136,7 +137,7 @@
     line-height: 90%;
 
     font-size: 32px;
-    letter-spacing: -0.32px;
+    letter-spacing: -0.03em;
   }
 
   h3 {
@@ -145,7 +146,7 @@
     line-height: 96%;
 
     font-size: 24px;
-    letter-spacing: -0.48px;
+    letter-spacing: -0.02em;
   }
 
   h4 {
@@ -154,12 +155,13 @@
     line-height: 96%;
 
     font-size: 24px;
-    letter-spacing: -2%;
+    letter-spacing: -0.015em;
   }
 
   h5 {
     font-weight: 500;
     font-size: 16px;
+    letter-spacing: -0.01em;
   }
 
   p {
@@ -173,15 +175,12 @@
   @media (min-width: 768px) {
     h1 {
       font-size: 80px;
-      letter-spacing: -1.6px;
     }
     h2 {
       font-size: 64px;
-      letter-spacing: -1.28px;
     }
     h3 {
       font-size: 40px;
-      letter-spacing: -0.8px;
     }
   }
 
@@ -189,19 +188,15 @@
   @media (min-width: 1280px) {
     h1 {
       font-size: 124px;
-      letter-spacing: -3.72px;
     }
     h2 {
       font-size: 100px;
-      letter-spacing: -2px;
     }
     h3 {
       font-size: 64px;
-      letter-spacing: -1.28px;
     }
     h4 {
       font-size: 36px;
-      letter-spacing: -0.72px;
     }
   }
 
@@ -249,4 +244,22 @@
   figure {
     margin: 0;
   }
+}
+
+.prose-ens {
+  --tw-prose-headings: var(--color-ens-blue-midnight);
+
+  @apply max-w-[60ch] md:text-xl text-[15px];
+
+  @apply prose-p:leading-normal prose-p:font-[350] prose-p:text-[15px] md:prose-p:text-xl;
+  @apply prose-li:font-serif prose-li:font-[350];
+
+  /* Heading styles */
+  @apply prose-headings:mt-8 prose-headings:mb-4 prose-headings:font-medium;
+  @apply prose-h1:text-[32px] md:prose-h1:text-[68px];
+  @apply prose-h2:text-[28px] md:prose-h2:text-5xl;
+  @apply prose-h3:text-[20px] md:prose-h3:text-4xl;
+  @apply prose-h4:text-[17.5px] md:prose-h4:text-[28px];
+  @apply prose-h5:text-[16px] md:prose-h5:text-[20px];
+  @apply prose-h6:text-[15px] prose-h6:italic prose-h6:font-serif prose-h6:font-[350] md:prose-h6:text-[22px];
 }

@@ -1,5 +1,6 @@
+import clsx from 'clsx'
 import type { ResolvingMetadata } from 'next'
-import { type CSSProperties, Fragment } from 'react'
+import type { CSSProperties } from 'react'
 import type { Article, WithContext } from 'schema-dts'
 import { PostCoverContent } from '~/components/features/blog/Post/PostCoverContent'
 import { PostFooter } from '~/components/features/blog/Post/PostFooter'
@@ -7,7 +8,6 @@ import { PostHeader } from '~/components/features/blog/Post/PostHeader'
 import { getPostBySlug, getPostsMetadata, importPost } from '~/utils/blog/posts'
 import { AssetNotFoundError, getPostAssets } from '~/utils/blog/utils'
 import { BASE_URL, createMetadata } from '~/utils/metadata'
-import styles from './page.module.css'
 
 type PageProperties = {
   params: Promise<{ slug: string }>
@@ -77,7 +77,8 @@ const page = async (props: PageProperties) => {
   const params = await props.params
   const post = await getPostBySlug(params.slug)
 
-  const { PostContent, readingTime } = await importPost(post.file)
+  const { PostContent, readingTime, HeaderContent, PreContent } =
+    await importPost(post.file)
   const postCover = await getPostAssets(post.file)?.cover
 
   const schema: WithContext<Article> = {
@@ -109,14 +110,17 @@ const page = async (props: PageProperties) => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <PostHeader post={post} readingTime={readingTime} />
-      <article className={styles.article}>
+      <PostHeader post={post} readingTime={readingTime}>
+        {HeaderContent && <HeaderContent />}
+      </PostHeader>
+      <article
+        className={clsx(
+          'prose prose-ens md:prose-lg mx-auto mt-10 mb-12 max-md:px-4',
+        )}
+      >
+        {PreContent && <PreContent />}
         <PostCoverContent post={post} />
-        <div className={styles.content}>
-          <PostContent />
-          {/* Hydration errors occur when PostContent is the only child in the parent div. */}
-          <Fragment />
-        </div>
+        <PostContent />
         <PostFooter post={post} />
       </article>
     </section>
