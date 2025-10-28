@@ -2,27 +2,26 @@ import { useQuery } from '@tanstack/react-query'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Fragment } from 'react'
-import {
-  fetchPostMetadata,
-  getSearchResults,
-  type SearchEntry,
-} from '~/utils/blog/search'
-import { useDebounce } from '~/utils/useDebounce'
+import { Fragment, useEffect } from 'react'
+import type { BlogSearchResult } from '~/app/(root)/blog/search.json/route'
+import { useBlogSearch } from '~/components/features/blog/Search/useBlogSearch'
+import { fetchPostMetadata } from '~/utils/blog/search'
 import { BlogPostAuthor, BlogPostAuthorSeparator } from '../PostAuthor'
 import styles from './SearchResults.module.css'
 
-const SearchHit = ({ entry }: { entry: SearchEntry }) => {
+const SearchHit = ({ entry }: { entry: BlogSearchResult }) => {
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['post', entry.slug, 'metadata'],
-    queryFn: () => fetchPostMetadata(entry.slug),
+    queryKey: ['post', entry.id, 'metadata'],
+    queryFn: () => fetchPostMetadata(entry.id),
   })
 
-  if (isLoading) return <SearchHitSkeleton />
+  if (isLoading)
+    return <SearchHitSkeleton title={entry.title} authors={entry.authors} />
+
   if (isError || !data) return <></>
 
   return (
-    <Link href={`/blog/post/${entry.slug}`} className={styles.hit}>
+    <Link href={`/blog/post/${entry.id}`} className={styles.hit}>
       {data.assets.post['cover-thumb'] && (
         <Image
           src={data.assets.post['cover-thumb']}
@@ -35,7 +34,7 @@ const SearchHit = ({ entry }: { entry: SearchEntry }) => {
       <div className={styles['hit-data']}>
         <div className={styles['hit-title']}>{entry.title}</div>
         <div className={styles['hit-authors']}>
-          {data.authors?.slice(0, 2).map((author, index) => (
+          {entry.authors?.slice(0, 2).map((author, index) => (
             <Fragment key={author}>
               {!!index && <BlogPostAuthorSeparator size="small" />}
               <BlogPostAuthor
@@ -53,31 +52,45 @@ const SearchHit = ({ entry }: { entry: SearchEntry }) => {
   )
 }
 
-const SearchHitSkeleton = () => {
+const SearchHitSkeleton = ({
+  title,
+  authors,
+}: {
+  title?: string
+  authors?: string[]
+}) => {
   return (
     <div className={styles.hit}>
       <div className={clsx(styles['hit-image'], styles.skeleton)} />
       <div className={styles['hit-data']}>
-        <div className={clsx(styles['hit-title'], styles.skeleton)} />
-        <div className={clsx(styles['hit-authors'], styles.skeleton)} />
+        <div className={clsx(styles['hit-title'], !title && styles.skeleton)}>
+          {title}
+        </div>
+        <div
+          className={clsx(styles['hit-authors'], !authors && styles.skeleton)}
+        >
+          {authors?.map((author, index) => (
+            <Fragment key={author}>
+              {!!index && <BlogPostAuthorSeparator size="small" />}
+              <BlogPostAuthor author={author} size="small" separator={false} />
+            </Fragment>
+          ))}
+        </div>
       </div>
     </div>
   )
 }
 
 export const SearchResults = ({ search }: { search: string }) => {
-  const debouncedSearch = useDebounce(search, 500)
+  const { search: performSearch, isLoading, searchResults } = useBlogSearch()
 
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ['search', debouncedSearch],
-    queryFn: () => getSearchResults(debouncedSearch),
-  })
+  useEffect(() => {
+    performSearch(search)
+  }, [search, performSearch])
 
-  if (search.length < 3) return <></>
+  if (!search) return
 
-  const isDebouncing = debouncedSearch !== search
-
-  if (isLoading || isDebouncing)
+  if (isLoading)
     return (
       <div className={styles.results}>
         <SearchHitSkeleton />
@@ -86,9 +99,14 @@ export const SearchResults = ({ search }: { search: string }) => {
       </div>
     )
 
-  if (isError || !data) return <></>
+  if (search.length < 2)
+    return (
+      <div className={styles.results}>
+        <div className={styles.noResults}>Type at least 2 characters</div>
+      </div>
+    )
 
-  if (!data.hits.length)
+  if (!searchResults.length)
     return (
       <div className={styles.results}>
         <div className={styles.noResults}>No results</div>
@@ -97,8 +115,8 @@ export const SearchResults = ({ search }: { search: string }) => {
 
   return (
     <div className={styles.results}>
-      {data.hits.map((hit) => (
-        <SearchHit key={hit.slug} entry={hit} />
+      {searchResults.map((hit) => (
+        <SearchHit key={hit.id} entry={hit} />
       ))}
     </div>
   )
