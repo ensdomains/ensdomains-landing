@@ -145,7 +145,9 @@ async function processImage(
     }
 
     const { width, height, format = 'webp' } = settings
-    const image = sharp(data)
+    const image = sharp(data, {
+      animated: true,
+    })
 
     // Validate image metadata
     const metadata = await image.metadata()
@@ -158,7 +160,9 @@ async function processImage(
         fit: 'cover',
         position: 'center',
       })
-      .toFormat(format)
+      .toFormat(format, {
+        loop: 0,
+      })
       .toFile(outputPath)
 
     postLogger.success(`Successfully processed image: ${outputPath}`)

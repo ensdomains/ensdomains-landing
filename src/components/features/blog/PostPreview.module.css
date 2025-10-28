@@ -34,6 +34,8 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  /* Prevents descending letters like 'g' from being cut off by the line clamp */
+  padding-bottom: 0.1em;
 }
 
 .preview-description {
