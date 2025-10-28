@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/nursery/useUniqueElementIds: icons */
+/** biome-ignore-all lint/correctness/useUniqueElementIds: icons */
 /** biome-ignore-all lint/a11y/noSvgWithoutTitle: icons */
 import type { SVGProps } from 'react'
 

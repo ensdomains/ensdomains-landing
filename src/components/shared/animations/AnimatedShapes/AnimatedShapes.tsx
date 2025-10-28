@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/nursery/useUniqueElementIds: Used for svg patterns */
+/** biome-ignore-all lint/correctness/useUniqueElementIds: Used for svg patterns */
 import type { SVGProps } from 'react'
 import { generateMotionTiming } from '~/utils/svgAnimationUtils'
 import type { Color } from '~/utils/types'
