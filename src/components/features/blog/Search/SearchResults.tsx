@@ -2,11 +2,10 @@ import { useQuery } from '@tanstack/react-query'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Fragment } from 'react'
+import { Fragment, useEffect } from 'react'
 import type { BlogSearchResult } from '~/app/(root)/blog/search.json/route'
 import { useBlogSearch } from '~/components/features/blog/Search/useBlogSearch'
 import { fetchPostMetadata } from '~/utils/blog/search'
-import { useDebounce } from '~/utils/useDebounce'
 import { BlogPostAuthor, BlogPostAuthorSeparator } from '../PostAuthor'
 import styles from './SearchResults.module.css'
 
@@ -16,7 +15,9 @@ const SearchHit = ({ entry }: { entry: BlogSearchResult }) => {
     queryFn: () => fetchPostMetadata(entry.id),
   })
 
-  if (isLoading) return <SearchHitSkeleton />
+  if (isLoading)
+    return <SearchHitSkeleton title={entry.title} authors={entry.authors} />
+
   if (isError || !data) return <></>
 
   return (
@@ -51,28 +52,45 @@ const SearchHit = ({ entry }: { entry: BlogSearchResult }) => {
   )
 }
 
-const SearchHitSkeleton = () => {
+const SearchHitSkeleton = ({
+  title,
+  authors,
+}: {
+  title?: string
+  authors?: string[]
+}) => {
   return (
     <div className={styles.hit}>
       <div className={clsx(styles['hit-image'], styles.skeleton)} />
       <div className={styles['hit-data']}>
-        <div className={clsx(styles['hit-title'], styles.skeleton)} />
-        <div className={clsx(styles['hit-authors'], styles.skeleton)} />
+        <div className={clsx(styles['hit-title'], !title && styles.skeleton)}>
+          {title}
+        </div>
+        <div
+          className={clsx(styles['hit-authors'], !authors && styles.skeleton)}
+        >
+          {authors?.map((author, index) => (
+            <Fragment key={author}>
+              {!!index && <BlogPostAuthorSeparator size="small" />}
+              <BlogPostAuthor author={author} size="small" separator={false} />
+            </Fragment>
+          ))}
+        </div>
       </div>
     </div>
   )
 }
 
 export const SearchResults = ({ search }: { search: string }) => {
-  const debouncedSearch = useDebounce(search, 500)
-  const { search: performSearch, isLoading } = useBlogSearch()
+  const { search: performSearch, isLoading, searchResults } = useBlogSearch()
 
-  if (search.length < 3) return <></>
+  useEffect(() => {
+    performSearch(search)
+  }, [search, performSearch])
 
-  const isDebouncing = debouncedSearch !== search
-  const results = performSearch(debouncedSearch)
+  if (!search) return
 
-  if (isLoading || isDebouncing)
+  if (isLoading)
     return (
       <div className={styles.results}>
         <SearchHitSkeleton />
@@ -81,7 +99,14 @@ export const SearchResults = ({ search }: { search: string }) => {
       </div>
     )
 
-  if (!results.length)
+  if (search.length < 2)
+    return (
+      <div className={styles.results}>
+        <div className={styles.noResults}>Type at least 2 characters</div>
+      </div>
+    )
+
+  if (!searchResults.length)
     return (
       <div className={styles.results}>
         <div className={styles.noResults}>No results</div>
@@ -90,7 +115,7 @@ export const SearchResults = ({ search }: { search: string }) => {
 
   return (
     <div className={styles.results}>
-      {results.map((hit) => (
+      {searchResults.map((hit) => (
         <SearchHit key={hit.id} entry={hit} />
       ))}
     </div>

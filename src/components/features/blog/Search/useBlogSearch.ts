@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import type {
   BlogSearchResult,
   BlogSearchType,
@@ -28,20 +28,25 @@ export function useBlogSearch() {
     searchIndexOptions,
   )
 
+  const [searchResults, setSearchResults] = useState<BlogSearchResult[]>([])
+
   const search = useMemo(
-    () =>
-      (query: string): BlogSearchResult[] => {
-        if (!searchIndex || !query || query.length < 3) return []
+    () => (query: string) => {
+      if (!searchIndex || !query) {
+        setSearchResults([])
+        return
+      }
 
-        const results = searchIndex.search(query)
-        console.log(results)
+      const results = searchIndex.search(query)
 
-        return results
+      setSearchResults(
+        results
           .sort((a, b) => b.score - a.score)
-          .slice(0, 5) as BlogSearchResult[]
-      },
+          .slice(0, 5) as BlogSearchResult[],
+      )
+    },
     [searchIndex],
   )
 
-  return { search, isLoading: !searchIndex }
+  return { search, searchResults, isLoading: !searchIndex }
 }
