@@ -246,6 +246,8 @@
   }
 }
 
+@custom-variant prose-inline-code (&.prose :where(:not(pre)>code):not(:where([class~="not-prose"] *)));
+
 .prose-ens {
   --tw-prose-headings: var(--color-ens-blue-midnight);
 
@@ -253,6 +255,7 @@
 
   @apply prose-p:leading-normal prose-p:font-[350] prose-p:text-[15px] md:prose-p:text-xl;
   @apply prose-li:font-serif prose-li:font-[350];
+  @apply prose-inline-code:before:hidden prose-inline-code:after:hidden prose-inline-code:bg-ens-gray-two prose-inline-code:text-ens-blue prose-inline-code:px-1.5 prose-inline-code:py-0.5 prose-inline-code:rounded-md prose-inline-code:font-normal;
 
   /* Heading styles */
   @apply prose-headings:mt-8 prose-headings:mb-4 prose-headings:font-medium;

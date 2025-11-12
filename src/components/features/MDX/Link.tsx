@@ -6,5 +6,11 @@ export const Link = ({
   className,
   ...properties
 }: AnchorHTMLAttributes<HTMLAnchorElement>) => {
-  return <a {...properties} className={clsx(styles.link, className)} />
+  return (
+    <a
+      target="_blank"
+      {...properties}
+      className={clsx(styles.link, className)}
+    />
+  )
 }

@@ -22,6 +22,7 @@ export class AssetNotFoundError extends Error {
 const tagMap: Record<string, string> = {
   'ens-v2': 'ENSv2',
   dns: 'DNS',
+  icann: 'ICANN',
 }
 
 export const formatTag = (tag: string) => {
