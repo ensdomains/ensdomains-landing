@@ -17,10 +17,13 @@ const publicClient = createEnsPublicClient({
 })
 
 export const checkBoxAvailable = async (name: string): Promise<boolean> => {
+  if (!name) return false
   const res = await fetch(
     `https://dotbox-worker.ens-cf.workers.dev/search?domain=${encodeURI(name)}.box`,
   )
-  const json = await res.json()
+  const json = await res.json<{
+    data: { status: string; available: boolean }
+  }>()
 
   if (json.data.status === 'INVALID_DOMAIN') {
     throw new Error(json.data.status)

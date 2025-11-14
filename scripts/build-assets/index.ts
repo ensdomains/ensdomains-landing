@@ -1,6 +1,7 @@
 import { writeFile } from 'node:fs/promises'
 import { handleAuthors } from './authors'
 import { logger } from './logger'
+import { downloadNotionPosts } from './notion'
 import { handlePosts } from './posts'
 import {
   ASSETS_FOLDER,
@@ -17,6 +18,8 @@ async function main() {
   await makeDirectoryIfNotExists(ASSETS_FOLDER.pathname)
   await makeDirectoryIfNotExists(POSTS_ASSETS_FOLDER.pathname)
   await makeDirectoryIfNotExists(AUTHORS_ASSETS_FOLDER.pathname)
+
+  await downloadNotionPosts()
 
   // Run cover and avatar processing in parallel
   logger.info('Processing covers and avatars in parallel')
