@@ -1,20 +1,27 @@
 import { clsx } from 'clsx'
 import type { Metadata, ResolvingMetadata } from 'next'
+import Image from 'next/image'
 import { type ComponentProps, type CSSProperties, Fragment } from 'react'
+import barbaraZandovals from '~/assets/pages/ensv2/barbara-zandoval.webp'
 import announcementCover from '~/assets/pages/ensv2/namechain-keynote-cover.webp'
 import ogImage from '~/assets/pages/ensv2/og-image.png'
 import blue1 from '~/assets/pathways/patterns/blue-1.svg'
 import green1 from '~/assets/pathways/patterns/green-1.svg'
 import magenta1 from '~/assets/pathways/patterns/magenta-1.svg'
+import herringbone1 from '~/assets/patterns/weave/overlay/herringbone-1.svg'
+import { AppsSection } from '~/components/pages/ensv2/AppSection'
 import { BlogSection } from '~/components/pages/ensv2/BlogSection/BlogSection'
 import { FAQ } from '~/components/pages/ensv2/FAQ/FAQ'
 import { HeaderGraphics } from '~/components/pages/ensv2/HeaderGraphics/HeaderGraphics'
+import { ArrowRightIcon } from '~/components/shared/icons'
 import LiteYouTubeEmbed from '~/components/ui/media/LiteYoutubeEmbed/LiteYoutubeEmbed'
+import { Link } from '~/components/ui/navigation/Link/Link'
 import { Button } from '~/components/ui/primitives/Button/Button'
 import type { Language } from '~/i18n/settings'
 import { useTranslation } from '~/i18n/useTranslation'
 import { BASE_URL, createMetadata } from '~/utils/metadata'
 import type { PageProps } from '~/utils/types'
+import './page.css'
 
 export const generateMetadata = async (
   props: PageProps,
@@ -107,34 +114,30 @@ const HeaderLogo = (props: ComponentProps<'div'>) => (
 const sectionsA: {
   textClass: string
   bgClass?: string
+  descriptionClass?: string
   bgStyle?: CSSProperties
   title: string
   description: string
+  linkText?: string
+  linkHref?: string
 }[] = [
   {
-    textClass: 'text-ens-magenta',
-    bgStyle: {
-      backgroundImage: `url(${magenta1.src})`,
-      backgroundSize: '16px',
-      backgroundRepeat: 'repeat',
-    },
-    title: 'New apps,\nnew ENS experiences',
-    description:
-      "We're rebuilding the ENS app to make it easier to register names, update profiles, and explore the ecosystem. A new developer portal is coming too.",
-  },
-  {
-    textClass: 'text-ens-blue',
+    textClass: 'text-ens-lapis-core',
+    descriptionClass: 'text-ens-lapis-dense',
     bgStyle: {
       backgroundImage: `url(${blue1.src})`,
       backgroundSize: '22px',
       backgroundRepeat: 'repeat',
     },
     title: 'One name.\nAny chain.',
+    linkText: 'Read more about Namechain',
+    linkHref: '#namechain',
     description:
-      'ENS on Namechain helps your .eth names and subnames work across chains. A new resolver makes managing and using names simpler—no matter where they live.',
+      'Your name should persist no matter the onchain app or network. ENSv2 makes L2s more interoperable, on a maximally decentralized ZK rollup.',
   },
   {
-    textClass: 'text-ens-green',
+    textClass: 'text-ens-peridot-core',
+    descriptionClass: 'text-ens-peridot-dense',
     bgStyle: {
       backgroundImage: `url(${green1.src})`,
       backgroundSize: '30px',
@@ -142,42 +145,62 @@ const sectionsA: {
     },
     title: 'Own more than a name,\nown a registry.',
     description:
-      'ENSv2 gives every .eth name its own registry. More control, more features—for users, teams, and companies.',
+      'ENSv2 gives every .eth name its own registry. Users, teams, and companies get more control of their namespace.',
+    linkHref: '/blog/post/ensv2',
+    linkText: 'Read more about our new smart contracts',
+  },
+  {
+    textClass: 'text-ens-garnet-core',
+    descriptionClass: 'text-ens-garnet-dense',
+    bgStyle: {
+      backgroundImage: `url(${magenta1.src})`,
+      backgroundSize: '16px',
+      backgroundRepeat: 'repeat',
+    },
+    title: 'New apps,\nnew ENS experiences',
+    description:
+      "We're building new ENS apps to make it easier to register names, update profiles, and explore the ecosystem. A new developer explorer is coming too.",
+    linkHref: '#apps',
+    linkText: 'Learn more about the new ENS apps',
   },
 ]
 
-const sectionsB = [
+const sectionsB: {
+  sectionClass: string
+  descriptionClass: string
+  title: string
+  description: string
+}[] = [
   {
-    sectionClass: 'text-ens-blue bg-ens-blue-light',
+    sectionClass: 'text-ens-lapis-core bg-ens-lapis-dust',
+    descriptionClass: 'text-ens-lapis-dense',
     title: 'Interoperable',
     description:
       'Namechain makes it easier to use your name on any blockchain.',
   },
   {
-    sectionClass: 'text-ens-magenta bg-ens-magenta-light',
+    sectionClass: 'text-ens-magenta bg-ens-garnet-dust',
+    descriptionClass: 'text-ens-garnet-dense',
     title: 'Cost effective',
     description:
       'Near zero gas costs make it cheaper to update your ENS profile.',
   },
   {
-    sectionClass: 'text-ens-orange bg-ens-orange-light',
+    sectionClass: 'text-ens-bronzite-core bg-ens-bronzite-dust',
+    descriptionClass: 'text-ens-bronzite-dense',
     title: 'Instant Finality',
     description:
       'Guarantees that a name is yours, and only yours, as soon as you register it.',
   },
-] satisfies {
-  sectionClass: string
-  title: string
-  description: string
-}[]
+]
 
-export default async function EnsV2(props: {
+export default async function EnsV2(_props: {
   params: Promise<{ lang: Language }>
 }) {
   return (
-    <div>
+    <div className="bg-ens-white">
       <header
-        className="mb-16 flex grid-cols-[1fr_2fr] flex-col bg-size-[20px] pt-20 md:grid lg:min-h-[1015px] lg:grid-cols-2 lg:gap-32 lg:pt-28"
+        className="flex grid-cols-[1fr_2fr] flex-col bg-size-[20px] pt-20 md:grid lg:min-h-[1015px] lg:grid-cols-2 lg:gap-32 lg:pt-28"
         style={{
           backgroundImage: 'url(/assets/pathways/bg-white.svg)',
         }}
@@ -185,31 +208,141 @@ export default async function EnsV2(props: {
         <div className="max-lg:-my-8 relative max-md:mr-6 max-lg:h-80">
           <HeaderGraphics className="absolute top-0 right-0 h-full object-cover object-right" />
         </div>
-        <div className="flex w-full-[2rem] flex-col pb-4 max-md:items-center max-lg:mx-auto sm:max-w-[412px]">
+        <div className="flex w-full-[2rem] flex-col pb-8 max-md:items-center max-lg:mx-auto sm:max-w-[450px]">
           <HeaderLogo className="max-md:mx-auto" />
 
-          <div className="mt-12 flex w-full flex-col gap-4">
-            <h1 className="text-[40px] text-ens-blue-dark leading-[80%] md:font-bold md:text-8xl">
-              The naming layer, extended
+          <div className="mt-12 flex w-full flex-col gap-y-24">
+            <h1 className="text-[40px] text-ens-blue-midnight leading-[80%] md:font-bold md:text-[92px]">
+              The next generation of naming
             </h1>
-            <p className="font-sans text-ens-gray text-lg leading-ens-none">
-              ENSv2 will make it easier to register names, further connect DNS
-              with blockchain-based identities, and bring more interoperability
-              to onchain experiences. Global networks deserve global names.
+            <p className="font-normal font-sans text-ens-gray text-lg leading-ens-tight">
+              New use cases and networks demand a more flexible ENS protocol
+              that helps make the web3 ecosystem more legible. ENSv2 includes
+              new apps on a maximally decentralized zk rollup, Namechain.
             </p>
           </div>
 
           <div className="mt-4 flex w-full flex-col gap-3">
             <Button href="#faq">FAQ</Button>
-            <Button variant="blueDashed" disabled className="uppercase">
-              Explore Docs
-              <br />
-              [Coming soon]
-            </Button>
           </div>
         </div>
       </header>
-      <div className="mx-auto mb-32 w-full-[2rem] max-w-[1374px] space-y-32 md:w-full-[4rem]">
+
+      <div
+        className={clsx(
+          'relative flex min-h-80 items-center overflow-hidden bg-ens-lapis-dense', // COMMON
+          'max-sm:flex-col', // MOBILE
+          'xl:pl-40', // DESKTOP
+        )}
+      >
+        <div
+          className={clsx(
+            'z-10 flex gap-3 px-3 pb-3 max-xl:flex-col lg:gap-8 xl:items-center',
+            'grow sm:p-8 lg:p-8 xl:p-0',
+          )}
+        >
+          <h2 className="z-10 max-w-md font-serif text-5xl text-ens-lapis-dust italic lg:text-8xl">
+            We're at Devconnect!
+          </h2>
+
+          <div className="z-10 flex flex-col gap-4 xl:max-w-sm">
+            <p className="font-light font-sans text-ens-lapis-surface text-lg leading-ens-normal">
+              Join us in workshops and talks to learn about our new apps, how
+              we're is supporting Ethereum interoperability, naming AI agents,
+              and the future of naming.
+            </p>
+            <a
+              className="mt-auto flex items-center gap-12 rounded-lg bg-ens-lapis-core p-1 pl-8 transition-all duration-200 hover:brightness-90"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://enslabs.notion.site/devconnect"
+            >
+              <span className="flex-1 font-mono text-ens-gray-two text-sm">
+                CHECK OUT OUR SCHEDULE
+              </span>
+              <div className="flex aspect-square h-16 items-center justify-center rounded bg-ens-lapis-dense px-3 py-2">
+                <ArrowRightIcon className="size-5 text-ens-gray-two" />
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div
+          className={clsx(
+            'xl:mask-l-from-50% xl:mask-l-to-80% inset-y-0 right-0 xl:absolute',
+            'sm:mask-l-from-60% sm:mask-l-to-100%',
+            'max-sm:mask-b-from-60% max-sm:mask-b-to-95% max-sm:order-first',
+            'self-stretch sm:max-xl:max-w-1/2 xl:w-2/5 2xl:w-3/5',
+          )}
+        >
+          <Image
+            src={barbaraZandovals}
+            alt="Barbara Zandova"
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div
+        className={clsx(
+          'w-full-[1.5rem] max-w-[1536px] md:w-full-[4rem]',
+          'rounded-xl bg-white',
+          'mx-auto my-8 space-y-8 p-4 lg:my-16 lg:p-16 xl:my-[100px] xl:p-20',
+        )}
+      >
+        <h2 className="mx-auto max-w-6xl pt-4 text-center text-2xl leading-ens-none md:text-4xl lg:pt-8 lg:pb-16 lg:text-[64px] xl:pt-16 xl:pb-32">
+          ENSv2 rearchitects the protocol for a multi-chain world — faster,
+          cheaper, and more flexible than ever.
+        </h2>
+        {/* Section A */}
+        <div className="space-y-6 lg:space-y-8">
+          {sectionsA.map(
+            (
+              {
+                textClass,
+                descriptionClass,
+                bgClass,
+                bgStyle,
+                title,
+                description,
+                linkHref,
+                linkText,
+              },
+              index,
+            ) => (
+              <Fragment key={title}>
+                <div
+                  className={clsx(
+                    'flex flex-col gap-6 lg:flex-row lg:gap-12',
+                    textClass,
+                  )}
+                >
+                  <div
+                    className={clsx(
+                      'h-36 rounded-sm lg:aspect-square lg:w-36',
+                      bgClass,
+                    )}
+                    style={bgStyle}
+                  />
+                  <h2 className="flex-1/3 whitespace-pre-line text-4xl leading-ens-none">
+                    {title}
+                  </h2>
+                  <div className="flex max-w-md flex-2/3 flex-col gap-3 font-light font-serif text-xl leading-ens-tight">
+                    <span className={descriptionClass}>{description}</span>
+                    {linkHref && linkText && (
+                      <Link href={linkHref} className="italic hover:underline">
+                        {linkText}
+                      </Link>
+                    )}
+                  </div>
+                </div>
+                {index < sectionsA.length - 1 && (
+                  <div className="h-px bg-ens-gray-three" />
+                )}
+              </Fragment>
+            ),
+          )}
+        </div>
         {/* Announcement video */}
         <div>
           {/** biome-ignore lint/correctness/useUniqueElementIds: ID is the video id */}
@@ -221,58 +354,56 @@ export default async function EnsV2(props: {
             thumbnail={announcementCover.src}
           />
         </div>
+      </div>
 
-        {/* Section A */}
-        <div className="space-y-6 lg:space-y-12">
-          {sectionsA.map(
-            ({ textClass, bgClass, bgStyle, title, description }) => (
-              <Fragment key={title}>
-                <div
-                  className={clsx(
-                    'flex flex-col gap-6 lg:flex-row lg:gap-12',
-                    textClass,
-                  )}
-                >
-                  <div
-                    className={clsx('h-36 rounded-sm lg:w-36', bgClass)}
-                    style={bgStyle}
-                  />
-                  <h2 className="flex-grow whitespace-pre-line text-4xl leading-ens-none">
-                    {title}
-                  </h2>
-                  <span className="max-w-md font-light font-serif text-xl leading-ens-tight">
-                    {description}
-                  </span>
-                </div>
-                <div className="h-px bg-ens-gray-three" />
-              </Fragment>
-            ),
-          )}
-        </div>
+      <AppsSection />
 
-        {/* Section B */}
-        <div>
-          <h2 className="text-6xl">Namechain</h2>
-          <p className="mt-12 max-w-2xl">
+      {/* Section B */}
+      <div className="mx-auto w-full-[2rem] max-w-[1374px] md:w-full-[4rem]">
+        {/* Namechain section */}
+        <div className="mt-16 mb-24 lg:my-[120px]">
+          <h2
+            className="text-2xl leading-ens-none md:text-4xl lg:text-6xl"
+            id="namechain"
+          >
+            Namechain
+          </h2>
+          <p className="mt-3 max-w-2xl lg:mt-12">
             ENS is building a blockchain designed for onchain identity, using an
             instance of Linea's zkEVM. Namechain lets users and developers
             create onchain identities through the power of names, not numbers.
           </p>
-          <div className="mt-11 flex w-full gap-6 max-lg:flex-wrap max-xs:flex-col">
-            {sectionsB.map(({ sectionClass, title, description }) => (
-              <div
-                key={title}
-                className={clsx(
-                  'flex h-40 xs:min-w-xs flex-1 flex-col justify-between rounded p-5 text-xl md:h-72',
-                  sectionClass,
-                )}
-              >
-                <div className="flex-grow">{title}</div>
-                <div className="text-[#191919]/60 leading-ens-none md:max-w-2xs">
-                  {description}
+          <div className="mt-8 flex w-full gap-4 max-lg:flex-wrap max-xs:flex-col lg:mt-11 lg:gap-6">
+            {sectionsB.map(
+              ({
+                sectionClass,
+                title,
+                description,
+                descriptionClass: textClass,
+              }) => (
+                <div
+                  key={title}
+                  className={clsx(
+                    'flex min-h-48 xs:min-w-xs flex-1 flex-col justify-between rounded p-5 text-xl md:min-h-72',
+                    sectionClass,
+                  )}
+                  style={{
+                    backgroundImage: `url(${herringbone1.src})`,
+                    backgroundBlendMode: 'color-dodge',
+                    backgroundRepeat: 'repeat',
+                    backgroundPosition: 'center',
+                    backgroundSize: '16px',
+                  }}
+                >
+                  <div className="grow md:text-4xl">{title}</div>
+                  <div
+                    className={clsx('leading-ens-none md:max-w-2xs', textClass)}
+                  >
+                    {description}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ),
+            )}
           </div>
         </div>
 
@@ -280,10 +411,10 @@ export default async function EnsV2(props: {
         <BlogSection />
 
         {/* FAQ */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] lg:gap-12 xl:grid-cols-2">
+        <div className="mb-16 grid grid-cols-1 lg:grid-cols-[1fr_auto] lg:gap-12 xl:grid-cols-2">
           {/** biome-ignore lint/correctness/useUniqueElementIds: ID is the anchor */}
           <h1
-            className="top-24 h-fit font-serif text-[132px] xs:text-[186px] lg:sticky lg:scroll-mt-24 xl:text-[250px]"
+            className="top-24 h-fit font-serif text-[132px] text-ens-blue-midnight xs:text-[186px] lg:sticky lg:scroll-mt-24 xl:text-[250px]"
             id="faq"
           >
             FAQ

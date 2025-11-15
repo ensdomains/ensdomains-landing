@@ -12,8 +12,8 @@ export const SlimBlogPostPreview = ({ post }: { post: BlogPostWithAssets }) => {
 
   return (
     <div className="flex flex-col gap-3">
-      <Link href={'/blog/post/' + post.slug} className="contents">
-        <div className="aspect-video overflow-hidden rounded bg-ens-gray">
+      <Link href={`/blog/post/${post.slug}`} className="contents">
+        <div className="aspect-video overflow-hidden rounded">
           {post.thumbnail ? (
             <Image
               src={post.thumbnail}

@@ -3,7 +3,6 @@
 import clsx from 'clsx'
 import { type ComponentProps, useState } from 'react'
 import { splitArray } from '~/utils/array/split'
-import type { BlogPostMetadataPlus } from '~/utils/blog/posts'
 import { type Dimension, useMq } from '~/utils/useMq'
 import type { BlogPostWithAssets } from './BlogSection'
 import { SlimBlogPostPreview } from './SlimPostPreview'
@@ -61,7 +60,7 @@ export const BlogSectionCarousel = ({
     setCurrentPage((currentPage - 1 + pages.length) % pages.length)
   }
   return (
-    <div className="space-y-7">
+    <div className="my-16 space-y-7">
       <div className="flex items-center gap-6 max-md:justify-center">
         <p>Go Deeper: Learn more about ENSv2</p>
         {deviceSize !== 'mobile' && (
@@ -99,7 +98,7 @@ export const BlogSectionCarousel = ({
             type="button"
             className={clsx(
               'size-5 rounded-sm md:size-3 md:rounded-xs',
-              index === currentPage ? 'bg-ens-blue' : 'bg-ens-gray-three',
+              index === currentPage ? 'bg-ens-blue' : 'bg-ens-blue-light',
             )}
             onClick={() => setCurrentPage(index)}
           />

@@ -1,0 +1,12 @@
+@keyframes ens-explorer-graphic1 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -100%;
+  }
+}
+
+.ens-explorer-graphic1 {
+  animation: ens-explorer-graphic1 5s linear infinite;
+}
