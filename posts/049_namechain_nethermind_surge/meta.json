@@ -2,7 +2,7 @@
   "slug": "namechain-nethermind-surge",
   "title": "Why We're Moving Namechain to Nethermind's Surge",
   "description": "Namechain, the ZK rollup built for ENS, will be deployed using Surge, a based rollup framework developed by Nethermind and built on the Taiko stack.",
-  "date": "2025-11-15T18:00:00.000Z",
+  "date": "2025-11-17",
   "tags": ["ens-v2", "namechain", "surge"],
   "authors": ["enslabs.eth"]
 }
