@@ -1,5 +1,6 @@
 import NextLink from 'next/link'
 import type { AnchorHTMLAttributes, FC, RefObject } from 'react'
+import { cn } from '~/utils/style'
 
 export type LinkProps = Omit<
   AnchorHTMLAttributes<HTMLAnchorElement>,
@@ -34,5 +35,17 @@ export const Link: FC<LinkProps> = ({
     <NextLink href={href} {...rest}>
       {children ?? href}
     </NextLink>
+  )
+}
+
+export const StyledLink: FC<LinkProps> = ({
+  className,
+  ...rest
+}: LinkProps) => {
+  return (
+    <Link
+      className={cn('underline hover:text-ens-lapis-core', className)}
+      {...rest}
+    />
   )
 }
