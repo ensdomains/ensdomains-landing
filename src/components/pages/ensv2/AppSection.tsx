@@ -184,7 +184,7 @@ export const AppsSection = () => {
               className="mt-auto flex items-center gap-12 rounded-lg bg-ens-bronzite-surface p-1 pl-8 transition-all duration-200 hover:brightness-90"
               href="/blog/post/ens-app-explorer-introduction"
             >
-              <span className="flex-1 font-mono text-ens-gray-two text-sm">
+              <span className="flex-1 font-mono text-ens-gray-two text-sm tracking-[1px]">
                 READ MORE
               </span>
               <div className="flex aspect-square h-16 items-center justify-center rounded bg-ens-bronzite-dense px-3 py-2">

@@ -252,12 +252,12 @@ export default async function EnsV2(_props: {
               and the future of naming.
             </p>
             <a
-              className="mt-auto flex items-center gap-12 rounded-lg bg-ens-lapis-core p-1 pl-8 transition-all duration-200 hover:brightness-90"
+              className="mt-auto flex items-center gap-12 rounded-lg bg-ens-lapis-core p-1 pl-4 transition-all duration-200 hover:brightness-90 lg:pl-8"
               rel="noopener noreferrer"
               target="_blank"
               href="https://enslabs.notion.site/devconnect"
             >
-              <span className="flex-1 font-mono text-ens-gray-two text-sm">
+              <span className="flex-1 font-mono text-ens-gray-two text-sm tracking-[1px]">
                 CHECK OUT OUR SCHEDULE
               </span>
               <div className="flex aspect-square h-16 items-center justify-center rounded bg-ens-lapis-dense px-3 py-2">
