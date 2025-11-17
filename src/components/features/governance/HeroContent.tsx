@@ -24,7 +24,6 @@ export const HeroContent = () => {
         />
         <CornerAnimation
           className={styles['anim-position']}
-          bgColor="ens-green"
           color="ens-green"
           width={200}
           noBackground
@@ -38,7 +37,6 @@ export const HeroContent = () => {
         />
         <CornerAnimation
           className={styles['anim-position']}
-          bgColor="ens-green"
           color="ens-green"
           width={200}
           noBackground

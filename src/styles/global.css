@@ -25,8 +25,31 @@
   --color-ens-gray-three: #c4c7c8;
   --color-ens-white: #f6f6f6;
 
+  /* Experimental brand colors */
+  --color-ens-lapis-dust: #CEE1E8;
+  --color-ens-lapis-surface: #79B1D0;
+  --color-ens-lapis-core: #0080BC;
+  --color-ens-lapis-dense: #093C52;
+
+  --color-ens-bronzite-dust: #F8F6D6;
+  --color-ens-bronzite-surface: #AE9582;
+  --color-ens-bronzite-core: #674D49;
+  --color-ens-bronzite-dense: #431C11;
+
+  --color-ens-peridot-dust: #C5DDCC;
+  --color-ens-peridot-surface: #74AC76;
+  --color-ens-peridot-core: #007C23;
+  --color-ens-peridot-core2: oklch(50% 0.196656 149.1);
+  --color-ens-peridot-dense: #033010;
+
+  --color-ens-garnet-dust: #F2C4DA;
+  --color-ens-garnet-surface: #F886B6;
+  --color-ens-garnet-core: #F53293;
+  --color-ens-garnet-dense: #8A0A49;
+
   --leading-ens-none: 96%;
   --leading-ens-tight: 112%;
+  --leading-ens-normal: 120%;
 
   --breakpoint-xs: 30rem;
 
@@ -265,4 +288,12 @@
   @apply prose-h4:text-[17.5px] md:prose-h4:text-[28px];
   @apply prose-h5:text-[16px] md:prose-h5:text-[20px];
   @apply prose-h6:text-[15px] prose-h6:italic prose-h6:font-serif prose-h6:font-[350] md:prose-h6:text-[22px];
+}
+
+@utility grid-areas-* {
+  grid-template-areas: --value([*])
+}
+
+@utility area-* {
+  grid-area: --value([*]);
 }

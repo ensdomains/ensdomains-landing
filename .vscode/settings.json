@@ -7,7 +7,7 @@
     "typescript.tsdk": "node_modules/typescript/lib",
     "editor.codeActionsOnSave": {
       "source.organizeImports.biome": "explicit",
-      "quickfix.biome": "explicit"
+      "source.fixAll.biome": "explicit",
     },
     "i18n-ally.localesPaths": [
         "locales",

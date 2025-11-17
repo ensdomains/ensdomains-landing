@@ -25,16 +25,38 @@ const BGPattern = (props: SVGProps<SVGPatternElement>) => (
   </pattern>
 )
 
-// SquareAnimation Component
-export type SquareAnimationProps = SVGProps<SVGSVGElement> & {
-  bgColor: Color
-  color: Color
-  noBackground?: boolean
+type AnyColor = Color | `--${string}` | `#${string}`
+const getColor = (color: AnyColor | undefined) => {
+  if (!color) return undefined
+  switch (true) {
+    case color.startsWith('#'):
+      return color
+    case color.startsWith('--'):
+      return `var(${color})`
+    default:
+      return `var(--${color})`
+  }
 }
 
+// SquareAnimation Component
+export type SquareAnimationProps = SVGProps<SVGSVGElement> & {
+  color: AnyColor
+  secondaryColor?: AnyColor
+} & (
+    | {
+        noBackground?: false
+        bgColor: AnyColor
+      }
+    | {
+        noBackground: true
+        bgColor?: never
+      }
+  )
+
 export const SquareAnimation = ({
-  bgColor,
-  color,
+  bgColor: bgColorProp,
+  color: colorProp,
+  secondaryColor: secondaryColorProp = '#F6F6F6',
   noBackground = false,
   ...props
 }: SquareAnimationProps) => {
@@ -46,6 +68,10 @@ export const SquareAnimation = ({
       duration: 0.3,
     },
   })
+  const bgColor = getColor(bgColorProp)
+  const color = getColor(colorProp)
+  const secondaryColor = getColor(secondaryColorProp)
+
   return (
     <svg
       viewBox="0 0 200 200"
@@ -59,23 +85,30 @@ export const SquareAnimation = ({
           <rect width="200" height="200" rx="2" fill="white" />
         </clipPath>
         {!noBackground && (
-          <BGPattern fill={`var(--${bgColor})`} id={`bg-pattern-${bgColor}`} />
+          <BGPattern fill={bgColor} id={`bg-pattern-${bgColorProp}`} />
         )}
       </defs>
       <g clipPath="url(#clip-overflow-200x200)">
         {!noBackground && (
           <>
-            <rect width="200" height="200" fill="#F6F6F6" />
+            <rect width="200" height="200" fill={secondaryColor} />
             <rect
               width="200"
               height="200"
-              fill={`url(#bg-pattern-${bgColor})`}
+              fill={`url(#bg-pattern-${bgColorProp})`}
             />
           </>
         )}
-        <path d="M0 46H200" stroke={`var(--${color})`} strokeWidth="58" />
-        <path d="M0 46H200" stroke="#F6F6F6" strokeWidth="2" />
-        <rect x="200" y="29" width="33" height="33" rx="2" fill="#F6F6F6">
+        <path d="M0 46H200" stroke={color} strokeWidth="58" />
+        <path d="M0 46H200" stroke={secondaryColor} strokeWidth="2" />
+        <rect
+          x="200"
+          y="29"
+          width="33"
+          height="33"
+          rx="2"
+          fill={secondaryColor}
+        >
           <animateMotion
             begin={`${Math.random() * 3}s`}
             dur={`${timing.duration}s`}
@@ -181,14 +214,23 @@ export const RectangleAnimation = ({
 
 // CornerAnimation Component
 export type CornerAnimationProps = SVGProps<SVGSVGElement> & {
-  bgColor: Color
-  color: Color
-  noBackground?: boolean
-}
+  color: AnyColor
+  secondaryColor?: AnyColor
+} & (
+    | {
+        noBackground?: false
+        bgColor: AnyColor
+      }
+    | {
+        noBackground: true
+        bgColor?: never
+      }
+  )
 
 export const CornerAnimation = ({
-  bgColor,
-  color,
+  bgColor: bgColorProp,
+  color: colorProp,
+  secondaryColor: secondaryColorProp = '#F6F6F6',
   noBackground = false,
   ...props
 }: CornerAnimationProps) => {
@@ -200,6 +242,9 @@ export const CornerAnimation = ({
       duration: 0.3,
     },
   })
+  const bgColor = getColor(bgColorProp)
+  const color = getColor(colorProp)
+  const secondaryColor = getColor(secondaryColorProp)
 
   return (
     <svg
@@ -214,35 +259,35 @@ export const CornerAnimation = ({
           <rect width="200" height="200" rx="2" fill="white" />
         </clipPath>
         {!noBackground && (
-          <BGPattern fill={`var(--${bgColor})`} id={`bg-pattern-${bgColor}`} />
+          <BGPattern fill={bgColor} id={`bg-pattern-${bgColorProp}`} />
         )}
       </defs>
       <g clipPath="url(#clip-overflow-200x200)">
         {!noBackground && (
           <>
-            <rect width="200" height="200" fill="#F6F6F6" />
+            <rect width="200" height="200" fill={secondaryColor} />
             <rect
               width="200"
               height="200"
-              fill={`url(#bg-pattern-${bgColor})`}
+              fill={`url(#bg-pattern-${bgColorProp})`}
             />
           </>
         )}
         <path
           d="M0 46H133C144.598 46 154 55.402 154 67V200"
-          stroke={`var(--${color})`}
+          stroke={color}
           strokeWidth="58"
         />
         <path
           d="M0 46H133C144.598 46 154 55.402 154 67V200"
-          stroke="#F6F6F6"
+          stroke={secondaryColor}
           strokeWidth="2"
         />
         <rect
           width="33"
           height="33"
           rx="2"
-          fill="#F6F6F6"
+          fill={secondaryColor}
           transform="translate(-16.5, -16.5)"
         >
           <animateMotion
