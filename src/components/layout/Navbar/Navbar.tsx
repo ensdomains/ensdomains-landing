@@ -14,7 +14,6 @@ import styles from './Navbar.module.css'
 
 type Links = {
   blog: string
-  roadmap: string
   developers: string
   ecosystem: string
   governance: string
@@ -31,9 +30,7 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
 
   const langPrefix = getLangPrefix((lang as Language) || fallbackLng)
 
-  const items = Object.entries(links).filter(
-    ([k]) => !['roadmap', 'launch'].includes(k),
-  )
+  const items = Object.entries(links).filter(([k]) => !['launch'].includes(k))
 
   const [isOpen, setOpen] = useState(false)
 
@@ -155,12 +152,6 @@ export const Navbar: FC<{ lang: Language; links: Links }> = ({
               </Link>
             )
           })}
-          <Link
-            href="https://roadmap.ens.domains/roadmap"
-            className={styles.link}
-          >
-            {links.roadmap}
-          </Link>
         </div>
         <div className={styles.langWithApp}>
           {/* <LanguageSwitcher lang={lang} /> */}

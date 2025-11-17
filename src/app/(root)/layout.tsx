@@ -164,7 +164,6 @@ export default async function RootLayout(props: {
               ecosystem: t('nav.ecosystem'),
               governance: t('nav.governance'),
               blog: t('nav.blog'),
-              roadmap: t('nav.roadmap'),
               ensv2: t('nav.ensv2'),
               launch: t('nav.launch'),
             }}
