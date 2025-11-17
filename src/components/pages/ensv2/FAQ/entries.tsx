@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import type { ReactNode } from 'react'
+import { StyledLink } from '~/components/ui/navigation/Link/Link'
 
 export const tags = {
   migration: {
@@ -34,25 +34,25 @@ export type Faq = {
 
 export const faqs: Record<string, Faq> = {
   // General Migration Questions
-  ['will-i-still-own-my-ens-name-after-the-upgrade']: {
+  'will-i-still-own-my-ens-name-after-the-upgrade': {
     question: 'Will I still own my ENS name after the upgrade?',
     answer:
       'Yes — your ENS name remains yours. Whether you migrate it or not, you retain full ownership as long as it is still registered and has time remaining on its registration. Be sure to keep your name renewed to maintain control.',
     tags: ['migration'],
   },
-  ['do-i-have-to-migrate-my-ens-name']: {
+  'do-i-have-to-migrate-my-ens-name': {
     question: 'Do I have to migrate my ENS name?',
     answer:
       "Yes. To access the full features of ENSv2 (like renewing your name), you'll eventually need to migrate to the new system.",
     tags: ['migration'],
   },
-  ['will-there-be-an-easy-migration-tool']: {
+  'will-there-be-an-easy-migration-tool': {
     question: 'Will there be an easy migration tool?',
     answer:
       "Yes. ENS will provide a simple migration tool with clear instructions when it's time to upgrade.",
     tags: ['migration'],
   },
-  ['does-it-cost-more-to-migrate-if-i-have-more-records']: {
+  'does-it-cost-more-to-migrate-if-i-have-more-records': {
     question:
       'Does it cost more to migrate if I have more records added to my name?',
     answer:
@@ -61,7 +61,7 @@ export const faqs: Record<string, Faq> = {
   },
 
   // Migration Paths & Behaviors
-  ['what-are-my-options-for-migration']: {
+  'what-are-my-options-for-migration': {
     question: 'What are my options for migration?',
     answer: (
       <>
@@ -82,13 +82,13 @@ export const faqs: Record<string, Faq> = {
     ),
     tags: ['migration'],
   },
-  ['can-i-keep-my-name-on-l1-and-still-renew']: {
+  'can-i-keep-my-name-on-l1-and-still-renew': {
     question: 'Can I keep my name on Ethereum L1 and still renew it?',
     answer:
       "You can keep your name on L1, but renewals will be processed through Namechain. You don't need to move the name itself to Namechain to renew it.",
     tags: ['migration'],
   },
-  ['can-i-keep-my-name-on-l1-and-still-use-ensv2']: {
+  'can-i-keep-my-name-on-l1-and-still-use-ensv2': {
     question: 'Can I keep my name on Ethereum L1 and still use ENSv2?',
     answer:
       'Yes. You can choose not to migrate and still use your name as normal, but certain ENSv2 features will require migration.',
@@ -96,34 +96,34 @@ export const faqs: Record<string, Faq> = {
   },
 
   // Subnames & Cross-Chain Compatibility
-  ['what-about-my-subnames']: {
+  'what-about-my-subnames': {
     question: 'What about my subnames (like .base, .uni, etc.)?',
     answer:
       "Subnames will continue working. ENSv2 enhances subname management but you don't need to migrate them separately.",
     tags: ['subnames'],
   },
-  ['whats-changing-about-subnames-and-permissions']: {
+  'whats-changing-about-subnames-and-permissions': {
     question:
       "What's changing about how subnames and permissions work in ENSv2?",
     answer:
       'ENSv2 gives each name its own registry with fine-grained access controls. You can control who can create subnames, set permissions, or delegate authority in a more trustless way — perfect for communities and apps that issue subnames.',
     tags: ['subnames'],
   },
-  ['do-i-need-to-migrate-cross-chain-subnames']: {
+  'do-i-need-to-migrate-cross-chain-subnames': {
     question:
       'Do I need to migrate subnames like yourname.base.eth, yourname.linea.eth, or yourname.uni.eth?',
     answer:
       "No, you don't need to migrate subnames. With ENSv2 and the Universal Resolver, everything works better cross-chain.",
     tags: ['subnames'],
   },
-  ['will-ccip-read-names-still-work']: {
+  'will-ccip-read-names-still-work': {
     question:
       "Will my existing CCIP-Read names (e.g., cb.id, uni.eth) still work if I don't migrate?",
     answer:
       'Yes, names that resolve via CCIP-Read will continue to function without migration.',
     tags: ['subnames'],
   },
-  ['do-i-need-to-migrate-dns-name']: {
+  'do-i-need-to-migrate-dns-name': {
     question:
       'Do I need to migrate a DNS name that was previously imported to ENSv1?',
     answer:
@@ -132,13 +132,13 @@ export const faqs: Record<string, Faq> = {
   },
 
   // Namechain Basics & Purpose
-  ['what-is-namechain']: {
+  'what-is-namechain': {
     question: 'What is Namechain?',
     answer:
-      "Namechain is a new L2 (Layer 2) blockchain purpose-built for ENS. It runs on Linea, a zkEVM rollup that inherits Ethereum's security.",
+      'Namechain is a new L2 (Layer 2) blockchain purpose-built for ENS. It runs on Surge, a based rollup framework developed by Nethermind and built on the Taiko stack.',
     tags: ['namechain'],
   },
-  ['why-did-ens-build-its-own-chain']: {
+  'why-did-ens-build-its-own-chain': {
     question: 'Why did ENS build its own chain?',
     answer:
       'By creating Namechain, ENS can avoid competing for blockspace on general-purpose L2s and optimize performance specifically for name resolution — fast, affordable, and decentralized.',
@@ -146,56 +146,89 @@ export const faqs: Record<string, Faq> = {
   },
 
   // Namechain Technical Foundation
-  ['why-was-linea-chosen']: {
-    question: 'Why was Linea chosen?',
+  'why-was-surge-chosen': {
+    question: 'Why was Surge chosen?',
     answer: (
       <>
-        The selection of Linea as the foundation for Namechain emerged from a
-        comprehensive technical and strategic evaluation conducted by the ENS
-        Labs team, which you can read about{' '}
-        <Link
-          href="https://blog.ens.domains/post/ensv2-update"
-          className="text-ens-blue underline"
-        >
-          here
-        </Link>
-        . Two key architectural decisions immediately stood out about Linea:
-        <br />
-        <br />• Being a{' '}
-        <Link
-          href="https://vitalik.eth.limo/general/2022/08/04/zkevm.html#type-2-fully-evm-equivalent"
-          className="text-ens-blue underline"
-        >
-          Type 2 zkEVM
-        </Link>
-        , Linea achieves bytecode compatibility with Ethereum, ensuring that
-        existing smart contract code and tooling can be used without
-        modification.
-        <br />• Linea's high-performance prover, alongside the configurability
-        of its rollup parameters, enables fast state confirmation essential for
-        reliable name resolution.
+        We have{' '}
+        <StyledLink href="/blog/post/namechain-workshop">
+          long believed
+        </StyledLink>{' '}
+        that a based sequencer model is the right design for Namechain to
+        inherit both the liveness and decentralization of the Ethereum L1. We
+        met the Nethermind team as part of the research and discovery process of
+        planning for turning Namechain into a based rollup, post launch. As we
+        got deeper into technical discussions, we realized that it was in fact
+        possible to deploy Namechain as a based rollup directly via Nethermind's{' '}
+        <StyledLink href="https://www.surge.wtf/">Surge</StyledLink> rollup
+        framework.
         <br />
         <br />
-        Read more:{' '}
-        <Link
-          href="/blog/post/ens-picks-linea"
-          className="text-ens-blue underline"
-        >
-          https://ens.domains/blog/post/ens-picks-linea
-        </Link>
+        Surge is differentiated from other rollups in the space in that it is an
+        open source rollup template, with no plans to deploy its own public
+        chain. This means that Surge's future technical updates and alignment
+        can be shaped by those that deploy it and not only by the needs of its
+        own public chain, allowing it to remain a truly neutral rollup
+        framework. For ENS, this is both the right technical path and the only
+        path consistent with our mission of building identity infrastructure
+        that is as durable and neutral as Ethereum itself.
+        <br />
+        <br />
+        As longtime Ethereum core developers, the Nethermind team demonstrated
+        deep familiarity with the existing infrastructure of ENS, from its
+        resolution patterns to{' '}
+        <StyledLink href="https://docs.ens.domains/resolvers/ccip-read">
+          CCIP-Read
+        </StyledLink>{' '}
+        mechanics.
+        <br />
+        <br />
+        <StyledLink href="https://docs.ens.domains/resolvers/ccip-read">
+          CCIP-Read
+        </StyledLink>{' '}
+        revolutionized cross-chain data fetching by establishing a standard for
+        Ethereum smart contracts to retrieve offchain data, enabling ENS
+        features like L2 name resolution and DNS integration. However, it
+        suffers from a critical limitation: waiting for "safe" state on other
+        L2s introduces significant latency. For ENS, where near-instant updates
+        underpin user experience, even the fastest rollup technologies today
+        aren't enough, creating delays of an hour or more. Furthermore, this
+        forces us into a cost/latency tradeoff: posting data more frequently is
+        costly, but drives down latency.
+        <br />
+        <br />
+        Working with Nethermind, we've designed a solution that leverages the
+        unique properties of based rollups combined with preconfirmations and
+        trusted execution environments (TEEs). This approach delivers state
+        updates in seconds rather than hours. Read more:{' '}
+        <StyledLink href="/blog/post/namechain-nethermind-surge">
+          https://ens.domains/blog/post/namechain-nethermind-surge
+        </StyledLink>
       </>
     ),
     tags: ['namechain'],
   },
-  ['is-namechain-decentralized']: {
+  'is-namechain-decentralized': {
     question: 'Is Namechain decentralized?',
-    answer:
-      'Yes. Namechain inherits Ethereum\'s security model and uses zero-knowledge proofs for trust minimization. ENS is also exploring deeper decentralization via "based" and "native" rollups in collaboration with the Ethereum Foundation and others.',
+    answer: (
+      <>
+        Most L2s take the "progressive decentralization" path, deferring the
+        hard problems of decentralized sequencing to an indefinite future.
+        Namechain will launch as a{' '}
+        <StyledLink href="https://l2beat.com/stages">Stage 1 rollup</StyledLink>{' '}
+        with a clear path to Stage 2. This isn't an easier path, as it requires
+        more complex engineering, deeper coordination with Ethereum's roadmap,
+        and potentially accepting some initial performance tradeoffs. But all
+        this means we will be on a faster path to our vision of fully
+        decentralized infrastructure.
+      </>
+    ),
+    // 'Yes. Namechain inherits Ethereum\'s security model and uses zero-knowledge proofs for trust minimization. ENS is also exploring deeper decentralization via "based" and "native" rollups in collaboration with the Ethereum Foundation and others.',
     tags: ['namechain'],
   },
 
   // Namechain Functionality & Compatibility
-  ['will-my-ens-name-still-resolve-on-ethereum']: {
+  'will-my-ens-name-still-resolve-on-ethereum': {
     question: 'Will my ENS name still resolve on Ethereum?',
     answer:
       'Yes, your ENS name will continue to resolve on Ethereum regardless of migration status, ensuring backward compatibility.',
@@ -203,13 +236,13 @@ export const faqs: Record<string, Faq> = {
   },
 
   // ENSv2 Apps & Access
-  ['is-there-a-new-ens-app']: {
+  'is-there-a-new-ens-app': {
     question: 'Is there a new ENS app?',
     answer:
       "Yes. A new ENS app will be released for ENSv2. It's designed for managing names on Namechain and Ethereum (if migrated).",
     tags: ['ens-v2'],
   },
-  ['can-i-still-use-the-old-ens-app']: {
+  'can-i-still-use-the-old-ens-app': {
     question: 'Can I still use the old ENS app?',
     answer:
       "Yes. We'll keep the older app online for users who haven't migrated yet. However, for upgraded functionality, the new ENS app can be used with any migrated name.",
@@ -217,19 +250,19 @@ export const faqs: Record<string, Faq> = {
   },
 
   // ENSv2 Bridge & Payments
-  ['will-i-need-to-bridge-eth-to-namechain']: {
+  'will-i-need-to-bridge-eth-to-namechain': {
     question: 'Will I need to bridge ETH to Namechain?',
     answer:
       "No. Thanks to bridging tools like Across, you'll be able to use ENS on Namechain without worrying about manual bridging.",
     tags: ['ens-v2'],
   },
-  ['can-i-buy-ens-names-with-stablecoins']: {
+  'can-i-buy-ens-names-with-stablecoins': {
     question: 'Can I buy ENS names with stablecoins?',
     answer:
       'Yes. ENSv2 will support buying names with USD-denominated stablecoins (like USDC), not just ETH.',
     tags: ['ens-v2'],
   },
-  ['will-ens-names-still-be-priced-in-eth']: {
+  'will-ens-names-still-be-priced-in-eth': {
     question: 'Will ENS names still be priced in ETH?',
     answer:
       'No. With ENSv2, names will be priced and paid in USD stablecoins for more predictable pricing.',
@@ -237,19 +270,19 @@ export const faqs: Record<string, Faq> = {
   },
 
   // ENSv2 Upgrades & Architecture
-  ['whats-new-in-ensv2-contracts']: {
+  'whats-new-in-ensv2-contracts': {
     question: "What's new in the ENSv2 contracts?",
     answer:
       'Registries, resolvers, and permissions have all been rewritten for clarity, modularity, and better UX for developers.',
     tags: ['ens-v2'],
   },
-  ['is-the-resolver-changing']: {
+  'is-the-resolver-changing': {
     question: 'Is the Resolver changing?',
     answer:
       'Yes. ENSv2 introduces a Universal Resolver — one contract that supports resolving any name (ENSv1, ENSv2, L2s, and offchain) via CCIP Read.',
     tags: ['ens-v2'],
   },
-  ['whats-the-benefit-of-each-name-having-its-own-registry']: {
+  'whats-the-benefit-of-each-name-having-its-own-registry': {
     question: "What's the benefit of giving each name its own registry?",
     answer:
       "This design allows greater flexibility, permission controls, and fewer trust assumptions. It's especially useful for DAOs, communities, and dapps issuing subnames.",
