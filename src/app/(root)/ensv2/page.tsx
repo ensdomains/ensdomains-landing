@@ -238,7 +238,7 @@ export default async function EnsV2(_props: {
         <div
           className={clsx(
             'z-10 flex gap-3 px-3 pb-3 max-xl:flex-col lg:gap-8 xl:items-center',
-            'grow sm:p-8 lg:p-8 xl:p-0',
+            'grow sm:p-8 lg:p-8 xl:mx-auto xl:max-w-[1536px] xl:p-0',
           )}
         >
           <h2 className="z-10 max-w-md font-serif text-5xl text-ens-lapis-dust italic lg:text-8xl">
@@ -369,9 +369,9 @@ export default async function EnsV2(_props: {
             Namechain
           </h2>
           <p className="mt-3 max-w-2xl lg:mt-12">
-            ENS is building a blockchain designed for onchain identity, using an
-            instance of Linea's zkEVM. Namechain lets users and developers
-            create onchain identities through the power of names, not numbers.
+            ENS is building a blockchain designed for onchain identity.
+            Namechain lets users and developers create onchain identities
+            through the power of names, not numbers.
           </p>
           <div className="mt-8 flex w-full gap-4 max-lg:flex-wrap max-xs:flex-col lg:mt-11 lg:gap-6">
             {sectionsB.map(
