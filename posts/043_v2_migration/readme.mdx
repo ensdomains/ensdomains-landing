@@ -1,0 +1,37 @@
+ENSv2 is the biggest upgrade to the Ethereum Name Service since it [launched 8 years ago](https://x.com/ensdomains/status/1919080188803264795). It introduces a new registry, new smart contracts, new apps, and a purpose-built zkEVM layer 2 network called [Namechain](https://x.com/ensdomains/status/1855826392283525496). ENSv2 is a ground-up redesign focused on improving how ENS works for new users, developers who’ve integrated ENS, and how naming works across the entire ecosystem.
+
+When we [launched the ENSv2 Hub](https://x.com/ensdomains/status/1939695680836276417) at the end of June, one question kept coming up: “Do I need to move my ENS name from Ethereum to Namechain? And if I don’t, what changes?” 
+
+Nick Johnson, Lead Developer of ENS, has since shared a detailed migration plan for [ENSv2](https://ens.domains/ensv2). Let’s break down what that means and what you actually need to know.
+
+## Do I Have to Migrate my ENS Name from Ethereum to Namechain?
+
+Before we get into the migration details, you might be asking yourself, what happens if you don’t choose to migrate your ENS name? The answer is simple: It will still work like normal. Apps will recognize it and your records will keep pointing wherever you set them. The one exception is that if you choose to renew the name that you keep on Ethereum, renewal is still accomplished via Namechain.
+
+However, if you don’t migrate your ENS name to Namechain, you won’t be able to experience the new ENS App or ENS Explorer, nor will you get the gas savings, and additional functionality. You can still decide to migrate when the time feels right for you, though. 
+
+## Migration Process
+
+A dedicated tool will be created for ENSv2 migrations, making the process streamlined for most users. This will involve two to three transactions done by the owner of the name, depending on whether their ENS name is wrapped or unwrapped, before the final migration transaction. While the migration tool will offer a dedicated interface for this process, it’s important to note that migrating a name means transferring it to the new ENSv2 contracts. This doesn’t necessarily mean moving it to Namechain. 
+
+The tool is of course also optional, and users can instead migrate with the contracts directly if they prefer. ENS is exploring a potential user path to migrate to ENSv2 without going to Namechain. More on the migration tool will be shared closer to its release.
+
+## Edge Cases and Renewals
+
+Part of what makes migrating the ENSv1 registry to ENSv2 pain-stakingly detailed is all the edge-cases. Thankfully, Nick has [created a taxonomy](https://www.notion.so/enslabs/ENSv2-Migration-Plan-23b7a8b1f0ed80ee832df953abc80810) of every type of name (and the number of names that fit this description) in order to make it easier to know if your name applies to one of these categories. 
+
+Three-quarters of the 1.6 million ENS names fall into the “unwrapped” category, meaning basic ERC-721 NFTs. When migrating, users will be able to decide whether to keep the name on Ethereum or migrate to Namechain, and decide what the new owner address, subregistry, and resolver addresses will be.
+
+Some ENS names are "[wrapped](https://docs.ens.domains/wrapper/overview/)," which means they are turned into a special kind of digital asset called an ERC-1155 NFT. Users with wrapped names were able to add permissions to their ENS names (called “fuses”) which adds complication when migrating. For example, one fuse is called “Cannot Burn Fuses,” which means once it is burned, you cannot make changes or migrate that name to ENSv2. If that fuse is already burned, those names cannot move to ENSv2 and will eventually stop being renewable on ENSv1 too. 
+
+Given this represents a much smaller subset of ENS names, you likely won’t have to worry about this. However, if you are familiar with the term “fuses” or have issued subnames from your ENS name, you should definitely review the plans for migrating “Emancipated subnames” for example.  
+
+The ENS team is still working out how renewals will work for names that do not migrate, and we are asking the community for [feedback](https://discuss.ens.domains/t/announcing-the-detailed-migration-plan-for-ensv2/21354) to help decide.
+
+## To Recap
+
+ENSv1 names will keep working on both ENSv1 and ENSv2 until they expire, so you don’t have to migrate right away. But moving to ENSv2 lets you take advantage of the new app experiences, lower gas costs, and registry improvements. 
+
+ENSv2 is a big upgrade and an important step forward, but it’s also part of a long-term vision to make ENS better for everyone. As we get closer to the official launch, we’ll keep sharing updates, guides, and collect community input.
+
+Still have questions? [The ENSv2 Hub FAQ](https://ens.domains/ensv2#faq) covers everything from “Do I need to migrate my subnames?” to “Will my ENS name still resolve on Ethereum?”
