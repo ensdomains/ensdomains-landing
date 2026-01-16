@@ -1,0 +1,8 @@
+{
+  "slug": "google-bigquery-community-dataset",
+  "title": "ENS community dataset on Google Cloud BigQuery",
+  "description": "ENS is launching a community dataset on Google Cloud's BigQuery, allowing anyone to analyze ENS activity with SQL within seconds.",
+  "date": "2026-01-15",
+  "tags": ["education", "data", "google"],
+  "authors": ["enslabs.eth"]
+}
